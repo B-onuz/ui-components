@@ -1,0 +1,13 @@
+import React from 'react'
+import {{pascalCase name}} from './{{pascalCase name}}'
+import { withKnobs, text, boolean, number } from '@storybook/addon-knobs'
+
+export default {
+  title: '{{pascalCase name}}',
+  component: {{pascalCase name}},
+  decorators: [withKnobs]
+};
+
+export const {{pascalCase name}}Example = () => (
+  <{{pascalCase name}} disabled={boolean("Disabled", false)} bg={text('bg', 'red')}>{text('children', 'Hello {{pascalCase name}}')} {number('numero', 0)}</{{pascalCase name}}>
+);

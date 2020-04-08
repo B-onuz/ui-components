@@ -1,7 +1,8 @@
 {
   "name": "ui-components",
+  "private": true,
   "version": "1.0.0",
-  "description": "ui-components React component",
+  "description": "ui-components B-onuz",
   "main": "lib/index.js",
   "module": "es/index.js",
   "files": [
@@ -15,24 +16,37 @@
     "clean": "nwb clean-module && nwb clean-demo",
     "prepublishOnly": "npm run build",
     "start": "nwb serve-react-demo",
-    "test": "nwb test-react",
-    "test:coverage": "nwb test-react --coverage",
-    "test:watch": "nwb test-react --server"
+    "test": "jest",
+    "test:coverage": "jest --coverage",
+    "test:watch": "jest --watch",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
-  "dependencies": {},
+  "dependencies": {
+    "styled-components": "^5.1.0",
+    "styled-system": "^5.1.5"
+  },
   "peerDependencies": {
     "react": "16.x"
   },
   "devDependencies": {
+    "@babel/core": "^7.9.0",
+    "@babel/preset-env": "^7.9.5",
+    "@babel/preset-react": "^7.9.4",
+    "@storybook/addon-actions": "^5.3.18",
+    "@storybook/addon-knobs": "^5.3.18",
+    "@storybook/addon-links": "^5.3.18",
+    "@storybook/addons": "^5.3.18",
+    "@storybook/react": "^5.3.18",
+    "add": "^2.0.6",
+    "babel-jest": "^25.2.6",
+    "babel-loader": "^8.1.0",
+    "jest": "^25.2.7",
     "nwb": "0.24.x",
+    "plop": "^2.6.0",
     "react": "^16.13.1",
-    "react-dom": "^16.13.1"
-  },
-  "author": "",
-  "homepage": "",
-  "license": "MIT",
-  "repository": "",
-  "keywords": [
-    "react-component"
-  ]
+    "react-dom": "^16.13.1",
+    "react-test-renderer": "^16.13.1",
+    "yarn": "^1.22.4"
+  }
 }
