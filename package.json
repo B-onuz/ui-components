@@ -17,6 +17,7 @@
     "prepublishOnly": "npm run build",
     "start": "nwb serve-react-demo",
     "test": "jest",
+    "postinstall": "npm run build",
     "test:coverage": "jest --coverage",
     "test:watch": "jest --watch",
     "storybook": "start-storybook -p 6006",
