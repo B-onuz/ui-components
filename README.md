@@ -59,7 +59,7 @@ serviceWorker.unregister();
 Importe no `index.js` do seu projeto a fonte `typeface-roboto`. https://www.npmjs.com/package/typeface-roboto
 
 ```
-  yarn add typeface-roboto;
+  yarn add typeface-roboto
 ```
 
 ```js
