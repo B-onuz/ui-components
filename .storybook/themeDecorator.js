@@ -1,9 +1,19 @@
 import React from "react"
-import { ThemeProvider } from 'styled-components'
+import { ThemeProvider, createGlobalStyle } from 'styled-components'
 import theme from '../src/theme'
+import 'typeface-roboto'
+
+const GlobalStyle = createGlobalStyle`
+  body {
+    font-family: ${theme.fontFamily};
+  }
+`
 
 const ThemeDecorator = storyFn => (
-  <ThemeProvider theme={theme}>{storyFn()}</ThemeProvider>
+  <>
+    <GlobalStyle />
+    <ThemeProvider theme={theme}>{storyFn()}</ThemeProvider>
+  </>
 )
 
 export default ThemeDecorator

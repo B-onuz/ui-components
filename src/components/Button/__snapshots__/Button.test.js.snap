@@ -1,0 +1,114 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Should render button 1`] = `
+<button
+  className="sc-AxjAm eNOgXJ"
+>
+  Hello Button
+</button>
+`;
+
+exports[`Should render button when bg prop 1`] = `
+Array [
+  <button
+    className="sc-AxjAm jTOLzc"
+  >
+    fullDarkRed
+  </button>,
+  <button
+    className="sc-AxjAm lloiYN"
+  >
+    darkRed
+  </button>,
+  <button
+    className="sc-AxjAm hWJeKR"
+  >
+    lightRed
+  </button>,
+  <button
+    className="sc-AxjAm cNZtdV"
+  >
+    red
+  </button>,
+  <button
+    className="sc-AxjAm eKiVSe"
+  >
+    orange
+  </button>,
+  <button
+    className="sc-AxjAm eKtUwP"
+  >
+    yellow
+  </button>,
+  <button
+    className="sc-AxjAm QmVOg"
+  >
+    olive
+  </button>,
+  <button
+    className="sc-AxjAm DNCTV"
+  >
+    green
+  </button>,
+  <button
+    className="sc-AxjAm febjO"
+  >
+    teal
+  </button>,
+  <button
+    className="sc-AxjAm gorsKs"
+  >
+    blue
+  </button>,
+  <button
+    className="sc-AxjAm gxDmOi"
+  >
+    violet
+  </button>,
+  <button
+    className="sc-AxjAm iPKdnM"
+  >
+    purple
+  </button>,
+  <button
+    className="sc-AxjAm grgtEz"
+  >
+    pink
+  </button>,
+  <button
+    className="sc-AxjAm hkXJio"
+  >
+    brown
+  </button>,
+  <button
+    className="sc-AxjAm gXaUQg"
+  >
+    grey
+  </button>,
+  <button
+    className="sc-AxjAm enSPxy"
+  >
+    black
+  </button>,
+]
+`;
+
+exports[`Should render button when variant prop 1`] = `
+Array [
+  <button
+    className="sc-AxjAm eernPf"
+  >
+    Default
+  </button>,
+  <button
+    className="sc-AxjAm heuNxC"
+  >
+    Primary
+  </button>,
+  <button
+    className="sc-AxjAm YtSgw"
+  >
+    Secondary
+  </button>,
+]
+`;

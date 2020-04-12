@@ -17,13 +17,13 @@
     "prepublishOnly": "npm run build",
     "start": "nwb serve-react-demo",
     "test": "jest",
-    "postinstall": "npm install && npm run build",
     "test:coverage": "jest --coverage",
     "test:watch": "jest --watch",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },
   "dependencies": {
+    "color": "^3.1.2",
     "styled-components": "^5.1.0",
     "styled-system": "^5.1.5"
   },
@@ -48,6 +48,7 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-test-renderer": "^16.13.1",
+    "typeface-roboto": "^0.0.75",
     "yarn": "^1.22.4"
   }
 }
