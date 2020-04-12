@@ -54,6 +54,18 @@ serviceWorker.unregister();
 
 ```
 
+**Tipografia**
+
+Importe no `index.js` do seu projeto a fonte `typeface-roboto`. https://www.npmjs.com/package/typeface-roboto
+
+```
+  yarn add typeface-roboto;
+```
+
+```js
+  import 'typeface-roboto';
+```
+
 ## Como importar componentes
 
 Os componentes estão dentro de `ui-components/lib/components`, podem ser importados de algumas formas diferentes.
