@@ -9,71 +9,70 @@ Biblioteca de Componentes de User Interface para projetos da **B-onuz**.
 - jest (https://jestjs.io/)
 - Storybook (https://storybook.js.org/)
 
-## Instalação via package.json
+## Instalação
 
-Adicione `ui-components` em dependencies dentro do arquivo `package.json`
+Manual de instalação [instalação](docs/guides/instalation.md)
 
-```
-  ...
-    "dependencies": {
-        ...,
-        "ui-components": "git+ssh://git@github.com:B-onuz/ui-components.git#feat/initial-structure"
-    }
-  ...
-```
+## Desenvolvimento
 
-Lembre-se que temos como dependência `"styled-components":"^5.1.0"`. Caso não tenha instalado no seu projeto utilize o comando:
+**Instalar dependências do projeto**
 
 ```
-  yarn add styled-components
+  yarn install
 ```
 
-Configure o tema no arquivo index.js do seu projeto, exemplo:
-
-```js
-import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
-import { ThemeProvider } from 'styled-components'; // linha adicionada
-import theme from 'ui-components/lib/theme' // linha adicionada
-
-ReactDOM.render(
-  <React.StrictMode>
-    <ThemeProvider theme={theme}> {/* linha adicionada */}
-    <App />
-    </ThemeProvider> {/* linha adicionada */}
-  </React.StrictMode>,
-  document.getElementById('root')
-);
-
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+**Rodar testes unitários**
 
 ```
-
-**Tipografia**
-
-Importe no `index.js` do seu projeto a fonte `typeface-roboto`. https://www.npmjs.com/package/typeface-roboto
-
-```
-  yarn add typeface-roboto
+yarn test
 ```
 
-```js
-  import 'typeface-roboto';
+**Rodar testes com coverage**
+
+```
+yarn test:coverage
 ```
 
-## Como importar componentes
+**Rodar testes e ouvir alterações nos arquivos**
 
-Os componentes estão dentro de `ui-components/lib/components`, podem ser importados de algumas formas diferentes.
-
-```js
-import { Button } from 'ui-components/lib'
+```
+yarn test:watch
 ```
 
-```js
-import Button from 'ui-components/lib/components/Button'
+**Storybook** (para abrir uma pagina com exemplos dos componentes)
+
+```
+yarn storybook
+```
+
+Será aberto uma página com exemplos dos componentes `http://localhost:6006`.
+
+## Build
+
+Gerar arquivos para produção `build`
+
+```
+yarn build
+```
+
+Apagar arquivos gerados para produção `build`
+
+```
+yarn clean
+```
+
+### Criação de componentes
+
+Para criar  um novo  componente, utilize o `plop component`.
+
+Após rodar  o comando  abaixo, digite o nome do componente e qual será a  tag base dele.
+
+```
+plop component
+```
+
+Você pode rodar o comando já passando o nome do componente e da tag base.
+
+```
+plop component box div
 ```
