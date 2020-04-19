@@ -24,7 +24,7 @@ colors.default = '#e0e1e2'
 const fontSizes = [12, 14, 16, 20, 24, 32]
 
 export default {
-  fontFamily: `'Roboto', sans-serif`,
+  fontFamily: `'Lato', sans-serif`,
   colors,
   fontSizes
 }

@@ -92,7 +92,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 11);
+/******/ 	return __webpack_require__(__webpack_require__.s = 12);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -202,11 +202,29 @@ module.exports = shouldUseNative() ? Object.assign : function (target, source) {
 /* 2 */
 /***/ (function(module, exports, __webpack_require__) {
 
+/**
+ * Copyright (c) 2013-present, Facebook, Inc.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+if (false) { var throwOnDirectAccess, ReactIs; } else {
+  // By explicitly using `prop-types` you are opting into new production behavior.
+  // http://fb.me/prop-types-in-prod
+  module.exports = __webpack_require__(20)();
+}
+
+
+/***/ }),
+/* 3 */
+/***/ (function(module, exports, __webpack_require__) {
+
 "use strict";
 
 
-var colorString = __webpack_require__(12);
-var convert = __webpack_require__(16);
+var colorString = __webpack_require__(13);
+var convert = __webpack_require__(17);
 
 var _slice = [].slice;
 
@@ -688,25 +706,25 @@ module.exports = Color;
 
 
 /***/ }),
-/* 3 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-if (true) {
-  module.exports = __webpack_require__(20);
-} else {}
-
-
-/***/ }),
 /* 4 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var reactIs = __webpack_require__(3);
+if (true) {
+  module.exports = __webpack_require__(23);
+} else {}
+
+
+/***/ }),
+/* 5 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var reactIs = __webpack_require__(4);
 
 /**
  * Copyright 2015, Yahoo! Inc.
@@ -810,7 +828,7 @@ module.exports = hoistNonReactStatics;
 
 
 /***/ }),
-/* 5 */
+/* 6 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -845,11 +863,11 @@ var index = memoize_browser_esm(function (prop) {
 
 
 /***/ }),
-/* 6 */
+/* 7 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* MIT license */
-var cssKeywords = __webpack_require__(17);
+var cssKeywords = __webpack_require__(18);
 
 // NOTE: conversions should only return primitive values (i.e. arrays, or
 //       values that give correct `typeof` results).
@@ -1719,7 +1737,7 @@ convert.rgb.gray = function (rgb) {
 
 
 /***/ }),
-/* 7 */
+/* 8 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1738,16 +1756,16 @@ convert.rgb.gray = function (rgb) {
 /* unused harmony export useTheme */
 /* unused harmony export version */
 /* unused harmony export withTheme */
-/* harmony import */ var react_is__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(3);
+/* harmony import */ var react_is__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(4);
 /* harmony import */ var react_is__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_is__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(0);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var shallowequal__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(8);
+/* harmony import */ var shallowequal__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(9);
 /* harmony import */ var shallowequal__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(shallowequal__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _emotion_stylis__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(9);
-/* harmony import */ var _emotion_unitless__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(10);
-/* harmony import */ var _emotion_is_prop_valid__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(5);
-/* harmony import */ var hoist_non_react_statics__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(4);
+/* harmony import */ var _emotion_stylis__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(10);
+/* harmony import */ var _emotion_unitless__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(11);
+/* harmony import */ var _emotion_is_prop_valid__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(6);
+/* harmony import */ var hoist_non_react_statics__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(5);
 /* harmony import */ var hoist_non_react_statics__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(hoist_non_react_statics__WEBPACK_IMPORTED_MODULE_6__);
 
 
@@ -3607,10 +3625,10 @@ if (false) {}
 
 //# sourceMappingURL=styled-components.browser.esm.js.map
 
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(19)))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(22)))
 
 /***/ }),
-/* 8 */
+/* 9 */
 /***/ (function(module, exports) {
 
 //
@@ -3662,7 +3680,7 @@ module.exports = function shallowEqual(objA, objB, compare, compareContext) {
 
 
 /***/ }),
-/* 9 */
+/* 10 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -4284,7 +4302,7 @@ function stylis_min (W) {
 
 
 /***/ }),
-/* 10 */
+/* 11 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -4341,19 +4359,19 @@ var unitlessKeys = {
 
 
 /***/ }),
-/* 11 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__(21);
-
-
-/***/ }),
 /* 12 */
 /***/ (function(module, exports, __webpack_require__) {
 
+module.exports = __webpack_require__(24);
+
+
+/***/ }),
+/* 13 */
+/***/ (function(module, exports, __webpack_require__) {
+
 /* MIT license */
-var colorNames = __webpack_require__(13);
-var swizzle = __webpack_require__(14);
+var colorNames = __webpack_require__(14);
+var swizzle = __webpack_require__(15);
 
 var reverseNames = {};
 
@@ -4588,7 +4606,7 @@ function hexDouble(num) {
 
 
 /***/ }),
-/* 13 */
+/* 14 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4747,13 +4765,13 @@ module.exports = {
 
 
 /***/ }),
-/* 14 */
+/* 15 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var isArrayish = __webpack_require__(15);
+var isArrayish = __webpack_require__(16);
 
 var concat = Array.prototype.concat;
 var slice = Array.prototype.slice;
@@ -4783,7 +4801,7 @@ swizzle.wrap = function (fn) {
 
 
 /***/ }),
-/* 15 */
+/* 16 */
 /***/ (function(module, exports) {
 
 module.exports = function isArrayish(obj) {
@@ -4798,11 +4816,11 @@ module.exports = function isArrayish(obj) {
 
 
 /***/ }),
-/* 16 */
+/* 17 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var conversions = __webpack_require__(6);
-var route = __webpack_require__(18);
+var conversions = __webpack_require__(7);
+var route = __webpack_require__(19);
 
 var convert = {};
 
@@ -4882,7 +4900,7 @@ module.exports = convert;
 
 
 /***/ }),
-/* 17 */
+/* 18 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5041,10 +5059,10 @@ module.exports = {
 
 
 /***/ }),
-/* 18 */
+/* 19 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var conversions = __webpack_require__(6);
+var conversions = __webpack_require__(7);
 
 /*
 	this function routes a model to all other models.
@@ -5144,7 +5162,97 @@ module.exports = function (fromModel) {
 
 
 /***/ }),
-/* 19 */
+/* 20 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/**
+ * Copyright (c) 2013-present, Facebook, Inc.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+
+
+var ReactPropTypesSecret = __webpack_require__(21);
+
+function emptyFunction() {}
+function emptyFunctionWithReset() {}
+emptyFunctionWithReset.resetWarningCache = emptyFunction;
+
+module.exports = function() {
+  function shim(props, propName, componentName, location, propFullName, secret) {
+    if (secret === ReactPropTypesSecret) {
+      // It is still safe when called from React.
+      return;
+    }
+    var err = new Error(
+      'Calling PropTypes validators directly is not supported by the `prop-types` package. ' +
+      'Use PropTypes.checkPropTypes() to call them. ' +
+      'Read more at http://fb.me/use-check-prop-types'
+    );
+    err.name = 'Invariant Violation';
+    throw err;
+  };
+  shim.isRequired = shim;
+  function getShim() {
+    return shim;
+  };
+  // Important!
+  // Keep this list in sync with production version in `./factoryWithTypeCheckers.js`.
+  var ReactPropTypes = {
+    array: shim,
+    bool: shim,
+    func: shim,
+    number: shim,
+    object: shim,
+    string: shim,
+    symbol: shim,
+
+    any: shim,
+    arrayOf: getShim,
+    element: shim,
+    elementType: shim,
+    instanceOf: getShim,
+    node: shim,
+    objectOf: getShim,
+    oneOf: getShim,
+    oneOfType: getShim,
+    shape: getShim,
+    exact: getShim,
+
+    checkPropTypes: emptyFunctionWithReset,
+    resetWarningCache: emptyFunction
+  };
+
+  ReactPropTypes.PropTypes = ReactPropTypes;
+
+  return ReactPropTypes;
+};
+
+
+/***/ }),
+/* 21 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/**
+ * Copyright (c) 2013-present, Facebook, Inc.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+
+
+var ReactPropTypesSecret = 'SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED';
+
+module.exports = ReactPropTypesSecret;
+
+
+/***/ }),
+/* 22 */
 /***/ (function(module, exports) {
 
 // shim for using process in browser
@@ -5334,7 +5442,7 @@ process.umask = function() { return 0; };
 
 
 /***/ }),
-/* 20 */
+/* 23 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5356,7 +5464,7 @@ exports.isValidElementType=function(a){return"string"===typeof a||"function"===t
 
 
 /***/ }),
-/* 21 */
+/* 24 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -5391,7 +5499,7 @@ colors.secondary = colors.fullDarkRed;
 colors["default"] = '#e0e1e2';
 var fontSizes = [12, 14, 16, 20, 24, 32];
 /* harmony default export */ var src_theme = ({
-  fontFamily: "'Roboto', sans-serif",
+  fontFamily: "'Lato', sans-serif",
   colors: colors,
   fontSizes: fontSizes
 });
@@ -5399,11 +5507,11 @@ var fontSizes = [12, 14, 16, 20, 24, 32];
 var external_root_React_commonjs2_react_commonjs_react_amd_react_ = __webpack_require__(0);
 
 // EXTERNAL MODULE: ./node_modules/styled-components/dist/styled-components.browser.esm.js
-var styled_components_browser_esm = __webpack_require__(7);
+var styled_components_browser_esm = __webpack_require__(8);
 
 // EXTERNAL MODULE: ./node_modules/color/index.js
-var color = __webpack_require__(2);
-var color_default = /*#__PURE__*/__webpack_require__.n(color);
+var node_modules_color = __webpack_require__(3);
+var color_default = /*#__PURE__*/__webpack_require__.n(node_modules_color);
 
 // EXTERNAL MODULE: ./node_modules/object-assign/index.js
 var object_assign = __webpack_require__(1);
@@ -6473,9 +6581,91 @@ var index_esm_style = function style(_ref) {
   return parse;
 };
 
+// CONCATENATED MODULE: ./src/components/Button/variants/color.js
+function color_extends() { color_extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return color_extends.apply(this, arguments); }
+
+
+
+/* harmony default export */ var variants_color = (function (props) {
+  var variants = Object.entries(props.theme.colors).reduce(function (acc, _ref) {
+    var _extends2;
+
+    var key = _ref[0],
+        value = _ref[1];
+    return color_extends({}, acc, (_extends2 = {}, _extends2[key] = {
+      color: new color_default.a(value).isDark() ? "#fff" : "#000",
+      bg: value,
+      borderColor: value
+    }, _extends2));
+  }, {});
+  return index_esm_variant({
+    prop: "color",
+    variants: variants
+  });
+});
+// CONCATENATED MODULE: ./src/components/Button/variants/size.js
+
+/* harmony default export */ var variants_size = (function (props) {
+  return index_esm_variant({
+    prop: "size",
+    variants: {
+      huge: {
+        fontSize: 4
+      },
+      big: {
+        fontSize: 3
+      },
+      medium: {
+        fontSize: 2
+      },
+      small: {
+        fontSize: 1
+      }
+    }
+  });
+});
+// CONCATENATED MODULE: ./src/components/Button/variants/index.js
+
+
+
+// EXTERNAL MODULE: ./node_modules/prop-types/index.js
+var prop_types = __webpack_require__(2);
+var prop_types_default = /*#__PURE__*/__webpack_require__.n(prop_types);
+
+// CONCATENATED MODULE: ./node_modules/@styled-system/prop-types/dist/index.esm.js
+function index_esm_extends() { index_esm_extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return index_esm_extends.apply(this, arguments); }
+
+
+
+var propType = prop_types_default.a.oneOfType([prop_types_default.a.number, prop_types_default.a.string, prop_types_default.a.array, prop_types_default.a.object]);
+var createPropTypes = function createPropTypes(props) {
+  return props.reduce(function (acc, name) {
+    var _extends2;
+
+    return index_esm_extends({}, acc, (_extends2 = {}, _extends2[name] = propType, _extends2));
+  }, {});
+};
+/* harmony default export */ var prop_types_dist_index_esm = ({
+  space: createPropTypes(space.propNames),
+  color: createPropTypes(index_esm_color.propNames),
+  layout: createPropTypes(layout.propNames),
+  typography: createPropTypes(typography.propNames),
+  flexbox: createPropTypes(flexbox.propNames),
+  border: createPropTypes(border.propNames),
+  background: createPropTypes(background.propNames),
+  position: createPropTypes(position.propNames),
+  grid: createPropTypes(grid.propNames),
+  shadow: createPropTypes(shadow.propNames),
+  buttonStyle: createPropTypes(buttonStyle.propNames),
+  textStyle: createPropTypes(textStyle.propNames),
+  colorStyle: createPropTypes(colorStyle.propNames)
+});
+
 // CONCATENATED MODULE: ./src/components/Button/Button.js
+function Button_extends() { Button_extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return Button_extends.apply(this, arguments); }
+
 function _templateObject() {
-  var data = _taggedTemplateLiteralLoose(["\n  appearance: none;\n  font-family: inherit;\n  border-radius: 4px;\n  outline: none;\n  cursor: pointer;\n  padding: .5rem 1rem;\n  ", "\n  ", "\n  ", "\n  border: 1px solid ", ";\n  &:focus {\n    box-shadow: 0 0 8px ", ";\n  }\n  &:hover {\n    background-color: ", ";\n  }\n  &:active {\n    background-color: ", ";\n  }\n"]);
+  var data = _taggedTemplateLiteralLoose(["\n  appearance: none;\n  font-family: inherit;\n  border-radius: 4px;\n  outline: none;\n  cursor: pointer;\n  padding: .5rem 1rem;\n  border-style: solid;\n  color: #000;\n  ", "\n  ", "\n  ", "\n  &:focus {\n    box-shadow: 0 0 8px ", ";\n  }\n  &:hover {\n    background-color: ", ";\n  }\n  &:active {\n    background-color: ", ";\n  }\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -6490,47 +6680,31 @@ function _taggedTemplateLiteralLoose(strings, raw) { if (!raw) { raw = strings.s
 
 
 
-var Button = styled_components_browser_esm["a" /* default */].button(_templateObject(), function (props) {
-  return index_esm_variant({
-    variants: {
-      primary: {
-        color: new color_default.a(props.theme.colors.lightRed).isDark() ? '#fff' : '#000',
-        bg: "lightRed",
-        fontSize: 2
-      },
-      secondary: {
-        color: new color_default.a(props.theme.colors.fullDarkRed).isDark() ? '#fff' : '#000',
-        bg: "fullDarkRed",
-        fontSize: 2
-      },
-      "default": {
-        color: new color_default.a(props.theme.colors[props.bg] || '#e0e1e2').isDark() ? '#fff' : '#000',
-        bg: "#e0e1e2",
-        fontSize: 2
-      }
-    }
-  });
-}, index_esm_color, space, function (_ref) {
+
+
+
+var Button = styled_components_browser_esm["a" /* default */].button(_templateObject(), space, variants_color, variants_size, function (_ref) {
   var theme = _ref.theme,
-      variant = _ref.variant,
-      bg = _ref.bg;
-  return bg ? theme.colors[bg] : theme.colors[variant];
+      color = _ref.color;
+  return theme.colors[color];
 }, function (_ref2) {
   var theme = _ref2.theme,
-      variant = _ref2.variant,
-      bg = _ref2.bg;
-  return bg ? theme.colors[bg] : theme.colors[variant] || "rgba(0,0,0,.3)";
+      color = _ref2.color;
+  return new color_default.a(theme.colors[color]).lighten(0.2).string();
 }, function (_ref3) {
   var theme = _ref3.theme,
-      variant = _ref3.variant,
-      bg = _ref3.bg;
-  return bg ? new color_default.a(theme.colors[bg]).lighten(0.2).string() : new color_default.a(theme.colors[variant] || "#ddd").lighten(0.15).string();
-}, function (_ref4) {
-  var theme = _ref4.theme,
-      variant = _ref4.variant,
-      bg = _ref4.bg;
-  return bg ? new color_default.a(theme.colors[bg]).darken(0.2).string() : new color_default.a(theme.colors[variant] || "#ddd").darken(0.15).string();
+      color = _ref3.color;
+  return new color_default.a(theme.colors[color]).darken(0.2).string();
 });
+Button.displayName = 'Button';
+Button.propTypes = Button_extends({
+  size: prop_types_default.a.oneOf(['small', 'medium', 'big', 'huge']),
+  color: prop_types_default.a.string
+}, prop_types_dist_index_esm.space);
+Button.defaultProps = {
+  size: 'medium',
+  color: 'default'
+};
 /* harmony default export */ var Button_Button = (Button);
 // CONCATENATED MODULE: ./src/components/Button/index.js
 

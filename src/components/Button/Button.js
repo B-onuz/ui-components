@@ -1,7 +1,10 @@
 import React from "react";
 import styled from "styled-components";
 import Color from "color";
-import { color, variant, space } from "styled-system";
+import { space } from "styled-system";
+import { color, size } from './variants'
+import PropTypes from 'prop-types'
+import propTypes from '@styled-system/prop-types'
 
 const Button = styled.button`
   appearance: none;
@@ -10,37 +13,33 @@ const Button = styled.button`
   outline: none;
   cursor: pointer;
   padding: .5rem 1rem;
-  ${props => variant({
-    variants: {
-      primary: {
-        color: new Color(props.theme.colors.lightRed).isDark() ? '#fff' : '#000',
-        bg: "lightRed",
-        fontSize: 2,
-      },
-      secondary: {
-        color: new Color(props.theme.colors.fullDarkRed).isDark() ? '#fff' : '#000',
-        bg: "fullDarkRed",
-        fontSize: 2,
-      },
-      default: {
-        color: new Color(props.theme.colors[props.bg] || '#e0e1e2').isDark() ? '#fff' : '#000',
-        bg: "#e0e1e2",
-        fontSize: 2,
-      },
-    },
-  })}
-  ${color}
+  border-style: solid;
+  color: #000;
   ${space}
-  border: 1px solid ${({ theme, variant, bg }) => bg ? theme.colors[bg] : theme.colors[variant] };
+  ${color}
+  ${size}
   &:focus {
-    box-shadow: 0 0 8px ${({ theme, variant, bg }) => bg ? theme.colors[bg] : theme.colors[variant] || "rgba(0,0,0,.3)"};
+    box-shadow: 0 0 8px ${({ theme, color }) => theme.colors[color]};
   }
   &:hover {
-    background-color: ${({ theme, variant, bg }) => bg ? new Color(theme.colors[bg]).lighten(0.2).string() : new Color(theme.colors[variant] || "#ddd").lighten(0.15).string()};
+    background-color: ${({ theme, color }) => new Color(theme.colors[color]).lighten(0.2).string()};
   }
   &:active {
-    background-color: ${({ theme, variant, bg }) => bg ? new Color(theme.colors[bg]).darken(0.2).string() : new Color(theme.colors[variant] || "#ddd").darken(0.15).string()};
+    background-color: ${({ theme, color }) => new Color(theme.colors[color]).darken(0.2).string()};
   }
 `;
+
+Button.displayName = 'Button'
+
+Button.propTypes = {
+  size: PropTypes.oneOf(['small', 'medium', 'big', 'huge']),
+  color: PropTypes.string,
+  ...propTypes.space
+}
+
+Button.defaultProps = {
+  size: 'medium',
+  color: 'default',
+}
 
 export default Button;

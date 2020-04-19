@@ -23,9 +23,13 @@
     "build-storybook": "build-storybook"
   },
   "dependencies": {
+    "@storybook/addon-info": "^5.3.18",
+    "@styled-system/prop-types": "^5.1.5",
     "color": "^3.1.2",
+    "prop-types": "^15.7.2",
     "styled-components": "^5.1.0",
-    "styled-system": "^5.1.5"
+    "styled-system": "^5.1.5",
+    "typeface-lato": "^0.0.75"
   },
   "peerDependencies": {
     "react": "16.x"
@@ -34,6 +38,8 @@
     "@babel/core": "^7.9.0",
     "@babel/preset-env": "^7.9.5",
     "@babel/preset-react": "^7.9.4",
+    "@commitlint/cli": "^8.3.5",
+    "@commitlint/config-conventional": "^8.3.4",
     "@storybook/addon-actions": "^5.3.18",
     "@storybook/addon-knobs": "^5.3.18",
     "@storybook/addon-links": "^5.3.18",
@@ -42,13 +48,14 @@
     "add": "^2.0.6",
     "babel-jest": "^25.2.6",
     "babel-loader": "^8.1.0",
+    "husky": "^4.2.5",
     "jest": "^25.2.7",
     "nwb": "0.24.x",
     "plop": "^2.6.0",
     "react": "^16.13.1",
+    "react-docgen": "^5.3.0",
     "react-dom": "^16.13.1",
     "react-test-renderer": "^16.13.1",
-    "typeface-roboto": "^0.0.75",
     "yarn": "^1.22.4"
   }
 }

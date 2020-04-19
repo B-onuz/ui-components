@@ -39,14 +39,14 @@ ReactDOM.render(
 
 **Tipografia**
 
-Importe no `index.js` do seu projeto a fonte `typeface-roboto`. https://www.npmjs.com/package/typeface-roboto
+Importe no `index.js` do seu projeto a fonte `typeface-lato`. https://www.npmjs.com/package/typeface-lato
 
 ```
-  yarn add typeface-roboto
+  yarn add typeface-lato
 ```
 
 ```js
-  import 'typeface-roboto';
+  import 'typeface-lato';
 ```
 
 ## Como importar componentes
