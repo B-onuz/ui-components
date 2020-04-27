@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.3](https://github.com/B-onuz/ui-components/compare/v1.1.1...v1.1.3) (2020-04-27)
+
+### Bug Fixes
+
+- **components,BaseLayout,Sidebar:** fix logo_white import ([cc0ed19](https://github.com/B-onuz/ui-components/commit/cc0ed19dca08da82acae75a31dfd0abacfcbc387))
+
 ### [1.1.2](https://github.com/B-onuz/ui-components/compare/v1.1.1...v1.1.2) (2020-04-27)
 
 ### 1.1.1 (2020-04-27)
