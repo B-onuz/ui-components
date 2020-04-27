@@ -1,8 +1,8 @@
-import { variant } from "styled-system";
+import { variant } from 'styled-system'
 
 export default (props) => {
   return variant({
-    prop: "size",
+    prop: 'size',
     variants: {
       huge: {
         fontSize: 4,
@@ -17,6 +17,5 @@ export default (props) => {
         fontSize: 1,
       },
     },
-  });
-};
-
+  })
+}

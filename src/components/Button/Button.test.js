@@ -3,48 +3,102 @@ import Button from './Button.js'
 import renderer from 'react-test-renderer'
 import { ThemeProvider } from 'styled-components'
 import theme from '../../theme'
+import 'jest-styled-components'
 
 test('Should render button', () => {
   const component = renderer.create(
-    <ThemeProvider theme={theme}><Button>Hello Button</Button></ThemeProvider>
-  );
+    <ThemeProvider theme={theme} theme={theme}>
+      <Button>Hello Button</Button>
+    </ThemeProvider>
+  )
   let tree = component.toJSON()
   expect(tree).toMatchSnapshot()
-});
+})
 
 test('Should render button when bg prop', () => {
   const component = renderer.create(
-    <ThemeProvider theme={theme}>
-      <Button m={2} variant={'default'} bg={'fullDarkRed'} >{'fullDarkRed'}</Button>
-      <Button m={2} variant={'default'} bg={'darkRed'} >{'darkRed'}</Button>
-      <Button m={2} variant={'default'} bg={'lightRed'} >{'lightRed'}</Button>
-      <Button m={2} variant={'default'} bg={'red'} >{'red'}</Button>
-      <Button m={2} variant={'default'} bg={'orange'} >{'orange'}</Button>
-      <Button m={2} variant={'default'} bg={'yellow'} >{'yellow'}</Button>
-      <Button m={2} variant={'default'} bg={'olive'} >{'olive'}</Button>
-      <Button m={2} variant={'default'} bg={'green'} >{'green'}</Button>
-      <Button m={2} variant={'default'} bg={'teal'} >{'teal'}</Button>
-      <Button m={2} variant={'default'} bg={'blue'} >{'blue'}</Button>
-      <Button m={2} variant={'default'} bg={'violet'} >{'violet'}</Button>
-      <Button m={2} variant={'default'} bg={'purple'} >{'purple'}</Button>
-      <Button m={2} variant={'default'} bg={'pink'} >{'pink'}</Button>
-      <Button m={2} variant={'default'} bg={'brown'} >{'brown'}</Button>
-      <Button m={2} variant={'default'} bg={'grey'} >{'grey'}</Button>
-      <Button m={2} variant={'default'} bg={'black'} >{'black'}</Button>
+    <ThemeProvider theme={theme} theme={theme}>
+      <Button m={2}>{'Default'}</Button>
+      <Button m={2} color={'default'}>
+        {'Default'}
+      </Button>
+      <Button m={2} color={'primary'}>
+        {'Primary'}
+      </Button>
+      <Button m={2} color={'secondary'}>
+        {'Secondary'}
+      </Button>
+      <Button m={2} color={'fullDarkRed'}>
+        {'fullDarkRed'}
+      </Button>
+      <Button m={2} color={'darkRed'}>
+        {'darkRed'}
+      </Button>
+      <Button m={2} color={'lightRed'}>
+        {'lightRed'}
+      </Button>
+      <Button m={2} color={'red'}>
+        {'red'}
+      </Button>
+      <Button m={2} color={'orange'}>
+        {'orange'}
+      </Button>
+      <Button m={2} color={'yellow'}>
+        {'yellow'}
+      </Button>
+      <Button m={2} color={'olive'}>
+        {'olive'}
+      </Button>
+      <Button m={2} color={'green'}>
+        {'green'}
+      </Button>
+      <Button m={2} color={'teal'}>
+        {'teal'}
+      </Button>
+      <Button m={2} color={'blue'}>
+        {'blue'}
+      </Button>
+      <Button m={2} color={'violet'}>
+        {'violet'}
+      </Button>
+      <Button m={2} color={'purple'}>
+        {'purple'}
+      </Button>
+      <Button m={2} color={'pink'}>
+        {'pink'}
+      </Button>
+      <Button m={2} color={'brown'}>
+        {'brown'}
+      </Button>
+      <Button m={2} color={'grey'}>
+        {'grey'}
+      </Button>
+      <Button m={2} color={'black'}>
+        {'black'}
+      </Button>
     </ThemeProvider>
-  );
+  )
   let tree = component.toJSON()
   expect(tree).toMatchSnapshot()
-});
+})
 
-test('Should render button when variant prop', () => {
+test('Should render button when size prop', () => {
   const component = renderer.create(
-    <ThemeProvider theme={theme}>
-      <Button m={2} variant={'default'}>{'Default'}</Button>
-      <Button m={2} variant={'primary'}>{'Primary'}</Button>
-      <Button m={2} variant={'secondary'}>{'Secondary'}</Button>
+    <ThemeProvider theme={theme} theme={theme}>
+      <Button m={2} size={'small'}>
+        {'Default'}
+      </Button>
+      <Button m={2} size={'medium'}>
+        {'Primary'}
+      </Button>
+      <Button m={2} size={'big'}>
+        {'Primary'}
+      </Button>
+      <Button m={2} size={'huge'}>
+        {'Secondary'}
+      </Button>
     </ThemeProvider>
-  );
+  )
   let tree = component.toJSON()
   expect(tree).toMatchSnapshot()
-});
+})

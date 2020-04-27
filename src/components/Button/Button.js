@@ -1,7 +1,7 @@
-import React from "react";
-import styled from "styled-components";
-import Color from "color";
-import { space } from "styled-system";
+import React from 'react'
+import styled from 'styled-components'
+import Color from 'color'
+import { space } from 'styled-system'
 import { color, size } from './variants'
 import PropTypes from 'prop-types'
 import propTypes from '@styled-system/prop-types'
@@ -18,6 +18,8 @@ const Button = styled.button`
   ${space}
   ${color}
   ${size}
+  ${(props) => (props.fullWidth && 'width: 100%;') || ''}
+  box-sizing: border-box;
   &:focus {
     box-shadow: 0 0 8px ${({ theme, color }) => theme.colors[color]};
   }
@@ -27,19 +29,20 @@ const Button = styled.button`
   &:active {
     background-color: ${({ theme, color }) => new Color(theme.colors[color]).darken(0.2).string()};
   }
-`;
+`
 
 Button.displayName = 'Button'
 
 Button.propTypes = {
   size: PropTypes.oneOf(['small', 'medium', 'big', 'huge']),
   color: PropTypes.string,
-  ...propTypes.space
+  ...propTypes.space,
 }
 
 Button.defaultProps = {
   size: 'medium',
   color: 'default',
+  type: 'button',
 }
 
-export default Button;
+export default Button
