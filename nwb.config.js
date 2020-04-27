@@ -5,8 +5,8 @@ module.exports = {
     umd: {
       global: 'BonuzUiComponents',
       externals: {
-        react: 'React'
-      }
-    }
-  }
+        react: 'React',
+      },
+    },
+  },
 }
