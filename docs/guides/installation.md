@@ -21,20 +21,24 @@ Configure o tema no arquivo index.js do seu projeto, exemplo:
 
 ```js
 /* ... */
-import { ThemeProvider } from 'styled-components'; // linha adicionada
+import { ThemeProvider } from 'styled-components'
+import theme from '../../theme'
+import 'jest-styled-components' // linha adicionada
 import theme from 'ui-components/lib/theme' // linha adicionada
 
 ReactDOM.render(
   <React.StrictMode>
-    <ThemeProvider theme={theme}> {/* linha adicionada */}
-    <App />
-    </ThemeProvider> {/* linha adicionada */}
+    <ThemeProvider theme={theme} theme={theme}>
+      {' '}
+      {/* linha adicionada */}
+      <App />
+    </ThemeProvider>{' '}
+    {/* linha adicionada */}
   </React.StrictMode>,
   document.getElementById('root')
-);
+)
 
 /* ... */
-
 ```
 
 **Tipografia**
@@ -46,7 +50,7 @@ Importe no `index.js` do seu projeto a fonte `typeface-lato`. https://www.npmjs.
 ```
 
 ```js
-  import 'typeface-lato';
+import 'typeface-lato'
 ```
 
 ## Como importar componentes

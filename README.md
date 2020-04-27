@@ -3,6 +3,7 @@
 Biblioteca de Componentes de User Interface para projetos da **B-onuz**.
 
 ## Stack
+
 - nwb (https://github.com/insin/nwb)
 - Styled System (https://styled-system.com/)
 - PlopJS (https://plopjs.com/)
@@ -11,7 +12,7 @@ Biblioteca de Componentes de User Interface para projetos da **B-onuz**.
 
 ## Instalação
 
-Manual de instalação [instalação](docs/guides/instalation.md)
+Manual de instalação [instalação](docs/guides/installation.md)
 
 ## Desenvolvimento
 
@@ -63,9 +64,9 @@ yarn clean
 
 ### Criação de componentes
 
-Para criar  um novo  componente, utilize o `plop component`.
+Para criar um novo componente, utilize o `plop component`.
 
-Após rodar  o comando  abaixo, digite o nome do componente e qual será a  tag base dele.
+Após rodar o comando abaixo, digite o nome do componente e qual será a tag base dele.
 
 ```
 plop component
