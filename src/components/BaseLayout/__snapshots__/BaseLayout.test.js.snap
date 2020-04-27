@@ -2,24 +2,24 @@
 
 exports[`should render BaseLayout without sidebar 1`] = `
 <div
-  className="sc-Axmtr sc-AxmLO sc-fznKkj eAHtxI"
+  className="sc-AxjAm sc-AxirZ sc-Axmtr kHQcDq"
 >
   <div
-    className="sc-Axmtr sc-fzokOt fvEzAL"
+    className="sc-AxjAm sc-fzozJi kQnvEm"
     display="flex"
   >
     <div
-      className="sc-fzoLsD fNPIVx"
+      className="sc-AxhCb gKulCB"
     >
       <button
-        className="sc-fzozJi dtCjIY"
+        className="sc-AxiKw jalXiC"
         color="primary"
       />
       <header
-        className="sc-fznyAO jUUsgT"
+        className="sc-AxheI jATbQL"
       >
         <h1
-          className="sc-fzpans dEctYS"
+          className="sc-AxhUy ighnej"
           color="darkRed"
         >
           Cadastro de Advogado
@@ -27,7 +27,7 @@ exports[`should render BaseLayout without sidebar 1`] = `
       </header>
     </div>
     <div
-      className="sc-fznZeY MbWPJ"
+      className="sc-AxmLO sXEuK"
     />
   </div>
 </div>

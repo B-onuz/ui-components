@@ -11,8 +11,6 @@ var _styledComponents = _interopRequireDefault(require('styled-components'))
 
 var _styledSystem = require('styled-system')
 
-var _logo_white = _interopRequireDefault(require('../../assets/logo_white.svg'))
-
 var _this = void 0,
   _jsxFileName = '/Users/rogeralbino/projects/Kazap/B-onuz/ui-components/src/components/Logo/Logo.js'
 
@@ -51,7 +49,7 @@ function _objectWithoutPropertiesLoose(source, excluded) {
 }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteralLoose(['\n  display: block;\n  margin: auto;\n  ', '\n  ', '\n'])
+  var data = _taggedTemplateLiteralLoose(['\n  display: block;\n  margin: auto;\n  ', '\n'])
 
   _templateObject = function _templateObject() {
     return data
@@ -68,7 +66,7 @@ function _taggedTemplateLiteralLoose(strings, raw) {
   return strings
 }
 
-var LogoImg = _styledComponents['default'].img(_templateObject(), _styledSystem.space, _styledSystem.layout)
+var LogoImg = _styledComponents['default'].img(_templateObject(), (0, _styledSystem.compose)(_styledSystem.space, _styledSystem.layout))
 
 var Logo = function Logo(_ref) {
   var children = _ref.children,
@@ -79,14 +77,14 @@ var Logo = function Logo(_ref) {
     LogoImg,
     _extends(
       {
-        src: _logo_white['default'],
+        src: src,
       },
       rest,
       {
         __self: _this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 14,
+          lineNumber: 12,
           columnNumber: 10,
         },
       }

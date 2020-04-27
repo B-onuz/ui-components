@@ -1,7 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
 import { color } from 'styled-system'
-import SidebarMenu from '../SidebarMenu'
 import { Flex, Box } from 'reflexbox/styled-components'
 import HamburguerButton from '../HamburguerButton'
 import Navbar from '../NavBar'

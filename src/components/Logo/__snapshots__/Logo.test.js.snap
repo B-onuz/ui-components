@@ -8,6 +8,5 @@ exports[`Logo changes the class when hovered 1`] = `
 
 <img
   className="c0"
-  src={[Function]}
 />
 `;

@@ -8,6 +8,8 @@ import SidebarMenuItem from '../SidebarMenuItem'
 import CheckBox from '../CheckBox'
 import Button from '../Button'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import Logo from '../Logo'
+import logoImg from '../../assets/logo_white.svg'
 import { faHome, faDice, faCodeBranch, faAdjust, faKey, faKissBeam, faKissWinkHeart } from '@fortawesome/free-solid-svg-icons'
 
 const menuItems = [
@@ -20,7 +22,7 @@ const menuItems = [
 
 const DashboardSidebar = ({ ...rest }) => {
   return (
-    <SidebarMenu {...rest}>
+    <SidebarMenu {...rest} logo={<Logo width={180} my={3} src={logoImg} />}>
       {menuItems.map((item) => {
         return <SidebarMenuItem component={'header'} icon={<FontAwesomeIcon icon={item.icon} />} children={item.text} />
       })}

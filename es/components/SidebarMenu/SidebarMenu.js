@@ -15,12 +15,6 @@ var _reflexbox = require('reflexbox')
 
 var _MenuList = _interopRequireDefault(require('./MenuList'))
 
-var _SidebarMenuItem = _interopRequireDefault(require('../SidebarMenuItem'))
-
-var _Logo = _interopRequireDefault(require('../Logo'))
-
-var _logo_white = _interopRequireDefault(require('../../assets/logo_white.svg'))
-
 var _this = void 0,
   _jsxFileName = '/Users/rogeralbino/projects/Kazap/B-onuz/ui-components/src/components/SidebarMenu/SidebarMenu.js'
 
@@ -122,9 +116,11 @@ var SidebarMenu = function SidebarMenu(_ref3) {
     _ref3$open = _ref3.open,
     open = _ref3$open === void 0 ? false : _ref3$open,
     onClose = _ref3.onClose,
+    _ref3$logo = _ref3.logo,
+    logo = _ref3$logo === void 0 ? 'Logo' : _ref3$logo,
     _ref3$items = _ref3.items,
     items = _ref3$items === void 0 ? [] : _ref3$items,
-    rest = _objectWithoutPropertiesLoose(_ref3, ['children', 'open', 'onClose', 'items'])
+    rest = _objectWithoutPropertiesLoose(_ref3, ['children', 'open', 'onClose', 'logo', 'items'])
 
   return /*#__PURE__*/ _react['default'].createElement(
     WrapperSidebarMenu,
@@ -133,7 +129,7 @@ var SidebarMenu = function SidebarMenu(_ref3) {
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 67,
+        lineNumber: 64,
         columnNumber: 5,
       },
     },
@@ -148,22 +144,12 @@ var SidebarMenu = function SidebarMenu(_ref3) {
           __self: _this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 68,
+            lineNumber: 65,
             columnNumber: 7,
           },
         }
       ),
-      /*#__PURE__*/ _react['default'].createElement(_Logo['default'], {
-        width: '180',
-        py: 3,
-        src: _logo_white['default'],
-        __self: _this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 69,
-          columnNumber: 9,
-        },
-      }),
+      logo,
       /*#__PURE__*/ _react['default'].createElement(
         _MenuList['default'],
         {
@@ -171,7 +157,7 @@ var SidebarMenu = function SidebarMenu(_ref3) {
           __self: _this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 70,
+            lineNumber: 67,
             columnNumber: 9,
           },
         },
@@ -185,7 +171,7 @@ var SidebarMenu = function SidebarMenu(_ref3) {
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 72,
+        lineNumber: 69,
         columnNumber: 7,
       },
     })

@@ -1,4 +1,4 @@
-/*! ui-components v1.0.0 */
+/*! ui-components v1.1.1 */
 ;(function webpackUniversalModuleDefinition(root, factory) {
   if (typeof exports === 'object' && typeof module === 'object') module.exports = factory(require('react'))
   else if (typeof define === 'function' && define.amd) define(['react'], factory)
@@ -95,7 +95,7 @@
     /******/ /******/ __webpack_require__.p = '' // Load entry module and return exports
     /******/
     /******/
-    /******/ /******/ return __webpack_require__((__webpack_require__.s = 21))
+    /******/ /******/ return __webpack_require__((__webpack_require__.s = 20))
     /******/
   })(
     /************************************************************************/
@@ -1267,14 +1267,14 @@
           /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/ __webpack_require__.n(
             react__WEBPACK_IMPORTED_MODULE_1__
           )
-          /* harmony import */ var shallowequal__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(17)
+          /* harmony import */ var shallowequal__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(16)
           /* harmony import */ var shallowequal__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/ __webpack_require__.n(
             shallowequal__WEBPACK_IMPORTED_MODULE_2__
           )
           /* harmony import */ var _emotion_stylis__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(10)
           /* harmony import */ var _emotion_unitless__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(11)
           /* harmony import */ var _emotion_is_prop_valid__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(6)
-          /* harmony import */ var hoist_non_react_statics__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(13)
+          /* harmony import */ var hoist_non_react_statics__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(12)
           /* harmony import */ var hoist_non_react_statics__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/ __webpack_require__.n(
             hoist_non_react_statics__WEBPACK_IMPORTED_MODULE_6__
           )
@@ -3368,7 +3368,7 @@
           //# sourceMappingURL=styled-components.browser.esm.js.map
 
           /* WEBPACK VAR INJECTION */
-        }.call(this, __webpack_require__(31)))
+        }.call(this, __webpack_require__(30)))
 
         /***/
       },
@@ -3482,7 +3482,7 @@ object-assign
         } else {
           // By explicitly using `prop-types` you are opting into new production behavior.
           // http://fb.me/prop-types-in-prod
-          module.exports = __webpack_require__(29)()
+          module.exports = __webpack_require__(28)()
         }
 
         /***/
@@ -3491,8 +3491,8 @@ object-assign
       /***/ function (module, exports, __webpack_require__) {
         'use strict'
 
-        var colorString = __webpack_require__(22)
-        var convert = __webpack_require__(26)
+        var colorString = __webpack_require__(21)
+        var convert = __webpack_require__(25)
 
         var _slice = [].slice
 
@@ -4279,7 +4279,7 @@ object-assign
         'use strict'
 
         if (true) {
-          module.exports = __webpack_require__(32)
+          module.exports = __webpack_require__(31)
         } else {
         }
 
@@ -5020,12 +5020,6 @@ object-assign
       },
       /* 12 */
       /***/ function (module, exports, __webpack_require__) {
-        module.exports = __webpack_require__.p + 'logo_white.adc40b09.svg'
-
-        /***/
-      },
-      /* 13 */
-      /***/ function (module, exports, __webpack_require__) {
         'use strict'
 
         var reactIs = __webpack_require__(9)
@@ -5136,7 +5130,7 @@ object-assign
 
         /***/
       },
-      /* 14 */
+      /* 13 */
       /***/ function (module, exports, __webpack_require__) {
         'use strict'
 
@@ -5153,7 +5147,7 @@ object-assign
 
         var _css = _interopRequireWildcard(__webpack_require__(8))
 
-        var _shouldForwardProp = _interopRequireDefault(__webpack_require__(16))
+        var _shouldForwardProp = _interopRequireDefault(__webpack_require__(15))
 
         function _getRequireWildcardCache() {
           if (typeof WeakMap !== 'function') return null
@@ -5237,10 +5231,10 @@ object-assign
 
         /***/
       },
-      /* 15 */
+      /* 14 */
       /***/ function (module, exports, __webpack_require__) {
         /* MIT license */
-        var cssKeywords = __webpack_require__(27)
+        var cssKeywords = __webpack_require__(26)
 
         // NOTE: conversions should only return primitive values (i.e. arrays, or
         //       values that give correct `typeof` results).
@@ -6125,7 +6119,7 @@ object-assign
 
         /***/
       },
-      /* 16 */
+      /* 15 */
       /***/ function (module, __webpack_exports__, __webpack_require__) {
         'use strict'
         __webpack_require__.r(__webpack_exports__)
@@ -6165,7 +6159,7 @@ object-assign
 
         /***/
       },
-      /* 17 */
+      /* 16 */
       /***/ function (module, exports) {
         //
 
@@ -6216,7 +6210,7 @@ object-assign
 
         /***/
       },
-      /* 18 */
+      /* 17 */
       /***/ function (module, exports, __webpack_require__) {
         'use strict'
 
@@ -6227,13 +6221,13 @@ object-assign
 
         var _react = _interopRequireDefault(__webpack_require__(0))
 
-        var _styled = _interopRequireDefault(__webpack_require__(34))
+        var _styled = _interopRequireDefault(__webpack_require__(33))
 
         var _styledSystem = __webpack_require__(1)
 
         var _css = _interopRequireWildcard(__webpack_require__(8))
 
-        var _shouldForwardProp = _interopRequireDefault(__webpack_require__(16))
+        var _shouldForwardProp = _interopRequireDefault(__webpack_require__(15))
 
         function _getRequireWildcardCache() {
           if (typeof WeakMap !== 'function') return null
@@ -6317,7 +6311,7 @@ object-assign
 
         /***/
       },
-      /* 19 */
+      /* 18 */
       /***/ function (module, exports) {
         function _defineProperty(obj, key, value) {
           if (key in obj) {
@@ -6338,7 +6332,7 @@ object-assign
 
         /***/
       },
-      /* 20 */
+      /* 19 */
       /***/ function (module, exports) {
         function _inheritsLoose(subClass, superClass) {
           subClass.prototype = Object.create(superClass.prototype)
@@ -6350,17 +6344,17 @@ object-assign
 
         /***/
       },
-      /* 21 */
+      /* 20 */
       /***/ function (module, exports, __webpack_require__) {
-        module.exports = __webpack_require__(33)
+        module.exports = __webpack_require__(32)
 
         /***/
       },
-      /* 22 */
+      /* 21 */
       /***/ function (module, exports, __webpack_require__) {
         /* MIT license */
-        var colorNames = __webpack_require__(23)
-        var swizzle = __webpack_require__(24)
+        var colorNames = __webpack_require__(22)
+        var swizzle = __webpack_require__(23)
 
         var reverseNames = {}
 
@@ -6587,7 +6581,7 @@ object-assign
 
         /***/
       },
-      /* 23 */
+      /* 22 */
       /***/ function (module, exports, __webpack_require__) {
         'use strict'
 
@@ -6744,11 +6738,11 @@ object-assign
 
         /***/
       },
-      /* 24 */
+      /* 23 */
       /***/ function (module, exports, __webpack_require__) {
         'use strict'
 
-        var isArrayish = __webpack_require__(25)
+        var isArrayish = __webpack_require__(24)
 
         var concat = Array.prototype.concat
         var slice = Array.prototype.slice
@@ -6778,7 +6772,7 @@ object-assign
 
         /***/
       },
-      /* 25 */
+      /* 24 */
       /***/ function (module, exports) {
         module.exports = function isArrayish(obj) {
           if (!obj || typeof obj === 'string') {
@@ -6795,10 +6789,10 @@ object-assign
 
         /***/
       },
-      /* 26 */
+      /* 25 */
       /***/ function (module, exports, __webpack_require__) {
-        var conversions = __webpack_require__(15)
-        var route = __webpack_require__(28)
+        var conversions = __webpack_require__(14)
+        var route = __webpack_require__(27)
 
         var convert = {}
 
@@ -6878,7 +6872,7 @@ object-assign
 
         /***/
       },
-      /* 27 */
+      /* 26 */
       /***/ function (module, exports, __webpack_require__) {
         'use strict'
 
@@ -7035,9 +7029,9 @@ object-assign
 
         /***/
       },
-      /* 28 */
+      /* 27 */
       /***/ function (module, exports, __webpack_require__) {
-        var conversions = __webpack_require__(15)
+        var conversions = __webpack_require__(14)
 
         /*
 	this function routes a model to all other models.
@@ -7136,7 +7130,7 @@ object-assign
 
         /***/
       },
-      /* 29 */
+      /* 28 */
       /***/ function (module, exports, __webpack_require__) {
         'use strict'
         /**
@@ -7146,7 +7140,7 @@ object-assign
          * LICENSE file in the root directory of this source tree.
          */
 
-        var ReactPropTypesSecret = __webpack_require__(30)
+        var ReactPropTypesSecret = __webpack_require__(29)
 
         function emptyFunction() {}
         function emptyFunctionWithReset() {}
@@ -7204,7 +7198,7 @@ object-assign
 
         /***/
       },
-      /* 30 */
+      /* 29 */
       /***/ function (module, exports, __webpack_require__) {
         'use strict'
         /**
@@ -7220,7 +7214,7 @@ object-assign
 
         /***/
       },
-      /* 31 */
+      /* 30 */
       /***/ function (module, exports) {
         // shim for using process in browser
         var process = (module.exports = {})
@@ -7410,7 +7404,7 @@ object-assign
 
         /***/
       },
-      /* 32 */
+      /* 31 */
       /***/ function (module, exports, __webpack_require__) {
         'use strict'
         /** @license React v16.13.1
@@ -7551,7 +7545,7 @@ object-assign
 
         /***/
       },
-      /* 33 */
+      /* 32 */
       /***/ function (module, __webpack_exports__, __webpack_require__) {
         'use strict'
         // ESM COMPAT FLAG
@@ -8200,7 +8194,7 @@ object-assign
 
         /* harmony default export */ var components_Fieldset = components_Fieldset_Fieldset
         // EXTERNAL MODULE: ./node_modules/reflexbox/dist/index.js
-        var dist = __webpack_require__(18)
+        var dist = __webpack_require__(17)
 
         // CONCATENATED MODULE: ./src/components/SidebarMenu/MenuList.js
         function MenuList_templateObject() {
@@ -8229,161 +8223,6 @@ object-assign
           return isOpen && '\n        transform: translateX(0);\n        opacity: 1;\n    '
         })
         /* harmony default export */ var SidebarMenu_MenuList = MenuList
-        // CONCATENATED MODULE: ./src/components/SidebarMenuItem/SidebarMenuItem.js
-        function _templateObject3() {
-          var data = SidebarMenuItem_taggedTemplateLiteralLoose([
-            '\n    background-color: rgba(255, 255, 255, 0.1);\n    padding: 16px 20px;\n    color: #fff;\n    display: block;\n    cursor: pointer;\n    &:hover {\n      background-color: rgba(255, 255, 255, 0.2);\n    }\n  ',
-          ])
-
-          _templateObject3 = function _templateObject3() {
-            return data
-          }
-
-          return data
-        }
-
-        function SidebarMenuItem_objectWithoutPropertiesLoose(source, excluded) {
-          if (source == null) return {}
-          var target = {}
-          var sourceKeys = Object.keys(source)
-          var key, i
-          for (i = 0; i < sourceKeys.length; i++) {
-            key = sourceKeys[i]
-            if (excluded.indexOf(key) >= 0) continue
-            target[key] = source[key]
-          }
-          return target
-        }
-
-        function _templateObject2() {
-          var data = SidebarMenuItem_taggedTemplateLiteralLoose(['\n  margin-right: 8px;\n'])
-
-          _templateObject2 = function _templateObject2() {
-            return data
-          }
-
-          return data
-        }
-
-        function SidebarMenuItem_templateObject() {
-          var data = SidebarMenuItem_taggedTemplateLiteralLoose(['\n  margin-top: 2px;\n  margin-bottom: 2px;\n'])
-
-          SidebarMenuItem_templateObject = function _templateObject() {
-            return data
-          }
-
-          return data
-        }
-
-        function SidebarMenuItem_taggedTemplateLiteralLoose(strings, raw) {
-          if (!raw) {
-            raw = strings.slice(0)
-          }
-          strings.raw = raw
-          return strings
-        }
-
-        var StyledListItem = styled_components_browser_esm['default'].li(SidebarMenuItem_templateObject())
-        var WrapperIcon = styled_components_browser_esm['default'].span(_templateObject2())
-        var MenuItem = Object(external_root_React_commonjs2_react_commonjs_react_amd_react_['memo'])(function (_ref) {
-          var children = _ref.children,
-            _ref$component = _ref.component,
-            component = _ref$component === void 0 ? 'a' : _ref$component,
-            icon = _ref.icon,
-            rest = SidebarMenuItem_objectWithoutPropertiesLoose(_ref, ['children', 'component', 'icon'])
-
-          var MenuLink = Object(styled_components_browser_esm['default'])(component)(_templateObject3())
-          return /*#__PURE__*/ external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(
-            StyledListItem,
-            null,
-            /*#__PURE__*/ external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(
-              MenuLink,
-              rest,
-              !!icon && /*#__PURE__*/ external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(WrapperIcon, null, icon),
-              ' ',
-              children
-            )
-          )
-        })
-        /* harmony default export */ var SidebarMenuItem = MenuItem
-        // CONCATENATED MODULE: ./src/components/SidebarMenuItem/index.js
-
-        /* harmony default export */ var components_SidebarMenuItem = SidebarMenuItem
-        // EXTERNAL MODULE: ./src/assets/logo_white.svg
-        var logo_white = __webpack_require__(12)
-        var logo_white_default = /*#__PURE__*/ __webpack_require__.n(logo_white)
-
-        // CONCATENATED MODULE: ./src/components/Logo/Logo.js
-        function Logo_extends() {
-          Logo_extends =
-            Object.assign ||
-            function (target) {
-              for (var i = 1; i < arguments.length; i++) {
-                var source = arguments[i]
-                for (var key in source) {
-                  if (Object.prototype.hasOwnProperty.call(source, key)) {
-                    target[key] = source[key]
-                  }
-                }
-              }
-              return target
-            }
-          return Logo_extends.apply(this, arguments)
-        }
-
-        function Logo_objectWithoutPropertiesLoose(source, excluded) {
-          if (source == null) return {}
-          var target = {}
-          var sourceKeys = Object.keys(source)
-          var key, i
-          for (i = 0; i < sourceKeys.length; i++) {
-            key = sourceKeys[i]
-            if (excluded.indexOf(key) >= 0) continue
-            target[key] = source[key]
-          }
-          return target
-        }
-
-        function Logo_templateObject() {
-          var data = Logo_taggedTemplateLiteralLoose(['\n  display: block;\n  margin: auto;\n  ', '\n  ', '\n'])
-
-          Logo_templateObject = function _templateObject() {
-            return data
-          }
-
-          return data
-        }
-
-        function Logo_taggedTemplateLiteralLoose(strings, raw) {
-          if (!raw) {
-            raw = strings.slice(0)
-          }
-          strings.raw = raw
-          return strings
-        }
-
-        var LogoImg = styled_components_browser_esm['default'].img(Logo_templateObject(), index_esm['space'], index_esm['layout'])
-
-        var Logo_Logo = function Logo(_ref) {
-          var children = _ref.children,
-            src = _ref.src,
-            rest = Logo_objectWithoutPropertiesLoose(_ref, ['children', 'src'])
-
-          return /*#__PURE__*/ external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(
-            LogoImg,
-            Logo_extends(
-              {
-                src: logo_white_default.a,
-              },
-              rest
-            )
-          )
-        }
-
-        /* harmony default export */ var components_Logo_Logo = Logo_Logo
-        // CONCATENATED MODULE: ./src/components/Logo/index.js
-
-        /* harmony default export */ var components_Logo = components_Logo_Logo
         // CONCATENATED MODULE: ./src/components/SidebarMenu/SidebarMenu.js
         function SidebarMenu_extends() {
           SidebarMenu_extends =
@@ -8415,24 +8254,24 @@ object-assign
           return target
         }
 
-        function SidebarMenu_templateObject3() {
+        function _templateObject3() {
           var data = SidebarMenu_taggedTemplateLiteralLoose([
             '\n  ',
             '\n  position: absolute;\n  left: 0;\n  top: 0;\n  bottom: 0;\n  height: 100%;\n  background: #550e33 linear-gradient(89deg, #550e33 0%, #ff4f5d 100%) 0% 0% no-repeat padding-box;\n  transition: 0.2s linear;\n  z-index: 1002;\n  overflow: auto;\n  ',
             '\n',
           ])
 
-          SidebarMenu_templateObject3 = function _templateObject3() {
+          _templateObject3 = function _templateObject3() {
             return data
           }
 
           return data
         }
 
-        function SidebarMenu_templateObject2() {
+        function _templateObject2() {
           var data = SidebarMenu_taggedTemplateLiteralLoose(['\n  height: 100%;\n  z-index: 999;\n  ', '\n'])
 
-          SidebarMenu_templateObject2 = function _templateObject2() {
+          _templateObject2 = function _templateObject2() {
             return data
           }
 
@@ -8460,7 +8299,7 @@ object-assign
         }
 
         var Backdrop = styled_components_browser_esm['default'].div(SidebarMenu_templateObject())
-        var WrapperSidebarMenu = styled_components_browser_esm['default'].div(SidebarMenu_templateObject2(), function (_ref) {
+        var WrapperSidebarMenu = styled_components_browser_esm['default'].div(_templateObject2(), function (_ref) {
           var open = _ref.open
           return (
             !!open &&
@@ -8469,23 +8308,23 @@ object-assign
               ' {\n        visibility: visible;\n        background: rgba(0, 0, 0, 0.3);\n        position: fixed;\n        top: 0;\n        right: 0;\n        bottom: 0;\n        left: 0;\n        z-index: 1001;\n      }\n    }\n  '
           )
         })
-        var StyledSidebarMenu = Object(styled_components_browser_esm['default'])(dist['Box'])(
-          SidebarMenu_templateObject3(),
-          index_esm['layout'],
-          function (_ref2) {
-            var open = _ref2.open
-            return open ? '\n    transform: translateX(0);\n  ' : '\n    transform: translateX(-100%);\n  '
-          }
-        )
+        var StyledSidebarMenu = Object(styled_components_browser_esm['default'])(dist['Box'])(_templateObject3(), index_esm['layout'], function (
+          _ref2
+        ) {
+          var open = _ref2.open
+          return open ? '\n    transform: translateX(0);\n  ' : '\n    transform: translateX(-100%);\n  '
+        })
 
         var SidebarMenu_SidebarMenu = function SidebarMenu(_ref3) {
           var children = _ref3.children,
             _ref3$open = _ref3.open,
             open = _ref3$open === void 0 ? false : _ref3$open,
             onClose = _ref3.onClose,
+            _ref3$logo = _ref3.logo,
+            logo = _ref3$logo === void 0 ? 'Logo' : _ref3$logo,
             _ref3$items = _ref3.items,
             items = _ref3$items === void 0 ? [] : _ref3$items,
-            rest = SidebarMenu_objectWithoutPropertiesLoose(_ref3, ['children', 'open', 'onClose', 'items'])
+            rest = SidebarMenu_objectWithoutPropertiesLoose(_ref3, ['children', 'open', 'onClose', 'logo', 'items'])
 
           return /*#__PURE__*/ external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(
             WrapperSidebarMenu,
@@ -8500,11 +8339,7 @@ object-assign
                 },
                 rest
               ),
-              /*#__PURE__*/ external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(components_Logo, {
-                width: '180',
-                py: 3,
-                src: logo_white_default.a,
-              }),
+              logo,
               /*#__PURE__*/ external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(
                 SidebarMenu_MenuList,
                 {
@@ -8529,7 +8364,7 @@ object-assign
 
         /* harmony default export */ var components_SidebarMenu = components_SidebarMenu_SidebarMenu
         // EXTERNAL MODULE: ./node_modules/reflexbox/styled-components/index.js
-        var styled_components = __webpack_require__(14)
+        var styled_components = __webpack_require__(13)
 
         // CONCATENATED MODULE: ./src/components/HamburguerButton/HamburguerButton.js
         function HamburguerButton_extends() {
@@ -8897,6 +8732,86 @@ object-assign
         // CONCATENATED MODULE: ./src/components/BaseLayout/index.js
 
         /* harmony default export */ var components_BaseLayout = components_BaseLayout_BaseLayout
+        // CONCATENATED MODULE: ./src/components/SidebarMenuItem/SidebarMenuItem.js
+        function SidebarMenuItem_templateObject3() {
+          var data = SidebarMenuItem_taggedTemplateLiteralLoose([
+            '\n    background-color: rgba(255, 255, 255, 0.1);\n    padding: 16px 20px;\n    color: #fff;\n    display: block;\n    cursor: pointer;\n    &:hover {\n      background-color: rgba(255, 255, 255, 0.2);\n    }\n  ',
+          ])
+
+          SidebarMenuItem_templateObject3 = function _templateObject3() {
+            return data
+          }
+
+          return data
+        }
+
+        function SidebarMenuItem_objectWithoutPropertiesLoose(source, excluded) {
+          if (source == null) return {}
+          var target = {}
+          var sourceKeys = Object.keys(source)
+          var key, i
+          for (i = 0; i < sourceKeys.length; i++) {
+            key = sourceKeys[i]
+            if (excluded.indexOf(key) >= 0) continue
+            target[key] = source[key]
+          }
+          return target
+        }
+
+        function SidebarMenuItem_templateObject2() {
+          var data = SidebarMenuItem_taggedTemplateLiteralLoose(['\n  margin-right: 8px;\n'])
+
+          SidebarMenuItem_templateObject2 = function _templateObject2() {
+            return data
+          }
+
+          return data
+        }
+
+        function SidebarMenuItem_templateObject() {
+          var data = SidebarMenuItem_taggedTemplateLiteralLoose(['\n  margin-top: 2px;\n  margin-bottom: 2px;\n'])
+
+          SidebarMenuItem_templateObject = function _templateObject() {
+            return data
+          }
+
+          return data
+        }
+
+        function SidebarMenuItem_taggedTemplateLiteralLoose(strings, raw) {
+          if (!raw) {
+            raw = strings.slice(0)
+          }
+          strings.raw = raw
+          return strings
+        }
+
+        var StyledListItem = styled_components_browser_esm['default'].li(SidebarMenuItem_templateObject())
+        var WrapperIcon = styled_components_browser_esm['default'].span(SidebarMenuItem_templateObject2())
+        var MenuItem = Object(external_root_React_commonjs2_react_commonjs_react_amd_react_['memo'])(function (_ref) {
+          var children = _ref.children,
+            _ref$component = _ref.component,
+            component = _ref$component === void 0 ? 'a' : _ref$component,
+            icon = _ref.icon,
+            rest = SidebarMenuItem_objectWithoutPropertiesLoose(_ref, ['children', 'component', 'icon'])
+
+          var MenuLink = Object(styled_components_browser_esm['default'])(component)(SidebarMenuItem_templateObject3())
+          return /*#__PURE__*/ external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(
+            StyledListItem,
+            null,
+            /*#__PURE__*/ external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(
+              MenuLink,
+              rest,
+              !!icon && /*#__PURE__*/ external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(WrapperIcon, null, icon),
+              ' ',
+              children
+            )
+          )
+        })
+        /* harmony default export */ var SidebarMenuItem = MenuItem
+        // CONCATENATED MODULE: ./src/components/SidebarMenuItem/index.js
+
+        /* harmony default export */ var components_SidebarMenuItem = SidebarMenuItem
         // CONCATENATED MODULE: ./src/components/CheckBox/CheckBox.js
         function CheckBox_extends() {
           CheckBox_extends =
@@ -9043,18 +8958,92 @@ object-assign
         // CONCATENATED MODULE: ./src/components/CheckBox/index.js
 
         /* harmony default export */ var components_CheckBox = components_CheckBox_CheckBox
+        // CONCATENATED MODULE: ./src/components/Logo/Logo.js
+        function Logo_extends() {
+          Logo_extends =
+            Object.assign ||
+            function (target) {
+              for (var i = 1; i < arguments.length; i++) {
+                var source = arguments[i]
+                for (var key in source) {
+                  if (Object.prototype.hasOwnProperty.call(source, key)) {
+                    target[key] = source[key]
+                  }
+                }
+              }
+              return target
+            }
+          return Logo_extends.apply(this, arguments)
+        }
+
+        function Logo_objectWithoutPropertiesLoose(source, excluded) {
+          if (source == null) return {}
+          var target = {}
+          var sourceKeys = Object.keys(source)
+          var key, i
+          for (i = 0; i < sourceKeys.length; i++) {
+            key = sourceKeys[i]
+            if (excluded.indexOf(key) >= 0) continue
+            target[key] = source[key]
+          }
+          return target
+        }
+
+        function Logo_templateObject() {
+          var data = Logo_taggedTemplateLiteralLoose(['\n  display: block;\n  margin: auto;\n  ', '\n'])
+
+          Logo_templateObject = function _templateObject() {
+            return data
+          }
+
+          return data
+        }
+
+        function Logo_taggedTemplateLiteralLoose(strings, raw) {
+          if (!raw) {
+            raw = strings.slice(0)
+          }
+          strings.raw = raw
+          return strings
+        }
+
+        var LogoImg = styled_components_browser_esm['default'].img(
+          Logo_templateObject(),
+          Object(index_esm['compose'])(index_esm['space'], index_esm['layout'])
+        )
+
+        var Logo_Logo = function Logo(_ref) {
+          var children = _ref.children,
+            src = _ref.src,
+            rest = Logo_objectWithoutPropertiesLoose(_ref, ['children', 'src'])
+
+          return /*#__PURE__*/ external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(
+            LogoImg,
+            Logo_extends(
+              {
+                src: src,
+              },
+              rest
+            )
+          )
+        }
+
+        /* harmony default export */ var components_Logo_Logo = Logo_Logo
+        // CONCATENATED MODULE: ./src/components/Logo/index.js
+
+        /* harmony default export */ var components_Logo = components_Logo_Logo
         // CONCATENATED MODULE: ./src/index.js
 
         /***/
       },
-      /* 34 */
+      /* 33 */
       /***/ function (module, __webpack_exports__, __webpack_require__) {
         'use strict'
         // ESM COMPAT FLAG
         __webpack_require__.r(__webpack_exports__)
 
         // EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/defineProperty.js
-        var defineProperty = __webpack_require__(19)
+        var defineProperty = __webpack_require__(18)
         var defineProperty_default = /*#__PURE__*/ __webpack_require__.n(defineProperty)
 
         // EXTERNAL MODULE: external {"root":"React","commonjs2":"react","commonjs":"react","amd":"react"}
@@ -9064,7 +9053,7 @@ object-assign
         var is_prop_valid_browser_esm = __webpack_require__(6)
 
         // EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/inheritsLoose.js
-        var inheritsLoose = __webpack_require__(20)
+        var inheritsLoose = __webpack_require__(19)
         var inheritsLoose_default = /*#__PURE__*/ __webpack_require__.n(inheritsLoose)
 
         // CONCATENATED MODULE: ./node_modules/@emotion/sheet/dist/sheet.browser.esm.js

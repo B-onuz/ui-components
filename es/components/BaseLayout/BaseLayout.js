@@ -11,8 +11,6 @@ var _styledComponents = _interopRequireDefault(require('styled-components'))
 
 var _styledSystem = require('styled-system')
 
-var _SidebarMenu = _interopRequireDefault(require('../SidebarMenu'))
-
 var _styledComponents2 = require('reflexbox/styled-components')
 
 var _HamburguerButton = _interopRequireDefault(require('../HamburguerButton'))
@@ -125,7 +123,7 @@ var BaseLayout = function BaseLayout(_ref2) {
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 37,
+        lineNumber: 36,
         columnNumber: 5,
       },
     }),
@@ -141,7 +139,7 @@ var BaseLayout = function BaseLayout(_ref2) {
         __self: _this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 39,
+          lineNumber: 38,
           columnNumber: 7,
         },
       },
@@ -151,7 +149,7 @@ var BaseLayout = function BaseLayout(_ref2) {
           __self: _this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 40,
+            lineNumber: 39,
             columnNumber: 9,
           },
         },
@@ -164,7 +162,7 @@ var BaseLayout = function BaseLayout(_ref2) {
             __self: _this,
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 41,
+              lineNumber: 40,
               columnNumber: 11,
             },
           },
@@ -175,7 +173,7 @@ var BaseLayout = function BaseLayout(_ref2) {
           __self: _this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 44,
+            lineNumber: 43,
             columnNumber: 11,
           },
         })
@@ -186,7 +184,7 @@ var BaseLayout = function BaseLayout(_ref2) {
           __self: _this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 46,
+            lineNumber: 45,
             columnNumber: 9,
           },
         },

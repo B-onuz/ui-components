@@ -1,17 +1,15 @@
 import React from 'react'
 import styled from 'styled-components'
-import { space, layout } from 'styled-system'
-import LogoSVG from '../../assets/logo_white.svg'
+import { space, layout, compose } from 'styled-system'
 
 const LogoImg = styled.img`
   display: block;
   margin: auto;
-  ${space}
-  ${layout}
+  ${compose(space, layout)}
 `
 
 const Logo = ({ children, src, ...rest }) => {
-  return <LogoImg src={LogoSVG} {...rest} />
+  return <LogoImg src={src} {...rest} />
 }
 
 export default Logo

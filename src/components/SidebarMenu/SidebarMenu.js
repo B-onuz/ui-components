@@ -3,9 +3,6 @@ import styled from 'styled-components'
 import { layout } from 'styled-system'
 import { Box } from 'reflexbox'
 import MenuList from './MenuList'
-import SidebarMenuItem from '../SidebarMenuItem'
-import Logo from '../Logo'
-import logo from '../../assets/logo_white.svg'
 
 const Backdrop = styled.div`
   visibility: hidden;
@@ -62,11 +59,11 @@ const StyledSidebarMenu = styled(Box)`
   `}
 `
 
-const SidebarMenu = ({ children, open = false, onClose, items = [], ...rest }) => {
+const SidebarMenu = ({ children, open = false, onClose, logo = 'Logo', items = [], ...rest }) => {
   return (
     <WrapperSidebarMenu open={open}>
       <StyledSidebarMenu open={open} {...rest}>
-        <Logo width="180" py={3} src={logo} />
+        {logo}
         <MenuList isOpen={open}>{children}</MenuList>
       </StyledSidebarMenu>
       <Backdrop onClick={onClose} aria-ole="button" aria-label="Abrir menu" />
