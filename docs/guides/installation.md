@@ -6,7 +6,7 @@ Adicione `ui-components` em `dependencies` dentro do arquivo `package.json`. (é
   ...
     "dependencies": {
         ...,
-        "ui-components": "git+ssh://git@github.com:B-onuz/ui-components.git#feat/"
+        "ui-components": "git+ssh://git@github.com:B-onuz/ui-components.git"
     }
   ...
 ```
@@ -52,6 +52,27 @@ Importe no `index.js` do seu projeto a fonte `typeface-lato`. https://www.npmjs.
 ```js
 import 'typeface-lato'
 ```
+
+## Icones
+
+Estamos usando a biblioteca de icones [react-fontawesome](https://github.com/FortAwesome/react-fontawesome).
+
+**Instalação do fontawesome**
+
+```yarn add @fortawesome/fontawesome-svg-core @fortawesome/free-solid-svg-icons @fortawesome/react-fontawesome```
+
+Estamos usando a biblioteca de icones [react-fontawesome](https://github.com/FortAwesome/react-fontawesome)
+
+Crie uma biblioteca de icones para facilitar a importação - [Build a Library to Reference Icons Throughout Your App More Conveniently](https://github.com/FortAwesome/react-fontawesome/blob/master/README.md#build-a-library-to-reference-icons-throughout-your-app-more-conveniently)
+
+## Grid
+
+Estamos usando uma biblioteca para grid chamada `reflexbox`. [reflexbox DOCS](https://rebassjs.org/reflexbox/).
+
+**Instalação**
+
+```yarn add reflexbox```
+
 
 ## Como importar componentes
 
