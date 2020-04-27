@@ -1,0 +1,6 @@
+/coverage
+/demo/dist
+/node_modules
+npm-debug.log*
+/es/**/*.stories.js
+/lib/**/*.stories.js

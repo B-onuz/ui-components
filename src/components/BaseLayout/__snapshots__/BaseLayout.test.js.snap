@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render BaseLayout without sidebar 1`] = `
+<div
+  className="sc-Axmtr sc-AxmLO sc-fznKkj eAHtxI"
+>
+  <div
+    className="sc-Axmtr sc-fzokOt fvEzAL"
+    display="flex"
+  >
+    <div
+      className="sc-fzoLsD fNPIVx"
+    >
+      <button
+        className="sc-fzozJi dtCjIY"
+        color="primary"
+      />
+      <header
+        className="sc-fznyAO jUUsgT"
+      >
+        <h1
+          className="sc-fzpans dEctYS"
+          color="darkRed"
+        >
+          Cadastro de Advogado
+        </h1>
+      </header>
+    </div>
+    <div
+      className="sc-fznZeY MbWPJ"
+    />
+  </div>
+</div>
+`;
