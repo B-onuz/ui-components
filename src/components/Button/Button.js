@@ -6,7 +6,7 @@ import { color, size } from './variants'
 import PropTypes from 'prop-types'
 import propTypes from '@styled-system/prop-types'
 
-const Button = styled.button`
+const StyledButton = styled.button`
   appearance: none;
   font-family: inherit;
   border-radius: 4px;
@@ -30,6 +30,8 @@ const Button = styled.button`
     background-color: ${({ theme, color }) => new Color(theme.colors[color]).darken(0.2).string()};
   }
 `
+
+const Button = ({ ...rest }) => <StyledButton {...rest} />
 
 Button.displayName = 'Button'
 
