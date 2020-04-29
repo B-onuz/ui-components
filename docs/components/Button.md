@@ -2,13 +2,11 @@
 
 Componente de botão, pode ser usados em formulários e para outros tipos de ação.
 
-## Importação
+## Como utilizar
 
 ```js
 import Button from 'ui-components/lib/components/Button'
 ```
-
-## Como usar
 
 ```jsx
 <Button>Enviar</Button>
