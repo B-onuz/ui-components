@@ -1,4 +1,3 @@
-import React from 'react'
 import styled from 'styled-components'
 import Color from 'color'
 import { space } from 'styled-system'
@@ -6,7 +5,7 @@ import { color, size } from './variants'
 import PropTypes from 'prop-types'
 import propTypes from '@styled-system/prop-types'
 
-const StyledButton = styled.button`
+const Button = styled.button`
   appearance: none;
   font-family: inherit;
   border-radius: 4px;
@@ -15,9 +14,9 @@ const StyledButton = styled.button`
   padding: .5rem 1rem;
   border-style: solid;
   color: #000;
-  ${space}
   ${color}
   ${size}
+  ${space}
   ${(props) => (props.fullWidth && 'width: 100%;') || ''}
   box-sizing: border-box;
   &:focus {
@@ -30,8 +29,6 @@ const StyledButton = styled.button`
     background-color: ${({ theme, color }) => new Color(theme.colors[color]).darken(0.2).string()};
   }
 `
-
-const Button = ({ ...rest }) => <StyledButton {...rest} />
 
 Button.displayName = 'Button'
 

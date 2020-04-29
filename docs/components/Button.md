@@ -1,17 +1,41 @@
-# `Button` (component)
+# Button (Component)
 
-## Props
+Componente de botão, pode ser usados em formulários e para outros tipos de ação.
 
-### `color`
+## Importação
 
-type: `string`
-defaultValue: `'default'`
+```js
+import Button from 'ui-components/lib/components/Button'
+```
 
-### `size`
+## Como usar
 
-type: `enum('small'|'medium'|'big'|'huge')`
-defaultValue: `'medium'`
+```jsx
+<Button>Enviar</Button>
+```
 
-### `type`
+## Variações
 
-defaultValue: `'button'`
+### Colors
+
+```jsx
+<Button color={'primary'} />
+```
+
+Escala no tema: `theme.colors`
+
+### Size
+
+```jsx
+<Button size={'small'} />
+```
+
+Valores: `small` `medium` `big` `huge`
+
+### Outras props
+
+Este componente recebe outras propriedades da tag button, como a propriedade `type`.
+
+## Styled-system props
+
+- space https://styled-system.com/table#space

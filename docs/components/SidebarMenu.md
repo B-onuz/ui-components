@@ -1,1 +1,0 @@
-# `SidebarMenu` (component)
