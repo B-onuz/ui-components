@@ -19,7 +19,7 @@ import Button from 'ui-components/lib/components/Button'
 ### Colors
 
 ```jsx
-<Button color={'primary'} />
+<Button color={'primary'}>Enviar</Button>
 ```
 
 Escala no tema: `theme.colors`
@@ -27,12 +27,18 @@ Escala no tema: `theme.colors`
 ### Size
 
 ```jsx
-<Button size={'small'} />
+<Button size={'small'}>Enviar</Button>
 ```
 
 Valores: `small` `medium` `big` `huge`
 
 ### Outras props
+
+```jsx
+<Button color={'primary'} type={'submit'}>
+  Salvar
+</Button>
+```
 
 Este componente recebe outras propriedades da tag button, como a propriedade `type`.
 

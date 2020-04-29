@@ -12,8 +12,7 @@
     "umd"
   ],
   "scripts": {
-    "gen:docs": "react-docgen src/components/* | ./tasks/buildDocs/index.sh",
-    "build": "nwb build-react-component && gen:docs",
+    "build": "nwb build-react-component",
     "clean": "nwb clean-module && nwb clean-demo",
     "prepublishOnly": "npm run build",
     "start": "nwb serve-react-demo",
