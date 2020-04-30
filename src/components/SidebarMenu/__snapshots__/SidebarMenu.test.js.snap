@@ -57,7 +57,7 @@ exports[`SidebarMenu changes the class when hovered 1`] = `
   </div>
   <div
     aria-label="Abrir menu"
-    aria-ole="button"
+    aria-role="button"
     className="c3"
   />
 </div>

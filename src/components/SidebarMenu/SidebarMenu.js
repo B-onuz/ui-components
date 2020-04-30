@@ -66,7 +66,7 @@ const SidebarMenu = ({ children, open = false, onClose, logo = 'Logo', items = [
         {logo}
         <MenuList isOpen={open}>{children}</MenuList>
       </StyledSidebarMenu>
-      <Backdrop onClick={onClose} aria-ole="button" aria-label="Abrir menu" />
+      <Backdrop onClick={onClose} aria-role="button" aria-label="Fechar menu" />
     </WrapperSidebarMenu>
   )
 }

@@ -11,10 +11,6 @@ exports[`should render BaseLayout without sidebar 1`] = `
     <div
       className="sc-AxhCb gKulCB"
     >
-      <button
-        className="sc-AxiKw jalXiC"
-        color="primary"
-      />
       <header
         className="sc-AxheI jATbQL"
       >
@@ -22,13 +18,17 @@ exports[`should render BaseLayout without sidebar 1`] = `
           className="sc-AxhUy ighnej"
           color="darkRed"
         >
-          Cadastro de Advogado
+          Cadastro de advogados
         </h1>
       </header>
     </div>
     <div
       className="sc-AxmLO sXEuK"
-    />
+    >
+      <p>
+        Lorem ipsum dolor sit amet
+      </p>
+    </div>
   </div>
 </div>
 `;
