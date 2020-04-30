@@ -39,11 +39,6 @@ const ControlledCheckbox = () => {
     setAcceptConditions(target.checked)
   }
 
-  return <CheckBox id="tributarioa" checked={acceptConditions} onChange={handleChangeAcceptConditions} label={'Aceite os termos e condições'} />
+  return <CheckBox id="tributario" checked={acceptConditions} onChange={handleChangeAcceptConditions} label={'Aceite os termos e condições'} />
 }
 ```
-
-## Styled-system props
-
-- space https://styled-system.com/table#space
-- layout https://styled-system.com/table#space
