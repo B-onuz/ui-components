@@ -10,7 +10,7 @@ import HamburguerButton from 'ui-components/lib/components/HamburguerButton'
 
 ```jsx
 import React, { useState } from 'react'
-import HamburguerButton from './HamburguerButton'
+import HamburguerButton from 'ui-components/lib/components/HamburguerButton'
 
 const HamburguerButtonExample = () => {
   const [isOpen, setIsOpen] = useState(false)
