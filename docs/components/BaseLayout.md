@@ -15,7 +15,7 @@ import Sidebar from 'ui-components/lib/components/Sidebar'
 
 const DashboardSidebar = ({ ...rest }) => {
   return (
-    <SidebarMenu {...rest} logo={<Logo width={180} my={3} src={logoImg} />}>
+    <SidebarMenu {...rest} logo={<Logo width={180} my={3} src={logoImg} alt={'B-onuz Logo - legal services'} />}>
       {menuItems.map((item) => {
         return <SidebarMenuItem component={'header'} icon={<FontAwesomeIcon icon={item.icon} />} children={item.text} />
       })}
