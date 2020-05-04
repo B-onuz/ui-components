@@ -87,7 +87,20 @@ var TextField = function TextField(_ref) {
     onChange = _ref.onChange,
     required = _ref.required,
     error = _ref.error,
-    rest = _objectWithoutPropertiesLoose(_ref, ['children', 'label', 'placeholder', 'name', 'id', 'value', 'onChange', 'required', 'error'])
+    _ref$inputProps = _ref.inputProps,
+    inputProps = _ref$inputProps === void 0 ? {} : _ref$inputProps,
+    rest = _objectWithoutPropertiesLoose(_ref, [
+      'children',
+      'label',
+      'placeholder',
+      'name',
+      'id',
+      'value',
+      'onChange',
+      'required',
+      'error',
+      'inputProps',
+    ])
 
   return /*#__PURE__*/ _react['default'].createElement(
     StyledTextField,
@@ -113,24 +126,32 @@ var TextField = function TextField(_ref) {
       },
       label
     ),
-    /*#__PURE__*/ _react['default'].createElement(_Input['default'], {
-      id: id,
-      name: name,
-      placeholder: placeholder,
-      /* controlled props */
-      value: value,
-      onChange: onChange,
-      /* validation props */
-      required: !!required,
-      'aria-required': !!required,
-      'aria-invalid': !!error,
-      __self: _this,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 24,
-        columnNumber: 7,
-      },
-    })
+    /*#__PURE__*/ _react['default'].createElement(
+      _Input['default'],
+      _extends(
+        {
+          id: id,
+          name: name,
+          placeholder: placeholder,
+          /* controlled props */
+          value: value,
+          onChange: onChange,
+          /* validation props */
+          required: !!required,
+          'aria-required': !!required,
+          'aria-invalid': !!error,
+        },
+        inputProps,
+        {
+          __self: _this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 24,
+            columnNumber: 7,
+          },
+        }
+      )
+    )
   )
 }
 

@@ -1,4 +1,4 @@
-/*! ui-components v1.1.1 */
+/*! ui-components v1.1.4 */
 ;(function webpackUniversalModuleDefinition(root, factory) {
   if (typeof exports === 'object' && typeof module === 'object') module.exports = factory(require('react'))
   else if (typeof define === 'function' && define.amd) define(['react'], factory)
@@ -376,7 +376,7 @@
         })
 
         // EXTERNAL MODULE: ./node_modules/object-assign/index.js
-        var object_assign = __webpack_require__(3)
+        var object_assign = __webpack_require__(4)
         var object_assign_default = /*#__PURE__*/ __webpack_require__.n(object_assign)
 
         // CONCATENATED MODULE: ./node_modules/@styled-system/core/dist/index.esm.js
@@ -3374,6 +3374,25 @@
       },
       /* 3 */
       /***/ function (module, exports, __webpack_require__) {
+        /**
+         * Copyright (c) 2013-present, Facebook, Inc.
+         *
+         * This source code is licensed under the MIT license found in the
+         * LICENSE file in the root directory of this source tree.
+         */
+
+        if (false) {
+          var throwOnDirectAccess, ReactIs
+        } else {
+          // By explicitly using `prop-types` you are opting into new production behavior.
+          // http://fb.me/prop-types-in-prod
+          module.exports = __webpack_require__(28)()
+        }
+
+        /***/
+      },
+      /* 4 */
+      /***/ function (module, exports, __webpack_require__) {
         'use strict'
         /*
 object-assign
@@ -3465,25 +3484,6 @@ object-assign
 
               return to
             }
-
-        /***/
-      },
-      /* 4 */
-      /***/ function (module, exports, __webpack_require__) {
-        /**
-         * Copyright (c) 2013-present, Facebook, Inc.
-         *
-         * This source code is licensed under the MIT license found in the
-         * LICENSE file in the root directory of this source tree.
-         */
-
-        if (false) {
-          var throwOnDirectAccess, ReactIs
-        } else {
-          // By explicitly using `prop-types` you are opting into new production behavior.
-          // http://fb.me/prop-types-in-prod
-          module.exports = __webpack_require__(28)()
-        }
 
         /***/
       },
@@ -7620,18 +7620,18 @@ object-assign
         colors.primary = colors.lightRed
         colors.secondary = colors.fullDarkRed
         colors['default'] = '#e0e1e2'
+        var breakpoints = ['40em', '52em', '64em', '80em']
+        breakpoints.sm = breakpoints[0]
+        breakpoints.md = breakpoints[1]
+        breakpoints.lg = breakpoints[2]
+        breakpoints.xl = breakpoints[3]
         var fontSizes = [12, 14, 16, 20, 24, 32]
         /* harmony default export */ var src_theme = {
           fontFamily: "'Lato', sans-serif",
           colors: colors,
           fontSizes: fontSizes,
+          breakpoints: breakpoints,
         }
-        // EXTERNAL MODULE: external {"root":"React","commonjs2":"react","commonjs":"react","amd":"react"}
-        var external_root_React_commonjs2_react_commonjs_react_amd_react_ = __webpack_require__(0)
-        var external_root_React_commonjs2_react_commonjs_react_amd_react_default = /*#__PURE__*/ __webpack_require__.n(
-          external_root_React_commonjs2_react_commonjs_react_amd_react_
-        )
-
         // EXTERNAL MODULE: ./node_modules/styled-components/dist/styled-components.browser.esm.js
         var styled_components_browser_esm = __webpack_require__(2)
 
@@ -7707,7 +7707,7 @@ object-assign
         // CONCATENATED MODULE: ./src/components/Button/variants/index.js
 
         // EXTERNAL MODULE: ./node_modules/prop-types/index.js
-        var prop_types = __webpack_require__(4)
+        var prop_types = __webpack_require__(3)
         var prop_types_default = /*#__PURE__*/ __webpack_require__.n(prop_types)
 
         // CONCATENATED MODULE: ./node_modules/@styled-system/prop-types/dist/index.esm.js
@@ -7804,9 +7804,9 @@ object-assign
 
         var Button = styled_components_browser_esm['default'].button(
           _templateObject(),
-          index_esm['space'],
           variants_color,
           size,
+          index_esm['space'],
           function (props) {
             return (props.fullWidth && 'width: 100%;') || ''
           },
@@ -7843,6 +7843,12 @@ object-assign
         // CONCATENATED MODULE: ./src/components/Button/index.js
 
         /* harmony default export */ var components_Button = Button_Button
+        // EXTERNAL MODULE: external {"root":"React","commonjs2":"react","commonjs":"react","amd":"react"}
+        var external_root_React_commonjs2_react_commonjs_react_amd_react_ = __webpack_require__(0)
+        var external_root_React_commonjs2_react_commonjs_react_amd_react_default = /*#__PURE__*/ __webpack_require__.n(
+          external_root_React_commonjs2_react_commonjs_react_amd_react_
+        )
+
         // CONCATENATED MODULE: ./src/components/Label/Label.js
         function _objectWithoutPropertiesLoose(source, excluded) {
           if (source == null) return {}
@@ -8066,6 +8072,8 @@ object-assign
             onChange = _ref.onChange,
             required = _ref.required,
             error = _ref.error,
+            _ref$inputProps = _ref.inputProps,
+            inputProps = _ref$inputProps === void 0 ? {} : _ref$inputProps,
             rest = TextField_objectWithoutPropertiesLoose(_ref, [
               'children',
               'label',
@@ -8076,6 +8084,7 @@ object-assign
               'onChange',
               'required',
               'error',
+              'inputProps',
             ])
 
           return /*#__PURE__*/ external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(
@@ -8089,18 +8098,24 @@ object-assign
               },
               label
             ),
-            /*#__PURE__*/ external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(components_Input, {
-              id: id,
-              name: name,
-              placeholder: placeholder,
-              /* controlled props */
-              value: value,
-              onChange: onChange,
-              /* validation props */
-              required: !!required,
-              'aria-required': !!required,
-              'aria-invalid': !!error,
-            })
+            /*#__PURE__*/ external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(
+              components_Input,
+              TextField_extends(
+                {
+                  id: id,
+                  name: name,
+                  placeholder: placeholder,
+                  /* controlled props */
+                  value: value,
+                  onChange: onChange,
+                  /* validation props */
+                  required: !!required,
+                  'aria-required': !!required,
+                  'aria-invalid': !!error,
+                },
+                inputProps
+              )
+            )
           )
         }
 
@@ -8299,7 +8314,7 @@ object-assign
         }
 
         var Backdrop = styled_components_browser_esm['default'].div(SidebarMenu_templateObject())
-        var WrapperSidebarMenu = styled_components_browser_esm['default'].div(_templateObject2(), function (_ref) {
+        var WrapperSidebarMenu = styled_components_browser_esm['default'].nav(_templateObject2(), function (_ref) {
           var open = _ref.open
           return (
             !!open &&
@@ -8329,13 +8344,17 @@ object-assign
           return /*#__PURE__*/ external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(
             WrapperSidebarMenu,
             {
-              open: open,
+              open: !!open,
+              role: 'menubar',
+              'aria-label': 'menu',
+              'aria-expanded': !!open,
             },
             /*#__PURE__*/ external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(
               StyledSidebarMenu,
               SidebarMenu_extends(
                 {
-                  open: open,
+                  role: 'none',
+                  open: !!open,
                 },
                 rest
               ),
@@ -8343,15 +8362,16 @@ object-assign
               /*#__PURE__*/ external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(
                 SidebarMenu_MenuList,
                 {
-                  isOpen: open,
+                  role: 'menu',
+                  isOpen: !!open,
                 },
                 children
               )
             ),
             /*#__PURE__*/ external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(Backdrop, {
               onClick: onClose,
-              'aria-ole': 'button',
-              'aria-label': 'Abrir menu',
+              'aria-role': 'button',
+              'aria-label': 'Fechar menu',
             })
           )
         }
@@ -8397,6 +8417,21 @@ object-assign
           return target
         }
 
+        function HamburguerButton_templateObject2() {
+          var data = HamburguerButton_taggedTemplateLiteralLoose([
+            '\n  position: absolute;\n  top: 0;\n  bottom: 0;\n  margin: auto;\n  right: -5px;\n  transition: 0.15s linear;\n  transition-delay: 0.35s;\n  transform: rotate(135deg) scale(0);\n  opacity: 0.3;\n  transform-origin: center center;\n  z-index: 10;\n  background: hotpink;\n  width: 15px;\n  height: 15px;\n  ',
+            "\n  &::after, &::before {\n    content: '';\n    border: solid;\n    border-width: 0 5px 5px 0;\n    display: inline-block;\n    padding: 5px;\n    transform: rotate(135deg);\n    -webkit-transform: rotate(135deg);\n    position: absolute;\n    top: 0;\n    right: 0;\n    bottom: 0;\n    left: 0;\n    margin: auto;\n  }\n  &::before {\n    z-index: 1;\n    border-width: 8px 8px 8px 8px;\n    border-color: ",
+            ';\n    background: ',
+            ';\n    margin-top: -5px;\n    margin-left: -3px;\n    border-radius: 4px;\n  }\n  &::after {\n    z-index: 2;\n    border-color: #333333de;\n  }\n',
+          ])
+
+          HamburguerButton_templateObject2 = function _templateObject2() {
+            return data
+          }
+
+          return data
+        }
+
         function HamburguerButton_templateObject() {
           var data = HamburguerButton_taggedTemplateLiteralLoose([
             "\n  width: 35px;\n  height: 26px;\n  border: none;\n  position: relative;\n  background: linear-gradient(to bottom, #333333de, #333333de);\n  background-size: 100% 20%;\n  background-repeat: no-repeat;\n  background-position: center center;\n  transition: background-size 0.2s 0.25s ease;\n  outline: none;\n  cursor: pointer;\n  transform: scale(0.6);\n  transition: background-size 0.3s 0.2s ease;\n  &:before,\n  &:after {\n    height: 20%;\n    width: 100%;\n    position: absolute;\n    left: 0;\n    background-color: #333333de;\n    content: '';\n    transition: transform 0.3s ease;\n  }\n  &:before {\n    top: 0;\n  }\n  &:after {\n    bottom: 0;\n  }\n  &:before,\n  &:after {\n    transition: 0.3s ease;\n  }\n  ",
@@ -8424,12 +8459,26 @@ object-assign
             '\n      // background-size: 0 0;\n      &:before,\n      &:after {\n        transition-delay: 0.3s;\n      }\n      // &:before {\n      //   transform: translateY(200%) rotate(45deg);\n      // }\n      // &:after {\n      //   transform: translateY(-200%) rotate(-45deg);\n      // }\n    '
           )
         })
+        var Arrow = styled_components_browser_esm['default'].i(
+          HamburguerButton_templateObject2(),
+          function (props) {
+            return props.isOpen && ' opacity: 1;\n      transform: rotate(0) scale(1);\n    '
+          },
+          function (props) {
+            return props.backgroundColor
+          },
+          function (props) {
+            return props.backgroundColor
+          }
+        )
 
         var HamburguerButton_HamburguerButton = function HamburguerButton(_ref) {
           var _ref$isOpen = _ref.isOpen,
             isOpen = _ref$isOpen === void 0 ? false : _ref$isOpen,
             children = _ref.children,
-            rest = HamburguerButton_objectWithoutPropertiesLoose(_ref, ['isOpen', 'children'])
+            _ref$backgroundColor = _ref.backgroundColor,
+            backgroundColor = _ref$backgroundColor === void 0 ? '#fff' : _ref$backgroundColor,
+            rest = HamburguerButton_objectWithoutPropertiesLoose(_ref, ['isOpen', 'children', 'backgroundColor'])
 
           return /*#__PURE__*/ external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(
             StyledHamburguerButton,
@@ -8438,7 +8487,12 @@ object-assign
                 isOpen: isOpen,
               },
               rest
-            )
+            ),
+            /*#__PURE__*/ external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(Arrow, {
+              class: 'arrow left',
+              isOpen: isOpen,
+              backgroundColor: backgroundColor,
+            })
           )
         }
 
@@ -8498,7 +8552,7 @@ object-assign
         /* harmony default export */ var components_NavBar = components_NavBar_NavBar
         // CONCATENATED MODULE: ./src/components/Header/Title.js
         function Title_templateObject() {
-          var data = Title_taggedTemplateLiteralLoose(['\n  margin: 0;\n  font-size: 24px;\n  ', '\n'])
+          var data = Title_taggedTemplateLiteralLoose(['\n  margin: 0;\n  ', '\n  font-size: 1em !important;\n'])
 
           Title_templateObject = function _templateObject() {
             return data
@@ -8517,7 +8571,7 @@ object-assign
 
         var Title = styled_components_browser_esm['default'].h1(
           Title_templateObject(),
-          Object(index_esm['compose'])(index_esm['color'], index_esm['space'], index_esm['typography'])
+          Object(index_esm['compose'])(index_esm['color'], index_esm['typography'], index_esm['space'])
         )
         Title.defaultProps = {
           color: 'darkRed',
@@ -8579,7 +8633,7 @@ object-assign
           return strings
         }
 
-        var StyledHeader = styled_components_browser_esm['default'].header(Header_templateObject(), index_esm['color'])
+        var StyledHeader = styled_components_browser_esm['default'].header(Header_templateObject(), index_esm['typography'])
 
         var Header_Header = function Header(_ref) {
           var children = _ref.children,
@@ -8612,6 +8666,9 @@ object-assign
           )
         }
 
+        Header_Header.defaultProps = {
+          fontSize: [2, 3, 4],
+        }
         /* harmony default export */ var components_Header_Header = Header_Header
         // CONCATENATED MODULE: ./src/components/Header/index.js
 
@@ -8692,7 +8749,15 @@ object-assign
             _ref2$menuWidth = _ref2.menuWidth,
             menuWidth = _ref2$menuWidth === void 0 ? 248 : _ref2$menuWidth,
             handleChangeMenuIsOpen = _ref2.handleChangeMenuIsOpen,
-            rest = BaseLayout_objectWithoutPropertiesLoose(_ref2, ['children', 'menuIsOpen', 'sidebar', 'menuWidth', 'handleChangeMenuIsOpen'])
+            title = _ref2.title,
+            rest = BaseLayout_objectWithoutPropertiesLoose(_ref2, [
+              'children',
+              'menuIsOpen',
+              'sidebar',
+              'menuWidth',
+              'handleChangeMenuIsOpen',
+              'title',
+            ])
 
           return /*#__PURE__*/ external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(
             StyledBaseLayout,
@@ -8710,17 +8775,19 @@ object-assign
               /*#__PURE__*/ external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(
                 components_NavBar,
                 null,
-                /*#__PURE__*/ external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(
-                  components_HamburguerButton,
-                  {
-                    isOpen: menuIsOpen,
-                    onClick: handleChangeMenuIsOpen,
-                    color: 'primary',
-                  },
-                  !open ? 'Abrir menu' : 'Fechar menu'
-                ),
+                !!sidebar &&
+                  /*#__PURE__*/ external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(
+                    components_HamburguerButton,
+                    {
+                      backgroundColor: '#f4f4f4',
+                      isOpen: !!sidebar ? menuIsOpen : false,
+                      onClick: handleChangeMenuIsOpen,
+                      color: 'primary',
+                    },
+                    !open ? 'Abrir menu' : 'Fechar menu'
+                  ),
                 /*#__PURE__*/ external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(components_Header, {
-                  title: 'Cadastro de Advogado',
+                  title: title || '',
                 })
               ),
               /*#__PURE__*/ external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(ChildrenWrapper, null, children)
@@ -8728,14 +8795,37 @@ object-assign
           )
         }
 
+        BaseLayout_BaseLayout.propTypes = {
+          children: prop_types_default.a.element.isRequired,
+        }
+        BaseLayout_BaseLayout.defaultProps = {
+          /*todo: defaultProps*/
+        }
         /* harmony default export */ var components_BaseLayout_BaseLayout = BaseLayout_BaseLayout
         // CONCATENATED MODULE: ./src/components/BaseLayout/index.js
 
         /* harmony default export */ var components_BaseLayout = components_BaseLayout_BaseLayout
         // CONCATENATED MODULE: ./src/components/SidebarMenuItem/SidebarMenuItem.js
+        function SidebarMenuItem_extends() {
+          SidebarMenuItem_extends =
+            Object.assign ||
+            function (target) {
+              for (var i = 1; i < arguments.length; i++) {
+                var source = arguments[i]
+                for (var key in source) {
+                  if (Object.prototype.hasOwnProperty.call(source, key)) {
+                    target[key] = source[key]
+                  }
+                }
+              }
+              return target
+            }
+          return SidebarMenuItem_extends.apply(this, arguments)
+        }
+
         function SidebarMenuItem_templateObject3() {
           var data = SidebarMenuItem_taggedTemplateLiteralLoose([
-            '\n    background-color: rgba(255, 255, 255, 0.1);\n    padding: 16px 20px;\n    color: #fff;\n    display: block;\n    cursor: pointer;\n    &:hover {\n      background-color: rgba(255, 255, 255, 0.2);\n    }\n  ',
+            '\n    background-color: rgba(255, 255, 255, 0.1);\n    padding: 16px 20px;\n    color: #fff;\n    display: block;\n    text-decoration: none;\n    cursor: pointer;\n    &:hover {\n      background-color: rgba(255, 255, 255, 0.2);\n    }\n  ',
           ])
 
           SidebarMenuItem_templateObject3 = function _templateObject3() {
@@ -8798,10 +8888,15 @@ object-assign
           var MenuLink = Object(styled_components_browser_esm['default'])(component)(SidebarMenuItem_templateObject3())
           return /*#__PURE__*/ external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(
             StyledListItem,
-            null,
+            {
+              role: 'none',
+            },
             /*#__PURE__*/ external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(
               MenuLink,
-              rest,
+              SidebarMenuItem_extends({}, rest, {
+                role: 'menuitem',
+                tabindex: '-1',
+              }),
               !!icon && /*#__PURE__*/ external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(WrapperIcon, null, icon),
               ' ',
               children

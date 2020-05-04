@@ -88,7 +88,7 @@ function _extends() {
 
 function _templateObject3() {
   var data = _taggedTemplateLiteralLoose([
-    '\n    background-color: rgba(255, 255, 255, 0.1);\n    padding: 16px 20px;\n    color: #fff;\n    display: block;\n    cursor: pointer;\n    &:hover {\n      background-color: rgba(255, 255, 255, 0.2);\n    }\n  ',
+    '\n    background-color: rgba(255, 255, 255, 0.1);\n    padding: 16px 20px;\n    color: #fff;\n    display: block;\n    text-decoration: none;\n    cursor: pointer;\n    &:hover {\n      background-color: rgba(255, 255, 255, 0.2);\n    }\n  ',
   ])
 
   _templateObject3 = function _templateObject3() {
@@ -154,20 +154,23 @@ var MenuItem = (0, _react.memo)(function (_ref) {
   return /*#__PURE__*/ _react['default'].createElement(
     StyledListItem,
     {
+      role: 'none',
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 25,
+        lineNumber: 26,
         columnNumber: 5,
       },
     },
     /*#__PURE__*/ _react['default'].createElement(
       MenuLink,
       _extends({}, rest, {
+        role: 'menuitem',
+        tabindex: '-1',
         __self: _this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 26,
+          lineNumber: 27,
           columnNumber: 7,
         },
       }),
@@ -178,7 +181,7 @@ var MenuItem = (0, _react.memo)(function (_ref) {
             __self: _this,
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 27,
+              lineNumber: 28,
               columnNumber: 20,
             },
           },

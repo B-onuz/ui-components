@@ -5,8 +5,6 @@ Object.defineProperty(exports, '__esModule', {
 })
 exports['default'] = void 0
 
-var _react = _interopRequireDefault(require('react'))
-
 var _styledComponents = _interopRequireDefault(require('styled-components'))
 
 var _color = _interopRequireDefault(require('color'))
@@ -69,9 +67,9 @@ function _taggedTemplateLiteralLoose(strings, raw) {
 
 var Button = _styledComponents['default'].button(
   _templateObject(),
-  _styledSystem.space,
   _variants.color,
   _variants.size,
+  _styledSystem.space,
   function (props) {
     return (props.fullWidth && 'width: 100%;') || ''
   },

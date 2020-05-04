@@ -14,7 +14,7 @@ function _interopRequireDefault(obj) {
 }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteralLoose(['\n  margin: 0;\n  font-size: 24px;\n  ', '\n'])
+  var data = _taggedTemplateLiteralLoose(['\n  margin: 0;\n  ', '\n  font-size: 1em !important;\n'])
 
   _templateObject = function _templateObject() {
     return data
@@ -33,7 +33,7 @@ function _taggedTemplateLiteralLoose(strings, raw) {
 
 var Title = _styledComponents['default'].h1(
   _templateObject(),
-  (0, _styledSystem.compose)(_styledSystem.color, _styledSystem.space, _styledSystem.typography)
+  (0, _styledSystem.compose)(_styledSystem.color, _styledSystem.typography, _styledSystem.space)
 )
 
 Title.defaultProps = {

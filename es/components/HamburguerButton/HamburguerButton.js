@@ -48,6 +48,21 @@ function _objectWithoutPropertiesLoose(source, excluded) {
   return target
 }
 
+function _templateObject2() {
+  var data = _taggedTemplateLiteralLoose([
+    '\n  position: absolute;\n  top: 0;\n  bottom: 0;\n  margin: auto;\n  right: -5px;\n  transition: 0.15s linear;\n  transition-delay: 0.35s;\n  transform: rotate(135deg) scale(0);\n  opacity: 0.3;\n  transform-origin: center center;\n  z-index: 10;\n  background: hotpink;\n  width: 15px;\n  height: 15px;\n  ',
+    "\n  &::after, &::before {\n    content: '';\n    border: solid;\n    border-width: 0 5px 5px 0;\n    display: inline-block;\n    padding: 5px;\n    transform: rotate(135deg);\n    -webkit-transform: rotate(135deg);\n    position: absolute;\n    top: 0;\n    right: 0;\n    bottom: 0;\n    left: 0;\n    margin: auto;\n  }\n  &::before {\n    z-index: 1;\n    border-width: 8px 8px 8px 8px;\n    border-color: ",
+    ';\n    background: ',
+    ';\n    margin-top: -5px;\n    margin-left: -3px;\n    border-radius: 4px;\n  }\n  &::after {\n    z-index: 2;\n    border-color: #333333de;\n  }\n',
+  ])
+
+  _templateObject2 = function _templateObject2() {
+    return data
+  }
+
+  return data
+}
+
 function _templateObject() {
   var data = _taggedTemplateLiteralLoose([
     "\n  width: 35px;\n  height: 26px;\n  border: none;\n  position: relative;\n  background: linear-gradient(to bottom, #333333de, #333333de);\n  background-size: 100% 20%;\n  background-repeat: no-repeat;\n  background-position: center center;\n  transition: background-size 0.2s 0.25s ease;\n  outline: none;\n  cursor: pointer;\n  transform: scale(0.6);\n  transition: background-size 0.3s 0.2s ease;\n  &:before,\n  &:after {\n    height: 20%;\n    width: 100%;\n    position: absolute;\n    left: 0;\n    background-color: #333333de;\n    content: '';\n    transition: transform 0.3s ease;\n  }\n  &:before {\n    top: 0;\n  }\n  &:after {\n    bottom: 0;\n  }\n  &:before,\n  &:after {\n    transition: 0.3s ease;\n  }\n  ",
@@ -76,11 +91,26 @@ var StyledHamburguerButton = _styledComponents['default'].button(_templateObject
   )
 })
 
+var Arrow = _styledComponents['default'].i(
+  _templateObject2(),
+  function (props) {
+    return props.isOpen && ' opacity: 1;\n      transform: rotate(0) scale(1);\n    '
+  },
+  function (props) {
+    return props.backgroundColor
+  },
+  function (props) {
+    return props.backgroundColor
+  }
+)
+
 var HamburguerButton = function HamburguerButton(_ref) {
   var _ref$isOpen = _ref.isOpen,
     isOpen = _ref$isOpen === void 0 ? false : _ref$isOpen,
     children = _ref.children,
-    rest = _objectWithoutPropertiesLoose(_ref, ['isOpen', 'children'])
+    _ref$backgroundColor = _ref.backgroundColor,
+    backgroundColor = _ref$backgroundColor === void 0 ? '#fff' : _ref$backgroundColor,
+    rest = _objectWithoutPropertiesLoose(_ref, ['isOpen', 'children', 'backgroundColor'])
 
   return /*#__PURE__*/ _react['default'].createElement(
     StyledHamburguerButton,
@@ -93,11 +123,22 @@ var HamburguerButton = function HamburguerButton(_ref) {
         __self: _this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 57,
-          columnNumber: 10,
+          lineNumber: 108,
+          columnNumber: 5,
         },
       }
-    )
+    ),
+    /*#__PURE__*/ _react['default'].createElement(Arrow, {
+      class: 'arrow left',
+      isOpen: isOpen,
+      backgroundColor: backgroundColor,
+      __self: _this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 109,
+        columnNumber: 7,
+      },
+    })
   )
 }
 

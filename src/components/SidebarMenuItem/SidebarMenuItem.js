@@ -15,6 +15,7 @@ const MenuItem = memo(({ children, component = 'a', icon, ...rest }) => {
     padding: 16px 20px;
     color: #fff;
     display: block;
+    text-decoration: none;
     cursor: pointer;
     &:hover {
       background-color: rgba(255, 255, 255, 0.2);

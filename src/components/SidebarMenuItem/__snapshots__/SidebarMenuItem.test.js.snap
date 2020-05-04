@@ -11,6 +11,8 @@ exports[`SidebarMenuItem changes the class when hovered 1`] = `
   padding: 16px 20px;
   color: #fff;
   display: block;
+  -webkit-text-decoration: none;
+  text-decoration: none;
   cursor: pointer;
 }
 

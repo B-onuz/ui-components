@@ -96,7 +96,7 @@ function _taggedTemplateLiteralLoose(strings, raw) {
 
 var Backdrop = _styledComponents['default'].div(_templateObject())
 
-var WrapperSidebarMenu = _styledComponents['default'].div(_templateObject2(), function (_ref) {
+var WrapperSidebarMenu = _styledComponents['default'].nav(_templateObject2(), function (_ref) {
   var open = _ref.open
   return (
     !!open &&
@@ -125,7 +125,10 @@ var SidebarMenu = function SidebarMenu(_ref3) {
   return /*#__PURE__*/ _react['default'].createElement(
     WrapperSidebarMenu,
     {
-      open: open,
+      open: !!open,
+      role: 'menubar',
+      'aria-label': 'menu',
+      'aria-expanded': !!open,
       __self: _this,
       __source: {
         fileName: _jsxFileName,
@@ -137,7 +140,8 @@ var SidebarMenu = function SidebarMenu(_ref3) {
       StyledSidebarMenu,
       _extends(
         {
-          open: open,
+          role: 'none',
+          open: !!open,
         },
         rest,
         {
@@ -153,7 +157,8 @@ var SidebarMenu = function SidebarMenu(_ref3) {
       /*#__PURE__*/ _react['default'].createElement(
         _MenuList['default'],
         {
-          isOpen: open,
+          role: 'menu',
+          isOpen: !!open,
           __self: _this,
           __source: {
             fileName: _jsxFileName,
@@ -166,12 +171,12 @@ var SidebarMenu = function SidebarMenu(_ref3) {
     ),
     /*#__PURE__*/ _react['default'].createElement(Backdrop, {
       onClick: onClose,
-      'aria-ole': 'button',
-      'aria-label': 'Abrir menu',
+      'aria-role': 'button',
+      'aria-label': 'Fechar menu',
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 69,
+        lineNumber: 71,
         columnNumber: 7,
       },
     })

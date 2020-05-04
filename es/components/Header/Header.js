@@ -70,7 +70,7 @@ function _taggedTemplateLiteralLoose(strings, raw) {
   return strings
 }
 
-var StyledHeader = _styledComponents['default'].header(_templateObject(), _styledSystem.color)
+var StyledHeader = _styledComponents['default'].header(_templateObject(), _styledSystem.typography)
 
 var Header = function Header(_ref) {
   var children = _ref.children,
@@ -122,5 +122,8 @@ var Header = function Header(_ref) {
   )
 }
 
+Header.defaultProps = {
+  fontSize: [2, 3, 4],
+}
 var _default = Header
 exports['default'] = _default
