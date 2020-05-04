@@ -2,6 +2,8 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.4](https://github.com/B-onuz/ui-components/compare/v1.1.3...v1.1.4) (2020-05-04)
+
 ### [1.1.3](https://github.com/B-onuz/ui-components/compare/v1.1.1...v1.1.3) (2020-04-27)
 
 ### Bug Fixes
