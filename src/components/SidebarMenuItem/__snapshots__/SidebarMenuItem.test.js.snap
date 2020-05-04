@@ -20,9 +20,11 @@ exports[`SidebarMenuItem changes the class when hovered 1`] = `
 
 <li
   className="c0"
+  role="none"
 >
   <a
     className="c1"
+    role="menuitem"
   >
      
   </a>

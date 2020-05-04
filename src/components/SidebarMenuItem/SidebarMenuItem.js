@@ -22,8 +22,8 @@ const MenuItem = memo(({ children, component = 'a', icon, ...rest }) => {
   `
 
   return (
-    <StyledListItem>
-      <MenuLink {...rest}>
+    <StyledListItem role="none">
+      <MenuLink {...rest} role="menuitem" tabindex="-1">
         {!!icon && <WrapperIcon>{icon}</WrapperIcon>} {children}
       </MenuLink>
     </StyledListItem>

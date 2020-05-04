@@ -42,17 +42,22 @@ exports[`SidebarMenu changes the class when hovered 1`] = `
   transform: translateX(-100%);
 }
 
-<div
+<nav
+  aria-expanded={false}
+  aria-label="menu"
   className="c0"
   open={false}
+  role="menubar"
 >
   <div
     className="c1 css-13rhp43"
     open={false}
+    role="none"
   >
     Logo
     <ul
       className="c2"
+      role="menu"
     />
   </div>
   <div
@@ -60,5 +65,5 @@ exports[`SidebarMenu changes the class when hovered 1`] = `
     aria-role="button"
     className="c3"
   />
-</div>
+</nav>
 `;

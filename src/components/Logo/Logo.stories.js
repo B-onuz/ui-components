@@ -16,6 +16,6 @@ const Wrapper = styled.div`
 
 export const LogoExample = () => (
   <Wrapper>
-    <Logo width="180" src={logoImg} />
+    <Logo alt={'B-onuz Logo - legal services'} width="180" src={logoImg} />
   </Wrapper>
 )
