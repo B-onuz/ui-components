@@ -22,7 +22,7 @@ const menuItems = [
 
 const DashboardSidebar = ({ ...rest }) => {
   return (
-    <SidebarMenu {...rest} logo={<Logo width={180} my={3} src={logoImg} />}>
+    <SidebarMenu {...rest} logo={<Logo width={180} my={3} src={logoImg} alt={'B-onuz Logo - legal services'} />}>
       {menuItems.map((item) => {
         return <SidebarMenuItem component={'header'} icon={<FontAwesomeIcon icon={item.icon} />} children={item.text} />
       })}
@@ -36,6 +36,14 @@ export default {
 }
 
 export const BaseLayoutExample = () => {
+  return (
+    <BaseLayout title="Cadastro de advogados">
+      <h1>Layout base</h1>
+    </BaseLayout>
+  )
+}
+
+export const BaseLayoutWithSidebar = () => {
   const [menuIsOpen, setMenuIsOpen] = useState(true)
 
   const toggleMenu = () => {
@@ -47,6 +55,7 @@ export const BaseLayoutExample = () => {
   }
   return (
     <BaseLayout
+      title={'Cadastro de advogados'}
       menuIsOpen={menuIsOpen}
       handleChangeMenuIsOpen={toggleMenu}
       sidebar={<DashboardSidebar open={menuIsOpen} onClose={closeMenu} width={248} />}

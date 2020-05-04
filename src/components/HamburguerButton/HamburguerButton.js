@@ -53,8 +53,62 @@ const StyledHamburguerButton = styled.button`
     `}
 `
 
-const HamburguerButton = ({ isOpen = false, children, ...rest }) => {
-  return <StyledHamburguerButton isOpen={isOpen} {...rest} />
+const Arrow = styled.i`
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  right: -5px;
+  transition: 0.15s linear;
+  transition-delay: 0.35s;
+  transform: rotate(135deg) scale(0);
+  opacity: 0.3;
+  transform-origin: center center;
+  z-index: 10;
+  background: hotpink;
+  width: 15px;
+  height: 15px;
+  ${(props) =>
+    props.isOpen &&
+    ` opacity: 1;
+      transform: rotate(0) scale(1);
+    `}
+  &::after, &::before {
+    content: '';
+    border: solid;
+    border-width: 0 5px 5px 0;
+    display: inline-block;
+    padding: 5px;
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+  }
+  &::before {
+    z-index: 1;
+    border-width: 8px 8px 8px 8px;
+    border-color: ${(props) => props.backgroundColor};
+    background: ${(props) => props.backgroundColor};
+    margin-top: -5px;
+    margin-left: -3px;
+    border-radius: 4px;
+  }
+  &::after {
+    z-index: 2;
+    border-color: #333333de;
+  }
+`
+
+const HamburguerButton = ({ isOpen = false, children, backgroundColor = '#fff', ...rest }) => {
+  return (
+    <StyledHamburguerButton isOpen={isOpen} {...rest}>
+      <Arrow class="arrow left" isOpen={isOpen} backgroundColor={backgroundColor} />
+    </StyledHamburguerButton>
+  )
 }
 
 export default HamburguerButton

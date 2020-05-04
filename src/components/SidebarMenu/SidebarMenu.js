@@ -11,7 +11,7 @@ const Backdrop = styled.div`
   cursor: pointer;
 `
 
-const WrapperSidebarMenu = styled.div`
+const WrapperSidebarMenu = styled.nav`
   height: 100%;
   z-index: 999;
   ${({ open }) =>
@@ -61,12 +61,14 @@ const StyledSidebarMenu = styled(Box)`
 
 const SidebarMenu = ({ children, open = false, onClose, logo = 'Logo', items = [], ...rest }) => {
   return (
-    <WrapperSidebarMenu open={open}>
-      <StyledSidebarMenu open={open} {...rest}>
+    <WrapperSidebarMenu open={!!open} role="menubar" aria-label="menu" aria-expanded={!!open}>
+      <StyledSidebarMenu role="none" open={!!open} {...rest}>
         {logo}
-        <MenuList isOpen={open}>{children}</MenuList>
+        <MenuList role="menu" isOpen={!!open}>
+          {children}
+        </MenuList>
       </StyledSidebarMenu>
-      <Backdrop onClick={onClose} aria-ole="button" aria-label="Abrir menu" />
+      <Backdrop onClick={onClose} aria-role="button" aria-label="Fechar menu" />
     </WrapperSidebarMenu>
   )
 }

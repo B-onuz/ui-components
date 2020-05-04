@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { color } from 'styled-system'
+import PropTypes from 'prop-types'
 import { Flex, Box } from 'reflexbox/styled-components'
 import HamburguerButton from '../HamburguerButton'
 import Navbar from '../NavBar'
@@ -31,21 +32,31 @@ const LayoutContainer = styled(Box)`
   `}
 `
 
-const BaseLayout = ({ children, menuIsOpen = false, sidebar = null, menuWidth = 248, handleChangeMenuIsOpen, ...rest }) => {
+const BaseLayout = ({ children, menuIsOpen = false, sidebar = null, menuWidth = 248, handleChangeMenuIsOpen, title, ...rest }) => {
   return (
     <StyledBaseLayout {...rest}>
       {sidebar}
       <LayoutContainer display={'flex'} flexDirection={'column'} flex={1} menuWidth={menuWidth} menuIsOpen={menuIsOpen}>
         <Navbar>
-          <HamburguerButton isOpen={menuIsOpen} onClick={handleChangeMenuIsOpen} color={'primary'}>
-            {!open ? 'Abrir menu' : 'Fechar menu'}
-          </HamburguerButton>
-          <Header title={'Cadastro de Advogado'} />
+          {!!sidebar && (
+            <HamburguerButton backgroundColor={'#f4f4f4'} isOpen={!!sidebar ? menuIsOpen : false} onClick={handleChangeMenuIsOpen} color={'primary'}>
+              {!open ? 'Abrir menu' : 'Fechar menu'}
+            </HamburguerButton>
+          )}
+          <Header title={title || ''} />
         </Navbar>
         <ChildrenWrapper>{children}</ChildrenWrapper>
       </LayoutContainer>
     </StyledBaseLayout>
   )
+}
+
+BaseLayout.propTypes = {
+  children: PropTypes.element.isRequired,
+}
+
+BaseLayout.defaultProps = {
+  /*todo: defaultProps*/
 }
 
 export default BaseLayout

@@ -3,8 +3,8 @@ import { color, space, typography, compose } from 'styled-system'
 
 const Title = styled.h1`
   margin: 0;
-  font-size: 24px;
-  ${compose(color, space, typography)}
+  ${compose(color, typography, space)}
+  font-size: 1em !important;
 `
 
 Title.defaultProps = {

@@ -35,9 +35,32 @@ module.exports = function (plop) {
         templateFile: 'plop-templates/component.test.js.hbs',
       },
       {
+        type: 'add',
+        path: 'docs/components/{{pascalCase name}}/{{pascalCase name}}.md',
+        templateFile: 'plop-templates/component.doc.md.hbs',
+      },
+      {
         type: 'append',
         path: 'src/index.js',
         template: `export {{pascalCase name}} from './components/{{pascalCase name}}'`,
+      },
+    ],
+  })
+
+  plop.setGenerator('component:doc', {
+    description: 'Create a new component doc',
+    prompts: [
+      {
+        type: 'input',
+        name: 'name',
+        message: 'component name please',
+      },
+    ],
+    actions: [
+      {
+        type: 'add',
+        path: 'docs/components/{{pascalCase name}}.md',
+        templateFile: 'plop-templates/component.doc.md.hbs',
       },
     ],
   })

@@ -21,10 +21,18 @@ colors.primary = colors.lightRed
 colors.secondary = colors.fullDarkRed
 colors.default = '#e0e1e2'
 
+const breakpoints = ['40em', '52em', '64em', '80em']
+
+breakpoints.sm = breakpoints[0]
+breakpoints.md = breakpoints[1]
+breakpoints.lg = breakpoints[2]
+breakpoints.xl = breakpoints[3]
+
 const fontSizes = [12, 14, 16, 20, 24, 32]
 
 export default {
   fontFamily: `'Lato', sans-serif`,
   colors,
   fontSizes,
+  breakpoints,
 }

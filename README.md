@@ -79,3 +79,19 @@ Você pode rodar o comando já passando o nome do componente e da tag base.
 ```
 plop component box div
 ```
+
+#### Documentação de componentes
+
+Para criar doc de um componente separadamente, podemos usar o comando `plop component:doc`.
+
+exemplo:
+
+```
+plop component:doc
+```
+
+ou
+
+```
+plop component:doc Button
+```

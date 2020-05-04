@@ -1,11 +1,11 @@
 import React from 'react'
 import styled from 'styled-components'
-import { color } from 'styled-system'
+import { typography } from 'styled-system'
 import Title from './Title'
 import SubTitle from './SubTitle'
 
 const StyledHeader = styled.header`
-  ${color}
+  ${typography}
   flex: 1;
   font-family: inherit;
 `
@@ -21,6 +21,10 @@ const Header = ({ children, title, subTitle, textAlign = 'center', ...rest }) =>
       )}
     </StyledHeader>
   )
+}
+
+Header.defaultProps = {
+  fontSize: [2, 3, 4],
 }
 
 export default Header

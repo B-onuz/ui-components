@@ -22,7 +22,6 @@ Configure o tema no arquivo index.js do seu projeto, exemplo:
 ```js
 /* ... */
 import { ThemeProvider } from 'styled-components'
-import theme from '../../theme'
 import 'jest-styled-components' // linha adicionada
 import theme from 'ui-components/lib/theme' // linha adicionada
 
@@ -59,7 +58,7 @@ Estamos usando a biblioteca de icones [react-fontawesome](https://github.com/For
 
 **Instalação do fontawesome**
 
-```yarn add @fortawesome/fontawesome-svg-core @fortawesome/free-solid-svg-icons @fortawesome/react-fontawesome```
+`yarn add @fortawesome/fontawesome-svg-core @fortawesome/free-solid-svg-icons @fortawesome/react-fontawesome`
 
 Estamos usando a biblioteca de icones [react-fontawesome](https://github.com/FortAwesome/react-fontawesome)
 
@@ -71,8 +70,7 @@ Estamos usando uma biblioteca para grid chamada `reflexbox`. [reflexbox DOCS](ht
 
 **Instalação**
 
-```yarn add reflexbox```
-
+`yarn add reflexbox`
 
 ## Como importar componentes
 

@@ -1,4 +1,3 @@
-import React from 'react'
 import styled from 'styled-components'
 import Color from 'color'
 import { space } from 'styled-system'
@@ -15,9 +14,9 @@ const Button = styled.button`
   padding: .5rem 1rem;
   border-style: solid;
   color: #000;
-  ${space}
   ${color}
   ${size}
+  ${space}
   ${(props) => (props.fullWidth && 'width: 100%;') || ''}
   box-sizing: border-box;
   &:focus {
