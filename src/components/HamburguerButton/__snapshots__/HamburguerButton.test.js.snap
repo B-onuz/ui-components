@@ -3,5 +3,10 @@
 exports[`HamburguerButton changes the class when hovered 1`] = `
 <button
   className="sc-AxjAm iYohGp"
-/>
+>
+  <i
+    class="arrow left"
+    className="sc-AxirZ izhSDH"
+  />
+</button>
 `;

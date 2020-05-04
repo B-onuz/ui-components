@@ -2,20 +2,27 @@
 
 exports[`should render BaseLayout without sidebar 1`] = `
 <div
-  className="sc-AxjAm sc-AxirZ sc-Axmtr kHQcDq"
+  className="sc-AxjAm sc-AxirZ sc-AxmLO cefkbD"
 >
   <div
-    className="sc-AxjAm sc-fzozJi kQnvEm"
+    className="sc-AxjAm sc-fzoLsD cKSPaM"
     display="flex"
   >
     <div
-      className="sc-AxhCb gKulCB"
+      className="sc-AxhUy iAjbqg"
     >
       <header
-        className="sc-AxheI jATbQL"
+        className="sc-Axmtr fiNXqW"
+        fontSize={
+          Array [
+            2,
+            3,
+            4,
+          ]
+        }
       >
         <h1
-          className="sc-AxhUy ighnej"
+          className="sc-AxgMl fcQGIZ"
           color="darkRed"
         >
           Cadastro de advogados
@@ -23,7 +30,7 @@ exports[`should render BaseLayout without sidebar 1`] = `
       </header>
     </div>
     <div
-      className="sc-AxmLO sXEuK"
+      className="sc-fzozJi bmYBpn"
     >
       <p>
         Lorem ipsum dolor sit amet

@@ -39,7 +39,7 @@ const BaseLayout = ({ children, menuIsOpen = false, sidebar = null, menuWidth = 
       <LayoutContainer display={'flex'} flexDirection={'column'} flex={1} menuWidth={menuWidth} menuIsOpen={menuIsOpen}>
         <Navbar>
           {!!sidebar && (
-            <HamburguerButton isOpen={!!sidebar ? menuIsOpen : false} onClick={handleChangeMenuIsOpen} color={'primary'}>
+            <HamburguerButton backgroundColor={'#f4f4f4'} isOpen={!!sidebar ? menuIsOpen : false} onClick={handleChangeMenuIsOpen} color={'primary'}>
               {!open ? 'Abrir menu' : 'Fechar menu'}
             </HamburguerButton>
           )}
