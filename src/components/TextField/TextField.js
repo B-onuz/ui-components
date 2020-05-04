@@ -15,7 +15,7 @@ const StyledTextField = styled.div`
   }
 `
 
-const TextField = ({ children, label, placeholder, name, id, value, onChange, required, error, ...rest }) => {
+const TextField = ({ children, label, placeholder, name, id, value, onChange, required, error, inputProps = {}, ...rest }) => {
   return (
     <StyledTextField {...rest}>
       <Label htmlFor={id} required={!!required}>
@@ -32,6 +32,7 @@ const TextField = ({ children, label, placeholder, name, id, value, onChange, re
         required={!!required}
         aria-required={!!required}
         aria-invalid={!!error}
+        {...inputProps}
       />
     </StyledTextField>
   )
