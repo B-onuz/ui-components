@@ -6,7 +6,7 @@ exports[`HamburguerButton changes the class when hovered 1`] = `
 >
   <i
     class="arrow left"
-    className="sc-AxirZ izhSDH"
+    className="sc-AxirZ iYhtDH"
   />
 </button>
 `;
