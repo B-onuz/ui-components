@@ -2,12 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
-## [1.3.0](https://github.com/B-onuz/ui-components/compare/v1.1.4...v1.3.0) (2020-05-04)
-
+## [1.4.0](https://github.com/B-onuz/ui-components/compare/v1.3.0...v1.4.0) (2020-05-20)
 
 ### Features
 
-* **components:** remove text-decoration of SidebarMenuItem with ReactRouter Link ([4c6461a](https://github.com/B-onuz/ui-components/commit/4c6461a9a93eec5c731a14ae2fd7a990f1ebd592))
+- **components:** add list components ([#5](https://github.com/B-onuz/ui-components/issues/5)) ([5426d10](https://github.com/B-onuz/ui-components/commit/5426d10f190bc18970d30b083da8541033ec9edc))
+
+## [1.3.0](https://github.com/B-onuz/ui-components/compare/v1.1.4...v1.3.0) (2020-05-04)
+
+### Features
+
+- **components:** remove text-decoration of SidebarMenuItem with ReactRouter Link ([4c6461a](https://github.com/B-onuz/ui-components/commit/4c6461a9a93eec5c731a14ae2fd7a990f1ebd592))
 
 ## [1.2.0](https://github.com/B-onuz/ui-components/compare/v1.1.4...v1.2.0) (2020-05-04)
 
