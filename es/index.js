@@ -93,6 +93,24 @@ Object.defineProperty(exports, 'Logo', {
     return _Logo2['default']
   },
 })
+Object.defineProperty(exports, 'Table', {
+  enumerable: true,
+  get: function get() {
+    return _Table2['default']
+  },
+})
+Object.defineProperty(exports, 'Box', {
+  enumerable: true,
+  get: function get() {
+    return _Box2['default']
+  },
+})
+Object.defineProperty(exports, 'Pagination', {
+  enumerable: true,
+  get: function get() {
+    return _Pagination2['default']
+  },
+})
 
 var _theme2 = _interopRequireDefault(require('./theme'))
 
@@ -123,6 +141,12 @@ var _Header2 = _interopRequireDefault(require('./components/Header'))
 var _CheckBox2 = _interopRequireDefault(require('./components/CheckBox'))
 
 var _Logo2 = _interopRequireDefault(require('./components/Logo'))
+
+var _Table2 = _interopRequireDefault(require('./components/Table'))
+
+var _Box2 = _interopRequireDefault(require('./components/Box'))
+
+var _Pagination2 = _interopRequireDefault(require('./components/Pagination'))
 
 function _interopRequireDefault(obj) {
   return obj && obj.__esModule ? obj : { default: obj }

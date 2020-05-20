@@ -1,4 +1,4 @@
-/*! ui-components v1.1.4 */
+/*! ui-components v1.3.0 */
 ;(function webpackUniversalModuleDefinition(root, factory) {
   if (typeof exports === 'object' && typeof module === 'object') module.exports = factory(require('react'))
   else if (typeof define === 'function' && define.amd) define(['react'], factory)
@@ -7597,6 +7597,15 @@ object-assign
         __webpack_require__.d(__webpack_exports__, 'Logo', function () {
           return /* reexport */ components_Logo
         })
+        __webpack_require__.d(__webpack_exports__, 'Table', function () {
+          return /* reexport */ components_Table
+        })
+        __webpack_require__.d(__webpack_exports__, 'Box', function () {
+          return /* reexport */ components_Box
+        })
+        __webpack_require__.d(__webpack_exports__, 'Pagination', function () {
+          return /* reexport */ components_Pagination
+        })
 
         // CONCATENATED MODULE: ./src/theme/index.js
         var colors = {
@@ -9127,6 +9136,485 @@ object-assign
         // CONCATENATED MODULE: ./src/components/Logo/index.js
 
         /* harmony default export */ var components_Logo = components_Logo_Logo
+        // CONCATENATED MODULE: ./src/components/Table/Table.js
+        function Table_objectWithoutPropertiesLoose(source, excluded) {
+          if (source == null) return {}
+          var target = {}
+          var sourceKeys = Object.keys(source)
+          var key, i
+          for (i = 0; i < sourceKeys.length; i++) {
+            key = sourceKeys[i]
+            if (excluded.indexOf(key) >= 0) continue
+            target[key] = source[key]
+          }
+          return target
+        }
+
+        function _templateObject9() {
+          var data = Table_taggedTemplateLiteralLoose([
+            '\n  display: table-row-group;\n  & > ',
+            ' {\n    background-color: #f8fafc;\n    &:nth-child(odd) {\n      background-color: #fff;\n    }\n  }\n',
+          ])
+
+          _templateObject9 = function _templateObject9() {
+            return data
+          }
+
+          return data
+        }
+
+        function _templateObject8() {
+          var data = Table_taggedTemplateLiteralLoose(['\n  overflow-x: auto;\n  ', '\n'])
+
+          _templateObject8 = function _templateObject8() {
+            return data
+          }
+
+          return data
+        }
+
+        function _templateObject7() {
+          var data = Table_taggedTemplateLiteralLoose(['\n  ', '\n  padding: 13px 40px;\n'])
+
+          _templateObject7 = function _templateObject7() {
+            return data
+          }
+
+          return data
+        }
+
+        function _templateObject6() {
+          var data = Table_taggedTemplateLiteralLoose([
+            '\n  display: inline-flex;\n  align-items: center;\n  flex-direction: inherit;\n  justify-content: flex-start;\n',
+          ])
+
+          _templateObject6 = function _templateObject6() {
+            return data
+          }
+
+          return data
+        }
+
+        function Table_templateObject5() {
+          var data = Table_taggedTemplateLiteralLoose(['\n  /* padding: 13px 40px; */\n'])
+
+          Table_templateObject5 = function _templateObject5() {
+            return data
+          }
+
+          return data
+        }
+
+        function Table_templateObject4() {
+          var data = Table_taggedTemplateLiteralLoose([
+            '\n  position: relative;\n  width: 20px;\n  height: 20px;\n  margin-left: 4px;\n  ',
+            '\n  ',
+            '\n',
+          ])
+
+          Table_templateObject4 = function _templateObject4() {
+            return data
+          }
+
+          return data
+        }
+
+        function Table_templateObject3() {
+          var data = Table_taggedTemplateLiteralLoose([
+            '\n  text-transform: uppercase;\n  font-size: 0.8em;\n  color: #838383;\n  font-weight: 400;\n  padding: 1em;\n  position: relative;\n  position: sticky;\n  top: 0;\n  background: #f1f3f8;\n  padding: 13px 40px;\n  ',
+            '\n  ',
+            '\n',
+          ])
+
+          Table_templateObject3 = function _templateObject3() {
+            return data
+          }
+
+          return data
+        }
+
+        function Table_templateObject2() {
+          var data = Table_taggedTemplateLiteralLoose(['\n  background: #f1f3f8;\n  display: table-header-group;\n'])
+
+          Table_templateObject2 = function _templateObject2() {
+            return data
+          }
+
+          return data
+        }
+
+        function Table_templateObject() {
+          var data = Table_taggedTemplateLiteralLoose([
+            '\n  border-spacing: 0;\n  position: relative;\n  border-collapse: collapse;\n  width: 100%;\n',
+          ])
+
+          Table_templateObject = function _templateObject() {
+            return data
+          }
+
+          return data
+        }
+
+        function Table_taggedTemplateLiteralLoose(strings, raw) {
+          if (!raw) {
+            raw = strings.slice(0)
+          }
+          strings.raw = raw
+          return strings
+        }
+
+        var StyledTable = styled_components_browser_esm['default'].table(Table_templateObject())
+        var TableHead = styled_components_browser_esm['default'].thead(Table_templateObject2())
+        var TableHeader = styled_components_browser_esm['default'].th(
+          Table_templateObject3(),
+          function (_ref) {
+            var order = _ref.order
+            return order && '\n    cursor: pointer;\n  '
+          },
+          function (_ref2) {
+            var align = _ref2.align
+            return align && '\n    text-align: ' + align + ';\n  '
+          }
+        )
+        var OrderArrow = styled_components_browser_esm['default'].span(
+          Table_templateObject4(),
+          function (_ref3) {
+            var isCurrent = _ref3.isCurrent
+            return !!isCurrent
+              ? "\n  &::before,\n  &::after {\n    content: '';\n    display: block;\n    position: absolute;\n    width: 1px;\n    height: 8px;\n    top: 0;\n    right: 0;\n    bottom: 0;\n    left: 0;\n    margin: auto;\n    background-color: #000;\n    transition: transform 0.25s ease-in-out 0s;\n  }"
+              : "\n    &::before,\n    &::after {\n      content: '';\n      display: block;\n      border: solid #838383;\n      border-width: 0 1px 1px 0;\n      display: inline-block;\n      padding: 3px;\n      position: absolute;\n      left: 0;\n      right: 0;\n      margin: auto;\n      width: 0px;\n      height: 0px;\n    }\n    &::after {\n      top: 4px;\n      transform: rotate(-135deg);\n    }\n\n    &::before {\n      bottom: 4px;\n      transform: rotate(45deg);\n    }\n  \n  "
+          },
+          function (_ref4) {
+            var order = _ref4.order,
+              isCurrent = _ref4.isCurrent
+
+            if (!!isCurrent) {
+              return order === 'asc'
+                ? '\n      &::before {\n        transform: translate3d(-2px, 0px, 0px) rotate(45deg);\n      }\n      &::after {\n        transform: translate3d(3px, 0px, 0px) rotate(-45deg);\n      }\n    '
+                : '\n      &::before {\n        transform: translate3d(3px, 0px, 0px) rotate(45deg);\n      }\n      &::after {\n        transform: translate3d(-2px, 0px, 0px) rotate(-45deg);\n      }\n    \n    '
+            } else {
+              return ''
+            }
+          }
+        )
+        var TableRow = styled_components_browser_esm['default'].tr(Table_templateObject5())
+        var TableHeaderSpan = styled_components_browser_esm['default'].span(_templateObject6())
+        var TableData = styled_components_browser_esm['default'].td(_templateObject7(), function (_ref5) {
+          var align = _ref5.align
+          return align && '\n    text-align: ' + align + ';\n  '
+        })
+        var WrapperTable = styled_components_browser_esm['default'].div(
+          _templateObject8(),
+          Object(index_esm['compose'])(index_esm['space'], index_esm['layout'])
+        )
+        var TableBody = styled_components_browser_esm['default'].tbody(_templateObject9(), TableRow)
+
+        var Table_Table = function Table(_ref6) {
+          var children = _ref6.children,
+            headers = _ref6.headers,
+            pagination = _ref6.pagination,
+            onChangeOrder = _ref6.onChangeOrder,
+            data = _ref6.data,
+            rest = Table_objectWithoutPropertiesLoose(_ref6, ['children', 'headers', 'pagination', 'onChangeOrder', 'data'])
+
+          var handleChangeOrder = function handleChangeOrder(item) {
+            if (onChangeOrder) {
+              onChangeOrder(item)
+            }
+          }
+
+          var getDataByKey = function getDataByKey(_ref7) {
+            var item = _ref7.item,
+              key = _ref7.key
+            var keys = key.split('.')
+            return keys.reduce(function (acc, item) {
+              return acc[item]
+            }, item)
+          }
+
+          return /*#__PURE__*/ external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(
+            WrapperTable,
+            rest,
+            /*#__PURE__*/ external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(
+              StyledTable,
+              null,
+              /*#__PURE__*/ external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(
+                TableHead,
+                null,
+                /*#__PURE__*/ external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(
+                  TableRow,
+                  null,
+                  (headers || []).map(function (item, index) {
+                    return /*#__PURE__*/ external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(
+                      TableHeader,
+                      {
+                        key: index,
+                        order: item.sort,
+                        align: item.align,
+                        onClick: function onClick() {
+                          return handleChangeOrder(item)
+                        },
+                      },
+                      /*#__PURE__*/ external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(
+                        TableHeaderSpan,
+                        null,
+                        item.title,
+                        ' ',
+                        item.sort &&
+                          /*#__PURE__*/ external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(OrderArrow, {
+                            isCurrent: !!(pagination.sort === item.key),
+                            order: pagination.order,
+                          })
+                      )
+                    )
+                  })
+                )
+              ),
+              /*#__PURE__*/ external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(
+                TableBody,
+                null,
+                (data || []).map(function (row, index) {
+                  return /*#__PURE__*/ external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(
+                    TableRow,
+                    {
+                      key: index,
+                    },
+                    headers.map(function (header) {
+                      return /*#__PURE__*/ external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(
+                        TableData,
+                        {
+                          align: header.align,
+                          key: header.key + '-' + index,
+                        },
+                        getDataByKey({
+                          key: header.key,
+                          item: row,
+                        })
+                      )
+                    })
+                  )
+                })
+              )
+            )
+          )
+        }
+
+        Table_Table.defaultProps = {}
+        Table_Table.propTypes = {
+          headers: prop_types_default.a.arrayOf(prop_types_default.a.object),
+        }
+        /* harmony default export */ var components_Table_Table = Table_Table
+        // CONCATENATED MODULE: ./src/components/Table/index.js
+
+        /* harmony default export */ var components_Table = components_Table_Table
+        // CONCATENATED MODULE: ./src/components/Box/Box.js
+        function Box_extends() {
+          Box_extends =
+            Object.assign ||
+            function (target) {
+              for (var i = 1; i < arguments.length; i++) {
+                var source = arguments[i]
+                for (var key in source) {
+                  if (Object.prototype.hasOwnProperty.call(source, key)) {
+                    target[key] = source[key]
+                  }
+                }
+              }
+              return target
+            }
+          return Box_extends.apply(this, arguments)
+        }
+
+        function Box_templateObject() {
+          var data = Box_taggedTemplateLiteralLoose([
+            '\n  box-shadow: 0px 3px 6px #2c282846;\n  background: #ffffff 0% 0% no-repeat padding-box;\n  padding: 10px;\n  border-radius: 10px;\n  ',
+            '\n',
+          ])
+
+          Box_templateObject = function _templateObject() {
+            return data
+          }
+
+          return data
+        }
+
+        function Box_taggedTemplateLiteralLoose(strings, raw) {
+          if (!raw) {
+            raw = strings.slice(0)
+          }
+          strings.raw = raw
+          return strings
+        }
+
+        var StyledBox = styled_components_browser_esm['default'].div(
+          Box_templateObject(),
+          Object(index_esm['compose'])(index_esm['space'], index_esm['layout'])
+        )
+
+        var Box_Box = function Box(_ref) {
+          var rest = Box_extends({}, _ref)
+
+          return /*#__PURE__*/ external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(StyledBox, rest)
+        }
+
+        /* harmony default export */ var components_Box_Box = Box_Box
+        // CONCATENATED MODULE: ./src/components/Box/index.js
+
+        /* harmony default export */ var components_Box = components_Box_Box
+        // CONCATENATED MODULE: ./src/components/Pagination/Pagination.js
+        function Pagination_objectWithoutPropertiesLoose(source, excluded) {
+          if (source == null) return {}
+          var target = {}
+          var sourceKeys = Object.keys(source)
+          var key, i
+          for (i = 0; i < sourceKeys.length; i++) {
+            key = sourceKeys[i]
+            if (excluded.indexOf(key) >= 0) continue
+            target[key] = source[key]
+          }
+          return target
+        }
+
+        function Pagination_templateObject2() {
+          var data = Pagination_taggedTemplateLiteralLoose([
+            '\n  position: relative;\n  border-radius: 32px;\n  min-width: 32px;\n  height: 32px;\n  padding: 0 0.3em;\n  background: none;\n  overflow: hidden;\n  ',
+            ";\n  &::before {\n    content: '';\n    width: 100%;\n    height: 100%;\n    position: absolute;\n    top: 0;\n    right: 0;\n    bottom: 0;\n    left: 0;\n    ",
+            ';\n    transform: translateY(-100%);\n    transition: 0.2s ease-in-out;\n  }\n  &:active {\n    background-color: transparent;\n  }\n  &:hover,\n  &:active {\n    background-color: transparent;\n    &::before {\n      transform: translateY(0);\n      z-index: -1;\n    }\n    color: #fff;\n  }\n  ',
+            ';\n',
+          ])
+
+          Pagination_templateObject2 = function _templateObject2() {
+            return data
+          }
+
+          return data
+        }
+
+        function Pagination_templateObject() {
+          var data = Pagination_taggedTemplateLiteralLoose(['\n  display: flex;\n  flex-wrap: wrap;\n  ', '\n'])
+
+          Pagination_templateObject = function _templateObject() {
+            return data
+          }
+
+          return data
+        }
+
+        function Pagination_taggedTemplateLiteralLoose(strings, raw) {
+          if (!raw) {
+            raw = strings.slice(0)
+          }
+          strings.raw = raw
+          return strings
+        }
+
+        var StyledPagination = styled_components_browser_esm['default'].div(
+          Pagination_templateObject(),
+          Object(index_esm['compose'])(index_esm['layout'], index_esm['space'])
+        )
+        var PageItem = Object(styled_components_browser_esm['default'])(components_Button)(
+          Pagination_templateObject2(),
+          function (_ref) {
+            var theme = _ref.theme,
+              color = _ref.color
+            return 'color: ' + theme.colors[color]
+          },
+          function (_ref2) {
+            var theme = _ref2.theme,
+              color = _ref2.color
+            return 'background-color: ' + theme.colors[color]
+          },
+          function (_ref3) {
+            var theme = _ref3.theme,
+              color = _ref3.color,
+              active = _ref3.active
+            return !!active && '\n    color: #fff;\n    background-color: ' + theme.colors[color] + ';\n  '
+          }
+        )
+        var Pagination = Object(external_root_React_commonjs2_react_commonjs_react_amd_react_['memo'])(function (_ref4) {
+          var children = _ref4.children,
+            color = _ref4.color,
+            onChangePage = _ref4.onChangePage,
+            onNextPage = _ref4.onNextPage,
+            onPrevPage = _ref4.onPrevPage,
+            total = _ref4.total,
+            page = _ref4.page,
+            onLazyChangePage = _ref4.onLazyChangePage,
+            _ref4$lazyTimeout = _ref4.lazyTimeout,
+            lazyTimeout = _ref4$lazyTimeout === void 0 ? 300 : _ref4$lazyTimeout,
+            rest = Pagination_objectWithoutPropertiesLoose(_ref4, [
+              'children',
+              'color',
+              'onChangePage',
+              'onNextPage',
+              'onPrevPage',
+              'total',
+              'page',
+              'onLazyChangePage',
+              'lazyTimeout',
+            ])
+
+          var _useState = Object(external_root_React_commonjs2_react_commonjs_react_amd_react_['useState'])(),
+            lazyKey = _useState[0],
+            setLazyKey = _useState[1]
+
+          var getRange = function getRange(x) {
+            return (x % 5 ? Math.trunc(x / 5) + 1 : x / 5) * 5
+          }
+
+          var range = getRange(page)
+          var pageItems = [range - 4, range - 3, range - 2, range - 1, range].filter(function (item) {
+            return item <= total
+          })
+          Object(external_root_React_commonjs2_react_commonjs_react_amd_react_['useEffect'])(
+            function () {
+              if (!onLazyChangePage) return
+              window.clearTimeout(lazyKey)
+              setLazyKey(
+                setTimeout(function () {
+                  onLazyChangePage(page)
+                }, lazyTimeout)
+              )
+            },
+            [page]
+          )
+          return /*#__PURE__*/ external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(
+            StyledPagination,
+            rest,
+            /*#__PURE__*/ external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(PageItem, {
+              color: color,
+              m: 1,
+              children: '<',
+              onClick: function onClick() {
+                return onPrevPage()
+              },
+            }),
+            [].concat(pageItems).map(function (item) {
+              return /*#__PURE__*/ external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(PageItem, {
+                key: item,
+                color: color,
+                m: 1,
+                active: page === item,
+                children: item,
+                onClick: function onClick() {
+                  return onChangePage(item)
+                },
+              })
+            }),
+            /*#__PURE__*/ external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(PageItem, {
+              color: color,
+              m: 1,
+              children: '>',
+              onClick: function onClick() {
+                return onNextPage()
+              },
+            })
+          )
+        })
+        /* harmony default export */ var Pagination_Pagination = Pagination
+        // CONCATENATED MODULE: ./src/components/Pagination/index.js
+
+        /* harmony default export */ var components_Pagination = Pagination_Pagination
         // CONCATENATED MODULE: ./src/index.js
 
         /***/
