@@ -1,0 +1,232 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`when render Pagination 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin: 20px;
+}
+
+.c1 {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  font-family: inherit;
+  border-radius: 4px;
+  outline: none;
+  cursor: pointer;
+  padding: .5rem 1rem;
+  border-style: solid;
+  color: #000;
+  color: #fff;
+  background-color: #ef4d5a;
+  border-color: #ef4d5a;
+  font-size: 16px;
+  margin: 4px;
+  box-sizing: border-box;
+  position: relative;
+  border-radius: 32px;
+  min-width: 32px;
+  height: 32px;
+  padding: 0 0.3em;
+  background: none;
+  overflow: hidden;
+  color: #ef4d5a;
+}
+
+.c1:focus {
+  box-shadow: 0 0 8px #ef4d5a;
+}
+
+.c1:hover {
+  background-color: hsl(355.20000000000005,83.5%,74.4%);
+}
+
+.c1:active {
+  background-color: hsl(355.20000000000005,83.5%,49.6%);
+}
+
+.c1::before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #ef4d5a;
+  -webkit-transform: translateY(-100%);
+  -ms-transform: translateY(-100%);
+  transform: translateY(-100%);
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+}
+
+.c1:active {
+  background-color: transparent;
+}
+
+.c1:hover,
+.c1:active {
+  background-color: transparent;
+  color: #fff;
+}
+
+.c1:hover::before,
+.c1:active::before {
+  -webkit-transform: translateY(0);
+  -ms-transform: translateY(0);
+  transform: translateY(0);
+  z-index: -1;
+}
+
+.c2 {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  font-family: inherit;
+  border-radius: 4px;
+  outline: none;
+  cursor: pointer;
+  padding: .5rem 1rem;
+  border-style: solid;
+  color: #000;
+  color: #fff;
+  background-color: #ef4d5a;
+  border-color: #ef4d5a;
+  font-size: 16px;
+  margin: 4px;
+  box-sizing: border-box;
+  position: relative;
+  border-radius: 32px;
+  min-width: 32px;
+  height: 32px;
+  padding: 0 0.3em;
+  background: none;
+  overflow: hidden;
+  color: #ef4d5a;
+  color: #fff;
+  background-color: #ef4d5a;
+}
+
+.c2:focus {
+  box-shadow: 0 0 8px #ef4d5a;
+}
+
+.c2:hover {
+  background-color: hsl(355.20000000000005,83.5%,74.4%);
+}
+
+.c2:active {
+  background-color: hsl(355.20000000000005,83.5%,49.6%);
+}
+
+.c2::before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #ef4d5a;
+  -webkit-transform: translateY(-100%);
+  -ms-transform: translateY(-100%);
+  transform: translateY(-100%);
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+}
+
+.c2:active {
+  background-color: transparent;
+}
+
+.c2:hover,
+.c2:active {
+  background-color: transparent;
+  color: #fff;
+}
+
+.c2:hover::before,
+.c2:active::before {
+  -webkit-transform: translateY(0);
+  -ms-transform: translateY(0);
+  transform: translateY(0);
+  z-index: -1;
+}
+
+<div
+  className="c0"
+>
+  <button
+    className="sc-AxjAm c1"
+    color="primary"
+    onClick={[Function]}
+    size="medium"
+    type="button"
+  >
+    &lt;
+  </button>
+  <button
+    className="sc-AxjAm c2"
+    color="primary"
+    onClick={[Function]}
+    size="medium"
+    type="button"
+  >
+    11
+  </button>
+  <button
+    className="sc-AxjAm c1"
+    color="primary"
+    onClick={[Function]}
+    size="medium"
+    type="button"
+  >
+    12
+  </button>
+  <button
+    className="sc-AxjAm c1"
+    color="primary"
+    onClick={[Function]}
+    size="medium"
+    type="button"
+  >
+    13
+  </button>
+  <button
+    className="sc-AxjAm c1"
+    color="primary"
+    onClick={[Function]}
+    size="medium"
+    type="button"
+  >
+    14
+  </button>
+  <button
+    className="sc-AxjAm c1"
+    color="primary"
+    onClick={[Function]}
+    size="medium"
+    type="button"
+  >
+    15
+  </button>
+  <button
+    className="sc-AxjAm c1"
+    color="primary"
+    onClick={[Function]}
+    size="medium"
+    type="button"
+  >
+    &gt;
+  </button>
+</div>
+`;
