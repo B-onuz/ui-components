@@ -57,6 +57,14 @@ export const TableExample = () => {
           key: 'tarefas',
           sort: true,
           align: 'center',
+          cellComponent({ row, headers, value }) {
+            // exemplo de componente de celula personalizado
+            return (
+              <span style={{ color: 'red', textDecoration: 'underline' }}>
+                {value} - {row._id}
+              </span>
+            )
+          },
         },
         {
           title: 'Ações',

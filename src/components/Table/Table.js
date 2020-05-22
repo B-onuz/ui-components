@@ -144,7 +144,6 @@ const WrapperTable = styled.div`
 
 const Wrapper = styled.div`
   position: relative;
-  background: blue;
   border: 1px solid #efefef;
   display: flex;
   flex-direction: column;
@@ -200,11 +199,17 @@ const Table = ({ children, headers, pagination, onChangeOrder, data, loading, ..
             )}
             {(data || []).map((row, index) => (
               <TableRow key={index}>
-                {headers.map((header) => (
-                  <TableData align={header.align} key={`${header.key}-${index}`}>
-                    {getDataByKey({ key: header.key, item: row })}
-                  </TableData>
-                ))}
+                {headers.map((header) =>
+                  header.cellComponent ? (
+                    <TableData align={header.align} key={`${header.key}-${index}`}>
+                      <header.cellComponent row={row} header={header} value={getDataByKey({ key: header.key, item: row })} />
+                    </TableData>
+                  ) : (
+                    <TableData align={header.align} key={`${header.key}-${index}`}>
+                      {getDataByKey({ key: header.key, item: row })}
+                    </TableData>
+                  )
+                )}
               </TableRow>
             ))}
           </TableBody>
