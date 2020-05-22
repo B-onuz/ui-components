@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.5.0](https://github.com/B-onuz/ui-components/compare/v1.4.0...v1.5.0) (2020-05-22)
+
+### Features
+
+- **loading:** add loading state to Table and Button ([#6](https://github.com/B-onuz/ui-components/issues/6)) ([b6e146b](https://github.com/B-onuz/ui-components/commit/b6e146b819bafae87279b6ae61c4110243734d38))
+
 ## [1.4.0](https://github.com/B-onuz/ui-components/compare/v1.3.0...v1.4.0) (2020-05-20)
 
 ### Features
