@@ -91,7 +91,12 @@ exports[`when render Pagination 1`] = `
   -webkit-transform: translateY(0);
   -ms-transform: translateY(0);
   transform: translateY(0);
-  z-index: -1;
+  z-index: 1;
+}
+
+.c2 > span {
+  position: relative;
+  z-index: 2;
 }
 
 .c3 {
@@ -139,7 +144,12 @@ exports[`when render Pagination 1`] = `
   -webkit-transform: translateY(0);
   -ms-transform: translateY(0);
   transform: translateY(0);
-  z-index: -1;
+  z-index: 1;
+}
+
+.c3 > span {
+  position: relative;
+  z-index: 2;
 }
 
 <div
@@ -153,7 +163,9 @@ exports[`when render Pagination 1`] = `
     size="medium"
     type="button"
   >
-    &lt;
+    <span>
+      &lt;
+    </span>
   </button>
   <button
     className="c1 c3"
@@ -163,7 +175,9 @@ exports[`when render Pagination 1`] = `
     size="medium"
     type="button"
   >
-    11
+    <span>
+      11
+    </span>
   </button>
   <button
     className="c1 c2"
@@ -173,7 +187,9 @@ exports[`when render Pagination 1`] = `
     size="medium"
     type="button"
   >
-    12
+    <span>
+      12
+    </span>
   </button>
   <button
     className="c1 c2"
@@ -183,7 +199,9 @@ exports[`when render Pagination 1`] = `
     size="medium"
     type="button"
   >
-    13
+    <span>
+      13
+    </span>
   </button>
   <button
     className="c1 c2"
@@ -193,7 +211,9 @@ exports[`when render Pagination 1`] = `
     size="medium"
     type="button"
   >
-    14
+    <span>
+      14
+    </span>
   </button>
   <button
     className="c1 c2"
@@ -203,7 +223,9 @@ exports[`when render Pagination 1`] = `
     size="medium"
     type="button"
   >
-    15
+    <span>
+      15
+    </span>
   </button>
   <button
     className="c1 c2"
@@ -213,7 +235,9 @@ exports[`when render Pagination 1`] = `
     size="medium"
     type="button"
   >
-    &gt;
+    <span>
+      &gt;
+    </span>
   </button>
 </div>
 `;

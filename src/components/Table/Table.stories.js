@@ -303,6 +303,84 @@ export const TableLoadingDynamicWithData = () => {
   )
 }
 
+export const TableWithCellComponent = () => {
+  const [sort, setSort] = useState('nome')
+  const [order, setOrder] = useState('asc')
+
+  const handleChangeOrder = (item) => {
+    if (item.key === sort) {
+      setOrder(order === 'asc' ? 'desc' : 'asc')
+    } else {
+      setSort(item.key)
+      setOrder('asc')
+    }
+  }
+
+  return (
+    <>
+      <Table
+        width={[2 / 3]}
+        onChangeOrder={handleChangeOrder}
+        maxHeight={200}
+        pagination={{
+          sort,
+          order,
+        }}
+        headers={[
+          {
+            title: 'Advogados',
+            key: 'nome',
+            sort: true,
+            align: 'left',
+          },
+          {
+            title: 'Especialidades',
+            key: 'especialidades',
+            sort: true,
+            align: 'left',
+          },
+          {
+            title: 'Tarefas',
+            key: 'tarefas',
+            sort: true,
+            cellComponent({ row, headers, value }) {
+              return (
+                <span style={{ color: 'red', textDecoration: 'underline' }}>
+                  {value} - {row._id}
+                </span>
+              )
+            },
+            align: 'center',
+          },
+          {
+            title: 'Ações',
+            key: 'actions',
+            align: 'center',
+          },
+        ]}
+        data={[
+          { _id: '1', nome: 'Nome do advogado', especialidades: 'Comercial, Contratos', tarefas: 10 },
+          { _id: '2', nome: 'Nome do advogado', especialidades: 'Comercial, Contratos', tarefas: 10 },
+          { _id: '3', nome: 'Nome do advogado', especialidades: 'Comercial, Contratos', tarefas: 10 },
+          { _id: '4', nome: 'Nome do advogado', especialidades: 'Comercial, Contratos', tarefas: 10 },
+          { _id: '5', nome: 'Nome do advogado', especialidades: 'Comercial, Contratos', tarefas: 10 },
+          { _id: '6', nome: 'Nome do advogado', especialidades: 'Comercial, Contratos', tarefas: 10 },
+          { _id: '7', nome: 'Nome do advogado', especialidades: 'Comercial, Contratos', tarefas: 10 },
+          { _id: '8', nome: 'Nome do advogado', especialidades: 'Comercial, Contratos', tarefas: 10 },
+          { _id: '9', nome: 'Nome do advogado', especialidades: 'Comercial, Contratos', tarefas: 10 },
+          { _id: '10', nome: 'Nome do advogado', especialidades: 'Comercial, Contratos', tarefas: 10 },
+          { _id: '11', nome: 'Nome do advogado', especialidades: 'Comercial, Contratos', tarefas: 10 },
+          { _id: '12', nome: 'Nome do advogado', especialidades: 'Comercial, Contratos', tarefas: 10 },
+          { _id: '13', nome: 'Nome do advogado', especialidades: 'Comercial, Contratos', tarefas: 10 },
+          { _id: '14', nome: 'Nome do advogado', especialidades: 'Comercial, Contratos', tarefas: 10 },
+          { _id: '15', nome: 'Nome do advogado', especialidades: 'Comercial, Contratos', tarefas: 10 },
+          { _id: '16', nome: 'Last Nome do advogado', especialidades: 'Comercial, Contratos', tarefas: 10 },
+        ]}
+      />
+    </>
+  )
+}
+
 export const TableEmpty = () => {
   const [sort, setSort] = useState('nome')
   const [order, setOrder] = useState('asc')
