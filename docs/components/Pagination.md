@@ -44,7 +44,7 @@ export const PaginationExample = () => {
       onNextPage={(item) => handleChangeNext()}
       total={total}
       page={currentPage}
-      onLazyChangePage={(page) => alert(page)}
+      onLazyChangePage={(page) => console.log(page)}
     />
   )
 }

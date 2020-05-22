@@ -39,7 +39,7 @@ const PageItem = styled(Button)`
     background-color: transparent;
     &::before {
       transform: translateY(0);
-      z-index: -1;
+      z-index: 1;
     }
     color: #fff;
   }
@@ -49,6 +49,10 @@ const PageItem = styled(Button)`
     color: #fff;
     background-color: ${theme.colors[color]};
   `};
+  & > span {
+    position: relative;
+    z-index: 2;
+  }
 `
 
 const Pagination = memo(({ children, color, onChangePage, onNextPage, onPrevPage, total, page, onLazyChangePage, lazyTimeout = 300, ...rest }) => {
@@ -71,11 +75,19 @@ const Pagination = memo(({ children, color, onChangePage, onNextPage, onPrevPage
 
   return (
     <StyledPagination {...rest}>
-      <PageItem color={color} m={1} children={'<'} onClick={() => onPrevPage()} />
+      <PageItem color={color} m={1} onClick={() => onPrevPage()}>
+        <span>{'<'}</span>
+      </PageItem>
       {[...pageItems].map((item) => {
-        return <PageItem key={item} color={color} m={1} active={page === item} children={item} onClick={() => onChangePage(item)} />
+        return (
+          <PageItem key={item} color={color} m={1} active={page === item} onClick={() => onChangePage(item)}>
+            <span>{item}</span>
+          </PageItem>
+        )
       })}
-      <PageItem color={color} m={1} children={'>'} onClick={() => onNextPage()} />
+      <PageItem color={color} m={1} onClick={() => onNextPage()}>
+        <span>{'>'}</span>
+      </PageItem>
     </StyledPagination>
   )
 })
