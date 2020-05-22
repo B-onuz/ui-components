@@ -29,3 +29,11 @@ export const TextFieldExample = () => (
     </Box>
   </Flex>
 )
+
+export const TextFieldMultiline = () => (
+  <Flex flexWrap={'wrap'}>
+    <Box width={[1, 1 / 2, 1 / 3]}>
+      <TextField id="comment" name={'comment'} multiline required label={'Comentário'} m={2} placeholder={'Comentário'} />
+    </Box>
+  </Flex>
+)
