@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Button from './Button'
 import { Flex, Box } from 'reflexbox'
 
@@ -69,6 +69,23 @@ export const Colors = () => (
     </Button>
   </div>
 )
+
+export const Loading = () => {
+  const [loading, setLoading] = useState(false)
+  const send = () => {
+    setLoading(true)
+    setTimeout(() => {
+      setLoading(false)
+    }, 1000)
+  }
+  return (
+    <div>
+      <Button m={2} loading={loading} color={'primary'} onClick={() => send()}>
+        Enviar
+      </Button>
+    </div>
+  )
+}
 
 export const Sizes = () => (
   <div>

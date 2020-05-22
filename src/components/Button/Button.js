@@ -1,9 +1,11 @@
+import React from 'react'
 import styled from 'styled-components'
 import Color from 'color'
 import { space } from 'styled-system'
 import { color, size } from './variants'
 import PropTypes from 'prop-types'
 import propTypes from '@styled-system/prop-types'
+import Spinner from '../Spinner'
 
 const Button = styled.button`
   appearance: none;
@@ -22,12 +24,22 @@ const Button = styled.button`
   &:focus {
     box-shadow: 0 0 8px ${({ theme, color }) => theme.colors[color]};
   }
+  
+  &:active:not(:disabled) {
+    box-shadow: inset 0px 0px 5px #c1c1c1;
+  }
+  &:active,
   &:hover {
-    background-color: ${({ theme, color }) => new Color(theme.colors[color]).lighten(0.2).string()};
+    background-color: ${({ theme, color }) => new Color(theme.colors[color]).saturate(0.1).darken(0.2).string()};
   }
-  &:active {
-    background-color: ${({ theme, color }) => new Color(theme.colors[color]).darken(0.2).string()};
+  &:disabled {
+    background-color: ${({ theme, color }) => new Color(theme.colors[color]).desaturate(0.4).lighten(0.1).opaquer(0.7).string()};
   }
+  ${({ loading }) =>
+    !!loading &&
+    `
+    cursor: progress;
+  `}
 `
 
 Button.displayName = 'Button'
@@ -44,4 +56,8 @@ Button.defaultProps = {
   type: 'button',
 }
 
-export default Button
+export default ({ children, loading, disabled, ...rest }) => (
+  <Button {...rest} disabled={!!disabled || !!loading} loading={loading}>
+    {!!loading ? 'carregando...' : children}
+  </Button>
+)
