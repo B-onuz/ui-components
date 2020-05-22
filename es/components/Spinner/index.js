@@ -1,15 +1,13 @@
-'use strict'
+"use strict";
 
-Object.defineProperty(exports, '__esModule', {
-  value: true,
-})
-exports['default'] = void 0
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports["default"] = void 0;
 
-var _Spinner = _interopRequireDefault(require('./Spinner'))
+var _Spinner = _interopRequireDefault(require("./Spinner"));
 
-function _interopRequireDefault(obj) {
-  return obj && obj.__esModule ? obj : { default: obj }
-}
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
-var _default = _Spinner['default']
-exports['default'] = _default
+var _default = _Spinner["default"];
+exports["default"] = _default;

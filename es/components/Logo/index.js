@@ -1,15 +1,13 @@
-'use strict'
+"use strict";
 
-Object.defineProperty(exports, '__esModule', {
-  value: true,
-})
-exports['default'] = void 0
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports["default"] = void 0;
 
-var _Logo = _interopRequireDefault(require('./Logo'))
+var _Logo = _interopRequireDefault(require("./Logo"));
 
-function _interopRequireDefault(obj) {
-  return obj && obj.__esModule ? obj : { default: obj }
-}
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
-var _default = _Logo['default']
-exports['default'] = _default
+var _default = _Logo["default"];
+exports["default"] = _default;
