@@ -36,7 +36,7 @@ module.exports = function (plop) {
       },
       {
         type: 'add',
-        path: 'docs/components/{{pascalCase name}}/{{pascalCase name}}.md',
+        path: 'docs/components/{{pascalCase name}}.md',
         templateFile: 'plop-templates/component.doc.md.hbs',
       },
       {

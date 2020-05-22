@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import PropTypes from 'prop-types'
 import { space, layout, compose } from 'styled-system'
+import PaceLoading from './PaceLoading'
 
 const StyledTable = styled.table`
   border-spacing: 0;
@@ -135,10 +136,23 @@ const TableData = styled.td`
 
 const WrapperTable = styled.div`
   overflow-x: auto;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  flex: 1;
+`
+
+const Wrapper = styled.div`
+  position: relative;
+  background: blue;
+  border: 1px solid #efefef;
+  display: flex;
+  flex-direction: column;
   ${compose(space, layout)}
 `
 
 const TableBody = styled.tbody`
+  position: relative;
   display: table-row-group;
   & > ${TableRow} {
     background-color: #f8fafc;
@@ -148,7 +162,7 @@ const TableBody = styled.tbody`
   }
 `
 
-const Table = ({ children, headers, pagination, onChangeOrder, data, ...rest }) => {
+const Table = ({ children, headers, pagination, onChangeOrder, data, loading, ...rest }) => {
   const handleChangeOrder = (item) => {
     if (onChangeOrder) {
       onChangeOrder(item)
@@ -157,36 +171,46 @@ const Table = ({ children, headers, pagination, onChangeOrder, data, ...rest }) 
   const getDataByKey = ({ item, key }) => {
     const keys = key.split('.')
     return keys.reduce((acc, item) => {
-      return acc[item]
+      return acc[item] || ''
     }, item)
   }
   return (
-    <WrapperTable {...rest}>
-      <StyledTable>
-        <TableHead>
-          <TableRow>
-            {(headers || []).map((item, index) => (
-              <TableHeader key={index} order={item.sort} align={item.align} onClick={() => handleChangeOrder(item)}>
-                <TableHeaderSpan>
-                  {item.title} {item.sort && <OrderArrow isCurrent={!!(pagination.sort === item.key)} order={pagination.order} />}
-                </TableHeaderSpan>
-              </TableHeader>
-            ))}
-          </TableRow>
-        </TableHead>
-        <TableBody>
-          {(data || []).map((row, index) => (
-            <TableRow key={index}>
-              {headers.map((header) => (
-                <TableData align={header.align} key={`${header.key}-${index}`}>
-                  {getDataByKey({ key: header.key, item: row })}
-                </TableData>
+    <Wrapper {...rest}>
+      {!!loading && <PaceLoading />}
+      <WrapperTable loading={loading}>
+        <StyledTable>
+          <TableHead>
+            <TableRow>
+              {(headers || []).map((item, index) => (
+                <TableHeader key={index} order={item.sort} align={item.align} onClick={() => handleChangeOrder(item)}>
+                  <TableHeaderSpan>
+                    {item.title} {item.sort && <OrderArrow isCurrent={!!(pagination.sort === item.key)} order={pagination.order} />}
+                  </TableHeaderSpan>
+                </TableHeader>
               ))}
             </TableRow>
-          ))}
-        </TableBody>
-      </StyledTable>
-    </WrapperTable>
+          </TableHead>
+          <TableBody>
+            {!(data || []).length && (
+              <TableRow>
+                <TableData style={{ textAlign: 'center' }} colSpan={(headers || []).length}>
+                  {!!loading ? 'Carregando...' : 'Nenhum registro encontrado'}
+                </TableData>
+              </TableRow>
+            )}
+            {(data || []).map((row, index) => (
+              <TableRow key={index}>
+                {headers.map((header) => (
+                  <TableData align={header.align} key={`${header.key}-${index}`}>
+                    {getDataByKey({ key: header.key, item: row })}
+                  </TableData>
+                ))}
+              </TableRow>
+            ))}
+          </TableBody>
+        </StyledTable>
+      </WrapperTable>
+    </Wrapper>
   )
 }
 

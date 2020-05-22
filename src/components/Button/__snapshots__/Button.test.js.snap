@@ -23,17 +23,23 @@ exports[`Should render button 1`] = `
   box-shadow: 0 0 8px #e0e1e2;
 }
 
-.c0:hover {
-  background-color: hsl(210,3.3%,100%);
+.c0:active:not(:disabled) {
+  box-shadow: inset 0px 0px 5px #c1c1c1;
 }
 
-.c0:active {
-  background-color: hsl(210,3.3%,70.6%);
+.c0:active,
+.c0:hover {
+  background-color: hsl(210,3.7%,70.6%);
+}
+
+.c0:disabled {
+  background-color: hsl(210,2%,97.1%);
 }
 
 <button
   className="c0"
   color="default"
+  disabled={false}
   size="medium"
   type="button"
 >
@@ -66,17 +72,23 @@ Array [
   box-shadow: 0 0 8px #e0e1e2;
 }
 
-.c0:hover {
-  background-color: hsl(210,3.3%,100%);
+.c0:active:not(:disabled) {
+  box-shadow: inset 0px 0px 5px #c1c1c1;
 }
 
-.c0:active {
-  background-color: hsl(210,3.3%,70.6%);
+.c0:active,
+.c0:hover {
+  background-color: hsl(210,3.7%,70.6%);
+}
+
+.c0:disabled {
+  background-color: hsl(210,2%,97.1%);
 }
 
 <button
     className="c0"
     color="default"
+    disabled={false}
     size="medium"
     type="button"
   >
@@ -105,17 +117,23 @@ Array [
   box-shadow: 0 0 8px #e0e1e2;
 }
 
-.c0:hover {
-  background-color: hsl(210,3.3%,100%);
+.c0:active:not(:disabled) {
+  box-shadow: inset 0px 0px 5px #c1c1c1;
 }
 
-.c0:active {
-  background-color: hsl(210,3.3%,70.6%);
+.c0:active,
+.c0:hover {
+  background-color: hsl(210,3.7%,70.6%);
+}
+
+.c0:disabled {
+  background-color: hsl(210,2%,97.1%);
 }
 
 <button
     className="c0"
     color="default"
+    disabled={false}
     size="medium"
     type="button"
   >
@@ -144,17 +162,23 @@ Array [
   box-shadow: 0 0 8px #ef4d5a;
 }
 
-.c0:hover {
-  background-color: hsl(355.20000000000005,83.5%,74.4%);
+.c0:active:not(:disabled) {
+  box-shadow: inset 0px 0px 5px #c1c1c1;
 }
 
-.c0:active {
-  background-color: hsl(355.20000000000005,83.5%,49.6%);
+.c0:active,
+.c0:hover {
+  background-color: hsl(355.20000000000005,91.9%,49.6%);
+}
+
+.c0:disabled {
+  background-color: hsl(355.20000000000005,50.1%,68.2%);
 }
 
 <button
     className="c0"
     color="primary"
+    disabled={false}
     size="medium"
     type="button"
   >
@@ -183,17 +207,23 @@ Array [
   box-shadow: 0 0 8px #550e33;
 }
 
-.c0:hover {
-  background-color: hsl(328.70000000000005,71.7%,23.3%);
+.c0:active:not(:disabled) {
+  box-shadow: inset 0px 0px 5px #c1c1c1;
 }
 
-.c0:active {
-  background-color: hsl(328.70000000000005,71.7%,15.5%);
+.c0:active,
+.c0:hover {
+  background-color: hsl(328.70000000000005,78.9%,15.5%);
+}
+
+.c0:disabled {
+  background-color: hsl(328.70000000000005,43%,21.4%);
 }
 
 <button
     className="c0"
     color="secondary"
+    disabled={false}
     size="medium"
     type="button"
   >
@@ -222,17 +252,23 @@ Array [
   box-shadow: 0 0 8px #550e33;
 }
 
-.c0:hover {
-  background-color: hsl(328.70000000000005,71.7%,23.3%);
+.c0:active:not(:disabled) {
+  box-shadow: inset 0px 0px 5px #c1c1c1;
 }
 
-.c0:active {
-  background-color: hsl(328.70000000000005,71.7%,15.5%);
+.c0:active,
+.c0:hover {
+  background-color: hsl(328.70000000000005,78.9%,15.5%);
+}
+
+.c0:disabled {
+  background-color: hsl(328.70000000000005,43%,21.4%);
 }
 
 <button
     className="c0"
     color="fullDarkRed"
+    disabled={false}
     size="medium"
     type="button"
   >
@@ -261,17 +297,23 @@ Array [
   box-shadow: 0 0 8px #9c2543;
 }
 
-.c0:hover {
-  background-color: hsl(344.9,61.7%,45.4%);
+.c0:active:not(:disabled) {
+  box-shadow: inset 0px 0px 5px #c1c1c1;
 }
 
-.c0:active {
-  background-color: hsl(344.9,61.7%,30.3%);
+.c0:active,
+.c0:hover {
+  background-color: hsl(344.9,67.8%,30.3%);
+}
+
+.c0:disabled {
+  background-color: hsl(344.9,37%,41.6%);
 }
 
 <button
     className="c0"
     color="darkRed"
+    disabled={false}
     size="medium"
     type="button"
   >
@@ -300,17 +342,23 @@ Array [
   box-shadow: 0 0 8px #ef4d5a;
 }
 
-.c0:hover {
-  background-color: hsl(355.20000000000005,83.5%,74.4%);
+.c0:active:not(:disabled) {
+  box-shadow: inset 0px 0px 5px #c1c1c1;
 }
 
-.c0:active {
-  background-color: hsl(355.20000000000005,83.5%,49.6%);
+.c0:active,
+.c0:hover {
+  background-color: hsl(355.20000000000005,91.9%,49.6%);
+}
+
+.c0:disabled {
+  background-color: hsl(355.20000000000005,50.1%,68.2%);
 }
 
 <button
     className="c0"
     color="lightRed"
+    disabled={false}
     size="medium"
     type="button"
   >
@@ -339,17 +387,23 @@ Array [
   box-shadow: 0 0 8px #db2828;
 }
 
-.c0:hover {
-  background-color: hsl(0,71.3%,60.9%);
+.c0:active:not(:disabled) {
+  box-shadow: inset 0px 0px 5px #c1c1c1;
 }
 
-.c0:active {
-  background-color: hsl(0,71.3%,40.6%);
+.c0:active,
+.c0:hover {
+  background-color: hsl(0,78.4%,40.6%);
+}
+
+.c0:disabled {
+  background-color: hsl(0,42.8%,55.9%);
 }
 
 <button
     className="c0"
     color="red"
+    disabled={false}
     size="medium"
     type="button"
   >
@@ -378,17 +432,23 @@ Array [
   box-shadow: 0 0 8px #f2711c;
 }
 
-.c0:hover {
-  background-color: hsl(23.80000000000001,89.2%,63.5%);
+.c0:active:not(:disabled) {
+  box-shadow: inset 0px 0px 5px #c1c1c1;
 }
 
-.c0:active {
-  background-color: hsl(23.80000000000001,89.2%,42.4%);
+.c0:active,
+.c0:hover {
+  background-color: hsl(23.80000000000001,98.1%,42.4%);
+}
+
+.c0:disabled {
+  background-color: hsl(23.80000000000001,53.5%,58.2%);
 }
 
 <button
     className="c0"
     color="orange"
+    disabled={false}
     size="medium"
     type="button"
   >
@@ -417,17 +477,23 @@ Array [
   box-shadow: 0 0 8px #fbbd08;
 }
 
-.c0:hover {
-  background-color: hsl(44.69999999999999,96.8%,60.9%);
+.c0:active:not(:disabled) {
+  box-shadow: inset 0px 0px 5px #c1c1c1;
 }
 
-.c0:active {
-  background-color: hsl(44.69999999999999,96.8%,40.6%);
+.c0:active,
+.c0:hover {
+  background-color: hsl(44.69999999999999,100%,40.6%);
+}
+
+.c0:disabled {
+  background-color: hsl(44.69999999999999,58.1%,55.9%);
 }
 
 <button
     className="c0"
     color="yellow"
+    disabled={false}
     size="medium"
     type="button"
   >
@@ -456,17 +522,23 @@ Array [
   box-shadow: 0 0 8px #b5cc18;
 }
 
-.c0:hover {
-  background-color: hsl(67.69999999999999,78.9%,53.6%);
+.c0:active:not(:disabled) {
+  box-shadow: inset 0px 0px 5px #c1c1c1;
 }
 
-.c0:active {
-  background-color: hsl(67.69999999999999,78.9%,35.8%);
+.c0:active,
+.c0:hover {
+  background-color: hsl(67.69999999999999,86.8%,35.8%);
+}
+
+.c0:disabled {
+  background-color: hsl(67.69999999999999,47.4%,49.2%);
 }
 
 <button
     className="c0"
     color="olive"
+    disabled={false}
     size="medium"
     type="button"
   >
@@ -495,17 +567,23 @@ Array [
   box-shadow: 0 0 8px #21BA45;
 }
 
-.c0:hover {
-  background-color: hsl(134.10000000000002,69.9%,51.5%);
+.c0:active:not(:disabled) {
+  box-shadow: inset 0px 0px 5px #c1c1c1;
 }
 
-.c0:active {
-  background-color: hsl(134.10000000000002,69.9%,34.4%);
+.c0:active,
+.c0:hover {
+  background-color: hsl(134.10000000000002,76.8%,34.4%);
+}
+
+.c0:disabled {
+  background-color: hsl(134.10000000000002,41.9%,47.2%);
 }
 
 <button
     className="c0"
     color="green"
+    disabled={false}
     size="medium"
     type="button"
   >
@@ -534,17 +612,23 @@ Array [
   box-shadow: 0 0 8px #00b5ad;
 }
 
-.c0:hover {
-  background-color: hsl(177.29999999999995,100%,42.6%);
+.c0:active:not(:disabled) {
+  box-shadow: inset 0px 0px 5px #c1c1c1;
 }
 
-.c0:active {
+.c0:active,
+.c0:hover {
   background-color: hsl(177.29999999999995,100%,28.4%);
+}
+
+.c0:disabled {
+  background-color: hsl(177.29999999999995,60%,39%);
 }
 
 <button
     className="c0"
     color="teal"
+    disabled={false}
     size="medium"
     type="button"
   >
@@ -573,17 +657,23 @@ Array [
   box-shadow: 0 0 8px #2185d0;
 }
 
-.c0:hover {
-  background-color: hsl(205.70000000000005,72.6%,56.7%);
+.c0:active:not(:disabled) {
+  box-shadow: inset 0px 0px 5px #c1c1c1;
 }
 
-.c0:active {
-  background-color: hsl(205.70000000000005,72.6%,37.8%);
+.c0:active,
+.c0:hover {
+  background-color: hsl(205.70000000000005,79.9%,37.8%);
+}
+
+.c0:disabled {
+  background-color: hsl(205.70000000000005,43.6%,52%);
 }
 
 <button
     className="c0"
     color="blue"
+    disabled={false}
     size="medium"
     type="button"
   >
@@ -612,17 +702,23 @@ Array [
   box-shadow: 0 0 8px #6435c9;
 }
 
-.c0:hover {
-  background-color: hsl(259.1,58.3%,59.8%);
+.c0:active:not(:disabled) {
+  box-shadow: inset 0px 0px 5px #c1c1c1;
 }
 
-.c0:active {
-  background-color: hsl(259.1,58.3%,39.8%);
+.c0:active,
+.c0:hover {
+  background-color: hsl(259.1,64.1%,39.8%);
+}
+
+.c0:disabled {
+  background-color: hsl(259.1,35%,54.8%);
 }
 
 <button
     className="c0"
     color="violet"
+    disabled={false}
     size="medium"
     type="button"
   >
@@ -651,17 +747,23 @@ Array [
   box-shadow: 0 0 8px #a333c8;
 }
 
-.c0:hover {
-  background-color: hsl(285.1,59.4%,59.1%);
+.c0:active:not(:disabled) {
+  box-shadow: inset 0px 0px 5px #c1c1c1;
 }
 
-.c0:active {
-  background-color: hsl(285.1,59.4%,39.4%);
+.c0:active,
+.c0:hover {
+  background-color: hsl(285.1,65.3%,39.4%);
+}
+
+.c0:disabled {
+  background-color: hsl(285.1,35.6%,54.1%);
 }
 
 <button
     className="c0"
     color="purple"
+    disabled={false}
     size="medium"
     type="button"
   >
@@ -690,17 +792,23 @@ Array [
   box-shadow: 0 0 8px #e03997;
 }
 
-.c0:hover {
-  background-color: hsl(326.20000000000005,72.9%,66.1%);
+.c0:active:not(:disabled) {
+  box-shadow: inset 0px 0px 5px #c1c1c1;
 }
 
-.c0:active {
-  background-color: hsl(326.20000000000005,72.9%,44.1%);
+.c0:active,
+.c0:hover {
+  background-color: hsl(326.20000000000005,80.2%,44.1%);
+}
+
+.c0:disabled {
+  background-color: hsl(326.20000000000005,43.8%,60.6%);
 }
 
 <button
     className="c0"
     color="pink"
+    disabled={false}
     size="medium"
     type="button"
   >
@@ -729,17 +837,23 @@ Array [
   box-shadow: 0 0 8px #a5673f;
 }
 
-.c0:hover {
-  background-color: hsl(23.5,44.7%,53.6%);
+.c0:active:not(:disabled) {
+  box-shadow: inset 0px 0px 5px #c1c1c1;
 }
 
-.c0:active {
-  background-color: hsl(23.5,44.7%,35.8%);
+.c0:active,
+.c0:hover {
+  background-color: hsl(23.5,49.2%,35.8%);
+}
+
+.c0:disabled {
+  background-color: hsl(23.5,26.8%,49.2%);
 }
 
 <button
     className="c0"
     color="brown"
+    disabled={false}
     size="medium"
     type="button"
   >
@@ -768,17 +882,23 @@ Array [
   box-shadow: 0 0 8px #767676;
 }
 
-.c0:hover {
-  background-color: hsl(0,0%,55.5%);
+.c0:active:not(:disabled) {
+  box-shadow: inset 0px 0px 5px #c1c1c1;
 }
 
-.c0:active {
+.c0:active,
+.c0:hover {
   background-color: hsl(0,0%,37%);
+}
+
+.c0:disabled {
+  background-color: hsl(0,0%,50.9%);
 }
 
 <button
     className="c0"
     color="grey"
+    disabled={false}
     size="medium"
     type="button"
   >
@@ -807,17 +927,23 @@ Array [
   box-shadow: 0 0 8px #1b1c1d;
 }
 
-.c0:hover {
-  background-color: hsl(210,3.6%,13.2%);
+.c0:active:not(:disabled) {
+  box-shadow: inset 0px 0px 5px #c1c1c1;
 }
 
-.c0:active {
-  background-color: hsl(210,3.6%,8.8%);
+.c0:active,
+.c0:hover {
+  background-color: hsl(210,3.9%,8.8%);
+}
+
+.c0:disabled {
+  background-color: hsl(210,2.1%,12.1%);
 }
 
 <button
     className="c0"
     color="black"
+    disabled={false}
     size="medium"
     type="button"
   >
@@ -851,17 +977,23 @@ Array [
   box-shadow: 0 0 8px #e0e1e2;
 }
 
-.c0:hover {
-  background-color: hsl(210,3.3%,100%);
+.c0:active:not(:disabled) {
+  box-shadow: inset 0px 0px 5px #c1c1c1;
 }
 
-.c0:active {
-  background-color: hsl(210,3.3%,70.6%);
+.c0:active,
+.c0:hover {
+  background-color: hsl(210,3.7%,70.6%);
+}
+
+.c0:disabled {
+  background-color: hsl(210,2%,97.1%);
 }
 
 <button
     className="c0"
     color="default"
+    disabled={false}
     size="small"
     type="button"
   >
@@ -890,17 +1022,23 @@ Array [
   box-shadow: 0 0 8px #e0e1e2;
 }
 
-.c0:hover {
-  background-color: hsl(210,3.3%,100%);
+.c0:active:not(:disabled) {
+  box-shadow: inset 0px 0px 5px #c1c1c1;
 }
 
-.c0:active {
-  background-color: hsl(210,3.3%,70.6%);
+.c0:active,
+.c0:hover {
+  background-color: hsl(210,3.7%,70.6%);
+}
+
+.c0:disabled {
+  background-color: hsl(210,2%,97.1%);
 }
 
 <button
     className="c0"
     color="default"
+    disabled={false}
     size="medium"
     type="button"
   >
@@ -929,17 +1067,23 @@ Array [
   box-shadow: 0 0 8px #e0e1e2;
 }
 
-.c0:hover {
-  background-color: hsl(210,3.3%,100%);
+.c0:active:not(:disabled) {
+  box-shadow: inset 0px 0px 5px #c1c1c1;
 }
 
-.c0:active {
-  background-color: hsl(210,3.3%,70.6%);
+.c0:active,
+.c0:hover {
+  background-color: hsl(210,3.7%,70.6%);
+}
+
+.c0:disabled {
+  background-color: hsl(210,2%,97.1%);
 }
 
 <button
     className="c0"
     color="default"
+    disabled={false}
     size="big"
     type="button"
   >
@@ -968,17 +1112,23 @@ Array [
   box-shadow: 0 0 8px #e0e1e2;
 }
 
-.c0:hover {
-  background-color: hsl(210,3.3%,100%);
+.c0:active:not(:disabled) {
+  box-shadow: inset 0px 0px 5px #c1c1c1;
 }
 
-.c0:active {
-  background-color: hsl(210,3.3%,70.6%);
+.c0:active,
+.c0:hover {
+  background-color: hsl(210,3.7%,70.6%);
+}
+
+.c0:disabled {
+  background-color: hsl(210,2%,97.1%);
 }
 
 <button
     className="c0"
     color="default"
+    disabled={false}
     size="huge"
     type="button"
   >
