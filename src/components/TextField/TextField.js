@@ -2,8 +2,10 @@ import React from 'react'
 import styled from 'styled-components'
 import Label from '../Label'
 import Input from '../Input'
+import PropTypes from 'prop-types'
 import { space, layout, compose, flexbox } from 'styled-system'
 import propTypes from '@styled-system/prop-types'
+import Textarea from '../Textarea'
 
 const StyledTextField = styled.div`
   display: block;
@@ -15,13 +17,14 @@ const StyledTextField = styled.div`
   }
 `
 
-const TextField = ({ children, label, placeholder, name, id, value, onChange, required, error, inputProps = {}, ...rest }) => {
+const TextField = ({ children, label, placeholder, name, id, value, onChange, required, error, inputProps = {}, multiline, ...rest }) => {
+  const InputComponent = multiline ? Textarea : Input
   return (
     <StyledTextField {...rest}>
       <Label htmlFor={id} required={!!required}>
         {label}
       </Label>
-      <Input
+      <InputComponent
         id={id}
         name={name}
         placeholder={placeholder}
@@ -41,11 +44,13 @@ const TextField = ({ children, label, placeholder, name, id, value, onChange, re
 TextField.propTypes = {
   ...propTypes.space,
   ...propTypes.layout,
+  multiline: PropTypes.bool,
 }
 
 TextField.defaultProps = {
   required: false,
   error: false,
+  multiline: false,
 }
 
 export default TextField
