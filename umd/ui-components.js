@@ -1,4 +1,4 @@
-/*! ui-components v1.3.0 */
+/*! ui-components v1.4.0 */
 ;(function webpackUniversalModuleDefinition(root, factory) {
   if (typeof exports === 'object' && typeof module === 'object') module.exports = factory(require('react'))
   else if (typeof define === 'function' && define.amd) define(['react'], factory)
@@ -7606,6 +7606,9 @@ object-assign
         __webpack_require__.d(__webpack_exports__, 'Pagination', function () {
           return /* reexport */ components_Pagination
         })
+        __webpack_require__.d(__webpack_exports__, 'Spinner', function () {
+          return /* reexport */ components_Spinner
+        })
 
         // CONCATENATED MODULE: ./src/theme/index.js
         var colors = {
@@ -7641,6 +7644,12 @@ object-assign
           fontSizes: fontSizes,
           breakpoints: breakpoints,
         }
+        // EXTERNAL MODULE: external {"root":"React","commonjs2":"react","commonjs":"react","amd":"react"}
+        var external_root_React_commonjs2_react_commonjs_react_amd_react_ = __webpack_require__(0)
+        var external_root_React_commonjs2_react_commonjs_react_amd_react_default = /*#__PURE__*/ __webpack_require__.n(
+          external_root_React_commonjs2_react_commonjs_react_amd_react_
+        )
+
         // EXTERNAL MODULE: ./node_modules/styled-components/dist/styled-components.browser.esm.js
         var styled_components_browser_esm = __webpack_require__(2)
 
@@ -7766,34 +7775,27 @@ object-assign
           colorStyle: createPropTypes(index_esm['colorStyle'].propNames),
         }
 
-        // CONCATENATED MODULE: ./src/components/Button/Button.js
-        function Button_extends() {
-          Button_extends =
-            Object.assign ||
-            function (target) {
-              for (var i = 1; i < arguments.length; i++) {
-                var source = arguments[i]
-                for (var key in source) {
-                  if (Object.prototype.hasOwnProperty.call(source, key)) {
-                    target[key] = source[key]
-                  }
-                }
-              }
-              return target
-            }
-          return Button_extends.apply(this, arguments)
+        // CONCATENATED MODULE: ./src/components/Spinner/Spinner.js
+        function _objectWithoutPropertiesLoose(source, excluded) {
+          if (source == null) return {}
+          var target = {}
+          var sourceKeys = Object.keys(source)
+          var key, i
+          for (i = 0; i < sourceKeys.length; i++) {
+            key = sourceKeys[i]
+            if (excluded.indexOf(key) >= 0) continue
+            target[key] = source[key]
+          }
+          return target
         }
 
         function _templateObject() {
           var data = _taggedTemplateLiteralLoose([
-            '\n  appearance: none;\n  font-family: inherit;\n  border-radius: 4px;\n  outline: none;\n  cursor: pointer;\n  padding: .5rem 1rem;\n  border-style: solid;\n  color: #000;\n  ',
-            '\n  ',
-            '\n  ',
-            '\n  ',
-            '\n  box-sizing: border-box;\n  &:focus {\n    box-shadow: 0 0 8px ',
-            ';\n  }\n  &:hover {\n    background-color: ',
-            ';\n  }\n  &:active {\n    background-color: ',
-            ';\n  }\n',
+            '\n  display: inline-flex;\n  &,\n  &:after {\n    border-radius: 50%;\n    width: 2em;\n    height: 2em;\n  }\n  font-size: 10px;\n  vertical-align: middle;\n  position: relative;\n  text-indent: -9999em;\n  border-top: 2px solid ',
+            ';\n  border-right: 2px solid ',
+            ';\n  border-bottom: 2px solid ',
+            ';\n  border-left: 2px solid #ffffff;\n  -webkit-transform: translateZ(0);\n  -ms-transform: translateZ(0);\n  transform: translateZ(0);\n  -webkit-animation: load8 1.1s infinite linear;\n  animation: load8 0.5s infinite linear;\n  ',
+            '\n  @keyframes load8 {\n    0% {\n      -webkit-transform: rotate(0deg);\n      transform: rotate(0deg);\n    }\n    100% {\n      -webkit-transform: rotate(360deg);\n      transform: rotate(360deg);\n    }\n  }\n',
           ])
 
           _templateObject = function _templateObject() {
@@ -7811,8 +7813,98 @@ object-assign
           return strings
         }
 
-        var Button = styled_components_browser_esm['default'].button(
+        var StyledSpinner = styled_components_browser_esm['default'].div(
           _templateObject(),
+          function (_ref) {
+            var theme = _ref.theme,
+              color = _ref.color
+            return '' + theme.colors[color]
+          },
+          function (_ref2) {
+            var theme = _ref2.theme,
+              color = _ref2.color
+            return '' + theme.colors[color]
+          },
+          function (_ref3) {
+            var theme = _ref3.theme,
+              color = _ref3.color
+            return '' + theme.colors[color]
+          },
+          Object(index_esm['compose'])(index_esm['space'], index_esm['layout'])
+        )
+
+        var Spinner_Spinner = function Spinner(_ref4) {
+          var children = _ref4.children,
+            rest = _objectWithoutPropertiesLoose(_ref4, ['children'])
+
+          return /*#__PURE__*/ external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(StyledSpinner, rest)
+        }
+
+        /* harmony default export */ var components_Spinner_Spinner = Spinner_Spinner
+        // CONCATENATED MODULE: ./src/components/Spinner/index.js
+
+        /* harmony default export */ var components_Spinner = components_Spinner_Spinner
+        // CONCATENATED MODULE: ./src/components/Button/Button.js
+        function Button_objectWithoutPropertiesLoose(source, excluded) {
+          if (source == null) return {}
+          var target = {}
+          var sourceKeys = Object.keys(source)
+          var key, i
+          for (i = 0; i < sourceKeys.length; i++) {
+            key = sourceKeys[i]
+            if (excluded.indexOf(key) >= 0) continue
+            target[key] = source[key]
+          }
+          return target
+        }
+
+        function Button_extends() {
+          Button_extends =
+            Object.assign ||
+            function (target) {
+              for (var i = 1; i < arguments.length; i++) {
+                var source = arguments[i]
+                for (var key in source) {
+                  if (Object.prototype.hasOwnProperty.call(source, key)) {
+                    target[key] = source[key]
+                  }
+                }
+              }
+              return target
+            }
+          return Button_extends.apply(this, arguments)
+        }
+
+        function Button_templateObject() {
+          var data = Button_taggedTemplateLiteralLoose([
+            '\n  appearance: none;\n  font-family: inherit;\n  border-radius: 4px;\n  outline: none;\n  cursor: pointer;\n  padding: .5rem 1rem;\n  border-style: solid;\n  color: #000;\n  ',
+            '\n  ',
+            '\n  ',
+            '\n  ',
+            '\n  box-sizing: border-box;\n  &:focus {\n    box-shadow: 0 0 8px ',
+            ';\n  }\n  \n  &:active:not(:disabled) {\n    box-shadow: inset 0px 0px 5px #c1c1c1;\n  }\n  &:active,\n  &:hover {\n    background-color: ',
+            ';\n  }\n  &:disabled {\n    background-color: ',
+            ';\n  }\n  ',
+            '\n',
+          ])
+
+          Button_templateObject = function _templateObject() {
+            return data
+          }
+
+          return data
+        }
+
+        function Button_taggedTemplateLiteralLoose(strings, raw) {
+          if (!raw) {
+            raw = strings.slice(0)
+          }
+          strings.raw = raw
+          return strings
+        }
+
+        var Button = styled_components_browser_esm['default'].button(
+          Button_templateObject(),
           variants_color,
           size,
           index_esm['space'],
@@ -7827,12 +7919,16 @@ object-assign
           function (_ref2) {
             var theme = _ref2.theme,
               color = _ref2.color
-            return new color_default.a(theme.colors[color]).lighten(0.2).string()
+            return new color_default.a(theme.colors[color]).saturate(0.1).darken(0.2).string()
           },
           function (_ref3) {
             var theme = _ref3.theme,
               color = _ref3.color
-            return new color_default.a(theme.colors[color]).darken(0.2).string()
+            return new color_default.a(theme.colors[color]).desaturate(0.4).lighten(0.1).opaquer(0.7).string()
+          },
+          function (_ref4) {
+            var loading = _ref4.loading
+            return !!loading && '\n    cursor: progress;\n  '
           }
         )
         Button.displayName = 'Button'
@@ -7848,18 +7944,26 @@ object-assign
           color: 'default',
           type: 'button',
         }
-        /* harmony default export */ var Button_Button = Button
+        /* harmony default export */ var Button_Button = function (_ref5) {
+          var children = _ref5.children,
+            loading = _ref5.loading,
+            disabled = _ref5.disabled,
+            rest = Button_objectWithoutPropertiesLoose(_ref5, ['children', 'loading', 'disabled'])
+
+          return /*#__PURE__*/ external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(
+            Button,
+            Button_extends({}, rest, {
+              disabled: !!disabled || !!loading,
+              loading: loading,
+            }),
+            !!loading ? 'carregando...' : children
+          )
+        }
         // CONCATENATED MODULE: ./src/components/Button/index.js
 
         /* harmony default export */ var components_Button = Button_Button
-        // EXTERNAL MODULE: external {"root":"React","commonjs2":"react","commonjs":"react","amd":"react"}
-        var external_root_React_commonjs2_react_commonjs_react_amd_react_ = __webpack_require__(0)
-        var external_root_React_commonjs2_react_commonjs_react_amd_react_default = /*#__PURE__*/ __webpack_require__.n(
-          external_root_React_commonjs2_react_commonjs_react_amd_react_
-        )
-
         // CONCATENATED MODULE: ./src/components/Label/Label.js
-        function _objectWithoutPropertiesLoose(source, excluded) {
+        function Label_objectWithoutPropertiesLoose(source, excluded) {
           if (source == null) return {}
           var target = {}
           var sourceKeys = Object.keys(source)
@@ -7897,7 +8001,7 @@ object-assign
 
         var Label_Label = function Label(_ref2) {
           var children = _ref2.children,
-            rest = _objectWithoutPropertiesLoose(_ref2, ['children'])
+            rest = Label_objectWithoutPropertiesLoose(_ref2, ['children'])
 
           return /*#__PURE__*/ external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(StyledLabel, rest, children)
         }
@@ -9136,6 +9240,37 @@ object-assign
         // CONCATENATED MODULE: ./src/components/Logo/index.js
 
         /* harmony default export */ var components_Logo = components_Logo_Logo
+        // CONCATENATED MODULE: ./src/components/Table/PaceLoading.js
+        function PaceLoading_templateObject() {
+          var data = PaceLoading_taggedTemplateLiteralLoose([
+            '\n  position: absolute;\n  top: 0;\n  right: 0;\n  bottom: 0;\n  left: 0;\n  background: rgba(255, 255, 255, 0.6);\n  z-index: 999;\n  & > div {\n    position: absolute;\n    top: 0;\n    right: 0;\n    bottom: 0;\n    left: 0;\n    margin: auto;\n  }\n',
+          ])
+
+          PaceLoading_templateObject = function _templateObject() {
+            return data
+          }
+
+          return data
+        }
+
+        function PaceLoading_taggedTemplateLiteralLoose(strings, raw) {
+          if (!raw) {
+            raw = strings.slice(0)
+          }
+          strings.raw = raw
+          return strings
+        }
+
+        var Wrapper = styled_components_browser_esm['default'].div(PaceLoading_templateObject())
+        /* harmony default export */ var PaceLoading = function () {
+          return /*#__PURE__*/ external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(
+            Wrapper,
+            null,
+            /*#__PURE__*/ external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(components_Spinner, {
+              color: 'primary',
+            })
+          )
+        }
         // CONCATENATED MODULE: ./src/components/Table/Table.js
         function Table_objectWithoutPropertiesLoose(source, excluded) {
           if (source == null) return {}
@@ -9150,10 +9285,23 @@ object-assign
           return target
         }
 
+        function _templateObject10() {
+          var data = Table_taggedTemplateLiteralLoose([
+            '\n  position: relative;\n  display: table-row-group;\n  & > ',
+            ' {\n    background-color: #f8fafc;\n    &:nth-child(odd) {\n      background-color: #fff;\n    }\n  }\n',
+          ])
+
+          _templateObject10 = function _templateObject10() {
+            return data
+          }
+
+          return data
+        }
+
         function _templateObject9() {
           var data = Table_taggedTemplateLiteralLoose([
-            '\n  display: table-row-group;\n  & > ',
-            ' {\n    background-color: #f8fafc;\n    &:nth-child(odd) {\n      background-color: #fff;\n    }\n  }\n',
+            '\n  position: relative;\n  background: blue;\n  border: 1px solid #efefef;\n  display: flex;\n  flex-direction: column;\n  ',
+            '\n',
           ])
 
           _templateObject9 = function _templateObject9() {
@@ -9164,7 +9312,7 @@ object-assign
         }
 
         function _templateObject8() {
-          var data = Table_taggedTemplateLiteralLoose(['\n  overflow-x: auto;\n  ', '\n'])
+          var data = Table_taggedTemplateLiteralLoose(['\n  overflow-x: auto;\n  position: relative;\n  height: 100%;\n  width: 100%;\n  flex: 1;\n'])
 
           _templateObject8 = function _templateObject8() {
             return data
@@ -9303,11 +9451,12 @@ object-assign
           var align = _ref5.align
           return align && '\n    text-align: ' + align + ';\n  '
         })
-        var WrapperTable = styled_components_browser_esm['default'].div(
-          _templateObject8(),
+        var WrapperTable = styled_components_browser_esm['default'].div(_templateObject8())
+        var Table_Wrapper = styled_components_browser_esm['default'].div(
+          _templateObject9(),
           Object(index_esm['compose'])(index_esm['space'], index_esm['layout'])
         )
-        var TableBody = styled_components_browser_esm['default'].tbody(_templateObject9(), TableRow)
+        var TableBody = styled_components_browser_esm['default'].tbody(_templateObject10(), TableRow)
 
         var Table_Table = function Table(_ref6) {
           var children = _ref6.children,
@@ -9315,7 +9464,8 @@ object-assign
             pagination = _ref6.pagination,
             onChangeOrder = _ref6.onChangeOrder,
             data = _ref6.data,
-            rest = Table_objectWithoutPropertiesLoose(_ref6, ['children', 'headers', 'pagination', 'onChangeOrder', 'data'])
+            loading = _ref6.loading,
+            rest = Table_objectWithoutPropertiesLoose(_ref6, ['children', 'headers', 'pagination', 'onChangeOrder', 'data', 'loading'])
 
           var handleChangeOrder = function handleChangeOrder(item) {
             if (onChangeOrder) {
@@ -9328,72 +9478,94 @@ object-assign
               key = _ref7.key
             var keys = key.split('.')
             return keys.reduce(function (acc, item) {
-              return acc[item]
+              return acc[item] || ''
             }, item)
           }
 
           return /*#__PURE__*/ external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(
-            WrapperTable,
+            Table_Wrapper,
             rest,
+            !!loading && /*#__PURE__*/ external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(PaceLoading, null),
             /*#__PURE__*/ external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(
-              StyledTable,
-              null,
+              WrapperTable,
+              {
+                loading: loading,
+              },
               /*#__PURE__*/ external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(
-                TableHead,
+                StyledTable,
                 null,
                 /*#__PURE__*/ external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(
-                  TableRow,
+                  TableHead,
                   null,
-                  (headers || []).map(function (item, index) {
-                    return /*#__PURE__*/ external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(
-                      TableHeader,
-                      {
-                        key: index,
-                        order: item.sort,
-                        align: item.align,
-                        onClick: function onClick() {
-                          return handleChangeOrder(item)
-                        },
-                      },
-                      /*#__PURE__*/ external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(
-                        TableHeaderSpan,
-                        null,
-                        item.title,
-                        ' ',
-                        item.sort &&
-                          /*#__PURE__*/ external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(OrderArrow, {
-                            isCurrent: !!(pagination.sort === item.key),
-                            order: pagination.order,
-                          })
-                      )
-                    )
-                  })
-                )
-              ),
-              /*#__PURE__*/ external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(
-                TableBody,
-                null,
-                (data || []).map(function (row, index) {
-                  return /*#__PURE__*/ external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(
+                  /*#__PURE__*/ external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(
                     TableRow,
-                    {
-                      key: index,
-                    },
-                    headers.map(function (header) {
+                    null,
+                    (headers || []).map(function (item, index) {
                       return /*#__PURE__*/ external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(
-                        TableData,
+                        TableHeader,
                         {
-                          align: header.align,
-                          key: header.key + '-' + index,
+                          key: index,
+                          order: item.sort,
+                          align: item.align,
+                          onClick: function onClick() {
+                            return handleChangeOrder(item)
+                          },
                         },
-                        getDataByKey({
-                          key: header.key,
-                          item: row,
-                        })
+                        /*#__PURE__*/ external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(
+                          TableHeaderSpan,
+                          null,
+                          item.title,
+                          ' ',
+                          item.sort &&
+                            /*#__PURE__*/ external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(OrderArrow, {
+                              isCurrent: !!(pagination.sort === item.key),
+                              order: pagination.order,
+                            })
+                        )
                       )
                     })
                   )
-                })
+                ),
+                /*#__PURE__*/ external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(
+                  TableBody,
+                  null,
+                  !(data || []).length &&
+                    /*#__PURE__*/ external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(
+                      TableRow,
+                      null,
+                      /*#__PURE__*/ external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(
+                        TableData,
+                        {
+                          style: {
+                            textAlign: 'center',
+                          },
+                          colSpan: (headers || []).length,
+                        },
+                        !!loading ? 'Carregando...' : 'Nenhum registro encontrado'
+                      )
+                    ),
+                  (data || []).map(function (row, index) {
+                    return /*#__PURE__*/ external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(
+                      TableRow,
+                      {
+                        key: index,
+                      },
+                      headers.map(function (header) {
+                        return /*#__PURE__*/ external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(
+                          TableData,
+                          {
+                            align: header.align,
+                            key: header.key + '-' + index,
+                          },
+                          getDataByKey({
+                            key: header.key,
+                            item: row,
+                          })
+                        )
+                      })
+                    )
+                  })
+                )
               )
             )
           )

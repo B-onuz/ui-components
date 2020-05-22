@@ -111,6 +111,12 @@ Object.defineProperty(exports, 'Pagination', {
     return _Pagination2['default']
   },
 })
+Object.defineProperty(exports, 'Spinner', {
+  enumerable: true,
+  get: function get() {
+    return _Spinner2['default']
+  },
+})
 
 var _theme2 = _interopRequireDefault(require('./theme'))
 
@@ -147,6 +153,8 @@ var _Table2 = _interopRequireDefault(require('./components/Table'))
 var _Box2 = _interopRequireDefault(require('./components/Box'))
 
 var _Pagination2 = _interopRequireDefault(require('./components/Pagination'))
+
+var _Spinner2 = _interopRequireDefault(require('./components/Spinner'))
 
 function _interopRequireDefault(obj) {
   return obj && obj.__esModule ? obj : { default: obj }

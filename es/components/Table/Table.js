@@ -13,6 +13,8 @@ var _propTypes = _interopRequireDefault(require('prop-types'))
 
 var _styledSystem = require('styled-system')
 
+var _PaceLoading = _interopRequireDefault(require('./PaceLoading'))
+
 var _this = void 0,
   _jsxFileName = '/Users/rogeralbino/projects/Kazap/B-onuz/ui-components/src/components/Table/Table.js'
 
@@ -50,10 +52,23 @@ function _objectWithoutPropertiesLoose(source, excluded) {
   return target
 }
 
+function _templateObject10() {
+  var data = _taggedTemplateLiteralLoose([
+    '\n  position: relative;\n  display: table-row-group;\n  & > ',
+    ' {\n    background-color: #f8fafc;\n    &:nth-child(odd) {\n      background-color: #fff;\n    }\n  }\n',
+  ])
+
+  _templateObject10 = function _templateObject10() {
+    return data
+  }
+
+  return data
+}
+
 function _templateObject9() {
   var data = _taggedTemplateLiteralLoose([
-    '\n  display: table-row-group;\n  & > ',
-    ' {\n    background-color: #f8fafc;\n    &:nth-child(odd) {\n      background-color: #fff;\n    }\n  }\n',
+    '\n  position: relative;\n  background: blue;\n  border: 1px solid #efefef;\n  display: flex;\n  flex-direction: column;\n  ',
+    '\n',
   ])
 
   _templateObject9 = function _templateObject9() {
@@ -64,7 +79,7 @@ function _templateObject9() {
 }
 
 function _templateObject8() {
-  var data = _taggedTemplateLiteralLoose(['\n  overflow-x: auto;\n  ', '\n'])
+  var data = _taggedTemplateLiteralLoose(['\n  overflow-x: auto;\n  position: relative;\n  height: 100%;\n  width: 100%;\n  flex: 1;\n'])
 
   _templateObject8 = function _templateObject8() {
     return data
@@ -204,9 +219,11 @@ var TableData = _styledComponents['default'].td(_templateObject7(), function (_r
   return align && '\n    text-align: ' + align + ';\n  '
 })
 
-var WrapperTable = _styledComponents['default'].div(_templateObject8(), (0, _styledSystem.compose)(_styledSystem.space, _styledSystem.layout))
+var WrapperTable = _styledComponents['default'].div(_templateObject8())
 
-var TableBody = _styledComponents['default'].tbody(_templateObject9(), TableRow)
+var Wrapper = _styledComponents['default'].div(_templateObject9(), (0, _styledSystem.compose)(_styledSystem.space, _styledSystem.layout))
+
+var TableBody = _styledComponents['default'].tbody(_templateObject10(), TableRow)
 
 var Table = function Table(_ref6) {
   var children = _ref6.children,
@@ -214,7 +231,8 @@ var Table = function Table(_ref6) {
     pagination = _ref6.pagination,
     onChangeOrder = _ref6.onChangeOrder,
     data = _ref6.data,
-    rest = _objectWithoutPropertiesLoose(_ref6, ['children', 'headers', 'pagination', 'onChangeOrder', 'data'])
+    loading = _ref6.loading,
+    rest = _objectWithoutPropertiesLoose(_ref6, ['children', 'headers', 'pagination', 'onChangeOrder', 'data', 'loading'])
 
   var handleChangeOrder = function handleChangeOrder(item) {
     if (onChangeOrder) {
@@ -227,138 +245,187 @@ var Table = function Table(_ref6) {
       key = _ref7.key
     var keys = key.split('.')
     return keys.reduce(function (acc, item) {
-      return acc[item]
+      return acc[item] || ''
     }, item)
   }
 
   return /*#__PURE__*/ _react['default'].createElement(
-    WrapperTable,
+    Wrapper,
     _extends({}, rest, {
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 164,
+        lineNumber: 178,
         columnNumber: 5,
       },
     }),
-    /*#__PURE__*/ _react['default'].createElement(
-      StyledTable,
-      {
+    !!loading &&
+      /*#__PURE__*/ _react['default'].createElement(_PaceLoading['default'], {
         __self: _this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 165,
+          lineNumber: 179,
+          columnNumber: 21,
+        },
+      }),
+    /*#__PURE__*/ _react['default'].createElement(
+      WrapperTable,
+      {
+        loading: loading,
+        __self: _this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 180,
           columnNumber: 7,
         },
       },
       /*#__PURE__*/ _react['default'].createElement(
-        TableHead,
+        StyledTable,
         {
           __self: _this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 166,
+            lineNumber: 181,
             columnNumber: 9,
           },
         },
         /*#__PURE__*/ _react['default'].createElement(
-          TableRow,
+          TableHead,
           {
             __self: _this,
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 167,
+              lineNumber: 182,
               columnNumber: 11,
             },
           },
-          (headers || []).map(function (item, index) {
-            return /*#__PURE__*/ _react['default'].createElement(
-              TableHeader,
-              {
-                key: index,
-                order: item.sort,
-                align: item.align,
-                onClick: function onClick() {
-                  return handleChangeOrder(item)
+          /*#__PURE__*/ _react['default'].createElement(
+            TableRow,
+            {
+              __self: _this,
+              __source: {
+                fileName: _jsxFileName,
+                lineNumber: 183,
+                columnNumber: 13,
+              },
+            },
+            (headers || []).map(function (item, index) {
+              return /*#__PURE__*/ _react['default'].createElement(
+                TableHeader,
+                {
+                  key: index,
+                  order: item.sort,
+                  align: item.align,
+                  onClick: function onClick() {
+                    return handleChangeOrder(item)
+                  },
+                  __self: _this,
+                  __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 185,
+                    columnNumber: 17,
+                  },
                 },
+                /*#__PURE__*/ _react['default'].createElement(
+                  TableHeaderSpan,
+                  {
+                    __self: _this,
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 186,
+                      columnNumber: 19,
+                    },
+                  },
+                  item.title,
+                  ' ',
+                  item.sort &&
+                    /*#__PURE__*/ _react['default'].createElement(OrderArrow, {
+                      isCurrent: !!(pagination.sort === item.key),
+                      order: pagination.order,
+                      __self: _this,
+                      __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 187,
+                        columnNumber: 48,
+                      },
+                    })
+                )
+              )
+            })
+          )
+        ),
+        /*#__PURE__*/ _react['default'].createElement(
+          TableBody,
+          {
+            __self: _this,
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 193,
+              columnNumber: 11,
+            },
+          },
+          !(data || []).length &&
+            /*#__PURE__*/ _react['default'].createElement(
+              TableRow,
+              {
                 __self: _this,
                 __source: {
                   fileName: _jsxFileName,
-                  lineNumber: 169,
+                  lineNumber: 195,
                   columnNumber: 15,
                 },
               },
               /*#__PURE__*/ _react['default'].createElement(
-                TableHeaderSpan,
+                TableData,
                 {
+                  style: {
+                    textAlign: 'center',
+                  },
+                  colSpan: (headers || []).length,
                   __self: _this,
                   __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 170,
+                    lineNumber: 196,
                     columnNumber: 17,
                   },
                 },
-                item.title,
-                ' ',
-                item.sort &&
-                  /*#__PURE__*/ _react['default'].createElement(OrderArrow, {
-                    isCurrent: !!(pagination.sort === item.key),
-                    order: pagination.order,
+                !!loading ? 'Carregando...' : 'Nenhum registro encontrado'
+              )
+            ),
+          (data || []).map(function (row, index) {
+            return /*#__PURE__*/ _react['default'].createElement(
+              TableRow,
+              {
+                key: index,
+                __self: _this,
+                __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 202,
+                  columnNumber: 15,
+                },
+              },
+              headers.map(function (header) {
+                return /*#__PURE__*/ _react['default'].createElement(
+                  TableData,
+                  {
+                    align: header.align,
+                    key: header.key + '-' + index,
                     __self: _this,
                     __source: {
                       fileName: _jsxFileName,
-                      lineNumber: 171,
-                      columnNumber: 46,
+                      lineNumber: 204,
+                      columnNumber: 19,
                     },
+                  },
+                  getDataByKey({
+                    key: header.key,
+                    item: row,
                   })
-              )
+                )
+              })
             )
           })
         )
-      ),
-      /*#__PURE__*/ _react['default'].createElement(
-        TableBody,
-        {
-          __self: _this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 177,
-            columnNumber: 9,
-          },
-        },
-        (data || []).map(function (row, index) {
-          return /*#__PURE__*/ _react['default'].createElement(
-            TableRow,
-            {
-              key: index,
-              __self: _this,
-              __source: {
-                fileName: _jsxFileName,
-                lineNumber: 179,
-                columnNumber: 13,
-              },
-            },
-            headers.map(function (header) {
-              return /*#__PURE__*/ _react['default'].createElement(
-                TableData,
-                {
-                  align: header.align,
-                  key: header.key + '-' + index,
-                  __self: _this,
-                  __source: {
-                    fileName: _jsxFileName,
-                    lineNumber: 181,
-                    columnNumber: 17,
-                  },
-                },
-                getDataByKey({
-                  key: header.key,
-                  item: row,
-                })
-              )
-            })
-          )
-        })
       )
     )
   )
