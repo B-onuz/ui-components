@@ -15,6 +15,10 @@ const colors = {
   brown: '#a5673f',
   grey: '#767676',
   black: '#1b1c1d',
+  warning: '#7A4D05',
+  success: '#1E561F',
+  info: '#0E566C',
+  danger: '#973937',
 }
 
 colors.primary = colors.lightRed
