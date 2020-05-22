@@ -1,6 +1,6 @@
 # Alert (Component)
 
-[Descrição do componente e onde usar]
+Componente de para avisos do sistema.
 
 ## Como utilizar
 
@@ -9,7 +9,10 @@ import Alert from 'ui-components/lib/components/Alert'
 ```
 
 ```jsx
-<Alert />
+<Alert m={10} color={'warning'} title={`Exemplo de título`} message={`Este texto é exemplo de uma message`} />
+<Alert m={10} color={'success'} title={`Exemplo de título`} message={`Este texto é exemplo de uma message`} />
+<Alert m={10} color={'info'} title={`Exemplo de título`} message={`Este texto é exemplo de uma message`} />
+<Alert m={10} color={'danger'} title={`Exemplo de título`} message={`Este texto é exemplo de uma message`} />
 ```
 
 ## Variações
@@ -17,10 +20,10 @@ import Alert from 'ui-components/lib/components/Alert'
 ### Variant
 
 ```jsx
-<Alert variant={'variant'} />
+<Alert color={'primary'} />
 ```
 
-Escala no tema: `theme.variantScale`
+Escala no tema: `theme.colors`
 
 ## Styled-system props
 

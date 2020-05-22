@@ -1,7 +1,154 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Alert changes the class when hovered 1`] = `
+exports[`Alert 1`] = `
+Array [
+  .c0 {
+  margin: 10px;
+  border: 1px solid;
+  border-radius: 4px;
+  padding: 16px 24px 24px;
+  color: #7A4D05;
+  background-color: hsla(36.89999999999998,100%,49.8%,0.09999999999999998);
+  box-shadow: 0 0 3px hsl(36.89999999999998,100%,49.8%);
+}
+
+.c0 > p {
+  color: rgba(122,77,5,0.85);
+}
+
+.c1 {
+  margin: 0 0 8px;
+}
+
+.c2 {
+  margin: 0;
+}
+
 <div
-  className="sc-AxjAm hyNcgC"
-/>
+    className="c0"
+    color="warning"
+  >
+    <h3
+      className="c1"
+    >
+      Exemplo de título
+    </h3>
+    <p
+      className="c2"
+    >
+      Este texto é exemplo de uma message
+    </p>
+  </div>,
+  .c0 {
+  margin: 10px;
+  border: 1px solid;
+  border-radius: 4px;
+  padding: 16px 24px 24px;
+  color: #1E561F;
+  background-color: hsla(121.10000000000002,100%,45.5%,0.09999999999999998);
+  box-shadow: 0 0 3px hsl(121.10000000000002,100%,45.5%);
+}
+
+.c0 > p {
+  color: rgba(30,86,31,0.85);
+}
+
+.c1 {
+  margin: 0 0 8px;
+}
+
+.c2 {
+  margin: 0;
+}
+
+<div
+    className="c0"
+    color="success"
+  >
+    <h3
+      className="c1"
+    >
+      Exemplo de título
+    </h3>
+    <p
+      className="c2"
+    >
+      Este texto é exemplo de uma message
+    </p>
+  </div>,
+  .c0 {
+  margin: 10px;
+  border: 1px solid;
+  border-radius: 4px;
+  padding: 16px 24px 24px;
+  color: #0E566C;
+  background-color: hsla(194,100%,47.8%,0.09999999999999998);
+  box-shadow: 0 0 3px hsl(194,100%,47.8%);
+}
+
+.c0 > p {
+  color: rgba(14,86,108,0.85);
+}
+
+.c1 {
+  margin: 0 0 8px;
+}
+
+.c2 {
+  margin: 0;
+}
+
+<div
+    className="c0"
+    color="info"
+  >
+    <h3
+      className="c1"
+    >
+      Exemplo de título
+    </h3>
+    <p
+      className="c2"
+    >
+      Este texto é exemplo de uma message
+    </p>
+  </div>,
+  .c0 {
+  margin: 10px;
+  border: 1px solid;
+  border-radius: 4px;
+  padding: 16px 24px 24px;
+  color: #973937;
+  background-color: hsla(1.3000000000000114,100%,80.8%,0.09999999999999998);
+  box-shadow: 0 0 3px hsl(1.3000000000000114,100%,80.8%);
+}
+
+.c0 > p {
+  color: rgba(151,57,55,0.85);
+}
+
+.c1 {
+  margin: 0 0 8px;
+}
+
+.c2 {
+  margin: 0;
+}
+
+<div
+    className="c0"
+    color="danger"
+  >
+    <h3
+      className="c1"
+    >
+      Exemplo de título
+    </h3>
+    <p
+      className="c2"
+    >
+      Este texto é exemplo de uma message
+    </p>
+  </div>,
+]
 `;
