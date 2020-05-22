@@ -1,6 +1,6 @@
 # Textarea (Component)
 
-[Descrição do componente e onde usar]
+Componente de input para texto com multiplas linhas.
 
 ## Como utilizar
 
@@ -12,17 +12,15 @@ import Textarea from 'ui-components/lib/components/Textarea'
 <Textarea />
 ```
 
-## Variações
-
-### Variant
+## Textarea controlada
 
 ```jsx
-<Textarea variant={'variant'} />
+import React, { useState } from 'react'
+
+const FooBar = () => {
+  const [firstname, setFirstName] = useState('')
+  return <Textarea id={'firstname'} name={'firstname'} placeholder={placeholder} value={firstname} onChange={(e) => setFirstName(e.target.value)} />
+}
+
+export default FooBar
 ```
-
-Escala no tema: `theme.variantScale`
-
-## Styled-system props
-
-- space https://styled-system.com/table#space
-- layout https://styled-system.com/table#layout

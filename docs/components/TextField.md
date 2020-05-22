@@ -31,13 +31,29 @@ export default FooBar
 
 ## Variações
 
-### Variant
+### Multiline
 
 ```jsx
-<TextField variant={'variant'} />
-```
+import React, { useState } from 'react'
 
-Escala no tema: `theme.variantScale`
+const FooBar = () => {
+  const [firstname, setFirstName] = useState('')
+  return (
+    <TextField
+      id="name"
+      name={'name'}
+      required
+      multiline // para funcionar como textarea, basta adicionar esta prop
+      label={'Nome'}
+      placeholder={'Nome'}
+      value={firstname}
+      onChange={(e) => setFirstName(e.target.value)}
+    />
+  )
+}
+
+export default FooBar
+```
 
 ## Styled-system props
 
