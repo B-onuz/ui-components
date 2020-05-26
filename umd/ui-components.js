@@ -1,4 +1,4 @@
-/*! ui-components v1.5.0 */
+/*! ui-components v1.5.1 */
 (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
 		module.exports = factory(require("react"));
@@ -199,7 +199,7 @@ __webpack_require__.d(__webpack_exports__, "left", function() { return /* bindin
 __webpack_require__.d(__webpack_exports__, "style", function() { return /* binding */ index_esm_style; });
 
 // EXTERNAL MODULE: ./node_modules/object-assign/index.js
-var object_assign = __webpack_require__(4);
+var object_assign = __webpack_require__(5);
 var object_assign_default = /*#__PURE__*/__webpack_require__.n(object_assign);
 
 // CONCATENATED MODULE: ./node_modules/@styled-system/core/dist/index.esm.js
@@ -2968,103 +2968,6 @@ if (false) { var throwOnDirectAccess, ReactIs; } else {
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/*
-object-assign
-(c) Sindre Sorhus
-@license MIT
-*/
-
-
-/* eslint-disable no-unused-vars */
-var getOwnPropertySymbols = Object.getOwnPropertySymbols;
-var hasOwnProperty = Object.prototype.hasOwnProperty;
-var propIsEnumerable = Object.prototype.propertyIsEnumerable;
-
-function toObject(val) {
-	if (val === null || val === undefined) {
-		throw new TypeError('Object.assign cannot be called with null or undefined');
-	}
-
-	return Object(val);
-}
-
-function shouldUseNative() {
-	try {
-		if (!Object.assign) {
-			return false;
-		}
-
-		// Detect buggy property enumeration order in older V8 versions.
-
-		// https://bugs.chromium.org/p/v8/issues/detail?id=4118
-		var test1 = new String('abc');  // eslint-disable-line no-new-wrappers
-		test1[5] = 'de';
-		if (Object.getOwnPropertyNames(test1)[0] === '5') {
-			return false;
-		}
-
-		// https://bugs.chromium.org/p/v8/issues/detail?id=3056
-		var test2 = {};
-		for (var i = 0; i < 10; i++) {
-			test2['_' + String.fromCharCode(i)] = i;
-		}
-		var order2 = Object.getOwnPropertyNames(test2).map(function (n) {
-			return test2[n];
-		});
-		if (order2.join('') !== '0123456789') {
-			return false;
-		}
-
-		// https://bugs.chromium.org/p/v8/issues/detail?id=3056
-		var test3 = {};
-		'abcdefghijklmnopqrst'.split('').forEach(function (letter) {
-			test3[letter] = letter;
-		});
-		if (Object.keys(Object.assign({}, test3)).join('') !==
-				'abcdefghijklmnopqrst') {
-			return false;
-		}
-
-		return true;
-	} catch (err) {
-		// We don't expect any of the above to throw, but better to be safe.
-		return false;
-	}
-}
-
-module.exports = shouldUseNative() ? Object.assign : function (target, source) {
-	var from;
-	var to = toObject(target);
-	var symbols;
-
-	for (var s = 1; s < arguments.length; s++) {
-		from = Object(arguments[s]);
-
-		for (var key in from) {
-			if (hasOwnProperty.call(from, key)) {
-				to[key] = from[key];
-			}
-		}
-
-		if (getOwnPropertySymbols) {
-			symbols = getOwnPropertySymbols(from);
-			for (var i = 0; i < symbols.length; i++) {
-				if (propIsEnumerable.call(from, symbols[i])) {
-					to[symbols[i]] = from[symbols[i]];
-				}
-			}
-		}
-	}
-
-	return to;
-};
-
-
-/***/ }),
-/* 5 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
 
 
 var colorString = __webpack_require__(21);
@@ -3547,6 +3450,103 @@ function zeroArray(arr, length) {
 }
 
 module.exports = Color;
+
+
+/***/ }),
+/* 5 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/*
+object-assign
+(c) Sindre Sorhus
+@license MIT
+*/
+
+
+/* eslint-disable no-unused-vars */
+var getOwnPropertySymbols = Object.getOwnPropertySymbols;
+var hasOwnProperty = Object.prototype.hasOwnProperty;
+var propIsEnumerable = Object.prototype.propertyIsEnumerable;
+
+function toObject(val) {
+	if (val === null || val === undefined) {
+		throw new TypeError('Object.assign cannot be called with null or undefined');
+	}
+
+	return Object(val);
+}
+
+function shouldUseNative() {
+	try {
+		if (!Object.assign) {
+			return false;
+		}
+
+		// Detect buggy property enumeration order in older V8 versions.
+
+		// https://bugs.chromium.org/p/v8/issues/detail?id=4118
+		var test1 = new String('abc');  // eslint-disable-line no-new-wrappers
+		test1[5] = 'de';
+		if (Object.getOwnPropertyNames(test1)[0] === '5') {
+			return false;
+		}
+
+		// https://bugs.chromium.org/p/v8/issues/detail?id=3056
+		var test2 = {};
+		for (var i = 0; i < 10; i++) {
+			test2['_' + String.fromCharCode(i)] = i;
+		}
+		var order2 = Object.getOwnPropertyNames(test2).map(function (n) {
+			return test2[n];
+		});
+		if (order2.join('') !== '0123456789') {
+			return false;
+		}
+
+		// https://bugs.chromium.org/p/v8/issues/detail?id=3056
+		var test3 = {};
+		'abcdefghijklmnopqrst'.split('').forEach(function (letter) {
+			test3[letter] = letter;
+		});
+		if (Object.keys(Object.assign({}, test3)).join('') !==
+				'abcdefghijklmnopqrst') {
+			return false;
+		}
+
+		return true;
+	} catch (err) {
+		// We don't expect any of the above to throw, but better to be safe.
+		return false;
+	}
+}
+
+module.exports = shouldUseNative() ? Object.assign : function (target, source) {
+	var from;
+	var to = toObject(target);
+	var symbols;
+
+	for (var s = 1; s < arguments.length; s++) {
+		from = Object(arguments[s]);
+
+		for (var key in from) {
+			if (hasOwnProperty.call(from, key)) {
+				to[key] = from[key];
+			}
+		}
+
+		if (getOwnPropertySymbols) {
+			symbols = getOwnPropertySymbols(from);
+			for (var i = 0; i < symbols.length; i++) {
+				if (propIsEnumerable.call(from, symbols[i])) {
+					to[symbols[i]] = from[symbols[i]];
+				}
+			}
+		}
+	}
+
+	return to;
+};
 
 
 /***/ }),
@@ -6832,6 +6832,8 @@ __webpack_require__.r(__webpack_exports__);
 
 // EXPORTS
 __webpack_require__.d(__webpack_exports__, "theme", function() { return /* reexport */ src_theme; });
+__webpack_require__.d(__webpack_exports__, "useSearchTerm", function() { return /* reexport */ hooks_useSearchTerm; });
+__webpack_require__.d(__webpack_exports__, "useTableOrder", function() { return /* reexport */ hooks_useTableOrder; });
 __webpack_require__.d(__webpack_exports__, "Button", function() { return /* reexport */ components_Button; });
 __webpack_require__.d(__webpack_exports__, "TextField", function() { return /* reexport */ components_TextField; });
 __webpack_require__.d(__webpack_exports__, "Label", function() { return /* reexport */ components_Label; });
@@ -6850,6 +6852,10 @@ __webpack_require__.d(__webpack_exports__, "Table", function() { return /* reexp
 __webpack_require__.d(__webpack_exports__, "Box", function() { return /* reexport */ components_Box; });
 __webpack_require__.d(__webpack_exports__, "Pagination", function() { return /* reexport */ components_Pagination; });
 __webpack_require__.d(__webpack_exports__, "Spinner", function() { return /* reexport */ components_Spinner; });
+__webpack_require__.d(__webpack_exports__, "Textarea", function() { return /* reexport */ components_Textarea; });
+__webpack_require__.d(__webpack_exports__, "Alert", function() { return /* reexport */ components_Alert; });
+__webpack_require__.d(__webpack_exports__, "Select", function() { return /* reexport */ components_Select; });
+__webpack_require__.d(__webpack_exports__, "SelectField", function() { return /* reexport */ components_SelectField; });
 
 // CONCATENATED MODULE: ./src/theme/index.js
 var colors = {
@@ -6868,7 +6874,11 @@ var colors = {
   pink: '#e03997',
   brown: '#a5673f',
   grey: '#767676',
-  black: '#1b1c1d'
+  black: '#1b1c1d',
+  warning: '#7A4D05',
+  success: '#1E561F',
+  info: '#0E566C',
+  danger: '#973937'
 };
 colors.primary = colors.lightRed;
 colors.secondary = colors.fullDarkRed;
@@ -6889,11 +6899,94 @@ var fontSizes = [12, 14, 16, 20, 24, 32];
 var external_root_React_commonjs2_react_commonjs_react_amd_react_ = __webpack_require__(0);
 var external_root_React_commonjs2_react_commonjs_react_amd_react_default = /*#__PURE__*/__webpack_require__.n(external_root_React_commonjs2_react_commonjs_react_amd_react_);
 
+// CONCATENATED MODULE: ./src/hooks/useSearchTerm.js
+
+/**
+ * @example
+ * const [searchTerm, lazySearchTerm, { handleChangeSearchTerm }] = useSearchTerm('defaultValue', 400)
+ */
+
+var useSearchTerm_useSearchTerm = function useSearchTerm(value, delay) {
+  if (value === void 0) {
+    value = '';
+  }
+
+  if (delay === void 0) {
+    delay = 500;
+  }
+
+  var _useState = Object(external_root_React_commonjs2_react_commonjs_react_amd_react_["useState"])(value),
+      searchTerm = _useState[0],
+      setSearchTerm = _useState[1];
+
+  var _useState2 = Object(external_root_React_commonjs2_react_commonjs_react_amd_react_["useState"])(),
+      lazyKey = _useState2[0],
+      setLazyKey = _useState2[1];
+
+  var _useState3 = Object(external_root_React_commonjs2_react_commonjs_react_amd_react_["useState"])(''),
+      lazySearchTerm = _useState3[0],
+      setLazySearchTerm = _useState3[1];
+
+  var handleChangeSearchTerm = function handleChangeSearchTerm(value) {
+    clearTimeout(lazyKey);
+    setSearchTerm(value);
+    setLazyKey(setTimeout(function () {
+      setLazySearchTerm(value);
+    }, delay));
+  };
+
+  return [searchTerm, lazySearchTerm, {
+    handleChangeSearchTerm: handleChangeSearchTerm
+  }];
+};
+
+/* harmony default export */ var hooks_useSearchTerm = (useSearchTerm_useSearchTerm);
+// CONCATENATED MODULE: ./src/hooks/useTableOrder.js
+
+/*
+ * Example
+ * const { sort, order, handleChangeOrder } = useTableOrder('name', 'asc')
+ */
+
+var useTableOrder_useTableOrder = function useTableOrder(defaultSort, defaultOrder) {
+  if (defaultSort === void 0) {
+    defaultSort = '';
+  }
+
+  if (defaultOrder === void 0) {
+    defaultOrder = 'asc';
+  }
+
+  var _useState = Object(external_root_React_commonjs2_react_commonjs_react_amd_react_["useState"])(defaultSort),
+      sort = _useState[0],
+      setSort = _useState[1];
+
+  var _useState2 = Object(external_root_React_commonjs2_react_commonjs_react_amd_react_["useState"])(defaultOrder),
+      order = _useState2[0],
+      setOrder = _useState2[1];
+
+  var handleChangeOrder = function handleChangeOrder(item) {
+    if (item.key === sort) {
+      setOrder(order === 'asc' ? 'desc' : 'asc');
+    } else {
+      setSort(item.key);
+      setOrder('asc');
+    }
+  };
+
+  return {
+    sort: sort,
+    order: order,
+    handleChangeOrder: handleChangeOrder
+  };
+};
+
+/* harmony default export */ var hooks_useTableOrder = (useTableOrder_useTableOrder);
 // EXTERNAL MODULE: ./node_modules/styled-components/dist/styled-components.browser.esm.js
 var styled_components_browser_esm = __webpack_require__(2);
 
 // EXTERNAL MODULE: ./node_modules/color/index.js
-var node_modules_color = __webpack_require__(5);
+var node_modules_color = __webpack_require__(4);
 var color_default = /*#__PURE__*/__webpack_require__.n(node_modules_color);
 
 // EXTERNAL MODULE: ./node_modules/styled-system/dist/index.esm.js + 12 modules
@@ -7196,6 +7289,55 @@ Input_Input.defaultProps = {
 // CONCATENATED MODULE: ./src/components/Input/index.js
 
 /* harmony default export */ var components_Input = (components_Input_Input);
+// CONCATENATED MODULE: ./src/components/Textarea/Textarea.js
+function Textarea_extends() { Textarea_extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return Textarea_extends.apply(this, arguments); }
+
+function Textarea_objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
+
+function Textarea_templateObject() {
+  var data = Textarea_taggedTemplateLiteralLoose(["\n  border: 1px solid #dededf;\n  border-radius: 4px;\n  line-height: 2.1em;\n  outline: none;\n  padding-right: 1em;\n  padding-left: 1em;\n  width: 100%;\n  box-sizing: border-box;\n  max-width: 100%;\n  &::placeholder {\n    letter-spacing: 0px;\n    color: #b5b5b5;\n  }\n  &:focus {\n    box-shadow: 0 0 3px ", ";\n    border-color: ", ";\n  }\n  ", "\n"]);
+
+  Textarea_templateObject = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+
+function Textarea_taggedTemplateLiteralLoose(strings, raw) { if (!raw) { raw = strings.slice(0); } strings.raw = raw; return strings; }
+
+
+
+
+
+
+
+var StyledTextarea = styled_components_browser_esm["default"].textarea(Textarea_templateObject(), function (_ref) {
+  var theme = _ref.theme,
+      color = _ref.color;
+  return new color_default.a(theme.colors[color]).fade(0.5).string();
+}, function (_ref2) {
+  var theme = _ref2.theme,
+      color = _ref2.color;
+  return theme.colors[color];
+}, index_esm["size"]);
+
+var Textarea_Textarea = function Textarea(_ref3) {
+  var children = _ref3.children,
+      rest = Textarea_objectWithoutPropertiesLoose(_ref3, ["children"]);
+
+  return /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(StyledTextarea, rest);
+};
+
+Textarea_Textarea.propTypes = Textarea_extends({}, dist_index_esm.size);
+Textarea_Textarea.defaultProps = {
+  size: 'medium',
+  color: 'blue'
+};
+/* harmony default export */ var components_Textarea_Textarea = (Textarea_Textarea);
+// CONCATENATED MODULE: ./src/components/Textarea/index.js
+
+/* harmony default export */ var components_Textarea = (components_Textarea_Textarea);
 // CONCATENATED MODULE: ./src/components/TextField/TextField.js
 function TextField_extends() { TextField_extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return TextField_extends.apply(this, arguments); }
 
@@ -7219,6 +7361,8 @@ function TextField_taggedTemplateLiteralLoose(strings, raw) { if (!raw) { raw = 
 
 
 
+
+
 var StyledTextField = styled_components_browser_esm["default"].div(TextField_templateObject(), Object(index_esm["compose"])(index_esm["space"], index_esm["layout"]));
 
 var TextField_TextField = function TextField(_ref) {
@@ -7233,12 +7377,14 @@ var TextField_TextField = function TextField(_ref) {
       error = _ref.error,
       _ref$inputProps = _ref.inputProps,
       inputProps = _ref$inputProps === void 0 ? {} : _ref$inputProps,
-      rest = TextField_objectWithoutPropertiesLoose(_ref, ["children", "label", "placeholder", "name", "id", "value", "onChange", "required", "error", "inputProps"]);
+      multiline = _ref.multiline,
+      rest = TextField_objectWithoutPropertiesLoose(_ref, ["children", "label", "placeholder", "name", "id", "value", "onChange", "required", "error", "inputProps", "multiline"]);
 
+  var InputComponent = multiline ? components_Textarea : components_Input;
   return /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(StyledTextField, rest, /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(components_Label, {
     htmlFor: id,
     required: !!required
-  }, label), /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(components_Input, TextField_extends({
+  }, label), /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(InputComponent, TextField_extends({
     id: id,
     name: name,
     placeholder: placeholder
@@ -7254,10 +7400,13 @@ var TextField_TextField = function TextField(_ref) {
   }, inputProps)));
 };
 
-TextField_TextField.propTypes = TextField_extends({}, dist_index_esm.space, {}, dist_index_esm.layout);
+TextField_TextField.propTypes = TextField_extends({}, dist_index_esm.space, {}, dist_index_esm.layout, {
+  multiline: prop_types_default.a.bool
+});
 TextField_TextField.defaultProps = {
   required: false,
-  error: false
+  error: false,
+  multiline: false
 };
 /* harmony default export */ var components_TextField_TextField = (TextField_TextField);
 // CONCATENATED MODULE: ./src/components/TextField/index.js
@@ -7912,7 +8061,7 @@ function _templateObject10() {
 }
 
 function _templateObject9() {
-  var data = Table_taggedTemplateLiteralLoose(["\n  position: relative;\n  background: blue;\n  border: 1px solid #efefef;\n  display: flex;\n  flex-direction: column;\n  ", "\n"]);
+  var data = Table_taggedTemplateLiteralLoose(["\n  position: relative;\n  border: 1px solid #efefef;\n  display: flex;\n  flex-direction: column;\n  ", "\n"]);
 
   _templateObject9 = function _templateObject9() {
     return data;
@@ -8087,7 +8236,17 @@ var Table_Table = function Table(_ref6) {
     return /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(TableRow, {
       key: index
     }, headers.map(function (header) {
-      return /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(TableData, {
+      return header.cellComponent ? /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(TableData, {
+        align: header.align,
+        key: header.key + "-" + index
+      }, /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(header.cellComponent, {
+        row: row,
+        header: header,
+        value: getDataByKey({
+          key: header.key,
+          item: row
+        })
+      })) : /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(TableData, {
         align: header.align,
         key: header.key + "-" + index
       }, getDataByKey({
@@ -8140,7 +8299,7 @@ var Box_Box = function Box(_ref) {
 function Pagination_objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 
 function Pagination_templateObject2() {
-  var data = Pagination_taggedTemplateLiteralLoose(["\n  position: relative;\n  border-radius: 32px;\n  min-width: 32px;\n  height: 32px;\n  padding: 0 0.3em;\n  background: none;\n  overflow: hidden;\n  ", ";\n  &::before {\n    content: '';\n    width: 100%;\n    height: 100%;\n    position: absolute;\n    top: 0;\n    right: 0;\n    bottom: 0;\n    left: 0;\n    ", ";\n    transform: translateY(-100%);\n    transition: 0.2s ease-in-out;\n  }\n  &:active {\n    background-color: transparent;\n  }\n  &:hover,\n  &:active {\n    background-color: transparent;\n    &::before {\n      transform: translateY(0);\n      z-index: -1;\n    }\n    color: #fff;\n  }\n  ", ";\n"]);
+  var data = Pagination_taggedTemplateLiteralLoose(["\n  position: relative;\n  border-radius: 32px;\n  min-width: 32px;\n  height: 32px;\n  padding: 0 0.3em;\n  background: none;\n  overflow: hidden;\n  ", ";\n  &::before {\n    content: '';\n    width: 100%;\n    height: 100%;\n    position: absolute;\n    top: 0;\n    right: 0;\n    bottom: 0;\n    left: 0;\n    ", ";\n    transform: translateY(-100%);\n    transition: 0.2s ease-in-out;\n  }\n  &:active {\n    background-color: transparent;\n  }\n  &:hover,\n  &:active {\n    background-color: transparent;\n    &::before {\n      transform: translateY(0);\n      z-index: 1;\n    }\n    color: #fff;\n  }\n  ", ";\n  & > span {\n    position: relative;\n    z-index: 2;\n  }\n"]);
 
   Pagination_templateObject2 = function _templateObject2() {
     return data;
@@ -8215,35 +8374,266 @@ var Pagination = Object(external_root_React_commonjs2_react_commonjs_react_amd_r
   return /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(StyledPagination, rest, /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(PageItem, {
     color: color,
     m: 1,
-    children: '<',
     onClick: function onClick() {
       return onPrevPage();
     }
-  }), [].concat(pageItems).map(function (item) {
+  }, /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement("span", null, '<')), [].concat(pageItems).map(function (item) {
     return /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(PageItem, {
       key: item,
       color: color,
       m: 1,
       active: page === item,
-      children: item,
       onClick: function onClick() {
         return onChangePage(item);
       }
-    });
+    }, /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement("span", null, item));
   }), /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(PageItem, {
     color: color,
     m: 1,
-    children: '>',
     onClick: function onClick() {
       return onNextPage();
     }
-  }));
+  }, /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement("span", null, '>')));
 });
 /* harmony default export */ var Pagination_Pagination = (Pagination);
 // CONCATENATED MODULE: ./src/components/Pagination/index.js
 
 /* harmony default export */ var components_Pagination = (Pagination_Pagination);
+// CONCATENATED MODULE: ./src/components/Alert/variants/color.js
+
+/* harmony default export */ var Alert_variants_color = (function (props) {
+  var color = props.theme.colors[props.color];
+  var objColor = new color_default.a(color);
+  var bgColor = objColor.saturate(1.5).lighten(1).fade(0.9).toString();
+  var shadowColor = objColor.saturate(1.5).lighten(1).fade(0.4).opaquer(0.7).toString();
+  var textColor = objColor.fade(0.15).toString();
+  return "\n        color: " + color + ";\n        background-color: " + bgColor + ";\n        box-shadow: 0 0 3px " + shadowColor + ";\n        & > p {\n          color: " + textColor + ";\n        }\n    ";
+});
+// CONCATENATED MODULE: ./src/components/Alert/variants/index.js
+
+
+// CONCATENATED MODULE: ./src/components/Alert/Alert.js
+function Alert_objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
+
+function Alert_templateObject3() {
+  var data = Alert_taggedTemplateLiteralLoose(["\n  margin: 0;\n"]);
+
+  Alert_templateObject3 = function _templateObject3() {
+    return data;
+  };
+
+  return data;
+}
+
+function Alert_templateObject2() {
+  var data = Alert_taggedTemplateLiteralLoose(["\n  margin: 0 0 8px;\n"]);
+
+  Alert_templateObject2 = function _templateObject2() {
+    return data;
+  };
+
+  return data;
+}
+
+function Alert_templateObject() {
+  var data = Alert_taggedTemplateLiteralLoose(["\n  ", "\n  ", "\n  border: 1px solid;\n  border-radius: 4px;\n  padding: 16px 24px 24px;\n  ", ";\n"]);
+
+  Alert_templateObject = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+
+function Alert_taggedTemplateLiteralLoose(strings, raw) { if (!raw) { raw = strings.slice(0); } strings.raw = raw; return strings; }
+
+
+
+
+
+
+
+
+var StyledAlert = styled_components_browser_esm["default"].div(Alert_templateObject(), Object(index_esm["compose"])(index_esm["space"], index_esm["layout"]), function (props) {
+  return props.fullWidth && 'width: 100%' || '';
+}, Alert_variants_color);
+var StyledTitle = styled_components_browser_esm["default"].h3(Alert_templateObject2());
+var StyledMessage = styled_components_browser_esm["default"].p(Alert_templateObject3());
+
+var Alert_Alert = function Alert(_ref) {
+  var children = _ref.children,
+      title = _ref.title,
+      message = _ref.message,
+      _ref$type = _ref.type,
+      type = _ref$type === void 0 ? {} : _ref$type,
+      rest = Alert_objectWithoutPropertiesLoose(_ref, ["children", "title", "message", "type"]);
+
+  return /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(StyledAlert, rest, /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(StyledTitle, null, title), /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(StyledMessage, null, message));
+};
+
+/* harmony default export */ var components_Alert_Alert = (Alert_Alert);
+// CONCATENATED MODULE: ./src/components/Alert/index.js
+
+/* harmony default export */ var components_Alert = (components_Alert_Alert);
+// CONCATENATED MODULE: ./src/components/Select/variants/size.js
+
+/* harmony default export */ var Select_variants_size = (function (props) {
+  return Object(index_esm["variant"])({
+    prop: 'size',
+    variants: {
+      huge: {
+        fontSize: 4
+      },
+      big: {
+        fontSize: 3
+      },
+      medium: {
+        fontSize: 2
+      },
+      small: {
+        fontSize: 1
+      }
+    }
+  });
+});
+// CONCATENATED MODULE: ./src/components/Select/variants/index.js
+
+
+// CONCATENATED MODULE: ./src/components/Select/Select.js
+function Select_extends() { Select_extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return Select_extends.apply(this, arguments); }
+
+function Select_templateObject() {
+  var data = Select_taggedTemplateLiteralLoose(["\n  border: 1px solid #dededf;\n  appearance: none;\n  line-height: inherit;\n  border-radius: 4px;\n  line-height: 2.1em;\n  outline: none;\n  padding-right: 1em;\n  padding-left: 1em;\n  width: 100%;\n  box-sizing: border-box;\n  background: #fff;\n  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iMTc2cHgiIGhlaWdodD0iOTBweCIgdmlld0JveD0iMCAwIDE3NiA5MCIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj4KICAgIDx0aXRsZT5UcmlhbmdsZTwvdGl0bGU+CiAgICA8ZyBpZD0iV2VsY29tZSIgc3Ryb2tlPSJub25lIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPGcgaWQ9IkFydGJvYXJkIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMTYuMDAwMDAwLCAtNy4wMDAwMDApIiBmaWxsPSIjNEQ0RDREIj4KICAgICAgICAgICAgPHBhdGggZD0iTTEwNS40MTQyMTQsOC40MTQyMTM1NiBMMTkwLjU4NTc4Niw5My41ODU3ODY0IEMxOTEuMzY2ODM1LDk0LjM2NjgzNSAxOTEuMzY2ODM1LDk1LjYzMzE2NSAxOTAuNTg1Nzg2LDk2LjQxNDIxMzYgQzE5MC4yMTA3MTQsOTYuNzg5Mjg2MyAxODkuNzAyMDA2LDk3IDE4OS4xNzE1NzMsOTcgTDE4LjgyODQyNzEsOTcgQzE3LjcyMzg1NzYsOTcgMTYuODI4NDI3MSw5Ni4xMDQ1Njk1IDE2LjgyODQyNzEsOTUgQzE2LjgyODQyNzEsOTQuNDY5NTY3IDE3LjAzOTE0MDgsOTMuOTYwODU5MiAxNy40MTQyMTM2LDkzLjU4NTc4NjQgTDEwMi41ODU3ODYsOC40MTQyMTM1NiBDMTAzLjM2NjgzNSw3LjYzMzE2NDk4IDEwNC42MzMxNjUsNy42MzMxNjQ5OCAxMDUuNDE0MjE0LDguNDE0MjEzNTYgWiIgaWQ9IlRyaWFuZ2xlIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxMDQuMDAwMDAwLCA1Mi4wMDAwMDApIHJvdGF0ZSgtMTgwLjAwMDAwMCkgdHJhbnNsYXRlKC0xMDQuMDAwMDAwLCAtNTIuMDAwMDAwKSAiPjwvcGF0aD4KICAgICAgICA8L2c+CiAgICA8L2c+Cjwvc3ZnPg==');\n  background-repeat: no-repeat, repeat;\n  cursor: pointer;\n  background-position: right 0.7em top 50%, 0 0;\n  background-size: 0.65em auto, 100%;\n  &::placeholder {\n    letter-spacing: 0px;\n    color: #b5b5b5;\n  }\n  &:focus {\n    box-shadow: 0 0 3px ", ";\n    border-color: ", ";\n  }\n  ", "\n"]);
+
+  Select_templateObject = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+
+function Select_taggedTemplateLiteralLoose(strings, raw) { if (!raw) { raw = strings.slice(0); } strings.raw = raw; return strings; }
+
+
+
+
+
+
+
+var StyledSelect = styled_components_browser_esm["default"].select(Select_templateObject(), function (_ref) {
+  var theme = _ref.theme,
+      color = _ref.color;
+  return new color_default.a(theme.colors[color]).fade(0.5).string();
+}, function (_ref2) {
+  var theme = _ref2.theme,
+      color = _ref2.color;
+  return theme.colors[color];
+}, Select_variants_size);
+
+var Select_Select = function Select(_ref3) {
+  var rest = Select_extends({}, _ref3);
+
+  return /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(StyledSelect, rest);
+};
+
+Select_Select.propTypes = Select_extends({}, dist_index_esm.size);
+Select_Select.defaultProps = {
+  size: 'medium',
+  color: 'blue'
+};
+/* harmony default export */ var components_Select_Select = (Select_Select);
+// CONCATENATED MODULE: ./src/components/Select/index.js
+
+/* harmony default export */ var components_Select = (components_Select_Select);
+// CONCATENATED MODULE: ./src/components/SelectField/SelectField.js
+function SelectField_extends() { SelectField_extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return SelectField_extends.apply(this, arguments); }
+
+function SelectField_objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
+
+function SelectField_templateObject() {
+  var data = SelectField_taggedTemplateLiteralLoose(["\n  display: block;\n  font-family: inherit;\n  ", "\n  label {\n    display: block;\n    margin-bottom: 0.4em;\n  }\n"]);
+
+  SelectField_templateObject = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+
+function SelectField_taggedTemplateLiteralLoose(strings, raw) { if (!raw) { raw = strings.slice(0); } strings.raw = raw; return strings; }
+
+
+
+
+
+
+
+
+var StyledSelectField = styled_components_browser_esm["default"].div(SelectField_templateObject(), Object(index_esm["compose"])(index_esm["space"], index_esm["layout"]));
+
+var SelectField_SelectField = function SelectField(_ref) {
+  var children = _ref.children,
+      label = _ref.label,
+      placeholder = _ref.placeholder,
+      name = _ref.name,
+      id = _ref.id,
+      value = _ref.value,
+      onChange = _ref.onChange,
+      required = _ref.required,
+      error = _ref.error,
+      _ref$inputProps = _ref.inputProps,
+      inputProps = _ref$inputProps === void 0 ? {} : _ref$inputProps,
+      rest = SelectField_objectWithoutPropertiesLoose(_ref, ["children", "label", "placeholder", "name", "id", "value", "onChange", "required", "error", "inputProps"]);
+
+  return /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(StyledSelectField, rest, /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(components_Label, {
+    htmlFor: id,
+    required: !!required
+  }, label), /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(components_Select, SelectField_extends({
+    id: id,
+    name: name,
+    placeholder: placeholder
+    /* controlled props */
+    ,
+    value: value,
+    onChange: onChange
+    /* validation props */
+    ,
+    required: !!required,
+    "aria-required": !!required,
+    "aria-invalid": !!error
+  }, inputProps), children));
+};
+
+SelectField_SelectField.propTypes = SelectField_extends({}, dist_index_esm.space, {}, dist_index_esm.layout, {
+  multiline: prop_types_default.a.bool
+});
+SelectField_SelectField.defaultProps = {
+  required: false,
+  error: false,
+  multiline: false
+};
+/* harmony default export */ var components_SelectField_SelectField = (SelectField_SelectField);
+// CONCATENATED MODULE: ./src/components/SelectField/index.js
+
+/* harmony default export */ var components_SelectField = (components_SelectField_SelectField);
 // CONCATENATED MODULE: ./src/index.js
+/* Theme */
+
+
+/* React Hooks */
+
+
+
+
+
+/* Components */
+
+
+
+
+
+
+
 
 
 

@@ -11,7 +11,7 @@ var _styledComponents = _interopRequireDefault(require("styled-components"));
 
 var _Label = _interopRequireDefault(require("../Label"));
 
-var _Input = _interopRequireDefault(require("../Input"));
+var _Select = _interopRequireDefault(require("../Select"));
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
@@ -19,10 +19,8 @@ var _styledSystem = require("styled-system");
 
 var _propTypes2 = _interopRequireDefault(require("@styled-system/prop-types"));
 
-var _Textarea = _interopRequireDefault(require("../Textarea"));
-
 var _this = void 0,
-    _jsxFileName = "/Users/rogeralbino/projects/Kazap/B-onuz/ui-components/src/components/TextField/TextField.js";
+    _jsxFileName = "/Users/rogeralbino/projects/Kazap/B-onuz/ui-components/src/components/SelectField/SelectField.js";
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
@@ -42,9 +40,9 @@ function _templateObject() {
 
 function _taggedTemplateLiteralLoose(strings, raw) { if (!raw) { raw = strings.slice(0); } strings.raw = raw; return strings; }
 
-var StyledTextField = _styledComponents["default"].div(_templateObject(), (0, _styledSystem.compose)(_styledSystem.space, _styledSystem.layout));
+var StyledSelectField = _styledComponents["default"].div(_templateObject(), (0, _styledSystem.compose)(_styledSystem.space, _styledSystem.layout));
 
-var TextField = function TextField(_ref) {
+var SelectField = function SelectField(_ref) {
   var children = _ref.children,
       label = _ref.label,
       placeholder = _ref.placeholder,
@@ -56,15 +54,13 @@ var TextField = function TextField(_ref) {
       error = _ref.error,
       _ref$inputProps = _ref.inputProps,
       inputProps = _ref$inputProps === void 0 ? {} : _ref$inputProps,
-      multiline = _ref.multiline,
-      rest = _objectWithoutPropertiesLoose(_ref, ["children", "label", "placeholder", "name", "id", "value", "onChange", "required", "error", "inputProps", "multiline"]);
+      rest = _objectWithoutPropertiesLoose(_ref, ["children", "label", "placeholder", "name", "id", "value", "onChange", "required", "error", "inputProps"]);
 
-  var InputComponent = multiline ? _Textarea["default"] : _Input["default"];
-  return /*#__PURE__*/_react["default"].createElement(StyledTextField, _extends({}, rest, {
+  return /*#__PURE__*/_react["default"].createElement(StyledSelectField, _extends({}, rest, {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 23,
+      lineNumber: 21,
       columnNumber: 5
     }
   }), /*#__PURE__*/_react["default"].createElement(_Label["default"], {
@@ -73,10 +69,10 @@ var TextField = function TextField(_ref) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 24,
+      lineNumber: 22,
       columnNumber: 7
     }
-  }, label), /*#__PURE__*/_react["default"].createElement(InputComponent, _extends({
+  }, label), /*#__PURE__*/_react["default"].createElement(_Select["default"], _extends({
     id: id,
     name: name,
     placeholder: placeholder
@@ -93,19 +89,19 @@ var TextField = function TextField(_ref) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 27,
+      lineNumber: 25,
       columnNumber: 7
     }
-  })));
+  }), children));
 };
 
-TextField.propTypes = process.env.NODE_ENV !== "production" ? _extends({}, _propTypes2["default"].space, {}, _propTypes2["default"].layout, {
+SelectField.propTypes = process.env.NODE_ENV !== "production" ? _extends({}, _propTypes2["default"].space, {}, _propTypes2["default"].layout, {
   multiline: _propTypes["default"].bool
 }) : {};
-TextField.defaultProps = {
+SelectField.defaultProps = {
   required: false,
   error: false,
   multiline: false
 };
-var _default = TextField;
+var _default = SelectField;
 exports["default"] = _default;
