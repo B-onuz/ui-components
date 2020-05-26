@@ -2,6 +2,23 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.0.0](https://github.com/B-onuz/ui-components/compare/v1.5.1...v2.0.0) (2020-05-26)
+
+### ⚠ BREAKING CHANGES
+
+- **pagination:** fix pagination hover
+
+### Features
+
+- **alert:** add alert components ([#10](https://github.com/B-onuz/ui-components/issues/10)) ([e8f7598](https://github.com/B-onuz/ui-components/commit/e8f7598a09fdbede3bc6fa0c1f560650f100f752))
+- **forms:** add Select component ([#11](https://github.com/B-onuz/ui-components/issues/11)) ([56cdb6b](https://github.com/B-onuz/ui-components/commit/56cdb6bdbbad8c16b2344e5bd07c334fc6ec71a5))
+- **table:** add cellComponent property to header ([#8](https://github.com/B-onuz/ui-components/issues/8)) ([4329895](https://github.com/B-onuz/ui-components/commit/432989588c9e73b6efe6ee6b1934bcccd38ef577))
+- **textarea:** add multiline prop to TextField, and create Textarea ([#9](https://github.com/B-onuz/ui-components/issues/9)) ([4fd7550](https://github.com/B-onuz/ui-components/commit/4fd7550c74f0a8c803a8f82134437a60b3ea6b31))
+
+### Bug Fixes
+
+- **pagination:** pagination hover ([#7](https://github.com/B-onuz/ui-components/issues/7)) ([8bbf17c](https://github.com/B-onuz/ui-components/commit/8bbf17c54a700a6baca5e1cfacb321ac037b215d))
+
 ### [1.5.1](https://github.com/B-onuz/ui-components/compare/v1.5.0...v1.5.1) (2020-05-22)
 
 ## [1.5.0](https://github.com/B-onuz/ui-components/compare/v1.4.0...v1.5.0) (2020-05-22)
