@@ -12,6 +12,10 @@ Biblioteca de Componentes de User Interface para projetos da **B-onuz**.
 - jest (https://jestjs.io/)
 - Storybook (https://storybook.js.org/)
 
+## Components DOCS
+
+- Documentação dos componentes [instalação](docs/components)
+
 ## Instalação
 
 Manual de instalação [instalação](docs/guides/installation.md)
