@@ -15,7 +15,6 @@ const Button = styled.button`
   cursor: pointer;
   padding: .5rem 1rem;
   border-style: solid;
-  color: #000;
   ${color}
   ${size}
   ${space}
@@ -40,6 +39,18 @@ const Button = styled.button`
     `
     cursor: progress;
   `}
+  
+  ${({ outline, theme, color }) =>
+    !!outline &&
+    `
+    background-color: #fff;
+    color: ${theme.colors[color]} !important;
+    border-color: ${theme.colors[color]};
+    &:hover {
+      background-color: ${theme.colors[color]};
+      color: ${new Color(theme.colors[color]).isDark() ? '#fff' : '#000'} !important;
+    }
+    `}
 `
 
 Button.displayName = 'Button'

@@ -113,3 +113,68 @@ export const Fullwidth = () => (
     </Box>
   </Flex>
 )
+
+export const Outline = () => (
+  <div>
+    <Button outline m={2}>
+      {'Default'}
+    </Button>
+    <Button outline m={2} color={'default'}>
+      {'Default'}
+    </Button>
+    <Button outline m={2} color={'primary'}>
+      {'Primary'}
+    </Button>
+    <Button outline m={2} color={'secondary'}>
+      {'Secondary'}
+    </Button>
+    <Button outline m={2} color={'fullDarkRed'}>
+      {'fullDarkRed'}
+    </Button>
+    <Button outline m={2} color={'darkRed'}>
+      {'darkRed'}
+    </Button>
+    <Button outline m={2} color={'lightRed'}>
+      {'lightRed'}
+    </Button>
+    <Button outline m={2} color={'red'}>
+      {'red'}
+    </Button>
+    <Button outline m={2} color={'orange'}>
+      {'orange'}
+    </Button>
+    <Button outline m={2} color={'yellow'}>
+      {'yellow'}
+    </Button>
+    <Button outline m={2} color={'olive'}>
+      {'olive'}
+    </Button>
+    <Button outline m={2} color={'green'}>
+      {'green'}
+    </Button>
+    <Button outline m={2} color={'teal'}>
+      {'teal'}
+    </Button>
+    <Button outline m={2} color={'blue'}>
+      {'blue'}
+    </Button>
+    <Button outline m={2} color={'violet'}>
+      {'violet'}
+    </Button>
+    <Button outline m={2} color={'purple'}>
+      {'purple'}
+    </Button>
+    <Button outline m={2} color={'pink'}>
+      {'pink'}
+    </Button>
+    <Button outline m={2} color={'brown'}>
+      {'brown'}
+    </Button>
+    <Button outline m={2} color={'grey'}>
+      {'grey'}
+    </Button>
+    <Button outline m={2} color={'black'}>
+      {'black'}
+    </Button>
+  </div>
+)

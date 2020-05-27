@@ -22,6 +22,14 @@ import Button from 'ui-components/lib/components/Button'
 
 Escala no tema: `theme.colors`
 
+### Outline
+
+A prop outline é passada como boolean
+
+```jsx
+<Button outline>Enviar</Button>
+```
+
 ### Size
 
 ```jsx
