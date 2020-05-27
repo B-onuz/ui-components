@@ -12,7 +12,6 @@ exports[`Should render button 1`] = `
   padding: .5rem 1rem;
   border-style: solid;
   color: #000;
-  color: #000;
   background-color: #e0e1e2;
   border-color: #e0e1e2;
   font-size: 16px;
@@ -60,7 +59,6 @@ Array [
   padding: .5rem 1rem;
   border-style: solid;
   color: #000;
-  color: #000;
   background-color: #e0e1e2;
   border-color: #e0e1e2;
   font-size: 16px;
@@ -105,7 +103,6 @@ Array [
   padding: .5rem 1rem;
   border-style: solid;
   color: #000;
-  color: #000;
   background-color: #e0e1e2;
   border-color: #e0e1e2;
   font-size: 16px;
@@ -149,7 +146,6 @@ Array [
   cursor: pointer;
   padding: .5rem 1rem;
   border-style: solid;
-  color: #000;
   color: #fff;
   background-color: #ef4d5a;
   border-color: #ef4d5a;
@@ -194,7 +190,6 @@ Array [
   cursor: pointer;
   padding: .5rem 1rem;
   border-style: solid;
-  color: #000;
   color: #fff;
   background-color: #550e33;
   border-color: #550e33;
@@ -239,7 +234,6 @@ Array [
   cursor: pointer;
   padding: .5rem 1rem;
   border-style: solid;
-  color: #000;
   color: #fff;
   background-color: #550e33;
   border-color: #550e33;
@@ -284,7 +278,6 @@ Array [
   cursor: pointer;
   padding: .5rem 1rem;
   border-style: solid;
-  color: #000;
   color: #fff;
   background-color: #9c2543;
   border-color: #9c2543;
@@ -329,7 +322,6 @@ Array [
   cursor: pointer;
   padding: .5rem 1rem;
   border-style: solid;
-  color: #000;
   color: #fff;
   background-color: #ef4d5a;
   border-color: #ef4d5a;
@@ -374,7 +366,6 @@ Array [
   cursor: pointer;
   padding: .5rem 1rem;
   border-style: solid;
-  color: #000;
   color: #fff;
   background-color: #db2828;
   border-color: #db2828;
@@ -420,7 +411,6 @@ Array [
   padding: .5rem 1rem;
   border-style: solid;
   color: #000;
-  color: #000;
   background-color: #f2711c;
   border-color: #f2711c;
   font-size: 16px;
@@ -464,7 +454,6 @@ Array [
   cursor: pointer;
   padding: .5rem 1rem;
   border-style: solid;
-  color: #000;
   color: #000;
   background-color: #fbbd08;
   border-color: #fbbd08;
@@ -510,7 +499,6 @@ Array [
   padding: .5rem 1rem;
   border-style: solid;
   color: #000;
-  color: #000;
   background-color: #b5cc18;
   border-color: #b5cc18;
   font-size: 16px;
@@ -554,7 +542,6 @@ Array [
   cursor: pointer;
   padding: .5rem 1rem;
   border-style: solid;
-  color: #000;
   color: #fff;
   background-color: #21BA45;
   border-color: #21BA45;
@@ -599,7 +586,6 @@ Array [
   cursor: pointer;
   padding: .5rem 1rem;
   border-style: solid;
-  color: #000;
   color: #fff;
   background-color: #00b5ad;
   border-color: #00b5ad;
@@ -644,7 +630,6 @@ Array [
   cursor: pointer;
   padding: .5rem 1rem;
   border-style: solid;
-  color: #000;
   color: #fff;
   background-color: #2185d0;
   border-color: #2185d0;
@@ -689,7 +674,6 @@ Array [
   cursor: pointer;
   padding: .5rem 1rem;
   border-style: solid;
-  color: #000;
   color: #fff;
   background-color: #6435c9;
   border-color: #6435c9;
@@ -734,7 +718,6 @@ Array [
   cursor: pointer;
   padding: .5rem 1rem;
   border-style: solid;
-  color: #000;
   color: #fff;
   background-color: #a333c8;
   border-color: #a333c8;
@@ -779,7 +762,6 @@ Array [
   cursor: pointer;
   padding: .5rem 1rem;
   border-style: solid;
-  color: #000;
   color: #fff;
   background-color: #e03997;
   border-color: #e03997;
@@ -824,7 +806,6 @@ Array [
   cursor: pointer;
   padding: .5rem 1rem;
   border-style: solid;
-  color: #000;
   color: #fff;
   background-color: #a5673f;
   border-color: #a5673f;
@@ -869,7 +850,6 @@ Array [
   cursor: pointer;
   padding: .5rem 1rem;
   border-style: solid;
-  color: #000;
   color: #fff;
   background-color: #767676;
   border-color: #767676;
@@ -914,7 +894,6 @@ Array [
   cursor: pointer;
   padding: .5rem 1rem;
   border-style: solid;
-  color: #000;
   color: #fff;
   background-color: #1b1c1d;
   border-color: #1b1c1d;
@@ -965,7 +944,6 @@ Array [
   padding: .5rem 1rem;
   border-style: solid;
   color: #000;
-  color: #000;
   background-color: #e0e1e2;
   border-color: #e0e1e2;
   font-size: 14px;
@@ -1009,7 +987,6 @@ Array [
   cursor: pointer;
   padding: .5rem 1rem;
   border-style: solid;
-  color: #000;
   color: #000;
   background-color: #e0e1e2;
   border-color: #e0e1e2;
@@ -1055,7 +1032,6 @@ Array [
   padding: .5rem 1rem;
   border-style: solid;
   color: #000;
-  color: #000;
   background-color: #e0e1e2;
   border-color: #e0e1e2;
   font-size: 20px;
@@ -1100,7 +1076,6 @@ Array [
   padding: .5rem 1rem;
   border-style: solid;
   color: #000;
-  color: #000;
   background-color: #e0e1e2;
   border-color: #e0e1e2;
   font-size: 24px;
@@ -1135,4 +1110,59 @@ Array [
     Secondary
   </button>,
 ]
+`;
+
+exports[`Should render outlined button when outline prop 1`] = `
+.c0 {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  font-family: inherit;
+  border-radius: 4px;
+  outline: none;
+  cursor: pointer;
+  padding: .5rem 1rem;
+  border-style: solid;
+  color: #000;
+  background-color: #e0e1e2;
+  border-color: #e0e1e2;
+  font-size: 16px;
+  margin: 8px;
+  box-sizing: border-box;
+  background-color: #fff;
+  color: #e0e1e2 !important;
+  border-color: #e0e1e2;
+}
+
+.c0:focus {
+  box-shadow: 0 0 8px #e0e1e2;
+}
+
+.c0:active:not(:disabled) {
+  box-shadow: inset 0px 0px 5px #c1c1c1;
+}
+
+.c0:active,
+.c0:hover {
+  background-color: hsl(210,3.7%,70.6%);
+}
+
+.c0:disabled {
+  background-color: hsl(210,2%,97.1%);
+}
+
+.c0:hover {
+  background-color: #e0e1e2;
+  color: #000 !important;
+}
+
+<button
+  className="c0"
+  color="default"
+  disabled={false}
+  size="medium"
+  type="button"
+>
+  Outline button
+</button>
 `;

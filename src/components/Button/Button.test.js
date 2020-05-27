@@ -84,7 +84,7 @@ test('Should render button when bg prop', () => {
 
 test('Should render button when size prop', () => {
   const component = renderer.create(
-    <ThemeProvider theme={theme} theme={theme}>
+    <ThemeProvider theme={theme}>
       <Button m={2} size={'small'}>
         {'Default'}
       </Button>
@@ -96,6 +96,18 @@ test('Should render button when size prop', () => {
       </Button>
       <Button m={2} size={'huge'}>
         {'Secondary'}
+      </Button>
+    </ThemeProvider>
+  )
+  let tree = component.toJSON()
+  expect(tree).toMatchSnapshot()
+})
+
+test('Should render outlined button when outline prop', () => {
+  const component = renderer.create(
+    <ThemeProvider theme={theme}>
+      <Button m={2} outline>
+        {'Outline button'}
       </Button>
     </ThemeProvider>
   )

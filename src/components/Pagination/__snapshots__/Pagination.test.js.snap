@@ -11,7 +11,6 @@ exports[`when render Pagination 1`] = `
   cursor: pointer;
   padding: .5rem 1rem;
   border-style: solid;
-  color: #000;
   color: #fff;
   background-color: #ef4d5a;
   border-color: #ef4d5a;
