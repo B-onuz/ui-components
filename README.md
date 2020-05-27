@@ -14,7 +14,7 @@ Biblioteca de Componentes de User Interface para projetos da **B-onuz**.
 
 ## Components DOCS
 
-- Documentação dos componentes [instalação](docs/components)
+- Documentação dos componentes [Documentação](docs/components)
 
 ## Instalação
 
