@@ -3,6 +3,7 @@ export theme from './theme'
 /* React Hooks */
 export useSearchTerm from './hooks/useSearchTerm'
 export useTableOrder from './hooks/useTableOrder'
+export useModal from './hooks/useModal'
 /* Components */
 export Button from './components/Button'
 export TextField from './components/TextField'
@@ -27,3 +28,4 @@ export Alert from './components/Alert'
 export Select from './components/Select'
 export SelectField from './components/SelectField'
 export SearchField from './components/SearchField'
+export Modal from './components/Modal'
