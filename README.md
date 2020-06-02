@@ -3,6 +3,7 @@
 Biblioteca de Componentes de User Interface para projetos da **B-onuz**.
 
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
+![Node.js CI](https://github.com/B-onuz/ui-components/workflows/Node.js%20CI/badge.svg)
 
 ## Stack
 
