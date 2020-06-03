@@ -27,3 +27,5 @@ export Alert from './components/Alert'
 export Select from './components/Select'
 export SelectField from './components/SelectField'
 export SearchField from './components/SearchField'
+
+export ContextMenu from './components/ContextMenu'

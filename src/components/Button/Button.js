@@ -51,6 +51,22 @@ const Button = styled.button`
       color: ${new Color(theme.colors[color]).isDark() ? '#fff' : '#000'} !important;
     }
     `}
+
+  ${({ linkButton, theme, color }) =>
+    !!linkButton &&
+    `
+    color: ${theme.colors[color]};
+    border: none;
+    background-color: transparent;
+    &:hover {
+      text-decoration: underline;
+      background-color: transparent
+    }
+    &:focus {
+      outline: none;
+      box-shadow: none
+    }
+    `} 
 `
 
 Button.displayName = 'Button'
