@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.2.0](https://github.com/B-onuz/ui-components/compare/v2.1.0...v2.2.0) (2020-06-03)
+
+### Features
+
+- **components:** implement context menu component ([#17](https://github.com/B-onuz/ui-components/issues/17)) ([74d23a9](https://github.com/B-onuz/ui-components/commit/74d23a9791b4aa7ce7114a1aa2554fc2c43eca98))
+
 ## [2.1.0](https://github.com/B-onuz/ui-components/compare/v2.0.0...v2.1.0) (2020-06-02)
 
 ### Features
