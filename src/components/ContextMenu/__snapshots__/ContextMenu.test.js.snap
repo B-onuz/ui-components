@@ -1,0 +1,101 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Should render ContextMenu 1`] = `
+.c0 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c1 {
+  width: 2em;
+  height: 2em;
+  border-radius: 50%;
+  box-shadow: 0px 2px 3px #2c282848;
+  border: none;
+}
+
+.c1:hover {
+  cursor: pointer;
+}
+
+.c1:focus {
+  outline: none;
+}
+
+.c3 {
+  position: absolute;
+  border-radius: 12px;
+  opacity: 0;
+  z-index: -100;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 8px 16px;
+  background: #fff 0% 0% no-repeat padding-box;
+  box-shadow: 0px 2px 6px #2c28281c;
+  -webkit-transition: all 300ms;
+  transition: all 300ms;
+  right: calc(100% + 24px);
+  top: -50%;
+}
+
+.c3::after {
+  content: '';
+  width: 1em;
+  height: 1em;
+  position: absolute;
+  box-shadow: 1px 2px 2px -1px #2c28281c;
+  background: #fff 0% 0%;
+  right: -0.5em;
+  top: 1.6em;
+  -webkit-transform: rotateZ(-45deg);
+  -ms-transform: rotateZ(-45deg);
+  transform: rotateZ(-45deg);
+}
+
+.c2 {
+  color: #9A9A9A;
+}
+
+<div
+  className="c0"
+>
+  <button
+    className="c1"
+    onClick={[Function]}
+  >
+    <svg
+      aria-hidden="true"
+      className="svg-inline--fa fa-ellipsis-h fa-w-16 c2"
+      data-icon="ellipsis-h"
+      data-prefix="fas"
+      focusable="false"
+      role="img"
+      style={Object {}}
+      viewBox="0 0 512 512"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M328 256c0 39.8-32.2 72-72 72s-72-32.2-72-72 32.2-72 72-72 72 32.2 72 72zm104-72c-39.8 0-72 32.2-72 72s32.2 72 72 72 72-32.2 72-72-32.2-72-72-72zm-352 0c-39.8 0-72 32.2-72 72s32.2 72 72 72 72-32.2 72-72-32.2-72-72-72z"
+        fill="currentColor"
+        style={Object {}}
+      />
+    </svg>
+  </button>
+  <div
+    className="c3"
+    direction="left"
+  />
+</div>
+`;

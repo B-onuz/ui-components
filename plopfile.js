@@ -64,4 +64,22 @@ module.exports = function (plop) {
       },
     ],
   })
+
+  plop.setGenerator('component:test', {
+    description: 'Create a new component test',
+    prompts: [
+      {
+        type: 'input',
+        name: 'name',
+        message: 'component name please',
+      },
+    ],
+    actions: [
+      {
+        type: 'add',
+        path: 'src/components/{{pascalCase name}}/{{pascalCase name}}.test.js',
+        templateFile: 'plop-templates/component.test.js.hbs',
+      },
+    ],
+  })
 }

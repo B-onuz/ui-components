@@ -1,16 +1,16 @@
 import React from 'react'
-import {{pascalCase name}} from './{{pascalCase name}}.js'
+import ContextMenu from './ContextMenu.js'
 import renderer from 'react-test-renderer'
 import { ThemeProvider } from 'styled-components'
 import theme from '../../theme'
 import 'jest-styled-components'
 
-test('Should render {{pascalCase name}}', () => {
+test('Should render ContextMenu', () => {
   const component = renderer.create(
     <ThemeProvider theme={theme}>
-      <{{pascalCase name}} />
+      <ContextMenu />
     </ThemeProvider>
-  );
+  )
   let tree = component.toJSON()
   expect(tree).toMatchSnapshot()
 })

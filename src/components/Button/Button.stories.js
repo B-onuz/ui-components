@@ -178,3 +178,9 @@ export const Outline = () => (
     </Button>
   </div>
 )
+
+export const LinkButton = () => (
+  <Button linkButton m={2} color={'primary'}>
+    {'Link Button'}
+  </Button>
+)
