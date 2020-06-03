@@ -165,6 +165,12 @@ Object.defineProperty(exports, "SearchField", {
     return _SearchField2["default"];
   }
 });
+Object.defineProperty(exports, "ContextMenu", {
+  enumerable: true,
+  get: function get() {
+    return _ContextMenu2["default"];
+  }
+});
 Object.defineProperty(exports, "Modal", {
   enumerable: true,
   get: function get() {
@@ -225,6 +231,8 @@ var _Select2 = _interopRequireDefault(require("./components/Select"));
 var _SelectField2 = _interopRequireDefault(require("./components/SelectField"));
 
 var _SearchField2 = _interopRequireDefault(require("./components/SearchField"));
+
+var _ContextMenu2 = _interopRequireDefault(require("./components/ContextMenu"));
 
 var _Modal2 = _interopRequireDefault(require("./components/Modal"));
 

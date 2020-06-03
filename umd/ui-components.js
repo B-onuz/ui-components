@@ -1,4 +1,4 @@
-/*! ui-components v2.0.0 */
+/*! ui-components v2.1.0 */
 (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
 		module.exports = factory(require("react"));
@@ -9965,6 +9965,7 @@ __webpack_require__.d(__webpack_exports__, "Alert", function() { return /* reexp
 __webpack_require__.d(__webpack_exports__, "Select", function() { return /* reexport */ components_Select; });
 __webpack_require__.d(__webpack_exports__, "SelectField", function() { return /* reexport */ components_SelectField; });
 __webpack_require__.d(__webpack_exports__, "SearchField", function() { return /* reexport */ components_SearchField; });
+__webpack_require__.d(__webpack_exports__, "ContextMenu", function() { return /* reexport */ components_ContextMenu; });
 __webpack_require__.d(__webpack_exports__, "Modal", function() { return /* reexport */ components_Modal; });
 
 // CONCATENATED MODULE: ./src/theme/index.js
@@ -10266,7 +10267,7 @@ function Button_objectWithoutPropertiesLoose(source, excluded) { if (source == n
 function Button_extends() { Button_extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return Button_extends.apply(this, arguments); }
 
 function Button_templateObject() {
-  var data = Button_taggedTemplateLiteralLoose(["\n  appearance: none;\n  font-family: inherit;\n  border-radius: 4px;\n  outline: none;\n  cursor: pointer;\n  padding: .5rem 1rem;\n  border-style: solid;\n  ", "\n  ", "\n  ", "\n  ", "\n  box-sizing: border-box;\n  &:focus {\n    box-shadow: 0 0 8px ", ";\n  }\n  \n  &:active:not(:disabled) {\n    box-shadow: inset 0px 0px 5px #c1c1c1;\n  }\n  &:active,\n  &:hover {\n    background-color: ", ";\n  }\n  &:disabled {\n    background-color: ", ";\n  }\n  ", "\n  \n  ", "\n"]);
+  var data = Button_taggedTemplateLiteralLoose(["\n  appearance: none;\n  font-family: inherit;\n  border-radius: 4px;\n  outline: none;\n  cursor: pointer;\n  padding: .5rem 1rem;\n  border-style: solid;\n  ", "\n  ", "\n  ", "\n  ", "\n  box-sizing: border-box;\n  &:focus {\n    box-shadow: 0 0 8px ", ";\n  }\n  \n  &:active:not(:disabled) {\n    box-shadow: inset 0px 0px 5px #c1c1c1;\n  }\n  &:active,\n  &:hover {\n    background-color: ", ";\n  }\n  &:disabled {\n    background-color: ", ";\n  }\n  ", "\n  \n  ", "\n\n  ", " \n"]);
 
   Button_templateObject = function _templateObject() {
     return data;
@@ -10307,6 +10308,11 @@ var Button = styled_components_browser_esm["default"].button(Button_templateObje
       theme = _ref5.theme,
       color = _ref5.color;
   return !!outline && "\n    background-color: #fff;\n    color: " + theme.colors[color] + " !important;\n    border-color: " + theme.colors[color] + ";\n    &:hover {\n      background-color: " + theme.colors[color] + ";\n      color: " + (new color_default.a(theme.colors[color]).isDark() ? '#fff' : '#000') + " !important;\n    }\n    ";
+}, function (_ref6) {
+  var linkButton = _ref6.linkButton,
+      theme = _ref6.theme,
+      color = _ref6.color;
+  return !!linkButton && "\n    color: " + theme.colors[color] + ";\n    border: none;\n    background-color: transparent;\n    &:hover {\n      text-decoration: underline;\n      background-color: transparent\n    }\n    &:focus {\n      outline: none;\n      box-shadow: none\n    }\n    ";
 });
 Button.displayName = 'Button';
 Button.propTypes = Button_extends({
@@ -10318,11 +10324,11 @@ Button.defaultProps = {
   color: 'default',
   type: 'button'
 };
-/* harmony default export */ var Button_Button = (function (_ref6) {
-  var children = _ref6.children,
-      loading = _ref6.loading,
-      disabled = _ref6.disabled,
-      rest = Button_objectWithoutPropertiesLoose(_ref6, ["children", "loading", "disabled"]);
+/* harmony default export */ var Button_Button = (function (_ref7) {
+  var children = _ref7.children,
+      loading = _ref7.loading,
+      disabled = _ref7.disabled,
+      rest = Button_objectWithoutPropertiesLoose(_ref7, ["children", "loading", "disabled"]);
 
   return /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(Button, Button_extends({}, rest, {
     disabled: !!disabled || !!loading,
@@ -18195,6 +18201,177 @@ var SearchField_SearchField = function SearchField(_ref2) {
 // CONCATENATED MODULE: ./src/components/SearchField/index.js
 
 /* harmony default export */ var components_SearchField = (components_SearchField_SearchField);
+// CONCATENATED MODULE: ./src/components/ContextMenu/ContextMenu.js
+function ContextMenu_extends() { ContextMenu_extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return ContextMenu_extends.apply(this, arguments); }
+
+function ContextMenu_objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
+
+function ContextMenu_templateObject5() {
+  var data = ContextMenu_taggedTemplateLiteralLoose(["\n  color: ", ";\n"]);
+
+  ContextMenu_templateObject5 = function _templateObject5() {
+    return data;
+  };
+
+  return data;
+}
+
+function ContextMenu_templateObject4() {
+  var data = ContextMenu_taggedTemplateLiteralLoose(["\n  width: 100%;\n  margin: 8px 0;\n  border: 1px solid #f1f1f3;\n"]);
+
+  ContextMenu_templateObject4 = function _templateObject4() {
+    return data;
+  };
+
+  return data;
+}
+
+function ContextMenu_templateObject3() {
+  var data = ContextMenu_taggedTemplateLiteralLoose(["\n  position: absolute;\n  border-radius: 12px;\n  opacity: ", ";\n  z-index: ", ";\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  padding: 8px 16px;\n  background: #fff 0% 0% no-repeat padding-box;\n  box-shadow: 0px 2px 6px #2c28281c;\n  transition: all 300ms;\n\n  ", "\n  &::after {\n    content: '';\n    width: 1em;\n    height: 1em;\n    position: absolute;\n    box-shadow: 1px 2px 2px -1px #2c28281c;\n    background: #fff 0% 0%;\n    ", "\n  }\n"]);
+
+  ContextMenu_templateObject3 = function _templateObject3() {
+    return data;
+  };
+
+  return data;
+}
+
+function ContextMenu_templateObject2() {
+  var data = ContextMenu_taggedTemplateLiteralLoose(["\n  width: 2em;\n  height: 2em;\n  border-radius: 50%;\n  box-shadow: 0px 2px 3px #2c282848;\n  border: none;\n  &:hover {\n    cursor: pointer;\n  }\n  &:focus {\n    outline: none;\n  }\n"]);
+
+  ContextMenu_templateObject2 = function _templateObject2() {
+    return data;
+  };
+
+  return data;
+}
+
+function ContextMenu_templateObject() {
+  var data = ContextMenu_taggedTemplateLiteralLoose(["\n  ", "\n  ", "\n  position: relative;\n  display: flex;\n"]);
+
+  ContextMenu_templateObject = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+
+function ContextMenu_taggedTemplateLiteralLoose(strings, raw) { if (!raw) { raw = strings.slice(0); } strings.raw = raw; return strings; }
+
+
+
+
+
+
+
+var StyledContextMenu = styled_components_browser_esm["default"].div(ContextMenu_templateObject(), index_esm["color"], index_esm["space"]);
+var ContextMenuToogleButton = styled_components_browser_esm["default"].button(ContextMenu_templateObject2());
+var ContextDialogMenu = styled_components_browser_esm["default"].div(ContextMenu_templateObject3(), function (_ref) {
+  var isOpen = _ref.isOpen;
+  return isOpen ? 1 : 0;
+}, function (_ref2) {
+  var isOpen = _ref2.isOpen;
+  return isOpen ? 1 : -100;
+}, function (_ref3) {
+  var direction = _ref3.direction;
+
+  if (direction === 'left') {
+    return "\n      right: calc(100% + 24px);\n      top: -50%;\n    ";
+  }
+
+  if (direction === 'right') {
+    return "\n      left: calc(100% + 24px);\n      top: -50%;\n    ";
+  }
+
+  if (direction === 'top') {
+    return "\n      left: 50%;\n      transform: translateX(-50%);\n      bottom: calc(100% + 1.5em);\n    ";
+  }
+
+  if (direction === 'bottom') {
+    return "\n      transform: translateX(-50%);\n      left: 50%;\n      top: calc(100% + 1.5em);\n    ";
+  }
+}, function (_ref4) {
+  var direction = _ref4.direction;
+
+  if (direction === 'left') {
+    return "\n      right: -0.5em;\n      top: 1.6em;\n      transform: rotateZ(-45deg);\n    ";
+  }
+
+  if (direction === 'right') {
+    return "\n      left: -0.5em;\n      top: 1.6em;\n      transform: rotateZ(135deg);\n    ";
+  }
+
+  if (direction === 'top') {
+    return "\n      top: calc(100% - 0.5em);\n      transform: rotateZ(45deg);\n      left: 0;\n      right: 0;\n      margin: auto;\n    ";
+  }
+
+  if (direction === 'bottom') {
+    return "\n      bottom: calc(100% - 0.5em);\n      transform: rotateZ(-135deg);\n      left: 0;\n      right: 0;\n      margin: auto;\n    ";
+  }
+});
+var Divider = styled_components_browser_esm["default"].hr(ContextMenu_templateObject4());
+var ContextMenu_Icon = Object(styled_components_browser_esm["default"])(FontAwesomeIcon)(ContextMenu_templateObject5(), function (_ref5) {
+  var theme = _ref5.theme;
+  return theme.colors.darkGrey;
+});
+
+var ContextMenu_ContextMenu = function ContextMenu(_ref6) {
+  var children = _ref6.children,
+      direction = _ref6.direction,
+      contextMenuActions = _ref6.contextMenuActions,
+      rest = ContextMenu_objectWithoutPropertiesLoose(_ref6, ["children", "direction", "contextMenuActions"]);
+
+  var _useState = Object(external_root_React_commonjs2_react_commonjs_react_amd_react_["useState"])(false),
+      isOpen = _useState[0],
+      setIsOpen = _useState[1];
+
+  var wrapperRef = Object(external_root_React_commonjs2_react_commonjs_react_amd_react_["useRef"])(null);
+
+  var useOutsideAlerter = function useOutsideAlerter(ref) {
+    Object(external_root_React_commonjs2_react_commonjs_react_amd_react_["useEffect"])(function () {
+      function handleClickOutside(event) {
+        if (ref.current && !ref.current.contains(event.target)) {
+          setIsOpen(false);
+        }
+      }
+
+      document.addEventListener('mousedown', handleClickOutside);
+      return function () {
+        document.removeEventListener('mousedown', handleClickOutside);
+      };
+    }, [ref]);
+  };
+
+  useOutsideAlerter(wrapperRef);
+  return /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(StyledContextMenu, ContextMenu_extends({
+    ref: wrapperRef
+  }, rest), /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(ContextMenuToogleButton, {
+    onClick: function onClick() {
+      return setIsOpen(!isOpen);
+    }
+  }, /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(ContextMenu_Icon, {
+    icon: faEllipsisH
+  })), /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(ContextDialogMenu, {
+    isOpen: isOpen,
+    direction: direction
+  }, (contextMenuActions || []).map(function (action, index) {
+    return /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.Fragment, null, /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(components_Button, {
+      linkButton: true,
+      color: 'primary',
+      onClick: function onClick() {
+        return action.buttonFunction();
+      }
+    }, action.text), index + 1 !== contextMenuActions.length ? /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(Divider, null) : null);
+  })));
+};
+
+ContextMenu_ContextMenu.defaultProps = {
+  direction: 'left'
+};
+/* harmony default export */ var components_ContextMenu_ContextMenu = (ContextMenu_ContextMenu);
+// CONCATENATED MODULE: ./src/components/ContextMenu/index.js
+
+/* harmony default export */ var components_ContextMenu = (components_ContextMenu_ContextMenu);
 // EXTERNAL MODULE: ./node_modules/react-dom/index.js
 var react_dom = __webpack_require__(23);
 var react_dom_default = /*#__PURE__*/__webpack_require__.n(react_dom);
@@ -20361,6 +20538,8 @@ var Modal_Modal = function Modal(_ref) {
 
 
 /* Components */
+
+
 
 
 
