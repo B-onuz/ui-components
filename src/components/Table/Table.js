@@ -23,6 +23,7 @@ const TableHeader = styled.th`
   padding: 1em;
   position: relative;
   position: sticky;
+  z-index: 2;
   top: 0;
   background: #f1f3f8;
   padding: 13px 40px;
