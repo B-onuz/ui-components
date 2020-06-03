@@ -1,10 +1,15 @@
 import React from 'react'
 import {{pascalCase name}} from './{{pascalCase name}}.js'
 import renderer from 'react-test-renderer'
+import { ThemeProvider } from 'styled-components'
+import theme from '../../theme'
+import 'jest-styled-components'
 
-test('{{pascalCase name}} changes the class when hovered', () => {
+test('Should render {{pascalCase name}}', () => {
   const component = renderer.create(
-    <{{pascalCase name}} />
+    <ThemeProvider theme={theme}>
+      <{{pascalCase name}} />
+    </ThemeProvider>
   );
   let tree = component.toJSON()
   expect(tree).toMatchSnapshot()

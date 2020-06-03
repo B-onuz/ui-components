@@ -161,4 +161,8 @@ const ContextMenu = ({ children, direction, contextMenuActions, ...rest }) => {
   )
 }
 
+ContextMenu.defaultProps = {
+  direction: 'left',
+}
+
 export default ContextMenu

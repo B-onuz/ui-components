@@ -1,6 +1,6 @@
 # ContextMenu (Component)
 
-[Descrição do componente e onde usar]
+Componente de menu de ações vinculados a um button
 
 ## Como utilizar
 
@@ -57,10 +57,3 @@ export const ContextMenuExample = () => (
   </Flex>
 )
 ```
-
-Escala no tema: `theme.variantScale`
-
-## Styled-system props
-
-- space https://styled-system.com/table#space
-- layout https://styled-system.com/table#layout
