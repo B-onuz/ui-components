@@ -20,6 +20,7 @@ var colors = {
   pink: '#e03997',
   brown: '#a5673f',
   grey: '#767676',
+  darkGrey: '#9A9A9A',
   black: '#1b1c1d',
   warning: '#7A4D05',
   success: '#1E561F',

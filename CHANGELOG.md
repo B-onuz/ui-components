@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.1.0](https://github.com/B-onuz/ui-components/compare/v2.0.0...v2.1.0) (2020-06-02)
+
+### Features
+
+- **components:** add modal component ([#14](https://github.com/B-onuz/ui-components/issues/14)) ([e2b6694](https://github.com/B-onuz/ui-components/commit/e2b66945c210d51ccc1b378651be16d7ca25fd54))
+- **components:** add outline variant to button component ([#13](https://github.com/B-onuz/ui-components/issues/13)) ([0a00ac1](https://github.com/B-onuz/ui-components/commit/0a00ac16926fee7de76c2fb9aef663beb6db6a99))
+- **components:** add search component ([#12](https://github.com/B-onuz/ui-components/issues/12)) ([ca669e6](https://github.com/B-onuz/ui-components/commit/ca669e62883756c7c0388d6ef9c9b30e08dddd43))
+
 ## [2.0.0](https://github.com/B-onuz/ui-components/compare/v1.5.1...v2.0.0) (2020-05-26)
 
 ### ⚠ BREAKING CHANGES

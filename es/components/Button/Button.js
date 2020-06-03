@@ -31,7 +31,7 @@ function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) r
 function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteralLoose(["\n  appearance: none;\n  font-family: inherit;\n  border-radius: 4px;\n  outline: none;\n  cursor: pointer;\n  padding: .5rem 1rem;\n  border-style: solid;\n  color: #000;\n  ", "\n  ", "\n  ", "\n  ", "\n  box-sizing: border-box;\n  &:focus {\n    box-shadow: 0 0 8px ", ";\n  }\n  \n  &:active:not(:disabled) {\n    box-shadow: inset 0px 0px 5px #c1c1c1;\n  }\n  &:active,\n  &:hover {\n    background-color: ", ";\n  }\n  &:disabled {\n    background-color: ", ";\n  }\n  ", "\n"]);
+  var data = _taggedTemplateLiteralLoose(["\n  appearance: none;\n  font-family: inherit;\n  border-radius: 4px;\n  outline: none;\n  cursor: pointer;\n  padding: .5rem 1rem;\n  border-style: solid;\n  ", "\n  ", "\n  ", "\n  ", "\n  box-sizing: border-box;\n  &:focus {\n    box-shadow: 0 0 8px ", ";\n  }\n  \n  &:active:not(:disabled) {\n    box-shadow: inset 0px 0px 5px #c1c1c1;\n  }\n  &:active,\n  &:hover {\n    background-color: ", ";\n  }\n  &:disabled {\n    background-color: ", ";\n  }\n  ", "\n  \n  ", "\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -59,6 +59,11 @@ var Button = _styledComponents["default"].button(_templateObject(), _variants.co
 }, function (_ref4) {
   var loading = _ref4.loading;
   return !!loading && "\n    cursor: progress;\n  ";
+}, function (_ref5) {
+  var outline = _ref5.outline,
+      theme = _ref5.theme,
+      color = _ref5.color;
+  return !!outline && "\n    background-color: #fff;\n    color: " + theme.colors[color] + " !important;\n    border-color: " + theme.colors[color] + ";\n    &:hover {\n      background-color: " + theme.colors[color] + ";\n      color: " + (new _color["default"](theme.colors[color]).isDark() ? '#fff' : '#000') + " !important;\n    }\n    ";
 });
 
 Button.displayName = 'Button';
@@ -72,11 +77,11 @@ Button.defaultProps = {
   type: 'button'
 };
 
-var _default = function _default(_ref5) {
-  var children = _ref5.children,
-      loading = _ref5.loading,
-      disabled = _ref5.disabled,
-      rest = _objectWithoutPropertiesLoose(_ref5, ["children", "loading", "disabled"]);
+var _default = function _default(_ref6) {
+  var children = _ref6.children,
+      loading = _ref6.loading,
+      disabled = _ref6.disabled,
+      rest = _objectWithoutPropertiesLoose(_ref6, ["children", "loading", "disabled"]);
 
   return /*#__PURE__*/_react["default"].createElement(Button, _extends({}, rest, {
     disabled: !!disabled || !!loading,
@@ -84,7 +89,7 @@ var _default = function _default(_ref5) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 60,
+      lineNumber: 71,
       columnNumber: 3
     }
   }), !!loading ? 'carregando...' : children);
