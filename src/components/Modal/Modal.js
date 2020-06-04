@@ -10,6 +10,20 @@ const ContentModal = styled(animated.div)`
   margin: auto;
 `
 
+const BoxModal = styled(Box)`
+  box-sizing: border-box;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+`
+
+const BoxModalContent = styled.div`
+  overflow: auto;
+`
+
+const BoxModalHeader = styled.div``
+const BoxModalFooter = styled.div``
+
 const Wrapper = styled.div`
   position: fixed;
   top: 0;
@@ -55,7 +69,7 @@ const useRootModal = () => {
   return { $rootModal }
 }
 
-const Modal = ({ children, open, onClose, boxProps, ...rest }) => {
+const Modal = ({ children, open, onClose, boxProps, header, footer, ...rest }) => {
   const { $rootModal } = useRootModal()
   const transitions = useTransition(open, null, {
     from: { transform: 'translate3d(0,-80px,0)', opacity: 0 },
@@ -80,7 +94,11 @@ const Modal = ({ children, open, onClose, boxProps, ...rest }) => {
               ({ item, key, props }) =>
                 item && (
                   <ContentModal key={key} style={props} key={key} style={props}>
-                    <Box children={children} {...boxProps} />
+                    <BoxModal {...boxProps}>
+                      <BoxModalHeader>{header}</BoxModalHeader>
+                      <BoxModalContent>{children}</BoxModalContent>
+                      <BoxModalFooter>{footer}</BoxModalFooter>
+                    </BoxModal>
                   </ContentModal>
                 )
             )}

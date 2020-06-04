@@ -22,7 +22,7 @@ exports[`SidebarMenu changes the class when hovered 1`] = `
 
 .c0 {
   height: 100%;
-  z-index: 999;
+  z-index: 9999999;
 }
 
 .c1 {

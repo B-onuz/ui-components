@@ -23,7 +23,7 @@ export const TableExample = () => {
 
   return (
     <Table
-      width={[2 / 3]}
+      width={[1]}
       onChangeOrder={handleChangeOrder}
       pagination={{
         sort,
@@ -52,6 +52,7 @@ export const TableExample = () => {
           title: 'Ações',
           key: 'actions',
           align: 'center',
+          width: '50px',
         },
       ]}
       data={[

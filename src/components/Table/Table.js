@@ -23,8 +23,14 @@ const TableHeader = styled.th`
   padding: 1em;
   position: relative;
   position: sticky;
+  z-index: 2;
   top: 0;
   background: #f1f3f8;
+  ${({ width }) =>
+    !!width &&
+    `
+    width: ${width};
+  `}
   padding: 13px 40px;
   ${({ order }) =>
     order &&
@@ -126,6 +132,11 @@ const TableHeaderSpan = styled.span`
 `
 
 const TableData = styled.td`
+  ${({ width }) =>
+    !!width &&
+    `
+    width: ${width};
+  `}
   ${({ align }) =>
     align &&
     `
@@ -181,7 +192,7 @@ const Table = ({ children, headers, pagination, onChangeOrder, data, loading, ..
           <TableHead>
             <TableRow>
               {(headers || []).map((item, index) => (
-                <TableHeader key={index} order={item.sort} align={item.align} onClick={() => handleChangeOrder(item)}>
+                <TableHeader width={item.width} key={index} order={item.sort} align={item.align} onClick={() => item.sort && handleChangeOrder(item)}>
                   <TableHeaderSpan>
                     {item.title} {item.sort && <OrderArrow isCurrent={!!(pagination.sort === item.key)} order={pagination.order} />}
                   </TableHeaderSpan>
@@ -201,7 +212,7 @@ const Table = ({ children, headers, pagination, onChangeOrder, data, loading, ..
               <TableRow key={index}>
                 {headers.map((header) =>
                   header.cellComponent ? (
-                    <TableData align={header.align} key={`${header.key}-${index}`}>
+                    <TableData width={header.width} align={header.align} key={`${header.key}-${index}`}>
                       <header.cellComponent row={row} header={header} value={getDataByKey({ key: header.key, item: row })} />
                     </TableData>
                   ) : (
