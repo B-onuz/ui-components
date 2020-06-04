@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.3.0](https://github.com/B-onuz/ui-components/compare/v2.2.0...v2.3.0) (2020-06-04)
+
+### Features
+
+- **breadcrumbs:** create Breadcrumbs component ([#19](https://github.com/B-onuz/ui-components/issues/19)) ([9f4bc29](https://github.com/B-onuz/ui-components/commit/9f4bc297bc82ee9a0742093f55671d76f95c81e4))
+
+### Bug Fixes
+
+- **Components:** adjustments on new components ([#18](https://github.com/B-onuz/ui-components/issues/18)) ([da39a67](https://github.com/B-onuz/ui-components/commit/da39a67b617a9f8dfd44d8c9a5270c62f1c1e2c8))
+
 ## [2.2.0](https://github.com/B-onuz/ui-components/compare/v2.1.0...v2.2.0) (2020-06-03)
 
 ### Features
