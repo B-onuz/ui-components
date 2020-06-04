@@ -13,7 +13,7 @@ const Backdrop = styled.div`
 
 const WrapperSidebarMenu = styled.nav`
   height: 100%;
-  z-index: 999;
+  z-index: 9999999;
   ${({ open }) =>
     !!open &&
     `
