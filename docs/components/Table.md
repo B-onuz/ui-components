@@ -70,6 +70,7 @@ export const TableExample = () => {
           title: 'Ações',
           key: 'actions',
           align: 'center',
+          width: '50px',
         },
       ]}
       data={[
