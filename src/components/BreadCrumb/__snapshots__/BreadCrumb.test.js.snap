@@ -18,7 +18,9 @@ exports[`Should render BreadCrumb 1`] = `
   box-sizing: border-box;
   color: #ef4d5a;
   border: none;
-  background-color: transparent;
+  background-color: transparent !important;
+  box-shadow: none !important;
+  outline: none;
 }
 
 .c1:focus {
@@ -42,11 +44,6 @@ exports[`Should render BreadCrumb 1`] = `
   -webkit-text-decoration: underline;
   text-decoration: underline;
   background-color: transparent;
-}
-
-.c1:focus {
-  outline: none;
-  box-shadow: none;
 }
 
 .c0 {
@@ -188,7 +185,9 @@ exports[`Should render BreadCrumb with color 1`] = `
   box-sizing: border-box;
   color: #6435c9;
   border: none;
-  background-color: transparent;
+  background-color: transparent !important;
+  box-shadow: none !important;
+  outline: none;
 }
 
 .c1:focus {
@@ -212,11 +211,6 @@ exports[`Should render BreadCrumb with color 1`] = `
   -webkit-text-decoration: underline;
   text-decoration: underline;
   background-color: transparent;
-}
-
-.c1:focus {
-  outline: none;
-  box-shadow: none;
 }
 
 .c0 {
