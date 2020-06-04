@@ -1,4 +1,4 @@
-/*! ui-components v2.1.0 */
+/*! ui-components v2.2.0 */
 (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
 		module.exports = factory(require("react"));
@@ -9941,7 +9941,7 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.d(__webpack_exports__, "theme", function() { return /* reexport */ src_theme; });
 __webpack_require__.d(__webpack_exports__, "useSearchTerm", function() { return /* reexport */ hooks_useSearchTerm; });
 __webpack_require__.d(__webpack_exports__, "useTableOrder", function() { return /* reexport */ hooks_useTableOrder; });
-__webpack_require__.d(__webpack_exports__, "useModal", function() { return /* reexport */ useModal; });
+__webpack_require__.d(__webpack_exports__, "useModal", function() { return /* reexport */ hooks_useModal; });
 __webpack_require__.d(__webpack_exports__, "Button", function() { return /* reexport */ components_Button; });
 __webpack_require__.d(__webpack_exports__, "TextField", function() { return /* reexport */ components_TextField; });
 __webpack_require__.d(__webpack_exports__, "Label", function() { return /* reexport */ components_Label; });
@@ -9967,6 +9967,7 @@ __webpack_require__.d(__webpack_exports__, "SelectField", function() { return /*
 __webpack_require__.d(__webpack_exports__, "SearchField", function() { return /* reexport */ components_SearchField; });
 __webpack_require__.d(__webpack_exports__, "ContextMenu", function() { return /* reexport */ components_ContextMenu; });
 __webpack_require__.d(__webpack_exports__, "Modal", function() { return /* reexport */ components_Modal; });
+__webpack_require__.d(__webpack_exports__, "BreadCrumb", function() { return /* reexport */ components_BreadCrumb; });
 
 // CONCATENATED MODULE: ./src/theme/index.js
 var colors = {
@@ -10101,7 +10102,7 @@ var useTableOrder_useTableOrder = function useTableOrder(defaultSort, defaultOrd
  * const { isOpen, openModal, closeModal, toggleModal } = useModal(false)
  */
 
-var useModal_useTableOrder = function useTableOrder(defaultIsOpen) {
+var useModal_useModal = function useModal(defaultIsOpen) {
   if (defaultIsOpen === void 0) {
     defaultIsOpen = false;
   }
@@ -10110,24 +10111,35 @@ var useModal_useTableOrder = function useTableOrder(defaultIsOpen) {
       isOpen = _useState[0],
       setIsOpen = _useState[1];
 
-  var openModal = Object(external_root_React_commonjs2_react_commonjs_react_amd_react_["useCallback"])(function () {
+  var _useState2 = Object(external_root_React_commonjs2_react_commonjs_react_amd_react_["useState"])(null),
+      params = _useState2[0],
+      setParams = _useState2[1];
+
+  var openModal = Object(external_root_React_commonjs2_react_commonjs_react_amd_react_["useCallback"])(function (params) {
+    setParams(params);
     setIsOpen(true);
   }, []);
   var closeModal = Object(external_root_React_commonjs2_react_commonjs_react_amd_react_["useCallback"])(function () {
     setIsOpen(false);
+    setParams(null);
   }, []);
   var toggleModal = Object(external_root_React_commonjs2_react_commonjs_react_amd_react_["useCallback"])(function () {
-    setIsOpen(isOpen);
+    if (!isOpen === false) {
+      setParams(null);
+    }
+
+    setIsOpen(!isOpen);
   }, [isOpen]);
   return {
     isOpen: isOpen,
     openModal: openModal,
     closeModal: closeModal,
-    toggleModal: toggleModal
+    toggleModal: toggleModal,
+    params: params
   };
 };
 
-/* harmony default export */ var useModal = (useModal_useTableOrder);
+/* harmony default export */ var hooks_useModal = (useModal_useModal);
 // EXTERNAL MODULE: ./node_modules/styled-components/dist/styled-components.browser.esm.js
 var styled_components_browser_esm = __webpack_require__(2);
 
@@ -10312,7 +10324,7 @@ var Button = styled_components_browser_esm["default"].button(Button_templateObje
   var linkButton = _ref6.linkButton,
       theme = _ref6.theme,
       color = _ref6.color;
-  return !!linkButton && "\n    color: " + theme.colors[color] + ";\n    border: none;\n    background-color: transparent;\n    &:hover {\n      text-decoration: underline;\n      background-color: transparent\n    }\n    &:focus {\n      outline: none;\n      box-shadow: none\n    }\n    ";
+  return !!linkButton && "\n    color: " + theme.colors[color] + ";\n    border: none;\n    background-color: transparent !important;\n    box-shadow: none !important;\n    outline: none;\n    &:hover {\n      text-decoration: underline;\n      background-color: transparent;\n    }\n    ";
 });
 Button.displayName = 'Button';
 Button.propTypes = Button_extends({
@@ -10660,7 +10672,7 @@ function _templateObject3() {
 }
 
 function _templateObject2() {
-  var data = SidebarMenu_taggedTemplateLiteralLoose(["\n  height: 100%;\n  z-index: 999;\n  ", "\n"]);
+  var data = SidebarMenu_taggedTemplateLiteralLoose(["\n  height: 100%;\n  z-index: 9999999;\n  ", "\n"]);
 
   _templateObject2 = function _templateObject2() {
     return data;
@@ -11237,7 +11249,7 @@ function _templateObject8() {
 }
 
 function _templateObject7() {
-  var data = Table_taggedTemplateLiteralLoose(["\n  ", "\n  padding: 13px 40px;\n"]);
+  var data = Table_taggedTemplateLiteralLoose(["\n  ", "\n  ", "\n  padding: 13px 40px;\n"]);
 
   _templateObject7 = function _templateObject7() {
     return data;
@@ -11277,7 +11289,7 @@ function Table_templateObject4() {
 }
 
 function Table_templateObject3() {
-  var data = Table_taggedTemplateLiteralLoose(["\n  text-transform: uppercase;\n  font-size: 0.8em;\n  color: #838383;\n  font-weight: 400;\n  padding: 1em;\n  position: relative;\n  position: sticky;\n  top: 0;\n  background: #f1f3f8;\n  padding: 13px 40px;\n  ", "\n  ", "\n"]);
+  var data = Table_taggedTemplateLiteralLoose(["\n  text-transform: uppercase;\n  font-size: 0.8em;\n  color: #838383;\n  font-weight: 400;\n  padding: 1em;\n  position: relative;\n  position: sticky;\n  z-index: 2;\n  top: 0;\n  background: #f1f3f8;\n  ", "\n  padding: 13px 40px;\n  ", "\n  ", "\n"]);
 
   Table_templateObject3 = function _templateObject3() {
     return data;
@@ -11316,18 +11328,21 @@ function Table_taggedTemplateLiteralLoose(strings, raw) { if (!raw) { raw = stri
 var StyledTable = styled_components_browser_esm["default"].table(Table_templateObject());
 var TableHead = styled_components_browser_esm["default"].thead(Table_templateObject2());
 var TableHeader = styled_components_browser_esm["default"].th(Table_templateObject3(), function (_ref) {
-  var order = _ref.order;
-  return order && "\n    cursor: pointer;\n  ";
+  var width = _ref.width;
+  return !!width && "\n    width: " + width + ";\n  ";
 }, function (_ref2) {
-  var align = _ref2.align;
+  var order = _ref2.order;
+  return order && "\n    cursor: pointer;\n  ";
+}, function (_ref3) {
+  var align = _ref3.align;
   return align && "\n    text-align: " + align + ";\n  ";
 });
-var OrderArrow = styled_components_browser_esm["default"].span(Table_templateObject4(), function (_ref3) {
-  var isCurrent = _ref3.isCurrent;
+var OrderArrow = styled_components_browser_esm["default"].span(Table_templateObject4(), function (_ref4) {
+  var isCurrent = _ref4.isCurrent;
   return !!isCurrent ? "\n  &::before,\n  &::after {\n    content: '';\n    display: block;\n    position: absolute;\n    width: 1px;\n    height: 8px;\n    top: 0;\n    right: 0;\n    bottom: 0;\n    left: 0;\n    margin: auto;\n    background-color: #000;\n    transition: transform 0.25s ease-in-out 0s;\n  }" : "\n    &::before,\n    &::after {\n      content: '';\n      display: block;\n      border: solid #838383;\n      border-width: 0 1px 1px 0;\n      display: inline-block;\n      padding: 3px;\n      position: absolute;\n      left: 0;\n      right: 0;\n      margin: auto;\n      width: 0px;\n      height: 0px;\n    }\n    &::after {\n      top: 4px;\n      transform: rotate(-135deg);\n    }\n\n    &::before {\n      bottom: 4px;\n      transform: rotate(45deg);\n    }\n  \n  ";
-}, function (_ref4) {
-  var order = _ref4.order,
-      isCurrent = _ref4.isCurrent;
+}, function (_ref5) {
+  var order = _ref5.order,
+      isCurrent = _ref5.isCurrent;
 
   if (!!isCurrent) {
     return order === 'asc' ? "\n      &::before {\n        transform: translate3d(-2px, 0px, 0px) rotate(45deg);\n      }\n      &::after {\n        transform: translate3d(3px, 0px, 0px) rotate(-45deg);\n      }\n    " : "\n      &::before {\n        transform: translate3d(3px, 0px, 0px) rotate(45deg);\n      }\n      &::after {\n        transform: translate3d(-2px, 0px, 0px) rotate(-45deg);\n      }\n    \n    ";
@@ -11337,22 +11352,25 @@ var OrderArrow = styled_components_browser_esm["default"].span(Table_templateObj
 });
 var TableRow = styled_components_browser_esm["default"].tr(Table_templateObject5());
 var TableHeaderSpan = styled_components_browser_esm["default"].span(_templateObject6());
-var TableData = styled_components_browser_esm["default"].td(_templateObject7(), function (_ref5) {
-  var align = _ref5.align;
+var TableData = styled_components_browser_esm["default"].td(_templateObject7(), function (_ref6) {
+  var width = _ref6.width;
+  return !!width && "\n    width: " + width + ";\n  ";
+}, function (_ref7) {
+  var align = _ref7.align;
   return align && "\n    text-align: " + align + ";\n  ";
 });
 var WrapperTable = styled_components_browser_esm["default"].div(_templateObject8());
 var Table_Wrapper = styled_components_browser_esm["default"].div(_templateObject9(), Object(index_esm["compose"])(index_esm["space"], index_esm["layout"]));
 var TableBody = styled_components_browser_esm["default"].tbody(_templateObject10(), TableRow);
 
-var Table_Table = function Table(_ref6) {
-  var children = _ref6.children,
-      headers = _ref6.headers,
-      pagination = _ref6.pagination,
-      onChangeOrder = _ref6.onChangeOrder,
-      data = _ref6.data,
-      loading = _ref6.loading,
-      rest = Table_objectWithoutPropertiesLoose(_ref6, ["children", "headers", "pagination", "onChangeOrder", "data", "loading"]);
+var Table_Table = function Table(_ref8) {
+  var children = _ref8.children,
+      headers = _ref8.headers,
+      pagination = _ref8.pagination,
+      onChangeOrder = _ref8.onChangeOrder,
+      data = _ref8.data,
+      loading = _ref8.loading,
+      rest = Table_objectWithoutPropertiesLoose(_ref8, ["children", "headers", "pagination", "onChangeOrder", "data", "loading"]);
 
   var handleChangeOrder = function handleChangeOrder(item) {
     if (onChangeOrder) {
@@ -11360,9 +11378,9 @@ var Table_Table = function Table(_ref6) {
     }
   };
 
-  var getDataByKey = function getDataByKey(_ref7) {
-    var item = _ref7.item,
-        key = _ref7.key;
+  var getDataByKey = function getDataByKey(_ref9) {
+    var item = _ref9.item,
+        key = _ref9.key;
     var keys = key.split('.');
     return keys.reduce(function (acc, item) {
       return acc[item] || '';
@@ -11373,11 +11391,12 @@ var Table_Table = function Table(_ref6) {
     loading: loading
   }, /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(StyledTable, null, /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(TableHead, null, /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(TableRow, null, (headers || []).map(function (item, index) {
     return /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(TableHeader, {
+      width: item.width,
       key: index,
       order: item.sort,
       align: item.align,
       onClick: function onClick() {
-        return handleChangeOrder(item);
+        return item.sort && handleChangeOrder(item);
       }
     }, /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(TableHeaderSpan, null, item.title, " ", item.sort && /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(OrderArrow, {
       isCurrent: !!(pagination.sort === item.key),
@@ -11393,6 +11412,7 @@ var Table_Table = function Table(_ref6) {
       key: index
     }, headers.map(function (header) {
       return header.cellComponent ? /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(TableData, {
+        width: header.width,
         align: header.align,
         key: header.key + "-" + index
       }, /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(header.cellComponent, {
@@ -20390,8 +20410,48 @@ function Modal_extends() { Modal_extends = Object.assign || function (target) { 
 
 function Modal_objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 
-function Modal_templateObject3() {
+function Modal_templateObject7() {
   var data = Modal_taggedTemplateLiteralLoose(["\n  position: absolute;\n  z-index: -1;\n  background: rgba(0, 0, 0, 0.3);\n  width: 100%;\n  height: 100%;\n  top: 0;\n  right: 0;\n  bottom: 0;\n  left: 0;\n  cursor: pointer;\n"]);
+
+  Modal_templateObject7 = function _templateObject7() {
+    return data;
+  };
+
+  return data;
+}
+
+function Modal_templateObject6() {
+  var data = Modal_taggedTemplateLiteralLoose(["\n  position: fixed;\n  top: 0;\n  right: 0;\n  bottom: 0;\n  left: 0;\n  width: 100%;\n  height: 100%;\n  z-index: 9999999;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n"]);
+
+  Modal_templateObject6 = function _templateObject6() {
+    return data;
+  };
+
+  return data;
+}
+
+function Modal_templateObject5() {
+  var data = Modal_taggedTemplateLiteralLoose([""]);
+
+  Modal_templateObject5 = function _templateObject5() {
+    return data;
+  };
+
+  return data;
+}
+
+function Modal_templateObject4() {
+  var data = Modal_taggedTemplateLiteralLoose([""]);
+
+  Modal_templateObject4 = function _templateObject4() {
+    return data;
+  };
+
+  return data;
+}
+
+function Modal_templateObject3() {
+  var data = Modal_taggedTemplateLiteralLoose(["\n  overflow: auto;\n"]);
 
   Modal_templateObject3 = function _templateObject3() {
     return data;
@@ -20401,7 +20461,7 @@ function Modal_templateObject3() {
 }
 
 function Modal_templateObject2() {
-  var data = Modal_taggedTemplateLiteralLoose(["\n  position: fixed;\n  top: 0;\n  right: 0;\n  bottom: 0;\n  left: 0;\n  width: 100%;\n  height: 100%;\n  z-index: 9999999;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n"]);
+  var data = Modal_taggedTemplateLiteralLoose(["\n  box-sizing: border-box;\n  max-height: 90vh;\n  display: flex;\n  flex-direction: column;\n"]);
 
   Modal_templateObject2 = function _templateObject2() {
     return data;
@@ -20428,8 +20488,12 @@ function Modal_taggedTemplateLiteralLoose(strings, raw) { if (!raw) { raw = stri
 
 
 var ContentModal = Object(styled_components_browser_esm["default"])(extendedAnimated.div)(Modal_templateObject());
-var Modal_Wrapper = styled_components_browser_esm["default"].div(Modal_templateObject2());
-var Shadow = styled_components_browser_esm["default"].button(Modal_templateObject3());
+var BoxModal = Object(styled_components_browser_esm["default"])(components_Box)(Modal_templateObject2());
+var BoxModalContent = styled_components_browser_esm["default"].div(Modal_templateObject3());
+var BoxModalHeader = styled_components_browser_esm["default"].div(Modal_templateObject4());
+var BoxModalFooter = styled_components_browser_esm["default"].div(Modal_templateObject5());
+var Modal_Wrapper = styled_components_browser_esm["default"].div(Modal_templateObject6());
+var Shadow = styled_components_browser_esm["default"].button(Modal_templateObject7());
 
 var Modal_useRootModal = function useRootModal() {
   var _useState = Object(external_root_React_commonjs2_react_commonjs_react_amd_react_["useState"])(),
@@ -20458,7 +20522,9 @@ var Modal_Modal = function Modal(_ref) {
       open = _ref.open,
       onClose = _ref.onClose,
       boxProps = _ref.boxProps,
-      rest = Modal_objectWithoutPropertiesLoose(_ref, ["children", "open", "onClose", "boxProps"]);
+      header = _ref.header,
+      footer = _ref.footer,
+      rest = Modal_objectWithoutPropertiesLoose(_ref, ["children", "open", "onClose", "boxProps", "header", "footer"]);
 
   var _useRootModal = Modal_useRootModal(),
       $rootModal = _useRootModal.$rootModal;
@@ -20505,9 +20571,7 @@ var Modal_Modal = function Modal(_ref) {
       return item && /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(ContentModal, (_React$createElement = {
         key: key,
         style: props
-      }, _React$createElement["key"] = key, _React$createElement["style"] = props, _React$createElement), /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(components_Box, Modal_extends({
-        children: children
-      }, boxProps)));
+      }, _React$createElement["key"] = key, _React$createElement["style"] = props, _React$createElement), /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(BoxModal, boxProps, /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(BoxModalHeader, null, header), /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(BoxModalContent, null, children), /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(BoxModalFooter, null, footer)));
     }), opacityTransitions.map(function (_ref4) {
       var item = _ref4.item,
           key = _ref4.key,
@@ -20525,6 +20589,105 @@ var Modal_Modal = function Modal(_ref) {
 // CONCATENATED MODULE: ./src/components/Modal/index.js
 
 /* harmony default export */ var components_Modal = (components_Modal_Modal);
+// CONCATENATED MODULE: ./src/components/BreadCrumb/BreadCrumb.js
+function BreadCrumb_objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
+
+function BreadCrumb_templateObject3() {
+  var data = BreadCrumb_taggedTemplateLiteralLoose(["\n  ", "\n"]);
+
+  BreadCrumb_templateObject3 = function _templateObject3() {
+    return data;
+  };
+
+  return data;
+}
+
+function BreadCrumb_templateObject2() {
+  var data = BreadCrumb_taggedTemplateLiteralLoose(["\n  color: ", ";\n  padding: 8px 16px;\n  font-size: 14px;\n"]);
+
+  BreadCrumb_templateObject2 = function _templateObject2() {
+    return data;
+  };
+
+  return data;
+}
+
+function BreadCrumb_templateObject() {
+  var data = BreadCrumb_taggedTemplateLiteralLoose(["\n  display: flex;\n  align-items: center;\n  flex-wrap: wrap;\n  color: ", ";\n  ", "\n"]);
+
+  BreadCrumb_templateObject = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+
+function BreadCrumb_taggedTemplateLiteralLoose(strings, raw) { if (!raw) { raw = strings.slice(0); } strings.raw = raw; return strings; }
+
+
+
+
+
+
+
+
+
+var StyledBreadCrumb = styled_components_browser_esm["default"].div(BreadCrumb_templateObject(), function (_ref) {
+  var theme = _ref.theme,
+      color = _ref.color;
+  return "" + theme.colors[color];
+}, index_esm["space"]);
+var ActiveRoute = styled_components_browser_esm["default"].span(BreadCrumb_templateObject2(), function (_ref2) {
+  var theme = _ref2.theme,
+      color = _ref2.color;
+  return "" + theme.colors[color];
+});
+
+var BreadCrumb_IconColor = function IconColor(_ref3) {
+  var theme = _ref3.theme,
+      color = _ref3.color;
+  var newColor = theme.colors[color];
+  var darkColor = new color_default.a(newColor);
+  var navIconColor = darkColor.darken(0.5).toString();
+  return "\n    color: " + navIconColor + "\n  ";
+};
+
+var BreadCrumb_Icon = Object(styled_components_browser_esm["default"])(FontAwesomeIcon)(BreadCrumb_templateObject3(), BreadCrumb_IconColor);
+
+var BreadCrumb_BreadCrumb = function BreadCrumb(_ref4) {
+  var children = _ref4.children,
+      navigationLinks = _ref4.navigationLinks,
+      color = _ref4.color,
+      rest = BreadCrumb_objectWithoutPropertiesLoose(_ref4, ["children", "navigationLinks", "color"]);
+
+  console.log(components_Button);
+  return /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(StyledBreadCrumb, rest, (navigationLinks || []).map(function (item, index) {
+    return index !== navigationLinks.length - 1 ? /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.Fragment, {
+      key: index
+    }, /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(components_Button, {
+      linkButton: true,
+      size: "small",
+      color: color,
+      onClick: function onClick() {
+        return item.action();
+      }
+    }, item.label), /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(BreadCrumb_Icon, {
+      icon: faAngleRight,
+      color: color
+    })) : /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(ActiveRoute, {
+      key: index,
+      color: 'black'
+    }, item.label);
+  }));
+};
+
+BreadCrumb_BreadCrumb.defaultProps = {
+  color: 'primary'
+};
+/* harmony default export */ var components_BreadCrumb_BreadCrumb = (BreadCrumb_BreadCrumb);
+// CONCATENATED MODULE: ./src/components/BreadCrumb/index.js
+
+/* harmony default export */ var components_BreadCrumb = (components_BreadCrumb_BreadCrumb);
 // CONCATENATED MODULE: ./src/index.js
 /* Theme */
 
@@ -20538,6 +20701,8 @@ var Modal_Modal = function Modal(_ref) {
 
 
 /* Components */
+
+
 
 
 

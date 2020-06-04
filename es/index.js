@@ -177,6 +177,12 @@ Object.defineProperty(exports, "Modal", {
     return _Modal2["default"];
   }
 });
+Object.defineProperty(exports, "BreadCrumb", {
+  enumerable: true,
+  get: function get() {
+    return _BreadCrumb2["default"];
+  }
+});
 
 var _theme2 = _interopRequireDefault(require("./theme"));
 
@@ -235,5 +241,7 @@ var _SearchField2 = _interopRequireDefault(require("./components/SearchField"));
 var _ContextMenu2 = _interopRequireDefault(require("./components/ContextMenu"));
 
 var _Modal2 = _interopRequireDefault(require("./components/Modal"));
+
+var _BreadCrumb2 = _interopRequireDefault(require("./components/BreadCrumb"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }

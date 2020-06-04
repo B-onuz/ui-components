@@ -30,8 +30,48 @@ function _extends() { _extends = Object.assign || function (target) { for (var i
 
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 
-function _templateObject3() {
+function _templateObject7() {
   var data = _taggedTemplateLiteralLoose(["\n  position: absolute;\n  z-index: -1;\n  background: rgba(0, 0, 0, 0.3);\n  width: 100%;\n  height: 100%;\n  top: 0;\n  right: 0;\n  bottom: 0;\n  left: 0;\n  cursor: pointer;\n"]);
+
+  _templateObject7 = function _templateObject7() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject6() {
+  var data = _taggedTemplateLiteralLoose(["\n  position: fixed;\n  top: 0;\n  right: 0;\n  bottom: 0;\n  left: 0;\n  width: 100%;\n  height: 100%;\n  z-index: 9999999;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n"]);
+
+  _templateObject6 = function _templateObject6() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject5() {
+  var data = _taggedTemplateLiteralLoose([""]);
+
+  _templateObject5 = function _templateObject5() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject4() {
+  var data = _taggedTemplateLiteralLoose([""]);
+
+  _templateObject4 = function _templateObject4() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject3() {
+  var data = _taggedTemplateLiteralLoose(["\n  overflow: auto;\n"]);
 
   _templateObject3 = function _templateObject3() {
     return data;
@@ -41,7 +81,7 @@ function _templateObject3() {
 }
 
 function _templateObject2() {
-  var data = _taggedTemplateLiteralLoose(["\n  position: fixed;\n  top: 0;\n  right: 0;\n  bottom: 0;\n  left: 0;\n  width: 100%;\n  height: 100%;\n  z-index: 9999999;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n"]);
+  var data = _taggedTemplateLiteralLoose(["\n  box-sizing: border-box;\n  max-height: 90vh;\n  display: flex;\n  flex-direction: column;\n"]);
 
   _templateObject2 = function _templateObject2() {
     return data;
@@ -63,10 +103,17 @@ function _templateObject() {
 function _taggedTemplateLiteralLoose(strings, raw) { if (!raw) { raw = strings.slice(0); } strings.raw = raw; return strings; }
 
 var ContentModal = (0, _styledComponents["default"])(_reactSpring.animated.div)(_templateObject());
+var BoxModal = (0, _styledComponents["default"])(_Box["default"])(_templateObject2());
 
-var Wrapper = _styledComponents["default"].div(_templateObject2());
+var BoxModalContent = _styledComponents["default"].div(_templateObject3());
 
-var Shadow = _styledComponents["default"].button(_templateObject3());
+var BoxModalHeader = _styledComponents["default"].div(_templateObject4());
+
+var BoxModalFooter = _styledComponents["default"].div(_templateObject5());
+
+var Wrapper = _styledComponents["default"].div(_templateObject6());
+
+var Shadow = _styledComponents["default"].button(_templateObject7());
 
 var useRootModal = function useRootModal() {
   var _useState = (0, _react.useState)(),
@@ -95,7 +142,9 @@ var Modal = function Modal(_ref) {
       open = _ref.open,
       onClose = _ref.onClose,
       boxProps = _ref.boxProps,
-      rest = _objectWithoutPropertiesLoose(_ref, ["children", "open", "onClose", "boxProps"]);
+      header = _ref.header,
+      footer = _ref.footer,
+      rest = _objectWithoutPropertiesLoose(_ref, ["children", "open", "onClose", "boxProps", "header", "footer"]);
 
   var _useRootModal = useRootModal(),
       $rootModal = _useRootModal.$rootModal;
@@ -136,7 +185,7 @@ var Modal = function Modal(_ref) {
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 78,
+        lineNumber: 92,
         columnNumber: 11
       }
     }), transitions.map(function (_ref3) {
@@ -150,18 +199,37 @@ var Modal = function Modal(_ref) {
         style: props
       }, _React$createElement["key"] = key, _React$createElement["style"] = props, _React$createElement.__self = _this, _React$createElement.__source = {
         fileName: _jsxFileName,
-        lineNumber: 82,
+        lineNumber: 96,
         columnNumber: 19
-      }, _React$createElement), /*#__PURE__*/_react["default"].createElement(_Box["default"], _extends({
-        children: children
-      }, boxProps, {
+      }, _React$createElement), /*#__PURE__*/_react["default"].createElement(BoxModal, _extends({}, boxProps, {
         __self: _this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 83,
+          lineNumber: 97,
           columnNumber: 21
         }
-      })));
+      }), /*#__PURE__*/_react["default"].createElement(BoxModalHeader, {
+        __self: _this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 98,
+          columnNumber: 23
+        }
+      }, header), /*#__PURE__*/_react["default"].createElement(BoxModalContent, {
+        __self: _this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 99,
+          columnNumber: 23
+        }
+      }, children), /*#__PURE__*/_react["default"].createElement(BoxModalFooter, {
+        __self: _this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 100,
+          columnNumber: 23
+        }
+      }, footer)));
     }), opacityTransitions.map(function (_ref4) {
       var item = _ref4.item,
           key = _ref4.key,
@@ -173,7 +241,7 @@ var Modal = function Modal(_ref) {
         __self: _this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 88,
+          lineNumber: 106,
           columnNumber: 71
         }
       });
