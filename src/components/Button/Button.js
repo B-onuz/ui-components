@@ -57,14 +57,12 @@ const Button = styled.button`
     `
     color: ${theme.colors[color]};
     border: none;
-    background-color: transparent;
+    background-color: transparent !important;
+    box-shadow: none !important;
+    outline: none;
     &:hover {
       text-decoration: underline;
-      background-color: transparent
-    }
-    &:focus {
-      outline: none;
-      box-shadow: none
+      background-color: transparent;
     }
     `} 
 `
