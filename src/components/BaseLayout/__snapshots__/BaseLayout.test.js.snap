@@ -30,7 +30,7 @@ exports[`should render BaseLayout without sidebar 1`] = `
       </header>
     </div>
     <div
-      className="sc-fzozJi bmYBpn"
+      className="sc-fzozJi lQOAr"
     >
       <p>
         Lorem ipsum dolor sit amet
