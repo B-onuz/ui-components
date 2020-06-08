@@ -16,6 +16,9 @@ const ChildrenWrapper = styled.div`
   flex: 1;
   padding: 42px;
   overflow: auto;
+  @media only screen and (max-width: 768px) {
+    padding: 24px;
+  }
 `
 
 const LayoutContainer = styled(Box)`
