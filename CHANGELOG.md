@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.3.1](https://github.com/B-onuz/ui-components/compare/v2.3.0...v2.3.1) (2020-06-08)
+
+### Bug Fixes
+
+- **BaseLayout:** mobile padding ([e020762](https://github.com/B-onuz/ui-components/commit/e020762094b19ee976d4d112ef41606a97b5f1fb))
+
 ## [2.3.0](https://github.com/B-onuz/ui-components/compare/v2.2.0...v2.3.0) (2020-06-04)
 
 ### Features
