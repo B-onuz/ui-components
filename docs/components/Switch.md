@@ -1,6 +1,6 @@
 # Switch (Component)
 
-[Descrição do componente e onde usar]
+Componente Switch, criado com base no checkbox nativo.
 
 ## Como utilizar
 
