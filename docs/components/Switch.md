@@ -9,20 +9,28 @@ import Switch from 'ui-components/lib/components/Switch'
 ```
 
 ```jsx
-<Switch />
+import Switch from 'ui-components/lib/components/Switch'
+import React, { useState } from 'react'
+
+const SwitchExample = () => {
+  const [checked, setChecked] = useState(false)
+  const handleChangeSwitch = (e) => {
+    setChecked(e.target.checked)
+  }
+  return <Switch checked={checked} onChange={handleChangeSwitch} />
+}
 ```
 
 ## Variações
 
-### Variant
+### Color
 
 ```jsx
-<Switch variant={'variant'} />
+<Switch color={'primary'} />
 ```
 
-Escala no tema: `theme.variantScale`
+Escala no tema: `theme.colors`
 
 ## Styled-system props
 
 - space https://styled-system.com/table#space
-- layout https://styled-system.com/table#layout
