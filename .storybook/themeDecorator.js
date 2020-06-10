@@ -25,9 +25,7 @@ const GlobalStyle = createGlobalStyle`
 const ThemeDecorator = (storyFn) => (
   <>
     <GlobalStyle />
-    <ThemeProvider theme={theme} theme={theme}>
-      {storyFn()}
-    </ThemeProvider>
+    <ThemeProvider theme={theme}>{storyFn()}</ThemeProvider>
   </>
 )
 
