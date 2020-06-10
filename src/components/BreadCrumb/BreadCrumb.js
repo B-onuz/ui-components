@@ -35,23 +35,23 @@ const Icon = styled(FontAwesomeIcon)`
 `
 
 const BreadCrumb = ({ children, navigationLinks, color, ...rest }) => {
-  console.log(Button)
   return (
     <StyledBreadCrumb {...rest}>
-      {(navigationLinks || []).map((item, index) =>
-        index !== navigationLinks.length - 1 ? (
+      {(navigationLinks || []).map((item, index) => {
+        const { label, key, ...itemProps } = item
+        return index !== navigationLinks.length - 1 ? (
           <React.Fragment key={index}>
-            <Button linkButton size="small" color={color} onClick={() => item.action()}>
-              {item.label}
+            <Button key={key || index} linkButton size="small" color={color} {...itemProps}>
+              {label}
             </Button>
             <Icon icon={faAngleRight} color={color} />
           </React.Fragment>
         ) : (
-          <ActiveRoute key={index} color={'black'}>
+          <ActiveRoute key={key || index} color={'black'} {...itemProps}>
             {item.label}
           </ActiveRoute>
         )
-      )}
+      })}
     </StyledBreadCrumb>
   )
 }
