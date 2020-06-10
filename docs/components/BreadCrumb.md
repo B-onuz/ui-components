@@ -16,19 +16,19 @@ import { Flex, Box } from 'reflexbox'
 const exampleObj = [
   {
     label: 'Gestão da rota do Link 1',
-    action: () => ({}),
+    onClick: () => ({}),
   },
   {
     label: 'Gestão da rota do Link 2',
-    action: () => ({}),
+    onClick: () => ({}),
   },
   {
     label: 'Gestão da rota do Link 3',
-    action: () => ({}),
+    onClick: () => ({}),
   },
   {
     label: 'Gestão da rota do Link 4',
-    action: () => ({}),
+    onClick: () => ({}),
   },
 ]
 

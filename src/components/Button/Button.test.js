@@ -7,7 +7,7 @@ import 'jest-styled-components'
 
 test('Should render button', () => {
   const component = renderer.create(
-    <ThemeProvider theme={theme} theme={theme}>
+    <ThemeProvider theme={theme}>
       <Button>Hello Button</Button>
     </ThemeProvider>
   )
@@ -15,9 +15,9 @@ test('Should render button', () => {
   expect(tree).toMatchSnapshot()
 })
 
-test('Should render button when bg prop', () => {
+test('Should render button when color prop', () => {
   const component = renderer.create(
-    <ThemeProvider theme={theme} theme={theme}>
+    <ThemeProvider theme={theme}>
       <Button m={2}>{'Default'}</Button>
       <Button m={2} color={'default'}>
         {'Default'}

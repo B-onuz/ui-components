@@ -16,6 +16,8 @@ exports[`Should render BreadCrumb 1`] = `
   border-color: #ef4d5a;
   font-size: 14px;
   box-sizing: border-box;
+  -webkit-text-decoration: none;
+  text-decoration: none;
   color: #ef4d5a;
   border: none;
   background-color: transparent !important;
@@ -75,10 +77,10 @@ exports[`Should render BreadCrumb 1`] = `
   className="c0"
 >
   <button
+    action={[Function]}
     className="c1"
     color="primary"
     disabled={false}
-    onClick={[Function]}
     size="small"
     type="button"
   >
@@ -103,10 +105,10 @@ exports[`Should render BreadCrumb 1`] = `
     />
   </svg>
   <button
+    action={[Function]}
     className="c1"
     color="primary"
     disabled={false}
-    onClick={[Function]}
     size="small"
     type="button"
   >
@@ -131,10 +133,10 @@ exports[`Should render BreadCrumb 1`] = `
     />
   </svg>
   <button
+    action={[Function]}
     className="c1"
     color="primary"
     disabled={false}
-    onClick={[Function]}
     size="small"
     type="button"
   >
@@ -159,6 +161,7 @@ exports[`Should render BreadCrumb 1`] = `
     />
   </svg>
   <span
+    action={[Function]}
     className="c3"
     color="black"
   >
@@ -183,6 +186,8 @@ exports[`Should render BreadCrumb with color 1`] = `
   border-color: #6435c9;
   font-size: 14px;
   box-sizing: border-box;
+  -webkit-text-decoration: none;
+  text-decoration: none;
   color: #6435c9;
   border: none;
   background-color: transparent !important;
@@ -242,10 +247,10 @@ exports[`Should render BreadCrumb with color 1`] = `
   className="c0"
 >
   <button
+    action={[Function]}
     className="c1"
     color="violet"
     disabled={false}
-    onClick={[Function]}
     size="small"
     type="button"
   >
@@ -270,10 +275,10 @@ exports[`Should render BreadCrumb with color 1`] = `
     />
   </svg>
   <button
+    action={[Function]}
     className="c1"
     color="violet"
     disabled={false}
-    onClick={[Function]}
     size="small"
     type="button"
   >
@@ -298,10 +303,10 @@ exports[`Should render BreadCrumb with color 1`] = `
     />
   </svg>
   <button
+    action={[Function]}
     className="c1"
     color="violet"
     disabled={false}
-    onClick={[Function]}
     size="small"
     type="button"
   >
@@ -326,6 +331,7 @@ exports[`Should render BreadCrumb with color 1`] = `
     />
   </svg>
   <span
+    action={[Function]}
     className="c3"
     color="black"
   >

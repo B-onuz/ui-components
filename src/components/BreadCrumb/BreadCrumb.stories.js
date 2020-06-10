@@ -11,70 +11,70 @@ export default {
 const longExampleObj = [
   {
     label: 'Gestão da rota do Link 1',
-    action: action('Ação do Link'),
+    onClick: action('Ação do Link'),
   },
   {
     label: 'Gestão da rota do Link 2',
-    action: action('Ação do Link'),
+    onClick: action('Ação do Link'),
   },
   {
     label: 'Gestão da rota do Link 3',
-    action: action('Ação do Link'),
+    onClick: action('Ação do Link'),
   },
   {
     label: 'Gestão da rota do Link 4',
-    action: action('Ação do Link'),
+    onClick: action('Ação do Link'),
   },
   {
     label: 'Gestão da rota do Link 5',
-    action: action('Ação do Link'),
+    onClick: action('Ação do Link'),
   },
   {
     label: 'Gestão da rota do Link 6',
-    action: action('Ação do Link'),
+    onClick: action('Ação do Link'),
   },
   {
     label: 'Gestão da rota do Link 7',
-    action: action('Ação do Link'),
+    onClick: action('Ação do Link'),
   },
   {
     label: 'Gestão da rota do Link 8',
-    action: action('Ação do Link'),
+    onClick: action('Ação do Link'),
   },
   {
     label: 'Gestão da rota do Link 9',
-    action: action('Ação do Link'),
+    onClick: action('Ação do Link'),
   },
   {
     label: 'Gestão da rota do Link 10',
-    action: action('Ação do Link'),
+    onClick: action('Ação do Link'),
   },
   {
     label: 'Gestão da rota do Link 11',
-    action: action('Ação do Link'),
+    onClick: action('Ação do Link'),
   },
   {
     label: 'Gestão da rota do Link 12',
-    action: action('Ação do Link'),
+    onClick: action('Ação do Link'),
   },
 ]
 
 const exampleObj = [
   {
     label: 'Gestão da rota do Link 1',
-    action: action('Ação do Link'),
+    onClick: action('Ação do Link'),
   },
   {
     label: 'Gestão da rota do Link 2',
-    action: action('Ação do Link'),
+    onClick: action('Ação do Link'),
   },
   {
     label: 'Gestão da rota do Link 3',
-    action: action('Ação do Link'),
+    onClick: action('Ação do Link'),
   },
   {
     label: 'Gestão da rota do Link 4',
-    action: action('Ação do Link'),
+    onClick: action('Ação do Link'),
   },
 ]
 

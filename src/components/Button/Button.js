@@ -7,7 +7,7 @@ import PropTypes from 'prop-types'
 import propTypes from '@styled-system/prop-types'
 import Spinner from '../Spinner'
 
-const Button = styled.button`
+const StyledButton = styled.button`
   appearance: none;
   font-family: inherit;
   border-radius: 4px;
@@ -52,9 +52,16 @@ const Button = styled.button`
     }
     `}
 
-  ${({ linkButton, theme, color }) =>
-    !!linkButton &&
+  ${({ underline }) =>
+    !!underline
+      ? `
+      text-decoration: underline;
     `
+      : `text-decoration: none;`} 
+
+  ${({ linkButton, theme, color }) =>
+    !!linkButton
+      ? `
     color: ${theme.colors[color]};
     border: none;
     background-color: transparent !important;
@@ -64,8 +71,17 @@ const Button = styled.button`
       text-decoration: underline;
       background-color: transparent;
     }
+    `
+      : `
+     text-decoration: none;
     `} 
 `
+
+const Button = ({ children, loading, disabled, ...rest }) => (
+  <StyledButton {...rest} disabled={!!disabled || !!loading} loading={loading}>
+    {!!loading ? 'carregando...' : children}
+  </StyledButton>
+)
 
 Button.displayName = 'Button'
 
@@ -81,8 +97,4 @@ Button.defaultProps = {
   type: 'button',
 }
 
-export default ({ children, loading, disabled, ...rest }) => (
-  <Button {...rest} disabled={!!disabled || !!loading} loading={loading}>
-    {!!loading ? 'carregando...' : children}
-  </Button>
-)
+export default Button

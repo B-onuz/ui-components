@@ -9,22 +9,22 @@ const WrapperIcon = styled.span`
   margin-right: 8px;
 `
 
-const MenuItem = memo(({ children, component = 'a', icon, ...rest }) => {
-  const MenuLink = styled(component)`
-    background-color: rgba(255, 255, 255, 0.1);
-    padding: 16px 20px;
-    color: #fff;
-    display: block;
-    text-decoration: none;
-    cursor: pointer;
-    &:hover {
-      background-color: rgba(255, 255, 255, 0.2);
-    }
-  `
+const MenuLink = styled.a`
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 16px 20px;
+  color: #fff;
+  display: block;
+  text-decoration: none;
+  cursor: pointer;
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+`
 
+const MenuItem = memo(({ children, component = 'a', as, icon, ...rest }) => {
   return (
     <StyledListItem role="none">
-      <MenuLink {...rest} role="menuitem" tabindex="-1">
+      <MenuLink {...rest} as={as || component} role="menuitem" tabindex="-1">
         {!!icon && <WrapperIcon>{icon}</WrapperIcon>} {children}
       </MenuLink>
     </StyledListItem>
