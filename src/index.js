@@ -30,5 +30,5 @@ export SelectField from './components/SelectField'
 export SearchField from './components/SearchField'
 export ContextMenu from './components/ContextMenu'
 export Modal from './components/Modal'
-
 export BreadCrumb from './components/BreadCrumb'
+export Typography from './components/Typography'
