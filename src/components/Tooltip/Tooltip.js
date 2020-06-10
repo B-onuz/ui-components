@@ -1,15 +1,16 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
-import { color, space } from 'styled-system'
+import { space } from 'styled-system'
+import { color } from './variants'
 
 const StyledTooltipWrapper = styled.div`
-  ${color}
   ${space}
   position: relative;
   display: flex;
 `
 
 const TooltipTextBox = styled.div`
+  ${color}
   min-width: 156px;
   position: absolute;
   border-radius: 12px;

@@ -8,7 +8,7 @@ import 'jest-styled-components'
 test('Should render Tooltip', () => {
   const component = renderer.create(
     <ThemeProvider theme={theme}>
-      <Tooltip />
+      <Tooltip text={'Texto'}>Example</Tooltip>
     </ThemeProvider>
   )
   let tree = component.toJSON()

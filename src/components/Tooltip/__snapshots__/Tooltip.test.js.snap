@@ -10,6 +10,9 @@ exports[`Should render Tooltip 1`] = `
 }
 
 .c1 {
+  color: #fff;
+  background-color: #ef4d5a;
+  border-color: #ef4d5a;
   min-width: 156px;
   position: absolute;
   border-radius: 12px;
@@ -59,10 +62,13 @@ exports[`Should render Tooltip 1`] = `
   onMouseEnter={[Function]}
   onMouseLeave={[Function]}
 >
+  Example
   <div
     className="c1"
     color="primary"
     direction="top"
-  />
+  >
+    Texto
+  </div>
 </div>
 `;
