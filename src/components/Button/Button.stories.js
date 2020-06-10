@@ -180,7 +180,12 @@ export const Outline = () => (
 )
 
 export const LinkButton = () => (
-  <Button linkButton m={2} color={'primary'}>
-    {'Link Button'}
-  </Button>
+  <>
+    <Button linkButton m={2} color={'primary'}>
+      {'Link Button'}
+    </Button>
+    <Button linkButton underline m={2} color={'primary'} as={'a'} href={'http://google.com'}>
+      {'http://google.com'}
+    </Button>
+  </>
 )

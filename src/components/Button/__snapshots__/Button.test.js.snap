@@ -16,6 +16,10 @@ exports[`Should render button 1`] = `
   border-color: #e0e1e2;
   font-size: 16px;
   box-sizing: border-box;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
 .c0:focus {
@@ -46,7 +50,7 @@ exports[`Should render button 1`] = `
 </button>
 `;
 
-exports[`Should render button when bg prop 1`] = `
+exports[`Should render button when color prop 1`] = `
 Array [
   .c0 {
   -webkit-appearance: none;
@@ -64,6 +68,10 @@ Array [
   font-size: 16px;
   margin: 8px;
   box-sizing: border-box;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
 .c0:focus {
@@ -108,6 +116,10 @@ Array [
   font-size: 16px;
   margin: 8px;
   box-sizing: border-box;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
 .c0:focus {
@@ -152,6 +164,10 @@ Array [
   font-size: 16px;
   margin: 8px;
   box-sizing: border-box;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
 .c0:focus {
@@ -196,6 +212,10 @@ Array [
   font-size: 16px;
   margin: 8px;
   box-sizing: border-box;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
 .c0:focus {
@@ -240,6 +260,10 @@ Array [
   font-size: 16px;
   margin: 8px;
   box-sizing: border-box;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
 .c0:focus {
@@ -284,6 +308,10 @@ Array [
   font-size: 16px;
   margin: 8px;
   box-sizing: border-box;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
 .c0:focus {
@@ -328,6 +356,10 @@ Array [
   font-size: 16px;
   margin: 8px;
   box-sizing: border-box;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
 .c0:focus {
@@ -372,6 +404,10 @@ Array [
   font-size: 16px;
   margin: 8px;
   box-sizing: border-box;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
 .c0:focus {
@@ -416,6 +452,10 @@ Array [
   font-size: 16px;
   margin: 8px;
   box-sizing: border-box;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
 .c0:focus {
@@ -460,6 +500,10 @@ Array [
   font-size: 16px;
   margin: 8px;
   box-sizing: border-box;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
 .c0:focus {
@@ -504,6 +548,10 @@ Array [
   font-size: 16px;
   margin: 8px;
   box-sizing: border-box;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
 .c0:focus {
@@ -548,6 +596,10 @@ Array [
   font-size: 16px;
   margin: 8px;
   box-sizing: border-box;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
 .c0:focus {
@@ -592,6 +644,10 @@ Array [
   font-size: 16px;
   margin: 8px;
   box-sizing: border-box;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
 .c0:focus {
@@ -636,6 +692,10 @@ Array [
   font-size: 16px;
   margin: 8px;
   box-sizing: border-box;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
 .c0:focus {
@@ -680,6 +740,10 @@ Array [
   font-size: 16px;
   margin: 8px;
   box-sizing: border-box;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
 .c0:focus {
@@ -724,6 +788,10 @@ Array [
   font-size: 16px;
   margin: 8px;
   box-sizing: border-box;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
 .c0:focus {
@@ -768,6 +836,10 @@ Array [
   font-size: 16px;
   margin: 8px;
   box-sizing: border-box;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
 .c0:focus {
@@ -812,6 +884,10 @@ Array [
   font-size: 16px;
   margin: 8px;
   box-sizing: border-box;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
 .c0:focus {
@@ -856,6 +932,10 @@ Array [
   font-size: 16px;
   margin: 8px;
   box-sizing: border-box;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
 .c0:focus {
@@ -900,6 +980,10 @@ Array [
   font-size: 16px;
   margin: 8px;
   box-sizing: border-box;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
 .c0:focus {
@@ -949,6 +1033,10 @@ Array [
   font-size: 14px;
   margin: 8px;
   box-sizing: border-box;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
 .c0:focus {
@@ -993,6 +1081,10 @@ Array [
   font-size: 16px;
   margin: 8px;
   box-sizing: border-box;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
 .c0:focus {
@@ -1037,6 +1129,10 @@ Array [
   font-size: 20px;
   margin: 8px;
   box-sizing: border-box;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
 .c0:focus {
@@ -1081,6 +1177,10 @@ Array [
   font-size: 24px;
   margin: 8px;
   box-sizing: border-box;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
 .c0:focus {
@@ -1132,6 +1232,10 @@ exports[`Should render outlined button when outline prop 1`] = `
   background-color: #fff;
   color: #e0e1e2 !important;
   border-color: #e0e1e2;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
 .c0:focus {
