@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.4.0](https://github.com/B-onuz/ui-components/compare/v2.3.1...v2.4.0) (2020-06-10)
+
+### Features
+
+- **button:** add underline prop to Button with linkButton prop ([#20](https://github.com/B-onuz/ui-components/issues/20)) ([a3fdd2b](https://github.com/B-onuz/ui-components/commit/a3fdd2b12c402919e855b694c1a248a4af876c12))
+- **switch:** add switch component ([#24](https://github.com/B-onuz/ui-components/issues/24)) ([033df0a](https://github.com/B-onuz/ui-components/commit/033df0aa26b0c952f5682bc496a30eeb467d5246))
+- **typography:** add component typography ([#22](https://github.com/B-onuz/ui-components/issues/22)) ([f12c2da](https://github.com/B-onuz/ui-components/commit/f12c2dacc802f462baad9b51c564a0aa50f8b823))
+
+### Bug Fixes
+
+- **theme:** remove prop theme duplicates ([#21](https://github.com/B-onuz/ui-components/issues/21)) ([2670dcf](https://github.com/B-onuz/ui-components/commit/2670dcf033ec90384118296d2f99c3b428b2ae9c))
+
 ### [2.3.1](https://github.com/B-onuz/ui-components/compare/v2.3.0...v2.3.1) (2020-06-08)
 
 ### Bug Fixes
