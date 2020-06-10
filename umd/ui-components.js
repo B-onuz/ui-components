@@ -1,4 +1,4 @@
-/*! ui-components v2.3.0 */
+/*! ui-components v2.3.1 */
 (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
 		module.exports = factory(require("react"));
@@ -9968,6 +9968,8 @@ __webpack_require__.d(__webpack_exports__, "SearchField", function() { return /*
 __webpack_require__.d(__webpack_exports__, "ContextMenu", function() { return /* reexport */ components_ContextMenu; });
 __webpack_require__.d(__webpack_exports__, "Modal", function() { return /* reexport */ components_Modal; });
 __webpack_require__.d(__webpack_exports__, "BreadCrumb", function() { return /* reexport */ components_BreadCrumb; });
+__webpack_require__.d(__webpack_exports__, "Typography", function() { return /* reexport */ components_Typography; });
+__webpack_require__.d(__webpack_exports__, "Switch", function() { return /* reexport */ components_Switch; });
 
 // CONCATENATED MODULE: ./src/theme/index.js
 var colors = {
@@ -10274,12 +10276,12 @@ var Spinner_Spinner = function Spinner(_ref4) {
 
 /* harmony default export */ var components_Spinner = (components_Spinner_Spinner);
 // CONCATENATED MODULE: ./src/components/Button/Button.js
-function Button_objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
-
 function Button_extends() { Button_extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return Button_extends.apply(this, arguments); }
 
+function Button_objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
+
 function Button_templateObject() {
-  var data = Button_taggedTemplateLiteralLoose(["\n  appearance: none;\n  font-family: inherit;\n  border-radius: 4px;\n  outline: none;\n  cursor: pointer;\n  padding: .5rem 1rem;\n  border-style: solid;\n  ", "\n  ", "\n  ", "\n  ", "\n  box-sizing: border-box;\n  &:focus {\n    box-shadow: 0 0 8px ", ";\n  }\n  \n  &:active:not(:disabled) {\n    box-shadow: inset 0px 0px 5px #c1c1c1;\n  }\n  &:active,\n  &:hover {\n    background-color: ", ";\n  }\n  &:disabled {\n    background-color: ", ";\n  }\n  ", "\n  \n  ", "\n\n  ", " \n"]);
+  var data = Button_taggedTemplateLiteralLoose(["\n  appearance: none;\n  font-family: inherit;\n  border-radius: 4px;\n  outline: none;\n  cursor: pointer;\n  padding: .5rem 1rem;\n  border-style: solid;\n  ", "\n  ", "\n  ", "\n  ", "\n  box-sizing: border-box;\n  &:focus {\n    box-shadow: 0 0 8px ", ";\n  }\n  \n  &:active:not(:disabled) {\n    box-shadow: inset 0px 0px 5px #c1c1c1;\n  }\n  &:active,\n  &:hover {\n    background-color: ", ";\n  }\n  &:disabled {\n    background-color: ", ";\n  }\n  ", "\n  \n  ", "\n\n  ", " \n\n  ", " \n"]);
 
   Button_templateObject = function _templateObject() {
     return data;
@@ -10298,7 +10300,7 @@ function Button_taggedTemplateLiteralLoose(strings, raw) { if (!raw) { raw = str
 
 
 
-var Button = styled_components_browser_esm["default"].button(Button_templateObject(), variants_color, size, index_esm["space"], function (props) {
+var StyledButton = styled_components_browser_esm["default"].button(Button_templateObject(), variants_color, size, index_esm["space"], function (props) {
   return props.fullWidth && 'width: 100%;' || '';
 }, function (_ref) {
   var theme = _ref.theme,
@@ -10321,35 +10323,41 @@ var Button = styled_components_browser_esm["default"].button(Button_templateObje
       color = _ref5.color;
   return !!outline && "\n    background-color: #fff;\n    color: " + theme.colors[color] + " !important;\n    border-color: " + theme.colors[color] + ";\n    &:hover {\n      background-color: " + theme.colors[color] + ";\n      color: " + (new color_default.a(theme.colors[color]).isDark() ? '#fff' : '#000') + " !important;\n    }\n    ";
 }, function (_ref6) {
-  var linkButton = _ref6.linkButton,
-      theme = _ref6.theme,
-      color = _ref6.color;
-  return !!linkButton && "\n    color: " + theme.colors[color] + ";\n    border: none;\n    background-color: transparent !important;\n    box-shadow: none !important;\n    outline: none;\n    &:hover {\n      text-decoration: underline;\n      background-color: transparent;\n    }\n    ";
+  var underline = _ref6.underline;
+  return !!underline ? "\n      text-decoration: underline;\n    " : "text-decoration: none;";
+}, function (_ref7) {
+  var linkButton = _ref7.linkButton,
+      theme = _ref7.theme,
+      color = _ref7.color;
+  return !!linkButton ? "\n    color: " + theme.colors[color] + ";\n    border: none;\n    background-color: transparent !important;\n    box-shadow: none !important;\n    outline: none;\n    &:hover {\n      text-decoration: underline;\n      background-color: transparent;\n    }\n    " : "\n     text-decoration: none;\n    ";
 });
-Button.displayName = 'Button';
-Button.propTypes = Button_extends({
+
+var Button_Button = function Button(_ref8) {
+  var children = _ref8.children,
+      loading = _ref8.loading,
+      disabled = _ref8.disabled,
+      rest = Button_objectWithoutPropertiesLoose(_ref8, ["children", "loading", "disabled"]);
+
+  return /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(StyledButton, Button_extends({}, rest, {
+    disabled: !!disabled || !!loading,
+    loading: loading
+  }), !!loading ? 'carregando...' : children);
+};
+
+Button_Button.displayName = 'Button';
+Button_Button.propTypes = Button_extends({
   size: prop_types_default.a.oneOf(['small', 'medium', 'big', 'huge']),
   color: prop_types_default.a.string
 }, dist_index_esm.space);
-Button.defaultProps = {
+Button_Button.defaultProps = {
   size: 'medium',
   color: 'default',
   type: 'button'
 };
-/* harmony default export */ var Button_Button = (function (_ref7) {
-  var children = _ref7.children,
-      loading = _ref7.loading,
-      disabled = _ref7.disabled,
-      rest = Button_objectWithoutPropertiesLoose(_ref7, ["children", "loading", "disabled"]);
-
-  return /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(Button, Button_extends({}, rest, {
-    disabled: !!disabled || !!loading,
-    loading: loading
-  }), !!loading ? 'carregando...' : children);
-});
+/* harmony default export */ var components_Button_Button = (Button_Button);
 // CONCATENATED MODULE: ./src/components/Button/index.js
 
-/* harmony default export */ var components_Button = (Button_Button);
+/* harmony default export */ var components_Button = (components_Button_Button);
 // CONCATENATED MODULE: ./src/components/Label/Label.js
 function Label_objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 
@@ -11012,8 +11020,10 @@ BaseLayout_BaseLayout.defaultProps = {
 // CONCATENATED MODULE: ./src/components/SidebarMenuItem/SidebarMenuItem.js
 function SidebarMenuItem_extends() { SidebarMenuItem_extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return SidebarMenuItem_extends.apply(this, arguments); }
 
+function SidebarMenuItem_objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
+
 function SidebarMenuItem_templateObject3() {
-  var data = SidebarMenuItem_taggedTemplateLiteralLoose(["\n    background-color: rgba(255, 255, 255, 0.1);\n    padding: 16px 20px;\n    color: #fff;\n    display: block;\n    text-decoration: none;\n    cursor: pointer;\n    &:hover {\n      background-color: rgba(255, 255, 255, 0.2);\n    }\n  "]);
+  var data = SidebarMenuItem_taggedTemplateLiteralLoose(["\n  background-color: rgba(255, 255, 255, 0.1);\n  padding: 16px 20px;\n  color: #fff;\n  display: block;\n  text-decoration: none;\n  cursor: pointer;\n  &:hover {\n    background-color: rgba(255, 255, 255, 0.2);\n  }\n"]);
 
   SidebarMenuItem_templateObject3 = function _templateObject3() {
     return data;
@@ -11021,8 +11031,6 @@ function SidebarMenuItem_templateObject3() {
 
   return data;
 }
-
-function SidebarMenuItem_objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 
 function SidebarMenuItem_templateObject2() {
   var data = SidebarMenuItem_taggedTemplateLiteralLoose(["\n  margin-right: 8px;\n"]);
@@ -11050,17 +11058,19 @@ function SidebarMenuItem_taggedTemplateLiteralLoose(strings, raw) { if (!raw) { 
 
 var StyledListItem = styled_components_browser_esm["default"].li(SidebarMenuItem_templateObject());
 var WrapperIcon = styled_components_browser_esm["default"].span(SidebarMenuItem_templateObject2());
+var MenuLink = styled_components_browser_esm["default"].a(SidebarMenuItem_templateObject3());
 var MenuItem = Object(external_root_React_commonjs2_react_commonjs_react_amd_react_["memo"])(function (_ref) {
   var children = _ref.children,
       _ref$component = _ref.component,
       component = _ref$component === void 0 ? 'a' : _ref$component,
+      as = _ref.as,
       icon = _ref.icon,
-      rest = SidebarMenuItem_objectWithoutPropertiesLoose(_ref, ["children", "component", "icon"]);
+      rest = SidebarMenuItem_objectWithoutPropertiesLoose(_ref, ["children", "component", "as", "icon"]);
 
-  var MenuLink = Object(styled_components_browser_esm["default"])(component)(SidebarMenuItem_templateObject3());
   return /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(StyledListItem, {
     role: "none"
   }, /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(MenuLink, SidebarMenuItem_extends({}, rest, {
+    as: as || component,
     role: "menuitem",
     tabindex: "-1"
   }), !!icon && /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(WrapperIcon, null, icon), " ", children));
@@ -20590,6 +20600,8 @@ var Modal_Modal = function Modal(_ref) {
 
 /* harmony default export */ var components_Modal = (components_Modal_Modal);
 // CONCATENATED MODULE: ./src/components/BreadCrumb/BreadCrumb.js
+function BreadCrumb_extends() { BreadCrumb_extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return BreadCrumb_extends.apply(this, arguments); }
+
 function BreadCrumb_objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 
 function BreadCrumb_templateObject3() {
@@ -20660,24 +20672,25 @@ var BreadCrumb_BreadCrumb = function BreadCrumb(_ref4) {
       color = _ref4.color,
       rest = BreadCrumb_objectWithoutPropertiesLoose(_ref4, ["children", "navigationLinks", "color"]);
 
-  console.log(components_Button);
   return /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(StyledBreadCrumb, rest, (navigationLinks || []).map(function (item, index) {
+    var label = item.label,
+        key = item.key,
+        itemProps = BreadCrumb_objectWithoutPropertiesLoose(item, ["label", "key"]);
+
     return index !== navigationLinks.length - 1 ? /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.Fragment, {
       key: index
-    }, /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(components_Button, {
+    }, /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(components_Button, BreadCrumb_extends({
+      key: key || index,
       linkButton: true,
       size: "small",
-      color: color,
-      onClick: function onClick() {
-        return item.action();
-      }
-    }, item.label), /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(BreadCrumb_Icon, {
+      color: color
+    }, itemProps), label), /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(BreadCrumb_Icon, {
       icon: faAngleRight,
       color: color
-    })) : /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(ActiveRoute, {
-      key: index,
+    })) : /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(ActiveRoute, BreadCrumb_extends({
+      key: key || index,
       color: 'black'
-    }, item.label);
+    }, itemProps), item.label);
   }));
 };
 
@@ -20688,6 +20701,124 @@ BreadCrumb_BreadCrumb.defaultProps = {
 // CONCATENATED MODULE: ./src/components/BreadCrumb/index.js
 
 /* harmony default export */ var components_BreadCrumb = (components_BreadCrumb_BreadCrumb);
+// CONCATENATED MODULE: ./src/components/Typography/Typography.js
+function Typography_extends() { Typography_extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return Typography_extends.apply(this, arguments); }
+
+function Typography_objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
+
+function Typography_templateObject() {
+  var data = Typography_taggedTemplateLiteralLoose(["\n  ", "\n"]);
+
+  Typography_templateObject = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+
+function Typography_taggedTemplateLiteralLoose(strings, raw) { if (!raw) { raw = strings.slice(0); } strings.raw = raw; return strings; }
+
+
+
+
+var StyledTypography = styled_components_browser_esm["default"].p(Typography_templateObject(), Object(index_esm["compose"])(index_esm["typography"], index_esm["color"], index_esm["space"]));
+
+var Typography_Typography = function Typography(_ref) {
+  var children = _ref.children,
+      rest = Typography_objectWithoutPropertiesLoose(_ref, ["children"]);
+
+  return /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(StyledTypography, Typography_extends({}, rest, {
+    children: children
+  }));
+};
+
+/* harmony default export */ var components_Typography_Typography = (Typography_Typography);
+// CONCATENATED MODULE: ./src/components/Typography/index.js
+
+/* harmony default export */ var components_Typography = (components_Typography_Typography);
+// CONCATENATED MODULE: ./src/components/Switch/Switch.js
+function Switch_extends() { Switch_extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return Switch_extends.apply(this, arguments); }
+
+function Switch_objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
+
+function Switch_templateObject3() {
+  var data = Switch_taggedTemplateLiteralLoose(["\n  border-color: rgb(223, 223, 223);\n  box-shadow: rgb(223, 223, 223) 1px 1px 3px 0px inset;\n  transition: border 0.4s, box-shadow 0.4s;\n  background-color: #f7f7f7;\n  border: 1px solid #dfdfdf;\n  border-radius: 20px;\n  cursor: pointer;\n  display: inline-block;\n  height: 20px;\n  position: relative;\n  vertical-align: middle;\n  width: 40px;\n  user-select: none;\n  overflow: hidden;\n  box-sizing: content-box;\n  background-clip: content-box;\n  ", "\n  ", "\n  input {\n    display: none;\n    & + ", " {\n      transform: translate(0);\n    }\n\n    &:checked + ", " {\n      transform: translate(calc(50% + 10px));\n    }\n\n    &:checked ~ ", " {\n      background: ", ";\n      opacity: 1;\n      transform: translate(0);\n    }\n  }\n"]);
+
+  Switch_templateObject3 = function _templateObject3() {
+    return data;
+  };
+
+  return data;
+}
+
+function Switch_templateObject2() {
+  var data = Switch_taggedTemplateLiteralLoose(["\n  position: absolute;\n  top: 0;\n  right: 0;\n  bottom: 0;\n  left: 0;\n  z-index: 1;\n  transform: translate(calc(-55% - 25px));\n  transition: 0.25s ease-out;\n  opacity: 0;\n"]);
+
+  Switch_templateObject2 = function _templateObject2() {
+    return data;
+  };
+
+  return data;
+}
+
+function Switch_templateObject() {
+  var data = Switch_taggedTemplateLiteralLoose(["\n  display: block;\n  background: #fff;\n  position: relative;\n  border-radius: 100%;\n  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);\n  height: 20px;\n  width: 20px;\n  top: 0;\n  display: block;\n  transform: translate(25px);\n  transition: 0.2s;\n  z-index: 2;\n"]);
+
+  Switch_templateObject = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+
+function Switch_taggedTemplateLiteralLoose(strings, raw) { if (!raw) { raw = strings.slice(0); } strings.raw = raw; return strings; }
+
+
+
+
+var SwitchToggle = styled_components_browser_esm["default"].div(Switch_templateObject());
+var SwitchBg = styled_components_browser_esm["default"].div(Switch_templateObject2());
+var Switch_Wrapper = styled_components_browser_esm["default"].label(Switch_templateObject3(), index_esm["space"], function (props) {
+  if (props.loading) {
+    return "\n          opacity: .5;\n      ";
+  }
+}, SwitchToggle, SwitchToggle, SwitchBg, function (_ref) {
+  var theme = _ref.theme,
+      color = _ref.color;
+  return theme.colors[color];
+});
+
+var Switch_Switch = function Switch(props) {
+  var onChange = props.onChange,
+      checked = props.checked,
+      id = props.id,
+      _props$loading = props.loading,
+      loading = _props$loading === void 0 ? false : _props$loading,
+      _props$color = props.color,
+      color = _props$color === void 0 ? 'primary' : _props$color,
+      rest = Switch_objectWithoutPropertiesLoose(props, ["onChange", "checked", "id", "loading", "color"]);
+
+  return /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(Switch_Wrapper, Switch_extends({
+    htmlFor: id,
+    loading: loading,
+    color: color
+  }, rest), /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement("input", Switch_extends({
+    type: "checkbox",
+    id: id,
+    checked: checked,
+    onChange: onChange
+  }, rest)), /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(SwitchToggle, {
+    color: color,
+    loading: loading
+  }), /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(SwitchBg, {
+    color: color
+  }));
+};
+
+/* harmony default export */ var components_Switch_Switch = (Switch_Switch);
+// CONCATENATED MODULE: ./src/components/Switch/index.js
+
+/* harmony default export */ var components_Switch = (components_Switch_Switch);
 // CONCATENATED MODULE: ./src/index.js
 /* Theme */
 
@@ -20701,6 +20832,10 @@ BreadCrumb_BreadCrumb.defaultProps = {
 
 
 /* Components */
+
+
+
+
 
 
 

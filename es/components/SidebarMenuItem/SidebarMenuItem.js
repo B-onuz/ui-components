@@ -22,8 +22,10 @@ function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj;
 
 function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
 
+function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
+
 function _templateObject3() {
-  var data = _taggedTemplateLiteralLoose(["\n    background-color: rgba(255, 255, 255, 0.1);\n    padding: 16px 20px;\n    color: #fff;\n    display: block;\n    text-decoration: none;\n    cursor: pointer;\n    &:hover {\n      background-color: rgba(255, 255, 255, 0.2);\n    }\n  "]);
+  var data = _taggedTemplateLiteralLoose(["\n  background-color: rgba(255, 255, 255, 0.1);\n  padding: 16px 20px;\n  color: #fff;\n  display: block;\n  text-decoration: none;\n  cursor: pointer;\n  &:hover {\n    background-color: rgba(255, 255, 255, 0.2);\n  }\n"]);
 
   _templateObject3 = function _templateObject3() {
     return data;
@@ -31,8 +33,6 @@ function _templateObject3() {
 
   return data;
 }
-
-function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 
 function _templateObject2() {
   var data = _taggedTemplateLiteralLoose(["\n  margin-right: 8px;\n"]);
@@ -60,14 +60,16 @@ var StyledListItem = _styledComponents["default"].li(_templateObject());
 
 var WrapperIcon = _styledComponents["default"].span(_templateObject2());
 
+var MenuLink = _styledComponents["default"].a(_templateObject3());
+
 var MenuItem = (0, _react.memo)(function (_ref) {
   var children = _ref.children,
       _ref$component = _ref.component,
       component = _ref$component === void 0 ? 'a' : _ref$component,
+      as = _ref.as,
       icon = _ref.icon,
-      rest = _objectWithoutPropertiesLoose(_ref, ["children", "component", "icon"]);
+      rest = _objectWithoutPropertiesLoose(_ref, ["children", "component", "as", "icon"]);
 
-  var MenuLink = (0, _styledComponents["default"])(component)(_templateObject3());
   return /*#__PURE__*/_react["default"].createElement(StyledListItem, {
     role: "none",
     __self: _this,
@@ -77,6 +79,7 @@ var MenuItem = (0, _react.memo)(function (_ref) {
       columnNumber: 5
     }
   }, /*#__PURE__*/_react["default"].createElement(MenuLink, _extends({}, rest, {
+    as: as || component,
     role: "menuitem",
     tabindex: "-1",
     __self: _this,

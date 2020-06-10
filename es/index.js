@@ -183,6 +183,18 @@ Object.defineProperty(exports, "BreadCrumb", {
     return _BreadCrumb2["default"];
   }
 });
+Object.defineProperty(exports, "Typography", {
+  enumerable: true,
+  get: function get() {
+    return _Typography2["default"];
+  }
+});
+Object.defineProperty(exports, "Switch", {
+  enumerable: true,
+  get: function get() {
+    return _Switch2["default"];
+  }
+});
 
 var _theme2 = _interopRequireDefault(require("./theme"));
 
@@ -243,5 +255,9 @@ var _ContextMenu2 = _interopRequireDefault(require("./components/ContextMenu"));
 var _Modal2 = _interopRequireDefault(require("./components/Modal"));
 
 var _BreadCrumb2 = _interopRequireDefault(require("./components/BreadCrumb"));
+
+var _Typography2 = _interopRequireDefault(require("./components/Typography"));
+
+var _Switch2 = _interopRequireDefault(require("./components/Switch"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }

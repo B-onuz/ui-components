@@ -89,15 +89,18 @@ var BreadCrumb = function BreadCrumb(_ref4) {
       color = _ref4.color,
       rest = _objectWithoutPropertiesLoose(_ref4, ["children", "navigationLinks", "color"]);
 
-  console.log(_Button["default"]);
   return /*#__PURE__*/_react["default"].createElement(StyledBreadCrumb, _extends({}, rest, {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 40,
+      lineNumber: 39,
       columnNumber: 5
     }
   }), (navigationLinks || []).map(function (item, index) {
+    var label = item.label,
+        key = item.key,
+        itemProps = _objectWithoutPropertiesLoose(item, ["label", "key"]);
+
     return index !== navigationLinks.length - 1 ? /*#__PURE__*/_react["default"].createElement(_react["default"].Fragment, {
       key: index,
       __self: _this,
@@ -106,20 +109,19 @@ var BreadCrumb = function BreadCrumb(_ref4) {
         lineNumber: 43,
         columnNumber: 11
       }
-    }, /*#__PURE__*/_react["default"].createElement(_Button["default"], {
+    }, /*#__PURE__*/_react["default"].createElement(_Button["default"], _extends({
+      key: key || index,
       linkButton: true,
       size: "small",
-      color: color,
-      onClick: function onClick() {
-        return item.action();
-      },
+      color: color
+    }, itemProps, {
       __self: _this,
       __source: {
         fileName: _jsxFileName,
         lineNumber: 44,
         columnNumber: 13
       }
-    }, item.label), /*#__PURE__*/_react["default"].createElement(Icon, {
+    }), label), /*#__PURE__*/_react["default"].createElement(Icon, {
       icon: _freeSolidSvgIcons.faAngleRight,
       color: color,
       __self: _this,
@@ -128,16 +130,17 @@ var BreadCrumb = function BreadCrumb(_ref4) {
         lineNumber: 47,
         columnNumber: 13
       }
-    })) : /*#__PURE__*/_react["default"].createElement(ActiveRoute, {
-      key: index,
-      color: 'black',
+    })) : /*#__PURE__*/_react["default"].createElement(ActiveRoute, _extends({
+      key: key || index,
+      color: 'black'
+    }, itemProps, {
       __self: _this,
       __source: {
         fileName: _jsxFileName,
         lineNumber: 50,
         columnNumber: 11
       }
-    }, item.label);
+    }), item.label);
   }));
 };
 
