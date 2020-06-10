@@ -27,7 +27,7 @@ import theme from 'ui-components/lib/theme' // linha adicionada
 
 ReactDOM.render(
   <React.StrictMode>
-    <ThemeProvider theme={theme} theme={theme}>
+    <ThemeProvider theme={theme}>
       {' '}
       {/* linha adicionada */}
       <App />
