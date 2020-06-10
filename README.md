@@ -1,4 +1,4 @@
-# B-onuz ui-components
+# B-onuz ui-components :nail_care:
 
 Biblioteca de Componentes de User Interface para projetos da **B-onuz**.
 
@@ -55,7 +55,13 @@ yarn storybook
 
 Será aberto uma página com exemplos dos componentes `http://localhost:6006`.
 
-## Build
+## Build :package: :fire:
+
+Apagar arquivos gerados para produção `build`
+
+```
+yarn clean
+```
 
 Gerar arquivos para produção `build`
 
@@ -63,11 +69,25 @@ Gerar arquivos para produção `build`
 yarn build
 ```
 
-Apagar arquivos gerados para produção `build`
+### Publicação da versão :package: :rocket:
 
-```
-yarn clean
-```
+Primeiro, limpe a build anterior e gere a build atualizada.
+
+```yarn clean && yarn build```
+
+Commit as alterações **exemplo:** ```chore(build): add new components and some fixes```.
+
+```git cz```
+
+Gere uma nova **release**
+
+```yarn release```
+
+Por último, suba as alterações juntamente com a **tag da versão**
+
+```git push --follow-tags origin master```
+
+
 
 ### Criação de componentes
 
