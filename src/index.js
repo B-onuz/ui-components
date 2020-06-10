@@ -32,3 +32,5 @@ export ContextMenu from './components/ContextMenu'
 export Modal from './components/Modal'
 export BreadCrumb from './components/BreadCrumb'
 export Typography from './components/Typography'
+
+export Switch from './components/Switch'
