@@ -79,7 +79,14 @@ export const useModalHook = () => {
       <Button onClick={() => openModal({ id: '#1' })} m={10} color={'primary'}>
         Abrir modal
       </Button>
-      <Modal open={isOpen} onClose={closeModal} header={<h3>Hello id: {(modalParams || {}).id}</h3>} footer={<small>Footer</small>}>
+      <Modal
+        contentModalProps={{ width: 1024 }}
+        boxProps={{ p: 40 }}
+        open={isOpen}
+        onClose={closeModal}
+        header={<h3>Hello id: {(modalParams || {}).id}</h3>}
+        footer={<small>Footer</small>}
+      >
         <p style={{ maxWidth: 320 }}>
           Magna ullamco incididunt laborum laboris. Qui Lorem nisi laboris minim elit ipsum magna aute commodo quis. Et minim nostrud dolore
           reprehenderit aliqua non ad quis et. Commodo excepteur proident Lorem laboris non qui pariatur duis id amet. Mollit minim commodo magna
