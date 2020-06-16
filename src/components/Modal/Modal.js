@@ -3,11 +3,13 @@ import ReactDOM from 'react-dom'
 import styled from 'styled-components'
 import Box from '../Box'
 import { animated, useTransition } from 'react-spring'
+import { space, layout, compose } from 'styled-system'
 
 const ContentModal = styled(animated.div)`
   width: auto;
   max-width: 90%;
   margin: auto;
+  ${compose(space, layout)}
 `
 
 const BoxModal = styled(Box)`
@@ -69,7 +71,7 @@ const useRootModal = () => {
   return { $rootModal }
 }
 
-const Modal = ({ children, open, onClose, boxProps, header, footer, ...rest }) => {
+const Modal = ({ children, open, onClose, boxProps, header, footer, contentModalProps, ...rest }) => {
   const { $rootModal } = useRootModal()
   const transitions = useTransition(open, null, {
     from: { transform: 'translate3d(0,-80px,0)', opacity: 0 },
@@ -93,7 +95,7 @@ const Modal = ({ children, open, onClose, boxProps, header, footer, ...rest }) =
             {transitions.map(
               ({ item, key, props }) =>
                 item && (
-                  <ContentModal key={key} style={props} key={key} style={props}>
+                  <ContentModal key={key} style={props} {...contentModalProps}>
                     <BoxModal {...boxProps}>
                       <BoxModalHeader>{header}</BoxModalHeader>
                       <BoxModalContent>{children}</BoxModalContent>
