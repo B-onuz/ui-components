@@ -13,9 +13,10 @@ Biblioteca de Componentes de User Interface para projetos da **B-onuz**.
 - jest (https://jestjs.io/)
 - Storybook (https://storybook.js.org/)
 
-## Components DOCS
+## Documentação
 
-- Documentação dos componentes [Documentação](docs/components)
+- [Documentação dos componentes](docs/components)
+- [Documentação dos hooks](docs/hooks)
 
 ## Instalação
 
@@ -73,21 +74,19 @@ yarn build
 
 Primeiro, limpe a build anterior e gere a build atualizada.
 
-```yarn clean && yarn build```
+`yarn clean && yarn build`
 
-Commit as alterações **exemplo:** ```chore(build): add new components and some fixes```.
+Commit as alterações **exemplo:** `chore(build): add new components and some fixes`.
 
-```git cz```
+`git cz`
 
 Gere uma nova **release**
 
-```yarn release```
+`yarn release`
 
 Por último, suba as alterações juntamente com a **tag da versão**
 
-```git push --follow-tags origin master```
-
-
+`git push --follow-tags origin master`
 
 ### Criação de componentes
 
