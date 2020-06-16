@@ -65,6 +65,24 @@ module.exports = function (plop) {
     ],
   })
 
+  plop.setGenerator('hook:doc', {
+    description: 'Cerate a new hook doc',
+    prompts: [
+      {
+        type: 'input',
+        name: 'name',
+        message: 'hook name (example: useModal):',
+      },
+    ],
+    actions: [
+      {
+        type: 'add',
+        path: 'docs/hooks/{{camelCase name}}.md',
+        templateFile: 'plop-templates/hooks.doc.md.hbs',
+      },
+    ],
+  })
+
   plop.setGenerator('component:test', {
     description: 'Create a new component test',
     prompts: [
