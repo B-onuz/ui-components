@@ -15,6 +15,9 @@ const StyledButton = styled.button`
   cursor: pointer;
   padding: .5rem 1rem;
   border-style: solid;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
   ${color}
   ${size}
   ${space}
