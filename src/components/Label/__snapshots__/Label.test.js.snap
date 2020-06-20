@@ -10,6 +10,6 @@ exports[`Label changes the class when hovered 1`] = `
 <label
   className="c0"
 >
-  Hello Label
+   Hello Label
 </label>
 `;

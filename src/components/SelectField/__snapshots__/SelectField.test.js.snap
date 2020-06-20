@@ -7,10 +7,6 @@ exports[`SelectField changes the class when hovered 1`] = `
   font-weight: 600;
 }
 
-.c1::before {
-  content: '* ';
-}
-
 .c2 {
   border: 1px solid #dededf;
   -webkit-appearance: none;
@@ -86,10 +82,15 @@ exports[`SelectField changes the class when hovered 1`] = `
 >
   <label
     className="c1"
+    color={false}
     htmlFor="name"
-    required={true}
   >
-    Nome
+    <abbr
+      title="Campo obrigatório"
+    >
+      *
+    </abbr>
+     Nome
   </label>
   <select
     aria-invalid={false}
