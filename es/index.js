@@ -195,6 +195,12 @@ Object.defineProperty(exports, "Switch", {
     return _Switch2["default"];
   }
 });
+Object.defineProperty(exports, "FormHelperText", {
+  enumerable: true,
+  get: function get() {
+    return _FormHelperText2["default"];
+  }
+});
 
 var _theme2 = _interopRequireDefault(require("./theme"));
 
@@ -259,5 +265,7 @@ var _BreadCrumb2 = _interopRequireDefault(require("./components/BreadCrumb"));
 var _Typography2 = _interopRequireDefault(require("./components/Typography"));
 
 var _Switch2 = _interopRequireDefault(require("./components/Switch"));
+
+var _FormHelperText2 = _interopRequireDefault(require("./components/FormHelperText"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }

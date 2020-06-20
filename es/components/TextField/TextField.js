@@ -21,6 +21,8 @@ var _propTypes2 = _interopRequireDefault(require("@styled-system/prop-types"));
 
 var _Textarea = _interopRequireDefault(require("../Textarea"));
 
+var _FormHelperText = _interopRequireDefault(require("../FormHelperText"));
+
 var _this = void 0,
     _jsxFileName = "/Users/rogeralbino/projects/Kazap/B-onuz/ui-components/src/components/TextField/TextField.js";
 
@@ -57,25 +59,28 @@ var TextField = function TextField(_ref) {
       _ref$inputProps = _ref.inputProps,
       inputProps = _ref$inputProps === void 0 ? {} : _ref$inputProps,
       multiline = _ref.multiline,
+      _ref$helperText = _ref.helperText,
+      helperText = _ref$helperText === void 0 ? '' : _ref$helperText,
       _ref$type = _ref.type,
       type = _ref$type === void 0 ? 'text' : _ref$type,
-      rest = _objectWithoutPropertiesLoose(_ref, ["children", "label", "placeholder", "name", "id", "value", "onChange", "required", "error", "inputProps", "multiline", "type"]);
+      rest = _objectWithoutPropertiesLoose(_ref, ["children", "label", "placeholder", "name", "id", "value", "onChange", "required", "error", "inputProps", "multiline", "helperText", "type"]);
 
   var InputComponent = multiline ? _Textarea["default"] : _Input["default"];
   return /*#__PURE__*/_react["default"].createElement(StyledTextField, _extends({}, rest, {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 37,
+      lineNumber: 39,
       columnNumber: 5
     }
   }), /*#__PURE__*/_react["default"].createElement(_Label["default"], {
     htmlFor: id,
+    color: !!error && 'danger',
     required: !!required,
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 38,
+      lineNumber: 40,
       columnNumber: 7
     }
   }, label), /*#__PURE__*/_react["default"].createElement(InputComponent, _extends({
@@ -91,15 +96,31 @@ var TextField = function TextField(_ref) {
     required: !!required,
     "aria-required": !!required,
     "aria-invalid": !!error,
-    type: type
+    type: !!type,
+    error: error
   }, inputProps, {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 41,
+      lineNumber: 43,
       columnNumber: 7
     }
-  })));
+  })), !!error && /*#__PURE__*/_react["default"].createElement(_FormHelperText["default"], {
+    color: 'red',
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 58,
+      columnNumber: 19
+    }
+  }, error), !!helperText && /*#__PURE__*/_react["default"].createElement(_FormHelperText["default"], {
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 59,
+      columnNumber: 24
+    }
+  }, helperText));
 };
 
 TextField.propTypes = process.env.NODE_ENV !== "production" ? _extends({}, _propTypes2["default"].space, {}, _propTypes2["default"].layout, {

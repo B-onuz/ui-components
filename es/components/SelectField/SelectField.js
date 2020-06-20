@@ -13,6 +13,8 @@ var _Label = _interopRequireDefault(require("../Label"));
 
 var _Select = _interopRequireDefault(require("../Select"));
 
+var _FormHelperText = _interopRequireDefault(require("../FormHelperText"));
+
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
 var _styledSystem = require("styled-system");
@@ -52,24 +54,26 @@ var SelectField = function SelectField(_ref) {
       onChange = _ref.onChange,
       required = _ref.required,
       error = _ref.error,
+      helperText = _ref.helperText,
       _ref$inputProps = _ref.inputProps,
       inputProps = _ref$inputProps === void 0 ? {} : _ref$inputProps,
-      rest = _objectWithoutPropertiesLoose(_ref, ["children", "label", "placeholder", "name", "id", "value", "onChange", "required", "error", "inputProps"]);
+      rest = _objectWithoutPropertiesLoose(_ref, ["children", "label", "placeholder", "name", "id", "value", "onChange", "required", "error", "helperText", "inputProps"]);
 
   return /*#__PURE__*/_react["default"].createElement(StyledSelectField, _extends({}, rest, {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 21,
+      lineNumber: 22,
       columnNumber: 5
     }
   }), /*#__PURE__*/_react["default"].createElement(_Label["default"], {
     htmlFor: id,
+    color: !!error && 'danger',
     required: !!required,
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 22,
+      lineNumber: 23,
       columnNumber: 7
     }
   }, label), /*#__PURE__*/_react["default"].createElement(_Select["default"], _extends({
@@ -84,15 +88,31 @@ var SelectField = function SelectField(_ref) {
     ,
     required: !!required,
     "aria-required": !!required,
-    "aria-invalid": !!error
+    "aria-invalid": !!error,
+    error: error
   }, inputProps, {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 25,
+      lineNumber: 26,
       columnNumber: 7
     }
-  }), children));
+  }), children), !!error && /*#__PURE__*/_react["default"].createElement(_FormHelperText["default"], {
+    color: 'red',
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 42,
+      columnNumber: 19
+    }
+  }, error), !!helperText && /*#__PURE__*/_react["default"].createElement(_FormHelperText["default"], {
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 43,
+      columnNumber: 24
+    }
+  }, helperText));
 };
 
 SelectField.propTypes = process.env.NODE_ENV !== "production" ? _extends({}, _propTypes2["default"].space, {}, _propTypes2["default"].layout, {
