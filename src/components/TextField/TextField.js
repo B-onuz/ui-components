@@ -17,7 +17,21 @@ const StyledTextField = styled.div`
   }
 `
 
-const TextField = ({ children, label, placeholder, name, id, value, onChange, required, error, inputProps = {}, multiline, ...rest }) => {
+const TextField = ({
+  children,
+  label,
+  placeholder,
+  name,
+  id,
+  value,
+  onChange,
+  required,
+  error,
+  inputProps = {},
+  multiline,
+  type = 'text',
+  ...rest
+}) => {
   const InputComponent = multiline ? Textarea : Input
   return (
     <StyledTextField {...rest}>
@@ -35,6 +49,7 @@ const TextField = ({ children, label, placeholder, name, id, value, onChange, re
         required={!!required}
         aria-required={!!required}
         aria-invalid={!!error}
+        type={type}
         {...inputProps}
       />
     </StyledTextField>

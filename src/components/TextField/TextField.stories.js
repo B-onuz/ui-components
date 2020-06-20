@@ -27,6 +27,9 @@ export const TextFieldExample = () => (
     <Box width={[1, 1 / 2, 1 / 3]}>
       <TextField id="fullname" name={'fullname'} label={'Exibir Como:'} m={2} placeholder={'Nome + Sobrenome'} />
     </Box>
+    <Box width={[1, 1 / 2, 1 / 8]}>
+      <TextField id="number" type={'number'} name={'number'} label={'Número'} m={2} placeholder={'Número'} />
+    </Box>
   </Flex>
 )
 
