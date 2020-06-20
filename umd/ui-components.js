@@ -1,4 +1,4 @@
-/*! ui-components v2.3.1 */
+/*! ui-components v2.4.0 */
 (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
 		module.exports = factory(require("react"));
@@ -10281,7 +10281,7 @@ function Button_extends() { Button_extends = Object.assign || function (target) 
 function Button_objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 
 function Button_templateObject() {
-  var data = Button_taggedTemplateLiteralLoose(["\n  appearance: none;\n  font-family: inherit;\n  border-radius: 4px;\n  outline: none;\n  cursor: pointer;\n  padding: .5rem 1rem;\n  border-style: solid;\n  ", "\n  ", "\n  ", "\n  ", "\n  box-sizing: border-box;\n  &:focus {\n    box-shadow: 0 0 8px ", ";\n  }\n  \n  &:active:not(:disabled) {\n    box-shadow: inset 0px 0px 5px #c1c1c1;\n  }\n  &:active,\n  &:hover {\n    background-color: ", ";\n  }\n  &:disabled {\n    background-color: ", ";\n  }\n  ", "\n  \n  ", "\n\n  ", " \n\n  ", " \n"]);
+  var data = Button_taggedTemplateLiteralLoose(["\n  appearance: none;\n  font-family: inherit;\n  border-radius: 4px;\n  outline: none;\n  cursor: pointer;\n  padding: .5rem 1rem;\n  border-style: solid;\n  white-space: nowrap;\n  text-overflow: ellipsis;\n  overflow: hidden;\n  ", "\n  ", "\n  ", "\n  ", "\n  box-sizing: border-box;\n  &:focus {\n    box-shadow: 0 0 8px ", ";\n  }\n  \n  &:active:not(:disabled) {\n    box-shadow: inset 0px 0px 5px #c1c1c1;\n  }\n  &:active,\n  &:hover {\n    background-color: ", ";\n  }\n  &:disabled {\n    background-color: ", ";\n  }\n  ", "\n  \n  ", "\n\n  ", " \n\n  ", " \n"]);
 
   Button_templateObject = function _templateObject() {
     return data;
@@ -10554,7 +10554,9 @@ var TextField_TextField = function TextField(_ref) {
       _ref$inputProps = _ref.inputProps,
       inputProps = _ref$inputProps === void 0 ? {} : _ref$inputProps,
       multiline = _ref.multiline,
-      rest = TextField_objectWithoutPropertiesLoose(_ref, ["children", "label", "placeholder", "name", "id", "value", "onChange", "required", "error", "inputProps", "multiline"]);
+      _ref$type = _ref.type,
+      type = _ref$type === void 0 ? 'text' : _ref$type,
+      rest = TextField_objectWithoutPropertiesLoose(_ref, ["children", "label", "placeholder", "name", "id", "value", "onChange", "required", "error", "inputProps", "multiline", "type"]);
 
   var InputComponent = multiline ? components_Textarea : components_Input;
   return /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(StyledTextField, rest, /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(components_Label, {
@@ -10572,7 +10574,8 @@ var TextField_TextField = function TextField(_ref) {
     ,
     required: !!required,
     "aria-required": !!required,
-    "aria-invalid": !!error
+    "aria-invalid": !!error,
+    type: type
   }, inputProps)));
 };
 
@@ -20481,7 +20484,7 @@ function Modal_templateObject2() {
 }
 
 function Modal_templateObject() {
-  var data = Modal_taggedTemplateLiteralLoose(["\n  width: auto;\n  max-width: 90%;\n  margin: auto;\n"]);
+  var data = Modal_taggedTemplateLiteralLoose(["\n  width: auto;\n  max-width: 90%;\n  margin: auto;\n  ", "\n"]);
 
   Modal_templateObject = function _templateObject() {
     return data;
@@ -20497,7 +20500,8 @@ function Modal_taggedTemplateLiteralLoose(strings, raw) { if (!raw) { raw = stri
 
 
 
-var ContentModal = Object(styled_components_browser_esm["default"])(extendedAnimated.div)(Modal_templateObject());
+
+var ContentModal = Object(styled_components_browser_esm["default"])(extendedAnimated.div)(Modal_templateObject(), Object(index_esm["compose"])(index_esm["space"], index_esm["layout"]));
 var BoxModal = Object(styled_components_browser_esm["default"])(components_Box)(Modal_templateObject2());
 var BoxModalContent = styled_components_browser_esm["default"].div(Modal_templateObject3());
 var BoxModalHeader = styled_components_browser_esm["default"].div(Modal_templateObject4());
@@ -20534,7 +20538,8 @@ var Modal_Modal = function Modal(_ref) {
       boxProps = _ref.boxProps,
       header = _ref.header,
       footer = _ref.footer,
-      rest = Modal_objectWithoutPropertiesLoose(_ref, ["children", "open", "onClose", "boxProps", "header", "footer"]);
+      contentModalProps = _ref.contentModalProps,
+      rest = Modal_objectWithoutPropertiesLoose(_ref, ["children", "open", "onClose", "boxProps", "header", "footer", "contentModalProps"]);
 
   var _useRootModal = Modal_useRootModal(),
       $rootModal = _useRootModal.$rootModal;
@@ -20573,15 +20578,13 @@ var Modal_Modal = function Modal(_ref) {
       role: "dialog",
       "aria-modal": "true"
     }), transitions.map(function (_ref3) {
-      var _React$createElement;
-
       var item = _ref3.item,
           key = _ref3.key,
           props = _ref3.props;
-      return item && /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(ContentModal, (_React$createElement = {
+      return item && /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(ContentModal, Modal_extends({
         key: key,
         style: props
-      }, _React$createElement["key"] = key, _React$createElement["style"] = props, _React$createElement), /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(BoxModal, boxProps, /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(BoxModalHeader, null, header), /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(BoxModalContent, null, children), /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(BoxModalFooter, null, footer)));
+      }, contentModalProps), /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(BoxModal, boxProps, /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(BoxModalHeader, null, header), /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(BoxModalContent, null, children), /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(BoxModalFooter, null, footer)));
     }), opacityTransitions.map(function (_ref4) {
       var item = _ref4.item,
           key = _ref4.key,

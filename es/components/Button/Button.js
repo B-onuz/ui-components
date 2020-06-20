@@ -31,7 +31,7 @@ function _extends() { _extends = Object.assign || function (target) { for (var i
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteralLoose(["\n  appearance: none;\n  font-family: inherit;\n  border-radius: 4px;\n  outline: none;\n  cursor: pointer;\n  padding: .5rem 1rem;\n  border-style: solid;\n  ", "\n  ", "\n  ", "\n  ", "\n  box-sizing: border-box;\n  &:focus {\n    box-shadow: 0 0 8px ", ";\n  }\n  \n  &:active:not(:disabled) {\n    box-shadow: inset 0px 0px 5px #c1c1c1;\n  }\n  &:active,\n  &:hover {\n    background-color: ", ";\n  }\n  &:disabled {\n    background-color: ", ";\n  }\n  ", "\n  \n  ", "\n\n  ", " \n\n  ", " \n"]);
+  var data = _taggedTemplateLiteralLoose(["\n  appearance: none;\n  font-family: inherit;\n  border-radius: 4px;\n  outline: none;\n  cursor: pointer;\n  padding: .5rem 1rem;\n  border-style: solid;\n  white-space: nowrap;\n  text-overflow: ellipsis;\n  overflow: hidden;\n  ", "\n  ", "\n  ", "\n  ", "\n  box-sizing: border-box;\n  &:focus {\n    box-shadow: 0 0 8px ", ";\n  }\n  \n  &:active:not(:disabled) {\n    box-shadow: inset 0px 0px 5px #c1c1c1;\n  }\n  &:active,\n  &:hover {\n    background-color: ", ";\n  }\n  &:disabled {\n    background-color: ", ";\n  }\n  ", "\n  \n  ", "\n\n  ", " \n\n  ", " \n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -86,7 +86,7 @@ var Button = function Button(_ref8) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 81,
+      lineNumber: 84,
       columnNumber: 3
     }
   }), !!loading ? 'carregando...' : children);
