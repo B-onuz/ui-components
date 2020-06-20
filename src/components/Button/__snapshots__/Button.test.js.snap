@@ -11,6 +11,9 @@ exports[`Should render button 1`] = `
   cursor: pointer;
   padding: .5rem 1rem;
   border-style: solid;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
   color: #000;
   background-color: #e0e1e2;
   border-color: #e0e1e2;
@@ -62,6 +65,9 @@ Array [
   cursor: pointer;
   padding: .5rem 1rem;
   border-style: solid;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
   color: #000;
   background-color: #e0e1e2;
   border-color: #e0e1e2;
@@ -110,6 +116,9 @@ Array [
   cursor: pointer;
   padding: .5rem 1rem;
   border-style: solid;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
   color: #000;
   background-color: #e0e1e2;
   border-color: #e0e1e2;
@@ -158,6 +167,9 @@ Array [
   cursor: pointer;
   padding: .5rem 1rem;
   border-style: solid;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
   color: #fff;
   background-color: #ef4d5a;
   border-color: #ef4d5a;
@@ -206,6 +218,9 @@ Array [
   cursor: pointer;
   padding: .5rem 1rem;
   border-style: solid;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
   color: #fff;
   background-color: #550e33;
   border-color: #550e33;
@@ -254,6 +269,9 @@ Array [
   cursor: pointer;
   padding: .5rem 1rem;
   border-style: solid;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
   color: #fff;
   background-color: #550e33;
   border-color: #550e33;
@@ -302,6 +320,9 @@ Array [
   cursor: pointer;
   padding: .5rem 1rem;
   border-style: solid;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
   color: #fff;
   background-color: #9c2543;
   border-color: #9c2543;
@@ -350,6 +371,9 @@ Array [
   cursor: pointer;
   padding: .5rem 1rem;
   border-style: solid;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
   color: #fff;
   background-color: #ef4d5a;
   border-color: #ef4d5a;
@@ -398,6 +422,9 @@ Array [
   cursor: pointer;
   padding: .5rem 1rem;
   border-style: solid;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
   color: #fff;
   background-color: #db2828;
   border-color: #db2828;
@@ -446,6 +473,9 @@ Array [
   cursor: pointer;
   padding: .5rem 1rem;
   border-style: solid;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
   color: #000;
   background-color: #f2711c;
   border-color: #f2711c;
@@ -494,6 +524,9 @@ Array [
   cursor: pointer;
   padding: .5rem 1rem;
   border-style: solid;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
   color: #000;
   background-color: #fbbd08;
   border-color: #fbbd08;
@@ -542,6 +575,9 @@ Array [
   cursor: pointer;
   padding: .5rem 1rem;
   border-style: solid;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
   color: #000;
   background-color: #b5cc18;
   border-color: #b5cc18;
@@ -590,6 +626,9 @@ Array [
   cursor: pointer;
   padding: .5rem 1rem;
   border-style: solid;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
   color: #fff;
   background-color: #21BA45;
   border-color: #21BA45;
@@ -638,6 +677,9 @@ Array [
   cursor: pointer;
   padding: .5rem 1rem;
   border-style: solid;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
   color: #fff;
   background-color: #00b5ad;
   border-color: #00b5ad;
@@ -686,6 +728,9 @@ Array [
   cursor: pointer;
   padding: .5rem 1rem;
   border-style: solid;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
   color: #fff;
   background-color: #2185d0;
   border-color: #2185d0;
@@ -734,6 +779,9 @@ Array [
   cursor: pointer;
   padding: .5rem 1rem;
   border-style: solid;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
   color: #fff;
   background-color: #6435c9;
   border-color: #6435c9;
@@ -782,6 +830,9 @@ Array [
   cursor: pointer;
   padding: .5rem 1rem;
   border-style: solid;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
   color: #fff;
   background-color: #a333c8;
   border-color: #a333c8;
@@ -830,6 +881,9 @@ Array [
   cursor: pointer;
   padding: .5rem 1rem;
   border-style: solid;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
   color: #fff;
   background-color: #e03997;
   border-color: #e03997;
@@ -878,6 +932,9 @@ Array [
   cursor: pointer;
   padding: .5rem 1rem;
   border-style: solid;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
   color: #fff;
   background-color: #a5673f;
   border-color: #a5673f;
@@ -926,6 +983,9 @@ Array [
   cursor: pointer;
   padding: .5rem 1rem;
   border-style: solid;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
   color: #fff;
   background-color: #767676;
   border-color: #767676;
@@ -974,6 +1034,9 @@ Array [
   cursor: pointer;
   padding: .5rem 1rem;
   border-style: solid;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
   color: #fff;
   background-color: #1b1c1d;
   border-color: #1b1c1d;
@@ -1027,6 +1090,9 @@ Array [
   cursor: pointer;
   padding: .5rem 1rem;
   border-style: solid;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
   color: #000;
   background-color: #e0e1e2;
   border-color: #e0e1e2;
@@ -1075,6 +1141,9 @@ Array [
   cursor: pointer;
   padding: .5rem 1rem;
   border-style: solid;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
   color: #000;
   background-color: #e0e1e2;
   border-color: #e0e1e2;
@@ -1123,6 +1192,9 @@ Array [
   cursor: pointer;
   padding: .5rem 1rem;
   border-style: solid;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
   color: #000;
   background-color: #e0e1e2;
   border-color: #e0e1e2;
@@ -1171,6 +1243,9 @@ Array [
   cursor: pointer;
   padding: .5rem 1rem;
   border-style: solid;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
   color: #000;
   background-color: #e0e1e2;
   border-color: #e0e1e2;
@@ -1223,6 +1298,9 @@ exports[`Should render outlined button when outline prop 1`] = `
   cursor: pointer;
   padding: .5rem 1rem;
   border-style: solid;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
   color: #000;
   background-color: #e0e1e2;
   border-color: #e0e1e2;

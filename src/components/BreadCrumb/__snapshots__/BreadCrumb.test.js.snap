@@ -11,6 +11,9 @@ exports[`Should render BreadCrumb 1`] = `
   cursor: pointer;
   padding: .5rem 1rem;
   border-style: solid;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
   color: #fff;
   background-color: #ef4d5a;
   border-color: #ef4d5a;
@@ -181,6 +184,9 @@ exports[`Should render BreadCrumb with color 1`] = `
   cursor: pointer;
   padding: .5rem 1rem;
   border-style: solid;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
   color: #fff;
   background-color: #6435c9;
   border-color: #6435c9;
