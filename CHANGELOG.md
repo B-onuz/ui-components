@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.5.0](https://github.com/B-onuz/ui-components/compare/v2.4.0...v2.5.0) (2020-06-20)
+
+### Features
+
+- **textfield:** add prop type to input ([0dde1dd](https://github.com/B-onuz/ui-components/commit/0dde1dd6f6954c006cec4019a1d333e05491520b))
+
+### Bug Fixes
+
+- **button:** wrap button text ([1723651](https://github.com/B-onuz/ui-components/commit/172365137be6c4339fbda3265eec84e183492c4a))
+
 ## [2.4.0](https://github.com/B-onuz/ui-components/compare/v2.3.1...v2.4.0) (2020-06-10)
 
 ### Features
