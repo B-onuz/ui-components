@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import Label from '../Label'
 import Select from '../Select'
+import FormHelperText from '../FormHelperText'
 import PropTypes from 'prop-types'
 import { space, layout, compose, flexbox } from 'styled-system'
 import propTypes from '@styled-system/prop-types'
@@ -16,10 +17,10 @@ const StyledSelectField = styled.div`
   }
 `
 
-const SelectField = ({ children, label, placeholder, name, id, value, onChange, required, error, inputProps = {}, ...rest }) => {
+const SelectField = ({ children, label, placeholder, name, id, value, onChange, required, error, helperText, inputProps = {}, ...rest }) => {
   return (
     <StyledSelectField {...rest}>
-      <Label htmlFor={id} required={!!required}>
+      <Label htmlFor={id} color={!!error && 'danger'} required={!!required}>
         {label}
       </Label>
       <Select
@@ -33,10 +34,13 @@ const SelectField = ({ children, label, placeholder, name, id, value, onChange, 
         required={!!required}
         aria-required={!!required}
         aria-invalid={!!error}
+        error={error}
         {...inputProps}
       >
         {children}
       </Select>
+      {!!error && <FormHelperText color={'red'}>{error}</FormHelperText>}
+      {!!helperText && <FormHelperText>{helperText}</FormHelperText>}
     </StyledSelectField>
   )
 }

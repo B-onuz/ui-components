@@ -34,3 +34,5 @@ export BreadCrumb from './components/BreadCrumb'
 export Typography from './components/Typography'
 
 export Switch from './components/Switch'
+
+export FormHelperText from './components/FormHelperText'

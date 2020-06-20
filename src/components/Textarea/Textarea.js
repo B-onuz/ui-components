@@ -20,9 +20,16 @@ const StyledTextarea = styled.textarea`
     color: #b5b5b5;
   }
   &:focus {
-    box-shadow: 0 0 3px ${({ theme, color }) => new Color(theme.colors[color]).fade(0.5).string()};
-    border-color: ${({ theme, color }) => theme.colors[color]};
+    box-shadow: 0 0 3px
+      ${({ theme, color, error }) => (error ? new Color(theme.colors['red']).fade(0.5).string() : new Color(theme.colors[color]).fade(0.5).string())};
+    border-color: ${({ theme, color, error }) => (error ? new Color(theme.colors['red']).string() : theme.colors[color])};
   }
+  ${({ error, theme }) =>
+    !!error &&
+    `
+      box-shadow: 0 0 3px ${new Color(theme.colors['red']).fade(0.5).string()};
+      border: 1px solid ${theme.colors['red']};
+    `}
   ${size}
 `
 

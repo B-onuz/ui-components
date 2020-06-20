@@ -23,7 +23,7 @@ export const FieldsetExample = () => (
         </Box>
       </Flex>
     </Fieldset>
-    <Fieldset m={4} legend={'Dados de contato'}>
+    <Fieldset m={4} bordered p={'1em'} legend={'Dados de contato (bordered)'}>
       <Flex flexWrap={'wrap'} m={-2}>
         <Box width={[1, 1 / 2, 1 / 3]} m={2}>
           <TextField id="email" type="email" name={'email'} label={'Email'} placeholder={'Email'} />

@@ -6,6 +6,7 @@ import PropTypes from 'prop-types'
 import { space, layout, compose, flexbox } from 'styled-system'
 import propTypes from '@styled-system/prop-types'
 import Textarea from '../Textarea'
+import FormHelperText from '../FormHelperText'
 
 const StyledTextField = styled.div`
   display: block;
@@ -29,13 +30,14 @@ const TextField = ({
   error,
   inputProps = {},
   multiline,
+  helperText = '',
   type = 'text',
   ...rest
 }) => {
   const InputComponent = multiline ? Textarea : Input
   return (
     <StyledTextField {...rest}>
-      <Label htmlFor={id} required={!!required}>
+      <Label htmlFor={id} color={!!error && 'danger'} required={!!required}>
         {label}
       </Label>
       <InputComponent
@@ -49,9 +51,12 @@ const TextField = ({
         required={!!required}
         aria-required={!!required}
         aria-invalid={!!error}
-        type={type}
+        type={!!type}
+        error={error}
         {...inputProps}
       />
+      {!!error && <FormHelperText color={'red'}>{error}</FormHelperText>}
+      {!!helperText && <FormHelperText>{helperText}</FormHelperText>}
     </StyledTextField>
   )
 }

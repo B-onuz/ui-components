@@ -6,7 +6,19 @@ import Legend from '../Legend'
 const StyledFieldset = styled.fieldset`
   padding: 0;
   margin: 0;
-  border: none;
+  ${({ bordered }) =>
+    !bordered
+      ? `
+    border: none;
+  `
+      : `
+    border-radius: 4px;
+    border: 1px solid #DEDEDF;
+    legend {
+      margin: 1em;
+      padding: .3em;
+    }
+  `}
   ${compose(space, layout)}
 `
 
