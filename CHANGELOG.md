@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.6.0](https://github.com/B-onuz/ui-components/compare/v2.5.0...v2.6.0) (2020-06-20)
+
+### Features
+
+- **form:** add form messages ([817a728](https://github.com/B-onuz/ui-components/commit/817a728da3663adc79041e8855d0644bb72f9f06))
+
 ## [2.5.0](https://github.com/B-onuz/ui-components/compare/v2.4.0...v2.5.0) (2020-06-20)
 
 ### Features
