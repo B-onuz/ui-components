@@ -30,7 +30,7 @@ ReactDOM.render(
 
 ```jsx
 import React from 'react'
-import useAlertStack from '../../hooks/useAlertStack'
+import useAlertStack from 'ui-components/lib/hooks/useAlertStack'
 const { showMessage } = useAlertStack()
 
 // este componente deve estar dentro da hierarquia de componentes.
