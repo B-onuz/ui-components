@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.7.0](https://github.com/B-onuz/ui-components/compare/v2.6.0...v2.7.0) (2020-07-07)
+
+### Features
+
+- **alert:** add AlertStack component ([#29](https://github.com/B-onuz/ui-components/issues/29)) ([00a3e97](https://github.com/B-onuz/ui-components/commit/00a3e9721095e86dcb8994ef58bf1d3907ead220))
+
+### Bug Fixes
+
+- **textfield:** fix type prop ([aaca83b](https://github.com/B-onuz/ui-components/commit/aaca83b475c467fe7866c806af4a7625ad05625a))
+
 ## [2.6.0](https://github.com/B-onuz/ui-components/compare/v2.5.0...v2.6.0) (2020-06-20)
 
 ### Features
