@@ -92,7 +92,7 @@ exports[`TextField changes the class when hovered 1`] = `
     placeholder="Nome"
     required={true}
     size="medium"
-    type={true}
+    type="text"
   />
 </div>
 `;
