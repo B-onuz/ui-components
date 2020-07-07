@@ -2,7 +2,7 @@
 
 exports[`Alert 1`] = `
 Array [
-  .c0 {
+  .c1 {
   margin: 10px;
   border: 1px solid;
   border-radius: 4px;
@@ -12,34 +12,47 @@ Array [
   box-shadow: 0 0 3px hsl(36.89999999999998,100%,49.8%);
 }
 
-.c0 > p {
+.c1 > p {
   color: rgba(122,77,5,0.85);
 }
 
-.c1 {
-  margin: 0 0 8px;
+.c0 {
+  background: #fff;
+  border-radius: 4px;
+  -webkit-animation-name: slide_undefined;
+  animation-name: slide_undefined;
+  -webkit-animation-duration: .3s;
+  animation-duration: .3s;
 }
 
 .c2 {
+  margin: 0 0 8px;
+}
+
+.c3 {
   margin: 0;
 }
 
 <div
     className="c0"
-    color="warning"
   >
-    <h3
+    <div
       className="c1"
+      color="warning"
     >
-      Exemplo de título
-    </h3>
-    <p
-      className="c2"
-    >
-      Este texto é exemplo de uma message
-    </p>
+      <h3
+        className="c2"
+      >
+        Exemplo de título
+      </h3>
+      <p
+        className="c3"
+      >
+        Este texto é exemplo de uma message
+      </p>
+    </div>
   </div>,
-  .c0 {
+  .c1 {
   margin: 10px;
   border: 1px solid;
   border-radius: 4px;
@@ -49,34 +62,47 @@ Array [
   box-shadow: 0 0 3px hsl(121.10000000000002,100%,45.5%);
 }
 
-.c0 > p {
+.c1 > p {
   color: rgba(30,86,31,0.85);
 }
 
-.c1 {
-  margin: 0 0 8px;
+.c0 {
+  background: #fff;
+  border-radius: 4px;
+  -webkit-animation-name: slide_undefined;
+  animation-name: slide_undefined;
+  -webkit-animation-duration: .3s;
+  animation-duration: .3s;
 }
 
 .c2 {
+  margin: 0 0 8px;
+}
+
+.c3 {
   margin: 0;
 }
 
 <div
     className="c0"
-    color="success"
   >
-    <h3
+    <div
       className="c1"
+      color="success"
     >
-      Exemplo de título
-    </h3>
-    <p
-      className="c2"
-    >
-      Este texto é exemplo de uma message
-    </p>
+      <h3
+        className="c2"
+      >
+        Exemplo de título
+      </h3>
+      <p
+        className="c3"
+      >
+        Este texto é exemplo de uma message
+      </p>
+    </div>
   </div>,
-  .c0 {
+  .c1 {
   margin: 10px;
   border: 1px solid;
   border-radius: 4px;
@@ -86,34 +112,47 @@ Array [
   box-shadow: 0 0 3px hsl(194,100%,47.8%);
 }
 
-.c0 > p {
+.c1 > p {
   color: rgba(14,86,108,0.85);
 }
 
-.c1 {
-  margin: 0 0 8px;
+.c0 {
+  background: #fff;
+  border-radius: 4px;
+  -webkit-animation-name: slide_undefined;
+  animation-name: slide_undefined;
+  -webkit-animation-duration: .3s;
+  animation-duration: .3s;
 }
 
 .c2 {
+  margin: 0 0 8px;
+}
+
+.c3 {
   margin: 0;
 }
 
 <div
     className="c0"
-    color="info"
   >
-    <h3
+    <div
       className="c1"
+      color="info"
     >
-      Exemplo de título
-    </h3>
-    <p
-      className="c2"
-    >
-      Este texto é exemplo de uma message
-    </p>
+      <h3
+        className="c2"
+      >
+        Exemplo de título
+      </h3>
+      <p
+        className="c3"
+      >
+        Este texto é exemplo de uma message
+      </p>
+    </div>
   </div>,
-  .c0 {
+  .c1 {
   margin: 10px;
   border: 1px solid;
   border-radius: 4px;
@@ -123,32 +162,45 @@ Array [
   box-shadow: 0 0 3px hsl(1.3000000000000114,100%,80.8%);
 }
 
-.c0 > p {
+.c1 > p {
   color: rgba(151,57,55,0.85);
 }
 
-.c1 {
-  margin: 0 0 8px;
+.c0 {
+  background: #fff;
+  border-radius: 4px;
+  -webkit-animation-name: slide_undefined;
+  animation-name: slide_undefined;
+  -webkit-animation-duration: .3s;
+  animation-duration: .3s;
 }
 
 .c2 {
+  margin: 0 0 8px;
+}
+
+.c3 {
   margin: 0;
 }
 
 <div
     className="c0"
-    color="danger"
   >
-    <h3
+    <div
       className="c1"
+      color="danger"
     >
-      Exemplo de título
-    </h3>
-    <p
-      className="c2"
-    >
-      Este texto é exemplo de uma message
-    </p>
+      <h3
+        className="c2"
+      >
+        Exemplo de título
+      </h3>
+      <p
+        className="c3"
+      >
+        Este texto é exemplo de uma message
+      </p>
+    </div>
   </div>,
 ]
 `;
