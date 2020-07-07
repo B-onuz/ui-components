@@ -51,7 +51,7 @@ const TextField = ({
         required={!!required}
         aria-required={!!required}
         aria-invalid={!!error}
-        type={!!type}
+        type={type}
         error={error}
         {...inputProps}
       />
