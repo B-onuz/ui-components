@@ -15,6 +15,35 @@ const StyledAlert = styled.div`
   ${color};
 `
 
+const Wrapper = styled.div`
+  background: #fff;
+  border-radius: 4px;
+  @keyframes slide_bottom {
+    from {
+      transform: translateY(100%);
+      opacity: 0.5;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  @keyframes slide_top {
+    from {
+      transform: translateY(-100%);
+      opacity: 0.5;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  ${({ animate }) => `
+    animation-name: slide_${animate};
+    animation-duration: .3s;
+  `}
+`
+
 const StyledTitle = styled.h3`
   margin: 0 0 8px;
 `
@@ -23,12 +52,14 @@ const StyledMessage = styled.p`
   margin: 0;
 `
 
-const Alert = ({ children, title, message, type = {}, ...rest }) => {
+const Alert = ({ children, animate, title, message, type = {}, ...rest }) => {
   return (
-    <StyledAlert {...rest}>
-      <StyledTitle>{title}</StyledTitle>
-      <StyledMessage>{message}</StyledMessage>
-    </StyledAlert>
+    <Wrapper animate={animate}>
+      <StyledAlert {...rest}>
+        <StyledTitle>{title}</StyledTitle>
+        <StyledMessage>{message}</StyledMessage>
+      </StyledAlert>
+    </Wrapper>
   )
 }
 

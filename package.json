@@ -40,7 +40,8 @@
     "styled-components": "^5.1.0",
     "styled-normalize": "^8.0.7",
     "styled-system": "^5.1.5",
-    "typeface-lato": "^0.0.75"
+    "typeface-lato": "^0.0.75",
+    "uuid": "^8.2.0"
   },
   "peerDependencies": {
     "react": "16.x"
