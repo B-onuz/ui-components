@@ -96,7 +96,7 @@ var TextField = function TextField(_ref) {
     required: !!required,
     "aria-required": !!required,
     "aria-invalid": !!error,
-    type: !!type,
+    type: type,
     error: error
   }, inputProps, {
     __self: _this,
