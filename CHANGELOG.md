@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.7.1](https://github.com/B-onuz/ui-components/compare/v2.7.0...v2.7.1) (2020-07-14)
+
+### Bug Fixes
+
+- **contextmenu:** fix context menu overflow ([#30](https://github.com/B-onuz/ui-components/issues/30)) ([6299915](https://github.com/B-onuz/ui-components/commit/62999159011079666f970632be4b6348de614b3b))
+
 ## [2.7.0](https://github.com/B-onuz/ui-components/compare/v2.6.0...v2.7.0) (2020-07-07)
 
 ### Features
