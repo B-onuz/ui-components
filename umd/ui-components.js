@@ -1,4 +1,4 @@
-/*! ui-components v2.6.0 */
+/*! ui-components v2.7.0 */
 (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
 		module.exports = factory(require("react"));
@@ -897,7 +897,7 @@ var shadow = system({
 /* harmony default export */ var shadow_dist_index_esm = (shadow);
 
 // EXTERNAL MODULE: ./node_modules/@styled-system/css/dist/index.esm.js
-var css_dist_index_esm = __webpack_require__(8);
+var css_dist_index_esm = __webpack_require__(9);
 
 // CONCATENATED MODULE: ./node_modules/@styled-system/variant/dist/index.esm.js
 
@@ -1074,14 +1074,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "useTheme", function() { return useTheme; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "version", function() { return version; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "withTheme", function() { return withTheme; });
-/* harmony import */ var react_is__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(9);
+/* harmony import */ var react_is__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(10);
 /* harmony import */ var react_is__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_is__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(0);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var shallowequal__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(20);
 /* harmony import */ var shallowequal__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(shallowequal__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _emotion_stylis__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(10);
-/* harmony import */ var _emotion_unitless__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(11);
+/* harmony import */ var _emotion_stylis__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(11);
+/* harmony import */ var _emotion_unitless__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(12);
 /* harmony import */ var _emotion_is_prop_valid__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(6);
 /* harmony import */ var hoist_non_react_statics__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(14);
 /* harmony import */ var hoist_non_react_statics__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(hoist_non_react_statics__WEBPACK_IMPORTED_MODULE_6__);
@@ -3590,6 +3590,40 @@ function memoize(fn) {
 
 /***/ }),
 /* 8 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+function checkDCE() {
+  /* global __REACT_DEVTOOLS_GLOBAL_HOOK__ */
+  if (
+    typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ === 'undefined' ||
+    typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.checkDCE !== 'function'
+  ) {
+    return;
+  }
+  if (false) {}
+  try {
+    // Verify that the code above has been dead code eliminated (DCE'd).
+    __REACT_DEVTOOLS_GLOBAL_HOOK__.checkDCE(checkDCE);
+  } catch (err) {
+    // DevTools shouldn't crash React, no matter what.
+    // We should still report in case we break this code.
+    console.error(err);
+  }
+}
+
+if (true) {
+  // DCE check should happen before ReactDOM bundle executes so that
+  // DevTools can report bad minification during injection.
+  checkDCE();
+  module.exports = __webpack_require__(37);
+} else {}
+
+
+/***/ }),
+/* 9 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -3815,7 +3849,7 @@ var css = function css(args) {
 
 
 /***/ }),
-/* 9 */
+/* 10 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3827,7 +3861,7 @@ if (true) {
 
 
 /***/ }),
-/* 10 */
+/* 11 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -4449,7 +4483,7 @@ function stylis_min (W) {
 
 
 /***/ }),
-/* 11 */
+/* 12 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -4506,40 +4540,6 @@ var unitlessKeys = {
 
 
 /***/ }),
-/* 12 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-function checkDCE() {
-  /* global __REACT_DEVTOOLS_GLOBAL_HOOK__ */
-  if (
-    typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ === 'undefined' ||
-    typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.checkDCE !== 'function'
-  ) {
-    return;
-  }
-  if (false) {}
-  try {
-    // Verify that the code above has been dead code eliminated (DCE'd).
-    __REACT_DEVTOOLS_GLOBAL_HOOK__.checkDCE(checkDCE);
-  } catch (err) {
-    // DevTools shouldn't crash React, no matter what.
-    // We should still report in case we break this code.
-    console.error(err);
-  }
-}
-
-if (true) {
-  // DCE check should happen before ReactDOM bundle executes so that
-  // DevTools can report bad minification during injection.
-  checkDCE();
-  module.exports = __webpack_require__(37);
-} else {}
-
-
-/***/ }),
 /* 13 */
 /***/ (function(module, exports) {
 
@@ -4572,7 +4572,7 @@ module.exports = g;
 "use strict";
 
 
-var reactIs = __webpack_require__(9);
+var reactIs = __webpack_require__(10);
 
 /**
  * Copyright 2015, Yahoo! Inc.
@@ -4693,7 +4693,7 @@ var _styledComponents = _interopRequireDefault(__webpack_require__(2));
 
 var _styledSystem = __webpack_require__(1);
 
-var _css = _interopRequireWildcard(__webpack_require__(8));
+var _css = _interopRequireWildcard(__webpack_require__(9));
 
 var _shouldForwardProp = _interopRequireDefault(__webpack_require__(19));
 
@@ -8338,7 +8338,7 @@ var _styled = _interopRequireDefault(__webpack_require__(41));
 
 var _styledSystem = __webpack_require__(1);
 
-var _css = _interopRequireWildcard(__webpack_require__(8));
+var _css = _interopRequireWildcard(__webpack_require__(9));
 
 var _shouldForwardProp = _interopRequireDefault(__webpack_require__(19));
 
@@ -18365,23 +18365,198 @@ var SearchField_SearchField = function SearchField(_ref2) {
 // CONCATENATED MODULE: ./src/components/SearchField/index.js
 
 /* harmony default export */ var components_SearchField = (components_SearchField_SearchField);
-// CONCATENATED MODULE: ./src/components/ContextMenu/ContextMenu.js
-function ContextMenu_extends() { ContextMenu_extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return ContextMenu_extends.apply(this, arguments); }
+// EXTERNAL MODULE: ./node_modules/react-dom/index.js
+var react_dom = __webpack_require__(8);
+var react_dom_default = /*#__PURE__*/__webpack_require__.n(react_dom);
 
-function ContextMenu_objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
+// CONCATENATED MODULE: ./src/components/ContextMenu/ContextMenuDialog.js
+function ContextMenuDialog_extends() { ContextMenuDialog_extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return ContextMenuDialog_extends.apply(this, arguments); }
 
-function ContextMenu_templateObject5() {
-  var data = ContextMenu_taggedTemplateLiteralLoose(["\n  color: ", ";\n"]);
+function ContextMenuDialog_objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 
-  ContextMenu_templateObject5 = function _templateObject5() {
+function ContextMenuDialog_templateObject2() {
+  var data = ContextMenuDialog_taggedTemplateLiteralLoose(["\n  z-index: 99999999999;\n  position: fixed;\n  top: 0;\n  right: 0;\n  bottom: 0;\n  left: 0;\n"]);
+
+  ContextMenuDialog_templateObject2 = function _templateObject2() {
     return data;
   };
 
   return data;
 }
 
+function ContextMenuDialog_templateObject() {
+  var data = ContextMenuDialog_taggedTemplateLiteralLoose(["\n  position: absolute;\n  border-radius: 12px;\n  opacity: ", ";\n  z-index: ", ";\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  padding: 8px 16px;\n  background: #fff 0% 0% no-repeat padding-box;\n  box-shadow: 0px 2px 6px #2c28281c;\n\n  ", "\n  &::after {\n    content: '';\n    width: 1em;\n    height: 1em;\n    position: absolute;\n    box-shadow: 1px 2px 2px -1px #2c28281c;\n    background: #fff 0% 0%;\n    ", "\n  }\n"]);
+
+  ContextMenuDialog_templateObject = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+
+function ContextMenuDialog_taggedTemplateLiteralLoose(strings, raw) { if (!raw) { raw = strings.slice(0); } strings.raw = raw; return strings; }
+
+
+
+
+var Dialog = styled_components_browser_esm["default"].div(ContextMenuDialog_templateObject(), function (_ref) {
+  var isOpen = _ref.isOpen;
+  return isOpen ? 1 : 0;
+}, function (_ref2) {
+  var isOpen = _ref2.isOpen;
+  return isOpen ? 1 : -100;
+}, function (_ref3) {
+  var direction = _ref3.direction,
+      top = _ref3.top,
+      right = _ref3.right,
+      left = _ref3.left,
+      bottom = _ref3.bottom;
+
+  if (direction === 'left') {
+    return "\n      top: " + top + ";\n      left: " + left + ";\n      transform: translateX(calc(-100% - 32px * 2  - 5px));\n    ";
+  }
+
+  if (direction === 'right') {
+    return "\n      top: " + top + ";\n      left: " + left + ";\n    ";
+  }
+
+  if (direction === 'top') {
+    return "\n      top: " + top + ";\n      left: " + left + ";\n      transform: translateX(calc(-50% - 32px / 2)) translateY(calc(-100% - 24px));\n    ";
+  }
+
+  if (direction === 'bottom') {
+    return "\n      top: " + top + ";\n      left: " + left + ";\n      transform: translateX(calc(-50% - 32px / 2));\n    ";
+  }
+}, function (_ref4) {
+  var direction = _ref4.direction;
+
+  if (direction === 'left') {
+    return "\n      right: -0.5em;\n      top: 1.6em;\n      transform: rotateZ(-45deg);\n    ";
+  }
+
+  if (direction === 'right') {
+    return "\n      left: -0.5em;\n      top: 1.6em;\n      transform: rotateZ(135deg);\n    ";
+  }
+
+  if (direction === 'top') {
+    return "\n      top: calc(100% - 0.5em);\n      transform: rotateZ(45deg);\n      left: 0;\n      right: 0;\n      margin: auto;\n    ";
+  }
+
+  if (direction === 'bottom') {
+    return "\n      bottom: calc(100% - 0.5em);\n      transform: rotateZ(-135deg);\n      left: 0;\n      right: 0;\n      margin: auto;\n    ";
+  }
+});
+
+var ContextMenuDialog_useRootDialog = function useRootDialog() {
+  var _useState = Object(external_root_React_commonjs2_react_commonjs_react_amd_react_["useState"])(),
+      $rootDialog = _useState[0],
+      setRootDialog = _useState[1];
+
+  var IdName = 'contextMenu-root';
+  Object(external_root_React_commonjs2_react_commonjs_react_amd_react_["useEffect"])(function () {
+    var rootModal = document.getElementById(IdName);
+
+    if (rootModal) {
+      setRootDialog(rootModal);
+    } else {
+      var rootEl = document.createElement('div');
+      rootEl.id = IdName;
+      setRootDialog(rootEl);
+      document.body.appendChild(rootEl);
+    }
+  });
+  return {
+    $rootDialog: $rootDialog
+  };
+};
+
+var ContextMenuDialog_Wrapper = styled_components_browser_esm["default"].div(ContextMenuDialog_templateObject2());
+
+var ContextMenuDialog_ContextMenuDialog = function ContextMenuDialog(_ref5) {
+  var isOpen = _ref5.isOpen,
+      buttonRef = _ref5.buttonRef,
+      onClose = _ref5.onClose,
+      direction = _ref5.direction,
+      rest = ContextMenuDialog_objectWithoutPropertiesLoose(_ref5, ["isOpen", "buttonRef", "onClose", "direction"]);
+
+  var _useRootDialog = ContextMenuDialog_useRootDialog(),
+      $rootDialog = _useRootDialog.$rootDialog;
+
+  var _useState2 = Object(external_root_React_commonjs2_react_commonjs_react_amd_react_["useState"])({
+    top: 0,
+    right: 0,
+    bottom: 0,
+    left: 0
+  }),
+      positions = _useState2[0],
+      setPositions = _useState2[1];
+
+  var $currentButtonRef = (buttonRef || {}).current;
+
+  var _useState3 = Object(external_root_React_commonjs2_react_commonjs_react_amd_react_["useState"])(0),
+      top = _useState3[0],
+      setTop = _useState3[1];
+
+  var _useState4 = Object(external_root_React_commonjs2_react_commonjs_react_amd_react_["useState"])(0),
+      left = _useState4[0],
+      setLeft = _useState4[1];
+
+  var updatePositions = function updatePositions() {
+    if (!$currentButtonRef) return null;
+    var offset = $currentButtonRef.getBoundingClientRect();
+
+    if (direction === 'top') {
+      setTop(offset.top + offset.height - 24 + "px");
+      setLeft(offset.left + offset.width + "px");
+    }
+
+    if (direction === 'right') {
+      setTop(offset.top - offset.height / 2 + "px");
+      setLeft(offset.left + offset.width + 20 + "px");
+    }
+
+    if (direction === 'left') {
+      setTop(offset.top - offset.height / 2 + "px");
+      setLeft(offset.left + offset.width + 20 + "px");
+    }
+
+    if (direction === 'bottom') {
+      setTop(offset.top + offset.height + 24 + "px");
+      setLeft(offset.left + offset.width + "px");
+    }
+  };
+
+  Object(external_root_React_commonjs2_react_commonjs_react_amd_react_["useEffect"])(function () {
+    updatePositions();
+    window.addEventListener('resize', updatePositions);
+    return function () {
+      window.removeEventListener('resize', updatePositions);
+    };
+  });
+  if (!$rootDialog) return null;
+
+  if (!isOpen) {
+    return null;
+  }
+
+  return react_dom_default.a.createPortal( /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(ContextMenuDialog_Wrapper, {
+    onClick: onClose
+  }, /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(Dialog, ContextMenuDialog_extends({
+    direction: direction,
+    isOpen: isOpen,
+    top: top,
+    left: left
+  }, rest))), $rootDialog);
+};
+
+/* harmony default export */ var ContextMenu_ContextMenuDialog = (ContextMenuDialog_ContextMenuDialog);
+// CONCATENATED MODULE: ./src/components/ContextMenu/ContextMenu.js
+function ContextMenu_extends() { ContextMenu_extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return ContextMenu_extends.apply(this, arguments); }
+
+function ContextMenu_objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
+
 function ContextMenu_templateObject4() {
-  var data = ContextMenu_taggedTemplateLiteralLoose(["\n  width: 100%;\n  margin: 8px 0;\n  border: 1px solid #f1f1f3;\n"]);
+  var data = ContextMenu_taggedTemplateLiteralLoose(["\n  color: ", ";\n"]);
 
   ContextMenu_templateObject4 = function _templateObject4() {
     return data;
@@ -18391,7 +18566,7 @@ function ContextMenu_templateObject4() {
 }
 
 function ContextMenu_templateObject3() {
-  var data = ContextMenu_taggedTemplateLiteralLoose(["\n  position: absolute;\n  border-radius: 12px;\n  opacity: ", ";\n  z-index: ", ";\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  padding: 8px 16px;\n  background: #fff 0% 0% no-repeat padding-box;\n  box-shadow: 0px 2px 6px #2c28281c;\n  transition: all 300ms;\n\n  ", "\n  &::after {\n    content: '';\n    width: 1em;\n    height: 1em;\n    position: absolute;\n    box-shadow: 1px 2px 2px -1px #2c28281c;\n    background: #fff 0% 0%;\n    ", "\n  }\n"]);
+  var data = ContextMenu_taggedTemplateLiteralLoose(["\n  width: 100%;\n  margin: 8px 0;\n  border: 1px solid #f1f1f3;\n"]);
 
   ContextMenu_templateObject3 = function _templateObject3() {
     return data;
@@ -18428,102 +18603,55 @@ function ContextMenu_taggedTemplateLiteralLoose(strings, raw) { if (!raw) { raw 
 
 
 
+
 var StyledContextMenu = styled_components_browser_esm["default"].div(ContextMenu_templateObject(), index_esm["color"], index_esm["space"]);
 var ContextMenuToogleButton = styled_components_browser_esm["default"].button(ContextMenu_templateObject2());
-var ContextDialogMenu = styled_components_browser_esm["default"].div(ContextMenu_templateObject3(), function (_ref) {
-  var isOpen = _ref.isOpen;
-  return isOpen ? 1 : 0;
-}, function (_ref2) {
-  var isOpen = _ref2.isOpen;
-  return isOpen ? 1 : -100;
-}, function (_ref3) {
-  var direction = _ref3.direction;
-
-  if (direction === 'left') {
-    return "\n      right: calc(100% + 24px);\n      top: -50%;\n    ";
-  }
-
-  if (direction === 'right') {
-    return "\n      left: calc(100% + 24px);\n      top: -50%;\n    ";
-  }
-
-  if (direction === 'top') {
-    return "\n      left: 50%;\n      transform: translateX(-50%);\n      bottom: calc(100% + 1.5em);\n    ";
-  }
-
-  if (direction === 'bottom') {
-    return "\n      transform: translateX(-50%);\n      left: 50%;\n      top: calc(100% + 1.5em);\n    ";
-  }
-}, function (_ref4) {
-  var direction = _ref4.direction;
-
-  if (direction === 'left') {
-    return "\n      right: -0.5em;\n      top: 1.6em;\n      transform: rotateZ(-45deg);\n    ";
-  }
-
-  if (direction === 'right') {
-    return "\n      left: -0.5em;\n      top: 1.6em;\n      transform: rotateZ(135deg);\n    ";
-  }
-
-  if (direction === 'top') {
-    return "\n      top: calc(100% - 0.5em);\n      transform: rotateZ(45deg);\n      left: 0;\n      right: 0;\n      margin: auto;\n    ";
-  }
-
-  if (direction === 'bottom') {
-    return "\n      bottom: calc(100% - 0.5em);\n      transform: rotateZ(-135deg);\n      left: 0;\n      right: 0;\n      margin: auto;\n    ";
-  }
-});
-var Divider = styled_components_browser_esm["default"].hr(ContextMenu_templateObject4());
-var ContextMenu_Icon = Object(styled_components_browser_esm["default"])(FontAwesomeIcon)(ContextMenu_templateObject5(), function (_ref5) {
-  var theme = _ref5.theme;
+var Divider = styled_components_browser_esm["default"].hr(ContextMenu_templateObject3());
+var ContextMenu_Icon = Object(styled_components_browser_esm["default"])(FontAwesomeIcon)(ContextMenu_templateObject4(), function (_ref) {
+  var theme = _ref.theme;
   return theme.colors.darkGrey;
 });
 
-var ContextMenu_ContextMenu = function ContextMenu(_ref6) {
-  var children = _ref6.children,
-      direction = _ref6.direction,
-      contextMenuActions = _ref6.contextMenuActions,
-      rest = ContextMenu_objectWithoutPropertiesLoose(_ref6, ["children", "direction", "contextMenuActions"]);
+var ContextMenu_ContextMenu = function ContextMenu(_ref2) {
+  var children = _ref2.children,
+      direction = _ref2.direction,
+      contextMenuActions = _ref2.contextMenuActions,
+      rest = ContextMenu_objectWithoutPropertiesLoose(_ref2, ["children", "direction", "contextMenuActions"]);
 
   var _useState = Object(external_root_React_commonjs2_react_commonjs_react_amd_react_["useState"])(false),
       isOpen = _useState[0],
       setIsOpen = _useState[1];
 
   var wrapperRef = Object(external_root_React_commonjs2_react_commonjs_react_amd_react_["useRef"])(null);
+  var buttonRef = Object(external_root_React_commonjs2_react_commonjs_react_amd_react_["useRef"])(null);
 
-  var useOutsideAlerter = function useOutsideAlerter(ref) {
-    Object(external_root_React_commonjs2_react_commonjs_react_amd_react_["useEffect"])(function () {
-      function handleClickOutside(event) {
-        if (ref.current && !ref.current.contains(event.target)) {
-          setIsOpen(false);
-        }
-      }
-
-      document.addEventListener('mousedown', handleClickOutside);
-      return function () {
-        document.removeEventListener('mousedown', handleClickOutside);
-      };
-    }, [ref]);
+  var onClose = function onClose() {
+    setIsOpen(false);
+    return true;
   };
 
-  useOutsideAlerter(wrapperRef);
   return /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(StyledContextMenu, ContextMenu_extends({
     ref: wrapperRef
   }, rest), /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(ContextMenuToogleButton, {
+    ref: buttonRef,
     onClick: function onClick() {
-      return setIsOpen(!isOpen);
+      return setIsOpen(function (last) {
+        return !last;
+      });
     }
   }, /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(ContextMenu_Icon, {
     icon: faEllipsisH
-  })), /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(ContextDialogMenu, {
+  })), /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(ContextMenu_ContextMenuDialog, {
     isOpen: isOpen,
+    onClose: onClose,
+    buttonRef: buttonRef,
     direction: direction
   }, (contextMenuActions || []).map(function (action, index) {
     return /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.Fragment, null, /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(components_Button, {
       linkButton: true,
       color: 'primary',
       onClick: function onClick() {
-        return action.buttonFunction();
+        return onClose() && action.buttonFunction();
       }
     }, action.text), index + 1 !== contextMenuActions.length ? /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(Divider, null) : null);
   })));
@@ -18536,10 +18664,6 @@ ContextMenu_ContextMenu.defaultProps = {
 // CONCATENATED MODULE: ./src/components/ContextMenu/index.js
 
 /* harmony default export */ var components_ContextMenu = (components_ContextMenu_ContextMenu);
-// EXTERNAL MODULE: ./node_modules/react-dom/index.js
-var react_dom = __webpack_require__(12);
-var react_dom_default = /*#__PURE__*/__webpack_require__.n(react_dom);
-
 // CONCATENATED MODULE: ./node_modules/@babel/runtime/helpers/esm/extends.js
 function extends_extends() {
   extends_extends = Object.assign || function (target) {
@@ -21449,7 +21573,7 @@ function () {
 
 
 // EXTERNAL MODULE: ./node_modules/@emotion/stylis/dist/stylis.browser.esm.js
-var stylis_browser_esm = __webpack_require__(10);
+var stylis_browser_esm = __webpack_require__(11);
 
 // CONCATENATED MODULE: ./node_modules/@emotion/weak-memoize/dist/weak-memoize.browser.esm.js
 var weakMemoize = function weakMemoize(func) {
@@ -21723,7 +21847,7 @@ function murmur2(str) {
 /* harmony default export */ var hash_browser_esm = (murmur2);
 
 // EXTERNAL MODULE: ./node_modules/@emotion/unitless/dist/unitless.browser.esm.js
-var unitless_browser_esm = __webpack_require__(11);
+var unitless_browser_esm = __webpack_require__(12);
 
 // EXTERNAL MODULE: ./node_modules/@emotion/memoize/dist/memoize.browser.esm.js
 var memoize_browser_esm = __webpack_require__(7);

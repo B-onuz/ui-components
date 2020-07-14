@@ -19,6 +19,8 @@ var _freeSolidSvgIcons = require("@fortawesome/free-solid-svg-icons");
 
 var _Button = _interopRequireDefault(require("../Button"));
 
+var _ContextMenuDialog = _interopRequireDefault(require("./ContextMenuDialog"));
+
 var _this = void 0,
     _jsxFileName = "/Users/rogeralbino/projects/Kazap/B-onuz/ui-components/src/components/ContextMenu/ContextMenu.js";
 
@@ -32,18 +34,8 @@ function _extends() { _extends = Object.assign || function (target) { for (var i
 
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 
-function _templateObject5() {
-  var data = _taggedTemplateLiteralLoose(["\n  color: ", ";\n"]);
-
-  _templateObject5 = function _templateObject5() {
-    return data;
-  };
-
-  return data;
-}
-
 function _templateObject4() {
-  var data = _taggedTemplateLiteralLoose(["\n  width: 100%;\n  margin: 8px 0;\n  border: 1px solid #f1f1f3;\n"]);
+  var data = _taggedTemplateLiteralLoose(["\n  color: ", ";\n"]);
 
   _templateObject4 = function _templateObject4() {
     return data;
@@ -53,7 +45,7 @@ function _templateObject4() {
 }
 
 function _templateObject3() {
-  var data = _taggedTemplateLiteralLoose(["\n  position: absolute;\n  border-radius: 12px;\n  opacity: ", ";\n  z-index: ", ";\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  padding: 8px 16px;\n  background: #fff 0% 0% no-repeat padding-box;\n  box-shadow: 0px 2px 6px #2c28281c;\n  transition: all 300ms;\n\n  ", "\n  &::after {\n    content: '';\n    width: 1em;\n    height: 1em;\n    position: absolute;\n    box-shadow: 1px 2px 2px -1px #2c28281c;\n    background: #fff 0% 0%;\n    ", "\n  }\n"]);
+  var data = _taggedTemplateLiteralLoose(["\n  width: 100%;\n  margin: 8px 0;\n  border: 1px solid #f1f1f3;\n"]);
 
   _templateObject3 = function _templateObject3() {
     return data;
@@ -88,102 +80,51 @@ var StyledContextMenu = _styledComponents["default"].div(_templateObject(), _sty
 
 var ContextMenuToogleButton = _styledComponents["default"].button(_templateObject2());
 
-var ContextDialogMenu = _styledComponents["default"].div(_templateObject3(), function (_ref) {
-  var isOpen = _ref.isOpen;
-  return isOpen ? 1 : 0;
-}, function (_ref2) {
-  var isOpen = _ref2.isOpen;
-  return isOpen ? 1 : -100;
-}, function (_ref3) {
-  var direction = _ref3.direction;
+var Divider = _styledComponents["default"].hr(_templateObject3());
 
-  if (direction === 'left') {
-    return "\n      right: calc(100% + 24px);\n      top: -50%;\n    ";
-  }
-
-  if (direction === 'right') {
-    return "\n      left: calc(100% + 24px);\n      top: -50%;\n    ";
-  }
-
-  if (direction === 'top') {
-    return "\n      left: 50%;\n      transform: translateX(-50%);\n      bottom: calc(100% + 1.5em);\n    ";
-  }
-
-  if (direction === 'bottom') {
-    return "\n      transform: translateX(-50%);\n      left: 50%;\n      top: calc(100% + 1.5em);\n    ";
-  }
-}, function (_ref4) {
-  var direction = _ref4.direction;
-
-  if (direction === 'left') {
-    return "\n      right: -0.5em;\n      top: 1.6em;\n      transform: rotateZ(-45deg);\n    ";
-  }
-
-  if (direction === 'right') {
-    return "\n      left: -0.5em;\n      top: 1.6em;\n      transform: rotateZ(135deg);\n    ";
-  }
-
-  if (direction === 'top') {
-    return "\n      top: calc(100% - 0.5em);\n      transform: rotateZ(45deg);\n      left: 0;\n      right: 0;\n      margin: auto;\n    ";
-  }
-
-  if (direction === 'bottom') {
-    return "\n      bottom: calc(100% - 0.5em);\n      transform: rotateZ(-135deg);\n      left: 0;\n      right: 0;\n      margin: auto;\n    ";
-  }
-});
-
-var Divider = _styledComponents["default"].hr(_templateObject4());
-
-var Icon = (0, _styledComponents["default"])(_reactFontawesome.FontAwesomeIcon)(_templateObject5(), function (_ref5) {
-  var theme = _ref5.theme;
+var Icon = (0, _styledComponents["default"])(_reactFontawesome.FontAwesomeIcon)(_templateObject4(), function (_ref) {
+  var theme = _ref.theme;
   return theme.colors.darkGrey;
 });
 
-var ContextMenu = function ContextMenu(_ref6) {
-  var children = _ref6.children,
-      direction = _ref6.direction,
-      contextMenuActions = _ref6.contextMenuActions,
-      rest = _objectWithoutPropertiesLoose(_ref6, ["children", "direction", "contextMenuActions"]);
+var ContextMenu = function ContextMenu(_ref2) {
+  var children = _ref2.children,
+      direction = _ref2.direction,
+      contextMenuActions = _ref2.contextMenuActions,
+      rest = _objectWithoutPropertiesLoose(_ref2, ["children", "direction", "contextMenuActions"]);
 
   var _useState = (0, _react.useState)(false),
       isOpen = _useState[0],
       setIsOpen = _useState[1];
 
   var wrapperRef = (0, _react.useRef)(null);
+  var buttonRef = (0, _react.useRef)(null);
 
-  var useOutsideAlerter = function useOutsideAlerter(ref) {
-    (0, _react.useEffect)(function () {
-      function handleClickOutside(event) {
-        if (ref.current && !ref.current.contains(event.target)) {
-          setIsOpen(false);
-        }
-      }
-
-      document.addEventListener('mousedown', handleClickOutside);
-      return function () {
-        document.removeEventListener('mousedown', handleClickOutside);
-      };
-    }, [ref]);
+  var onClose = function onClose() {
+    setIsOpen(false);
+    return true;
   };
 
-  useOutsideAlerter(wrapperRef);
   return /*#__PURE__*/_react["default"].createElement(StyledContextMenu, _extends({
     ref: wrapperRef
   }, rest, {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 146,
+      lineNumber: 51,
       columnNumber: 5
     }
   }), /*#__PURE__*/_react["default"].createElement(ContextMenuToogleButton, {
+    ref: buttonRef,
     onClick: function onClick() {
-      return setIsOpen(!isOpen);
+      return setIsOpen(function (last) {
+        return !last;
+      });
     },
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 147,
+      lineNumber: 52,
       columnNumber: 7
     }
   }, /*#__PURE__*/_react["default"].createElement(Icon, {
@@ -191,16 +132,18 @@ var ContextMenu = function ContextMenu(_ref6) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 148,
+      lineNumber: 53,
       columnNumber: 9
     }
-  })), /*#__PURE__*/_react["default"].createElement(ContextDialogMenu, {
+  })), /*#__PURE__*/_react["default"].createElement(_ContextMenuDialog["default"], {
     isOpen: isOpen,
+    onClose: onClose,
+    buttonRef: buttonRef,
     direction: direction,
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 150,
+      lineNumber: 55,
       columnNumber: 7
     }
   }, (contextMenuActions || []).map(function (action, index) {
@@ -208,19 +151,19 @@ var ContextMenu = function ContextMenu(_ref6) {
       linkButton: true,
       color: 'primary',
       onClick: function onClick() {
-        return action.buttonFunction();
+        return onClose() && action.buttonFunction();
       },
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 153,
+        lineNumber: 58,
         columnNumber: 13
       }
     }, action.text), index + 1 !== contextMenuActions.length ? /*#__PURE__*/_react["default"].createElement(Divider, {
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 156,
+        lineNumber: 61,
         columnNumber: 56
       }
     }) : null);
