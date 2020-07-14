@@ -8,8 +8,8 @@ Controle de mensagens de erro, sucesso, avisos etc.
 /* ... */
 import React from 'react'
 import { ThemeProvider } from 'styled-components'
-import 'jest-styled-components' // linha adicionada
-import theme from 'ui-components/lib/theme' // linha adicionada
+import 'jest-styled-components'
+import theme from 'ui-components/lib/theme'
 import AlertStackProvider from 'ui-components/lib/components/AlertStack/AlertStackProvider'
 import AlertStack from 'ui-components/lib/components/AlertStack'
 
@@ -31,11 +31,11 @@ ReactDOM.render(
 ```jsx
 import React from 'react'
 import useAlertStack from 'ui-components/lib/hooks/useAlertStack'
-const { showMessage } = useAlertStack()
 
 // este componente deve estar dentro da hierarquia de componentes.
 
 const Screen = () => {
+  const { showMessage } = useAlertStack()
   return (
     <Button
       onClick={() =>
