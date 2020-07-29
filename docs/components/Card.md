@@ -1,6 +1,6 @@
 # Card (Component)
 
-[Descrição do componente e onde usar]
+Componente de cartão customizável para dados
 
 ## Como utilizar
 
@@ -9,7 +9,10 @@ import Card from 'ui-components/lib/components/Card'
 ```
 
 ```jsx
-<Card />
+<Card title={'Demandas Pendentes'} count={99} color={'yellow'} icon={faArchive} />
+<Card title={'Demandas Em Aberto'} count={99} color={'teal'} icon={faArchive} />
+<Card title={'Demandas Concluídas'} count={99} color={'blue'} icon={faArchive} />
+<Card title={'Demandas Canceladas'} count={99} color={'red'} icon={faArchive} />
 ```
 
 ## Variações
