@@ -11,7 +11,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "d
 
 /**
  * @example
- * deleteItemsFromCache('ListItem') 
+ * deleteItemsFromCache('ListItem')
  * @returns {Function} Returns a update function
  */
 var _default = function _default(typeKey) {
