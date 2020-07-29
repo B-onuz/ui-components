@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.8.0-alpha.0](https://github.com/B-onuz/ui-components/compare/v2.7.1...v2.8.0-alpha.0) (2020-07-19)
+
+### Features
+
+- **helpers:** add graphql helpers ([ae84743](https://github.com/B-onuz/ui-components/commit/ae84743a4269ef292da86be9232d49fa60209b90))
+
 ### [2.7.1](https://github.com/B-onuz/ui-components/compare/v2.7.0...v2.7.1) (2020-07-14)
 
 ### Bug Fixes
