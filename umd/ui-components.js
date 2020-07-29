@@ -1,4 +1,4 @@
-/*! ui-components v2.7.0 */
+/*! ui-components v2.7.1 */
 (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
 		module.exports = factory(require("react"));
@@ -9974,6 +9974,7 @@ __webpack_require__.d(__webpack_exports__, "Switch", function() { return /* reex
 __webpack_require__.d(__webpack_exports__, "FormHelperText", function() { return /* reexport */ components_FormHelperText; });
 __webpack_require__.d(__webpack_exports__, "AlertStack", function() { return /* reexport */ components_AlertStack; });
 __webpack_require__.d(__webpack_exports__, "AlertStackProvider", function() { return /* reexport */ AlertStack_AlertStackProvider; });
+__webpack_require__.d(__webpack_exports__, "Card", function() { return /* reexport */ components_Card; });
 
 // CONCATENATED MODULE: ./src/theme/index.js
 var colors = {
@@ -21336,6 +21337,98 @@ var AlertStackProvider_AlertStackProvider = function AlertStackProvider(_ref) {
 };
 
 /* harmony default export */ var AlertStack_AlertStackProvider = (AlertStackProvider_AlertStackProvider);
+// CONCATENATED MODULE: ./src/components/Card/variants/color.js
+
+/* harmony default export */ var Card_variants_color = (function (props) {
+  var color = props.theme.colors[props.color];
+  var objColor = new color_default.a(color);
+  var bgColor = objColor.saturate(1.5).lighten(1).fade(0.9).toString();
+  var shadowColor = objColor.saturate(1.5).lighten(1).fade(0.4).opaquer(0.7).toString();
+  return "\n        color: " + color + ";\n        box-shadow: 0 0 3px " + shadowColor + ";\n        & > p {\n          color: #000;\n        }\n    ";
+});
+// CONCATENATED MODULE: ./src/components/Card/variants/index.js
+
+
+// CONCATENATED MODULE: ./src/components/Card/Card.js
+function Card_objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
+
+function Card_templateObject4() {
+  var data = Card_taggedTemplateLiteralLoose(["\n  display: flex;\n  margin-left: 32px;\n"]);
+
+  Card_templateObject4 = function _templateObject4() {
+    return data;
+  };
+
+  return data;
+}
+
+function Card_templateObject3() {
+  var data = Card_taggedTemplateLiteralLoose(["\n  margin: 0;\n  font-size: 40px;\n  font-weight: 600;\n"]);
+
+  Card_templateObject3 = function _templateObject3() {
+    return data;
+  };
+
+  return data;
+}
+
+function Card_templateObject2() {
+  var data = Card_taggedTemplateLiteralLoose(["\n  margin: 0 0 8px;\n  text-transform: uppercase;\n  font-size: 18px;\n  font-weight: 400;\n  padding: 0px 0px 24px;\n  display: flex;\n  justify-content: center;\n"]);
+
+  Card_templateObject2 = function _templateObject2() {
+    return data;
+  };
+
+  return data;
+}
+
+function Card_templateObject() {
+  var data = Card_taggedTemplateLiteralLoose(["\n  ", "\n  width: 25%;\n  border: 3px solid;\n  border-radius: 12px;\n  padding: 24px 24px 32px;\n  ", "\n"]);
+
+  Card_templateObject = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+
+function Card_taggedTemplateLiteralLoose(strings, raw) { if (!raw) { raw = strings.slice(0); } strings.raw = raw; return strings; }
+
+
+
+
+
+
+var StyledCard = styled_components_browser_esm["default"].div(Card_templateObject(), Object(index_esm["compose"])(index_esm["space"], index_esm["layout"]), Card_variants_color);
+var Card_StyledTitle = styled_components_browser_esm["default"].p(Card_templateObject2());
+var Card_StyledMessage = styled_components_browser_esm["default"].p(Card_templateObject3());
+var StyledInfo = styled_components_browser_esm["default"].div(Card_templateObject4());
+
+var Card_Card = function Card(_ref) {
+  var children = _ref.children,
+      title = _ref.title,
+      count = _ref.count,
+      icon = _ref.icon,
+      cancel = _ref.cancel,
+      rest = Card_objectWithoutPropertiesLoose(_ref, ["children", "title", "count", "icon", "cancel"]);
+
+  return /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(StyledCard, rest, !cancel ? /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(Card_StyledTitle, null, title) : /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(Card_StyledTitle, {
+    style: {
+      opacity: '60%'
+    }
+  }, title), /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(StyledInfo, null, /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(FontAwesomeIcon, {
+    style: {
+      fontSize: '50px',
+      marginRight: '24px'
+    },
+    icon: icon
+  }), /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(Card_StyledMessage, null, count)));
+};
+
+/* harmony default export */ var components_Card_Card = (Card_Card);
+// CONCATENATED MODULE: ./src/components/Card/index.js
+
+/* harmony default export */ var components_Card = (components_Card_Card);
 // CONCATENATED MODULE: ./src/index.js
 /* Theme */
 
@@ -21351,6 +21444,8 @@ var AlertStackProvider_AlertStackProvider = function AlertStackProvider(_ref) {
 
 
 /* Components */
+
+
 
 
 

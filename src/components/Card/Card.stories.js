@@ -1,0 +1,19 @@
+import React from 'react'
+import Card from './Card'
+import { faArchive } from '@fortawesome/free-solid-svg-icons'
+
+export default {
+  title: 'Card',
+  component: Card,
+}
+
+export const CardExample = () => <Card title={'Demandas Pendentes'} count={99} color={'danger'} icon={faArchive} />
+
+export const CardColors = () => (
+  <div>
+    <Card title={'Demandas Pendentes'} count={99} color={'yellow'} icon={faArchive} />
+    <Card title={'Demandas Em Aberto'} count={99} color={'teal'} icon={faArchive} />
+    <Card title={'Demandas Concluídas'} count={99} color={'blue'} icon={faArchive} />
+    <Card title={'Demandas Canceladas'} count={99} color={'red'} icon={faArchive} />
+  </div>
+)

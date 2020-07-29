@@ -12,7 +12,7 @@ var _react = _interopRequireWildcard(require("react"));
 var _styledComponents = _interopRequireDefault(require("styled-components"));
 
 var _this = void 0,
-    _jsxFileName = "/Users/rogeralbino/projects/Kazap/B-onuz/ui-components/src/components/SidebarMenuItem/SidebarMenuItem.js";
+    _jsxFileName = "/home/gabriel/Documentos/Projetos/Bonuz/ui-components/src/components/SidebarMenuItem/SidebarMenuItem.js";
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
