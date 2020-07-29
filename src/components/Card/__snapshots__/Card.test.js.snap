@@ -1,0 +1,61 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Should render Card 1`] = `
+.c0 {
+  width: 25%;
+  border: 3px solid;
+  border-radius: 12px;
+  padding: 24px 24px 32px;
+  color: undefined;
+  box-shadow: 0 0 3px hsl(0,0%,0%);
+}
+
+.c0 > p {
+  color: #000;
+}
+
+.c1 {
+  margin: 0 0 8px;
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: 400;
+  padding: 0px 0px 24px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.c3 {
+  margin: 0;
+  font-size: 40px;
+  font-weight: 600;
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: 32px;
+}
+
+<div
+  className="c0"
+>
+  <p
+    className="c1"
+  />
+  <div
+    className="c2"
+  >
+    <p
+      className="c3"
+    />
+  </div>
+</div>
+`;
