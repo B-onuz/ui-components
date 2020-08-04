@@ -17,3 +17,15 @@ export const CardColors = () => (
     <Card title={'Demandas Canceladas'} count={99} cancel={true} color={'red'} icon={faArchive} />
   </div>
 )
+
+export const MultiColorsControl = () => (
+  <Card
+    color={'primary'}
+    textColor={'#DDD'}
+    iconColor={'success'}
+    counterColor={'warning'}
+    title={'Demandas Pendentes'}
+    count={99}
+    icon={faArchive}
+  />
+)

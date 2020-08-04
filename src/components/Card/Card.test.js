@@ -2,6 +2,7 @@ import React from 'react'
 import Card from './Card.js'
 import renderer from 'react-test-renderer'
 import { ThemeProvider } from 'styled-components'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import theme from '../../theme'
 import 'jest-styled-components'
 
