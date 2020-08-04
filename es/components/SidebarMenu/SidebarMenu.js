@@ -16,7 +16,7 @@ var _reflexbox = require("reflexbox");
 var _MenuList = _interopRequireDefault(require("./MenuList"));
 
 var _this = void 0,
-    _jsxFileName = "/home/gabriel/Documentos/Projetos/Bonuz/ui-components/src/components/SidebarMenu/SidebarMenu.js";
+    _jsxFileName = "/Users/master/projects/bonuz/ui-components/src/components/SidebarMenu/SidebarMenu.js";
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 

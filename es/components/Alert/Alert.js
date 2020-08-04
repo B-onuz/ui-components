@@ -20,7 +20,7 @@ var _propTypes = _interopRequireDefault(require("prop-types"));
 var _propTypes2 = _interopRequireDefault(require("@styled-system/prop-types"));
 
 var _this = void 0,
-    _jsxFileName = "/home/gabriel/Documentos/Projetos/Bonuz/ui-components/src/components/Alert/Alert.js";
+    _jsxFileName = "/Users/master/projects/bonuz/ui-components/src/components/Alert/Alert.js";
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
