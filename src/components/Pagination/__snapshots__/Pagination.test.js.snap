@@ -24,6 +24,10 @@ exports[`when render Pagination 1`] = `
   text-decoration: none;
   -webkit-text-decoration: none;
   text-decoration: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
 .c1:focus {

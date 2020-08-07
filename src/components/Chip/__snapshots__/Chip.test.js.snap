@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Should render Chip 1`] = `
+.c0 {
+  color: #fff;
+  background: #ef4d5a;
+  padding: 2px 10px;
+  border-radius: 25px;
+}
+
+<div
+  className=""
+>
+  <span
+    className="c0"
+    color="primary"
+  />
+</div>
+`;

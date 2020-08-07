@@ -9,6 +9,11 @@ exports[`Should render ContextMenu 1`] = `
   display: flex;
 }
 
+.c0 .contextButton {
+  width: 2em;
+  height: 2em;
+}
+
 .c1 {
   width: 2em;
   height: 2em;

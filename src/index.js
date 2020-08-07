@@ -41,3 +41,5 @@ export AlertStack from './components/AlertStack'
 export AlertStackProvider from './components/AlertStack/AlertStackProvider'
 
 export Card from './components/Card'
+
+export Chip from './components/Chip'

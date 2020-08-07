@@ -115,7 +115,7 @@ const Wrapper = styled.div`
   left: 0;
 `
 
-const ContextMenuDialog = ({ isOpen, buttonRef, onClose, direction, ...rest }) => {
+const ContextMenuDialog = ({ isOpen, buttonRef, onClose, direction, contextFunctions, ...rest }) => {
   const { $rootDialog } = useRootDialog()
   const [positions, setPositions] = useState({ top: 0, right: 0, bottom: 0, left: 0 })
   const $currentButtonRef = (buttonRef || {}).current
@@ -163,7 +163,7 @@ const ContextMenuDialog = ({ isOpen, buttonRef, onClose, direction, ...rest }) =
 
   return ReactDOM.createPortal(
     <Wrapper onClick={onClose}>
-      <Dialog direction={direction} isOpen={isOpen} top={top} left={left} {...rest} />
+      <Dialog direction={direction} isOpen={isOpen} top={top} left={left} {...rest} contextFunctions={contextFunctions} />
     </Wrapper>,
     $rootDialog
   )

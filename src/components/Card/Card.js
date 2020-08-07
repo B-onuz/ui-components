@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { background } from 'styled-system'
 
 const StyledCard = styled.div`
   color: ${({ theme, color }) => (theme.colors[color] ? theme.colors[color] : color)};
@@ -31,7 +32,7 @@ const StyledInfo = styled.div`
   justify-content: flex-start;
   color: ${({ theme, iconColor }) => (theme.colors[iconColor] ? theme.colors[iconColor] : iconColor)};
   box-shadow: none;
-  .StyledIcon {
+  .icon {
     font-size: 50px;
     margin-right: 24px;
   }
@@ -45,14 +46,22 @@ const Counter = styled.span`
   box-shadow: none;
 `
 
-const Card = ({ title, count, icon, cancel, counterColor, iconColor, textColor, ...rest }) => {
+const StyledIcon = styled.img`
+  max-width: 50px;
+  padding: 4px;
+  background-color: ${({ theme, imgBackground }) => (theme.colors[imgBackground] ? theme.colors[imgBackground] : imgBackground)};
+  margin-right: 24px;
+`
+
+const Card = ({ title, count, icon, customIcon, customIconAlt, imgBackground, cancel, counterColor, iconColor, textColor, ...rest }) => {
   return (
     <StyledCard {...rest}>
       <StyledTitle textColor={textColor} cancel={cancel}>
         {title}
       </StyledTitle>
       <StyledInfo iconColor={iconColor}>
-        {icon && <FontAwesomeIcon className="StyledIcon" icon={icon}></FontAwesomeIcon>}
+        {icon && <FontAwesomeIcon className="icon" icon={icon} />}
+        {customIcon && <StyledIcon src={customIcon} alt={customIconAlt} imgBackground={imgBackground} />}
         <Counter counterColor={counterColor}>{count}</Counter>
       </StyledInfo>
     </StyledCard>
