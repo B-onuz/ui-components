@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.10.0](https://github.com/B-onuz/ui-components/compare/v2.7.1...v2.10.0) (2020-08-04)
+
+### Features
+
+- **card:** add card component ([#33](https://github.com/B-onuz/ui-components/issues/33)) ([1b257cc](https://github.com/B-onuz/ui-components/commit/1b257cc64ea1e3cb0089ea70fdb96191db819679))
+- **card component:** add multiple colors control function to card ([#34](https://github.com/B-onuz/ui-components/issues/34)) ([beed6fc](https://github.com/B-onuz/ui-components/commit/beed6fc08da5faad198e037b3846a788e2d1108e))
+- **helpers:** add graphql helpers ([#31](https://github.com/B-onuz/ui-components/issues/31)) ([4fc688d](https://github.com/B-onuz/ui-components/commit/4fc688d78450db3b5ccbea63ed2a372fe07a0a55))
+
 ## [2.9.0](https://github.com/B-onuz/ui-components/compare/v2.7.1...v2.9.0) (2020-07-29)
 
 ### Features

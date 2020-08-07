@@ -16,7 +16,7 @@ var _Title = _interopRequireDefault(require("./Title"));
 var _SubTitle = _interopRequireDefault(require("./SubTitle"));
 
 var _this = void 0,
-    _jsxFileName = "/home/gabriel/Documentos/Projetos/Bonuz/ui-components/src/components/Header/Header.js";
+    _jsxFileName = "/Users/master/projects/bonuz/ui-components/src/components/Header/Header.js";
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 

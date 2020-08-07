@@ -22,7 +22,7 @@ var _propTypes2 = _interopRequireDefault(require("@styled-system/prop-types"));
 var _Spinner = _interopRequireDefault(require("../Spinner"));
 
 var _this = void 0,
-    _jsxFileName = "/home/gabriel/Documentos/Projetos/Bonuz/ui-components/src/components/Button/Button.js";
+    _jsxFileName = "/Users/master/projects/bonuz/ui-components/src/components/Button/Button.js";
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
