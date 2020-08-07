@@ -65,7 +65,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteralLoose(["\n  ", "\n  ", "\n  position: relative;\n  display: flex;\n"]);
+  var data = _taggedTemplateLiteralLoose(["\n  ", "\n  ", "\n  position: relative;\n  display: flex;\n  .contextButton {\n    width: 2em;\n    height: 2em;\n  }\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -83,15 +83,18 @@ var ContextMenuToogleButton = _styledComponents["default"].button(_templateObjec
 var Divider = _styledComponents["default"].hr(_templateObject3());
 
 var Icon = (0, _styledComponents["default"])(_reactFontawesome.FontAwesomeIcon)(_templateObject4(), function (_ref) {
-  var theme = _ref.theme;
-  return theme.colors.darkGrey;
+  var theme = _ref.theme,
+      buttonIcon = _ref.buttonIcon;
+  return !buttonIcon ? theme.colors.darkGrey : '';
 });
 
 var ContextMenu = function ContextMenu(_ref2) {
   var children = _ref2.children,
       direction = _ref2.direction,
       contextMenuActions = _ref2.contextMenuActions,
-      rest = _objectWithoutPropertiesLoose(_ref2, ["children", "direction", "contextMenuActions"]);
+      contextFunctions = _ref2.contextFunctions,
+      buttonIcon = _ref2.buttonIcon,
+      rest = _objectWithoutPropertiesLoose(_ref2, ["children", "direction", "contextMenuActions", "contextFunctions", "buttonIcon"]);
 
   var _useState = (0, _react.useState)(false),
       isOpen = _useState[0],
@@ -111,10 +114,42 @@ var ContextMenu = function ContextMenu(_ref2) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 51,
+      lineNumber: 55,
       columnNumber: 5
     }
-  }), /*#__PURE__*/_react["default"].createElement(ContextMenuToogleButton, {
+  }), contextFunctions ? /*#__PURE__*/_react["default"].createElement("div", {
+    ref: buttonRef,
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 57,
+      columnNumber: 9
+    }
+  }, /*#__PURE__*/_react["default"].createElement(_Button["default"], {
+    p: 0,
+    className: "contextButton",
+    onClick: function onClick() {
+      return setIsOpen(function (last) {
+        return !last;
+      });
+    },
+    color: 'primary',
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 58,
+      columnNumber: 11
+    }
+  }, /*#__PURE__*/_react["default"].createElement(Icon, {
+    buttonIcon: true,
+    icon: buttonIcon,
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 59,
+      columnNumber: 13
+    }
+  }))) : /*#__PURE__*/_react["default"].createElement(ContextMenuToogleButton, {
     ref: buttonRef,
     onClick: function onClick() {
       return setIsOpen(function (last) {
@@ -124,18 +159,19 @@ var ContextMenu = function ContextMenu(_ref2) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 52,
-      columnNumber: 7
+      lineNumber: 63,
+      columnNumber: 9
     }
   }, /*#__PURE__*/_react["default"].createElement(Icon, {
     icon: _freeSolidSvgIcons.faEllipsisH,
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 53,
-      columnNumber: 9
+      lineNumber: 64,
+      columnNumber: 11
     }
   })), /*#__PURE__*/_react["default"].createElement(_ContextMenuDialog["default"], {
+    contextFunctions: contextFunctions,
     isOpen: isOpen,
     onClose: onClose,
     buttonRef: buttonRef,
@@ -143,7 +179,7 @@ var ContextMenu = function ContextMenu(_ref2) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 55,
+      lineNumber: 67,
       columnNumber: 7
     }
   }, (contextMenuActions || []).map(function (action, index) {
@@ -156,14 +192,14 @@ var ContextMenu = function ContextMenu(_ref2) {
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 58,
+        lineNumber: 70,
         columnNumber: 13
       }
     }, action.text), index + 1 !== contextMenuActions.length ? /*#__PURE__*/_react["default"].createElement(Divider, {
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 61,
+        lineNumber: 73,
         columnNumber: 56
       }
     }) : null);

@@ -126,7 +126,8 @@ var ContextMenuDialog = function ContextMenuDialog(_ref5) {
       buttonRef = _ref5.buttonRef,
       onClose = _ref5.onClose,
       direction = _ref5.direction,
-      rest = _objectWithoutPropertiesLoose(_ref5, ["isOpen", "buttonRef", "onClose", "direction"]);
+      contextFunctions = _ref5.contextFunctions,
+      rest = _objectWithoutPropertiesLoose(_ref5, ["isOpen", "buttonRef", "onClose", "direction", "contextFunctions"]);
 
   var _useRootDialog = useRootDialog(),
       $rootDialog = _useRootDialog.$rootDialog;
@@ -202,6 +203,7 @@ var ContextMenuDialog = function ContextMenuDialog(_ref5) {
     top: top,
     left: left
   }, rest, {
+    contextFunctions: contextFunctions,
     __self: _this,
     __source: {
       fileName: _jsxFileName,

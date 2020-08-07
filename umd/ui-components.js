@@ -1,4 +1,4 @@
-/*! ui-components v2.9.0 */
+/*! ui-components v2.10.0 */
 (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
 		module.exports = factory(require("react"));
@@ -4677,65 +4677,6 @@ module.exports = hoistNonReactStatics;
 
 /***/ }),
 /* 15 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.Flex = exports.Box = void 0;
-
-var _react = _interopRequireDefault(__webpack_require__(0));
-
-var _styledComponents = _interopRequireDefault(__webpack_require__(2));
-
-var _styledSystem = __webpack_require__(1);
-
-var _css = _interopRequireWildcard(__webpack_require__(9));
-
-var _shouldForwardProp = _interopRequireDefault(__webpack_require__(19));
-
-function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function _getRequireWildcardCache() { return cache; }; return cache; }
-
-function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; if (obj != null) { var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj["default"] = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
-
-var sx = function sx(props) {
-  return (0, _css["default"])(props.sx)(props.theme);
-};
-
-var base = function base(props) {
-  return (0, _css["default"])(props.__css)(props.theme);
-};
-
-var variant = function variant(_ref) {
-  var theme = _ref.theme,
-      variant = _ref.variant,
-      _ref$tx = _ref.tx,
-      tx = _ref$tx === void 0 ? 'variants' : _ref$tx;
-  return (0, _css["default"])((0, _css.get)(theme, tx + '.' + variant, (0, _css.get)(theme, variant)))(theme);
-};
-
-var Box = (0, _styledComponents["default"])('div', {
-  shouldForwardProp: _shouldForwardProp["default"]
-})({
-  boxSizing: 'border-box',
-  margin: 0,
-  minWidth: 0
-}, base, variant, sx, function (props) {
-  return props.css;
-}, (0, _styledSystem.compose)(_styledSystem.space, _styledSystem.layout, _styledSystem.typography, _styledSystem.color, _styledSystem.flexbox));
-exports.Box = Box;
-var Flex = (0, _styledComponents["default"])(Box)({
-  display: 'flex'
-});
-exports.Flex = Flex;
-
-/***/ }),
-/* 16 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -7180,6 +7121,65 @@ var autoReplace = function autoReplace() {
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(13), __webpack_require__(36).setImmediate))
 
 /***/ }),
+/* 16 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.Flex = exports.Box = void 0;
+
+var _react = _interopRequireDefault(__webpack_require__(0));
+
+var _styledComponents = _interopRequireDefault(__webpack_require__(2));
+
+var _styledSystem = __webpack_require__(1);
+
+var _css = _interopRequireWildcard(__webpack_require__(9));
+
+var _shouldForwardProp = _interopRequireDefault(__webpack_require__(19));
+
+function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function _getRequireWildcardCache() { return cache; }; return cache; }
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; if (obj != null) { var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj["default"] = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+
+var sx = function sx(props) {
+  return (0, _css["default"])(props.sx)(props.theme);
+};
+
+var base = function base(props) {
+  return (0, _css["default"])(props.__css)(props.theme);
+};
+
+var variant = function variant(_ref) {
+  var theme = _ref.theme,
+      variant = _ref.variant,
+      _ref$tx = _ref.tx,
+      tx = _ref$tx === void 0 ? 'variants' : _ref$tx;
+  return (0, _css["default"])((0, _css.get)(theme, tx + '.' + variant, (0, _css.get)(theme, variant)))(theme);
+};
+
+var Box = (0, _styledComponents["default"])('div', {
+  shouldForwardProp: _shouldForwardProp["default"]
+})({
+  boxSizing: 'border-box',
+  margin: 0,
+  minWidth: 0
+}, base, variant, sx, function (props) {
+  return props.css;
+}, (0, _styledSystem.compose)(_styledSystem.space, _styledSystem.layout, _styledSystem.typography, _styledSystem.color, _styledSystem.flexbox));
+exports.Box = Box;
+var Flex = (0, _styledComponents["default"])(Box)({
+  display: 'flex'
+});
+exports.Flex = Flex;
+
+/***/ }),
 /* 17 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -8275,14 +8275,16 @@ var createShouldForwardProp = function createShouldForwardProp(props) {
 "use strict";
 
 
-var matchOperatorsRe = /[|\\{}()[\]^$+*?.]/g;
-
-module.exports = function (str) {
-	if (typeof str !== 'string') {
+module.exports = string => {
+	if (typeof string !== 'string') {
 		throw new TypeError('Expected a string');
 	}
 
-	return str.replace(matchOperatorsRe, '\\$&');
+	// Escape characters with special meaning either inside or outside character sets.
+	// Use a simple backslash escape when it’s always valid, and a \unnnn escape when the simpler form would be disallowed by Unicode patterns’ stricter grammar.
+	return string
+		.replace(/[|\\{}()[\]^$+*?.]/g, '\\$&')
+		.replace(/-/g, '\\x2d');
 };
 
 
@@ -9994,6 +9996,7 @@ __webpack_require__.d(__webpack_exports__, "FormHelperText", function() { return
 __webpack_require__.d(__webpack_exports__, "AlertStack", function() { return /* reexport */ components_AlertStack; });
 __webpack_require__.d(__webpack_exports__, "AlertStackProvider", function() { return /* reexport */ AlertStack_AlertStackProvider; });
 __webpack_require__.d(__webpack_exports__, "Card", function() { return /* reexport */ components_Card; });
+__webpack_require__.d(__webpack_exports__, "Chip", function() { return /* reexport */ components_Chip; });
 
 // CONCATENATED MODULE: ./src/theme/index.js
 var colors = {
@@ -10348,13 +10351,412 @@ var Spinner_Spinner = function Spinner(_ref4) {
 // CONCATENATED MODULE: ./src/components/Spinner/index.js
 
 /* harmony default export */ var components_Spinner = (components_Spinner_Spinner);
+// EXTERNAL MODULE: ./node_modules/@fortawesome/fontawesome-svg-core/index.es.js
+var index_es = __webpack_require__(15);
+
+// CONCATENATED MODULE: ./node_modules/@fortawesome/react-fontawesome/index.es.js
+
+
+
+
+function _typeof(obj) {
+  if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") {
+    _typeof = function (obj) {
+      return typeof obj;
+    };
+  } else {
+    _typeof = function (obj) {
+      return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj;
+    };
+  }
+
+  return _typeof(obj);
+}
+
+function _defineProperty(obj, key, value) {
+  if (key in obj) {
+    Object.defineProperty(obj, key, {
+      value: value,
+      enumerable: true,
+      configurable: true,
+      writable: true
+    });
+  } else {
+    obj[key] = value;
+  }
+
+  return obj;
+}
+
+function ownKeys(object, enumerableOnly) {
+  var keys = Object.keys(object);
+
+  if (Object.getOwnPropertySymbols) {
+    var symbols = Object.getOwnPropertySymbols(object);
+    if (enumerableOnly) symbols = symbols.filter(function (sym) {
+      return Object.getOwnPropertyDescriptor(object, sym).enumerable;
+    });
+    keys.push.apply(keys, symbols);
+  }
+
+  return keys;
+}
+
+function _objectSpread2(target) {
+  for (var i = 1; i < arguments.length; i++) {
+    var source = arguments[i] != null ? arguments[i] : {};
+
+    if (i % 2) {
+      ownKeys(Object(source), true).forEach(function (key) {
+        _defineProperty(target, key, source[key]);
+      });
+    } else if (Object.getOwnPropertyDescriptors) {
+      Object.defineProperties(target, Object.getOwnPropertyDescriptors(source));
+    } else {
+      ownKeys(Object(source)).forEach(function (key) {
+        Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key));
+      });
+    }
+  }
+
+  return target;
+}
+
+function index_es_objectWithoutPropertiesLoose(source, excluded) {
+  if (source == null) return {};
+  var target = {};
+  var sourceKeys = Object.keys(source);
+  var key, i;
+
+  for (i = 0; i < sourceKeys.length; i++) {
+    key = sourceKeys[i];
+    if (excluded.indexOf(key) >= 0) continue;
+    target[key] = source[key];
+  }
+
+  return target;
+}
+
+function _objectWithoutProperties(source, excluded) {
+  if (source == null) return {};
+
+  var target = index_es_objectWithoutPropertiesLoose(source, excluded);
+
+  var key, i;
+
+  if (Object.getOwnPropertySymbols) {
+    var sourceSymbolKeys = Object.getOwnPropertySymbols(source);
+
+    for (i = 0; i < sourceSymbolKeys.length; i++) {
+      key = sourceSymbolKeys[i];
+      if (excluded.indexOf(key) >= 0) continue;
+      if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue;
+      target[key] = source[key];
+    }
+  }
+
+  return target;
+}
+
+function _toConsumableArray(arr) {
+  return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _nonIterableSpread();
+}
+
+function _arrayWithoutHoles(arr) {
+  if (Array.isArray(arr)) {
+    for (var i = 0, arr2 = new Array(arr.length); i < arr.length; i++) arr2[i] = arr[i];
+
+    return arr2;
+  }
+}
+
+function _iterableToArray(iter) {
+  if (Symbol.iterator in Object(iter) || Object.prototype.toString.call(iter) === "[object Arguments]") return Array.from(iter);
+}
+
+function _nonIterableSpread() {
+  throw new TypeError("Invalid attempt to spread non-iterable instance");
+}
+
+// Get CSS class list from a props object
+function classList(props) {
+  var _classes;
+
+  var spin = props.spin,
+      pulse = props.pulse,
+      fixedWidth = props.fixedWidth,
+      inverse = props.inverse,
+      border = props.border,
+      listItem = props.listItem,
+      flip = props.flip,
+      size = props.size,
+      rotation = props.rotation,
+      pull = props.pull; // map of CSS class names to properties
+
+  var classes = (_classes = {
+    'fa-spin': spin,
+    'fa-pulse': pulse,
+    'fa-fw': fixedWidth,
+    'fa-inverse': inverse,
+    'fa-border': border,
+    'fa-li': listItem,
+    'fa-flip-horizontal': flip === 'horizontal' || flip === 'both',
+    'fa-flip-vertical': flip === 'vertical' || flip === 'both'
+  }, _defineProperty(_classes, "fa-".concat(size), typeof size !== 'undefined' && size !== null), _defineProperty(_classes, "fa-rotate-".concat(rotation), typeof rotation !== 'undefined' && rotation !== null), _defineProperty(_classes, "fa-pull-".concat(pull), typeof pull !== 'undefined' && pull !== null), _defineProperty(_classes, 'fa-swap-opacity', props.swapOpacity), _classes); // map over all the keys in the classes object
+  // return an array of the keys where the value for the key is not null
+
+  return Object.keys(classes).map(function (key) {
+    return classes[key] ? key : null;
+  }).filter(function (key) {
+    return key;
+  });
+}
+
+// Camelize taken from humps
+// humps is copyright © 2012+ Dom Christie
+// Released under the MIT license.
+// Performant way to determine if object coerces to a number
+function _isNumerical(obj) {
+  obj = obj - 0; // eslint-disable-next-line no-self-compare
+
+  return obj === obj;
+}
+
+function camelize(string) {
+  if (_isNumerical(string)) {
+    return string;
+  } // eslint-disable-next-line no-useless-escape
+
+
+  string = string.replace(/[\-_\s]+(.)?/g, function (match, chr) {
+    return chr ? chr.toUpperCase() : '';
+  }); // Ensure 1st char is always lowercase
+
+  return string.substr(0, 1).toLowerCase() + string.substr(1);
+}
+
+function capitalize(val) {
+  return val.charAt(0).toUpperCase() + val.slice(1);
+}
+
+function styleToObject(style) {
+  return style.split(';').map(function (s) {
+    return s.trim();
+  }).filter(function (s) {
+    return s;
+  }).reduce(function (acc, pair) {
+    var i = pair.indexOf(':');
+    var prop = camelize(pair.slice(0, i));
+    var value = pair.slice(i + 1).trim();
+    prop.startsWith('webkit') ? acc[capitalize(prop)] = value : acc[prop] = value;
+    return acc;
+  }, {});
+}
+
+function convert(createElement, element) {
+  var extraProps = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};
+
+  if (typeof element === 'string') {
+    return element;
+  }
+
+  var children = (element.children || []).map(function (child) {
+    return convert(createElement, child);
+  });
+  /* eslint-disable dot-notation */
+
+  var mixins = Object.keys(element.attributes || {}).reduce(function (acc, key) {
+    var val = element.attributes[key];
+
+    switch (key) {
+      case 'class':
+        acc.attrs['className'] = val;
+        delete element.attributes['class'];
+        break;
+
+      case 'style':
+        acc.attrs['style'] = styleToObject(val);
+        break;
+
+      default:
+        if (key.indexOf('aria-') === 0 || key.indexOf('data-') === 0) {
+          acc.attrs[key.toLowerCase()] = val;
+        } else {
+          acc.attrs[camelize(key)] = val;
+        }
+
+    }
+
+    return acc;
+  }, {
+    attrs: {}
+  });
+
+  var _extraProps$style = extraProps.style,
+      existingStyle = _extraProps$style === void 0 ? {} : _extraProps$style,
+      remaining = _objectWithoutProperties(extraProps, ["style"]);
+
+  mixins.attrs['style'] = _objectSpread2({}, mixins.attrs['style'], {}, existingStyle);
+  /* eslint-enable */
+
+  return createElement.apply(void 0, [element.tag, _objectSpread2({}, mixins.attrs, {}, remaining)].concat(_toConsumableArray(children)));
+}
+
+var PRODUCTION = false;
+
+try {
+  PRODUCTION = "production" === 'production';
+} catch (e) {}
+
+function log () {
+  if (!PRODUCTION && console && typeof console.error === 'function') {
+    var _console;
+
+    (_console = console).error.apply(_console, arguments);
+  }
+}
+
+// Normalize icon arguments
+function normalizeIconArgs(icon) {
+  // if the icon is null, there's nothing to do
+  if (icon === null) {
+    return null;
+  } // if the icon is an object and has a prefix and an icon name, return it
+
+
+  if (_typeof(icon) === 'object' && icon.prefix && icon.iconName) {
+    return icon;
+  } // if it's an array with length of two
+
+
+  if (Array.isArray(icon) && icon.length === 2) {
+    // use the first item as prefix, second as icon name
+    return {
+      prefix: icon[0],
+      iconName: icon[1]
+    };
+  } // if it's a string, use it as the icon name
+
+
+  if (typeof icon === 'string') {
+    return {
+      prefix: 'fas',
+      iconName: icon
+    };
+  }
+}
+
+// creates an object with a key of key
+// and a value of value
+// if certain conditions are met
+function objectWithKey(key, value) {
+  // if the value is a non-empty array
+  // or it's not an array but it is truthy
+  // then create the object with the key and the value
+  // if not, return an empty array
+  return Array.isArray(value) && value.length > 0 || !Array.isArray(value) && value ? _defineProperty({}, key, value) : {};
+}
+
+function FontAwesomeIcon(props) {
+  var iconArgs = props.icon,
+      maskArgs = props.mask,
+      symbol = props.symbol,
+      className = props.className,
+      title = props.title;
+  var iconLookup = normalizeIconArgs(iconArgs);
+  var classes = objectWithKey('classes', [].concat(_toConsumableArray(classList(props)), _toConsumableArray(className.split(' '))));
+  var transform = objectWithKey('transform', typeof props.transform === 'string' ? index_es["b" /* parse */].transform(props.transform) : props.transform);
+  var mask = objectWithKey('mask', normalizeIconArgs(maskArgs));
+  var renderedIcon = Object(index_es["a" /* icon */])(iconLookup, _objectSpread2({}, classes, {}, transform, {}, mask, {
+    symbol: symbol,
+    title: title
+  }));
+
+  if (!renderedIcon) {
+    log('Could not find icon', iconLookup);
+    return null;
+  }
+
+  var abstract = renderedIcon.abstract;
+  var extraProps = {};
+  Object.keys(props).forEach(function (key) {
+    // eslint-disable-next-line no-prototype-builtins
+    if (!FontAwesomeIcon.defaultProps.hasOwnProperty(key)) {
+      extraProps[key] = props[key];
+    }
+  });
+  return convertCurry(abstract[0], extraProps);
+}
+FontAwesomeIcon.displayName = 'FontAwesomeIcon';
+FontAwesomeIcon.propTypes = {
+  border: prop_types_default.a.bool,
+  className: prop_types_default.a.string,
+  mask: prop_types_default.a.oneOfType([prop_types_default.a.object, prop_types_default.a.array, prop_types_default.a.string]),
+  fixedWidth: prop_types_default.a.bool,
+  inverse: prop_types_default.a.bool,
+  flip: prop_types_default.a.oneOf(['horizontal', 'vertical', 'both']),
+  icon: prop_types_default.a.oneOfType([prop_types_default.a.object, prop_types_default.a.array, prop_types_default.a.string]),
+  listItem: prop_types_default.a.bool,
+  pull: prop_types_default.a.oneOf(['right', 'left']),
+  pulse: prop_types_default.a.bool,
+  rotation: prop_types_default.a.oneOf([90, 180, 270]),
+  size: prop_types_default.a.oneOf(['lg', 'xs', 'sm', '1x', '2x', '3x', '4x', '5x', '6x', '7x', '8x', '9x', '10x']),
+  spin: prop_types_default.a.bool,
+  symbol: prop_types_default.a.oneOfType([prop_types_default.a.bool, prop_types_default.a.string]),
+  title: prop_types_default.a.string,
+  transform: prop_types_default.a.oneOfType([prop_types_default.a.string, prop_types_default.a.object]),
+  swapOpacity: prop_types_default.a.bool
+};
+FontAwesomeIcon.defaultProps = {
+  border: false,
+  className: '',
+  mask: null,
+  fixedWidth: false,
+  inverse: false,
+  flip: null,
+  icon: null,
+  listItem: false,
+  pull: null,
+  pulse: false,
+  rotation: null,
+  size: null,
+  spin: false,
+  symbol: false,
+  title: '',
+  transform: null,
+  swapOpacity: false
+};
+var convertCurry = convert.bind(null, external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement);
+
+
+
 // CONCATENATED MODULE: ./src/components/Button/Button.js
 function Button_extends() { Button_extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return Button_extends.apply(this, arguments); }
 
 function Button_objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 
+function _templateObject3() {
+  var data = Button_taggedTemplateLiteralLoose(["\n  width: ", ";\n  height: ", ";\n  margin-right: 6px;\n  border-radius: 50%;\n  box-shadow: 0px 3px 6px #00000029;\n  border: 1px solid #e8e8e8;\n  background: ", ";\n  background-color: ", ";\n  background-size: cover;\n"]);
+
+  _templateObject3 = function _templateObject3() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject2() {
+  var data = Button_taggedTemplateLiteralLoose(["\n  display: flex;\n  margin-right: 4px;\n  font-size: ", ";\n  justify-content: center;\n  align-items: center;\n  box-shadow: 0px 3px 6px #00000029;\n  border: 1px solid #e8e8e8;\n  border-radius: 25px;\n  padding: 8px;\n  opacity: 1;\n"]);
+
+  _templateObject2 = function _templateObject2() {
+    return data;
+  };
+
+  return data;
+}
+
 function Button_templateObject() {
-  var data = Button_taggedTemplateLiteralLoose(["\n  appearance: none;\n  font-family: inherit;\n  border-radius: 4px;\n  outline: none;\n  cursor: pointer;\n  padding: .5rem 1rem;\n  border-style: solid;\n  white-space: nowrap;\n  text-overflow: ellipsis;\n  overflow: hidden;\n  ", "\n  ", "\n  ", "\n  ", "\n  box-sizing: border-box;\n  &:focus {\n    box-shadow: 0 0 8px ", ";\n  }\n  \n  &:active:not(:disabled) {\n    box-shadow: inset 0px 0px 5px #c1c1c1;\n  }\n  &:active,\n  &:hover {\n    background-color: ", ";\n  }\n  &:disabled {\n    background-color: ", ";\n  }\n  ", "\n  \n  ", "\n\n  ", " \n\n  ", " \n"]);
+  var data = Button_taggedTemplateLiteralLoose(["\n  appearance: none;\n  font-family: inherit;\n  border-radius: 4px;\n  outline: none;\n  cursor: pointer;\n  padding: .5rem 1rem;\n  border-style: solid;\n  white-space: nowrap;\n  text-overflow: ellipsis;\n  overflow: hidden;\n  ", "\n  ", "\n  ", "\n  ", "\n  box-sizing: border-box;\n  &:focus {\n    box-shadow: 0 0 8px ", ";\n  }\n  \n  &:active:not(:disabled) {\n    box-shadow: inset 0px 0px 5px #c1c1c1;\n  }\n  &:active,\n  &:hover {\n    background-color: ", ";\n  }\n  &:disabled {\n    background-color: ", ";\n  }\n  ", "\n  \n  ", "\n\n  ", " \n\n  ", "\n\n  ", "\n\n  ", "\n"]);
 
   Button_templateObject = function _templateObject() {
     return data;
@@ -10364,6 +10766,7 @@ function Button_templateObject() {
 }
 
 function Button_taggedTemplateLiteralLoose(strings, raw) { if (!raw) { raw = strings.slice(0); } strings.raw = raw; return strings; }
+
 
 
 
@@ -10402,18 +10805,62 @@ var StyledButton = styled_components_browser_esm["default"].button(Button_templa
   var linkButton = _ref7.linkButton,
       theme = _ref7.theme,
       color = _ref7.color;
-  return !!linkButton ? "\n    color: " + theme.colors[color] + ";\n    border: none;\n    background-color: transparent !important;\n    box-shadow: none !important;\n    outline: none;\n    &:hover {\n      text-decoration: underline;\n      background-color: transparent;\n    }\n    " : "\n     text-decoration: none;\n    ";
+  return !!linkButton ? "\n    color: " + theme.colors[color] + ";\n    border: none;\n    background-color: transparent !important;\n    box-shadow: none !important;\n    outline: none;\n    &:hover {\n      text-decoration: underline;\n      background-color: transparent;\n    }\n    " : "\n     text-decoration: none;";
+}, function (_ref8) {
+  var icon = _ref8.icon,
+      theme = _ref8.theme;
+  return !!icon ? "\n    display: flex;\n    align-items: center;\n    padding: 0;\n    background-color: transparent;\n    color:  " + function (_ref9) {
+    var color = _ref9.color;
+    return theme.colors[color] ? theme.colors[color] : color;
+  } + ";\n    overflow: visible;\n    &:hover {\n      text-decoration: underline;\n      background-color: transparent;\n    }\n  " : 'text-decoration: none;';
+}, function (_ref10) {
+  var customIcon = _ref10.customIcon,
+      theme = _ref10.theme;
+  return !!customIcon ? "\n    display: flex;\n    align-items: center;\n    overflow: visible;\n    max-width: unset;\n    padding: 0\n    " : 'text-decoration: none;';
+});
+var StyledFaIcon = styled_components_browser_esm["default"].div(_templateObject2(), function (_ref11) {
+  var iconSize = _ref11.iconSize;
+  return iconSize;
+});
+var StyledIcon = styled_components_browser_esm["default"].div(_templateObject3(), function (_ref12) {
+  var imgSize = _ref12.imgSize;
+  return imgSize;
+}, function (_ref13) {
+  var imgSize = _ref13.imgSize;
+  return imgSize;
+}, function (_ref14) {
+  var imgBackground = _ref14.imgBackground;
+  return "url(" + imgBackground + ") no-repeat center center";
+}, function (_ref15) {
+  var bgColor = _ref15.bgColor;
+  return bgColor;
 });
 
-var Button_Button = function Button(_ref8) {
-  var children = _ref8.children,
-      loading = _ref8.loading,
-      disabled = _ref8.disabled,
-      rest = Button_objectWithoutPropertiesLoose(_ref8, ["children", "loading", "disabled"]);
+var Button_Button = function Button(_ref16) {
+  var children = _ref16.children,
+      loading = _ref16.loading,
+      disabled = _ref16.disabled,
+      icon = _ref16.icon,
+      iconSize = _ref16.iconSize,
+      customIcon = _ref16.customIcon,
+      imgSize = _ref16.imgSize,
+      imgBackground = _ref16.imgBackground,
+      bgColor = _ref16.bgColor,
+      rest = Button_objectWithoutPropertiesLoose(_ref16, ["children", "loading", "disabled", "icon", "iconSize", "customIcon", "imgSize", "imgBackground", "bgColor"]);
 
   return /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(StyledButton, Button_extends({}, rest, {
     disabled: !!disabled || !!loading,
-    loading: loading
+    loading: loading,
+    icon: icon,
+    customIcon: imgBackground
+  }), icon && /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(StyledFaIcon, {
+    iconSize: iconSize
+  }, /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(FontAwesomeIcon, {
+    icon: icon
+  })), imgBackground && /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(StyledIcon, {
+    imgBackground: imgBackground,
+    imgSize: imgSize,
+    bgColor: bgColor
   }), !!loading ? 'carregando...' : children);
 };
 
@@ -10425,7 +10872,9 @@ Button_Button.propTypes = Button_extends({
 Button_Button.defaultProps = {
   size: 'medium',
   color: 'default',
-  type: 'button'
+  type: 'button',
+  imgSize: '35px',
+  bgColor: 'transparent'
 };
 /* harmony default export */ var components_Button_Button = (Button_Button);
 // CONCATENATED MODULE: ./src/components/Button/index.js
@@ -10825,20 +11274,20 @@ function SidebarMenu_extends() { SidebarMenu_extends = Object.assign || function
 
 function SidebarMenu_objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 
-function _templateObject3() {
+function SidebarMenu_templateObject3() {
   var data = SidebarMenu_taggedTemplateLiteralLoose(["\n  ", "\n  position: absolute;\n  left: 0;\n  top: 0;\n  bottom: 0;\n  height: 100%;\n  background: #550e33 linear-gradient(89deg, #550e33 0%, #ff4f5d 100%) 0% 0% no-repeat padding-box;\n  transition: 0.2s linear;\n  z-index: 1002;\n  overflow: auto;\n  ", "\n"]);
 
-  _templateObject3 = function _templateObject3() {
+  SidebarMenu_templateObject3 = function _templateObject3() {
     return data;
   };
 
   return data;
 }
 
-function _templateObject2() {
+function SidebarMenu_templateObject2() {
   var data = SidebarMenu_taggedTemplateLiteralLoose(["\n  height: 100%;\n  z-index: 9999999;\n  ", "\n"]);
 
-  _templateObject2 = function _templateObject2() {
+  SidebarMenu_templateObject2 = function _templateObject2() {
     return data;
   };
 
@@ -10863,11 +11312,11 @@ function SidebarMenu_taggedTemplateLiteralLoose(strings, raw) { if (!raw) { raw 
 
 
 var Backdrop = styled_components_browser_esm["default"].div(SidebarMenu_templateObject());
-var WrapperSidebarMenu = styled_components_browser_esm["default"].nav(_templateObject2(), function (_ref) {
+var WrapperSidebarMenu = styled_components_browser_esm["default"].nav(SidebarMenu_templateObject2(), function (_ref) {
   var open = _ref.open;
   return !!open && "\n    @media only screen and (max-width: 767px) {\n      position: fixed;\n      top: 0;\n      right: 0;\n      bottom: 0;\n      left: 0;\n\n      " + Backdrop + " {\n        visibility: visible;\n        background: rgba(0, 0, 0, 0.3);\n        position: fixed;\n        top: 0;\n        right: 0;\n        bottom: 0;\n        left: 0;\n        z-index: 1001;\n      }\n    }\n  ";
 });
-var StyledSidebarMenu = Object(styled_components_browser_esm["default"])(dist["Box"])(_templateObject3(), index_esm["layout"], function (_ref2) {
+var StyledSidebarMenu = Object(styled_components_browser_esm["default"])(dist["Box"])(SidebarMenu_templateObject3(), index_esm["layout"], function (_ref2) {
   var open = _ref2.open;
   return open ? "\n    transform: translateX(0);\n  " : "\n    transform: translateX(-100%);\n  ";
 });
@@ -10909,7 +11358,7 @@ SidebarMenu_SidebarMenu.defaultProps = {
 
 /* harmony default export */ var components_SidebarMenu = (components_SidebarMenu_SidebarMenu);
 // EXTERNAL MODULE: ./node_modules/reflexbox/styled-components/index.js
-var styled_components = __webpack_require__(15);
+var styled_components = __webpack_require__(16);
 
 // CONCATENATED MODULE: ./src/components/HamburguerButton/HamburguerButton.js
 function HamburguerButton_extends() { HamburguerButton_extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return HamburguerButton_extends.apply(this, arguments); }
@@ -11987,385 +12436,6 @@ SelectField_SelectField.defaultProps = {
 // CONCATENATED MODULE: ./src/components/SelectField/index.js
 
 /* harmony default export */ var components_SelectField = (components_SelectField_SelectField);
-// EXTERNAL MODULE: ./node_modules/@fortawesome/fontawesome-svg-core/index.es.js
-var index_es = __webpack_require__(16);
-
-// CONCATENATED MODULE: ./node_modules/@fortawesome/react-fontawesome/index.es.js
-
-
-
-
-function _typeof(obj) {
-  if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") {
-    _typeof = function (obj) {
-      return typeof obj;
-    };
-  } else {
-    _typeof = function (obj) {
-      return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj;
-    };
-  }
-
-  return _typeof(obj);
-}
-
-function _defineProperty(obj, key, value) {
-  if (key in obj) {
-    Object.defineProperty(obj, key, {
-      value: value,
-      enumerable: true,
-      configurable: true,
-      writable: true
-    });
-  } else {
-    obj[key] = value;
-  }
-
-  return obj;
-}
-
-function ownKeys(object, enumerableOnly) {
-  var keys = Object.keys(object);
-
-  if (Object.getOwnPropertySymbols) {
-    var symbols = Object.getOwnPropertySymbols(object);
-    if (enumerableOnly) symbols = symbols.filter(function (sym) {
-      return Object.getOwnPropertyDescriptor(object, sym).enumerable;
-    });
-    keys.push.apply(keys, symbols);
-  }
-
-  return keys;
-}
-
-function _objectSpread2(target) {
-  for (var i = 1; i < arguments.length; i++) {
-    var source = arguments[i] != null ? arguments[i] : {};
-
-    if (i % 2) {
-      ownKeys(Object(source), true).forEach(function (key) {
-        _defineProperty(target, key, source[key]);
-      });
-    } else if (Object.getOwnPropertyDescriptors) {
-      Object.defineProperties(target, Object.getOwnPropertyDescriptors(source));
-    } else {
-      ownKeys(Object(source)).forEach(function (key) {
-        Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key));
-      });
-    }
-  }
-
-  return target;
-}
-
-function index_es_objectWithoutPropertiesLoose(source, excluded) {
-  if (source == null) return {};
-  var target = {};
-  var sourceKeys = Object.keys(source);
-  var key, i;
-
-  for (i = 0; i < sourceKeys.length; i++) {
-    key = sourceKeys[i];
-    if (excluded.indexOf(key) >= 0) continue;
-    target[key] = source[key];
-  }
-
-  return target;
-}
-
-function _objectWithoutProperties(source, excluded) {
-  if (source == null) return {};
-
-  var target = index_es_objectWithoutPropertiesLoose(source, excluded);
-
-  var key, i;
-
-  if (Object.getOwnPropertySymbols) {
-    var sourceSymbolKeys = Object.getOwnPropertySymbols(source);
-
-    for (i = 0; i < sourceSymbolKeys.length; i++) {
-      key = sourceSymbolKeys[i];
-      if (excluded.indexOf(key) >= 0) continue;
-      if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue;
-      target[key] = source[key];
-    }
-  }
-
-  return target;
-}
-
-function _toConsumableArray(arr) {
-  return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _nonIterableSpread();
-}
-
-function _arrayWithoutHoles(arr) {
-  if (Array.isArray(arr)) {
-    for (var i = 0, arr2 = new Array(arr.length); i < arr.length; i++) arr2[i] = arr[i];
-
-    return arr2;
-  }
-}
-
-function _iterableToArray(iter) {
-  if (Symbol.iterator in Object(iter) || Object.prototype.toString.call(iter) === "[object Arguments]") return Array.from(iter);
-}
-
-function _nonIterableSpread() {
-  throw new TypeError("Invalid attempt to spread non-iterable instance");
-}
-
-// Get CSS class list from a props object
-function classList(props) {
-  var _classes;
-
-  var spin = props.spin,
-      pulse = props.pulse,
-      fixedWidth = props.fixedWidth,
-      inverse = props.inverse,
-      border = props.border,
-      listItem = props.listItem,
-      flip = props.flip,
-      size = props.size,
-      rotation = props.rotation,
-      pull = props.pull; // map of CSS class names to properties
-
-  var classes = (_classes = {
-    'fa-spin': spin,
-    'fa-pulse': pulse,
-    'fa-fw': fixedWidth,
-    'fa-inverse': inverse,
-    'fa-border': border,
-    'fa-li': listItem,
-    'fa-flip-horizontal': flip === 'horizontal' || flip === 'both',
-    'fa-flip-vertical': flip === 'vertical' || flip === 'both'
-  }, _defineProperty(_classes, "fa-".concat(size), typeof size !== 'undefined' && size !== null), _defineProperty(_classes, "fa-rotate-".concat(rotation), typeof rotation !== 'undefined' && rotation !== null), _defineProperty(_classes, "fa-pull-".concat(pull), typeof pull !== 'undefined' && pull !== null), _defineProperty(_classes, 'fa-swap-opacity', props.swapOpacity), _classes); // map over all the keys in the classes object
-  // return an array of the keys where the value for the key is not null
-
-  return Object.keys(classes).map(function (key) {
-    return classes[key] ? key : null;
-  }).filter(function (key) {
-    return key;
-  });
-}
-
-// Camelize taken from humps
-// humps is copyright © 2012+ Dom Christie
-// Released under the MIT license.
-// Performant way to determine if object coerces to a number
-function _isNumerical(obj) {
-  obj = obj - 0; // eslint-disable-next-line no-self-compare
-
-  return obj === obj;
-}
-
-function camelize(string) {
-  if (_isNumerical(string)) {
-    return string;
-  } // eslint-disable-next-line no-useless-escape
-
-
-  string = string.replace(/[\-_\s]+(.)?/g, function (match, chr) {
-    return chr ? chr.toUpperCase() : '';
-  }); // Ensure 1st char is always lowercase
-
-  return string.substr(0, 1).toLowerCase() + string.substr(1);
-}
-
-function capitalize(val) {
-  return val.charAt(0).toUpperCase() + val.slice(1);
-}
-
-function styleToObject(style) {
-  return style.split(';').map(function (s) {
-    return s.trim();
-  }).filter(function (s) {
-    return s;
-  }).reduce(function (acc, pair) {
-    var i = pair.indexOf(':');
-    var prop = camelize(pair.slice(0, i));
-    var value = pair.slice(i + 1).trim();
-    prop.startsWith('webkit') ? acc[capitalize(prop)] = value : acc[prop] = value;
-    return acc;
-  }, {});
-}
-
-function convert(createElement, element) {
-  var extraProps = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};
-
-  if (typeof element === 'string') {
-    return element;
-  }
-
-  var children = (element.children || []).map(function (child) {
-    return convert(createElement, child);
-  });
-  /* eslint-disable dot-notation */
-
-  var mixins = Object.keys(element.attributes || {}).reduce(function (acc, key) {
-    var val = element.attributes[key];
-
-    switch (key) {
-      case 'class':
-        acc.attrs['className'] = val;
-        delete element.attributes['class'];
-        break;
-
-      case 'style':
-        acc.attrs['style'] = styleToObject(val);
-        break;
-
-      default:
-        if (key.indexOf('aria-') === 0 || key.indexOf('data-') === 0) {
-          acc.attrs[key.toLowerCase()] = val;
-        } else {
-          acc.attrs[camelize(key)] = val;
-        }
-
-    }
-
-    return acc;
-  }, {
-    attrs: {}
-  });
-
-  var _extraProps$style = extraProps.style,
-      existingStyle = _extraProps$style === void 0 ? {} : _extraProps$style,
-      remaining = _objectWithoutProperties(extraProps, ["style"]);
-
-  mixins.attrs['style'] = _objectSpread2({}, mixins.attrs['style'], {}, existingStyle);
-  /* eslint-enable */
-
-  return createElement.apply(void 0, [element.tag, _objectSpread2({}, mixins.attrs, {}, remaining)].concat(_toConsumableArray(children)));
-}
-
-var PRODUCTION = false;
-
-try {
-  PRODUCTION = "production" === 'production';
-} catch (e) {}
-
-function log () {
-  if (!PRODUCTION && console && typeof console.error === 'function') {
-    var _console;
-
-    (_console = console).error.apply(_console, arguments);
-  }
-}
-
-// Normalize icon arguments
-function normalizeIconArgs(icon) {
-  // if the icon is null, there's nothing to do
-  if (icon === null) {
-    return null;
-  } // if the icon is an object and has a prefix and an icon name, return it
-
-
-  if (_typeof(icon) === 'object' && icon.prefix && icon.iconName) {
-    return icon;
-  } // if it's an array with length of two
-
-
-  if (Array.isArray(icon) && icon.length === 2) {
-    // use the first item as prefix, second as icon name
-    return {
-      prefix: icon[0],
-      iconName: icon[1]
-    };
-  } // if it's a string, use it as the icon name
-
-
-  if (typeof icon === 'string') {
-    return {
-      prefix: 'fas',
-      iconName: icon
-    };
-  }
-}
-
-// creates an object with a key of key
-// and a value of value
-// if certain conditions are met
-function objectWithKey(key, value) {
-  // if the value is a non-empty array
-  // or it's not an array but it is truthy
-  // then create the object with the key and the value
-  // if not, return an empty array
-  return Array.isArray(value) && value.length > 0 || !Array.isArray(value) && value ? _defineProperty({}, key, value) : {};
-}
-
-function FontAwesomeIcon(props) {
-  var iconArgs = props.icon,
-      maskArgs = props.mask,
-      symbol = props.symbol,
-      className = props.className,
-      title = props.title;
-  var iconLookup = normalizeIconArgs(iconArgs);
-  var classes = objectWithKey('classes', [].concat(_toConsumableArray(classList(props)), _toConsumableArray(className.split(' '))));
-  var transform = objectWithKey('transform', typeof props.transform === 'string' ? index_es["b" /* parse */].transform(props.transform) : props.transform);
-  var mask = objectWithKey('mask', normalizeIconArgs(maskArgs));
-  var renderedIcon = Object(index_es["a" /* icon */])(iconLookup, _objectSpread2({}, classes, {}, transform, {}, mask, {
-    symbol: symbol,
-    title: title
-  }));
-
-  if (!renderedIcon) {
-    log('Could not find icon', iconLookup);
-    return null;
-  }
-
-  var abstract = renderedIcon.abstract;
-  var extraProps = {};
-  Object.keys(props).forEach(function (key) {
-    // eslint-disable-next-line no-prototype-builtins
-    if (!FontAwesomeIcon.defaultProps.hasOwnProperty(key)) {
-      extraProps[key] = props[key];
-    }
-  });
-  return convertCurry(abstract[0], extraProps);
-}
-FontAwesomeIcon.displayName = 'FontAwesomeIcon';
-FontAwesomeIcon.propTypes = {
-  border: prop_types_default.a.bool,
-  className: prop_types_default.a.string,
-  mask: prop_types_default.a.oneOfType([prop_types_default.a.object, prop_types_default.a.array, prop_types_default.a.string]),
-  fixedWidth: prop_types_default.a.bool,
-  inverse: prop_types_default.a.bool,
-  flip: prop_types_default.a.oneOf(['horizontal', 'vertical', 'both']),
-  icon: prop_types_default.a.oneOfType([prop_types_default.a.object, prop_types_default.a.array, prop_types_default.a.string]),
-  listItem: prop_types_default.a.bool,
-  pull: prop_types_default.a.oneOf(['right', 'left']),
-  pulse: prop_types_default.a.bool,
-  rotation: prop_types_default.a.oneOf([90, 180, 270]),
-  size: prop_types_default.a.oneOf(['lg', 'xs', 'sm', '1x', '2x', '3x', '4x', '5x', '6x', '7x', '8x', '9x', '10x']),
-  spin: prop_types_default.a.bool,
-  symbol: prop_types_default.a.oneOfType([prop_types_default.a.bool, prop_types_default.a.string]),
-  title: prop_types_default.a.string,
-  transform: prop_types_default.a.oneOfType([prop_types_default.a.string, prop_types_default.a.object]),
-  swapOpacity: prop_types_default.a.bool
-};
-FontAwesomeIcon.defaultProps = {
-  border: false,
-  className: '',
-  mask: null,
-  fixedWidth: false,
-  inverse: false,
-  flip: null,
-  icon: null,
-  listItem: false,
-  pull: null,
-  pulse: false,
-  rotation: null,
-  size: null,
-  spin: false,
-  symbol: false,
-  title: '',
-  transform: null,
-  swapOpacity: false
-};
-var convertCurry = convert.bind(null, external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement);
-
-
-
 // CONCATENATED MODULE: ./node_modules/@fortawesome/free-solid-svg-icons/index.es.js
 var prefix = "fas";
 var faAd = {
@@ -18528,7 +18598,8 @@ var ContextMenuDialog_ContextMenuDialog = function ContextMenuDialog(_ref5) {
       buttonRef = _ref5.buttonRef,
       onClose = _ref5.onClose,
       direction = _ref5.direction,
-      rest = ContextMenuDialog_objectWithoutPropertiesLoose(_ref5, ["isOpen", "buttonRef", "onClose", "direction"]);
+      contextFunctions = _ref5.contextFunctions,
+      rest = ContextMenuDialog_objectWithoutPropertiesLoose(_ref5, ["isOpen", "buttonRef", "onClose", "direction", "contextFunctions"]);
 
   var _useRootDialog = ContextMenuDialog_useRootDialog(),
       $rootDialog = _useRootDialog.$rootDialog;
@@ -18597,7 +18668,9 @@ var ContextMenuDialog_ContextMenuDialog = function ContextMenuDialog(_ref5) {
     isOpen: isOpen,
     top: top,
     left: left
-  }, rest))), $rootDialog);
+  }, rest, {
+    contextFunctions: contextFunctions
+  }))), $rootDialog);
 };
 
 /* harmony default export */ var ContextMenu_ContextMenuDialog = (ContextMenuDialog_ContextMenuDialog);
@@ -18637,7 +18710,7 @@ function ContextMenu_templateObject2() {
 }
 
 function ContextMenu_templateObject() {
-  var data = ContextMenu_taggedTemplateLiteralLoose(["\n  ", "\n  ", "\n  position: relative;\n  display: flex;\n"]);
+  var data = ContextMenu_taggedTemplateLiteralLoose(["\n  ", "\n  ", "\n  position: relative;\n  display: flex;\n  .contextButton {\n    width: 2em;\n    height: 2em;\n  }\n"]);
 
   ContextMenu_templateObject = function _templateObject() {
     return data;
@@ -18659,15 +18732,18 @@ var StyledContextMenu = styled_components_browser_esm["default"].div(ContextMenu
 var ContextMenuToogleButton = styled_components_browser_esm["default"].button(ContextMenu_templateObject2());
 var Divider = styled_components_browser_esm["default"].hr(ContextMenu_templateObject3());
 var ContextMenu_Icon = Object(styled_components_browser_esm["default"])(FontAwesomeIcon)(ContextMenu_templateObject4(), function (_ref) {
-  var theme = _ref.theme;
-  return theme.colors.darkGrey;
+  var theme = _ref.theme,
+      buttonIcon = _ref.buttonIcon;
+  return !buttonIcon ? theme.colors.darkGrey : '';
 });
 
 var ContextMenu_ContextMenu = function ContextMenu(_ref2) {
   var children = _ref2.children,
       direction = _ref2.direction,
       contextMenuActions = _ref2.contextMenuActions,
-      rest = ContextMenu_objectWithoutPropertiesLoose(_ref2, ["children", "direction", "contextMenuActions"]);
+      contextFunctions = _ref2.contextFunctions,
+      buttonIcon = _ref2.buttonIcon,
+      rest = ContextMenu_objectWithoutPropertiesLoose(_ref2, ["children", "direction", "contextMenuActions", "contextFunctions", "buttonIcon"]);
 
   var _useState = Object(external_root_React_commonjs2_react_commonjs_react_amd_react_["useState"])(false),
       isOpen = _useState[0],
@@ -18683,7 +18759,21 @@ var ContextMenu_ContextMenu = function ContextMenu(_ref2) {
 
   return /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(StyledContextMenu, ContextMenu_extends({
     ref: wrapperRef
-  }, rest), /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(ContextMenuToogleButton, {
+  }, rest), contextFunctions ? /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement("div", {
+    ref: buttonRef
+  }, /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(components_Button, {
+    p: 0,
+    className: "contextButton",
+    onClick: function onClick() {
+      return setIsOpen(function (last) {
+        return !last;
+      });
+    },
+    color: 'primary'
+  }, /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(ContextMenu_Icon, {
+    buttonIcon: true,
+    icon: buttonIcon
+  }))) : /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(ContextMenuToogleButton, {
     ref: buttonRef,
     onClick: function onClick() {
       return setIsOpen(function (last) {
@@ -18693,6 +18783,7 @@ var ContextMenu_ContextMenu = function ContextMenu(_ref2) {
   }, /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(ContextMenu_Icon, {
     icon: faEllipsisH
   })), /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(ContextMenu_ContextMenuDialog, {
+    contextFunctions: contextFunctions,
     isOpen: isOpen,
     onClose: onClose,
     buttonRef: buttonRef,
@@ -21390,6 +21481,16 @@ var AlertStackProvider_AlertStackProvider = function AlertStackProvider(_ref) {
 // CONCATENATED MODULE: ./src/components/Card/Card.js
 function Card_objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 
+function Card_templateObject5() {
+  var data = Card_taggedTemplateLiteralLoose(["\n  max-width: 50px;\n  padding: 4px;\n  background-color: ", ";\n  margin-right: 24px;\n"]);
+
+  Card_templateObject5 = function _templateObject5() {
+    return data;
+  };
+
+  return data;
+}
+
 function Card_templateObject4() {
   var data = Card_taggedTemplateLiteralLoose(["\n  margin: 0;\n  color: ", ";\n  font-size: 40px;\n  font-weight: 600;\n  box-shadow: none;\n"]);
 
@@ -21401,7 +21502,7 @@ function Card_templateObject4() {
 }
 
 function Card_templateObject3() {
-  var data = Card_taggedTemplateLiteralLoose(["\n  display: flex;\n  justify-content: flex-start;\n  color: ", ";\n  box-shadow: none;\n  .StyledIcon {\n    font-size: 50px;\n    margin-right: 24px;\n  }\n"]);
+  var data = Card_taggedTemplateLiteralLoose(["\n  display: flex;\n  justify-content: flex-start;\n  color: ", ";\n  box-shadow: none;\n  .icon {\n    font-size: 50px;\n    margin-right: 24px;\n  }\n"]);
 
   Card_templateObject3 = function _templateObject3() {
     return data;
@@ -21435,6 +21536,7 @@ function Card_taggedTemplateLiteralLoose(strings, raw) { if (!raw) { raw = strin
 
 
 
+
 var StyledCard = styled_components_browser_esm["default"].div(Card_templateObject(), function (_ref) {
   var theme = _ref.theme,
       color = _ref.color;
@@ -21458,16 +21560,24 @@ var Counter = styled_components_browser_esm["default"].span(Card_templateObject4
       counterColor = _ref5.counterColor;
   return theme.colors[counterColor] ? theme.colors[counterColor] : counterColor;
 });
+var Card_StyledIcon = styled_components_browser_esm["default"].img(Card_templateObject5(), function (_ref6) {
+  var theme = _ref6.theme,
+      imgBackground = _ref6.imgBackground;
+  return theme.colors[imgBackground] ? theme.colors[imgBackground] : imgBackground;
+});
 
-var Card_Card = function Card(_ref6) {
-  var title = _ref6.title,
-      count = _ref6.count,
-      icon = _ref6.icon,
-      cancel = _ref6.cancel,
-      counterColor = _ref6.counterColor,
-      iconColor = _ref6.iconColor,
-      textColor = _ref6.textColor,
-      rest = Card_objectWithoutPropertiesLoose(_ref6, ["title", "count", "icon", "cancel", "counterColor", "iconColor", "textColor"]);
+var Card_Card = function Card(_ref7) {
+  var title = _ref7.title,
+      count = _ref7.count,
+      icon = _ref7.icon,
+      customIcon = _ref7.customIcon,
+      customIconAlt = _ref7.customIconAlt,
+      imgBackground = _ref7.imgBackground,
+      cancel = _ref7.cancel,
+      counterColor = _ref7.counterColor,
+      iconColor = _ref7.iconColor,
+      textColor = _ref7.textColor,
+      rest = Card_objectWithoutPropertiesLoose(_ref7, ["title", "count", "icon", "customIcon", "customIconAlt", "imgBackground", "cancel", "counterColor", "iconColor", "textColor"]);
 
   return /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(StyledCard, rest, /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(Card_StyledTitle, {
     textColor: textColor,
@@ -21475,8 +21585,12 @@ var Card_Card = function Card(_ref6) {
   }, title), /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(StyledInfo, {
     iconColor: iconColor
   }, icon && /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(FontAwesomeIcon, {
-    className: "StyledIcon",
+    className: "icon",
     icon: icon
+  }), customIcon && /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(Card_StyledIcon, {
+    src: customIcon,
+    alt: customIconAlt,
+    imgBackground: imgBackground
   }), /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(Counter, {
     counterColor: counterColor
   }, count)));
@@ -21489,6 +21603,79 @@ Card_Card.defaultProps = {
 // CONCATENATED MODULE: ./src/components/Card/index.js
 
 /* harmony default export */ var components_Card = (components_Card_Card);
+// CONCATENATED MODULE: ./src/components/Chip/variants/color.js
+function color_extends() { color_extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return color_extends.apply(this, arguments); }
+
+
+
+/* harmony default export */ var Chip_variants_color = (function (props) {
+  var variants = Object.entries(props.theme.colors).reduce(function (acc, _ref) {
+    var _extends2;
+
+    var key = _ref[0],
+        value = _ref[1];
+    return color_extends({}, acc, (_extends2 = {}, _extends2[key] = {
+      color: new color_default.a(value).isDark() ? '#fff' : '#000'
+    }, _extends2));
+  }, {});
+  return Object(index_esm["variant"])({
+    prop: 'color',
+    variants: variants
+  });
+});
+// CONCATENATED MODULE: ./src/components/Chip/variants/index.js
+
+
+// CONCATENATED MODULE: ./src/components/Chip/Chip.js
+function Chip_objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
+
+function Chip_templateObject2() {
+  var data = Chip_taggedTemplateLiteralLoose(["\n  ", "\n  background: ", ";\n  padding: 2px 10px;\n  border-radius: 25px\n"]);
+
+  Chip_templateObject2 = function _templateObject2() {
+    return data;
+  };
+
+  return data;
+}
+
+function Chip_templateObject() {
+  var data = Chip_taggedTemplateLiteralLoose(["\n  ", "\n"]);
+
+  Chip_templateObject = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+
+function Chip_taggedTemplateLiteralLoose(strings, raw) { if (!raw) { raw = strings.slice(0); } strings.raw = raw; return strings; }
+
+
+
+
+
+var StyledChip = styled_components_browser_esm["default"].div(Chip_templateObject(), index_esm["space"]);
+var StyledText = styled_components_browser_esm["default"].span(Chip_templateObject2(), Chip_variants_color, function (_ref) {
+  var theme = _ref.theme,
+      color = _ref.color;
+  return "" + theme.colors[color];
+});
+
+var Chip_Chip = function Chip(_ref2) {
+  var color = _ref2.color,
+      text = _ref2.text,
+      rest = Chip_objectWithoutPropertiesLoose(_ref2, ["color", "text"]);
+
+  return /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(StyledChip, rest, /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(StyledText, {
+    color: color
+  }, text));
+};
+
+/* harmony default export */ var components_Chip_Chip = (Chip_Chip);
+// CONCATENATED MODULE: ./src/components/Chip/index.js
+
+/* harmony default export */ var components_Chip = (components_Chip_Chip);
 // CONCATENATED MODULE: ./src/index.js
 /* Theme */
 
@@ -21508,6 +21695,8 @@ Card_Card.defaultProps = {
 
 
 /* Components */
+
+
 
 
 

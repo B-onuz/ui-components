@@ -11,6 +11,8 @@ var _styledComponents = _interopRequireDefault(require("styled-components"));
 
 var _reactFontawesome = require("@fortawesome/react-fontawesome");
 
+var _styledSystem = require("styled-system");
+
 var _this = void 0,
     _jsxFileName = "/Users/master/projects/bonuz/ui-components/src/components/Card/Card.js";
 
@@ -19,6 +21,16 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "d
 function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
 
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
+
+function _templateObject5() {
+  var data = _taggedTemplateLiteralLoose(["\n  max-width: 50px;\n  padding: 4px;\n  background-color: ", ";\n  margin-right: 24px;\n"]);
+
+  _templateObject5 = function _templateObject5() {
+    return data;
+  };
+
+  return data;
+}
 
 function _templateObject4() {
   var data = _taggedTemplateLiteralLoose(["\n  margin: 0;\n  color: ", ";\n  font-size: 40px;\n  font-weight: 600;\n  box-shadow: none;\n"]);
@@ -31,7 +43,7 @@ function _templateObject4() {
 }
 
 function _templateObject3() {
-  var data = _taggedTemplateLiteralLoose(["\n  display: flex;\n  justify-content: flex-start;\n  color: ", ";\n  box-shadow: none;\n  .StyledIcon {\n    font-size: 50px;\n    margin-right: 24px;\n  }\n"]);
+  var data = _taggedTemplateLiteralLoose(["\n  display: flex;\n  justify-content: flex-start;\n  color: ", ";\n  box-shadow: none;\n  .icon {\n    font-size: 50px;\n    margin-right: 24px;\n  }\n"]);
 
   _templateObject3 = function _templateObject3() {
     return data;
@@ -89,21 +101,30 @@ var Counter = _styledComponents["default"].span(_templateObject4(), function (_r
   return theme.colors[counterColor] ? theme.colors[counterColor] : counterColor;
 });
 
-var Card = function Card(_ref6) {
-  var title = _ref6.title,
-      count = _ref6.count,
-      icon = _ref6.icon,
-      cancel = _ref6.cancel,
-      counterColor = _ref6.counterColor,
-      iconColor = _ref6.iconColor,
-      textColor = _ref6.textColor,
-      rest = _objectWithoutPropertiesLoose(_ref6, ["title", "count", "icon", "cancel", "counterColor", "iconColor", "textColor"]);
+var StyledIcon = _styledComponents["default"].img(_templateObject5(), function (_ref6) {
+  var theme = _ref6.theme,
+      imgBackground = _ref6.imgBackground;
+  return theme.colors[imgBackground] ? theme.colors[imgBackground] : imgBackground;
+});
+
+var Card = function Card(_ref7) {
+  var title = _ref7.title,
+      count = _ref7.count,
+      icon = _ref7.icon,
+      customIcon = _ref7.customIcon,
+      customIconAlt = _ref7.customIconAlt,
+      imgBackground = _ref7.imgBackground,
+      cancel = _ref7.cancel,
+      counterColor = _ref7.counterColor,
+      iconColor = _ref7.iconColor,
+      textColor = _ref7.textColor,
+      rest = _objectWithoutPropertiesLoose(_ref7, ["title", "count", "icon", "customIcon", "customIconAlt", "imgBackground", "cancel", "counterColor", "iconColor", "textColor"]);
 
   return /*#__PURE__*/_react["default"].createElement(StyledCard, _extends({}, rest, {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 50,
+      lineNumber: 58,
       columnNumber: 5
     }
   }), /*#__PURE__*/_react["default"].createElement(StyledTitle, {
@@ -112,7 +133,7 @@ var Card = function Card(_ref6) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 51,
+      lineNumber: 59,
       columnNumber: 7
     }
   }, title), /*#__PURE__*/_react["default"].createElement(StyledInfo, {
@@ -120,24 +141,34 @@ var Card = function Card(_ref6) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 54,
+      lineNumber: 62,
       columnNumber: 7
     }
   }, icon && /*#__PURE__*/_react["default"].createElement(_reactFontawesome.FontAwesomeIcon, {
-    className: "StyledIcon",
+    className: "icon",
     icon: icon,
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 55,
+      lineNumber: 63,
       columnNumber: 18
+    }
+  }), customIcon && /*#__PURE__*/_react["default"].createElement(StyledIcon, {
+    src: customIcon,
+    alt: customIconAlt,
+    imgBackground: imgBackground,
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 64,
+      columnNumber: 24
     }
   }), /*#__PURE__*/_react["default"].createElement(Counter, {
     counterColor: counterColor,
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 56,
+      lineNumber: 65,
       columnNumber: 9
     }
   }, count)));
