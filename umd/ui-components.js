@@ -1,4 +1,4 @@
-/*! ui-components v2.10.1 */
+/*! ui-components v2.10.2 */
 (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
 		module.exports = factory(require("react"));
@@ -21642,7 +21642,7 @@ function Chip_templateObject2() {
 }
 
 function Chip_templateObject() {
-  var data = Chip_taggedTemplateLiteralLoose(["\n  ", "\n  display: flex;\n  align-items: center\n"]);
+  var data = Chip_taggedTemplateLiteralLoose(["\n  ", "\n  display: flex;\n  align-items: center;\n"]);
 
   Chip_templateObject = function _templateObject() {
     return data;

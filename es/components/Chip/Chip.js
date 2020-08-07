@@ -33,7 +33,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteralLoose(["\n  ", "\n  display: flex;\n  align-items: center\n"]);
+  var data = _taggedTemplateLiteralLoose(["\n  ", "\n  display: flex;\n  align-items: center;\n"]);
 
   _templateObject = function _templateObject() {
     return data;
