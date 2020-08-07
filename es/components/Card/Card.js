@@ -43,7 +43,7 @@ function _templateObject4() {
 }
 
 function _templateObject3() {
-  var data = _taggedTemplateLiteralLoose(["\n  display: flex;\n  justify-content: flex-start;\n  color: ", ";\n  box-shadow: none;\n  .icon {\n    font-size: 50px;\n    margin-right: 24px;\n  }\n"]);
+  var data = _taggedTemplateLiteralLoose(["\n  display: flex;\n  justify-content: flex-start;\n  align-items: center;\n  color: ", ";\n  box-shadow: none;\n  .icon {\n    font-size: 50px;\n    margin-right: 24px;\n  }\n"]);
 
   _templateObject3 = function _templateObject3() {
     return data;
@@ -124,7 +124,7 @@ var Card = function Card(_ref7) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 58,
+      lineNumber: 59,
       columnNumber: 5
     }
   }), /*#__PURE__*/_react["default"].createElement(StyledTitle, {
@@ -133,7 +133,7 @@ var Card = function Card(_ref7) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 59,
+      lineNumber: 60,
       columnNumber: 7
     }
   }, title), /*#__PURE__*/_react["default"].createElement(StyledInfo, {
@@ -141,7 +141,7 @@ var Card = function Card(_ref7) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 62,
+      lineNumber: 63,
       columnNumber: 7
     }
   }, icon && /*#__PURE__*/_react["default"].createElement(_reactFontawesome.FontAwesomeIcon, {
@@ -150,7 +150,7 @@ var Card = function Card(_ref7) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 63,
+      lineNumber: 64,
       columnNumber: 18
     }
   }), customIcon && /*#__PURE__*/_react["default"].createElement(StyledIcon, {
@@ -160,7 +160,7 @@ var Card = function Card(_ref7) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 64,
+      lineNumber: 65,
       columnNumber: 24
     }
   }), /*#__PURE__*/_react["default"].createElement(Counter, {
@@ -168,7 +168,7 @@ var Card = function Card(_ref7) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 65,
+      lineNumber: 66,
       columnNumber: 9
     }
   }, count)));

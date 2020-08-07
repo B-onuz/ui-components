@@ -23,7 +23,7 @@ function _extends() { _extends = Object.assign || function (target) { for (var i
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 
 function _templateObject2() {
-  var data = _taggedTemplateLiteralLoose(["\n  ", "\n  background: ", ";\n  padding: 2px 10px;\n  border-radius: 25px\n"]);
+  var data = _taggedTemplateLiteralLoose(["\n  ", "\n  background: ", ";\n  padding: 2px 10px 4px;\n  border-radius: 25px\n"]);
 
   _templateObject2 = function _templateObject2() {
     return data;
@@ -33,7 +33,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteralLoose(["\n  ", "\n"]);
+  var data = _taggedTemplateLiteralLoose(["\n  ", "\n  display: flex;\n  align-items: center\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -61,7 +61,7 @@ var Chip = function Chip(_ref2) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 19,
+      lineNumber: 21,
       columnNumber: 5
     }
   }), /*#__PURE__*/_react["default"].createElement(StyledText, {
@@ -69,7 +69,7 @@ var Chip = function Chip(_ref2) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 20,
+      lineNumber: 22,
       columnNumber: 7
     }
   }, text));

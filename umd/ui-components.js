@@ -1,4 +1,4 @@
-/*! ui-components v2.10.0 */
+/*! ui-components v2.10.1 */
 (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
 		module.exports = factory(require("react"));
@@ -10003,6 +10003,7 @@ var colors = {
   fullDarkRed: '#550e33',
   darkRed: '#9c2543',
   lightRed: '#ef4d5a',
+  mediumRed: '#FF4F5D',
   red: '#db2828',
   orange: '#f2711c',
   yellow: '#fbbd08',
@@ -10020,7 +10021,8 @@ var colors = {
   warning: '#7A4D05',
   success: '#1E561F',
   info: '#0E566C',
-  danger: '#973937'
+  danger: '#973937',
+  cyan: '#1CB5AD'
 };
 colors.primary = colors.lightRed;
 colors.secondary = colors.fullDarkRed;
@@ -21502,7 +21504,7 @@ function Card_templateObject4() {
 }
 
 function Card_templateObject3() {
-  var data = Card_taggedTemplateLiteralLoose(["\n  display: flex;\n  justify-content: flex-start;\n  color: ", ";\n  box-shadow: none;\n  .icon {\n    font-size: 50px;\n    margin-right: 24px;\n  }\n"]);
+  var data = Card_taggedTemplateLiteralLoose(["\n  display: flex;\n  justify-content: flex-start;\n  align-items: center;\n  color: ", ";\n  box-shadow: none;\n  .icon {\n    font-size: 50px;\n    margin-right: 24px;\n  }\n"]);
 
   Card_templateObject3 = function _templateObject3() {
     return data;
@@ -21630,7 +21632,7 @@ function color_extends() { color_extends = Object.assign || function (target) { 
 function Chip_objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 
 function Chip_templateObject2() {
-  var data = Chip_taggedTemplateLiteralLoose(["\n  ", "\n  background: ", ";\n  padding: 2px 10px;\n  border-radius: 25px\n"]);
+  var data = Chip_taggedTemplateLiteralLoose(["\n  ", "\n  background: ", ";\n  padding: 2px 10px 4px;\n  border-radius: 25px\n"]);
 
   Chip_templateObject2 = function _templateObject2() {
     return data;
@@ -21640,7 +21642,7 @@ function Chip_templateObject2() {
 }
 
 function Chip_templateObject() {
-  var data = Chip_taggedTemplateLiteralLoose(["\n  ", "\n"]);
+  var data = Chip_taggedTemplateLiteralLoose(["\n  ", "\n  display: flex;\n  align-items: center\n"]);
 
   Chip_templateObject = function _templateObject() {
     return data;
