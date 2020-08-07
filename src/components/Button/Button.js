@@ -6,6 +6,7 @@ import { color, size } from './variants'
 import PropTypes from 'prop-types'
 import propTypes from '@styled-system/prop-types'
 import Spinner from '../Spinner'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const StyledButton = styled.button`
   appearance: none;
@@ -76,12 +77,69 @@ const StyledButton = styled.button`
     }
     `
       : `
-     text-decoration: none;
-    `} 
+     text-decoration: none;`}
+
+  ${({ icon, theme }) =>
+    !!icon
+      ? `
+    display: flex;
+    align-items: center;
+    padding: 0;
+    background-color: transparent;
+    color:  ${({ color }) => (theme.colors[color] ? theme.colors[color] : color)};
+    overflow: visible;
+    &:hover {
+      text-decoration: underline;
+      background-color: transparent;
+    }
+  `
+      : 'text-decoration: none;'}
+
+  ${({ customIcon, theme }) =>
+    !!customIcon
+      ? `
+    display: flex;
+    align-items: center;
+    overflow: visible;
+    max-width: unset;
+    padding: 0
+    `
+      : 'text-decoration: none;'}
 `
 
-const Button = ({ children, loading, disabled, ...rest }) => (
-  <StyledButton {...rest} disabled={!!disabled || !!loading} loading={loading}>
+const StyledFaIcon = styled.div`
+  display: flex;
+  margin-right: 4px;
+  font-size: ${({ iconSize }) => iconSize};
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 3px 6px #00000029;
+  border: 1px solid #e8e8e8;
+  border-radius: 25px;
+  padding: 8px;
+  opacity: 1;
+`
+
+const StyledIcon = styled.div`
+  width: ${({ imgSize }) => imgSize};
+  height: ${({ imgSize }) => imgSize};
+  margin-right: 6px;
+  border-radius: 50%;
+  box-shadow: 0px 3px 6px #00000029;
+  border: 1px solid #e8e8e8;
+  background: ${({ imgBackground }) => `url(${imgBackground}) no-repeat center center`};
+  background-color: ${({ bgColor }) => bgColor};
+  background-size: cover;
+`
+
+const Button = ({ children, loading, disabled, icon, iconSize, customIcon, imgSize, imgBackground, bgColor, ...rest }) => (
+  <StyledButton {...rest} disabled={!!disabled || !!loading} loading={loading} icon={icon} customIcon={imgBackground}>
+    {icon && (
+      <StyledFaIcon iconSize={iconSize}>
+        <FontAwesomeIcon icon={icon} />
+      </StyledFaIcon>
+    )}
+    {imgBackground && <StyledIcon imgBackground={imgBackground} imgSize={imgSize} bgColor={bgColor} />}
     {!!loading ? 'carregando...' : children}
   </StyledButton>
 )
@@ -98,6 +156,8 @@ Button.defaultProps = {
   size: 'medium',
   color: 'default',
   type: 'button',
+  imgSize: '35px',
+  bgColor: 'transparent',
 }
 
 export default Button

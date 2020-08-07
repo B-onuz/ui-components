@@ -26,6 +26,10 @@ exports[`Should render BreadCrumb 1`] = `
   background-color: transparent !important;
   box-shadow: none !important;
   outline: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
 .c1:focus {
@@ -199,6 +203,10 @@ exports[`Should render BreadCrumb with color 1`] = `
   background-color: transparent !important;
   box-shadow: none !important;
   outline: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
 .c1:focus {

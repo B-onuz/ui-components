@@ -1,6 +1,7 @@
 import React from 'react'
 import Card from './Card'
 import { faArchive } from '@fortawesome/free-solid-svg-icons'
+import logo_white from '../../assets/logo_white.svg'
 
 export default {
   title: 'Card',
@@ -26,6 +27,7 @@ export const MultiColorsControl = () => (
     counterColor={'warning'}
     title={'Demandas Pendentes'}
     count={99}
-    icon={faArchive}
+    customIcon={logo_white}
+    imgBackground={'primary'}
   />
 )

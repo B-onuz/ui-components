@@ -2,6 +2,7 @@ import React from 'react'
 import ContextMenu from './ContextMenu'
 import { Flex, Box } from 'reflexbox/styled-components'
 import { action } from '@storybook/addon-actions'
+import { faPlus, faCloudUploadAlt } from '@fortawesome/free-solid-svg-icons'
 
 export default {
   title: 'ContextMenu',
@@ -33,6 +34,21 @@ const singleObj = [
   {
     text: 'editar',
     buttonFunction: functionA,
+  },
+]
+
+const contextOptions = [
+  {
+    text: 'editar',
+    buttonFunction: functionA,
+  },
+  {
+    text: 'adicionar',
+    buttonFunction: functionB,
+  },
+  {
+    text: 'excluir',
+    buttonFunction: functionC,
   },
 ]
 
@@ -74,6 +90,25 @@ export const ContextMenuExample = () => (
       </Box>
       <Box p={4}>
         <ContextMenu contextMenuActions={exampleObj} direction={'bottom'} />
+      </Box>
+    </Flex>
+    <Flex
+      style={{ height: '100px', border: '1px solid #f0f', marginTop: '40px', overflow: 'hidden' }}
+      width={[1]}
+      justifyContent={'space-evenly'}
+      alignItems={'center'}
+    >
+      <Box p={4}>
+        <ContextMenu contextMenuActions={contextOptions} contextFunctions buttonIcon={faPlus} direction={'right'} />
+      </Box>
+      <Box p={4}>
+        <ContextMenu contextMenuActions={contextOptions} contextFunctions buttonIcon={faPlus} direction={'left'} />
+      </Box>
+      <Box p={4}>
+        <ContextMenu contextMenuActions={contextOptions} contextFunctions buttonIcon={faPlus} direction={'top'} />
+      </Box>
+      <Box p={4}>
+        <ContextMenu contextMenuActions={contextOptions} contextFunctions buttonIcon={faPlus} direction={'bottom'} />
       </Box>
     </Flex>
   </>

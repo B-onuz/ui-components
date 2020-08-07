@@ -2,7 +2,7 @@ import React, { useRef, useState, useEffect } from 'react'
 import styled from 'styled-components'
 import { color, space } from 'styled-system'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faEllipsisH } from '@fortawesome/free-solid-svg-icons'
+import { faEllipsisH, faPlus } from '@fortawesome/free-solid-svg-icons'
 import Button from '../Button'
 import ContextMenuDialog from './ContextMenuDialog'
 
@@ -11,6 +11,10 @@ const StyledContextMenu = styled.div`
   ${space}
   position: relative;
   display: flex;
+  .contextButton {
+    width: 2em;
+    height: 2em;
+  }
 `
 
 const ContextMenuToogleButton = styled.button`
@@ -34,10 +38,10 @@ const Divider = styled.hr`
 `
 
 const Icon = styled(FontAwesomeIcon)`
-  color: ${({ theme }) => theme.colors.darkGrey};
+  color: ${({ theme, buttonIcon }) => (!buttonIcon ? theme.colors.darkGrey : '')};
 `
 
-const ContextMenu = ({ children, direction, contextMenuActions, ...rest }) => {
+const ContextMenu = ({ children, direction, contextMenuActions, contextFunctions, buttonIcon, ...rest }) => {
   const [isOpen, setIsOpen] = useState(false)
   const wrapperRef = useRef(null)
   const buttonRef = useRef(null)
@@ -49,10 +53,18 @@ const ContextMenu = ({ children, direction, contextMenuActions, ...rest }) => {
 
   return (
     <StyledContextMenu ref={wrapperRef} {...rest}>
-      <ContextMenuToogleButton ref={buttonRef} onClick={() => setIsOpen((last) => !last)}>
-        <Icon icon={faEllipsisH} />
-      </ContextMenuToogleButton>
-      <ContextMenuDialog isOpen={isOpen} onClose={onClose} buttonRef={buttonRef} direction={direction}>
+      {contextFunctions ? (
+        <div ref={buttonRef}>
+          <Button p={0} className="contextButton" onClick={() => setIsOpen((last) => !last)} color={'primary'}>
+            <Icon buttonIcon icon={buttonIcon} />
+          </Button>
+        </div>
+      ) : (
+        <ContextMenuToogleButton ref={buttonRef} onClick={() => setIsOpen((last) => !last)}>
+          <Icon icon={faEllipsisH} />
+        </ContextMenuToogleButton>
+      )}
+      <ContextMenuDialog contextFunctions={contextFunctions} isOpen={isOpen} onClose={onClose} buttonRef={buttonRef} direction={direction}>
         {(contextMenuActions || []).map((action, index) => (
           <>
             <Button linkButton color={'primary'} onClick={() => onClose() && action.buttonFunction()}>

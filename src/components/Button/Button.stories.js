@@ -1,6 +1,9 @@
 import React, { useState } from 'react'
 import Button from './Button'
 import { Flex, Box } from 'reflexbox'
+import logo_white from '../../assets/logo_white.svg'
+import icon_grain from '../../assets/icon_grain.png'
+import { faArchive } from '@fortawesome/free-solid-svg-icons'
 
 export default {
   title: 'Button',
@@ -188,4 +191,20 @@ export const LinkButton = () => (
       {'http://google.com'}
     </Button>
   </>
+)
+
+export const IconButton = () => (
+  <Flex flexWrap={'wrap'}>
+    <Box as={Flex} justifyContent={'space-evenly'} width={[1]} m={2}>
+      <Button color="primary" linkButton icon={faArchive} iconSize={'18px'}>
+        {'Icon example'}
+      </Button>
+      <Button color="primary" linkButton imgBackground={'https://i.pravatar.cc/300'} imgSize={'50px'}>
+        {'Icon example'}
+      </Button>
+      <Button color="primary" linkButton imgBackground={icon_grain} bgColor={'black'}>
+        {'Icon example'}
+      </Button>
+    </Box>
+  </Flex>
 )
