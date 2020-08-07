@@ -2,6 +2,7 @@ const colors = {
   fullDarkRed: '#550e33',
   darkRed: '#9c2543',
   lightRed: '#ef4d5a',
+  mediumRed: '#FF4F5D',
   red: '#db2828',
   orange: '#f2711c',
   yellow: '#fbbd08',
@@ -20,6 +21,7 @@ const colors = {
   success: '#1E561F',
   info: '#0E566C',
   danger: '#973937',
+  cyan: '#1CB5AD',
 }
 
 colors.primary = colors.lightRed
