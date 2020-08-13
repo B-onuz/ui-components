@@ -231,6 +231,12 @@ Object.defineProperty(exports, "Card", {
     return _Card2["default"];
   }
 });
+Object.defineProperty(exports, "Chip", {
+  enumerable: true,
+  get: function get() {
+    return _Chip2["default"];
+  }
+});
 
 var _theme2 = _interopRequireDefault(require("./theme"));
 
@@ -307,5 +313,7 @@ var _AlertStack2 = _interopRequireDefault(require("./components/AlertStack"));
 var _AlertStackProvider2 = _interopRequireDefault(require("./components/AlertStack/AlertStackProvider"));
 
 var _Card2 = _interopRequireDefault(require("./components/Card"));
+
+var _Chip2 = _interopRequireDefault(require("./components/Chip"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }

@@ -5,12 +5,14 @@ import { color } from './variants'
 
 const StyledChip = styled.div`
   ${space}
+  display: flex;
+  align-items: center;
 `
 
 const StyledText = styled.span`
   ${color}
   background: ${({ theme, color }) => `${theme.colors[color]}`};
-  padding: 2px 10px;
+  padding: 2px 10px 4px;
   border-radius: 25px
 `
 

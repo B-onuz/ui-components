@@ -30,6 +30,7 @@ const StyledTitle = styled.span`
 const StyledInfo = styled.div`
   display: flex;
   justify-content: flex-start;
+  align-items: center;
   color: ${({ theme, iconColor }) => (theme.colors[iconColor] ? theme.colors[iconColor] : iconColor)};
   box-shadow: none;
   .icon {
