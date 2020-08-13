@@ -21,7 +21,7 @@ function _extends() { _extends = Object.assign || function (target) { for (var i
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 
 function _templateObject3() {
-  var data = _taggedTemplateLiteralLoose(["\n  border-color: rgb(223, 223, 223);\n  box-shadow: rgb(223, 223, 223) 1px 1px 3px 0px inset;\n  transition: border 0.4s, box-shadow 0.4s;\n  background-color: #f7f7f7;\n  border: 1px solid #dfdfdf;\n  border-radius: 20px;\n  cursor: pointer;\n  display: inline-block;\n  height: 20px;\n  position: relative;\n  vertical-align: middle;\n  width: 40px;\n  user-select: none;\n  overflow: hidden;\n  box-sizing: content-box;\n  background-clip: content-box;\n  ", "\n  ", "\n  input {\n    display: none;\n    & + ", " {\n      transform: translate(0);\n    }\n\n    &:checked + ", " {\n      transform: translate(calc(50% + 10px));\n    }\n\n    &:checked ~ ", " {\n      background: ", ";\n      opacity: 1;\n      transform: translate(0);\n    }\n  }\n"]);
+  var data = _taggedTemplateLiteralLoose(["\n  border-color: rgb(223, 223, 223);\n  box-shadow: rgb(223, 223, 223) 1px 1px 3px 0px inset;\n  transition: border 0.4s, box-shadow 0.4s;\n  background-color: #f7f7f7;\n  border: 1px solid #dfdfdf;\n  border-radius: 20px;\n  cursor: pointer;\n  display: inline-block;\n  height: 20px;\n  position: relative;\n  vertical-align: middle;\n  width: 40px;\n  user-select: none;\n  overflow: hidden;\n  box-sizing: content-box;\n  background-clip: content-box;\n  -webkit-mask-image: -webkit-radial-gradient(white, black);\n  ", "\n  ", "\n  input {\n    display: none;\n    & + ", " {\n      transform: translate(0);\n    }\n\n    &:checked + ", " {\n      transform: translate(calc(50% + 10px));\n    }\n\n    &:checked ~ ", " {\n      background: ", ";\n      opacity: 1;\n      transform: translate(0);\n    }\n  }\n"]);
 
   _templateObject3 = function _templateObject3() {
     return data;
@@ -84,7 +84,7 @@ var Switch = function Switch(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 78,
+      lineNumber: 79,
       columnNumber: 5
     }
   }), /*#__PURE__*/_react["default"].createElement("input", _extends({
@@ -96,7 +96,7 @@ var Switch = function Switch(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 79,
+      lineNumber: 80,
       columnNumber: 7
     }
   })), /*#__PURE__*/_react["default"].createElement(SwitchToggle, {
@@ -105,7 +105,7 @@ var Switch = function Switch(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 80,
+      lineNumber: 81,
       columnNumber: 7
     }
   }), /*#__PURE__*/_react["default"].createElement(SwitchBg, {
@@ -113,7 +113,7 @@ var Switch = function Switch(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 81,
+      lineNumber: 82,
       columnNumber: 7
     }
   }));

@@ -55,7 +55,7 @@ function _templateObject3() {
 }
 
 function _templateObject2() {
-  var data = _taggedTemplateLiteralLoose(["\n  width: 2em;\n  height: 2em;\n  border-radius: 50%;\n  box-shadow: 0px 2px 3px #2c282848;\n  border: none;\n  &:hover {\n    cursor: pointer;\n  }\n  &:focus {\n    outline: none;\n  }\n"]);
+  var data = _taggedTemplateLiteralLoose(["\n  width: 2em;\n  height: 2em;\n  border-radius: 50%;\n  background-color: #f5f5f5;\n  box-shadow: 0px 2px 3px #2c282848;\n  border: none;\n  &:hover {\n    cursor: pointer;\n  }\n  &:focus {\n    outline: none;\n  }\n"]);
 
   _templateObject2 = function _templateObject2() {
     return data;
@@ -114,7 +114,7 @@ var ContextMenu = function ContextMenu(_ref2) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 55,
+      lineNumber: 56,
       columnNumber: 5
     }
   }), contextFunctions ? /*#__PURE__*/_react["default"].createElement("div", {
@@ -122,7 +122,7 @@ var ContextMenu = function ContextMenu(_ref2) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 57,
+      lineNumber: 58,
       columnNumber: 9
     }
   }, /*#__PURE__*/_react["default"].createElement(_Button["default"], {
@@ -137,7 +137,7 @@ var ContextMenu = function ContextMenu(_ref2) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 58,
+      lineNumber: 59,
       columnNumber: 11
     }
   }, /*#__PURE__*/_react["default"].createElement(Icon, {
@@ -146,7 +146,7 @@ var ContextMenu = function ContextMenu(_ref2) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 59,
+      lineNumber: 60,
       columnNumber: 13
     }
   }))) : /*#__PURE__*/_react["default"].createElement(ContextMenuToogleButton, {
@@ -159,7 +159,7 @@ var ContextMenu = function ContextMenu(_ref2) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 63,
+      lineNumber: 64,
       columnNumber: 9
     }
   }, /*#__PURE__*/_react["default"].createElement(Icon, {
@@ -167,7 +167,7 @@ var ContextMenu = function ContextMenu(_ref2) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 64,
+      lineNumber: 65,
       columnNumber: 11
     }
   })), /*#__PURE__*/_react["default"].createElement(_ContextMenuDialog["default"], {
@@ -179,7 +179,7 @@ var ContextMenu = function ContextMenu(_ref2) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 67,
+      lineNumber: 68,
       columnNumber: 7
     }
   }, (contextMenuActions || []).map(function (action, index) {
@@ -192,14 +192,14 @@ var ContextMenu = function ContextMenu(_ref2) {
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 70,
+        lineNumber: 71,
         columnNumber: 13
       }
     }, action.text), index + 1 !== contextMenuActions.length ? /*#__PURE__*/_react["default"].createElement(Divider, {
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 73,
+        lineNumber: 74,
         columnNumber: 56
       }
     }) : null);

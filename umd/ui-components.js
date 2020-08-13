@@ -1,4 +1,4 @@
-/*! ui-components v2.10.2 */
+/*! ui-components v2.11.0 */
 (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
 		module.exports = factory(require("react"));
@@ -9997,6 +9997,7 @@ __webpack_require__.d(__webpack_exports__, "AlertStack", function() { return /* 
 __webpack_require__.d(__webpack_exports__, "AlertStackProvider", function() { return /* reexport */ AlertStack_AlertStackProvider; });
 __webpack_require__.d(__webpack_exports__, "Card", function() { return /* reexport */ components_Card; });
 __webpack_require__.d(__webpack_exports__, "Chip", function() { return /* reexport */ components_Chip; });
+__webpack_require__.d(__webpack_exports__, "TabSelector", function() { return /* reexport */ components_TabSelector; });
 
 // CONCATENATED MODULE: ./src/theme/index.js
 var colors = {
@@ -12092,7 +12093,7 @@ var Box_Box = function Box(_ref) {
 function Pagination_objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 
 function Pagination_templateObject2() {
-  var data = Pagination_taggedTemplateLiteralLoose(["\n  position: relative;\n  border-radius: 32px;\n  min-width: 32px;\n  height: 32px;\n  padding: 0 0.3em;\n  background: none;\n  overflow: hidden;\n  ", ";\n  &::before {\n    content: '';\n    width: 100%;\n    height: 100%;\n    position: absolute;\n    top: 0;\n    right: 0;\n    bottom: 0;\n    left: 0;\n    ", ";\n    transform: translateY(-100%);\n    transition: 0.2s ease-in-out;\n  }\n  &:active {\n    background-color: transparent;\n  }\n  &:hover,\n  &:active {\n    background-color: transparent;\n    &::before {\n      transform: translateY(0);\n      z-index: 1;\n    }\n    color: #fff;\n  }\n  ", ";\n  & > span {\n    position: relative;\n    z-index: 2;\n  }\n"]);
+  var data = Pagination_taggedTemplateLiteralLoose(["\n  position: relative;\n  border-radius: 32px;\n  min-width: 32px;\n  height: 32px;\n  padding: 0 0.3em;\n  background: none;\n  overflow: hidden;\n  -webkit-mask-image: -webkit-radial-gradient(white, black);\n  ", ";\n  &::before {\n    content: '';\n    width: 100%;\n    height: 100%;\n    position: absolute;\n    top: 0;\n    right: 0;\n    bottom: 0;\n    left: 0;\n    ", ";\n    transform: translateY(-100%);\n    transition: 0.2s ease-in-out;\n  }\n  &:active {\n    background-color: transparent;\n  }\n  &:hover,\n  &:active {\n    background-color: transparent;\n    &::before {\n      transform: translateY(0);\n      z-index: 1;\n    }\n    color: #fff;\n  }\n  ", ";\n  & > span {\n    position: relative;\n    z-index: 2;\n  }\n"]);
 
   Pagination_templateObject2 = function _templateObject2() {
     return data;
@@ -12206,10 +12207,32 @@ var Pagination = Object(external_root_React_commonjs2_react_commonjs_react_amd_r
 
 
 // CONCATENATED MODULE: ./src/components/Alert/Alert.js
+function Alert_extends() { Alert_extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return Alert_extends.apply(this, arguments); }
+
 function Alert_objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 
-function Alert_templateObject4() {
+function Alert_templateObject6() {
   var data = Alert_taggedTemplateLiteralLoose(["\n  margin: 0;\n"]);
+
+  Alert_templateObject6 = function _templateObject6() {
+    return data;
+  };
+
+  return data;
+}
+
+function Alert_templateObject5() {
+  var data = Alert_taggedTemplateLiteralLoose(["\n  margin: 0 0 8px;\n"]);
+
+  Alert_templateObject5 = function _templateObject5() {
+    return data;
+  };
+
+  return data;
+}
+
+function Alert_templateObject4() {
+  var data = Alert_taggedTemplateLiteralLoose(["\n  display: flex;\n  margin-right: 16px;\n  font-size: ", ";\n  justify-content: center;\n  align-items: center;\n  opacity: 1;\n"]);
 
   Alert_templateObject4 = function _templateObject4() {
     return data;
@@ -12219,7 +12242,7 @@ function Alert_templateObject4() {
 }
 
 function Alert_templateObject3() {
-  var data = Alert_taggedTemplateLiteralLoose(["\n  margin: 0 0 8px;\n"]);
+  var data = Alert_taggedTemplateLiteralLoose(["\n  width: ", ";\n  height: ", ";\n  margin-right: 16px;\n  background: ", ";\n  background-color: ", ";\n  background-size: cover;\n"]);
 
   Alert_templateObject3 = function _templateObject3() {
     return data;
@@ -12239,7 +12262,7 @@ function Alert_templateObject2() {
 }
 
 function Alert_templateObject() {
-  var data = Alert_taggedTemplateLiteralLoose(["\n  ", "\n  ", "\n  border: 1px solid;\n  border-radius: 4px;\n  padding: 16px 24px 24px;\n  ", ";\n"]);
+  var data = Alert_taggedTemplateLiteralLoose(["\n  ", "\n  ", "\n  border: 1px solid;\n  border-radius: 4px;\n  padding: 12px 24px;\n  display: flex;\n  justify-content: flex-start;\n  align-items: center;\n  box-shadow: ", ";\n  ", ";\n"]);
 
   Alert_templateObject = function _templateObject() {
     return data;
@@ -12256,29 +12279,65 @@ function Alert_taggedTemplateLiteralLoose(strings, raw) { if (!raw) { raw = stri
 
 
 
-
 var StyledAlert = styled_components_browser_esm["default"].div(Alert_templateObject(), Object(index_esm["compose"])(index_esm["space"], index_esm["layout"]), function (props) {
   return props.fullWidth && 'width: 100%' || '';
+}, function (_ref) {
+  var noShadow = _ref.noShadow;
+  return noShadow ? 'none !important' : '';
 }, Alert_variants_color);
-var Alert_Wrapper = styled_components_browser_esm["default"].div(Alert_templateObject2(), function (_ref) {
-  var animate = _ref.animate;
+var Alert_Wrapper = styled_components_browser_esm["default"].div(Alert_templateObject2(), function (_ref2) {
+  var animate = _ref2.animate;
   return "\n    animation-name: slide_" + animate + ";\n    animation-duration: .3s;\n  ";
 });
-var StyledTitle = styled_components_browser_esm["default"].h3(Alert_templateObject3());
-var StyledMessage = styled_components_browser_esm["default"].p(Alert_templateObject4());
+var Alert_StyledIcon = styled_components_browser_esm["default"].div(Alert_templateObject3(), function (_ref3) {
+  var imgSize = _ref3.imgSize;
+  return imgSize;
+}, function (_ref4) {
+  var imgSize = _ref4.imgSize;
+  return imgSize;
+}, function (_ref5) {
+  var imgBackground = _ref5.imgBackground;
+  return "url(" + imgBackground + ") no-repeat center center";
+}, function (_ref6) {
+  var bgColor = _ref6.bgColor;
+  return bgColor;
+});
+var Alert_StyledFaIcon = styled_components_browser_esm["default"].div(Alert_templateObject4(), function (_ref7) {
+  var iconSize = _ref7.iconSize;
+  return iconSize ? iconSize : '32px';
+});
+var StyledTitle = styled_components_browser_esm["default"].h3(Alert_templateObject5());
+var StyledMessage = styled_components_browser_esm["default"].p(Alert_templateObject6());
 
-var Alert_Alert = function Alert(_ref2) {
-  var children = _ref2.children,
-      animate = _ref2.animate,
-      title = _ref2.title,
-      message = _ref2.message,
-      _ref2$type = _ref2.type,
-      type = _ref2$type === void 0 ? {} : _ref2$type,
-      rest = Alert_objectWithoutPropertiesLoose(_ref2, ["children", "animate", "title", "message", "type"]);
+var Alert_Alert = function Alert(_ref8) {
+  var children = _ref8.children,
+      animate = _ref8.animate,
+      title = _ref8.title,
+      message = _ref8.message,
+      icon = _ref8.icon,
+      iconSize = _ref8.iconSize,
+      customIcon = _ref8.customIcon,
+      imgSize = _ref8.imgSize,
+      imgBackground = _ref8.imgBackground,
+      bgColor = _ref8.bgColor,
+      noShadow = _ref8.noShadow,
+      _ref8$type = _ref8.type,
+      type = _ref8$type === void 0 ? {} : _ref8$type,
+      rest = Alert_objectWithoutPropertiesLoose(_ref8, ["children", "animate", "title", "message", "icon", "iconSize", "customIcon", "imgSize", "imgBackground", "bgColor", "noShadow", "type"]);
 
   return /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(Alert_Wrapper, {
     animate: animate
-  }, /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(StyledAlert, rest, /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(StyledTitle, null, title), /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(StyledMessage, null, message)));
+  }, /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(StyledAlert, Alert_extends({}, rest, {
+    noShadow: noShadow
+  }), icon && /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(Alert_StyledFaIcon, {
+    iconSize: iconSize
+  }, /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(FontAwesomeIcon, {
+    icon: icon
+  })), imgBackground && /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(Alert_StyledIcon, {
+    imgBackground: imgBackground,
+    imgSize: imgSize,
+    bgColor: bgColor
+  }), /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement("div", null, /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(StyledTitle, null, title), /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(StyledMessage, null, message))));
 };
 
 /* harmony default export */ var components_Alert_Alert = (Alert_Alert);
@@ -18702,7 +18761,7 @@ function ContextMenu_templateObject3() {
 }
 
 function ContextMenu_templateObject2() {
-  var data = ContextMenu_taggedTemplateLiteralLoose(["\n  width: 2em;\n  height: 2em;\n  border-radius: 50%;\n  box-shadow: 0px 2px 3px #2c282848;\n  border: none;\n  &:hover {\n    cursor: pointer;\n  }\n  &:focus {\n    outline: none;\n  }\n"]);
+  var data = ContextMenu_taggedTemplateLiteralLoose(["\n  width: 2em;\n  height: 2em;\n  border-radius: 50%;\n  background-color: #f5f5f5;\n  box-shadow: 0px 2px 3px #2c282848;\n  border: none;\n  &:hover {\n    cursor: pointer;\n  }\n  &:focus {\n    outline: none;\n  }\n"]);
 
   ContextMenu_templateObject2 = function _templateObject2() {
     return data;
@@ -20823,7 +20882,7 @@ function Modal_extends() { Modal_extends = Object.assign || function (target) { 
 function Modal_objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 
 function Modal_templateObject7() {
-  var data = Modal_taggedTemplateLiteralLoose(["\n  position: absolute;\n  z-index: -1;\n  background: rgba(0, 0, 0, 0.3);\n  width: 100%;\n  height: 100%;\n  top: 0;\n  right: 0;\n  bottom: 0;\n  left: 0;\n  cursor: pointer;\n"]);
+  var data = Modal_taggedTemplateLiteralLoose(["\n  position: absolute;\n  z-index: -1;\n  background: rgba(0, 0, 0, 0.3);\n  width: 100%;\n  height: 100%;\n  top: 0;\n  right: 0;\n  bottom: 0;\n  left: 0;\n  cursor: pointer;\n  border: none;\n  outline: none;\n"]);
 
   Modal_templateObject7 = function _templateObject7() {
     return data;
@@ -21109,7 +21168,7 @@ function Switch_extends() { Switch_extends = Object.assign || function (target) 
 function Switch_objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 
 function Switch_templateObject3() {
-  var data = Switch_taggedTemplateLiteralLoose(["\n  border-color: rgb(223, 223, 223);\n  box-shadow: rgb(223, 223, 223) 1px 1px 3px 0px inset;\n  transition: border 0.4s, box-shadow 0.4s;\n  background-color: #f7f7f7;\n  border: 1px solid #dfdfdf;\n  border-radius: 20px;\n  cursor: pointer;\n  display: inline-block;\n  height: 20px;\n  position: relative;\n  vertical-align: middle;\n  width: 40px;\n  user-select: none;\n  overflow: hidden;\n  box-sizing: content-box;\n  background-clip: content-box;\n  ", "\n  ", "\n  input {\n    display: none;\n    & + ", " {\n      transform: translate(0);\n    }\n\n    &:checked + ", " {\n      transform: translate(calc(50% + 10px));\n    }\n\n    &:checked ~ ", " {\n      background: ", ";\n      opacity: 1;\n      transform: translate(0);\n    }\n  }\n"]);
+  var data = Switch_taggedTemplateLiteralLoose(["\n  border-color: rgb(223, 223, 223);\n  box-shadow: rgb(223, 223, 223) 1px 1px 3px 0px inset;\n  transition: border 0.4s, box-shadow 0.4s;\n  background-color: #f7f7f7;\n  border: 1px solid #dfdfdf;\n  border-radius: 20px;\n  cursor: pointer;\n  display: inline-block;\n  height: 20px;\n  position: relative;\n  vertical-align: middle;\n  width: 40px;\n  user-select: none;\n  overflow: hidden;\n  box-sizing: content-box;\n  background-clip: content-box;\n  -webkit-mask-image: -webkit-radial-gradient(white, black);\n  ", "\n  ", "\n  input {\n    display: none;\n    & + ", " {\n      transform: translate(0);\n    }\n\n    &:checked + ", " {\n      transform: translate(calc(50% + 10px));\n    }\n\n    &:checked ~ ", " {\n      background: ", ";\n      opacity: 1;\n      transform: translate(0);\n    }\n  }\n"]);
 
   Switch_templateObject3 = function _templateObject3() {
     return data;
@@ -21678,6 +21737,78 @@ var Chip_Chip = function Chip(_ref2) {
 // CONCATENATED MODULE: ./src/components/Chip/index.js
 
 /* harmony default export */ var components_Chip = (components_Chip_Chip);
+// CONCATENATED MODULE: ./src/components/TabSelector/TabSelector.js
+function TabSelector_objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
+
+function TabSelector_templateObject2() {
+  var data = TabSelector_taggedTemplateLiteralLoose(["\n  display: inline-block;\n  border-radius: 25px;\n  overflow: hidden;\n  border: 2px solid ", ";\n"]);
+
+  TabSelector_templateObject2 = function _templateObject2() {
+    return data;
+  };
+
+  return data;
+}
+
+function TabSelector_templateObject() {
+  var data = TabSelector_taggedTemplateLiteralLoose(["\n  ", "\n"]);
+
+  TabSelector_templateObject = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+
+function TabSelector_taggedTemplateLiteralLoose(strings, raw) { if (!raw) { raw = strings.slice(0); } strings.raw = raw; return strings; }
+
+
+
+
+
+var StyledTabSelector = styled_components_browser_esm["default"].div(TabSelector_templateObject(), index_esm["color"]);
+var ButtonsWrapper = styled_components_browser_esm["default"].div(TabSelector_templateObject2(), function (_ref) {
+  var theme = _ref.theme,
+      color = _ref.color;
+  return "" + theme.colors[color];
+});
+
+var TabSelector_TabSelector = function TabSelector(_ref2) {
+  var activeA = _ref2.activeA,
+      activeB = _ref2.activeB,
+      optionA = _ref2.optionA,
+      optionB = _ref2.optionB,
+      color = _ref2.color,
+      handleClick = _ref2.handleClick,
+      rest = TabSelector_objectWithoutPropertiesLoose(_ref2, ["activeA", "activeB", "optionA", "optionB", "color", "handleClick"]);
+
+  return /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(StyledTabSelector, rest, /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(ButtonsWrapper, {
+    color: color
+  }, /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(components_Button, {
+    linkButton: !activeA,
+    color: color,
+    py: 1,
+    px: 3,
+    style: {
+      borderRadius: 0
+    },
+    onClick: handleClick
+  }, optionA), /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(components_Button, {
+    linkButton: !activeB,
+    color: color,
+    py: 1,
+    px: 3,
+    style: {
+      borderRadius: 0
+    },
+    onClick: handleClick
+  }, optionB)));
+};
+
+/* harmony default export */ var components_TabSelector_TabSelector = (TabSelector_TabSelector);
+// CONCATENATED MODULE: ./src/components/TabSelector/index.js
+
+/* harmony default export */ var components_TabSelector = (components_TabSelector_TabSelector);
 // CONCATENATED MODULE: ./src/index.js
 /* Theme */
 
@@ -21697,6 +21828,8 @@ var Chip_Chip = function Chip(_ref2) {
 
 
 /* Components */
+
+
 
 
 

@@ -33,7 +33,7 @@ function _extends() { _extends = Object.assign || function (target) { for (var i
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 
 function _templateObject7() {
-  var data = _taggedTemplateLiteralLoose(["\n  position: absolute;\n  z-index: -1;\n  background: rgba(0, 0, 0, 0.3);\n  width: 100%;\n  height: 100%;\n  top: 0;\n  right: 0;\n  bottom: 0;\n  left: 0;\n  cursor: pointer;\n"]);
+  var data = _taggedTemplateLiteralLoose(["\n  position: absolute;\n  z-index: -1;\n  background: rgba(0, 0, 0, 0.3);\n  width: 100%;\n  height: 100%;\n  top: 0;\n  right: 0;\n  bottom: 0;\n  left: 0;\n  cursor: pointer;\n  border: none;\n  outline: none;\n"]);
 
   _templateObject7 = function _templateObject7() {
     return data;
@@ -188,7 +188,7 @@ var Modal = function Modal(_ref) {
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 94,
+        lineNumber: 96,
         columnNumber: 11
       }
     }), transitions.map(function (_ref3) {
@@ -202,35 +202,35 @@ var Modal = function Modal(_ref) {
         __self: _this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 98,
+          lineNumber: 100,
           columnNumber: 19
         }
       }), /*#__PURE__*/_react["default"].createElement(BoxModal, _extends({}, boxProps, {
         __self: _this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 99,
+          lineNumber: 101,
           columnNumber: 21
         }
       }), /*#__PURE__*/_react["default"].createElement(BoxModalHeader, {
         __self: _this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 100,
+          lineNumber: 102,
           columnNumber: 23
         }
       }, header), /*#__PURE__*/_react["default"].createElement(BoxModalContent, {
         __self: _this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 101,
+          lineNumber: 103,
           columnNumber: 23
         }
       }, children), /*#__PURE__*/_react["default"].createElement(BoxModalFooter, {
         __self: _this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 102,
+          lineNumber: 104,
           columnNumber: 23
         }
       }, footer)));
@@ -245,7 +245,7 @@ var Modal = function Modal(_ref) {
         __self: _this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 108,
+          lineNumber: 110,
           columnNumber: 71
         }
       });
