@@ -21,6 +21,7 @@ const ContextMenuToogleButton = styled.button`
   width: 2em;
   height: 2em;
   border-radius: 50%;
+  background-color: #f5f5f5;
   box-shadow: 0px 2px 3px #2c282848;
   border: none;
   &:hover {

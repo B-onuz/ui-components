@@ -55,6 +55,7 @@ exports[`Should render Switch when checked 1`] = `
   overflow: hidden;
   box-sizing: content-box;
   background-clip: content-box;
+  -webkit-mask-image: -webkit-radial-gradient(white,black);
 }
 
 .c0 input {
@@ -158,6 +159,7 @@ exports[`Should render Switch when unchecked 1`] = `
   overflow: hidden;
   box-sizing: content-box;
   background-clip: content-box;
+  -webkit-mask-image: -webkit-radial-gradient(white,black);
 }
 
 .c0 input {

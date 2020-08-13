@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import Button from './Button'
 import { Flex, Box } from 'reflexbox'
-import logo_white from '../../assets/logo_white.svg'
 import icon_grain from '../../assets/icon_grain.png'
 import { faArchive } from '@fortawesome/free-solid-svg-icons'
 
@@ -187,7 +186,7 @@ export const LinkButton = () => (
     <Button linkButton m={2} color={'primary'}>
       {'Link Button'}
     </Button>
-    <Button linkButton underline m={2} color={'primary'} as={'a'} href={'http://google.com'}>
+    <Button linkButton underline m={0} p={0} color={'primary'} as={'a'} href={'http://google.com'}>
       {'http://google.com'}
     </Button>
   </>

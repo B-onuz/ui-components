@@ -17,6 +17,7 @@ const PageItem = styled(Button)`
   padding: 0 0.3em;
   background: none;
   overflow: hidden;
+  -webkit-mask-image: -webkit-radial-gradient(white, black);
   ${({ theme, color }) => `color: ${theme.colors[color]}`};
   &::before {
     content: '';
