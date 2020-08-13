@@ -66,6 +66,7 @@ exports[`when render Pagination 1`] = `
   padding: 0 0.3em;
   background: none;
   overflow: hidden;
+  -webkit-mask-image: -webkit-radial-gradient(white,black);
   color: #ef4d5a;
 }
 
@@ -117,6 +118,7 @@ exports[`when render Pagination 1`] = `
   padding: 0 0.3em;
   background: none;
   overflow: hidden;
+  -webkit-mask-image: -webkit-radial-gradient(white,black);
   color: #ef4d5a;
   color: #fff;
   background-color: #ef4d5a;
