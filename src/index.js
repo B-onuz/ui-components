@@ -43,3 +43,6 @@ export AlertStackProvider from './components/AlertStack/AlertStackProvider'
 export Card from './components/Card'
 
 export Chip from './components/Chip'
+
+export InfoBox from './components/InfoBox'
+export TabSelector from './components/TabSelector'

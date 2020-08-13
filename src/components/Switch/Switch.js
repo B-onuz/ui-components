@@ -46,6 +46,7 @@ const Wrapper = styled.label`
   overflow: hidden;
   box-sizing: content-box;
   background-clip: content-box;
+  -webkit-mask-image: -webkit-radial-gradient(white, black);
   ${space}
   ${(props) => {
     if (props.loading) {

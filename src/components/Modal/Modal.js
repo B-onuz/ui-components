@@ -51,6 +51,8 @@ const Shadow = styled.button`
   bottom: 0;
   left: 0;
   cursor: pointer;
+  border: none;
+  outline: none;
 `
 
 const useRootModal = () => {

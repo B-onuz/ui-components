@@ -1,5 +1,6 @@
 import React from 'react'
 import Alert from './Alert'
+import { faArchive, faHandshake } from '@fortawesome/free-solid-svg-icons'
 
 export default {
   title: 'Alert',
@@ -33,5 +34,19 @@ Nostrud fugiat exercitation tempor sunt amet nulla. Qui ipsum laborum ut deserun
 
 Ullamco eiusmod ipsum duis ad. Anim commodo sint voluptate fugiat ut ipsum nostrud mollit laboris consectetur laboris sit consectetur. Esse do velit pariatur cillum reprehenderit et elit ullamco cillum excepteur proident laborum pariatur.`}
     />
+  </div>
+)
+
+export const FixedAlert = () => (
+  <div>
+    <Alert
+      m={10}
+      color={'success'}
+      title={`Exemplo de título`}
+      message={`Este texto é exemplo de uma message`}
+      imgBackground={'https://i.pravatar.cc/300'}
+      imgSize={'50px'}
+    />
+    <Alert pl={1} m={10} color={'black'} title={`Exemplo de título`} noShadow message={`Este texto é exemplo de uma message`} icon={faHandshake} />
   </div>
 )
