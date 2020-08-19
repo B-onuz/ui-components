@@ -8,6 +8,6 @@ import escapeStringRegexp from 'escape-string-regexp'
 export default (typeKey) => (cache) => {
   Object.keys(cache.data.data).forEach((key) => {
     const rgx = new RegExp(`/^${escapeStringRegexp(typeKey)}/`)
-    return key.match() && cache.data.delete(key)
+    return key.match(rgx) && cache.data.delete(key)
   })
 }
