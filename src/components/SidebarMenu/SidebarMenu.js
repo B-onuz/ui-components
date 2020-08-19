@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
+import ReactDOM from 'react-dom'
 import styled from 'styled-components'
 import { layout } from 'styled-system'
 import { Box } from 'reflexbox'
@@ -11,13 +12,23 @@ const Backdrop = styled.div`
   cursor: pointer;
 `
 
+const styleOnlyMobile = (onlyMobile, styleCSS) =>
+  onlyMobile
+    ? styleCSS
+    : `
+    @media only screen and (max-width: 767px) {
+      ${styleCSS}
+    }
+  `
+
 const WrapperSidebarMenu = styled.nav`
   height: 100%;
-  z-index: 9999999;
-  ${({ open }) =>
+  z-index: 99999999999999;
+  ${({ open, onlyMobile }) =>
     !!open &&
-    `
-    @media only screen and (max-width: 767px) {
+    styleOnlyMobile(
+      onlyMobile,
+      `
       position: fixed;
       top: 0;
       right: 0;
@@ -34,8 +45,8 @@ const WrapperSidebarMenu = styled.nav`
         left: 0;
         z-index: 1001;
       }
-    }
-  `}
+  `
+    )}
 `
 
 const StyledSidebarMenu = styled(Box)`
@@ -59,18 +70,47 @@ const StyledSidebarMenu = styled(Box)`
   `}
 `
 
-const SidebarMenu = ({ children, open = false, onClose, logo = 'Logo', items = [], ...rest }) => {
-  return (
-    <WrapperSidebarMenu open={!!open} role="menubar" aria-label="menu" aria-expanded={!!open}>
-      <StyledSidebarMenu role="none" open={!!open} {...rest}>
-        {logo}
-        <MenuList role="menu" isOpen={!!open}>
-          {children}
-        </MenuList>
-      </StyledSidebarMenu>
-      <Backdrop onClick={onClose} aria-role="button" aria-label="Fechar menu" />
-    </WrapperSidebarMenu>
-  )
+const useRootSidebar = () => {
+  const [$rootModal, setRootModal] = useState()
+
+  useEffect(() => {
+    const rootModal = document.getElementById('root-sidebar')
+    if (rootModal) {
+      setRootModal(rootModal)
+    } else {
+      const rootEl = document.createElement('div')
+      rootEl.id = 'root-sidebar'
+      setRootModal(rootEl)
+      document.body.appendChild(rootEl)
+    }
+  })
+
+  return { $rootModal }
+}
+
+const SidebarMenuRoot = ({ children, open = false, onlyMobile = false, onClose, logo = 'Logo', items = [], ...rest }) => (
+  <WrapperSidebarMenu onlyMobile={onlyMobile} open={!!open} role="menubar" aria-label="menu" aria-expanded={!!open}>
+    <StyledSidebarMenu role="none" open={!!open} {...rest}>
+      {logo}
+      <MenuList role="menu" isOpen={!!open}>
+        {children}
+      </MenuList>
+    </StyledSidebarMenu>
+    <Backdrop onClick={onClose} aria-role="button" aria-label="Fechar menu" />
+  </WrapperSidebarMenu>
+)
+
+const SidebarMenuMobile = (props) => {
+  const { $rootModal } = useRootSidebar()
+  if (!$rootModal) return null
+
+  return ReactDOM.createPortal(<SidebarMenuRoot {...props} />, $rootModal)
+}
+
+const SidebarMenu = (props) => {
+  const SidebarComponent = props.onlyMobile ? SidebarMenuMobile : SidebarMenuRoot
+
+  return <SidebarComponent {...props} />
 }
 
 SidebarMenu.defaultProps = {

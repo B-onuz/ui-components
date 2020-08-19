@@ -24,3 +24,11 @@ export const SidebarMenuExample = () => (
     })}
   </SidebarMenu>
 )
+
+export const SidebarMenuOnlyMobile = () => (
+  <SidebarMenu open={true} onlyMobile>
+    {menuItems.map((item) => {
+      return <SidebarMenuItem component={'header'} icon={<FontAwesomeIcon icon={item.icon} />} children={item.text} />
+    })}
+  </SidebarMenu>
+)
