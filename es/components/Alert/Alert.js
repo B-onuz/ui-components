@@ -18,7 +18,7 @@ var _variants = require("./variants");
 var _reactFontawesome = require("@fortawesome/react-fontawesome");
 
 var _this = void 0,
-    _jsxFileName = "/Users/master/projects/bonuz/ui-components/src/components/Alert/Alert.js";
+    _jsxFileName = "/Users/rogeralbino/projects/Kazap/B-onuz/ui-components/src/components/Alert/Alert.js";
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 

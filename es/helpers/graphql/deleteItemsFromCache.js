@@ -18,7 +18,7 @@ var _default = function _default(typeKey) {
   return function (cache) {
     Object.keys(cache.data.data).forEach(function (key) {
       var rgx = new RegExp("/^" + (0, _escapeStringRegexp["default"])(typeKey) + "/");
-      return key.match() && cache.data["delete"](key);
+      return key.match(rgx) && cache.data["delete"](key);
     });
   };
 };

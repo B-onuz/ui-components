@@ -1,4 +1,4 @@
-/*! ui-components v2.11.0 */
+/*! ui-components v2.11.1 */
 (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
 		module.exports = factory(require("react"));
@@ -1082,7 +1082,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var shallowequal__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(shallowequal__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _emotion_stylis__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(11);
 /* harmony import */ var _emotion_unitless__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(12);
-/* harmony import */ var _emotion_is_prop_valid__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(6);
+/* harmony import */ var _emotion_is_prop_valid__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(7);
 /* harmony import */ var hoist_non_react_statics__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(14);
 /* harmony import */ var hoist_non_react_statics__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(hoist_non_react_statics__WEBPACK_IMPORTED_MODULE_6__);
 
@@ -3551,45 +3551,6 @@ module.exports = shouldUseNative() ? Object.assign : function (target, source) {
 
 /***/ }),
 /* 6 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var _emotion_memoize__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(7);
-
-
-var reactPropsRegex = /^((children|dangerouslySetInnerHTML|key|ref|autoFocus|defaultValue|defaultChecked|innerHTML|suppressContentEditableWarning|suppressHydrationWarning|valueLink|accept|acceptCharset|accessKey|action|allow|allowUserMedia|allowPaymentRequest|allowFullScreen|allowTransparency|alt|async|autoComplete|autoPlay|capture|cellPadding|cellSpacing|challenge|charSet|checked|cite|classID|className|cols|colSpan|content|contentEditable|contextMenu|controls|controlsList|coords|crossOrigin|data|dateTime|decoding|default|defer|dir|disabled|disablePictureInPicture|download|draggable|encType|form|formAction|formEncType|formMethod|formNoValidate|formTarget|frameBorder|headers|height|hidden|high|href|hrefLang|htmlFor|httpEquiv|id|inputMode|integrity|is|keyParams|keyType|kind|label|lang|list|loading|loop|low|marginHeight|marginWidth|max|maxLength|media|mediaGroup|method|min|minLength|multiple|muted|name|nonce|noValidate|open|optimum|pattern|placeholder|playsInline|poster|preload|profile|radioGroup|readOnly|referrerPolicy|rel|required|reversed|role|rows|rowSpan|sandbox|scope|scoped|scrolling|seamless|selected|shape|size|sizes|slot|span|spellCheck|src|srcDoc|srcLang|srcSet|start|step|style|summary|tabIndex|target|title|type|useMap|value|width|wmode|wrap|about|datatype|inlist|prefix|property|resource|typeof|vocab|autoCapitalize|autoCorrect|autoSave|color|inert|itemProp|itemScope|itemType|itemID|itemRef|on|results|security|unselectable|accentHeight|accumulate|additive|alignmentBaseline|allowReorder|alphabetic|amplitude|arabicForm|ascent|attributeName|attributeType|autoReverse|azimuth|baseFrequency|baselineShift|baseProfile|bbox|begin|bias|by|calcMode|capHeight|clip|clipPathUnits|clipPath|clipRule|colorInterpolation|colorInterpolationFilters|colorProfile|colorRendering|contentScriptType|contentStyleType|cursor|cx|cy|d|decelerate|descent|diffuseConstant|direction|display|divisor|dominantBaseline|dur|dx|dy|edgeMode|elevation|enableBackground|end|exponent|externalResourcesRequired|fill|fillOpacity|fillRule|filter|filterRes|filterUnits|floodColor|floodOpacity|focusable|fontFamily|fontSize|fontSizeAdjust|fontStretch|fontStyle|fontVariant|fontWeight|format|from|fr|fx|fy|g1|g2|glyphName|glyphOrientationHorizontal|glyphOrientationVertical|glyphRef|gradientTransform|gradientUnits|hanging|horizAdvX|horizOriginX|ideographic|imageRendering|in|in2|intercept|k|k1|k2|k3|k4|kernelMatrix|kernelUnitLength|kerning|keyPoints|keySplines|keyTimes|lengthAdjust|letterSpacing|lightingColor|limitingConeAngle|local|markerEnd|markerMid|markerStart|markerHeight|markerUnits|markerWidth|mask|maskContentUnits|maskUnits|mathematical|mode|numOctaves|offset|opacity|operator|order|orient|orientation|origin|overflow|overlinePosition|overlineThickness|panose1|paintOrder|pathLength|patternContentUnits|patternTransform|patternUnits|pointerEvents|points|pointsAtX|pointsAtY|pointsAtZ|preserveAlpha|preserveAspectRatio|primitiveUnits|r|radius|refX|refY|renderingIntent|repeatCount|repeatDur|requiredExtensions|requiredFeatures|restart|result|rotate|rx|ry|scale|seed|shapeRendering|slope|spacing|specularConstant|specularExponent|speed|spreadMethod|startOffset|stdDeviation|stemh|stemv|stitchTiles|stopColor|stopOpacity|strikethroughPosition|strikethroughThickness|string|stroke|strokeDasharray|strokeDashoffset|strokeLinecap|strokeLinejoin|strokeMiterlimit|strokeOpacity|strokeWidth|surfaceScale|systemLanguage|tableValues|targetX|targetY|textAnchor|textDecoration|textRendering|textLength|to|transform|u1|u2|underlinePosition|underlineThickness|unicode|unicodeBidi|unicodeRange|unitsPerEm|vAlphabetic|vHanging|vIdeographic|vMathematical|values|vectorEffect|version|vertAdvY|vertOriginX|vertOriginY|viewBox|viewTarget|visibility|widths|wordSpacing|writingMode|x|xHeight|x1|x2|xChannelSelector|xlinkActuate|xlinkArcrole|xlinkHref|xlinkRole|xlinkShow|xlinkTitle|xlinkType|xmlBase|xmlns|xmlnsXlink|xmlLang|xmlSpace|y|y1|y2|yChannelSelector|z|zoomAndPan|for|class|autofocus)|(([Dd][Aa][Tt][Aa]|[Aa][Rr][Ii][Aa]|x)-.*))$/; // https://esbench.com/bench/5bfee68a4cd7e6009ef61d23
-
-var index = Object(_emotion_memoize__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])(function (prop) {
-  return reactPropsRegex.test(prop) || prop.charCodeAt(0) === 111
-  /* o */
-  && prop.charCodeAt(1) === 110
-  /* n */
-  && prop.charCodeAt(2) < 91;
-}
-/* Z+1 */
-);
-
-/* harmony default export */ __webpack_exports__["a"] = (index);
-
-
-/***/ }),
-/* 7 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-function memoize(fn) {
-  var cache = {};
-  return function (arg) {
-    if (cache[arg] === undefined) cache[arg] = fn(arg);
-    return cache[arg];
-  };
-}
-
-/* harmony default export */ __webpack_exports__["a"] = (memoize);
-
-
-/***/ }),
-/* 8 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3620,6 +3581,45 @@ if (true) {
   checkDCE();
   module.exports = __webpack_require__(38);
 } else {}
+
+
+/***/ }),
+/* 7 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var _emotion_memoize__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(8);
+
+
+var reactPropsRegex = /^((children|dangerouslySetInnerHTML|key|ref|autoFocus|defaultValue|defaultChecked|innerHTML|suppressContentEditableWarning|suppressHydrationWarning|valueLink|accept|acceptCharset|accessKey|action|allow|allowUserMedia|allowPaymentRequest|allowFullScreen|allowTransparency|alt|async|autoComplete|autoPlay|capture|cellPadding|cellSpacing|challenge|charSet|checked|cite|classID|className|cols|colSpan|content|contentEditable|contextMenu|controls|controlsList|coords|crossOrigin|data|dateTime|decoding|default|defer|dir|disabled|disablePictureInPicture|download|draggable|encType|form|formAction|formEncType|formMethod|formNoValidate|formTarget|frameBorder|headers|height|hidden|high|href|hrefLang|htmlFor|httpEquiv|id|inputMode|integrity|is|keyParams|keyType|kind|label|lang|list|loading|loop|low|marginHeight|marginWidth|max|maxLength|media|mediaGroup|method|min|minLength|multiple|muted|name|nonce|noValidate|open|optimum|pattern|placeholder|playsInline|poster|preload|profile|radioGroup|readOnly|referrerPolicy|rel|required|reversed|role|rows|rowSpan|sandbox|scope|scoped|scrolling|seamless|selected|shape|size|sizes|slot|span|spellCheck|src|srcDoc|srcLang|srcSet|start|step|style|summary|tabIndex|target|title|type|useMap|value|width|wmode|wrap|about|datatype|inlist|prefix|property|resource|typeof|vocab|autoCapitalize|autoCorrect|autoSave|color|inert|itemProp|itemScope|itemType|itemID|itemRef|on|results|security|unselectable|accentHeight|accumulate|additive|alignmentBaseline|allowReorder|alphabetic|amplitude|arabicForm|ascent|attributeName|attributeType|autoReverse|azimuth|baseFrequency|baselineShift|baseProfile|bbox|begin|bias|by|calcMode|capHeight|clip|clipPathUnits|clipPath|clipRule|colorInterpolation|colorInterpolationFilters|colorProfile|colorRendering|contentScriptType|contentStyleType|cursor|cx|cy|d|decelerate|descent|diffuseConstant|direction|display|divisor|dominantBaseline|dur|dx|dy|edgeMode|elevation|enableBackground|end|exponent|externalResourcesRequired|fill|fillOpacity|fillRule|filter|filterRes|filterUnits|floodColor|floodOpacity|focusable|fontFamily|fontSize|fontSizeAdjust|fontStretch|fontStyle|fontVariant|fontWeight|format|from|fr|fx|fy|g1|g2|glyphName|glyphOrientationHorizontal|glyphOrientationVertical|glyphRef|gradientTransform|gradientUnits|hanging|horizAdvX|horizOriginX|ideographic|imageRendering|in|in2|intercept|k|k1|k2|k3|k4|kernelMatrix|kernelUnitLength|kerning|keyPoints|keySplines|keyTimes|lengthAdjust|letterSpacing|lightingColor|limitingConeAngle|local|markerEnd|markerMid|markerStart|markerHeight|markerUnits|markerWidth|mask|maskContentUnits|maskUnits|mathematical|mode|numOctaves|offset|opacity|operator|order|orient|orientation|origin|overflow|overlinePosition|overlineThickness|panose1|paintOrder|pathLength|patternContentUnits|patternTransform|patternUnits|pointerEvents|points|pointsAtX|pointsAtY|pointsAtZ|preserveAlpha|preserveAspectRatio|primitiveUnits|r|radius|refX|refY|renderingIntent|repeatCount|repeatDur|requiredExtensions|requiredFeatures|restart|result|rotate|rx|ry|scale|seed|shapeRendering|slope|spacing|specularConstant|specularExponent|speed|spreadMethod|startOffset|stdDeviation|stemh|stemv|stitchTiles|stopColor|stopOpacity|strikethroughPosition|strikethroughThickness|string|stroke|strokeDasharray|strokeDashoffset|strokeLinecap|strokeLinejoin|strokeMiterlimit|strokeOpacity|strokeWidth|surfaceScale|systemLanguage|tableValues|targetX|targetY|textAnchor|textDecoration|textRendering|textLength|to|transform|u1|u2|underlinePosition|underlineThickness|unicode|unicodeBidi|unicodeRange|unitsPerEm|vAlphabetic|vHanging|vIdeographic|vMathematical|values|vectorEffect|version|vertAdvY|vertOriginX|vertOriginY|viewBox|viewTarget|visibility|widths|wordSpacing|writingMode|x|xHeight|x1|x2|xChannelSelector|xlinkActuate|xlinkArcrole|xlinkHref|xlinkRole|xlinkShow|xlinkTitle|xlinkType|xmlBase|xmlns|xmlnsXlink|xmlLang|xmlSpace|y|y1|y2|yChannelSelector|z|zoomAndPan|for|class|autofocus)|(([Dd][Aa][Tt][Aa]|[Aa][Rr][Ii][Aa]|x)-.*))$/; // https://esbench.com/bench/5bfee68a4cd7e6009ef61d23
+
+var index = Object(_emotion_memoize__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])(function (prop) {
+  return reactPropsRegex.test(prop) || prop.charCodeAt(0) === 111
+  /* o */
+  && prop.charCodeAt(1) === 110
+  /* n */
+  && prop.charCodeAt(2) < 91;
+}
+/* Z+1 */
+);
+
+/* harmony default export */ __webpack_exports__["a"] = (index);
+
+
+/***/ }),
+/* 8 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+function memoize(fn) {
+  var cache = {};
+  return function (arg) {
+    if (cache[arg] === undefined) cache[arg] = fn(arg);
+    return cache[arg];
+  };
+}
+
+/* harmony default export */ __webpack_exports__["a"] = (memoize);
 
 
 /***/ }),
@@ -8251,8 +8251,8 @@ process.umask = function() { return 0; };
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "props", function() { return props; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "createShouldForwardProp", function() { return createShouldForwardProp; });
-/* harmony import */ var _emotion_memoize__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(7);
-/* harmony import */ var _emotion_is_prop_valid__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(6);
+/* harmony import */ var _emotion_memoize__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(8);
+/* harmony import */ var _emotion_is_prop_valid__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(7);
 /* harmony import */ var styled_system__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(1);
 
 
@@ -10206,7 +10206,7 @@ var escape_string_regexp_default = /*#__PURE__*/__webpack_require__.n(escape_str
   return function (cache) {
     Object.keys(cache.data.data).forEach(function (key) {
       var rgx = new RegExp("/^" + escape_string_regexp_default()(typeKey) + "/");
-      return key.match() && cache.data["delete"](key);
+      return key.match(rgx) && cache.data["delete"](key);
     });
   };
 });
@@ -11250,6 +11250,10 @@ var Fieldset_Fieldset = function Fieldset(_ref2) {
 // CONCATENATED MODULE: ./src/components/Fieldset/index.js
 
 /* harmony default export */ var components_Fieldset = (components_Fieldset_Fieldset);
+// EXTERNAL MODULE: ./node_modules/react-dom/index.js
+var react_dom = __webpack_require__(6);
+var react_dom_default = /*#__PURE__*/__webpack_require__.n(react_dom);
+
 // EXTERNAL MODULE: ./node_modules/reflexbox/dist/index.js
 var dist = __webpack_require__(22);
 
@@ -11288,7 +11292,7 @@ function SidebarMenu_templateObject3() {
 }
 
 function SidebarMenu_templateObject2() {
-  var data = SidebarMenu_taggedTemplateLiteralLoose(["\n  height: 100%;\n  z-index: 9999999;\n  ", "\n"]);
+  var data = SidebarMenu_taggedTemplateLiteralLoose(["\n  height: 100%;\n  z-index: 99999999999999;\n  ", "\n"]);
 
   SidebarMenu_templateObject2 = function _templateObject2() {
     return data;
@@ -11314,28 +11318,60 @@ function SidebarMenu_taggedTemplateLiteralLoose(strings, raw) { if (!raw) { raw 
 
 
 
+
 var Backdrop = styled_components_browser_esm["default"].div(SidebarMenu_templateObject());
+
+var styleOnlyMobile = function styleOnlyMobile(onlyMobile, styleCSS) {
+  return onlyMobile ? styleCSS : "\n    @media only screen and (max-width: 767px) {\n      " + styleCSS + "\n    }\n  ";
+};
+
 var WrapperSidebarMenu = styled_components_browser_esm["default"].nav(SidebarMenu_templateObject2(), function (_ref) {
-  var open = _ref.open;
-  return !!open && "\n    @media only screen and (max-width: 767px) {\n      position: fixed;\n      top: 0;\n      right: 0;\n      bottom: 0;\n      left: 0;\n\n      " + Backdrop + " {\n        visibility: visible;\n        background: rgba(0, 0, 0, 0.3);\n        position: fixed;\n        top: 0;\n        right: 0;\n        bottom: 0;\n        left: 0;\n        z-index: 1001;\n      }\n    }\n  ";
+  var open = _ref.open,
+      onlyMobile = _ref.onlyMobile;
+  return !!open && styleOnlyMobile(onlyMobile, "\n      position: fixed;\n      top: 0;\n      right: 0;\n      bottom: 0;\n      left: 0;\n\n      " + Backdrop + " {\n        visibility: visible;\n        background: rgba(0, 0, 0, 0.3);\n        position: fixed;\n        top: 0;\n        right: 0;\n        bottom: 0;\n        left: 0;\n        z-index: 1001;\n      }\n  ");
 });
 var StyledSidebarMenu = Object(styled_components_browser_esm["default"])(dist["Box"])(SidebarMenu_templateObject3(), index_esm["layout"], function (_ref2) {
   var open = _ref2.open;
   return open ? "\n    transform: translateX(0);\n  " : "\n    transform: translateX(-100%);\n  ";
 });
 
-var SidebarMenu_SidebarMenu = function SidebarMenu(_ref3) {
+var SidebarMenu_useRootSidebar = function useRootSidebar() {
+  var _useState = Object(external_root_React_commonjs2_react_commonjs_react_amd_react_["useState"])(),
+      $rootModal = _useState[0],
+      setRootModal = _useState[1];
+
+  Object(external_root_React_commonjs2_react_commonjs_react_amd_react_["useEffect"])(function () {
+    var rootModal = document.getElementById('root-sidebar');
+
+    if (rootModal) {
+      setRootModal(rootModal);
+    } else {
+      var rootEl = document.createElement('div');
+      rootEl.id = 'root-sidebar';
+      setRootModal(rootEl);
+      document.body.appendChild(rootEl);
+    }
+  });
+  return {
+    $rootModal: $rootModal
+  };
+};
+
+var SidebarMenu_SidebarMenuRoot = function SidebarMenuRoot(_ref3) {
   var children = _ref3.children,
       _ref3$open = _ref3.open,
       open = _ref3$open === void 0 ? false : _ref3$open,
+      _ref3$onlyMobile = _ref3.onlyMobile,
+      onlyMobile = _ref3$onlyMobile === void 0 ? false : _ref3$onlyMobile,
       onClose = _ref3.onClose,
       _ref3$logo = _ref3.logo,
       logo = _ref3$logo === void 0 ? 'Logo' : _ref3$logo,
       _ref3$items = _ref3.items,
       items = _ref3$items === void 0 ? [] : _ref3$items,
-      rest = SidebarMenu_objectWithoutPropertiesLoose(_ref3, ["children", "open", "onClose", "logo", "items"]);
+      rest = SidebarMenu_objectWithoutPropertiesLoose(_ref3, ["children", "open", "onlyMobile", "onClose", "logo", "items"]);
 
   return /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(WrapperSidebarMenu, {
+    onlyMobile: onlyMobile,
     open: !!open,
     role: "menubar",
     "aria-label": "menu",
@@ -11351,6 +11387,19 @@ var SidebarMenu_SidebarMenu = function SidebarMenu(_ref3) {
     "aria-role": "button",
     "aria-label": "Fechar menu"
   }));
+};
+
+var SidebarMenu_SidebarMenuMobile = function SidebarMenuMobile(props) {
+  var _useRootSidebar = SidebarMenu_useRootSidebar(),
+      $rootModal = _useRootSidebar.$rootModal;
+
+  if (!$rootModal) return null;
+  return react_dom_default.a.createPortal( /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(SidebarMenu_SidebarMenuRoot, props), $rootModal);
+};
+
+var SidebarMenu_SidebarMenu = function SidebarMenu(props) {
+  var SidebarComponent = props.onlyMobile ? SidebarMenu_SidebarMenuMobile : SidebarMenu_SidebarMenuRoot;
+  return /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(SidebarComponent, props);
 };
 
 SidebarMenu_SidebarMenu.defaultProps = {
@@ -18547,10 +18596,6 @@ var SearchField_SearchField = function SearchField(_ref2) {
 // CONCATENATED MODULE: ./src/components/SearchField/index.js
 
 /* harmony default export */ var components_SearchField = (components_SearchField_SearchField);
-// EXTERNAL MODULE: ./node_modules/react-dom/index.js
-var react_dom = __webpack_require__(8);
-var react_dom_default = /*#__PURE__*/__webpack_require__.n(react_dom);
-
 // CONCATENATED MODULE: ./src/components/ContextMenu/ContextMenuDialog.js
 function ContextMenuDialog_extends() { ContextMenuDialog_extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return ContextMenuDialog_extends.apply(this, arguments); }
 
@@ -21914,7 +21959,7 @@ var defineProperty_default = /*#__PURE__*/__webpack_require__.n(defineProperty);
 var external_root_React_commonjs2_react_commonjs_react_amd_react_ = __webpack_require__(0);
 
 // EXTERNAL MODULE: ./node_modules/@emotion/is-prop-valid/dist/is-prop-valid.browser.esm.js
-var is_prop_valid_browser_esm = __webpack_require__(6);
+var is_prop_valid_browser_esm = __webpack_require__(7);
 
 // EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/inheritsLoose.js
 var inheritsLoose = __webpack_require__(24);
@@ -22333,7 +22378,7 @@ function murmur2(str) {
 var unitless_browser_esm = __webpack_require__(12);
 
 // EXTERNAL MODULE: ./node_modules/@emotion/memoize/dist/memoize.browser.esm.js
-var memoize_browser_esm = __webpack_require__(7);
+var memoize_browser_esm = __webpack_require__(8);
 
 // CONCATENATED MODULE: ./node_modules/@emotion/serialize/dist/serialize.browser.esm.js
 

@@ -24,7 +24,7 @@ var _Spinner = _interopRequireDefault(require("../Spinner"));
 var _reactFontawesome = require("@fortawesome/react-fontawesome");
 
 var _this = void 0,
-    _jsxFileName = "/Users/master/projects/bonuz/ui-components/src/components/Button/Button.js";
+    _jsxFileName = "/Users/rogeralbino/projects/Kazap/B-onuz/ui-components/src/components/Button/Button.js";
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
