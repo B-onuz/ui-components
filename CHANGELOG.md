@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.12.0](https://github.com/B-onuz/ui-components/compare/v2.11.1...v2.12.0) (2020-08-19)
+
+### Features
+
+- **sidebarmenu/onlymobile:** add onlyMobile prop ([#39](https://github.com/B-onuz/ui-components/issues/39)) ([59ed43c](https://github.com/B-onuz/ui-components/commit/59ed43ceae6e4ad9d5bae511dae95d54b4a50cb7))
+
+### Bug Fixes
+
+- **helpers/deleteitemsfromcache:** add regex to clear cache items ([#37](https://github.com/B-onuz/ui-components/issues/37)) ([d5e1e39](https://github.com/B-onuz/ui-components/commit/d5e1e395771404e30c277f731f727a9da52d7940))
+
 ### [2.11.1](https://github.com/B-onuz/ui-components/compare/v2.11.0...v2.11.1) (2020-08-13)
 
 ## [2.11.0](https://github.com/B-onuz/ui-components/compare/v2.10.2...v2.11.0) (2020-08-07)
