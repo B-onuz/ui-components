@@ -20,6 +20,11 @@ const GlobalStyle = createGlobalStyle`
   #root > div {
     height: 100%;
   }
+  a {
+    border: none !important;
+    box-shadow: none;
+    outline: none !important;
+  }
 `
 
 const ThemeDecorator = (storyFn) => (

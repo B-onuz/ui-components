@@ -60,6 +60,8 @@ const StyledButton = styled.button`
     !!underline
       ? `
       text-decoration: underline;
+      border: none;
+      outline: none;
     `
       : `text-decoration: none;`} 
 
@@ -84,7 +86,7 @@ const StyledButton = styled.button`
       ? `
     display: flex;
     align-items: center;
-    padding: 0;
+    padding: 0 4px;
     background-color: transparent;
     color:  ${({ color }) => (theme.colors[color] ? theme.colors[color] : color)};
     overflow: visible;
@@ -102,7 +104,7 @@ const StyledButton = styled.button`
     align-items: center;
     overflow: visible;
     max-width: unset;
-    padding: 0
+    padding: 8px;
     `
       : 'text-decoration: none;'}
 `
