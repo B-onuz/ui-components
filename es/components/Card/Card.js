@@ -53,7 +53,7 @@ function _templateObject4() {
 }
 
 function _templateObject3() {
-  var data = _taggedTemplateLiteralLoose(["\n  display: flex;\n  justify-content: flex-start;\n  align-items: center;\n  color: ", ";\n  box-shadow: none;\n  .icon {\n    font-size: 50px;\n    margin-right: 24px;\n  }\n"]);
+  var data = _taggedTemplateLiteralLoose(["\n  display: flex;\n  justify-content: flex-start;\n  align-items: center;\n  color: ", ";\n  box-shadow: none;\n  margin-bottom: 8px;\n  .icon {\n    font-size: 40px;\n    margin-right: 24px;\n  }\n"]);
 
   _templateObject3 = function _templateObject3() {
     return data;
@@ -63,7 +63,7 @@ function _templateObject3() {
 }
 
 function _templateObject2() {
-  var data = _taggedTemplateLiteralLoose(["\n  margin: 0;\n  text-transform: uppercase;\n  font-size: 16px;\n  font-weight: 400;\n  color: ", ";\n  opacity: ", ";\n  box-shadow: none;\n"]);
+  var data = _taggedTemplateLiteralLoose(["\n  margin: 0;\n  text-transform: uppercase;\n  font-size: 15px;\n  font-weight: 400;\n  color: ", ";\n  opacity: ", ";\n  box-shadow: none;\n  margin-bottom: 8px;\n"]);
 
   _templateObject2 = function _templateObject2() {
     return data;
@@ -73,7 +73,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteralLoose(["\n  color: ", ";\n  width: 100%;\n  max-width: 190px;\n  min-height: 84px;\n  display: flex;\n  flex-direction: column;\n  justify-content: space-between;\n  box-shadow: 3px 3px 6px #00000029;\n  border: 3px solid;\n  border-radius: 12px;\n  padding: 24px 32px;\n"]);
+  var data = _taggedTemplateLiteralLoose(["\n  color: ", ";\n  width: 100%;\n  max-width: 192px;\n  min-height: 84px;\n  display: flex;\n  flex-direction: column;\n  justify-content: space-between;\n  box-shadow: 3px 3px 6px #00000029;\n  border: 3px solid;\n  border-radius: 12px;\n  padding: 20px 32px;\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -142,7 +142,7 @@ var Card = function Card(_ref8) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 77,
+      lineNumber: 79,
       columnNumber: 5
     }
   }), /*#__PURE__*/_react["default"].createElement(StyledTitle, {
@@ -151,7 +151,7 @@ var Card = function Card(_ref8) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 78,
+      lineNumber: 80,
       columnNumber: 7
     }
   }, title), /*#__PURE__*/_react["default"].createElement(StyledInfo, {
@@ -159,7 +159,7 @@ var Card = function Card(_ref8) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 81,
+      lineNumber: 83,
       columnNumber: 7
     }
   }, icon && /*#__PURE__*/_react["default"].createElement(_reactFontawesome.FontAwesomeIcon, {
@@ -168,7 +168,7 @@ var Card = function Card(_ref8) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 82,
+      lineNumber: 84,
       columnNumber: 18
     }
   }), customIcon && /*#__PURE__*/_react["default"].createElement(StyledIcon, {
@@ -178,7 +178,7 @@ var Card = function Card(_ref8) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 83,
+      lineNumber: 85,
       columnNumber: 24
     }
   }), /*#__PURE__*/_react["default"].createElement(Counter, {
@@ -186,14 +186,15 @@ var Card = function Card(_ref8) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 84,
+      lineNumber: 86,
       columnNumber: 9
     }
   }, count)), /*#__PURE__*/_react["default"].createElement(StyledHelper, {
+    disclaimerColor: disclaimerColor,
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 86,
+      lineNumber: 88,
       columnNumber: 7
     }
   }, disclaimer));
@@ -201,7 +202,7 @@ var Card = function Card(_ref8) {
 
 Card.defaultProps = {
   textColor: 'black',
-  disclaimerColor: 'primary'
+  disclaimerColor: 'black'
 };
 var _default = Card;
 exports["default"] = _default;

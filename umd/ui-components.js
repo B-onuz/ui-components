@@ -1,4 +1,4 @@
-/*! ui-components v2.12.0 */
+/*! ui-components v2.13.0 */
 (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
 		module.exports = factory(require("react"));
@@ -10023,7 +10023,8 @@ var colors = {
   success: '#1E561F',
   info: '#0E566C',
   danger: '#973937',
-  cyan: '#1CB5AD'
+  cyan: '#1CB5AD',
+  lightGrey: '#6D6D6D'
 };
 colors.primary = colors.lightRed;
 colors.secondary = colors.fullDarkRed;
@@ -11292,7 +11293,7 @@ function SidebarMenu_templateObject3() {
 }
 
 function SidebarMenu_templateObject2() {
-  var data = SidebarMenu_taggedTemplateLiteralLoose(["\n  height: 100%;\n  z-index: 99999999999999;\n  ", "\n"]);
+  var data = SidebarMenu_taggedTemplateLiteralLoose(["\n  height: 100%;\n  z-index: 9999;\n  ", "\n"]);
 
   SidebarMenu_templateObject2 = function _templateObject2() {
     return data;
@@ -21618,7 +21619,7 @@ function Card_templateObject4() {
 }
 
 function Card_templateObject3() {
-  var data = Card_taggedTemplateLiteralLoose(["\n  display: flex;\n  justify-content: flex-start;\n  align-items: center;\n  color: ", ";\n  box-shadow: none;\n  .icon {\n    font-size: 50px;\n    margin-right: 24px;\n  }\n"]);
+  var data = Card_taggedTemplateLiteralLoose(["\n  display: flex;\n  justify-content: flex-start;\n  align-items: center;\n  color: ", ";\n  box-shadow: none;\n  margin-bottom: 8px;\n  .icon {\n    font-size: 40px;\n    margin-right: 24px;\n  }\n"]);
 
   Card_templateObject3 = function _templateObject3() {
     return data;
@@ -21628,7 +21629,7 @@ function Card_templateObject3() {
 }
 
 function Card_templateObject2() {
-  var data = Card_taggedTemplateLiteralLoose(["\n  margin: 0;\n  text-transform: uppercase;\n  font-size: 16px;\n  font-weight: 400;\n  color: ", ";\n  opacity: ", ";\n  box-shadow: none;\n"]);
+  var data = Card_taggedTemplateLiteralLoose(["\n  margin: 0;\n  text-transform: uppercase;\n  font-size: 15px;\n  font-weight: 400;\n  color: ", ";\n  opacity: ", ";\n  box-shadow: none;\n  margin-bottom: 8px;\n"]);
 
   Card_templateObject2 = function _templateObject2() {
     return data;
@@ -21638,7 +21639,7 @@ function Card_templateObject2() {
 }
 
 function Card_templateObject() {
-  var data = Card_taggedTemplateLiteralLoose(["\n  color: ", ";\n  width: 100%;\n  max-width: 190px;\n  min-height: 84px;\n  display: flex;\n  flex-direction: column;\n  justify-content: space-between;\n  box-shadow: 3px 3px 6px #00000029;\n  border: 3px solid;\n  border-radius: 12px;\n  padding: 24px 32px;\n"]);
+  var data = Card_taggedTemplateLiteralLoose(["\n  color: ", ";\n  width: 100%;\n  max-width: 192px;\n  min-height: 84px;\n  display: flex;\n  flex-direction: column;\n  justify-content: space-between;\n  box-shadow: 3px 3px 6px #00000029;\n  border: 3px solid;\n  border-radius: 12px;\n  padding: 20px 32px;\n"]);
 
   Card_templateObject = function _templateObject() {
     return data;
@@ -21716,12 +21717,14 @@ var Card_Card = function Card(_ref8) {
     imgBackground: imgBackground
   }), /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(Counter, {
     counterColor: counterColor
-  }, count)), /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(StyledHelper, null, disclaimer));
+  }, count)), /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(StyledHelper, {
+    disclaimerColor: disclaimerColor
+  }, disclaimer));
 };
 
 Card_Card.defaultProps = {
   textColor: 'black',
-  disclaimerColor: 'primary'
+  disclaimerColor: 'black'
 };
 /* harmony default export */ var components_Card_Card = (Card_Card);
 // CONCATENATED MODULE: ./src/components/Card/index.js
