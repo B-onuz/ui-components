@@ -22,6 +22,7 @@ const colors = {
   info: '#0E566C',
   danger: '#973937',
   cyan: '#1CB5AD',
+  lightGrey: '#6D6D6D',
 }
 
 colors.primary = colors.lightRed

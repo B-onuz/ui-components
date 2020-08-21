@@ -23,7 +23,7 @@ const styleOnlyMobile = (onlyMobile, styleCSS) =>
 
 const WrapperSidebarMenu = styled.nav`
   height: 100%;
-  z-index: 99999999999999;
+  z-index: 9999;
   ${({ open, onlyMobile }) =>
     !!open &&
     styleOnlyMobile(

@@ -1,7 +1,7 @@
 import React from 'react'
 import Card from './Card'
 import { Flex, Box } from 'reflexbox'
-import { faArchive } from '@fortawesome/free-solid-svg-icons'
+import { faArchive, faBoxes, faBoxOpen, faParachuteBox, faBan, faThumbsUp } from '@fortawesome/free-solid-svg-icons'
 import logo_white from '../../assets/logo_white.svg'
 
 export default {
@@ -13,11 +13,11 @@ export const CardExample = () => <Card title={'Demandas Pendentes'} count={99} c
 
 export const CardColors = () => (
   <Flex justifyContent={'flex-start'} p={3} flexWrap={'wrap'}>
-    <Card title={'Demandas Pendentes'} count={99} color={'yellow'} icon={faArchive} />
-    <Card title={'Demandas Em Aberto'} count={99} color={'teal'} icon={faArchive} />
-    <Card title={'Demandas Concluídas'} count={99} color={'blue'} icon={faArchive} />
-    <Card title={'Demandas Canceladas'} count={99} cancel={true} color={'red'} icon={faArchive} />
-    <Card title={'Pacotes promocionais'} count={99} color={'blue'} icon={faArchive} disclaimer={'rever vigência'} />
+    <Card title={'Demandas Pendentes'} count={99} color={'lightGrey'} icon={faBoxes} />
+    <Card title={'Demandas Em Aberto'} count={99} color={'teal'} icon={faBoxOpen} />
+    <Card title={'Demandas Concluídas'} count={13279} color={'green'} icon={faThumbsUp} />
+    <Card title={'Demandas Canceladas'} count={99} cancel={true} color={'red'} icon={faBan} />
+    <Card title={'Pacotes promocionais'} count={99} color={'blue'} icon={faParachuteBox} disclaimer={'últimos 7 dias'} disclaimerColor={'#138204'} />
   </Flex>
 )
 

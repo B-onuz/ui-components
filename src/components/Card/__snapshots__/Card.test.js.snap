@@ -3,7 +3,7 @@
 exports[`Should render Card 1`] = `
 .c0 {
   width: 100%;
-  max-width: 190px;
+  max-width: 192px;
   min-height: 84px;
   display: -webkit-box;
   display: -webkit-flex;
@@ -19,17 +19,18 @@ exports[`Should render Card 1`] = `
   box-shadow: 3px 3px 6px #00000029;
   border: 3px solid;
   border-radius: 12px;
-  padding: 24px 32px;
+  padding: 20px 32px;
 }
 
 .c1 {
   margin: 0;
   text-transform: uppercase;
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 400;
   color: #1b1c1d;
   opacity: 1;
   box-shadow: none;
+  margin-bottom: 8px;
 }
 
 .c2 {
@@ -46,10 +47,11 @@ exports[`Should render Card 1`] = `
   -ms-flex-align: center;
   align-items: center;
   box-shadow: none;
+  margin-bottom: 8px;
 }
 
 .c2 .icon {
-  font-size: 50px;
+  font-size: 40px;
   margin-right: 24px;
 }
 
@@ -58,6 +60,10 @@ exports[`Should render Card 1`] = `
   font-size: 40px;
   font-weight: 600;
   box-shadow: none;
+}
+
+.c4 {
+  color: #1b1c1d;
 }
 
 <div
@@ -74,7 +80,7 @@ exports[`Should render Card 1`] = `
     />
   </div>
   <small
-    className=""
+    className="c4"
   />
 </div>
 `;
