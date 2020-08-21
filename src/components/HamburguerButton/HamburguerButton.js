@@ -65,7 +65,6 @@ const Arrow = styled.i`
   opacity: 0.3;
   transform-origin: center center;
   z-index: 10;
-  background: hotpink;
   width: 15px;
   height: 15px;
   ${(props) =>
@@ -94,8 +93,9 @@ const Arrow = styled.i`
     border-color: ${(props) => props.backgroundColor};
     background: ${(props) => props.backgroundColor};
     margin-top: -5px;
-    margin-left: -3px;
+    margin-left: -2px;
     border-radius: 4px;
+    margin-right: -8px;
   }
   &::after {
     z-index: 2;

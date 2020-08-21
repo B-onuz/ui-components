@@ -54,7 +54,25 @@ const StyledIcon = styled.img`
   margin-right: 24px;
 `
 
-const Card = ({ title, count, icon, customIcon, customIconAlt, imgBackground, cancel, counterColor, iconColor, textColor, ...rest }) => {
+const StyledHelper = styled.small`
+  color: ${({ theme, disclaimerColor }) => (theme.colors[disclaimerColor] ? theme.colors[disclaimerColor] : disclaimerColor)};
+`
+
+const Card = ({
+  title,
+  count,
+  icon,
+  customIcon,
+  customIconAlt,
+  imgBackground,
+  cancel,
+  counterColor,
+  iconColor,
+  textColor,
+  disclaimer,
+  disclaimerColor,
+  ...rest
+}) => {
   return (
     <StyledCard {...rest}>
       <StyledTitle textColor={textColor} cancel={cancel}>
@@ -65,12 +83,14 @@ const Card = ({ title, count, icon, customIcon, customIconAlt, imgBackground, ca
         {customIcon && <StyledIcon src={customIcon} alt={customIconAlt} imgBackground={imgBackground} />}
         <Counter counterColor={counterColor}>{count}</Counter>
       </StyledInfo>
+      <StyledHelper>{disclaimer}</StyledHelper>
     </StyledCard>
   )
 }
 
 Card.defaultProps = {
   textColor: 'black',
+  disclaimerColor: 'primary',
 }
 
 export default Card
