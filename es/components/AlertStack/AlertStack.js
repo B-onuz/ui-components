@@ -20,7 +20,7 @@ var _Alert = _interopRequireDefault(require("../Alert"));
 var _AlertStackContext = _interopRequireDefault(require("./AlertStackContext"));
 
 var _this = void 0,
-    _jsxFileName = "/Users/rogeralbino/projects/Kazap/B-onuz/ui-components/src/components/AlertStack/AlertStack.js";
+    _jsxFileName = "/Users/master/projects/bonuz/ui-components/src/components/AlertStack/AlertStack.js";
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 

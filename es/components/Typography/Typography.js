@@ -12,7 +12,7 @@ var _styledComponents = _interopRequireDefault(require("styled-components"));
 var _styledSystem = require("styled-system");
 
 var _this = void 0,
-    _jsxFileName = "/Users/rogeralbino/projects/Kazap/B-onuz/ui-components/src/components/Typography/Typography.js";
+    _jsxFileName = "/Users/master/projects/bonuz/ui-components/src/components/Typography/Typography.js";
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 

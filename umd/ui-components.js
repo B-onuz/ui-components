@@ -1,4 +1,4 @@
-/*! ui-components v2.11.1 */
+/*! ui-components v2.12.0 */
 (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
 		module.exports = factory(require("react"));
@@ -10803,7 +10803,7 @@ var StyledButton = styled_components_browser_esm["default"].button(Button_templa
   return !!outline && "\n    background-color: #fff;\n    color: " + theme.colors[color] + " !important;\n    border-color: " + theme.colors[color] + ";\n    &:hover {\n      background-color: " + theme.colors[color] + ";\n      color: " + (new color_default.a(theme.colors[color]).isDark() ? '#fff' : '#000') + " !important;\n    }\n    ";
 }, function (_ref6) {
   var underline = _ref6.underline;
-  return !!underline ? "\n      text-decoration: underline;\n    " : "text-decoration: none;";
+  return !!underline ? "\n      text-decoration: underline;\n      border: none;\n      outline: none;\n    " : "text-decoration: none;";
 }, function (_ref7) {
   var linkButton = _ref7.linkButton,
       theme = _ref7.theme,
@@ -10812,14 +10812,14 @@ var StyledButton = styled_components_browser_esm["default"].button(Button_templa
 }, function (_ref8) {
   var icon = _ref8.icon,
       theme = _ref8.theme;
-  return !!icon ? "\n    display: flex;\n    align-items: center;\n    padding: 0;\n    background-color: transparent;\n    color:  " + function (_ref9) {
+  return !!icon ? "\n    display: flex;\n    align-items: center;\n    padding: 0 4px;\n    background-color: transparent;\n    color:  " + function (_ref9) {
     var color = _ref9.color;
     return theme.colors[color] ? theme.colors[color] : color;
   } + ";\n    overflow: visible;\n    &:hover {\n      text-decoration: underline;\n      background-color: transparent;\n    }\n  " : 'text-decoration: none;';
 }, function (_ref10) {
   var customIcon = _ref10.customIcon,
       theme = _ref10.theme;
-  return !!customIcon ? "\n    display: flex;\n    align-items: center;\n    overflow: visible;\n    max-width: unset;\n    padding: 0\n    " : 'text-decoration: none;';
+  return !!customIcon ? "\n    display: flex;\n    align-items: center;\n    overflow: visible;\n    max-width: unset;\n    padding: 8px;\n    " : 'text-decoration: none;';
 });
 var StyledFaIcon = styled_components_browser_esm["default"].div(_templateObject2(), function (_ref11) {
   var iconSize = _ref11.iconSize;
@@ -11418,7 +11418,7 @@ function HamburguerButton_extends() { HamburguerButton_extends = Object.assign |
 function HamburguerButton_objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 
 function HamburguerButton_templateObject2() {
-  var data = HamburguerButton_taggedTemplateLiteralLoose(["\n  position: absolute;\n  top: 0;\n  bottom: 0;\n  margin: auto;\n  right: -5px;\n  transition: 0.15s linear;\n  transition-delay: 0.35s;\n  transform: rotate(135deg) scale(0);\n  opacity: 0.3;\n  transform-origin: center center;\n  z-index: 10;\n  background: hotpink;\n  width: 15px;\n  height: 15px;\n  ", "\n  &::after, &::before {\n    content: '';\n    border: solid;\n    border-width: 0 5px 5px 0;\n    display: inline-block;\n    padding: 5px;\n    transform: rotate(135deg);\n    -webkit-transform: rotate(135deg);\n    position: absolute;\n    top: 0;\n    right: 0;\n    bottom: 0;\n    left: 0;\n    margin: auto;\n  }\n  &::before {\n    z-index: 1;\n    border-width: 8px 8px 8px 8px;\n    border-color: ", ";\n    background: ", ";\n    margin-top: -5px;\n    margin-left: -3px;\n    border-radius: 4px;\n  }\n  &::after {\n    z-index: 2;\n    border-color: #333333de;\n  }\n"]);
+  var data = HamburguerButton_taggedTemplateLiteralLoose(["\n  position: absolute;\n  top: 0;\n  bottom: 0;\n  margin: auto;\n  right: -5px;\n  transition: 0.15s linear;\n  transition-delay: 0.35s;\n  transform: rotate(135deg) scale(0);\n  opacity: 0.3;\n  transform-origin: center center;\n  z-index: 10;\n  width: 15px;\n  height: 15px;\n  ", "\n  &::after, &::before {\n    content: '';\n    border: solid;\n    border-width: 0 5px 5px 0;\n    display: inline-block;\n    padding: 5px;\n    transform: rotate(135deg);\n    -webkit-transform: rotate(135deg);\n    position: absolute;\n    top: 0;\n    right: 0;\n    bottom: 0;\n    left: 0;\n    margin: auto;\n  }\n  &::before {\n    z-index: 1;\n    border-width: 8px 8px 8px 8px;\n    border-color: ", ";\n    background: ", ";\n    margin-top: -5px;\n    margin-left: -2px;\n    border-radius: 4px;\n    margin-right: -8px;\n  }\n  &::after {\n    z-index: 2;\n    border-color: #333333de;\n  }\n"]);
 
   HamburguerButton_templateObject2 = function _templateObject2() {
     return data;
@@ -21587,6 +21587,16 @@ var AlertStackProvider_AlertStackProvider = function AlertStackProvider(_ref) {
 // CONCATENATED MODULE: ./src/components/Card/Card.js
 function Card_objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 
+function Card_templateObject6() {
+  var data = Card_taggedTemplateLiteralLoose(["\n  color: ", ";\n"]);
+
+  Card_templateObject6 = function _templateObject6() {
+    return data;
+  };
+
+  return data;
+}
+
 function Card_templateObject5() {
   var data = Card_taggedTemplateLiteralLoose(["\n  max-width: 50px;\n  padding: 4px;\n  background-color: ", ";\n  margin-right: 24px;\n"]);
 
@@ -21671,19 +21681,26 @@ var Card_StyledIcon = styled_components_browser_esm["default"].img(Card_template
       imgBackground = _ref6.imgBackground;
   return theme.colors[imgBackground] ? theme.colors[imgBackground] : imgBackground;
 });
+var StyledHelper = styled_components_browser_esm["default"].small(Card_templateObject6(), function (_ref7) {
+  var theme = _ref7.theme,
+      disclaimerColor = _ref7.disclaimerColor;
+  return theme.colors[disclaimerColor] ? theme.colors[disclaimerColor] : disclaimerColor;
+});
 
-var Card_Card = function Card(_ref7) {
-  var title = _ref7.title,
-      count = _ref7.count,
-      icon = _ref7.icon,
-      customIcon = _ref7.customIcon,
-      customIconAlt = _ref7.customIconAlt,
-      imgBackground = _ref7.imgBackground,
-      cancel = _ref7.cancel,
-      counterColor = _ref7.counterColor,
-      iconColor = _ref7.iconColor,
-      textColor = _ref7.textColor,
-      rest = Card_objectWithoutPropertiesLoose(_ref7, ["title", "count", "icon", "customIcon", "customIconAlt", "imgBackground", "cancel", "counterColor", "iconColor", "textColor"]);
+var Card_Card = function Card(_ref8) {
+  var title = _ref8.title,
+      count = _ref8.count,
+      icon = _ref8.icon,
+      customIcon = _ref8.customIcon,
+      customIconAlt = _ref8.customIconAlt,
+      imgBackground = _ref8.imgBackground,
+      cancel = _ref8.cancel,
+      counterColor = _ref8.counterColor,
+      iconColor = _ref8.iconColor,
+      textColor = _ref8.textColor,
+      disclaimer = _ref8.disclaimer,
+      disclaimerColor = _ref8.disclaimerColor,
+      rest = Card_objectWithoutPropertiesLoose(_ref8, ["title", "count", "icon", "customIcon", "customIconAlt", "imgBackground", "cancel", "counterColor", "iconColor", "textColor", "disclaimer", "disclaimerColor"]);
 
   return /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(StyledCard, rest, /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(Card_StyledTitle, {
     textColor: textColor,
@@ -21699,11 +21716,12 @@ var Card_Card = function Card(_ref7) {
     imgBackground: imgBackground
   }), /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(Counter, {
     counterColor: counterColor
-  }, count)));
+  }, count)), /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(StyledHelper, null, disclaimer));
 };
 
 Card_Card.defaultProps = {
-  textColor: 'black'
+  textColor: 'black',
+  disclaimerColor: 'primary'
 };
 /* harmony default export */ var components_Card_Card = (Card_Card);
 // CONCATENATED MODULE: ./src/components/Card/index.js
