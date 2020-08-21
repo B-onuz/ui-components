@@ -6,7 +6,7 @@ import { background } from 'styled-system'
 const StyledCard = styled.div`
   color: ${({ theme, color }) => (theme.colors[color] ? theme.colors[color] : color)};
   width: 100%;
-  max-width: 190px;
+  max-width: 192px;
   min-height: 84px;
   display: flex;
   flex-direction: column;
@@ -14,17 +14,18 @@ const StyledCard = styled.div`
   box-shadow: 3px 3px 6px #00000029;
   border: 3px solid;
   border-radius: 12px;
-  padding: 24px 32px;
+  padding: 20px 32px;
 `
 
 const StyledTitle = styled.span`
   margin: 0;
   text-transform: uppercase;
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 400;
   color: ${({ theme, textColor }) => (theme.colors[textColor] ? theme.colors[textColor] : textColor)};
   opacity: ${({ cancel }) => (cancel ? '60%' : 1)};
   box-shadow: none;
+  margin-bottom: 8px;
 `
 
 const StyledInfo = styled.div`
@@ -33,8 +34,9 @@ const StyledInfo = styled.div`
   align-items: center;
   color: ${({ theme, iconColor }) => (theme.colors[iconColor] ? theme.colors[iconColor] : iconColor)};
   box-shadow: none;
+  margin-bottom: 8px;
   .icon {
-    font-size: 50px;
+    font-size: 40px;
     margin-right: 24px;
   }
 `
@@ -83,14 +85,14 @@ const Card = ({
         {customIcon && <StyledIcon src={customIcon} alt={customIconAlt} imgBackground={imgBackground} />}
         <Counter counterColor={counterColor}>{count}</Counter>
       </StyledInfo>
-      <StyledHelper>{disclaimer}</StyledHelper>
+      <StyledHelper disclaimerColor={disclaimerColor}>{disclaimer}</StyledHelper>
     </StyledCard>
   )
 }
 
 Card.defaultProps = {
   textColor: 'black',
-  disclaimerColor: 'primary',
+  disclaimerColor: 'black',
 }
 
 export default Card
