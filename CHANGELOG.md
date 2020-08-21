@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.13.1](https://github.com/B-onuz/ui-components/compare/v2.13.0...v2.13.1) (2020-08-21)
+
+### Bug Fixes
+
+- **sidemenu:** fix sidemenu z-index and card disclaimer color ([#41](https://github.com/B-onuz/ui-components/issues/41)) ([d1cfb8d](https://github.com/B-onuz/ui-components/commit/d1cfb8d3036491807e979b3f8cc66ea08e7f8145))
+
 ## [2.13.0](https://github.com/B-onuz/ui-components/compare/v2.12.0...v2.13.0) (2020-08-21)
 
 ### Features
