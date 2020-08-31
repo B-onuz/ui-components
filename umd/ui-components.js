@@ -1,4 +1,4 @@
-/*! ui-components v2.13.1 */
+/*! ui-components v2.13.2 */
 (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
 		module.exports = factory(require("react"));
@@ -10026,7 +10026,8 @@ var colors = {
   danger: '#973937',
   cyan: '#1CB5AD',
   lightGrey: '#6D6D6D',
-  facebookBlue: '#3B5998'
+  facebookBlue: '#3B5998',
+  blueLink: '#4285F4'
 };
 colors.primary = colors.lightRed;
 colors.secondary = colors.fullDarkRed;
@@ -10240,7 +10241,6 @@ function _extends() { _extends = Object.assign || function (target) { for (var i
 
 
 /* harmony default export */ var variants_color = (function (props) {
-  console.log(props);
   var variants = Object.entries(props.theme.colors).reduce(function (acc, _ref) {
     var _extends2;
 
