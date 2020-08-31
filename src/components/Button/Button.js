@@ -19,6 +19,8 @@ const StyledButton = styled.button`
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
+  border-color: ${({ borderColor, theme }) =>
+    !!theme.colors[borderColor] ? `${theme.colors[borderColor]} !important` : `${borderColor} !important`};
   ${color}
   ${size}
   ${space}
@@ -27,13 +29,13 @@ const StyledButton = styled.button`
   &:focus {
     box-shadow: 0 0 8px ${({ theme, color }) => theme.colors[color]};
   }
-  
+
   &:active:not(:disabled) {
     box-shadow: inset 0px 0px 5px #c1c1c1;
   }
   &:active,
   &:hover {
-    background-color: ${({ theme, color }) => new Color(theme.colors[color]).saturate(0.1).darken(0.2).string()};
+    background-color: ${({ theme, color }) => new Color(theme.colors[color]).saturate(0.1).darken(0.1).string()};
   }
   &:disabled {
     background-color: ${({ theme, color }) => new Color(theme.colors[color]).desaturate(0.4).lighten(0.1).opaquer(0.7).string()};
@@ -43,7 +45,7 @@ const StyledButton = styled.button`
     `
     cursor: progress;
   `}
-  
+
   ${({ outline, theme, color }) =>
     !!outline &&
     `
@@ -106,7 +108,7 @@ const StyledButton = styled.button`
     max-width: unset;
     padding: 8px;
     `
-      : 'text-decoration: none;'}
+      : 'text-decoration: none;'};
 `
 
 const StyledFaIcon = styled.div`
@@ -134,8 +136,8 @@ const StyledIcon = styled.div`
   background-size: cover;
 `
 
-const Button = ({ children, loading, disabled, icon, iconSize, customIcon, imgSize, imgBackground, bgColor, ...rest }) => (
-  <StyledButton {...rest} disabled={!!disabled || !!loading} loading={loading} icon={icon} customIcon={imgBackground}>
+const Button = ({ children, loading, disabled, icon, iconSize, customIcon, imgSize, imgBackground, bgColor, borderColor, ...rest }) => (
+  <StyledButton {...rest} disabled={!!disabled || !!loading} loading={loading} icon={icon} customIcon={imgBackground} borderColor={borderColor}>
     {icon && (
       <StyledFaIcon iconSize={iconSize}>
         <FontAwesomeIcon icon={icon} />

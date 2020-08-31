@@ -63,11 +63,11 @@ export const Colors = () => (
     <Button m={2} color={'brown'}>
       {'brown'}
     </Button>
-    <Button m={2} color={'grey'}>
-      {'grey'}
+    <Button m={2} color={'white'} borderColor={'primary'}>
+      {'white'}
     </Button>
-    <Button m={2} color={'black'}>
-      {'black'}
+    <Button m={2} color={'facebookBlue'}>
+      {'facebookBlue'}
     </Button>
   </div>
 )
