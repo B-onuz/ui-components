@@ -22,14 +22,37 @@ export const CardColors = () => (
 )
 
 export const MultiColorsControl = () => (
+  <Flex>
+    <Card
+      color={'primary'}
+      textColor={'#DDD'}
+      iconColor={'success'}
+      counterColor={'warning'}
+      title={'Demandas Pendentes'}
+      count={99}
+      customIcon={logo_white}
+      imgBackground={'primary'}
+    />
+    <Card
+      clickableCard
+      color={'primary'}
+      textColor={'#DDD'}
+      iconColor={'#DDD'}
+      title={'Demandas Pendentes'}
+      icon={faParachuteBox}
+      cardBackground={'primary'}
+    />
+  </Flex>
+)
+
+export const CardButton = () => (
   <Card
+    clickableCard
     color={'primary'}
     textColor={'#DDD'}
-    iconColor={'success'}
-    counterColor={'warning'}
+    iconColor={'#DDD'}
     title={'Demandas Pendentes'}
-    count={99}
     customIcon={logo_white}
-    imgBackground={'primary'}
+    cardBackground={'primary'}
   />
 )

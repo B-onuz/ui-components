@@ -9,12 +9,29 @@ const StyledCard = styled.div`
   max-width: 192px;
   min-height: 84px;
   display: flex;
-  flex-direction: column;
+  flex-direction: ${({ clickableCard }) => (!!clickableCard ? 'row' : 'column')};
   justify-content: space-between;
+  position: relative;
   box-shadow: 3px 3px 6px #00000029;
   border: 3px solid;
   border-radius: 12px;
-  padding: 20px 32px;
+  padding: ${({ clickableCard }) => (!!clickableCard ? 0 : '20px 32px')};
+  overflow: ${({ clickableCard }) => (!!clickableCard ? 'visible' : 'hidden')};
+  @media only screen and (max-width: 500px) {
+    max-width: 165px;
+    min-height: 84px;
+    padding: ${({ clickableCard }) => (!!clickableCard ? 0 : '8px 12px')};
+    justify-content: center;
+  }
+
+  .icon {
+    margin-right: ${({ clickableCard }) => (!!clickableCard ? 0 : '24px')};
+    font-size: 40px;
+    @media only screen and (max-width: 500px) {
+      font-size: 30px;
+      margin-bottom: 0;
+    }
+  }
 `
 
 const StyledTitle = styled.span`
@@ -26,6 +43,9 @@ const StyledTitle = styled.span`
   opacity: ${({ cancel }) => (cancel ? '60%' : 1)};
   box-shadow: none;
   margin-bottom: 8px;
+  @media only screen and (max-width: 500px) {
+    font-size: 13px;
+  }
 `
 
 const StyledInfo = styled.div`
@@ -35,16 +55,16 @@ const StyledInfo = styled.div`
   color: ${({ theme, iconColor }) => (theme.colors[iconColor] ? theme.colors[iconColor] : iconColor)};
   box-shadow: none;
   margin-bottom: 8px;
-  .icon {
-    font-size: 40px;
-    margin-right: 24px;
+  font-size: 40px;
+  @media only screen and (max-width: 500px) {
+    font-size: 30px;
+    margin-bottom: 0;
   }
 `
 
 const Counter = styled.span`
   margin: 0;
   color: ${({ theme, counterColor }) => (theme.colors[counterColor] ? theme.colors[counterColor] : counterColor)};
-  font-size: 40px;
   font-weight: 600;
   box-shadow: none;
 `
@@ -53,11 +73,32 @@ const StyledIcon = styled.img`
   max-width: 50px;
   padding: 4px;
   background-color: ${({ theme, imgBackground }) => (theme.colors[imgBackground] ? theme.colors[imgBackground] : imgBackground)};
-  margin-right: 24px;
+  margin-right: ${({ clickableCard }) => (!!clickableCard ? 0 : '24px')};
 `
 
 const StyledHelper = styled.small`
+  display: ${({ disclaimer }) => (!!disclaimer ? 'inline-block' : 'none')};
   color: ${({ theme, disclaimerColor }) => (theme.colors[disclaimerColor] ? theme.colors[disclaimerColor] : disclaimerColor)};
+  @media only screen and (max-width: 500px) {
+    margin-top: 8px;
+  }
+`
+
+const ClickableCard = styled.button`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: ${({ theme, cardBackground }) => (theme.colors[cardBackground] ? theme.colors[cardBackground] : cardBackground)};
+  border: none;
+  outline: none;
+  &:hover {
+    cursor: pointer;
+  }
+  &:focus {
+    box-shadow: 0px 0px 12px 4px ${({ theme, cardBackground }) => theme.colors[cardBackground]};
+  }
 `
 
 const Card = ({
@@ -73,19 +114,35 @@ const Card = ({
   textColor,
   disclaimer,
   disclaimerColor,
+  clickableCard,
+  cardBackground,
   ...rest
 }) => {
   return (
-    <StyledCard {...rest}>
-      <StyledTitle textColor={textColor} cancel={cancel}>
-        {title}
-      </StyledTitle>
-      <StyledInfo iconColor={iconColor}>
-        {icon && <FontAwesomeIcon className="icon" icon={icon} />}
-        {customIcon && <StyledIcon src={customIcon} alt={customIconAlt} imgBackground={imgBackground} />}
-        <Counter counterColor={counterColor}>{count}</Counter>
-      </StyledInfo>
-      <StyledHelper disclaimerColor={disclaimerColor}>{disclaimer}</StyledHelper>
+    <StyledCard {...rest} clickableCard={clickableCard}>
+      {!!clickableCard ? (
+        <ClickableCard cardBackground={cardBackground}>
+          <StyledTitle textColor={textColor} cancel={cancel}>
+            {title}
+          </StyledTitle>
+          {icon && <FontAwesomeIcon icon={icon} className="icon" />}
+          {customIcon && <StyledIcon src={customIcon} alt={customIconAlt} imgBackground={imgBackground} clickableCard={clickableCard} />}
+        </ClickableCard>
+      ) : (
+        <>
+          <StyledTitle textColor={textColor} cancel={cancel}>
+            {title}
+          </StyledTitle>
+          <StyledInfo iconColor={iconColor}>
+            {icon && <FontAwesomeIcon className="icon" icon={icon} />}
+            {customIcon && <StyledIcon src={customIcon} alt={customIconAlt} imgBackground={imgBackground} clickableCard={clickableCard} />}
+            <Counter counterColor={counterColor}>{count}</Counter>
+          </StyledInfo>
+          <StyledHelper disclaimerColor={disclaimerColor} disclaimer={disclaimer}>
+            {disclaimer}
+          </StyledHelper>
+        </>
+      )}
     </StyledCard>
   )
 }
@@ -93,6 +150,7 @@ const Card = ({
 Card.defaultProps = {
   textColor: 'black',
   disclaimerColor: 'black',
+  clickableCard: false,
 }
 
 export default Card
