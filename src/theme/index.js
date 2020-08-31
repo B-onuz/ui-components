@@ -25,6 +25,7 @@ const colors = {
   cyan: '#1CB5AD',
   lightGrey: '#6D6D6D',
   facebookBlue: '#3B5998',
+  blueLink: '#4285F4',
 }
 
 colors.primary = colors.lightRed
