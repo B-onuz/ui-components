@@ -22,14 +22,50 @@ export const CardColors = () => (
 )
 
 export const MultiColorsControl = () => (
-  <Card
-    color={'primary'}
-    textColor={'#DDD'}
-    iconColor={'success'}
-    counterColor={'warning'}
-    title={'Demandas Pendentes'}
-    count={99}
-    customIcon={logo_white}
-    imgBackground={'primary'}
-  />
+  <Flex>
+    <Card
+      color={'primary'}
+      textColor={'#DDD'}
+      iconColor={'success'}
+      counterColor={'warning'}
+      title={'Demandas Pendentes'}
+      count={99}
+      customIcon={logo_white}
+      imgBackground={'primary'}
+    />
+    <Card
+      clickableCard
+      color={'primary'}
+      textColor={'#DDD'}
+      iconColor={'#DDD'}
+      title={'Demandas Pendentes'}
+      icon={faParachuteBox}
+      cardBackground={'primary'}
+    />
+  </Flex>
+)
+
+export const CardButton = () => (
+  <Flex>
+    <Card
+      clickableCard
+      color={'primary'}
+      textColor={'#DDD'}
+      iconColor={'#DDD'}
+      title={'Demandas Pendentes'}
+      customIcon={logo_white}
+      cardBackground={'primary'}
+      mr={2}
+    />
+    <Card
+      clickableCard
+      reverseOrder
+      color={'primary'}
+      textColor={'#DDD'}
+      iconColor={'#DDD'}
+      title={'Demandas Pendentes'}
+      customIcon={logo_white}
+      cardBackground={'primary'}
+    />
+  </Flex>
 )

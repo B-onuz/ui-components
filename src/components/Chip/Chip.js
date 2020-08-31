@@ -13,7 +13,10 @@ const StyledText = styled.span`
   ${color}
   background: ${({ theme, color }) => `${theme.colors[color]}`};
   padding: 2px 10px 4px;
-  border-radius: 25px
+  border-radius: 25px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 `
 
 const Chip = ({ color, text, ...rest }) => {

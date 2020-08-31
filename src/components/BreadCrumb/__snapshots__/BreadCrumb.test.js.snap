@@ -14,6 +14,7 @@ exports[`Should render BreadCrumb 1`] = `
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
+  border-color: undefined !important;
   color: #fff;
   background-color: #ef4d5a;
   border-color: #ef4d5a;
@@ -42,7 +43,7 @@ exports[`Should render BreadCrumb 1`] = `
 
 .c1:active,
 .c1:hover {
-  background-color: hsl(355.20000000000005,91.9%,49.6%);
+  background-color: hsl(355.20000000000005,91.9%,55.8%);
 }
 
 .c1:disabled {
@@ -191,6 +192,7 @@ exports[`Should render BreadCrumb with color 1`] = `
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
+  border-color: undefined !important;
   color: #fff;
   background-color: #6435c9;
   border-color: #6435c9;
@@ -219,7 +221,7 @@ exports[`Should render BreadCrumb with color 1`] = `
 
 .c1:active,
 .c1:hover {
-  background-color: hsl(259.1,64.1%,39.8%);
+  background-color: hsl(259.1,64.1%,44.8%);
 }
 
 .c1:disabled {
