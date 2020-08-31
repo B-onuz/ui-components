@@ -87,7 +87,7 @@ const StyledHelper = styled.small`
 const ClickableCard = styled.button`
   width: 100%;
   display: flex;
-  flex-direction: column;
+  flex-direction: ${({ reverseOrder }) => (!!reverseOrder ? 'column-reverse' : 'column')};
   justify-content: center;
   align-items: center;
   background-color: ${({ theme, cardBackground }) => (theme.colors[cardBackground] ? theme.colors[cardBackground] : cardBackground)};
@@ -116,12 +116,13 @@ const Card = ({
   disclaimerColor,
   clickableCard,
   cardBackground,
+  reverseOrder,
   ...rest
 }) => {
   return (
     <StyledCard {...rest} clickableCard={clickableCard}>
       {!!clickableCard ? (
-        <ClickableCard cardBackground={cardBackground}>
+        <ClickableCard cardBackground={cardBackground} reverseOrder={reverseOrder}>
           <StyledTitle textColor={textColor} cancel={cancel}>
             {title}
           </StyledTitle>
@@ -151,6 +152,7 @@ Card.defaultProps = {
   textColor: 'black',
   disclaimerColor: 'black',
   clickableCard: false,
+  reverseOrder: false,
 }
 
 export default Card
