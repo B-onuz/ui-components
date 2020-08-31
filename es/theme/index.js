@@ -23,12 +23,14 @@ var colors = {
   grey: '#767676',
   darkGrey: '#9A9A9A',
   black: '#1b1c1d',
+  white: '#fdfdfd',
   warning: '#7A4D05',
   success: '#1E561F',
   info: '#0E566C',
   danger: '#973937',
   cyan: '#1CB5AD',
-  lightGrey: '#6D6D6D'
+  lightGrey: '#6D6D6D',
+  facebookBlue: '#3B5998'
 };
 colors.primary = colors.lightRed;
 colors.secondary = colors.fullDarkRed;

@@ -29,7 +29,7 @@ function _extends() { _extends = Object.assign || function (target) { for (var i
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 
 function _templateObject2() {
-  var data = _taggedTemplateLiteralLoose(["\n  display: inline-block;\n  border-radius: 25px;\n  overflow: hidden;\n  border: 2px solid ", ";\n"]);
+  var data = _taggedTemplateLiteralLoose(["\n  display: inline-block;\n  border-radius: 25px;\n  overflow: hidden;\n  border: 2px solid ", ";\n  @media only screen and (max-width: 500px) {\n    display: flex;\n    flex-direction: column;\n    border-radius: 12px;\n  }\n"]);
 
   _templateObject2 = function _templateObject2() {
     return data;
@@ -39,7 +39,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteralLoose(["\n  ", "\n"]);
+  var data = _taggedTemplateLiteralLoose(["\n  ", "\n  @media only screen and (max-width: 500px) {\n    min-width: 180px;\n  }\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -71,7 +71,7 @@ var TabSelector = function TabSelector(_ref2) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 19,
+      lineNumber: 27,
       columnNumber: 5
     }
   }), /*#__PURE__*/_react["default"].createElement(ButtonsWrapper, {
@@ -79,14 +79,13 @@ var TabSelector = function TabSelector(_ref2) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 20,
+      lineNumber: 28,
       columnNumber: 7
     }
   }, /*#__PURE__*/_react["default"].createElement(_Button["default"], {
     linkButton: !activeA,
     color: color,
     py: 1,
-    px: 3,
     style: {
       borderRadius: 0
     },
@@ -94,14 +93,13 @@ var TabSelector = function TabSelector(_ref2) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 21,
+      lineNumber: 29,
       columnNumber: 9
     }
   }, optionA), /*#__PURE__*/_react["default"].createElement(_Button["default"], {
     linkButton: !activeB,
     color: color,
     py: 1,
-    px: 3,
     style: {
       borderRadius: 0
     },
@@ -109,7 +107,7 @@ var TabSelector = function TabSelector(_ref2) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 24,
+      lineNumber: 32,
       columnNumber: 9
     }
   }, optionB)));
