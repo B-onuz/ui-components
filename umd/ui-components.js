@@ -1,4 +1,4 @@
-/*! ui-components v2.13.2 */
+/*! ui-components v2.14.0 */
 (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
 		module.exports = factory(require("react"));
@@ -9998,6 +9998,7 @@ __webpack_require__.d(__webpack_exports__, "AlertStackProvider", function() { re
 __webpack_require__.d(__webpack_exports__, "Card", function() { return /* reexport */ components_Card; });
 __webpack_require__.d(__webpack_exports__, "Chip", function() { return /* reexport */ components_Chip; });
 __webpack_require__.d(__webpack_exports__, "TabSelector", function() { return /* reexport */ components_TabSelector; });
+__webpack_require__.d(__webpack_exports__, "ProfileBox", function() { return /* reexport */ components_ProfileBox; });
 
 // CONCATENATED MODULE: ./src/theme/index.js
 var colors = {
@@ -11896,7 +11897,7 @@ var Wrapper = styled_components_browser_esm["default"].div(PaceLoading_templateO
 function Table_objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 
 function _templateObject10() {
-  var data = Table_taggedTemplateLiteralLoose(["\n  position: relative;\n  display: table-row-group;\n  & > ", " {\n    background-color: #f8fafc;\n    &:nth-child(odd) {\n      background-color: #fff;\n    }\n  }\n"]);
+  var data = Table_taggedTemplateLiteralLoose(["\n  position: relative;\n  display: table-row-group;\n  & > ", " {\n    background-color: #f8fafc;\n    &:nth-child(odd) {\n      background-color: #fff;\n    }\n  }\n  @media only screen and (max-width: 500px) {\n    display: flex;\n    overflow-x: scroll;\n  }\n"]);
 
   _templateObject10 = function _templateObject10() {
     return data;
@@ -11926,7 +11927,7 @@ function _templateObject8() {
 }
 
 function _templateObject7() {
-  var data = Table_taggedTemplateLiteralLoose(["\n  ", "\n  ", "\n  padding: 13px 40px;\n"]);
+  var data = Table_taggedTemplateLiteralLoose(["\n  ", "\n  ", "\n  padding: 13px 40px;\n  @media only screen and (max-width: 500px) {\n    padding: 12px 8px;\n  }\n"]);
 
   _templateObject7 = function _templateObject7() {
     return data;
@@ -11946,7 +11947,7 @@ function _templateObject6() {
 }
 
 function Table_templateObject5() {
-  var data = Table_taggedTemplateLiteralLoose(["\n  /* padding: 13px 40px; */\n"]);
+  var data = Table_taggedTemplateLiteralLoose(["\n  /* padding: 13px 40px; */\n  @media only screen and (max-width: 500px) {\n    height: 100%;\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    justify-content: space-between;\n    min-width: 150px;\n    font-size: 14px;\n  }\n"]);
 
   Table_templateObject5 = function _templateObject5() {
     return data;
@@ -11956,7 +11957,7 @@ function Table_templateObject5() {
 }
 
 function Table_templateObject4() {
-  var data = Table_taggedTemplateLiteralLoose(["\n  position: relative;\n  width: 20px;\n  height: 20px;\n  margin-left: 4px;\n  ", "\n  ", "\n"]);
+  var data = Table_taggedTemplateLiteralLoose(["\n  position: relative;\n  width: 20px;\n  height: 20px;\n  margin-left: 4px;\n  ", "\n\n  ", "\n"]);
 
   Table_templateObject4 = function _templateObject4() {
     return data;
@@ -11966,7 +11967,7 @@ function Table_templateObject4() {
 }
 
 function Table_templateObject3() {
-  var data = Table_taggedTemplateLiteralLoose(["\n  text-transform: uppercase;\n  font-size: 0.8em;\n  color: #838383;\n  font-weight: 400;\n  padding: 1em;\n  position: relative;\n  position: sticky;\n  z-index: 2;\n  top: 0;\n  background: #f1f3f8;\n  ", "\n  padding: 13px 40px;\n  ", "\n  ", "\n"]);
+  var data = Table_taggedTemplateLiteralLoose(["\n  text-transform: uppercase;\n  font-size: 0.8em;\n  color: #838383;\n  font-weight: 400;\n  padding: 1em;\n  position: relative;\n  position: sticky;\n  z-index: 2;\n  top: 0;\n  background: #f1f3f8;\n  ", "\n  padding: 13px 40px;\n  ", "\n  ", "\n  @media only screen and (max-width: 500px) {\n    padding: 13px;\n  }\n"]);
 
   Table_templateObject3 = function _templateObject3() {
     return data;
@@ -11976,7 +11977,7 @@ function Table_templateObject3() {
 }
 
 function Table_templateObject2() {
-  var data = Table_taggedTemplateLiteralLoose(["\n  background: #f1f3f8;\n  display: table-header-group;\n"]);
+  var data = Table_taggedTemplateLiteralLoose(["\n  background: #f1f3f8;\n  display: table-header-group;\n  @media only screen and (max-width: 500px) {\n    width: 175px;\n    display: flex;\n    flex-direction: column;\n    justify-content: space-evenly;\n    z-index: 1;\n  }\n"]);
 
   Table_templateObject2 = function _templateObject2() {
     return data;
@@ -11986,7 +11987,7 @@ function Table_templateObject2() {
 }
 
 function Table_templateObject() {
-  var data = Table_taggedTemplateLiteralLoose(["\n  border-spacing: 0;\n  position: relative;\n  border-collapse: collapse;\n  width: 100%;\n"]);
+  var data = Table_taggedTemplateLiteralLoose(["\n  border-spacing: 0;\n  position: relative;\n  border-collapse: collapse;\n  width: 100%;\n  @media only screen and (max-width: 500px) {\n    display: flex;\n  }\n"]);
 
   Table_templateObject = function _templateObject() {
     return data;
@@ -12016,13 +12017,13 @@ var TableHeader = styled_components_browser_esm["default"].th(Table_templateObje
 });
 var OrderArrow = styled_components_browser_esm["default"].span(Table_templateObject4(), function (_ref4) {
   var isCurrent = _ref4.isCurrent;
-  return !!isCurrent ? "\n  &::before,\n  &::after {\n    content: '';\n    display: block;\n    position: absolute;\n    width: 1px;\n    height: 8px;\n    top: 0;\n    right: 0;\n    bottom: 0;\n    left: 0;\n    margin: auto;\n    background-color: #000;\n    transition: transform 0.25s ease-in-out 0s;\n  }" : "\n    &::before,\n    &::after {\n      content: '';\n      display: block;\n      border: solid #838383;\n      border-width: 0 1px 1px 0;\n      display: inline-block;\n      padding: 3px;\n      position: absolute;\n      left: 0;\n      right: 0;\n      margin: auto;\n      width: 0px;\n      height: 0px;\n    }\n    &::after {\n      top: 4px;\n      transform: rotate(-135deg);\n    }\n\n    &::before {\n      bottom: 4px;\n      transform: rotate(45deg);\n    }\n  \n  ";
+  return !!isCurrent ? "\n  &::before,\n  &::after {\n    content: '';\n    display: block;\n    position: absolute;\n    width: 1px;\n    height: 8px;\n    top: 0;\n    right: 0;\n    bottom: 0;\n    left: 0;\n    margin: auto;\n    background-color: #000;\n    transition: transform 0.25s ease-in-out 0s;\n  }" : "\n    &::before,\n    &::after {\n      content: '';\n      display: block;\n      border: solid #838383;\n      border-width: 0 1px 1px 0;\n      display: inline-block;\n      padding: 3px;\n      position: absolute;\n      left: 0;\n      right: 0;\n      margin: auto;\n      width: 0px;\n      height: 0px;\n    }\n    &::after {\n      top: 4px;\n      transform: rotate(-135deg);\n    }\n\n    &::before {\n      bottom: 4px;\n      transform: rotate(45deg);\n    }\n  ";
 }, function (_ref5) {
   var order = _ref5.order,
       isCurrent = _ref5.isCurrent;
 
   if (!!isCurrent) {
-    return order === 'asc' ? "\n      &::before {\n        transform: translate3d(-2px, 0px, 0px) rotate(45deg);\n      }\n      &::after {\n        transform: translate3d(3px, 0px, 0px) rotate(-45deg);\n      }\n    " : "\n      &::before {\n        transform: translate3d(3px, 0px, 0px) rotate(45deg);\n      }\n      &::after {\n        transform: translate3d(-2px, 0px, 0px) rotate(-45deg);\n      }\n    \n    ";
+    return order === 'asc' ? "\n      &::before {\n        transform: translate3d(-2px, 0px, 0px) rotate(45deg);\n      }\n      &::after {\n        transform: translate3d(3px, 0px, 0px) rotate(-45deg);\n      }\n    " : "\n      &::before {\n        transform: translate3d(3px, 0px, 0px) rotate(45deg);\n      }\n      &::after {\n        transform: translate3d(-2px, 0px, 0px) rotate(-45deg);\n      }\n    ";
   } else {
     return '';
   }
@@ -21950,6 +21951,75 @@ var TabSelector_TabSelector = function TabSelector(_ref2) {
 // CONCATENATED MODULE: ./src/components/TabSelector/index.js
 
 /* harmony default export */ var components_TabSelector = (components_TabSelector_TabSelector);
+// CONCATENATED MODULE: ./src/components/ProfileBox/ProfileBox.js
+function ProfileBox_objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
+
+function ProfileBox_templateObject3() {
+  var data = ProfileBox_taggedTemplateLiteralLoose(["\n  display: flex;\n  justify-content: flex-start;\n  align-items: center;\n"]);
+
+  ProfileBox_templateObject3 = function _templateObject3() {
+    return data;
+  };
+
+  return data;
+}
+
+function ProfileBox_templateObject2() {
+  var data = ProfileBox_taggedTemplateLiteralLoose(["\n  height: 100%;\n  margin-right: 7px;\n"]);
+
+  ProfileBox_templateObject2 = function _templateObject2() {
+    return data;
+  };
+
+  return data;
+}
+
+function ProfileBox_templateObject() {
+  var data = ProfileBox_taggedTemplateLiteralLoose(["\n  ", "\n  height: 100%;\n  display: flex;\n  justify-content: flex-start;\n  align-items: center;\n"]);
+
+  ProfileBox_templateObject = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+
+function ProfileBox_taggedTemplateLiteralLoose(strings, raw) { if (!raw) { raw = strings.slice(0); } strings.raw = raw; return strings; }
+
+
+
+
+
+
+var StyledProfileBox = styled_components_browser_esm["default"].div(ProfileBox_templateObject(), index_esm["color"]);
+var ProfileIcon = styled_components_browser_esm["default"].img(ProfileBox_templateObject2());
+var TextBox = styled_components_browser_esm["default"].div(ProfileBox_templateObject3());
+
+var ProfileBox_ProfileBox = function ProfileBox(_ref) {
+  var children = _ref.children,
+      userName = _ref.userName,
+      balanceValue = _ref.balanceValue,
+      src = _ref.src,
+      rest = ProfileBox_objectWithoutPropertiesLoose(_ref, ["children", "userName", "balanceValue", "src"]);
+
+  return /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(StyledProfileBox, rest, /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(ProfileIcon, {
+    alt: "bnz_icon",
+    src: src
+  }), /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(TextBox, null, !!userName && /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(components_Typography, {
+    color: "black",
+    m: 0,
+    mr: 2
+  }, userName), /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(components_Button, {
+    linkButton: true,
+    color: "primary",
+    p: 0
+  }, balanceValue + " BNZ")));
+};
+
+/* harmony default export */ var components_ProfileBox_ProfileBox = (ProfileBox_ProfileBox);
+// CONCATENATED MODULE: ./src/components/ProfileBox/index.js
+
+/* harmony default export */ var components_ProfileBox = (components_ProfileBox_ProfileBox);
 // CONCATENATED MODULE: ./src/index.js
 /* Theme */
 
@@ -21969,6 +22039,8 @@ var TabSelector_TabSelector = function TabSelector(_ref2) {
 
 
 /* Components */
+
+
 
 
 

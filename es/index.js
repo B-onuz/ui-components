@@ -243,6 +243,12 @@ Object.defineProperty(exports, "TabSelector", {
     return _TabSelector2["default"];
   }
 });
+Object.defineProperty(exports, "ProfileBox", {
+  enumerable: true,
+  get: function get() {
+    return _ProfileBox2["default"];
+  }
+});
 
 var _theme2 = _interopRequireDefault(require("./theme"));
 
@@ -323,5 +329,7 @@ var _Card2 = _interopRequireDefault(require("./components/Card"));
 var _Chip2 = _interopRequireDefault(require("./components/Chip"));
 
 var _TabSelector2 = _interopRequireDefault(require("./components/TabSelector"));
+
+var _ProfileBox2 = _interopRequireDefault(require("./components/ProfileBox"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
