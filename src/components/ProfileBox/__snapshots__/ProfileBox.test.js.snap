@@ -1,0 +1,117 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Should render ProfileBox 1`] = `
+.c3 {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  font-family: inherit;
+  border-radius: 4px;
+  outline: none;
+  cursor: pointer;
+  padding: .5rem 1rem;
+  border-style: solid;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  border-color: undefined !important;
+  color: #fff;
+  background-color: #ef4d5a;
+  border-color: #ef4d5a;
+  font-size: 16px;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #ef4d5a;
+  border: none;
+  background-color: transparent !important;
+  box-shadow: none !important;
+  outline: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c3:focus {
+  box-shadow: 0 0 8px #ef4d5a;
+}
+
+.c3:active:not(:disabled) {
+  box-shadow: inset 0px 0px 5px #c1c1c1;
+}
+
+.c3:active,
+.c3:hover {
+  background-color: hsl(355.20000000000005,91.9%,55.8%);
+}
+
+.c3:disabled {
+  background-color: hsl(355.20000000000005,50.1%,68.2%);
+}
+
+.c3:hover {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  background-color: transparent;
+}
+
+.c0 {
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c1 {
+  height: 100%;
+  margin-right: 7px;
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+<div
+  className="c0"
+>
+  <img
+    alt="bnz_icon"
+    className="c1"
+  />
+  <div
+    className="c2"
+  >
+    <button
+      className="c3"
+      color="primary"
+      disabled={false}
+      size="medium"
+      type="button"
+    >
+      undefined BNZ
+    </button>
+  </div>
+</div>
+`;

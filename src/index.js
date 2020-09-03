@@ -43,3 +43,4 @@ export Card from './components/Card'
 export Chip from './components/Chip'
 export TabSelector from './components/TabSelector'
 
+export ProfileBox from './components/ProfileBox'

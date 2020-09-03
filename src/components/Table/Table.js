@@ -9,12 +9,23 @@ const StyledTable = styled.table`
   position: relative;
   border-collapse: collapse;
   width: 100%;
+  @media only screen and (max-width: 500px) {
+    display: flex;
+  }
 `
 
 const TableHead = styled.thead`
   background: #f1f3f8;
   display: table-header-group;
+  @media only screen and (max-width: 500px) {
+    width: 175px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    z-index: 1;
+  }
 `
+
 const TableHeader = styled.th`
   text-transform: uppercase;
   font-size: 0.8em;
@@ -42,6 +53,9 @@ const TableHeader = styled.th`
     `
     text-align: ${align};
   `}
+  @media only screen and (max-width: 500px) {
+    padding: 13px;
+  }
 `
 
 const OrderArrow = styled.span`
@@ -92,8 +106,8 @@ const OrderArrow = styled.span`
       bottom: 4px;
       transform: rotate(45deg);
     }
-  
   `}
+
   ${({ order, isCurrent }) => {
     if (!!isCurrent) {
       return order === 'asc'
@@ -112,7 +126,6 @@ const OrderArrow = styled.span`
       &::after {
         transform: translate3d(-2px, 0px, 0px) rotate(-45deg);
       }
-    
     `
     } else {
       return ''
@@ -122,6 +135,15 @@ const OrderArrow = styled.span`
 
 const TableRow = styled.tr`
   /* padding: 13px 40px; */
+  @media only screen and (max-width: 500px) {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    min-width: 150px;
+    font-size: 14px;
+  }
 `
 
 const TableHeaderSpan = styled.span`
@@ -143,6 +165,9 @@ const TableData = styled.td`
     text-align: ${align};
   `}
   padding: 13px 40px;
+  @media only screen and (max-width: 500px) {
+    padding: 12px 8px;
+  }
 `
 
 const WrapperTable = styled.div`
@@ -170,6 +195,10 @@ const TableBody = styled.tbody`
       background-color: #fff;
     }
   }
+  @media only screen and (max-width: 500px) {
+    display: flex;
+    overflow-x: scroll;
+  }
 `
 
 const Table = ({ children, headers, pagination, onChangeOrder, data, loading, ...rest }) => {
@@ -178,12 +207,14 @@ const Table = ({ children, headers, pagination, onChangeOrder, data, loading, ..
       onChangeOrder(item)
     }
   }
+
   const getDataByKey = ({ item, key }) => {
     const keys = key.split('.')
     return keys.reduce((acc, item) => {
       return acc[item] || ''
     }, item)
   }
+
   return (
     <Wrapper {...rest}>
       {!!loading && <PaceLoading />}
