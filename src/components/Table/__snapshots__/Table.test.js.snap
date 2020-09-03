@@ -13,7 +13,7 @@ exports[`Table changes the class when hovered 1`] = `
   display: table-header-group;
 }
 
-.c5 {
+.c6 {
   text-transform: uppercase;
   font-size: 0.8em;
   color: #838383;
@@ -30,7 +30,7 @@ exports[`Table changes the class when hovered 1`] = `
   text-align: left;
 }
 
-.c9 {
+.c10 {
   text-transform: uppercase;
   font-size: 0.8em;
   color: #838383;
@@ -47,7 +47,7 @@ exports[`Table changes the class when hovered 1`] = `
   text-align: center;
 }
 
-.c10 {
+.c11 {
   text-transform: uppercase;
   font-size: 0.8em;
   color: #838383;
@@ -63,15 +63,15 @@ exports[`Table changes the class when hovered 1`] = `
   text-align: center;
 }
 
-.c7 {
+.c8 {
   position: relative;
   width: 20px;
   height: 20px;
   margin-left: 4px;
 }
 
-.c7::before,
-.c7::after {
+.c8::before,
+.c8::after {
   content: '';
   display: block;
   position: absolute;
@@ -88,27 +88,27 @@ exports[`Table changes the class when hovered 1`] = `
   transition: transform 0.25s ease-in-out 0s;
 }
 
-.c7::before {
+.c8::before {
   -webkit-transform: translate3d(-2px,0px,0px) rotate(45deg);
   -ms-transform: translate3d(-2px,0px,0px) rotate(45deg);
   transform: translate3d(-2px,0px,0px) rotate(45deg);
 }
 
-.c7::after {
+.c8::after {
   -webkit-transform: translate3d(3px,0px,0px) rotate(-45deg);
   -ms-transform: translate3d(3px,0px,0px) rotate(-45deg);
   transform: translate3d(3px,0px,0px) rotate(-45deg);
 }
 
-.c8 {
+.c9 {
   position: relative;
   width: 20px;
   height: 20px;
   margin-left: 4px;
 }
 
-.c8::before,
-.c8::after {
+.c9::before,
+.c9::after {
   content: '';
   display: block;
   border: solid #838383;
@@ -123,21 +123,21 @@ exports[`Table changes the class when hovered 1`] = `
   height: 0px;
 }
 
-.c8::after {
+.c9::after {
   top: 4px;
   -webkit-transform: rotate(-135deg);
   -ms-transform: rotate(-135deg);
   transform: rotate(-135deg);
 }
 
-.c8::before {
+.c9::before {
   bottom: 4px;
   -webkit-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
 }
 
-.c6 {
+.c7 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -155,12 +155,12 @@ exports[`Table changes the class when hovered 1`] = `
   justify-content: flex-start;
 }
 
-.c12 {
+.c13 {
   text-align: left;
   padding: 13px 40px;
 }
 
-.c13 {
+.c14 {
   text-align: center;
   padding: 13px 40px;
 }
@@ -188,17 +188,107 @@ exports[`Table changes the class when hovered 1`] = `
   width: 66.66666666666666%;
 }
 
-.c11 {
+.c12 {
   position: relative;
   display: table-row-group;
 }
 
-.c11 > .c4 {
+.c12 > .c4 {
   background-color: #f8fafc;
 }
 
-.c11 > .c4:nth-child(odd) {
+.c12 > .c4:nth-child(odd) {
   background-color: #fff;
+}
+
+@media only screen and (max-width:500px) {
+  .c2 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+@media only screen and (max-width:500px) {
+  .c3 {
+    width: 175px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: space-evenly;
+    -webkit-justify-content: space-evenly;
+    -ms-flex-pack: space-evenly;
+    justify-content: space-evenly;
+    z-index: 1;
+  }
+}
+
+@media only screen and (max-width:500px) {
+  .c6 {
+    padding: 13px;
+  }
+}
+
+@media only screen and (max-width:500px) {
+  .c10 {
+    padding: 13px;
+  }
+}
+
+@media only screen and (max-width:500px) {
+  .c11 {
+    padding: 13px;
+  }
+}
+
+@media only screen and (max-width:500px) {
+  .c5 {
+    height: 100%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    min-width: 150px;
+    font-size: 14px;
+  }
+}
+
+@media only screen and (max-width:500px) {
+  .c13 {
+    padding: 12px 8px;
+  }
+}
+
+@media only screen and (max-width:500px) {
+  .c14 {
+    padding: 12px 8px;
+  }
+}
+
+@media only screen and (max-width:500px) {
+  .c12 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    overflow-x: scroll;
+  }
 }
 
 <div
@@ -219,52 +309,36 @@ exports[`Table changes the class when hovered 1`] = `
         className="c3"
       >
         <tr
-          className="c4 "
+          className="c4 c5"
         >
           <th
-            className="c5"
+            className="c6"
             onClick={[Function]}
             order={true}
           >
             <span
-              className="c6"
+              className="c7"
             >
               Advogados
                
               <span
-                className="c7"
+                className="c8"
                 order="asc"
               />
             </span>
           </th>
           <th
-            className="c5"
+            className="c6"
             onClick={[Function]}
             order={true}
           >
             <span
-              className="c6"
+              className="c7"
             >
               Especialidades
                
               <span
-                className="c8"
-                order="asc"
-              />
-            </span>
-          </th>
-          <th
-            className="c9"
-            onClick={[Function]}
-            order={true}
-          >
-            <span
-              className="c6"
-            >
-              Tarefas
-               
-              <span
-                className="c8"
+                className="c9"
                 order="asc"
               />
             </span>
@@ -272,9 +346,25 @@ exports[`Table changes the class when hovered 1`] = `
           <th
             className="c10"
             onClick={[Function]}
+            order={true}
           >
             <span
-              className="c6"
+              className="c7"
+            >
+              Tarefas
+               
+              <span
+                className="c9"
+                order="asc"
+              />
+            </span>
+          </th>
+          <th
+            className="c11"
+            onClick={[Function]}
+          >
+            <span
+              className="c7"
             >
               Ações
                
@@ -283,100 +373,100 @@ exports[`Table changes the class when hovered 1`] = `
         </tr>
       </thead>
       <tbody
-        className="c11"
+        className="c12"
       >
         <tr
-          className="c4 "
+          className="c4 c5"
         >
           <td
-            className="c12"
+            className="c13"
           >
             Nome do advogado
           </td>
           <td
-            className="c12"
+            className="c13"
           >
             Comercial, Contratos
           </td>
           <td
-            className="c13"
+            className="c14"
           >
             10
           </td>
           <td
-            className="c13"
+            className="c14"
           >
             
           </td>
         </tr>
         <tr
-          className="c4 "
+          className="c4 c5"
         >
           <td
-            className="c12"
+            className="c13"
           >
             Nome do advogado
           </td>
           <td
-            className="c12"
+            className="c13"
           >
             Comercial, Contratos
           </td>
           <td
-            className="c13"
+            className="c14"
           >
             10
           </td>
           <td
-            className="c13"
+            className="c14"
           >
             
           </td>
         </tr>
         <tr
-          className="c4 "
+          className="c4 c5"
         >
           <td
-            className="c12"
+            className="c13"
           >
             Nome do advogado
           </td>
           <td
-            className="c12"
+            className="c13"
           >
             Comercial, Contratos
           </td>
           <td
-            className="c13"
+            className="c14"
           >
             10
           </td>
           <td
-            className="c13"
+            className="c14"
           >
             
           </td>
         </tr>
         <tr
-          className="c4 "
+          className="c4 c5"
         >
           <td
-            className="c12"
+            className="c13"
           >
             Nome do advogado
           </td>
           <td
-            className="c12"
+            className="c13"
           >
             Comercial, Contratos
           </td>
           <td
-            className="c13"
+            className="c14"
           >
             10
           </td>
           <td
-            className="c13"
+            className="c14"
           >
             
           </td>
