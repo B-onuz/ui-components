@@ -6,6 +6,7 @@ import { Flex, Box } from 'reflexbox/styled-components'
 import HamburguerButton from '../HamburguerButton'
 import Navbar from '../NavBar'
 import Header from '../Header'
+import ProfileBox from '../ProfileBox'
 
 const StyledBaseLayout = styled(Flex)`
   ${color}
@@ -35,7 +36,22 @@ const LayoutContainer = styled(Box)`
   `}
 `
 
-const BaseLayout = ({ children, menuIsOpen = false, sidebar = null, menuWidth = 248, handleChangeMenuIsOpen, title, ...rest }) => {
+const CornerContentWrapper = styled.div`
+  height: 100%;
+  align-self: flex-end;
+`
+
+const BaseLayout = ({
+  children,
+  menuIsOpen = false,
+  sidebar = null,
+  cornerContent = null,
+  userInfo = null,
+  menuWidth = 248,
+  handleChangeMenuIsOpen,
+  title,
+  ...rest
+}) => {
   return (
     <StyledBaseLayout {...rest}>
       {sidebar}
@@ -47,6 +63,7 @@ const BaseLayout = ({ children, menuIsOpen = false, sidebar = null, menuWidth = 
             </HamburguerButton>
           )}
           <Header title={title || ''} />
+          {!!cornerContent && <CornerContentWrapper>{cornerContent}</CornerContentWrapper>}
         </Navbar>
         <ChildrenWrapper>{children}</ChildrenWrapper>
       </LayoutContainer>

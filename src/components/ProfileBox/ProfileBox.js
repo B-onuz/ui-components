@@ -9,7 +9,7 @@ const StyledProfileBox = styled.div`
   height: 100%;
   display: flex;
   justify-content: flex-start;
-  align-items: center;
+  align-items: flex-end;
 `
 
 const ProfileIcon = styled.img`
@@ -20,7 +20,6 @@ const ProfileIcon = styled.img`
 const TextBox = styled.div`
   display: flex;
   justify-content: flex-start;
-  align-items: center;
 `
 
 const ProfileBox = ({ children, userName, balanceValue, src, ...rest }) => {
