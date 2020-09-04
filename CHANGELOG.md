@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.16.0](https://github.com/B-onuz/ui-components/compare/v2.15.0...v2.16.0) (2020-09-04)
+
+### Features
+
+- **baselayout:** add profileBox to baselayout ([#44](https://github.com/B-onuz/ui-components/issues/44)) ([e0e1461](https://github.com/B-onuz/ui-components/commit/e0e1461c1b6332ef7a70ab17aaeb3873310af6ed))
+
 ## [2.15.0](https://github.com/B-onuz/ui-components/compare/v2.14.0...v2.15.0) (2020-09-03)
 
 ### Features
