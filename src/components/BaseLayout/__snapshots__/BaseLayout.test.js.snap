@@ -2,10 +2,10 @@
 
 exports[`should render BaseLayout without sidebar 1`] = `
 <div
-  className="sc-AxjAm sc-AxirZ sc-AxmLO cefkbD"
+  className="sc-AxjAm sc-AxirZ sc-fzokOt kyhNSL"
 >
   <div
-    className="sc-AxjAm sc-fzoLsD cKSPaM"
+    className="sc-AxjAm sc-fzqNJr cuHkPX"
     display="flex"
   >
     <div
@@ -30,7 +30,7 @@ exports[`should render BaseLayout without sidebar 1`] = `
       </header>
     </div>
     <div
-      className="sc-fzozJi lQOAr"
+      className="sc-fzqBZW hnfXMj"
     >
       <p>
         Lorem ipsum dolor sit amet

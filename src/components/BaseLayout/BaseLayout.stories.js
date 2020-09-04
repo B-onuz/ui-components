@@ -7,6 +7,8 @@ import SidebarMenu from '../SidebarMenu'
 import SidebarMenuItem from '../SidebarMenuItem'
 import CheckBox from '../CheckBox'
 import Button from '../Button'
+import ProfileBox from '../ProfileBox'
+import bnz_icon from '../../assets/bnz_icon.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Logo from '../Logo'
 import logoImg from '../../assets/logo_white.svg'
@@ -58,6 +60,7 @@ export const BaseLayoutWithSidebar = () => {
       title={'Cadastro de advogados'}
       menuIsOpen={menuIsOpen}
       handleChangeMenuIsOpen={toggleMenu}
+      cornerContent={<ProfileBox src={bnz_icon} balanceValue={2300} />}
       sidebar={<DashboardSidebar open={menuIsOpen} onClose={closeMenu} width={248} />}
     >
       <form noValidate>
@@ -143,4 +146,8 @@ export const BaseLayoutWithSidebar = () => {
       </form>
     </BaseLayout>
   )
+}
+
+export const BaseLayoutCornerContentExample = () => {
+  return <BaseLayout title="Cadastro de advogados" cornerContent={<ProfileBox src={bnz_icon} balanceValue={2300} />} />
 }
