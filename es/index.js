@@ -249,6 +249,18 @@ Object.defineProperty(exports, "ProfileBox", {
     return _ProfileBox2["default"];
   }
 });
+Object.defineProperty(exports, "UserAvatar", {
+  enumerable: true,
+  get: function get() {
+    return _UserAvatar2["default"];
+  }
+});
+Object.defineProperty(exports, "DemandDetailing", {
+  enumerable: true,
+  get: function get() {
+    return _DemandDetailing2["default"];
+  }
+});
 
 var _theme2 = _interopRequireDefault(require("./theme"));
 
@@ -331,5 +343,9 @@ var _Chip2 = _interopRequireDefault(require("./components/Chip"));
 var _TabSelector2 = _interopRequireDefault(require("./components/TabSelector"));
 
 var _ProfileBox2 = _interopRequireDefault(require("./components/ProfileBox"));
+
+var _UserAvatar2 = _interopRequireDefault(require("./components/UserAvatar"));
+
+var _DemandDetailing2 = _interopRequireDefault(require("./components/DemandDetailing"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
