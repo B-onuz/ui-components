@@ -255,12 +255,6 @@ Object.defineProperty(exports, "UserAvatar", {
     return _UserAvatar2["default"];
   }
 });
-Object.defineProperty(exports, "DemandStatus", {
-  enumerable: true,
-  get: function get() {
-    return _DemandStatus2["default"];
-  }
-});
 Object.defineProperty(exports, "DemandDetailing", {
   enumerable: true,
   get: function get() {
@@ -351,8 +345,6 @@ var _TabSelector2 = _interopRequireDefault(require("./components/TabSelector"));
 var _ProfileBox2 = _interopRequireDefault(require("./components/ProfileBox"));
 
 var _UserAvatar2 = _interopRequireDefault(require("./components/UserAvatar"));
-
-var _DemandStatus2 = _interopRequireDefault(require("./components/DemandStatus"));
 
 var _DemandDetailing2 = _interopRequireDefault(require("./components/DemandDetailing"));
 
