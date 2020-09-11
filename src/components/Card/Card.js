@@ -22,6 +22,7 @@ const StyledCard = styled.div`
     min-height: 84px;
     padding: ${({ clickableCard }) => (!!clickableCard ? 0 : '8px 12px')};
     justify-content: center;
+    text-align: center;
   }
 
   .icon {
@@ -29,7 +30,8 @@ const StyledCard = styled.div`
     font-size: 40px;
     @media only screen and (max-width: 500px) {
       font-size: 30px;
-      margin-bottom: 0;
+      margin: 0;
+      margin-bottom: 6px;
     }
   }
 `
@@ -58,7 +60,9 @@ const StyledInfo = styled.div`
   font-size: 40px;
   @media only screen and (max-width: 500px) {
     font-size: 30px;
-    margin-bottom: 0;
+    margin-bottom: 6px;
+    flex-direction: column;
+    align-items: center;
   }
 `
 
@@ -74,6 +78,9 @@ const StyledIcon = styled.img`
   padding: 4px;
   background-color: ${({ theme, imgBackground }) => (theme.colors[imgBackground] ? theme.colors[imgBackground] : imgBackground)};
   margin-right: ${({ clickableCard }) => (!!clickableCard ? 0 : '24px')};
+  @media only screen and (max-width: 500px) {
+    margin-right: 0;
+  }
 `
 
 const StyledHelper = styled.small`

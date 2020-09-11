@@ -9,6 +9,9 @@ const StyledNavBar = styled.div`
   padding: 20px;
   box-sizing: border-box;
   flex-shrink: 0;
+  @media only screen and (max-width: 500px) {
+    padding: 0;
+  }
 `
 
 const NavBar = ({ ...rest }) => {

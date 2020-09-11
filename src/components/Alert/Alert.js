@@ -7,10 +7,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const StyledAlert = styled.div`
   ${compose(space, layout)}
-  ${(props) => (props.fullWidth && 'width: 100%') || ''}
-  border: 1px solid;
+  ${(props) => (props.fullWidth && 'width: 100%') || ''};
+  border: ${({ noBorder }) => (!!noBorder ? 'none' : 'border: 1px solid')};
   border-radius: 4px;
-  padding: 12px 24px;
+  padding: ${({ shortAlert }) => (!!shortAlert ? 0 : '12px 24px')};
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -57,11 +57,8 @@ const StyledIcon = styled.div`
 `
 
 const StyledFaIcon = styled.div`
-  display: flex;
   margin-right: 16px;
   font-size: ${({ iconSize }) => (iconSize ? iconSize : '32px')};
-  justify-content: center;
-  align-items: center;
   opacity: 1;
 `
 
@@ -73,10 +70,26 @@ const StyledMessage = styled.p`
   margin: 0;
 `
 
-const Alert = ({ children, animate, title, message, icon, iconSize, customIcon, imgSize, imgBackground, bgColor, noShadow, type = {}, ...rest }) => {
+const Alert = ({
+  children,
+  animate,
+  title,
+  message,
+  icon,
+  iconSize,
+  customIcon,
+  imgSize,
+  imgBackground,
+  bgColor,
+  noShadow,
+  type = {},
+  shortAlert,
+  noBorder,
+  ...rest
+}) => {
   return (
     <Wrapper animate={animate}>
-      <StyledAlert {...rest} noShadow={noShadow}>
+      <StyledAlert {...rest} noShadow={noShadow} shortAlert={shortAlert} noBorder={noBorder}>
         {icon && (
           <StyledFaIcon iconSize={iconSize}>
             <FontAwesomeIcon icon={icon} />
@@ -84,12 +97,17 @@ const Alert = ({ children, animate, title, message, icon, iconSize, customIcon, 
         )}
         {imgBackground && <StyledIcon imgBackground={imgBackground} imgSize={imgSize} bgColor={bgColor} />}
         <div>
-          <StyledTitle>{title}</StyledTitle>
+          {!!title && <StyledTitle>{title}</StyledTitle>}
           <StyledMessage>{message}</StyledMessage>
         </div>
+        {children}
       </StyledAlert>
     </Wrapper>
   )
+}
+
+Alert.defaultProps = {
+  shortAlert: false,
 }
 
 export default Alert

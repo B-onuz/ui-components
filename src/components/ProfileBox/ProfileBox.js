@@ -10,11 +10,22 @@ const StyledProfileBox = styled.div`
   display: flex;
   justify-content: flex-start;
   align-items: flex-end;
+  @media only screen and (max-width: 500px) {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 8px;
+  }
 `
 
 const ProfileIcon = styled.img`
   height: 100%;
   margin-right: 7px;
+  @media only screen and (max-width: 500px) {
+    max-height: 20px;
+    margin-right: 0;
+    margin-bottom: 7px;
+  }
 `
 
 const TextBox = styled.div`

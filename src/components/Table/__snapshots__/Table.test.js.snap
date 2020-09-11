@@ -247,6 +247,22 @@ exports[`Table changes the class when hovered 1`] = `
 }
 
 @media only screen and (max-width:500px) {
+  .c8 {
+    -webkit-transform: rotateZ(90deg);
+    -ms-transform: rotateZ(90deg);
+    transform: rotateZ(90deg);
+  }
+}
+
+@media only screen and (max-width:500px) {
+  .c9 {
+    -webkit-transform: rotateZ(90deg);
+    -ms-transform: rotateZ(90deg);
+    transform: rotateZ(90deg);
+  }
+}
+
+@media only screen and (max-width:500px) {
   .c5 {
     height: 100%;
     display: -webkit-box;
