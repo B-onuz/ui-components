@@ -24,7 +24,7 @@ exports[`Should render DemandDetailing 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  border-left: 1px solid #DEDEDF;
+  border-left: 1px solid #dededf;
 }
 
 <div

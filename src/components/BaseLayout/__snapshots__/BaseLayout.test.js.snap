@@ -9,7 +9,7 @@ exports[`should render BaseLayout without sidebar 1`] = `
     display="flex"
   >
     <div
-      className="sc-AxhUy jJbDCV"
+      className="sc-AxhUy fHuWra"
     >
       <header
         className="sc-Axmtr fiNXqW"
