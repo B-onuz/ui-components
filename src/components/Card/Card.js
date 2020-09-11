@@ -22,6 +22,7 @@ const StyledCard = styled.div`
     min-height: 84px;
     padding: ${({ clickableCard }) => (!!clickableCard ? 0 : '8px 12px')};
     justify-content: center;
+    text-align: center;
   }
 
   .icon {
