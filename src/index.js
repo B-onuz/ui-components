@@ -44,3 +44,7 @@ export Chip from './components/Chip'
 export TabSelector from './components/TabSelector'
 
 export ProfileBox from './components/ProfileBox'
+
+export UserAvatar from './components/UserAvatar'
+export DemandStatus from './components/DemandStatus'
+export DemandDetailing from './components/DemandDetailing'

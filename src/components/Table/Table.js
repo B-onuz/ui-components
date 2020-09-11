@@ -63,6 +63,9 @@ const OrderArrow = styled.span`
   width: 20px;
   height: 20px;
   margin-left: 4px;
+  @media only screen and (max-width: 500px) {
+    transform: rotateZ(90deg);
+  }
   ${({ isCurrent }) =>
     !!isCurrent
       ? `
