@@ -1,4 +1,4 @@
-/*! ui-components v2.16.0 */
+/*! ui-components v2.16.1 */
 (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
 		module.exports = factory(require("react"));
@@ -10001,25 +10001,30 @@ __webpack_require__.d(__webpack_exports__, "TabSelector", function() { return /*
 __webpack_require__.d(__webpack_exports__, "ProfileBox", function() { return /* reexport */ components_ProfileBox; });
 __webpack_require__.d(__webpack_exports__, "UserAvatar", function() { return /* reexport */ components_UserAvatar; });
 __webpack_require__.d(__webpack_exports__, "DemandDetailing", function() { return /* reexport */ components_DemandDetailing; });
+__webpack_require__.d(__webpack_exports__, "ContentToggle", function() { return /* reexport */ components_ContentToggle; });
 
 // CONCATENATED MODULE: ./src/theme/index.js
 var colors = {
-  fullDarkRed: '#550e33',
-  darkRed: '#9c2543',
+  red: '#db2828',
   lightRed: '#ef4d5a',
   mediumRed: '#FF4F5D',
-  red: '#db2828',
+  darkRed: '#9c2543',
+  fullDarkRed: '#550e33',
   orange: '#f2711c',
   yellow: '#fbbd08',
   olive: '#b5cc18',
   green: '#21BA45',
   teal: '#00b5ad',
   blue: '#2185d0',
+  facebookBlue: '#3B5998',
+  blueLink: '#4285F4',
   violet: '#6435c9',
   purple: '#a333c8',
   pink: '#e03997',
   brown: '#a5673f',
   grey: '#767676',
+  lightGrey: '#6D6D6D',
+  mediumGrey: '#838383',
   darkGrey: '#9A9A9A',
   black: '#1b1c1d',
   white: '#fdfdfd',
@@ -10027,10 +10032,7 @@ var colors = {
   success: '#1E561F',
   info: '#0E566C',
   danger: '#973937',
-  cyan: '#1CB5AD',
-  lightGrey: '#6D6D6D',
-  facebookBlue: '#3B5998',
-  blueLink: '#4285F4'
+  cyan: '#1CB5AD'
 };
 colors.primary = colors.lightRed;
 colors.secondary = colors.fullDarkRed;
@@ -22283,6 +22285,97 @@ var DemandDetailing_DemandDetailing = function DemandDetailing(_ref) {
 // CONCATENATED MODULE: ./src/components/DemandDetailing/index.js
 
 /* harmony default export */ var components_DemandDetailing = (components_DemandDetailing_DemandDetailing);
+// CONCATENATED MODULE: ./src/components/ContentToggle/ContentToggle.js
+function ContentToggle_extends() { ContentToggle_extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return ContentToggle_extends.apply(this, arguments); }
+
+function ContentToggle_objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
+
+function ContentToggle_templateObject3() {
+  var data = ContentToggle_taggedTemplateLiteralLoose(["\n  max-height: 0;\n  overflow: hidden;\n  transition: max-height 0.1s ease-out;\n"]);
+
+  ContentToggle_templateObject3 = function _templateObject3() {
+    return data;
+  };
+
+  return data;
+}
+
+function ContentToggle_templateObject2() {
+  var data = ContentToggle_taggedTemplateLiteralLoose(["\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  border-bottom: 1px solid #dadada;\n  > h2 {\n    margin: 0;\n  }\n  :hover {\n    cursor: pointer;\n  }\n"]);
+
+  ContentToggle_templateObject2 = function _templateObject2() {
+    return data;
+  };
+
+  return data;
+}
+
+function ContentToggle_templateObject() {
+  var data = ContentToggle_taggedTemplateLiteralLoose(["\n  ", "\n  ", "\n"]);
+
+  ContentToggle_templateObject = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+
+function ContentToggle_taggedTemplateLiteralLoose(strings, raw) { if (!raw) { raw = strings.slice(0); } strings.raw = raw; return strings; }
+
+
+
+
+
+
+var StyledContentToggle = styled_components_browser_esm["default"].div(ContentToggle_templateObject(), index_esm["color"], index_esm["space"]);
+var ContentToggle_StyledTitle = styled_components_browser_esm["default"].div(ContentToggle_templateObject2());
+var ContentBox = styled_components_browser_esm["default"].div(ContentToggle_templateObject3());
+
+var ContentToggle_ContentToggle = function ContentToggle(_ref) {
+  var startVisible = _ref.startVisible,
+      contentTitle = _ref.contentTitle,
+      children = _ref.children,
+      rest = ContentToggle_objectWithoutPropertiesLoose(_ref, ["startVisible", "contentTitle", "children"]);
+
+  var _useState = Object(external_root_React_commonjs2_react_commonjs_react_amd_react_["useState"])(startVisible),
+      visibility = _useState[0],
+      setVisibility = _useState[1];
+
+  var contentRef = Object(external_root_React_commonjs2_react_commonjs_react_amd_react_["useRef"])();
+
+  var displayContent = function displayContent() {
+    if (!visibility) {
+      return contentRef.current.style.maxHeight = null;
+    } else {
+      return contentRef.current.style.maxHeight = contentRef.current.scrollHeight + 'px';
+    }
+  };
+
+  Object(external_root_React_commonjs2_react_commonjs_react_amd_react_["useEffect"])(function () {
+    displayContent();
+  }, [visibility]);
+  return /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(StyledContentToggle, ContentToggle_extends({}, rest, {
+    my: 2
+  }), /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(ContentToggle_StyledTitle, {
+    onClick: function onClick() {
+      return setVisibility(!visibility);
+    }
+  }, /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement("h2", null, contentTitle), /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(FontAwesomeIcon, {
+    icon: visibility ? faEye : faEyeSlash,
+    size: "lg",
+    color: "#838383"
+  })), /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(ContentBox, {
+    ref: contentRef
+  }, children));
+};
+
+ContentToggle_ContentToggle.defaultProps = {
+  startVisible: false
+};
+/* harmony default export */ var components_ContentToggle_ContentToggle = (ContentToggle_ContentToggle);
+// CONCATENATED MODULE: ./src/components/ContentToggle/index.js
+
+/* harmony default export */ var components_ContentToggle = (components_ContentToggle_ContentToggle);
 // CONCATENATED MODULE: ./src/index.js
 /* Theme */
 
@@ -22302,6 +22395,8 @@ var DemandDetailing_DemandDetailing = function DemandDetailing(_ref) {
 
 
 /* Components */
+
+
 
 
 
