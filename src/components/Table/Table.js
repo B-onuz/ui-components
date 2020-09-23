@@ -42,6 +42,11 @@ const TableHeader = styled.th`
     `
     width: ${width};
   `}
+  ${({ minWidth }) =>
+    minWidth &&
+    `
+    min-width: ${minWidth}px;
+  `}
   padding: 13px 40px;
   ${({ order }) =>
     order &&
@@ -154,14 +159,19 @@ const TableHeaderSpan = styled.span`
   align-items: center;
   flex-direction: inherit;
   justify-content: flex-start;
-`
-
-const TableData = styled.td`
   ${({ width }) =>
     !!width &&
     `
     width: ${width};
   `}
+  ${({ minWidth }) =>
+    minWidth &&
+    `
+    min-width: ${minWidth}px;
+  `}
+`
+
+const TableData = styled.td`
   ${({ align }) =>
     align &&
     `
@@ -226,7 +236,14 @@ const Table = ({ children, headers, pagination, onChangeOrder, data, loading, ..
           <TableHead>
             <TableRow>
               {(headers || []).map((item, index) => (
-                <TableHeader width={item.width} key={index} order={item.sort} align={item.align} onClick={() => item.sort && handleChangeOrder(item)}>
+                <TableHeader
+                  width={item.width}
+                  minWidth={item.minWidth}
+                  key={index}
+                  order={item.sort}
+                  align={item.align}
+                  onClick={() => item.sort && handleChangeOrder(item)}
+                >
                   <TableHeaderSpan>
                     {item.title} {item.sort && <OrderArrow isCurrent={!!(pagination.sort === item.key)} order={pagination.order} />}
                   </TableHeaderSpan>
