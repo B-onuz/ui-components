@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.18.0](https://github.com/B-onuz/ui-components/compare/v2.17.0...v2.18.0) (2020-09-23)
+
+### Features
+
+- **table:** add new property to table component ([3241a51](https://github.com/B-onuz/ui-components/commit/3241a514ebaf8542477e3750ecc56cfae3a78d29))
+- **table:** add new style property to table component ([#48](https://github.com/B-onuz/ui-components/issues/48)) ([fd28af4](https://github.com/B-onuz/ui-components/commit/fd28af4db7949a1524e6c5bfaf6bdc6a6cf67b5a))
+
 ## [2.17.0](https://github.com/B-onuz/ui-components/compare/v2.16.1...v2.17.0) (2020-09-15)
 
 ### Features
