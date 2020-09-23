@@ -71,7 +71,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteralLoose(["\n  ", "\n  ", "\n"]);
+  var data = _taggedTemplateLiteralLoose(["\n  ", "\n  ", "\n  legend {\n    font-size: 21px;\n  }\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -113,7 +113,7 @@ var DemandDetailing = function DemandDetailing(_ref) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 56,
+      lineNumber: 59,
       columnNumber: 5
     }
   }), /*#__PURE__*/_react["default"].createElement(_Fieldset["default"], {
@@ -125,14 +125,14 @@ var DemandDetailing = function DemandDetailing(_ref) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 57,
+      lineNumber: 60,
       columnNumber: 7
     }
   }, /*#__PURE__*/_react["default"].createElement(ContentWrapper, {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 58,
+      lineNumber: 61,
       columnNumber: 9
     }
   }, (detailingData || []).map(function (item, index) {
@@ -141,14 +141,14 @@ var DemandDetailing = function DemandDetailing(_ref) {
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 60,
+        lineNumber: 63,
         columnNumber: 13
       }
     }, index === 1 && /*#__PURE__*/_react["default"].createElement(ReportBodyTitle, {
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 61,
+        lineNumber: 64,
         columnNumber: 31
       }
     }, reportKind), /*#__PURE__*/_react["default"].createElement(_reflexbox.Flex, {
@@ -157,7 +157,7 @@ var DemandDetailing = function DemandDetailing(_ref) {
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 62,
+        lineNumber: 65,
         columnNumber: 15
       }
     }, /*#__PURE__*/_react["default"].createElement(_UserAvatar["default"], {
@@ -167,7 +167,7 @@ var DemandDetailing = function DemandDetailing(_ref) {
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 63,
+        lineNumber: 66,
         columnNumber: 17
       }
     }), /*#__PURE__*/_react["default"].createElement(_Typography["default"], {
@@ -177,21 +177,21 @@ var DemandDetailing = function DemandDetailing(_ref) {
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 64,
+        lineNumber: 67,
         columnNumber: 17
       }
     }, item.date)), /*#__PURE__*/_react["default"].createElement(TopicItem, {
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 68,
+        lineNumber: 71,
         columnNumber: 15
       }
     }, /*#__PURE__*/_react["default"].createElement(_reflexbox.Box, {
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 69,
+        lineNumber: 72,
         columnNumber: 17
       }
     }, /*#__PURE__*/_react["default"].createElement(_Typography["default"], {
@@ -200,7 +200,7 @@ var DemandDetailing = function DemandDetailing(_ref) {
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 70,
+        lineNumber: 73,
         columnNumber: 19
       }
     }, item.text)), index === 0 && /*#__PURE__*/_react["default"].createElement(_react["default"].Fragment, null, children), !!item.attachments && /*#__PURE__*/_react["default"].createElement(_reflexbox.Flex, {
@@ -210,7 +210,7 @@ var DemandDetailing = function DemandDetailing(_ref) {
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 76,
+        lineNumber: 79,
         columnNumber: 19
       }
     }, /*#__PURE__*/_react["default"].createElement(_Typography["default"], {
@@ -220,7 +220,7 @@ var DemandDetailing = function DemandDetailing(_ref) {
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 77,
+        lineNumber: 80,
         columnNumber: 21
       }
     }, "Anexos:"), item.attachments.map(function (file) {
@@ -233,7 +233,7 @@ var DemandDetailing = function DemandDetailing(_ref) {
         __self: _this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 81,
+          lineNumber: 84,
           columnNumber: 23
         }
       }, file.label);

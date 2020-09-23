@@ -1,4 +1,4 @@
-/*! ui-components v2.16.1 */
+/*! ui-components v2.17.0 */
 (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
 		module.exports = factory(require("react"));
@@ -12016,7 +12016,7 @@ function _templateObject8() {
 }
 
 function _templateObject7() {
-  var data = Table_taggedTemplateLiteralLoose(["\n  ", "\n  ", "\n  padding: 13px 40px;\n  @media only screen and (max-width: 500px) {\n    padding: 12px 8px;\n  }\n"]);
+  var data = Table_taggedTemplateLiteralLoose(["\n  ", "\n  padding: 13px 40px;\n  @media only screen and (max-width: 500px) {\n    padding: 12px 8px;\n  }\n"]);
 
   _templateObject7 = function _templateObject7() {
     return data;
@@ -12026,7 +12026,7 @@ function _templateObject7() {
 }
 
 function _templateObject6() {
-  var data = Table_taggedTemplateLiteralLoose(["\n  display: inline-flex;\n  align-items: center;\n  flex-direction: inherit;\n  justify-content: flex-start;\n"]);
+  var data = Table_taggedTemplateLiteralLoose(["\n  display: inline-flex;\n  align-items: center;\n  flex-direction: inherit;\n  justify-content: flex-start;\n  ", "\n  ", "\n"]);
 
   _templateObject6 = function _templateObject6() {
     return data;
@@ -12056,7 +12056,7 @@ function Table_templateObject4() {
 }
 
 function Table_templateObject3() {
-  var data = Table_taggedTemplateLiteralLoose(["\n  text-transform: uppercase;\n  font-size: 0.8em;\n  color: #838383;\n  font-weight: 400;\n  padding: 1em;\n  position: relative;\n  position: sticky;\n  z-index: 2;\n  top: 0;\n  background: #f1f3f8;\n  ", "\n  padding: 13px 40px;\n  ", "\n  ", "\n  @media only screen and (max-width: 500px) {\n    padding: 13px;\n  }\n"]);
+  var data = Table_taggedTemplateLiteralLoose(["\n  text-transform: uppercase;\n  font-size: 0.8em;\n  color: #838383;\n  font-weight: 400;\n  padding: 1em;\n  position: relative;\n  position: sticky;\n  z-index: 2;\n  top: 0;\n  background: #f1f3f8;\n  ", "\n  ", "\n  padding: 13px 40px;\n  ", "\n  ", "\n  @media only screen and (max-width: 500px) {\n    padding: 13px;\n  }\n"]);
 
   Table_templateObject3 = function _templateObject3() {
     return data;
@@ -12098,18 +12098,21 @@ var TableHeader = styled_components_browser_esm["default"].th(Table_templateObje
   var width = _ref.width;
   return !!width && "\n    width: " + width + ";\n  ";
 }, function (_ref2) {
-  var order = _ref2.order;
-  return order && "\n    cursor: pointer;\n  ";
+  var minWidth = _ref2.minWidth;
+  return minWidth && "\n    min-width: " + minWidth + "px;\n  ";
 }, function (_ref3) {
-  var align = _ref3.align;
+  var order = _ref3.order;
+  return order && "\n    cursor: pointer;\n  ";
+}, function (_ref4) {
+  var align = _ref4.align;
   return align && "\n    text-align: " + align + ";\n  ";
 });
-var OrderArrow = styled_components_browser_esm["default"].span(Table_templateObject4(), function (_ref4) {
-  var isCurrent = _ref4.isCurrent;
+var OrderArrow = styled_components_browser_esm["default"].span(Table_templateObject4(), function (_ref5) {
+  var isCurrent = _ref5.isCurrent;
   return !!isCurrent ? "\n  &::before,\n  &::after {\n    content: '';\n    display: block;\n    position: absolute;\n    width: 1px;\n    height: 8px;\n    top: 0;\n    right: 0;\n    bottom: 0;\n    left: 0;\n    margin: auto;\n    background-color: #000;\n    transition: transform 0.25s ease-in-out 0s;\n  }" : "\n    &::before,\n    &::after {\n      content: '';\n      display: block;\n      border: solid #838383;\n      border-width: 0 1px 1px 0;\n      display: inline-block;\n      padding: 3px;\n      position: absolute;\n      left: 0;\n      right: 0;\n      margin: auto;\n      width: 0px;\n      height: 0px;\n    }\n    &::after {\n      top: 4px;\n      transform: rotate(-135deg);\n    }\n\n    &::before {\n      bottom: 4px;\n      transform: rotate(45deg);\n    }\n  ";
-}, function (_ref5) {
-  var order = _ref5.order,
-      isCurrent = _ref5.isCurrent;
+}, function (_ref6) {
+  var order = _ref6.order,
+      isCurrent = _ref6.isCurrent;
 
   if (!!isCurrent) {
     return order === 'asc' ? "\n      &::before {\n        transform: translate3d(-2px, 0px, 0px) rotate(45deg);\n      }\n      &::after {\n        transform: translate3d(3px, 0px, 0px) rotate(-45deg);\n      }\n    " : "\n      &::before {\n        transform: translate3d(3px, 0px, 0px) rotate(45deg);\n      }\n      &::after {\n        transform: translate3d(-2px, 0px, 0px) rotate(-45deg);\n      }\n    ";
@@ -12118,26 +12121,29 @@ var OrderArrow = styled_components_browser_esm["default"].span(Table_templateObj
   }
 });
 var TableRow = styled_components_browser_esm["default"].tr(Table_templateObject5());
-var TableHeaderSpan = styled_components_browser_esm["default"].span(_templateObject6());
-var TableData = styled_components_browser_esm["default"].td(_templateObject7(), function (_ref6) {
-  var width = _ref6.width;
+var TableHeaderSpan = styled_components_browser_esm["default"].span(_templateObject6(), function (_ref7) {
+  var width = _ref7.width;
   return !!width && "\n    width: " + width + ";\n  ";
-}, function (_ref7) {
-  var align = _ref7.align;
+}, function (_ref8) {
+  var minWidth = _ref8.minWidth;
+  return minWidth && "\n    min-width: " + minWidth + "px;\n  ";
+});
+var TableData = styled_components_browser_esm["default"].td(_templateObject7(), function (_ref9) {
+  var align = _ref9.align;
   return align && "\n    text-align: " + align + ";\n  ";
 });
 var WrapperTable = styled_components_browser_esm["default"].div(_templateObject8());
 var Table_Wrapper = styled_components_browser_esm["default"].div(_templateObject9(), Object(index_esm["compose"])(index_esm["space"], index_esm["layout"]));
 var TableBody = styled_components_browser_esm["default"].tbody(_templateObject10(), TableRow);
 
-var Table_Table = function Table(_ref8) {
-  var children = _ref8.children,
-      headers = _ref8.headers,
-      pagination = _ref8.pagination,
-      onChangeOrder = _ref8.onChangeOrder,
-      data = _ref8.data,
-      loading = _ref8.loading,
-      rest = Table_objectWithoutPropertiesLoose(_ref8, ["children", "headers", "pagination", "onChangeOrder", "data", "loading"]);
+var Table_Table = function Table(_ref10) {
+  var children = _ref10.children,
+      headers = _ref10.headers,
+      pagination = _ref10.pagination,
+      onChangeOrder = _ref10.onChangeOrder,
+      data = _ref10.data,
+      loading = _ref10.loading,
+      rest = Table_objectWithoutPropertiesLoose(_ref10, ["children", "headers", "pagination", "onChangeOrder", "data", "loading"]);
 
   var handleChangeOrder = function handleChangeOrder(item) {
     if (onChangeOrder) {
@@ -12145,9 +12151,9 @@ var Table_Table = function Table(_ref8) {
     }
   };
 
-  var getDataByKey = function getDataByKey(_ref9) {
-    var item = _ref9.item,
-        key = _ref9.key;
+  var getDataByKey = function getDataByKey(_ref11) {
+    var item = _ref11.item,
+        key = _ref11.key;
     var keys = key.split('.');
     return keys.reduce(function (acc, item) {
       return acc[item] || '';
@@ -12159,6 +12165,7 @@ var Table_Table = function Table(_ref8) {
   }, /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(StyledTable, null, /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(TableHead, null, /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(TableRow, null, (headers || []).map(function (item, index) {
     return /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(TableHeader, {
       width: item.width,
+      minWidth: item.minWidth,
       key: index,
       order: item.sort,
       align: item.align,
@@ -22196,7 +22203,7 @@ function DemandDetailing_templateObject2() {
 }
 
 function DemandDetailing_templateObject() {
-  var data = DemandDetailing_taggedTemplateLiteralLoose(["\n  ", "\n  ", "\n"]);
+  var data = DemandDetailing_taggedTemplateLiteralLoose(["\n  ", "\n  ", "\n  legend {\n    font-size: 21px;\n  }\n"]);
 
   DemandDetailing_templateObject = function _templateObject() {
     return data;
