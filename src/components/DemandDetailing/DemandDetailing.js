@@ -10,6 +10,9 @@ import Button from '../Button'
 const StyledDemandDetailing = styled.div`
   ${color}
   ${space}
+  legend {
+    font-size: 21px;
+  }
 `
 
 const ContentWrapper = styled.div`

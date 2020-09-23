@@ -41,6 +41,7 @@ export const TableExample = () => {
           key: 'especialidades',
           sort: true,
           align: 'left',
+          width: '350px',
         },
         {
           title: 'Tarefas',
@@ -339,6 +340,7 @@ export const TableWithCellComponent = () => {
             key: 'especialidades',
             sort: true,
             align: 'left',
+            minWidth: 500,
           },
           {
             title: 'Tarefas',

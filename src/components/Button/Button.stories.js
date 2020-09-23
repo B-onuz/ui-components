@@ -186,7 +186,7 @@ export const LinkButton = () => (
     <Button linkButton m={2} color={'primary'}>
       {'Link Button'}
     </Button>
-    <Button linkButton underline m={0} p={0} as={'a'} color={'primary'} href={'http://google.com'}>
+    <Button linkButton underline m={0} p={0} as={'a'} color={'primary'} href={'http://google.com'} target="_blank">
       {'http://google.com'}
     </Button>
   </>
