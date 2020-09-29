@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.19.0](https://github.com/B-onuz/ui-components/compare/v2.18.0...v2.19.0) (2020-09-29)
+
+### Features
+
+- **demand detail:** update demand detail propoerties ([fbbffa6](https://github.com/B-onuz/ui-components/commit/fbbffa6060cf0e33e92eab4eb666f03d2a663638))
+- **demand detailing component:** update component properties ([#49](https://github.com/B-onuz/ui-components/issues/49)) ([7d7a375](https://github.com/B-onuz/ui-components/commit/7d7a375643aac3ab1a42d4df6bfff5c481c11fe9))
+
+### Bug Fixes
+
+- **date format:** fix date format function ([a1eb91b](https://github.com/B-onuz/ui-components/commit/a1eb91b70121bd8d9227629313cf18ef0d3b58b3))
+
 ## [2.18.0](https://github.com/B-onuz/ui-components/compare/v2.17.0...v2.18.0) (2020-09-23)
 
 ### Features
