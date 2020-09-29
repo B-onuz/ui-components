@@ -21,6 +21,8 @@ var _Typography = _interopRequireDefault(require("../Typography"));
 
 var _Button = _interopRequireDefault(require("../Button"));
 
+var _utils = require("../../utils");
+
 var _this = void 0,
     _jsxFileName = "/Users/master/projects/bonuz/ui-components/src/components/DemandDetailing/DemandDetailing.js";
 
@@ -113,7 +115,7 @@ var DemandDetailing = function DemandDetailing(_ref) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 59,
+      lineNumber: 60,
       columnNumber: 5
     }
   }), /*#__PURE__*/_react["default"].createElement(_Fieldset["default"], {
@@ -125,14 +127,14 @@ var DemandDetailing = function DemandDetailing(_ref) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 60,
+      lineNumber: 61,
       columnNumber: 7
     }
   }, /*#__PURE__*/_react["default"].createElement(ContentWrapper, {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 61,
+      lineNumber: 62,
       columnNumber: 9
     }
   }, (detailingData || []).map(function (item, index) {
@@ -141,14 +143,14 @@ var DemandDetailing = function DemandDetailing(_ref) {
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 63,
+        lineNumber: 64,
         columnNumber: 13
       }
     }, index === 1 && /*#__PURE__*/_react["default"].createElement(ReportBodyTitle, {
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 64,
+        lineNumber: 65,
         columnNumber: 31
       }
     }, reportKind), /*#__PURE__*/_react["default"].createElement(_reflexbox.Flex, {
@@ -157,17 +159,17 @@ var DemandDetailing = function DemandDetailing(_ref) {
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 65,
+        lineNumber: 66,
         columnNumber: 15
       }
     }, /*#__PURE__*/_react["default"].createElement(_UserAvatar["default"], {
-      userName: item.name,
-      displayName: item.name,
+      userName: item.interactionResponsibleName,
+      displayName: item.interactionResponsibleName,
       mr: 2,
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 66,
+        lineNumber: 67,
         columnNumber: 17
       }
     }), /*#__PURE__*/_react["default"].createElement(_Typography["default"], {
@@ -177,21 +179,21 @@ var DemandDetailing = function DemandDetailing(_ref) {
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 67,
+        lineNumber: 68,
         columnNumber: 17
       }
-    }, item.date)), /*#__PURE__*/_react["default"].createElement(TopicItem, {
+    }, (0, _utils.formatDate)(item.createdAt))), /*#__PURE__*/_react["default"].createElement(TopicItem, {
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 71,
+        lineNumber: 72,
         columnNumber: 15
       }
     }, /*#__PURE__*/_react["default"].createElement(_reflexbox.Box, {
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 72,
+        lineNumber: 73,
         columnNumber: 17
       }
     }, /*#__PURE__*/_react["default"].createElement(_Typography["default"], {
@@ -200,17 +202,17 @@ var DemandDetailing = function DemandDetailing(_ref) {
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 73,
+        lineNumber: 74,
         columnNumber: 19
       }
-    }, item.text)), index === 0 && /*#__PURE__*/_react["default"].createElement(_react["default"].Fragment, null, children), !!item.attachments && /*#__PURE__*/_react["default"].createElement(_reflexbox.Flex, {
+    }, item.comment)), index === 0 && /*#__PURE__*/_react["default"].createElement(_react["default"].Fragment, null, children), !!item.documents && /*#__PURE__*/_react["default"].createElement(_reflexbox.Flex, {
       flexDirection: "column",
       justifyContent: "flex-start",
       alignItems: "flex-start",
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 79,
+        lineNumber: 80,
         columnNumber: 19
       }
     }, /*#__PURE__*/_react["default"].createElement(_Typography["default"], {
@@ -220,23 +222,25 @@ var DemandDetailing = function DemandDetailing(_ref) {
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 80,
+        lineNumber: 81,
         columnNumber: 21
       }
-    }, "Anexos:"), item.attachments.map(function (file) {
+    }, "Anexos:"), item.documents.map(function (file) {
       return /*#__PURE__*/_react["default"].createElement(_Button["default"], {
+        as: "a",
+        target: "_blank",
+        rel: "noopener noreferrer",
+        href: file.fileURL,
+        linkbutton: true,
         color: "primary",
         linkButton: true,
-        onClick: function onClick() {
-          return console.log('Get file');
-        },
         __self: _this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 84,
+          lineNumber: 85,
           columnNumber: 23
         }
-      }, file.label);
+      }, item.fileName);
     }))));
   }))));
 };

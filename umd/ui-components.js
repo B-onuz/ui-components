@@ -1,4 +1,4 @@
-/*! ui-components v2.17.0 */
+/*! ui-components v2.18.0 */
 (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
 		module.exports = factory(require("react"));
@@ -10026,6 +10026,7 @@ var colors = {
   lightGrey: '#6D6D6D',
   mediumGrey: '#838383',
   darkGrey: '#9A9A9A',
+  boldGray: '#55555A',
   black: '#1b1c1d',
   white: '#fdfdfd',
   warning: '#7A4D05',
@@ -22159,6 +22160,18 @@ UserAvatar_UserAvatar.defaultProps = {
 // CONCATENATED MODULE: ./src/components/UserAvatar/index.js
 
 /* harmony default export */ var components_UserAvatar = (components_UserAvatar_UserAvatar);
+// CONCATENATED MODULE: ./src/utils/formatDate.js
+function formatDate(date) {
+  var dateToFormat = new Date(date);
+  var formattedDate = dateToFormat.toLocaleDateString('pt-br', {
+    hour: 'numeric',
+    minute: 'numeric'
+  });
+  return formattedDate;
+}
+// CONCATENATED MODULE: ./src/utils/index.js
+
+
 // CONCATENATED MODULE: ./src/components/DemandDetailing/DemandDetailing.js
 function DemandDetailing_objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 
@@ -22222,6 +22235,7 @@ function DemandDetailing_taggedTemplateLiteralLoose(strings, raw) { if (!raw) { 
 
 
 
+
 var StyledDemandDetailing = styled_components_browser_esm["default"].div(DemandDetailing_templateObject(), index_esm["color"], index_esm["space"]);
 var ContentWrapper = styled_components_browser_esm["default"].div(DemandDetailing_templateObject2(), index_esm["color"]);
 var ReportBodyTitle = styled_components_browser_esm["default"].h3(DemandDetailing_templateObject3());
@@ -22258,17 +22272,17 @@ var DemandDetailing_DemandDetailing = function DemandDetailing(_ref) {
       alignItems: "center",
       justifyContent: "flex-start"
     }, /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(components_UserAvatar, {
-      userName: item.name,
-      displayName: item.name,
+      userName: item.interactionResponsibleName,
+      displayName: item.interactionResponsibleName,
       mr: 2
     }), /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(components_Typography, {
       fontSize: 1,
       color: "lightGrey",
       m: 0
-    }, item.date)), /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(TopicItem, null, /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(dist["Box"], null, /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(components_Typography, {
+    }, formatDate(item.createdAt))), /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(TopicItem, null, /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(dist["Box"], null, /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(components_Typography, {
       fontSize: 1,
       color: "#aaa"
-    }, item.text)), index === 0 && /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.Fragment, null, children), !!item.attachments && /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(dist["Flex"], {
+    }, item.comment)), index === 0 && /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.Fragment, null, children), !!item.documents && /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(dist["Flex"], {
       flexDirection: "column",
       justifyContent: "flex-start",
       alignItems: "flex-start"
@@ -22276,14 +22290,16 @@ var DemandDetailing_DemandDetailing = function DemandDetailing(_ref) {
       fontSize: [1, 2, 3],
       color: "lightGrey",
       fontWeight: 500
-    }, "Anexos:"), item.attachments.map(function (file) {
+    }, "Anexos:"), item.documents.map(function (file) {
       return /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(components_Button, {
+        as: "a",
+        target: "_blank",
+        rel: "noopener noreferrer",
+        href: file.fileURL,
+        linkbutton: true,
         color: "primary",
-        linkButton: true,
-        onClick: function onClick() {
-          return console.log('Get file');
-        }
-      }, file.label);
+        linkButton: true
+      }, item.fileName);
     }))));
   }))));
 };
