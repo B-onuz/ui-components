@@ -6,7 +6,7 @@ import Fieldset from '../Fieldset'
 import UserAvatar from '../UserAvatar'
 import Typography from '../Typography'
 import Button from '../Button'
-import formatDate from '../../utils'
+import { formatDate } from '../../utils'
 
 const StyledDemandDetailing = styled.div`
   ${color}
