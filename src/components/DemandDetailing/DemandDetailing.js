@@ -6,6 +6,7 @@ import Fieldset from '../Fieldset'
 import UserAvatar from '../UserAvatar'
 import Typography from '../Typography'
 import Button from '../Button'
+import formatDate from '../../utils'
 
 const StyledDemandDetailing = styled.div`
   ${color}
@@ -63,26 +64,26 @@ const DemandDetailing = ({ children, reportTitle, reportKind, detailingData, ...
             <TopicItemWrapper className={getTopicClass(index, (detailingData || {}).length)}>
               {index === 1 && <ReportBodyTitle>{reportKind}</ReportBodyTitle>}
               <Flex alignItems="center" justifyContent="flex-start">
-                <UserAvatar userName={item.name} displayName={item.name} mr={2} />
+                <UserAvatar userName={item.interactionResponsibleName} displayName={item.interactionResponsibleName} mr={2} />
                 <Typography fontSize={1} color="lightGrey" m={0}>
-                  {item.date}
+                  {formatDate(item.createdAt)}
                 </Typography>
               </Flex>
               <TopicItem>
                 <Box>
                   <Typography fontSize={1} color="#aaa">
-                    {item.text}
+                    {item.comment}
                   </Typography>
                 </Box>
                 {index === 0 && <>{children}</>}
-                {!!item.attachments && (
+                {!!item.documents && (
                   <Flex flexDirection="column" justifyContent="flex-start" alignItems="flex-start">
                     <Typography fontSize={[1, 2, 3]} color="lightGrey" fontWeight={500}>
                       Anexos:
                     </Typography>
-                    {item.attachments.map((file) => (
-                      <Button color="primary" linkButton onClick={() => console.log('Get file')}>
-                        {file.label}
+                    {item.documents.map((file) => (
+                      <Button as="a" target="_blank" rel="noopener noreferrer" href={file.fileURL} linkbutton color="primary" linkButton>
+                        {item.fileName}
                       </Button>
                     ))}
                   </Flex>
