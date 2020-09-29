@@ -11,30 +11,35 @@ export default {
 
 const data = [
   {
-    name: 'Advogado Bonuz',
-    date: '22/08/2020 08:45',
-    text:
+    interactionResponsibleName: 'Advogado Bonuz',
+    isLawyer: true,
+    createdAt: '22/08/2020 08:45',
+    comment:
       'Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum ',
   },
   {
-    name: 'Cliente',
-    date: '22/08/2020 08:45',
-    text:
+    interactionResponsibleName: 'Cliente',
+    isLawyer: false,
+    createdAt: '22/08/2020 08:45',
+    comment:
       'Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum ',
   },
   {
-    name: 'Advogado Bonuz',
-    date: '22/08/2020 08:45',
-    text:
+    interactionResponsibleName: 'Advogado Bonuz',
+    isLawyer: true,
+    createdAt: '22/08/2020 08:45',
+    comment:
       'Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum ',
-    attachments: [
+    documents: [
       {
-        url: 'https://lorempixel.com/50/50',
-        label: 'contrato_nda_v1.pdf',
+        fileURL: 'https://lorempixel.com/50/50',
+        fileName: 'contrato_nda_v1.pdf',
+        name: 'arquivo_final.png',
       },
       {
-        url: 'https://lorempixel.com/50/50',
-        label: 'contrato_nda_v2.pdf',
+        fileURL: 'https://lorempixel.com/50/50',
+        fileName: 'contrato_nda_v2.pdf',
+        name: 'arquivo_semifinal.png',
       },
     ],
   },
