@@ -1,4 +1,4 @@
-/*! ui-components v2.18.0 */
+/*! ui-components v2.19.0 */
 (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
 		module.exports = factory(require("react"));
@@ -22265,7 +22265,9 @@ var DemandDetailing_DemandDetailing = function DemandDetailing(_ref) {
     p: 5,
     pt: 4,
     m: 0
-  }, /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(ContentWrapper, null, (detailingData || []).map(function (item, index) {
+  }, /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(ContentWrapper, null, (detailingData || []).sort(function (first, last) {
+    return last.createdAt - first.createdAt;
+  }).map(function (item, index) {
     return /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(TopicItemWrapper, {
       className: getTopicClass(index, (detailingData || {}).length)
     }, index === 1 && /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(ReportBodyTitle, null, reportKind), /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(dist["Flex"], {
@@ -22282,7 +22284,9 @@ var DemandDetailing_DemandDetailing = function DemandDetailing(_ref) {
     }, formatDate(item.createdAt))), /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(TopicItem, null, /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(dist["Box"], null, /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(components_Typography, {
       fontSize: 1,
       color: "#aaa"
-    }, item.comment)), index === 0 && /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.Fragment, null, children), !!item.documents && /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(dist["Flex"], {
+    }, item.comment)), index === 0 && /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.Fragment, null, children), !!item.documents && item.documents.sort(function (first, last) {
+      return last.createdAt - first.createdAt;
+    }) && /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(dist["Flex"], {
       flexDirection: "column",
       justifyContent: "flex-start",
       alignItems: "flex-start"
@@ -22299,7 +22303,7 @@ var DemandDetailing_DemandDetailing = function DemandDetailing(_ref) {
         linkbutton: true,
         color: "primary",
         linkButton: true
-      }, item.fileName);
+      }, file.name, console.log(file));
     }))));
   }))));
 };
