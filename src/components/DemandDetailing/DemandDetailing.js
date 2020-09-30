@@ -5,6 +5,7 @@ import { Box, Flex } from 'reflexbox'
 import Fieldset from '../Fieldset'
 import UserAvatar from '../UserAvatar'
 import Typography from '../Typography'
+import Legend from '../Legend'
 import Button from '../Button'
 import { formatDate } from '../../utils'
 
@@ -78,15 +79,14 @@ const DemandDetailing = ({ children, reportTitle, reportKind, detailingData, ...
                     </Typography>
                   </Box>
                   {index === 0 && <>{children}</>}
-                  {!!item.documents && item.documents.sort((first, last) => last.createdAt - first.createdAt) && (
+                  {(item.documents || {}).length > 0 && item.documents.sort((first, last) => last.createdAt - first.createdAt) && (
                     <Flex flexDirection="column" justifyContent="flex-start" alignItems="flex-start">
-                      <Typography fontSize={[1, 2, 3]} color="lightGrey" fontWeight={500}>
+                      <Typography fontSize={1} color="lightGrey" fontWeight={'bold'}>
                         Anexos:
                       </Typography>
                       {item.documents.map((file) => (
                         <Button as="a" target="_blank" rel="noopener noreferrer" href={file.fileURL} linkbutton color="primary" linkButton>
                           {file.name}
-                          {console.log(file)}
                         </Button>
                       ))}
                     </Flex>
