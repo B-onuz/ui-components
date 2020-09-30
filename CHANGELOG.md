@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.20.0](https://github.com/B-onuz/ui-components/compare/v2.19.0...v2.20.0) (2020-09-30)
+
+### Features
+
+- **demanddetail:** update component ([3b364f5](https://github.com/B-onuz/ui-components/commit/3b364f5a609b8ccdafdb0eb6a820c8afd2a7b71b))
+
 ## [2.19.0](https://github.com/B-onuz/ui-components/compare/v2.18.0...v2.19.0) (2020-09-29)
 
 ### Features
