@@ -60,37 +60,40 @@ const DemandDetailing = ({ children, reportTitle, reportKind, detailingData, ...
     <StyledDemandDetailing {...rest}>
       <Fieldset legend={reportTitle} bordered p={5} pt={4} m={0}>
         <ContentWrapper>
-          {(detailingData || []).map((item, index) => (
-            <TopicItemWrapper className={getTopicClass(index, (detailingData || {}).length)}>
-              {index === 1 && <ReportBodyTitle>{reportKind}</ReportBodyTitle>}
-              <Flex alignItems="center" justifyContent="flex-start">
-                <UserAvatar userName={item.interactionResponsibleName} displayName={item.interactionResponsibleName} mr={2} />
-                <Typography fontSize={1} color="lightGrey" m={0}>
-                  {formatDate(item.createdAt)}
-                </Typography>
-              </Flex>
-              <TopicItem>
-                <Box>
-                  <Typography fontSize={1} color="#aaa">
-                    {item.comment}
+          {(detailingData || [])
+            .sort((first, last) => last.createdAt - first.createdAt)
+            .map((item, index) => (
+              <TopicItemWrapper className={getTopicClass(index, (detailingData || {}).length)}>
+                {index === 1 && <ReportBodyTitle>{reportKind}</ReportBodyTitle>}
+                <Flex alignItems="center" justifyContent="flex-start">
+                  <UserAvatar userName={item.interactionResponsibleName} displayName={item.interactionResponsibleName} mr={2} />
+                  <Typography fontSize={1} color="lightGrey" m={0}>
+                    {formatDate(item.createdAt)}
                   </Typography>
-                </Box>
-                {index === 0 && <>{children}</>}
-                {!!item.documents && (
-                  <Flex flexDirection="column" justifyContent="flex-start" alignItems="flex-start">
-                    <Typography fontSize={[1, 2, 3]} color="lightGrey" fontWeight={500}>
-                      Anexos:
+                </Flex>
+                <TopicItem>
+                  <Box>
+                    <Typography fontSize={1} color="#aaa">
+                      {item.comment}
                     </Typography>
-                    {item.documents.map((file) => (
-                      <Button as="a" target="_blank" rel="noopener noreferrer" href={file.fileURL} linkbutton color="primary" linkButton>
-                        {item.fileName}
-                      </Button>
-                    ))}
-                  </Flex>
-                )}
-              </TopicItem>
-            </TopicItemWrapper>
-          ))}
+                  </Box>
+                  {index === 0 && <>{children}</>}
+                  {!!item.documents && item.documents.sort((first, last) => last.createdAt - first.createdAt) && (
+                    <Flex flexDirection="column" justifyContent="flex-start" alignItems="flex-start">
+                      <Typography fontSize={[1, 2, 3]} color="lightGrey" fontWeight={500}>
+                        Anexos:
+                      </Typography>
+                      {item.documents.map((file) => (
+                        <Button as="a" target="_blank" rel="noopener noreferrer" href={file.fileURL} linkbutton color="primary" linkButton>
+                          {file.name}
+                          {console.log(file)}
+                        </Button>
+                      ))}
+                    </Flex>
+                  )}
+                </TopicItem>
+              </TopicItemWrapper>
+            ))}
         </ContentWrapper>
       </Fieldset>
     </StyledDemandDetailing>

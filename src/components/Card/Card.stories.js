@@ -2,7 +2,7 @@ import React from 'react'
 import Card from './Card'
 import { Flex, Box } from 'reflexbox'
 import { faArchive, faBoxes, faBoxOpen, faParachuteBox, faBan, faThumbsUp } from '@fortawesome/free-solid-svg-icons'
-import logo_white from '../../assets/logo_white.svg'
+import serv_waiting from '../../assets/serv_waiting.svg'
 
 export default {
   title: 'Card',
@@ -26,22 +26,14 @@ export const MultiColorsControl = () => (
     <Card
       color={'primary'}
       textColor={'#DDD'}
-      iconColor={'success'}
+      iconColor={'#000'}
       counterColor={'warning'}
       title={'Demandas Pendentes'}
       count={99}
-      customIcon={logo_white}
-      imgBackground={'primary'}
+      customIcon={serv_waiting}
+      // imgBackground={'primary'}
     />
-    <Card
-      clickableCard
-      color={'primary'}
-      textColor={'#DDD'}
-      iconColor={'#DDD'}
-      title={'Demandas Pendentes'}
-      icon={faParachuteBox}
-      cardBackground={'primary'}
-    />
+    <Card color={'primary'} textColor={'#DDD'} iconColor={'#DDD'} title={'Demandas Pendentes'} icon={faParachuteBox} cardBackground={'primary'} />
   </Flex>
 )
 
@@ -53,7 +45,7 @@ export const CardButton = () => (
       textColor={'#DDD'}
       iconColor={'#DDD'}
       title={'Demandas Pendentes'}
-      customIcon={logo_white}
+      customIcon={serv_waiting}
       cardBackground={'primary'}
       mr={2}
     />
@@ -64,7 +56,7 @@ export const CardButton = () => (
       textColor={'#DDD'}
       iconColor={'#DDD'}
       title={'Demandas Pendentes'}
-      customIcon={logo_white}
+      customIcon={serv_waiting}
       cardBackground={'primary'}
     />
   </Flex>
