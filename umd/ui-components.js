@@ -1,4 +1,4 @@
-/*! ui-components v2.19.0 */
+/*! ui-components v2.20.0 */
 (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
 		module.exports = factory(require("react"));
@@ -22236,6 +22236,7 @@ function DemandDetailing_taggedTemplateLiteralLoose(strings, raw) { if (!raw) { 
 
 
 
+
 var StyledDemandDetailing = styled_components_browser_esm["default"].div(DemandDetailing_templateObject(), index_esm["color"], index_esm["space"]);
 var ContentWrapper = styled_components_browser_esm["default"].div(DemandDetailing_templateObject2(), index_esm["color"]);
 var ReportBodyTitle = styled_components_browser_esm["default"].h3(DemandDetailing_templateObject3());
@@ -22284,16 +22285,16 @@ var DemandDetailing_DemandDetailing = function DemandDetailing(_ref) {
     }, formatDate(item.createdAt))), /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(TopicItem, null, /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(dist["Box"], null, /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(components_Typography, {
       fontSize: 1,
       color: "#aaa"
-    }, item.comment)), index === 0 && /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.Fragment, null, children), !!item.documents && item.documents.sort(function (first, last) {
+    }, item.comment)), index === 0 && /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.Fragment, null, children), (item.documents || {}).length > 0 && item.documents.sort(function (first, last) {
       return last.createdAt - first.createdAt;
     }) && /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(dist["Flex"], {
       flexDirection: "column",
       justifyContent: "flex-start",
       alignItems: "flex-start"
     }, /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(components_Typography, {
-      fontSize: [1, 2, 3],
+      fontSize: 1,
       color: "lightGrey",
-      fontWeight: 500
+      fontWeight: 'bold'
     }, "Anexos:"), item.documents.map(function (file) {
       return /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(components_Button, {
         as: "a",
@@ -22303,7 +22304,7 @@ var DemandDetailing_DemandDetailing = function DemandDetailing(_ref) {
         linkbutton: true,
         color: "primary",
         linkButton: true
-      }, file.name, console.log(file));
+      }, file.name);
     }))));
   }))));
 };

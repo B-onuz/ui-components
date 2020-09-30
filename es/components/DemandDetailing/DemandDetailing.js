@@ -19,6 +19,8 @@ var _UserAvatar = _interopRequireDefault(require("../UserAvatar"));
 
 var _Typography = _interopRequireDefault(require("../Typography"));
 
+var _Legend = _interopRequireDefault(require("../Legend"));
+
 var _Button = _interopRequireDefault(require("../Button"));
 
 var _utils = require("../../utils");
@@ -115,7 +117,7 @@ var DemandDetailing = function DemandDetailing(_ref) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 60,
+      lineNumber: 61,
       columnNumber: 5
     }
   }), /*#__PURE__*/_react["default"].createElement(_Fieldset["default"], {
@@ -127,14 +129,14 @@ var DemandDetailing = function DemandDetailing(_ref) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 61,
+      lineNumber: 62,
       columnNumber: 7
     }
   }, /*#__PURE__*/_react["default"].createElement(ContentWrapper, {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 62,
+      lineNumber: 63,
       columnNumber: 9
     }
   }, (detailingData || []).sort(function (first, last) {
@@ -145,14 +147,14 @@ var DemandDetailing = function DemandDetailing(_ref) {
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 66,
+        lineNumber: 67,
         columnNumber: 15
       }
     }, index === 1 && /*#__PURE__*/_react["default"].createElement(ReportBodyTitle, {
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 67,
+        lineNumber: 68,
         columnNumber: 33
       }
     }, reportKind), /*#__PURE__*/_react["default"].createElement(_reflexbox.Flex, {
@@ -161,7 +163,7 @@ var DemandDetailing = function DemandDetailing(_ref) {
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 68,
+        lineNumber: 69,
         columnNumber: 17
       }
     }, /*#__PURE__*/_react["default"].createElement(_UserAvatar["default"], {
@@ -171,7 +173,7 @@ var DemandDetailing = function DemandDetailing(_ref) {
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 69,
+        lineNumber: 70,
         columnNumber: 19
       }
     }), /*#__PURE__*/_react["default"].createElement(_Typography["default"], {
@@ -181,21 +183,21 @@ var DemandDetailing = function DemandDetailing(_ref) {
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 70,
+        lineNumber: 71,
         columnNumber: 19
       }
     }, (0, _utils.formatDate)(item.createdAt))), /*#__PURE__*/_react["default"].createElement(TopicItem, {
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 74,
+        lineNumber: 75,
         columnNumber: 17
       }
     }, /*#__PURE__*/_react["default"].createElement(_reflexbox.Box, {
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 75,
+        lineNumber: 76,
         columnNumber: 19
       }
     }, /*#__PURE__*/_react["default"].createElement(_Typography["default"], {
@@ -204,10 +206,10 @@ var DemandDetailing = function DemandDetailing(_ref) {
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 76,
+        lineNumber: 77,
         columnNumber: 21
       }
-    }, item.comment)), index === 0 && /*#__PURE__*/_react["default"].createElement(_react["default"].Fragment, null, children), !!item.documents && item.documents.sort(function (first, last) {
+    }, item.comment)), index === 0 && /*#__PURE__*/_react["default"].createElement(_react["default"].Fragment, null, children), (item.documents || {}).length > 0 && item.documents.sort(function (first, last) {
       return last.createdAt - first.createdAt;
     }) && /*#__PURE__*/_react["default"].createElement(_reflexbox.Flex, {
       flexDirection: "column",
@@ -216,17 +218,17 @@ var DemandDetailing = function DemandDetailing(_ref) {
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 82,
+        lineNumber: 83,
         columnNumber: 21
       }
     }, /*#__PURE__*/_react["default"].createElement(_Typography["default"], {
-      fontSize: [1, 2, 3],
+      fontSize: 1,
       color: "lightGrey",
-      fontWeight: 500,
+      fontWeight: 'bold',
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 83,
+        lineNumber: 84,
         columnNumber: 23
       }
     }, "Anexos:"), item.documents.map(function (file) {
@@ -241,10 +243,10 @@ var DemandDetailing = function DemandDetailing(_ref) {
         __self: _this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 87,
+          lineNumber: 88,
           columnNumber: 25
         }
-      }, file.name, console.log(file));
+      }, file.name);
     }))));
   }))));
 };
