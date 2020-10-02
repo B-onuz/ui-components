@@ -38,26 +38,40 @@ export const MultiColorsControl = () => (
 )
 
 export const CardButton = () => (
-  <Flex>
-    <Card
-      clickableCard
-      color={'primary'}
-      textColor={'#DDD'}
-      iconColor={'#DDD'}
-      title={'Demandas Pendentes'}
-      customIcon={serv_waiting}
-      cardBackground={'primary'}
-      mr={2}
-    />
-    <Card
-      clickableCard
-      reverseOrder
-      color={'primary'}
-      textColor={'#DDD'}
-      iconColor={'#DDD'}
-      title={'Demandas Pendentes'}
-      customIcon={serv_waiting}
-      cardBackground={'primary'}
-    />
-  </Flex>
+  <>
+    <Flex>
+      <Card
+        clickableCard
+        color={'primary'}
+        textColor={'#DDD'}
+        iconColor={'#DDD'}
+        title={'Demandas Pendentes'}
+        customIcon={serv_waiting}
+        cardBackground={'primary'}
+        mr={2}
+      />
+      <Card
+        clickableCard
+        reverseOrder
+        color={'primary'}
+        textColor={'#DDD'}
+        iconColor={'#DDD'}
+        title={'Demandas Pendentes'}
+        customIcon={serv_waiting}
+        cardBackground={'primary'}
+      />
+    </Flex>
+    <Box mt={[3]}>
+      <Card
+        clickableCard
+        reverseOrder
+        color={'primary'}
+        textColor={'#DDD'}
+        iconColor={'#DDD'}
+        title={'Demandas Pendentes'}
+        customIcon={serv_waiting}
+        cardBackground={'primary'}
+      />
+    </Box>
+  </>
 )
