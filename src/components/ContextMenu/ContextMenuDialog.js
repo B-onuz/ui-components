@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import styled from 'styled-components'
 import ReactDOM from 'react-dom'
+import Modal from '../Modal'
 
 const Dialog = styled.div`
   position: absolute;
@@ -84,6 +85,20 @@ const Dialog = styled.div`
     `
       }
     }}
+  }
+
+  @media only screen and (max-width: 500px) {
+    position: fixed;
+    margin: 0;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    padding: 20px 30px;
+
+    &::after {
+      display: none;
+    }
   }
 `
 
