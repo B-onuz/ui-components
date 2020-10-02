@@ -11,7 +11,7 @@ const Dialog = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 8px 16px;
+  padding: 10px 16px;
   background: #fff 0% 0% no-repeat padding-box;
   box-shadow: 0px 2px 6px #2c28281c;
 
