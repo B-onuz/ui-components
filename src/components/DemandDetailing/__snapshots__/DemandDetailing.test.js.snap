@@ -6,14 +6,16 @@ exports[`Should render DemandDetailing 1`] = `
   margin: 0;
   border-radius: 4px;
   border: 1px solid #DEDEDF;
-  padding: 64px;
   padding-top: 32px;
-  margin: 0;
 }
 
 .c1 legend {
   margin: 1em;
   padding: .3em;
+}
+
+.c0 {
+  padding-left: 64px;
 }
 
 .c0 legend {
@@ -29,6 +31,13 @@ exports[`Should render DemandDetailing 1`] = `
   -ms-flex-direction: column;
   flex-direction: column;
   border-left: 1px solid #dededf;
+}
+
+@media only screen and (max-width:500px) {
+  .c0 {
+    margin-left: 20px;
+    padding-left: 0;
+  }
 }
 
 <div

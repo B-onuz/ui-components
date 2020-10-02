@@ -15,6 +15,12 @@ const StyledDemandDetailing = styled.div`
   legend {
     font-size: 21px;
   }
+  padding-left: 64px;
+
+  @media only screen and (max-width: 500px) {
+    margin-left: 20px;
+    padding-left: 0;
+  }
 `
 
 const ContentWrapper = styled.div`
@@ -44,6 +50,10 @@ const TopicItem = styled.div`
   display: flex;
   flex-direction: column;
   padding-left: 52px;
+
+  @media only screen and (max-width: 500px) {
+    padding-left: 35px;
+  }
 `
 
 const getTopicClass = (value, parameter) => {
@@ -59,7 +69,7 @@ const getTopicClass = (value, parameter) => {
 const DemandDetailing = ({ children, reportTitle, reportKind, detailingData, ...rest }) => {
   return (
     <StyledDemandDetailing {...rest}>
-      <Fieldset legend={reportTitle} bordered p={5} pt={4} m={0}>
+      <Fieldset legend={reportTitle} bordered pt={4}>
         <ContentWrapper>
           {(detailingData || [])
             .sort((first, last) => last.createdAt - first.createdAt)
