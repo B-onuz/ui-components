@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import styled from 'styled-components'
 import ReactDOM from 'react-dom'
-import Modal from '../Modal'
 
 const Dialog = styled.div`
   position: absolute;
