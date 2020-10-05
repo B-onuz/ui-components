@@ -1,4 +1,4 @@
-/*! ui-components v2.20.1 */
+/*! ui-components v2.20.2 */
 (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
 		module.exports = factory(require("react"));
@@ -10023,6 +10023,7 @@ var colors = {
   pink: '#e03997',
   brown: '#a5673f',
   grey: '#767676',
+  textGrey: '#8D8D8D',
   lightGrey: '#6D6D6D',
   mediumGrey: '#838383',
   darkGrey: '#9A9A9A',
@@ -12017,7 +12018,7 @@ function _templateObject8() {
 }
 
 function _templateObject7() {
-  var data = Table_taggedTemplateLiteralLoose(["\n  ", "\n  padding: 13px 40px;\n  @media only screen and (max-width: 500px) {\n    padding: 12px 8px;\n  }\n"]);
+  var data = Table_taggedTemplateLiteralLoose(["\n  ", "\n  padding: 13px 40px;\n  @media only screen and (max-width: 500px) {\n    padding: 12px 8px;\n    text-align: center;\n  }\n"]);
 
   _templateObject7 = function _templateObject7() {
     return data;
@@ -12037,7 +12038,7 @@ function _templateObject6() {
 }
 
 function Table_templateObject5() {
-  var data = Table_taggedTemplateLiteralLoose(["\n  /* padding: 13px 40px; */\n  @media only screen and (max-width: 500px) {\n    height: 100%;\n    display: flex;\n    align-items: center;\n    justify-content: space-between;\n    min-width: 150px;\n    font-size: 14px;\n  }\n"]);
+  var data = Table_taggedTemplateLiteralLoose(["\n  /* padding: 13px 40px; */\n  @media only screen and (max-width: 500px) {\n    min-width: 150px;\n    font-size: 14px;\n  }\n"]);
 
   Table_templateObject5 = function _templateObject5() {
     return data;
@@ -12057,7 +12058,7 @@ function Table_templateObject4() {
 }
 
 function Table_templateObject3() {
-  var data = Table_taggedTemplateLiteralLoose(["\n  text-transform: uppercase;\n  font-size: 0.8em;\n  color: #838383;\n  font-weight: 400;\n  padding: 1em;\n  position: relative;\n  position: sticky;\n  z-index: 2;\n  top: 0;\n  background: #f1f3f8;\n  ", "\n  ", "\n  padding: 13px 40px;\n  ", "\n  ", "\n  @media only screen and (max-width: 500px) {\n    padding: 13px;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n  }\n"]);
+  var data = Table_taggedTemplateLiteralLoose(["\n  text-transform: uppercase;\n  font-size: 0.8em;\n  color: #838383;\n  font-weight: 400;\n  padding: 1em;\n  position: relative;\n  position: sticky;\n  z-index: 2;\n  top: 0;\n  background: #f1f3f8;\n  ", "\n  ", "\n  padding: 13px 40px;\n  ", "\n  ", "\n"]);
 
   Table_templateObject3 = function _templateObject3() {
     return data;
@@ -12067,7 +12068,7 @@ function Table_templateObject3() {
 }
 
 function Table_templateObject2() {
-  var data = Table_taggedTemplateLiteralLoose(["\n  background: #f1f3f8;\n  display: table-header-group;\n  @media only screen and (max-width: 500px) {\n    display: flex;\n    justify-content: center;\n    z-index: 1;\n  }\n"]);
+  var data = Table_taggedTemplateLiteralLoose(["\n  background: #f1f3f8;\n  display: table-header-group;\n"]);
 
   Table_templateObject2 = function _templateObject2() {
     return data;
@@ -22213,7 +22214,7 @@ function formatDate(date) {
 function DemandDetailing_objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 
 function DemandDetailing_templateObject5() {
-  var data = DemandDetailing_taggedTemplateLiteralLoose(["\n  display: flex;\n  flex-direction: column;\n  padding-left: 52px;\n\n  @media only screen and (max-width: 500px) {\n    padding-left: 35px;\n  }\n"]);
+  var data = DemandDetailing_taggedTemplateLiteralLoose(["\n  display: flex;\n  flex-direction: column;\n  padding-left: 52px;\n\n  @media only screen and (max-width: 500px) {\n    padding-left: 30px;\n  }\n"]);
 
   DemandDetailing_templateObject5 = function _templateObject5() {
     return data;
@@ -22223,7 +22224,7 @@ function DemandDetailing_templateObject5() {
 }
 
 function DemandDetailing_templateObject4() {
-  var data = DemandDetailing_taggedTemplateLiteralLoose(["\n  margin-bottom: 28px;\n  margin-left: 38px;\n  &.mainTopic {\n    margin-left: -20px;\n  }\n  &.lastTopic {\n    margin-bottom: 0;\n  }\n"]);
+  var data = DemandDetailing_taggedTemplateLiteralLoose(["\n  margin-bottom: 28px;\n  margin-left: 38px;\n  &.mainTopic {\n    margin-left: -20px;\n  }\n  &.lastTopic {\n    margin-bottom: 0;\n  }\n\n  @media only screen and (max-width: 500px) {\n    margin-left: 10px;\n  }\n"]);
 
   DemandDetailing_templateObject4 = function _templateObject4() {
     return data;
@@ -22243,7 +22244,7 @@ function DemandDetailing_templateObject3() {
 }
 
 function DemandDetailing_templateObject2() {
-  var data = DemandDetailing_taggedTemplateLiteralLoose(["\n  ", "\n  display: flex;\n  flex-direction: column;\n  border-left: 1px solid #dededf;\n"]);
+  var data = DemandDetailing_taggedTemplateLiteralLoose(["\n  ", "\n  display: flex;\n  flex-direction: column;\n  border-left: 1px solid #dededf;\n  margin-bottom: 40px;\n"]);
 
   DemandDetailing_templateObject2 = function _templateObject2() {
     return data;
@@ -22253,7 +22254,7 @@ function DemandDetailing_templateObject2() {
 }
 
 function DemandDetailing_templateObject() {
-  var data = DemandDetailing_taggedTemplateLiteralLoose(["\n  ", "\n  ", "\n  legend {\n    font-size: 21px;\n  }\n  padding-left: 64px;\n\n  @media only screen and (max-width: 500px) {\n    margin-left: 20px;\n    padding-left: 0;\n  }\n"]);
+  var data = DemandDetailing_taggedTemplateLiteralLoose(["\n  ", "\n  ", "\n  legend {\n    font-size: 21px;\n  }\n  @media only screen and (max-width: 500px) {\n    margin-left: 20px;\n    padding-left: 0px;\n  }\n"]);
 
   DemandDetailing_templateObject = function _templateObject() {
     return data;
@@ -22300,7 +22301,8 @@ var DemandDetailing_DemandDetailing = function DemandDetailing(_ref) {
   return /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(StyledDemandDetailing, rest, /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(components_Fieldset, {
     legend: reportTitle,
     bordered: true,
-    pt: 4
+    pt: 4,
+    pl: ['30px', '40px', '40px', '40px']
   }, /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(ContentWrapper, null, (detailingData || []).sort(function (first, last) {
     return last.createdAt - first.createdAt;
   }).map(function (item, index) {
