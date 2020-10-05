@@ -9,19 +9,14 @@ const StyledTable = styled.table`
   position: relative;
   border-collapse: collapse;
   width: 100%;
-  @media only screen and (max-width: 500px) {
-    display: flex;
-  }
 `
 
 const TableHead = styled.thead`
   background: #f1f3f8;
   display: table-header-group;
   @media only screen and (max-width: 500px) {
-    width: 175px;
     display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: center;
     z-index: 1;
   }
 `
@@ -60,6 +55,9 @@ const TableHeader = styled.th`
   `}
   @media only screen and (max-width: 500px) {
     padding: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 `
 
@@ -146,7 +144,6 @@ const TableRow = styled.tr`
   @media only screen and (max-width: 500px) {
     height: 100%;
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: space-between;
     min-width: 150px;
@@ -207,10 +204,6 @@ const TableBody = styled.tbody`
     &:nth-child(odd) {
       background-color: #fff;
     }
-  }
-  @media only screen and (max-width: 500px) {
-    display: flex;
-    overflow-x: scroll;
   }
 `
 
