@@ -162,6 +162,7 @@ const TableData = styled.td`
   padding: 13px 40px;
   @media only screen and (max-width: 500px) {
     padding: 12px 8px;
+    text-align: center;
   }
 `
 
