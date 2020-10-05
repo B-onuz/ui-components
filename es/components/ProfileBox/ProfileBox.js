@@ -16,7 +16,7 @@ var _Button = _interopRequireDefault(require("../Button"));
 var _Typography = _interopRequireDefault(require("../Typography"));
 
 var _this = void 0,
-    _jsxFileName = "/Users/master/projects/bonuz/ui-components/src/components/ProfileBox/ProfileBox.js";
+    _jsxFileName = "/home/nicolasgarcia/Documents/Kazap/ui-components/src/components/ProfileBox/ProfileBox.js";
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 

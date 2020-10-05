@@ -1,4 +1,4 @@
-/*! ui-components v2.20.0 */
+/*! ui-components v2.20.1 */
 (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
 		module.exports = factory(require("react"));
@@ -11987,7 +11987,7 @@ var Wrapper = styled_components_browser_esm["default"].div(PaceLoading_templateO
 function Table_objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 
 function _templateObject10() {
-  var data = Table_taggedTemplateLiteralLoose(["\n  position: relative;\n  display: table-row-group;\n  & > ", " {\n    background-color: #f8fafc;\n    &:nth-child(odd) {\n      background-color: #fff;\n    }\n  }\n  @media only screen and (max-width: 500px) {\n    display: flex;\n    overflow-x: scroll;\n  }\n"]);
+  var data = Table_taggedTemplateLiteralLoose(["\n  position: relative;\n  display: table-row-group;\n  & > ", " {\n    background-color: #f8fafc;\n    &:nth-child(odd) {\n      background-color: #fff;\n    }\n  }\n"]);
 
   _templateObject10 = function _templateObject10() {
     return data;
@@ -12037,7 +12037,7 @@ function _templateObject6() {
 }
 
 function Table_templateObject5() {
-  var data = Table_taggedTemplateLiteralLoose(["\n  /* padding: 13px 40px; */\n  @media only screen and (max-width: 500px) {\n    height: 100%;\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    justify-content: space-between;\n    min-width: 150px;\n    font-size: 14px;\n  }\n"]);
+  var data = Table_taggedTemplateLiteralLoose(["\n  /* padding: 13px 40px; */\n  @media only screen and (max-width: 500px) {\n    height: 100%;\n    display: flex;\n    align-items: center;\n    justify-content: space-between;\n    min-width: 150px;\n    font-size: 14px;\n  }\n"]);
 
   Table_templateObject5 = function _templateObject5() {
     return data;
@@ -12057,7 +12057,7 @@ function Table_templateObject4() {
 }
 
 function Table_templateObject3() {
-  var data = Table_taggedTemplateLiteralLoose(["\n  text-transform: uppercase;\n  font-size: 0.8em;\n  color: #838383;\n  font-weight: 400;\n  padding: 1em;\n  position: relative;\n  position: sticky;\n  z-index: 2;\n  top: 0;\n  background: #f1f3f8;\n  ", "\n  ", "\n  padding: 13px 40px;\n  ", "\n  ", "\n  @media only screen and (max-width: 500px) {\n    padding: 13px;\n  }\n"]);
+  var data = Table_taggedTemplateLiteralLoose(["\n  text-transform: uppercase;\n  font-size: 0.8em;\n  color: #838383;\n  font-weight: 400;\n  padding: 1em;\n  position: relative;\n  position: sticky;\n  z-index: 2;\n  top: 0;\n  background: #f1f3f8;\n  ", "\n  ", "\n  padding: 13px 40px;\n  ", "\n  ", "\n  @media only screen and (max-width: 500px) {\n    padding: 13px;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n  }\n"]);
 
   Table_templateObject3 = function _templateObject3() {
     return data;
@@ -12067,7 +12067,7 @@ function Table_templateObject3() {
 }
 
 function Table_templateObject2() {
-  var data = Table_taggedTemplateLiteralLoose(["\n  background: #f1f3f8;\n  display: table-header-group;\n  @media only screen and (max-width: 500px) {\n    width: 175px;\n    display: flex;\n    flex-direction: column;\n    justify-content: space-evenly;\n    z-index: 1;\n  }\n"]);
+  var data = Table_taggedTemplateLiteralLoose(["\n  background: #f1f3f8;\n  display: table-header-group;\n  @media only screen and (max-width: 500px) {\n    display: flex;\n    justify-content: center;\n    z-index: 1;\n  }\n"]);
 
   Table_templateObject2 = function _templateObject2() {
     return data;
@@ -12077,7 +12077,7 @@ function Table_templateObject2() {
 }
 
 function Table_templateObject() {
-  var data = Table_taggedTemplateLiteralLoose(["\n  border-spacing: 0;\n  position: relative;\n  border-collapse: collapse;\n  width: 100%;\n  @media only screen and (max-width: 500px) {\n    display: flex;\n  }\n"]);
+  var data = Table_taggedTemplateLiteralLoose(["\n  border-spacing: 0;\n  position: relative;\n  border-collapse: collapse;\n  width: 100%;\n"]);
 
   Table_templateObject = function _templateObject() {
     return data;
@@ -12440,7 +12440,7 @@ var StyledAlert = styled_components_browser_esm["default"].div(Alert_templateObj
   return props.fullWidth && 'width: 100%' || '';
 }, function (_ref) {
   var noBorder = _ref.noBorder;
-  return !!noBorder ? 'none' : 'border: 1px solid';
+  return !!noBorder ? 'none' : '1px solid';
 }, function (_ref2) {
   var shortAlert = _ref2.shortAlert;
   return !!shortAlert ? 0 : '12px 24px';
@@ -18733,7 +18733,7 @@ function ContextMenuDialog_templateObject2() {
 }
 
 function ContextMenuDialog_templateObject() {
-  var data = ContextMenuDialog_taggedTemplateLiteralLoose(["\n  position: absolute;\n  border-radius: 12px;\n  opacity: ", ";\n  z-index: ", ";\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  padding: 8px 16px;\n  background: #fff 0% 0% no-repeat padding-box;\n  box-shadow: 0px 2px 6px #2c28281c;\n\n  ", "\n  &::after {\n    content: '';\n    width: 1em;\n    height: 1em;\n    position: absolute;\n    box-shadow: 1px 2px 2px -1px #2c28281c;\n    background: #fff 0% 0%;\n    ", "\n  }\n"]);
+  var data = ContextMenuDialog_taggedTemplateLiteralLoose(["\n  position: absolute;\n  border-radius: 12px;\n  opacity: ", ";\n  z-index: ", ";\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  padding: 10px 16px;\n  background: #fff 0% 0% no-repeat padding-box;\n  box-shadow: 0px 2px 6px #2c28281c;\n\n  ", "\n  &::after {\n    content: '';\n    width: 1em;\n    height: 1em;\n    position: absolute;\n    box-shadow: 1px 2px 2px -1px #2c28281c;\n    background: #fff 0% 0%;\n    ", "\n  }\n\n  @media only screen and (max-width: 500px) {\n    position: fixed;\n    margin: 0;\n    top: 50%;\n    left: 50%;\n    margin-right: -50%;\n    transform: translate(-50%, -50%);\n    padding: 20px 30px;\n\n    &::after {\n      display: none;\n    }\n  }\n"]);
 
   ContextMenuDialog_templateObject = function _templateObject() {
     return data;
@@ -18901,138 +18901,6 @@ var ContextMenuDialog_ContextMenuDialog = function ContextMenuDialog(_ref5) {
 };
 
 /* harmony default export */ var ContextMenu_ContextMenuDialog = (ContextMenuDialog_ContextMenuDialog);
-// CONCATENATED MODULE: ./src/components/ContextMenu/ContextMenu.js
-function ContextMenu_extends() { ContextMenu_extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return ContextMenu_extends.apply(this, arguments); }
-
-function ContextMenu_objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
-
-function ContextMenu_templateObject4() {
-  var data = ContextMenu_taggedTemplateLiteralLoose(["\n  color: ", ";\n"]);
-
-  ContextMenu_templateObject4 = function _templateObject4() {
-    return data;
-  };
-
-  return data;
-}
-
-function ContextMenu_templateObject3() {
-  var data = ContextMenu_taggedTemplateLiteralLoose(["\n  width: 100%;\n  margin: 8px 0;\n  border: 1px solid #f1f1f3;\n"]);
-
-  ContextMenu_templateObject3 = function _templateObject3() {
-    return data;
-  };
-
-  return data;
-}
-
-function ContextMenu_templateObject2() {
-  var data = ContextMenu_taggedTemplateLiteralLoose(["\n  width: 2em;\n  height: 2em;\n  border-radius: 50%;\n  background-color: #f5f5f5;\n  box-shadow: 0px 2px 3px #2c282848;\n  border: none;\n  &:hover {\n    cursor: pointer;\n  }\n  &:focus {\n    outline: none;\n  }\n"]);
-
-  ContextMenu_templateObject2 = function _templateObject2() {
-    return data;
-  };
-
-  return data;
-}
-
-function ContextMenu_templateObject() {
-  var data = ContextMenu_taggedTemplateLiteralLoose(["\n  ", "\n  ", "\n  position: relative;\n  display: flex;\n  .contextButton {\n    width: 2em;\n    height: 2em;\n  }\n"]);
-
-  ContextMenu_templateObject = function _templateObject() {
-    return data;
-  };
-
-  return data;
-}
-
-function ContextMenu_taggedTemplateLiteralLoose(strings, raw) { if (!raw) { raw = strings.slice(0); } strings.raw = raw; return strings; }
-
-
-
-
-
-
-
-
-var StyledContextMenu = styled_components_browser_esm["default"].div(ContextMenu_templateObject(), index_esm["color"], index_esm["space"]);
-var ContextMenuToogleButton = styled_components_browser_esm["default"].button(ContextMenu_templateObject2());
-var Divider = styled_components_browser_esm["default"].hr(ContextMenu_templateObject3());
-var ContextMenu_Icon = Object(styled_components_browser_esm["default"])(FontAwesomeIcon)(ContextMenu_templateObject4(), function (_ref) {
-  var theme = _ref.theme,
-      buttonIcon = _ref.buttonIcon;
-  return !buttonIcon ? theme.colors.darkGrey : '';
-});
-
-var ContextMenu_ContextMenu = function ContextMenu(_ref2) {
-  var children = _ref2.children,
-      direction = _ref2.direction,
-      contextMenuActions = _ref2.contextMenuActions,
-      contextFunctions = _ref2.contextFunctions,
-      buttonIcon = _ref2.buttonIcon,
-      rest = ContextMenu_objectWithoutPropertiesLoose(_ref2, ["children", "direction", "contextMenuActions", "contextFunctions", "buttonIcon"]);
-
-  var _useState = Object(external_root_React_commonjs2_react_commonjs_react_amd_react_["useState"])(false),
-      isOpen = _useState[0],
-      setIsOpen = _useState[1];
-
-  var wrapperRef = Object(external_root_React_commonjs2_react_commonjs_react_amd_react_["useRef"])(null);
-  var buttonRef = Object(external_root_React_commonjs2_react_commonjs_react_amd_react_["useRef"])(null);
-
-  var onClose = function onClose() {
-    setIsOpen(false);
-    return true;
-  };
-
-  return /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(StyledContextMenu, ContextMenu_extends({
-    ref: wrapperRef
-  }, rest), contextFunctions ? /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement("div", {
-    ref: buttonRef
-  }, /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(components_Button, {
-    p: 0,
-    className: "contextButton",
-    onClick: function onClick() {
-      return setIsOpen(function (last) {
-        return !last;
-      });
-    },
-    color: 'primary'
-  }, /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(ContextMenu_Icon, {
-    buttonIcon: true,
-    icon: buttonIcon
-  }))) : /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(ContextMenuToogleButton, {
-    ref: buttonRef,
-    onClick: function onClick() {
-      return setIsOpen(function (last) {
-        return !last;
-      });
-    }
-  }, /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(ContextMenu_Icon, {
-    icon: faEllipsisH
-  })), /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(ContextMenu_ContextMenuDialog, {
-    contextFunctions: contextFunctions,
-    isOpen: isOpen,
-    onClose: onClose,
-    buttonRef: buttonRef,
-    direction: direction
-  }, (contextMenuActions || []).map(function (action, index) {
-    return /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.Fragment, null, /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(components_Button, {
-      linkButton: true,
-      color: 'primary',
-      onClick: function onClick() {
-        return onClose() && action.buttonFunction();
-      }
-    }, action.text), index + 1 !== contextMenuActions.length ? /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(Divider, null) : null);
-  })));
-};
-
-ContextMenu_ContextMenu.defaultProps = {
-  direction: 'left'
-};
-/* harmony default export */ var components_ContextMenu_ContextMenu = (ContextMenu_ContextMenu);
-// CONCATENATED MODULE: ./src/components/ContextMenu/index.js
-
-/* harmony default export */ var components_ContextMenu = (components_ContextMenu_ContextMenu);
 // CONCATENATED MODULE: ./node_modules/@babel/runtime/helpers/esm/extends.js
 function extends_extends() {
   extends_extends = Object.assign || function (target) {
@@ -21226,6 +21094,175 @@ var Modal_Modal = function Modal(_ref) {
 // CONCATENATED MODULE: ./src/components/Modal/index.js
 
 /* harmony default export */ var components_Modal = (components_Modal_Modal);
+// CONCATENATED MODULE: ./src/components/ContextMenu/ContextMenu.js
+function ContextMenu_extends() { ContextMenu_extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return ContextMenu_extends.apply(this, arguments); }
+
+function ContextMenu_objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
+
+function ContextMenu_templateObject5() {
+  var data = ContextMenu_taggedTemplateLiteralLoose(["\n  color: ", ";\n"]);
+
+  ContextMenu_templateObject5 = function _templateObject5() {
+    return data;
+  };
+
+  return data;
+}
+
+function ContextMenu_templateObject4() {
+  var data = ContextMenu_taggedTemplateLiteralLoose(["\n  width: 100%;\n  margin: 8px 0;\n  border: 1px solid #f1f1f3;\n"]);
+
+  ContextMenu_templateObject4 = function _templateObject4() {
+    return data;
+  };
+
+  return data;
+}
+
+function ContextMenu_templateObject3() {
+  var data = ContextMenu_taggedTemplateLiteralLoose(["\n  width: 2em;\n  height: 2em;\n  border-radius: 50%;\n  background-color: #f5f5f5;\n  box-shadow: 0px 2px 3px #2c282848;\n  border: none;\n  &:hover {\n    cursor: pointer;\n  }\n  &:focus {\n    outline: none;\n  }\n"]);
+
+  ContextMenu_templateObject3 = function _templateObject3() {
+    return data;
+  };
+
+  return data;
+}
+
+function ContextMenu_templateObject2() {
+  var data = ContextMenu_taggedTemplateLiteralLoose(["\n  display: flex;\n  flex-direction: column;\n  padding: 20px 20px;\n"]);
+
+  ContextMenu_templateObject2 = function _templateObject2() {
+    return data;
+  };
+
+  return data;
+}
+
+function ContextMenu_templateObject() {
+  var data = ContextMenu_taggedTemplateLiteralLoose(["\n  ", "\n  ", "\n  position: relative;\n  display: flex;\n  .contextButton {\n    width: 2em;\n    height: 2em;\n  }\n"]);
+
+  ContextMenu_templateObject = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+
+function ContextMenu_taggedTemplateLiteralLoose(strings, raw) { if (!raw) { raw = strings.slice(0); } strings.raw = raw; return strings; }
+
+
+
+
+
+
+
+
+
+
+var StyledContextMenu = styled_components_browser_esm["default"].div(ContextMenu_templateObject(), index_esm["color"], index_esm["space"]);
+var ModalWrapper = styled_components_browser_esm["default"].div(ContextMenu_templateObject2());
+var ContextMenuToogleButton = styled_components_browser_esm["default"].button(ContextMenu_templateObject3());
+var Divider = styled_components_browser_esm["default"].hr(ContextMenu_templateObject4());
+var ContextMenu_Icon = Object(styled_components_browser_esm["default"])(FontAwesomeIcon)(ContextMenu_templateObject5(), function (_ref) {
+  var theme = _ref.theme,
+      buttonIcon = _ref.buttonIcon;
+  return !buttonIcon ? theme.colors.darkGrey : '';
+});
+
+var ContextMenu_ContextMenu = function ContextMenu(_ref2) {
+  var children = _ref2.children,
+      direction = _ref2.direction,
+      contextMenuActions = _ref2.contextMenuActions,
+      contextFunctions = _ref2.contextFunctions,
+      buttonIcon = _ref2.buttonIcon,
+      rest = ContextMenu_objectWithoutPropertiesLoose(_ref2, ["children", "direction", "contextMenuActions", "contextFunctions", "buttonIcon"]);
+
+  var _useState = Object(external_root_React_commonjs2_react_commonjs_react_amd_react_["useState"])(false),
+      isOpen = _useState[0],
+      setIsOpen = _useState[1];
+
+  var wrapperRef = Object(external_root_React_commonjs2_react_commonjs_react_amd_react_["useRef"])(null);
+  var buttonRef = Object(external_root_React_commonjs2_react_commonjs_react_amd_react_["useRef"])(null);
+
+  var _useModal = hooks_useModal(),
+      isOpenResponsiveModal = _useModal.isOpen,
+      openResponsiveModal = _useModal.openModal,
+      closeResponsiveModal = _useModal.closeModal,
+      responsiveModalParams = _useModal.params;
+
+  var onClose = function onClose() {
+    setIsOpen(false);
+    closeResponsiveModal();
+    return true;
+  };
+
+  Object(external_root_React_commonjs2_react_commonjs_react_amd_react_["useEffect"])(function () {
+    if (isOpen) {
+      openResponsiveModal();
+    }
+  });
+  var needResponsive = screen.width >= 500 ? false : true;
+  return /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(StyledContextMenu, ContextMenu_extends({
+    ref: wrapperRef
+  }, rest), contextFunctions ? /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement("div", {
+    ref: buttonRef
+  }, /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(components_Button, {
+    p: 0,
+    className: "contextButton",
+    onClick: function onClick() {
+      return setIsOpen(function (last) {
+        return !last;
+      });
+    },
+    color: 'primary'
+  }, /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(ContextMenu_Icon, {
+    buttonIcon: true,
+    icon: buttonIcon
+  }))) : /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(ContextMenuToogleButton, {
+    ref: buttonRef,
+    onClick: function onClick() {
+      return setIsOpen(function (last) {
+        return !last;
+      });
+    }
+  }, /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(ContextMenu_Icon, {
+    icon: faEllipsisH
+  })), needResponsive ? /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.Fragment, null, /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(components_Modal, {
+    open: isOpenResponsiveModal,
+    onClose: onClose
+  }, /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(ModalWrapper, null, (contextMenuActions || []).map(function (action, index) {
+    return /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.Fragment, null, /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(components_Button, {
+      linkButton: true,
+      color: 'primary',
+      onClick: function onClick() {
+        return onClose() && action.buttonFunction();
+      }
+    }, action.text), index + 1 !== contextMenuActions.length ? /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(Divider, null) : null);
+  })))) : /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(ContextMenu_ContextMenuDialog, {
+    contextFunctions: contextFunctions,
+    isOpen: isOpen,
+    onClose: onClose,
+    buttonRef: buttonRef,
+    direction: direction
+  }, (contextMenuActions || []).map(function (action, index) {
+    return /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.Fragment, null, /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(components_Button, {
+      linkButton: true,
+      color: 'primary',
+      onClick: function onClick() {
+        return onClose() && action.buttonFunction();
+      }
+    }, action.text), index + 1 !== contextMenuActions.length ? /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(Divider, null) : null);
+  })));
+};
+
+ContextMenu_ContextMenu.defaultProps = {
+  direction: 'left'
+};
+/* harmony default export */ var components_ContextMenu_ContextMenu = (ContextMenu_ContextMenu);
+// CONCATENATED MODULE: ./src/components/ContextMenu/index.js
+
+/* harmony default export */ var components_ContextMenu = (components_ContextMenu_ContextMenu);
 // CONCATENATED MODULE: ./src/components/BreadCrumb/BreadCrumb.js
 function BreadCrumb_extends() { BreadCrumb_extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return BreadCrumb_extends.apply(this, arguments); }
 
@@ -21771,7 +21808,7 @@ function Card_templateObject2() {
 }
 
 function Card_templateObject() {
-  var data = Card_taggedTemplateLiteralLoose(["\n  color: ", ";\n  width: 100%;\n  max-width: 192px;\n  min-height: 84px;\n  display: flex;\n  flex-direction: ", ";\n  justify-content: space-between;\n  position: relative;\n  box-shadow: 3px 3px 6px #00000029;\n  border: 3px solid;\n  border-radius: 12px;\n  padding: ", ";\n  overflow: ", ";\n  @media only screen and (max-width: 500px) {\n    max-width: 165px;\n    min-height: 84px;\n    padding: ", ";\n    justify-content: center;\n    text-align: center;\n  }\n\n  .icon {\n    margin-right: ", ";\n    font-size: 40px;\n    @media only screen and (max-width: 500px) {\n      font-size: 30px;\n      margin: 0;\n      margin-bottom: 6px;\n    }\n  }\n"]);
+  var data = Card_taggedTemplateLiteralLoose(["\n  color: ", ";\n  width: 100%;\n  max-width: 192px;\n  min-height: 84px;\n  display: flex;\n  flex-direction: ", ";\n  justify-content: space-between;\n  position: relative;\n  box-shadow: 3px 3px 6px #00000029;\n  border: 3px solid;\n  border-radius: 12px;\n  padding: ", ";\n  overflow: ", ";\n  @media only screen and (max-width: 500px) {\n    max-width: none;\n    min-height: 84px;\n    padding: ", ";\n    justify-content: center;\n    text-align: center;\n  }\n\n  .icon {\n    margin-right: ", ";\n    font-size: 40px;\n    @media only screen and (max-width: 500px) {\n      font-size: 30px;\n      margin: 0;\n      margin-bottom: 6px;\n    }\n  }\n"]);
 
   Card_templateObject = function _templateObject() {
     return data;
@@ -22176,7 +22213,7 @@ function formatDate(date) {
 function DemandDetailing_objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 
 function DemandDetailing_templateObject5() {
-  var data = DemandDetailing_taggedTemplateLiteralLoose(["\n  display: flex;\n  flex-direction: column;\n  padding-left: 52px;\n"]);
+  var data = DemandDetailing_taggedTemplateLiteralLoose(["\n  display: flex;\n  flex-direction: column;\n  padding-left: 52px;\n\n  @media only screen and (max-width: 500px) {\n    padding-left: 35px;\n  }\n"]);
 
   DemandDetailing_templateObject5 = function _templateObject5() {
     return data;
@@ -22216,7 +22253,7 @@ function DemandDetailing_templateObject2() {
 }
 
 function DemandDetailing_templateObject() {
-  var data = DemandDetailing_taggedTemplateLiteralLoose(["\n  ", "\n  ", "\n  legend {\n    font-size: 21px;\n  }\n"]);
+  var data = DemandDetailing_taggedTemplateLiteralLoose(["\n  ", "\n  ", "\n  legend {\n    font-size: 21px;\n  }\n  padding-left: 64px;\n\n  @media only screen and (max-width: 500px) {\n    margin-left: 20px;\n    padding-left: 0;\n  }\n"]);
 
   DemandDetailing_templateObject = function _templateObject() {
     return data;
@@ -22263,9 +22300,7 @@ var DemandDetailing_DemandDetailing = function DemandDetailing(_ref) {
   return /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(StyledDemandDetailing, rest, /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(components_Fieldset, {
     legend: reportTitle,
     bordered: true,
-    p: 5,
-    pt: 4,
-    m: 0
+    pt: 4
   }, /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(ContentWrapper, null, (detailingData || []).sort(function (first, last) {
     return last.createdAt - first.createdAt;
   }).map(function (item, index) {

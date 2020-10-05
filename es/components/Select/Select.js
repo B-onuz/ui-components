@@ -18,7 +18,7 @@ var _variants = require("./variants");
 var _color = _interopRequireDefault(require("color"));
 
 var _this = void 0,
-    _jsxFileName = "/Users/master/projects/bonuz/ui-components/src/components/Select/Select.js";
+    _jsxFileName = "/home/nicolasgarcia/Documents/Kazap/ui-components/src/components/Select/Select.js";
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 

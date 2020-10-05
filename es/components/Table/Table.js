@@ -16,7 +16,7 @@ var _styledSystem = require("styled-system");
 var _PaceLoading = _interopRequireDefault(require("./PaceLoading"));
 
 var _this = void 0,
-    _jsxFileName = "/Users/master/projects/bonuz/ui-components/src/components/Table/Table.js";
+    _jsxFileName = "/home/nicolasgarcia/Documents/Kazap/ui-components/src/components/Table/Table.js";
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
@@ -25,7 +25,7 @@ function _extends() { _extends = Object.assign || function (target) { for (var i
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 
 function _templateObject10() {
-  var data = _taggedTemplateLiteralLoose(["\n  position: relative;\n  display: table-row-group;\n  & > ", " {\n    background-color: #f8fafc;\n    &:nth-child(odd) {\n      background-color: #fff;\n    }\n  }\n  @media only screen and (max-width: 500px) {\n    display: flex;\n    overflow-x: scroll;\n  }\n"]);
+  var data = _taggedTemplateLiteralLoose(["\n  position: relative;\n  display: table-row-group;\n  & > ", " {\n    background-color: #f8fafc;\n    &:nth-child(odd) {\n      background-color: #fff;\n    }\n  }\n"]);
 
   _templateObject10 = function _templateObject10() {
     return data;
@@ -75,7 +75,7 @@ function _templateObject6() {
 }
 
 function _templateObject5() {
-  var data = _taggedTemplateLiteralLoose(["\n  /* padding: 13px 40px; */\n  @media only screen and (max-width: 500px) {\n    height: 100%;\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    justify-content: space-between;\n    min-width: 150px;\n    font-size: 14px;\n  }\n"]);
+  var data = _taggedTemplateLiteralLoose(["\n  /* padding: 13px 40px; */\n  @media only screen and (max-width: 500px) {\n    height: 100%;\n    display: flex;\n    align-items: center;\n    justify-content: space-between;\n    min-width: 150px;\n    font-size: 14px;\n  }\n"]);
 
   _templateObject5 = function _templateObject5() {
     return data;
@@ -95,7 +95,7 @@ function _templateObject4() {
 }
 
 function _templateObject3() {
-  var data = _taggedTemplateLiteralLoose(["\n  text-transform: uppercase;\n  font-size: 0.8em;\n  color: #838383;\n  font-weight: 400;\n  padding: 1em;\n  position: relative;\n  position: sticky;\n  z-index: 2;\n  top: 0;\n  background: #f1f3f8;\n  ", "\n  ", "\n  padding: 13px 40px;\n  ", "\n  ", "\n  @media only screen and (max-width: 500px) {\n    padding: 13px;\n  }\n"]);
+  var data = _taggedTemplateLiteralLoose(["\n  text-transform: uppercase;\n  font-size: 0.8em;\n  color: #838383;\n  font-weight: 400;\n  padding: 1em;\n  position: relative;\n  position: sticky;\n  z-index: 2;\n  top: 0;\n  background: #f1f3f8;\n  ", "\n  ", "\n  padding: 13px 40px;\n  ", "\n  ", "\n  @media only screen and (max-width: 500px) {\n    padding: 13px;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n  }\n"]);
 
   _templateObject3 = function _templateObject3() {
     return data;
@@ -105,7 +105,7 @@ function _templateObject3() {
 }
 
 function _templateObject2() {
-  var data = _taggedTemplateLiteralLoose(["\n  background: #f1f3f8;\n  display: table-header-group;\n  @media only screen and (max-width: 500px) {\n    width: 175px;\n    display: flex;\n    flex-direction: column;\n    justify-content: space-evenly;\n    z-index: 1;\n  }\n"]);
+  var data = _taggedTemplateLiteralLoose(["\n  background: #f1f3f8;\n  display: table-header-group;\n  @media only screen and (max-width: 500px) {\n    display: flex;\n    justify-content: center;\n    z-index: 1;\n  }\n"]);
 
   _templateObject2 = function _templateObject2() {
     return data;
@@ -115,7 +115,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteralLoose(["\n  border-spacing: 0;\n  position: relative;\n  border-collapse: collapse;\n  width: 100%;\n  @media only screen and (max-width: 500px) {\n    display: flex;\n  }\n"]);
+  var data = _taggedTemplateLiteralLoose(["\n  border-spacing: 0;\n  position: relative;\n  border-collapse: collapse;\n  width: 100%;\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -207,14 +207,14 @@ var Table = function Table(_ref10) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 232,
+      lineNumber: 225,
       columnNumber: 5
     }
   }), !!loading && /*#__PURE__*/_react["default"].createElement(_PaceLoading["default"], {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 233,
+      lineNumber: 226,
       columnNumber: 21
     }
   }), /*#__PURE__*/_react["default"].createElement(WrapperTable, {
@@ -222,28 +222,28 @@ var Table = function Table(_ref10) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 234,
+      lineNumber: 227,
       columnNumber: 7
     }
   }, /*#__PURE__*/_react["default"].createElement(StyledTable, {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 235,
+      lineNumber: 228,
       columnNumber: 9
     }
   }, /*#__PURE__*/_react["default"].createElement(TableHead, {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 236,
+      lineNumber: 229,
       columnNumber: 11
     }
   }, /*#__PURE__*/_react["default"].createElement(TableRow, {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 237,
+      lineNumber: 230,
       columnNumber: 13
     }
   }, (headers || []).map(function (item, index) {
@@ -259,14 +259,14 @@ var Table = function Table(_ref10) {
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 239,
+        lineNumber: 232,
         columnNumber: 17
       }
     }, /*#__PURE__*/_react["default"].createElement(TableHeaderSpan, {
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 247,
+        lineNumber: 240,
         columnNumber: 19
       }
     }, item.title, " ", item.sort && /*#__PURE__*/_react["default"].createElement(OrderArrow, {
@@ -275,7 +275,7 @@ var Table = function Table(_ref10) {
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 248,
+        lineNumber: 241,
         columnNumber: 48
       }
     })));
@@ -283,14 +283,14 @@ var Table = function Table(_ref10) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 254,
+      lineNumber: 247,
       columnNumber: 11
     }
   }, !(data || []).length && /*#__PURE__*/_react["default"].createElement(TableRow, {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 256,
+      lineNumber: 249,
       columnNumber: 15
     }
   }, /*#__PURE__*/_react["default"].createElement(TableData, {
@@ -301,7 +301,7 @@ var Table = function Table(_ref10) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 257,
+      lineNumber: 250,
       columnNumber: 17
     }
   }, !!loading ? 'Carregando...' : 'Nenhum registro encontrado')), (data || []).map(function (row, index) {
@@ -310,7 +310,7 @@ var Table = function Table(_ref10) {
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 263,
+        lineNumber: 256,
         columnNumber: 15
       }
     }, headers.map(function (header) {
@@ -321,7 +321,7 @@ var Table = function Table(_ref10) {
         __self: _this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 266,
+          lineNumber: 259,
           columnNumber: 21
         }
       }, /*#__PURE__*/_react["default"].createElement(header.cellComponent, {
@@ -334,7 +334,7 @@ var Table = function Table(_ref10) {
         __self: _this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 267,
+          lineNumber: 260,
           columnNumber: 23
         }
       })) : /*#__PURE__*/_react["default"].createElement(TableData, {
@@ -343,7 +343,7 @@ var Table = function Table(_ref10) {
         __self: _this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 270,
+          lineNumber: 263,
           columnNumber: 21
         }
       }, getDataByKey({

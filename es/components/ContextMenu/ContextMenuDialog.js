@@ -14,7 +14,7 @@ var _styledComponents = _interopRequireDefault(require("styled-components"));
 var _reactDom = _interopRequireDefault(require("react-dom"));
 
 var _this = void 0,
-    _jsxFileName = "/Users/master/projects/bonuz/ui-components/src/components/ContextMenu/ContextMenuDialog.js";
+    _jsxFileName = "/home/nicolasgarcia/Documents/Kazap/ui-components/src/components/ContextMenu/ContextMenuDialog.js";
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
@@ -37,7 +37,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteralLoose(["\n  position: absolute;\n  border-radius: 12px;\n  opacity: ", ";\n  z-index: ", ";\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  padding: 8px 16px;\n  background: #fff 0% 0% no-repeat padding-box;\n  box-shadow: 0px 2px 6px #2c28281c;\n\n  ", "\n  &::after {\n    content: '';\n    width: 1em;\n    height: 1em;\n    position: absolute;\n    box-shadow: 1px 2px 2px -1px #2c28281c;\n    background: #fff 0% 0%;\n    ", "\n  }\n"]);
+  var data = _taggedTemplateLiteralLoose(["\n  position: absolute;\n  border-radius: 12px;\n  opacity: ", ";\n  z-index: ", ";\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  padding: 10px 16px;\n  background: #fff 0% 0% no-repeat padding-box;\n  box-shadow: 0px 2px 6px #2c28281c;\n\n  ", "\n  &::after {\n    content: '';\n    width: 1em;\n    height: 1em;\n    position: absolute;\n    box-shadow: 1px 2px 2px -1px #2c28281c;\n    background: #fff 0% 0%;\n    ", "\n  }\n\n  @media only screen and (max-width: 500px) {\n    position: fixed;\n    margin: 0;\n    top: 50%;\n    left: 50%;\n    margin-right: -50%;\n    transform: translate(-50%, -50%);\n    padding: 20px 30px;\n\n    &::after {\n      display: none;\n    }\n  }\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -194,7 +194,7 @@ var ContextMenuDialog = function ContextMenuDialog(_ref5) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 165,
+      lineNumber: 179,
       columnNumber: 5
     }
   }, /*#__PURE__*/_react["default"].createElement(Dialog, _extends({
@@ -207,7 +207,7 @@ var ContextMenuDialog = function ContextMenuDialog(_ref5) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 166,
+      lineNumber: 180,
       columnNumber: 7
     }
   }))), $rootDialog);
