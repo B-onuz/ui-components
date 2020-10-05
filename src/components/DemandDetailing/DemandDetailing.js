@@ -15,11 +15,9 @@ const StyledDemandDetailing = styled.div`
   legend {
     font-size: 21px;
   }
-  padding-left: 64px;
-
   @media only screen and (max-width: 500px) {
     margin-left: 20px;
-    padding-left: 0;
+    padding-left: 0px;
   }
 `
 
@@ -28,6 +26,7 @@ const ContentWrapper = styled.div`
   display: flex;
   flex-direction: column;
   border-left: 1px solid #dededf;
+  margin-bottom: 40px;
 `
 
 const ReportBodyTitle = styled.h3`
@@ -44,6 +43,10 @@ const TopicItemWrapper = styled.div`
   &.lastTopic {
     margin-bottom: 0;
   }
+
+  @media only screen and (max-width: 500px) {
+    margin-left: 10px;
+  }
 `
 
 const TopicItem = styled.div`
@@ -52,7 +55,7 @@ const TopicItem = styled.div`
   padding-left: 52px;
 
   @media only screen and (max-width: 500px) {
-    padding-left: 35px;
+    padding-left: 30px;
   }
 `
 
@@ -69,7 +72,7 @@ const getTopicClass = (value, parameter) => {
 const DemandDetailing = ({ children, reportTitle, reportKind, detailingData, ...rest }) => {
   return (
     <StyledDemandDetailing {...rest}>
-      <Fieldset legend={reportTitle} bordered pt={4}>
+      <Fieldset legend={reportTitle} bordered pt={4} pl={['30px', '40px', '40px', '40px']}>
         <ContentWrapper>
           {(detailingData || [])
             .sort((first, last) => last.createdAt - first.createdAt)
