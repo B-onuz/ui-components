@@ -17,6 +17,7 @@ const colors = {
   pink: '#e03997',
   brown: '#a5673f',
   grey: '#767676',
+  textGrey: '#8D8D8D',
   lightGrey: '#6D6D6D',
   mediumGrey: '#838383',
   darkGrey: '#9A9A9A',

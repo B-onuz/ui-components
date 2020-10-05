@@ -14,11 +14,6 @@ const StyledTable = styled.table`
 const TableHead = styled.thead`
   background: #f1f3f8;
   display: table-header-group;
-  @media only screen and (max-width: 500px) {
-    display: flex;
-    justify-content: center;
-    z-index: 1;
-  }
 `
 
 const TableHeader = styled.th`
@@ -53,12 +48,6 @@ const TableHeader = styled.th`
     `
     text-align: ${align};
   `}
-  @media only screen and (max-width: 500px) {
-    padding: 13px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
 `
 
 const OrderArrow = styled.span`
@@ -142,10 +131,6 @@ const OrderArrow = styled.span`
 const TableRow = styled.tr`
   /* padding: 13px 40px; */
   @media only screen and (max-width: 500px) {
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     min-width: 150px;
     font-size: 14px;
   }
@@ -177,6 +162,7 @@ const TableData = styled.td`
   padding: 13px 40px;
   @media only screen and (max-width: 500px) {
     padding: 12px 8px;
+    text-align: center;
   }
 `
 

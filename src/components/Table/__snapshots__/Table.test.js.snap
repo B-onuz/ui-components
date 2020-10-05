@@ -202,74 +202,6 @@ exports[`Table changes the class when hovered 1`] = `
 }
 
 @media only screen and (max-width:500px) {
-  .c3 {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    z-index: 1;
-  }
-}
-
-@media only screen and (max-width:500px) {
-  .c6 {
-    padding: 13px;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-align-items: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-  }
-}
-
-@media only screen and (max-width:500px) {
-  .c10 {
-    padding: 13px;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-align-items: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-  }
-}
-
-@media only screen and (max-width:500px) {
-  .c11 {
-    padding: 13px;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-align-items: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-  }
-}
-
-@media only screen and (max-width:500px) {
   .c8 {
     -webkit-transform: rotateZ(90deg);
     -ms-transform: rotateZ(90deg);
@@ -287,19 +219,6 @@ exports[`Table changes the class when hovered 1`] = `
 
 @media only screen and (max-width:500px) {
   .c5 {
-    height: 100%;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-align-items: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-pack: justify;
-    -webkit-justify-content: space-between;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
     min-width: 150px;
     font-size: 14px;
   }
@@ -308,12 +227,14 @@ exports[`Table changes the class when hovered 1`] = `
 @media only screen and (max-width:500px) {
   .c13 {
     padding: 12px 8px;
+    text-align: center;
   }
 }
 
 @media only screen and (max-width:500px) {
   .c14 {
     padding: 12px 8px;
+    text-align: center;
   }
 }
 
