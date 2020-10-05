@@ -10,7 +10,7 @@ const Dialog = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 8px 16px;
+  padding: 10px 16px;
   background: #fff 0% 0% no-repeat padding-box;
   box-shadow: 0px 2px 6px #2c28281c;
 
@@ -84,6 +84,20 @@ const Dialog = styled.div`
     `
       }
     }}
+  }
+
+  @media only screen and (max-width: 500px) {
+    position: fixed;
+    margin: 0;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    padding: 20px 30px;
+
+    &::after {
+      display: none;
+    }
   }
 `
 

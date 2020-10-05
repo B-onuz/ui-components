@@ -5,6 +5,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEllipsisH, faPlus } from '@fortawesome/free-solid-svg-icons'
 import Button from '../Button'
 import ContextMenuDialog from './ContextMenuDialog'
+import Modal from '../Modal'
+import useModal from '../../hooks/useModal'
 
 const StyledContextMenu = styled.div`
   ${color}
@@ -15,6 +17,12 @@ const StyledContextMenu = styled.div`
     width: 2em;
     height: 2em;
   }
+`
+
+const ModalWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  padding: 20px 20px;
 `
 
 const ContextMenuToogleButton = styled.button`
@@ -47,10 +55,26 @@ const ContextMenu = ({ children, direction, contextMenuActions, contextFunctions
   const wrapperRef = useRef(null)
   const buttonRef = useRef(null)
 
+  const {
+    isOpen: isOpenResponsiveModal,
+    openModal: openResponsiveModal,
+    closeModal: closeResponsiveModal,
+    params: responsiveModalParams,
+  } = useModal()
+
   const onClose = () => {
     setIsOpen(false)
+    closeResponsiveModal()
     return true
   }
+
+  useEffect(() => {
+    if (isOpen) {
+      openResponsiveModal()
+    }
+  })
+
+  const needResponsive = screen.width >= 500 ? false : true
 
   return (
     <StyledContextMenu ref={wrapperRef} {...rest}>
@@ -65,16 +89,33 @@ const ContextMenu = ({ children, direction, contextMenuActions, contextFunctions
           <Icon icon={faEllipsisH} />
         </ContextMenuToogleButton>
       )}
-      <ContextMenuDialog contextFunctions={contextFunctions} isOpen={isOpen} onClose={onClose} buttonRef={buttonRef} direction={direction}>
-        {(contextMenuActions || []).map((action, index) => (
-          <>
-            <Button linkButton color={'primary'} onClick={() => onClose() && action.buttonFunction()}>
-              {action.text}
-            </Button>
-            {index + 1 !== contextMenuActions.length ? <Divider /> : null}
-          </>
-        ))}
-      </ContextMenuDialog>
+      {needResponsive ? (
+        <>
+          <Modal open={isOpenResponsiveModal} onClose={onClose}>
+            <ModalWrapper>
+              {(contextMenuActions || []).map((action, index) => (
+                <>
+                  <Button linkButton color={'primary'} onClick={() => onClose() && action.buttonFunction()}>
+                    {action.text}
+                  </Button>
+                  {index + 1 !== contextMenuActions.length ? <Divider /> : null}
+                </>
+              ))}
+            </ModalWrapper>
+          </Modal>
+        </>
+      ) : (
+        <ContextMenuDialog contextFunctions={contextFunctions} isOpen={isOpen} onClose={onClose} buttonRef={buttonRef} direction={direction}>
+          {(contextMenuActions || []).map((action, index) => (
+            <>
+              <Button linkButton color={'primary'} onClick={() => onClose() && action.buttonFunction()}>
+                {action.text}
+              </Button>
+              {index + 1 !== contextMenuActions.length ? <Divider /> : null}
+            </>
+          ))}
+        </ContextMenuDialog>
+      )}
     </StyledContextMenu>
   )
 }

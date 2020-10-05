@@ -18,7 +18,7 @@ const StyledCard = styled.div`
   padding: ${({ clickableCard }) => (!!clickableCard ? 0 : '20px 32px')};
   overflow: ${({ clickableCard }) => (!!clickableCard ? 'visible' : 'hidden')};
   @media only screen and (max-width: 500px) {
-    max-width: 165px;
+    max-width: none;
     min-height: 84px;
     padding: ${({ clickableCard }) => (!!clickableCard ? 0 : '8px 12px')};
     justify-content: center;
