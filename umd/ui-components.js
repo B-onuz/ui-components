@@ -1,4 +1,4 @@
-/*! ui-components v2.20.2 */
+/*! ui-components v2.20.3 */
 (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
 		module.exports = factory(require("react"));
@@ -11606,7 +11606,7 @@ Header_Header.defaultProps = {
 function ProfileBox_objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 
 function ProfileBox_templateObject3() {
-  var data = ProfileBox_taggedTemplateLiteralLoose(["\n  display: flex;\n  justify-content: flex-start;\n"]);
+  var data = ProfileBox_taggedTemplateLiteralLoose(["\n  display: flex;\n  justify-content: flex-start;\n  align-items: center;\n"]);
 
   ProfileBox_templateObject3 = function _templateObject3() {
     return data;
@@ -11662,7 +11662,11 @@ var ProfileBox_ProfileBox = function ProfileBox(_ref) {
     mr: 2
   }, userName), /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(components_Button, {
     linkButton: true,
-    color: "primary",
+    color: "black",
+    style: {
+      fontWeight: 'bold',
+      fontSize: '20px'
+    },
     p: 0
   }, balanceValue + " BNZ")));
 };

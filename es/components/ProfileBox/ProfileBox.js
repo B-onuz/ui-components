@@ -25,7 +25,7 @@ function _extends() { _extends = Object.assign || function (target) { for (var i
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 
 function _templateObject3() {
-  var data = _taggedTemplateLiteralLoose(["\n  display: flex;\n  justify-content: flex-start;\n"]);
+  var data = _taggedTemplateLiteralLoose(["\n  display: flex;\n  justify-content: flex-start;\n  align-items: center;\n"]);
 
   _templateObject3 = function _templateObject3() {
     return data;
@@ -73,7 +73,7 @@ var ProfileBox = function ProfileBox(_ref) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 38,
+      lineNumber: 39,
       columnNumber: 5
     }
   }), /*#__PURE__*/_react["default"].createElement(ProfileIcon, {
@@ -82,14 +82,14 @@ var ProfileBox = function ProfileBox(_ref) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 39,
+      lineNumber: 40,
       columnNumber: 7
     }
   }), /*#__PURE__*/_react["default"].createElement(TextBox, {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 40,
+      lineNumber: 41,
       columnNumber: 7
     }
   }, !!userName && /*#__PURE__*/_react["default"].createElement(_Typography["default"], {
@@ -99,17 +99,21 @@ var ProfileBox = function ProfileBox(_ref) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 42,
+      lineNumber: 43,
       columnNumber: 11
     }
   }, userName), /*#__PURE__*/_react["default"].createElement(_Button["default"], {
     linkButton: true,
-    color: "primary",
+    color: "black",
+    style: {
+      fontWeight: 'bold',
+      fontSize: '20px'
+    },
     p: 0,
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 46,
+      lineNumber: 47,
       columnNumber: 9
     }
   }, balanceValue + " BNZ")));
