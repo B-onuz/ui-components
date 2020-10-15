@@ -16,14 +16,14 @@ exports[`Should render ProfileBox 1`] = `
   overflow: hidden;
   border-color: undefined !important;
   color: #fff;
-  background-color: #ef4d5a;
-  border-color: #ef4d5a;
+  background-color: #1b1c1d;
+  border-color: #1b1c1d;
   font-size: 16px;
   padding: 0;
   box-sizing: border-box;
   -webkit-text-decoration: none;
   text-decoration: none;
-  color: #ef4d5a;
+  color: #1b1c1d;
   border: none;
   background-color: transparent !important;
   box-shadow: none !important;
@@ -35,7 +35,7 @@ exports[`Should render ProfileBox 1`] = `
 }
 
 .c3:focus {
-  box-shadow: 0 0 8px #ef4d5a;
+  box-shadow: 0 0 8px #1b1c1d;
 }
 
 .c3:active:not(:disabled) {
@@ -44,11 +44,11 @@ exports[`Should render ProfileBox 1`] = `
 
 .c3:active,
 .c3:hover {
-  background-color: hsl(355.20000000000005,91.9%,55.8%);
+  background-color: hsl(210,3.9%,9.9%);
 }
 
 .c3:disabled {
-  background-color: hsl(355.20000000000005,50.1%,68.2%);
+  background-color: hsl(210,2.1%,12.1%);
 }
 
 .c3:hover {
@@ -87,6 +87,10 @@ exports[`Should render ProfileBox 1`] = `
   -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
   justify-content: flex-start;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 @media only screen and (max-width:500px) {
@@ -126,9 +130,15 @@ exports[`Should render ProfileBox 1`] = `
   >
     <button
       className="c3"
-      color="primary"
+      color="black"
       disabled={false}
       size="medium"
+      style={
+        Object {
+          "fontSize": "20px",
+          "fontWeight": "bold",
+        }
+      }
       type="button"
     >
       undefined BNZ
