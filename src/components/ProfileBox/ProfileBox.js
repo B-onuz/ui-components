@@ -31,6 +31,7 @@ const ProfileIcon = styled.img`
 const TextBox = styled.div`
   display: flex;
   justify-content: flex-start;
+  align-items: center;
 `
 
 const ProfileBox = ({ children, userName, balanceValue, src, ...rest }) => {
@@ -43,7 +44,7 @@ const ProfileBox = ({ children, userName, balanceValue, src, ...rest }) => {
             {userName}
           </Typography>
         )}
-        <Button linkButton color="primary" p={0}>{`${balanceValue} BNZ`}</Button>
+        <Button linkButton color="black" style={{ fontWeight: 'bold', fontSize: '20px' }} p={0}>{`${balanceValue} BNZ`}</Button>
       </TextBox>
     </StyledProfileBox>
   )
