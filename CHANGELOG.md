@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.21.0](https://github.com/B-onuz/ui-components/compare/v2.20.4...v2.21.0) (2020-10-15)
+
+### Features
+
+- **profile-box:** added prop for controlling icon height ([#53](https://github.com/B-onuz/ui-components/issues/53)) ([49c64b1](https://github.com/B-onuz/ui-components/commit/49c64b1330b0c18a33a9569868d087b102cccf44))
+
 ### [2.20.4](https://github.com/B-onuz/ui-components/compare/v2.20.3...v2.20.4) (2020-10-15)
 
 ### [2.20.3](https://github.com/B-onuz/ui-components/compare/v2.20.2...v2.20.3) (2020-10-05)
