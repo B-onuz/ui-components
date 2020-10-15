@@ -1,4 +1,4 @@
-/*! ui-components v2.20.3 */
+/*! ui-components v2.20.4 */
 (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
 		module.exports = factory(require("react"));
@@ -11616,7 +11616,7 @@ function ProfileBox_templateObject3() {
 }
 
 function ProfileBox_templateObject2() {
-  var data = ProfileBox_taggedTemplateLiteralLoose(["\n  height: 100%;\n  margin-right: 7px;\n  @media only screen and (max-width: 500px) {\n    max-height: 20px;\n    margin-right: 0;\n    margin-bottom: 7px;\n  }\n"]);
+  var data = ProfileBox_taggedTemplateLiteralLoose(["\n  height: ", ";\n  margin-right: 7px;\n  @media only screen and (max-width: 500px) {\n    max-height: 20px;\n    margin-right: 0;\n    margin-bottom: 7px;\n  }\n"]);
 
   ProfileBox_templateObject2 = function _templateObject2() {
     return data;
@@ -11626,7 +11626,7 @@ function ProfileBox_templateObject2() {
 }
 
 function ProfileBox_templateObject() {
-  var data = ProfileBox_taggedTemplateLiteralLoose(["\n  ", "\n  height: 100%;\n  display: flex;\n  justify-content: flex-start;\n  align-items: flex-end;\n  @media only screen and (max-width: 500px) {\n    flex-direction: column;\n    align-items: center;\n    justify-content: center;\n    margin: 0 8px;\n  }\n"]);
+  var data = ProfileBox_taggedTemplateLiteralLoose(["\n  ", "\n  height: 100%;\n  display: flex;\n  justify-content: flex-start;\n  align-items: center;\n  @media only screen and (max-width: 500px) {\n    flex-direction: column;\n    align-items: center;\n    justify-content: center;\n    margin: 0 8px;\n  }\n"]);
 
   ProfileBox_templateObject = function _templateObject() {
     return data;
@@ -11643,18 +11643,23 @@ function ProfileBox_taggedTemplateLiteralLoose(strings, raw) { if (!raw) { raw =
 
 
 var StyledProfileBox = styled_components_browser_esm["default"].div(ProfileBox_templateObject(), index_esm["color"]);
-var ProfileIcon = styled_components_browser_esm["default"].img(ProfileBox_templateObject2());
+var ProfileIcon = styled_components_browser_esm["default"].img(ProfileBox_templateObject2(), function (_ref) {
+  var iconHeight = _ref.iconHeight;
+  return iconHeight ? iconHeight : '100%';
+});
 var TextBox = styled_components_browser_esm["default"].div(ProfileBox_templateObject3());
 
-var ProfileBox_ProfileBox = function ProfileBox(_ref) {
-  var children = _ref.children,
-      userName = _ref.userName,
-      balanceValue = _ref.balanceValue,
-      src = _ref.src,
-      rest = ProfileBox_objectWithoutPropertiesLoose(_ref, ["children", "userName", "balanceValue", "src"]);
+var ProfileBox_ProfileBox = function ProfileBox(_ref2) {
+  var children = _ref2.children,
+      userName = _ref2.userName,
+      balanceValue = _ref2.balanceValue,
+      src = _ref2.src,
+      iconHeight = _ref2.iconHeight,
+      rest = ProfileBox_objectWithoutPropertiesLoose(_ref2, ["children", "userName", "balanceValue", "src", "iconHeight"]);
 
   return /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(StyledProfileBox, rest, /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(ProfileIcon, {
     alt: "bnz_icon",
+    iconHeight: iconHeight,
     src: src
   }), /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(TextBox, null, !!userName && /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(components_Typography, {
     color: "black",
