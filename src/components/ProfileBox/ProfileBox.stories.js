@@ -15,7 +15,7 @@ export const ProfileBoxExample = () => (
       <ProfileBox src={bnz_icon} userName="John Doe" balanceValue="2.300" />
     </NavBar>
     <NavBar>
-      <ProfileBox src={bnz_icon} balanceValue="2.300" />
+      <ProfileBox src={bnz_icon} iconHeight={'34px'} balanceValue="2.300" />
     </NavBar>
   </>
 )

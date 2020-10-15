@@ -9,7 +9,7 @@ const StyledProfileBox = styled.div`
   height: 100%;
   display: flex;
   justify-content: flex-start;
-  align-items: flex-end;
+  align-items: center;
   @media only screen and (max-width: 500px) {
     flex-direction: column;
     align-items: center;
@@ -19,7 +19,7 @@ const StyledProfileBox = styled.div`
 `
 
 const ProfileIcon = styled.img`
-  height: 100%;
+  height: ${({ iconHeight }) => (iconHeight ? iconHeight : '100%')};
   margin-right: 7px;
   @media only screen and (max-width: 500px) {
     max-height: 20px;
@@ -34,10 +34,10 @@ const TextBox = styled.div`
   align-items: center;
 `
 
-const ProfileBox = ({ children, userName, balanceValue, src, ...rest }) => {
+const ProfileBox = ({ children, userName, balanceValue, src, iconHeight, ...rest }) => {
   return (
     <StyledProfileBox {...rest}>
-      <ProfileIcon alt="bnz_icon" src={src} />
+      <ProfileIcon alt="bnz_icon" iconHeight={iconHeight} src={src} />
       <TextBox>
         {!!userName && (
           <Typography color="black" m={0} mr={2}>
