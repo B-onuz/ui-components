@@ -32,6 +32,16 @@ function _extends() { _extends = Object.assign || function (target) { for (var i
 
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 
+function _templateObject4() {
+  var data = _taggedTemplateLiteralLoose(["\n  position: absolute;\n  bottom: 30px;\n  width: 100%;\n  display: flex;\n  justify-content: center;\n"]);
+
+  _templateObject4 = function _templateObject4() {
+    return data;
+  };
+
+  return data;
+}
+
 function _templateObject3() {
   var data = _taggedTemplateLiteralLoose(["\n  ", "\n  position: absolute;\n  left: 0;\n  top: 0;\n  bottom: 0;\n  height: 100%;\n  background: #550e33 linear-gradient(89deg, #550e33 0%, #ff4f5d 100%) 0% 0% no-repeat padding-box;\n  transition: 0.2s linear;\n  z-index: 1002;\n  overflow: auto;\n  ", "\n"]);
 
@@ -80,6 +90,7 @@ var StyledSidebarMenu = (0, _styledComponents["default"])(_reflexbox.Box)(_templ
   var open = _ref2.open;
   return open ? "\n    transform: translateX(0);\n  " : "\n    transform: translateX(-100%);\n  ";
 });
+var ContactButton = (0, _styledComponents["default"])(_reflexbox.Box)(_templateObject4());
 
 var useRootSidebar = function useRootSidebar() {
   var _useState = (0, _react.useState)(),
@@ -114,7 +125,8 @@ var SidebarMenuRoot = function SidebarMenuRoot(_ref3) {
       logo = _ref3$logo === void 0 ? 'Logo' : _ref3$logo,
       _ref3$items = _ref3.items,
       items = _ref3$items === void 0 ? [] : _ref3$items,
-      rest = _objectWithoutPropertiesLoose(_ref3, ["children", "open", "onlyMobile", "onClose", "logo", "items"]);
+      contactButton = _ref3.contactButton,
+      rest = _objectWithoutPropertiesLoose(_ref3, ["children", "open", "onlyMobile", "onClose", "logo", "items", "contactButton"]);
 
   return /*#__PURE__*/_react["default"].createElement(WrapperSidebarMenu, {
     onlyMobile: onlyMobile,
@@ -125,7 +137,7 @@ var SidebarMenuRoot = function SidebarMenuRoot(_ref3) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 92,
+      lineNumber: 100,
       columnNumber: 3
     }
   }, /*#__PURE__*/_react["default"].createElement(StyledSidebarMenu, _extends({
@@ -135,7 +147,7 @@ var SidebarMenuRoot = function SidebarMenuRoot(_ref3) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 93,
+      lineNumber: 101,
       columnNumber: 5
     }
   }), logo, /*#__PURE__*/_react["default"].createElement(_MenuList["default"], {
@@ -144,17 +156,24 @@ var SidebarMenuRoot = function SidebarMenuRoot(_ref3) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 95,
+      lineNumber: 103,
       columnNumber: 7
     }
-  }, children)), /*#__PURE__*/_react["default"].createElement(Backdrop, {
+  }, children), contactButton ? /*#__PURE__*/_react["default"].createElement(ContactButton, {
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 106,
+      columnNumber: 24
+    }
+  }, contactButton) : false), /*#__PURE__*/_react["default"].createElement(Backdrop, {
     onClick: onClose,
     "aria-role": "button",
     "aria-label": "Fechar menu",
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 99,
+      lineNumber: 108,
       columnNumber: 5
     }
   }));
@@ -169,7 +188,7 @@ var SidebarMenuMobile = function SidebarMenuMobile(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 107,
+      lineNumber: 116,
       columnNumber: 32
     }
   })), $rootModal);
@@ -181,7 +200,7 @@ var SidebarMenu = function SidebarMenu(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 113,
+      lineNumber: 122,
       columnNumber: 10
     }
   }));

@@ -1,4 +1,4 @@
-/*! ui-components v2.20.4 */
+/*! ui-components v2.21.0 */
 (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
 		module.exports = factory(require("react"));
@@ -3588,7 +3588,7 @@ if (true) {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var _emotion_memoize__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(8);
+/* harmony import */ var _emotion_memoize__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(9);
 
 
 var reactPropsRegex = /^((children|dangerouslySetInnerHTML|key|ref|autoFocus|defaultValue|defaultChecked|innerHTML|suppressContentEditableWarning|suppressHydrationWarning|valueLink|accept|acceptCharset|accessKey|action|allow|allowUserMedia|allowPaymentRequest|allowFullScreen|allowTransparency|alt|async|autoComplete|autoPlay|capture|cellPadding|cellSpacing|challenge|charSet|checked|cite|classID|className|cols|colSpan|content|contentEditable|contextMenu|controls|controlsList|coords|crossOrigin|data|dateTime|decoding|default|defer|dir|disabled|disablePictureInPicture|download|draggable|encType|form|formAction|formEncType|formMethod|formNoValidate|formTarget|frameBorder|headers|height|hidden|high|href|hrefLang|htmlFor|httpEquiv|id|inputMode|integrity|is|keyParams|keyType|kind|label|lang|list|loading|loop|low|marginHeight|marginWidth|max|maxLength|media|mediaGroup|method|min|minLength|multiple|muted|name|nonce|noValidate|open|optimum|pattern|placeholder|playsInline|poster|preload|profile|radioGroup|readOnly|referrerPolicy|rel|required|reversed|role|rows|rowSpan|sandbox|scope|scoped|scrolling|seamless|selected|shape|size|sizes|slot|span|spellCheck|src|srcDoc|srcLang|srcSet|start|step|style|summary|tabIndex|target|title|type|useMap|value|width|wmode|wrap|about|datatype|inlist|prefix|property|resource|typeof|vocab|autoCapitalize|autoCorrect|autoSave|color|inert|itemProp|itemScope|itemType|itemID|itemRef|on|results|security|unselectable|accentHeight|accumulate|additive|alignmentBaseline|allowReorder|alphabetic|amplitude|arabicForm|ascent|attributeName|attributeType|autoReverse|azimuth|baseFrequency|baselineShift|baseProfile|bbox|begin|bias|by|calcMode|capHeight|clip|clipPathUnits|clipPath|clipRule|colorInterpolation|colorInterpolationFilters|colorProfile|colorRendering|contentScriptType|contentStyleType|cursor|cx|cy|d|decelerate|descent|diffuseConstant|direction|display|divisor|dominantBaseline|dur|dx|dy|edgeMode|elevation|enableBackground|end|exponent|externalResourcesRequired|fill|fillOpacity|fillRule|filter|filterRes|filterUnits|floodColor|floodOpacity|focusable|fontFamily|fontSize|fontSizeAdjust|fontStretch|fontStyle|fontVariant|fontWeight|format|from|fr|fx|fy|g1|g2|glyphName|glyphOrientationHorizontal|glyphOrientationVertical|glyphRef|gradientTransform|gradientUnits|hanging|horizAdvX|horizOriginX|ideographic|imageRendering|in|in2|intercept|k|k1|k2|k3|k4|kernelMatrix|kernelUnitLength|kerning|keyPoints|keySplines|keyTimes|lengthAdjust|letterSpacing|lightingColor|limitingConeAngle|local|markerEnd|markerMid|markerStart|markerHeight|markerUnits|markerWidth|mask|maskContentUnits|maskUnits|mathematical|mode|numOctaves|offset|opacity|operator|order|orient|orientation|origin|overflow|overlinePosition|overlineThickness|panose1|paintOrder|pathLength|patternContentUnits|patternTransform|patternUnits|pointerEvents|points|pointsAtX|pointsAtY|pointsAtZ|preserveAlpha|preserveAspectRatio|primitiveUnits|r|radius|refX|refY|renderingIntent|repeatCount|repeatDur|requiredExtensions|requiredFeatures|restart|result|rotate|rx|ry|scale|seed|shapeRendering|slope|spacing|specularConstant|specularExponent|speed|spreadMethod|startOffset|stdDeviation|stemh|stemv|stitchTiles|stopColor|stopOpacity|strikethroughPosition|strikethroughThickness|string|stroke|strokeDasharray|strokeDashoffset|strokeLinecap|strokeLinejoin|strokeMiterlimit|strokeOpacity|strokeWidth|surfaceScale|systemLanguage|tableValues|targetX|targetY|textAnchor|textDecoration|textRendering|textLength|to|transform|u1|u2|underlinePosition|underlineThickness|unicode|unicodeBidi|unicodeRange|unitsPerEm|vAlphabetic|vHanging|vIdeographic|vMathematical|values|vectorEffect|version|vertAdvY|vertOriginX|vertOriginY|viewBox|viewTarget|visibility|widths|wordSpacing|writingMode|x|xHeight|x1|x2|xChannelSelector|xlinkActuate|xlinkArcrole|xlinkHref|xlinkRole|xlinkShow|xlinkTitle|xlinkType|xmlBase|xmlns|xmlnsXlink|xmlLang|xmlSpace|y|y1|y2|yChannelSelector|z|zoomAndPan|for|class|autofocus)|(([Dd][Aa][Tt][Aa]|[Aa][Rr][Ii][Aa]|x)-.*))$/; // https://esbench.com/bench/5bfee68a4cd7e6009ef61d23
@@ -3608,22 +3608,6 @@ var index = Object(_emotion_memoize__WEBPACK_IMPORTED_MODULE_0__[/* default */ "
 
 /***/ }),
 /* 8 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-function memoize(fn) {
-  var cache = {};
-  return function (arg) {
-    if (cache[arg] === undefined) cache[arg] = fn(arg);
-    return cache[arg];
-  };
-}
-
-/* harmony default export */ __webpack_exports__["a"] = (memoize);
-
-
-/***/ }),
-/* 9 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3680,6 +3664,22 @@ var Flex = (0, _styled["default"])(Box)({
   display: 'flex'
 });
 exports.Flex = Flex;
+
+/***/ }),
+/* 9 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+function memoize(fn) {
+  var cache = {};
+  return function (arg) {
+    if (cache[arg] === undefined) cache[arg] = fn(arg);
+    return cache[arg];
+  };
+}
+
+/* harmony default export */ __webpack_exports__["a"] = (memoize);
+
 
 /***/ }),
 /* 10 */
@@ -8310,7 +8310,7 @@ process.umask = function() { return 0; };
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "props", function() { return props; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "createShouldForwardProp", function() { return createShouldForwardProp; });
-/* harmony import */ var _emotion_memoize__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(8);
+/* harmony import */ var _emotion_memoize__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(9);
 /* harmony import */ var _emotion_is_prop_valid__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(7);
 /* harmony import */ var styled_system__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(2);
 
@@ -11272,7 +11272,7 @@ var react_dom = __webpack_require__(6);
 var react_dom_default = /*#__PURE__*/__webpack_require__.n(react_dom);
 
 // EXTERNAL MODULE: ./node_modules/reflexbox/dist/index.js
-var dist = __webpack_require__(9);
+var dist = __webpack_require__(8);
 
 // CONCATENATED MODULE: ./src/components/SidebarMenu/MenuList.js
 function MenuList_templateObject() {
@@ -11297,6 +11297,16 @@ var MenuList = styled_components_browser_esm["default"].ul(MenuList_templateObje
 function SidebarMenu_extends() { SidebarMenu_extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return SidebarMenu_extends.apply(this, arguments); }
 
 function SidebarMenu_objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
+
+function _templateObject4() {
+  var data = SidebarMenu_taggedTemplateLiteralLoose(["\n  position: absolute;\n  bottom: 30px;\n  width: 100%;\n  display: flex;\n  justify-content: center;\n"]);
+
+  _templateObject4 = function _templateObject4() {
+    return data;
+  };
+
+  return data;
+}
 
 function SidebarMenu_templateObject3() {
   var data = SidebarMenu_taggedTemplateLiteralLoose(["\n  ", "\n  position: absolute;\n  left: 0;\n  top: 0;\n  bottom: 0;\n  height: 100%;\n  background: #550e33 linear-gradient(89deg, #550e33 0%, #ff4f5d 100%) 0% 0% no-repeat padding-box;\n  transition: 0.2s linear;\n  z-index: 1002;\n  overflow: auto;\n  ", "\n"]);
@@ -11351,6 +11361,7 @@ var StyledSidebarMenu = Object(styled_components_browser_esm["default"])(dist["B
   var open = _ref2.open;
   return open ? "\n    transform: translateX(0);\n  " : "\n    transform: translateX(-100%);\n  ";
 });
+var ContactButton = Object(styled_components_browser_esm["default"])(dist["Box"])(_templateObject4());
 
 var SidebarMenu_useRootSidebar = function useRootSidebar() {
   var _useState = Object(external_root_React_commonjs2_react_commonjs_react_amd_react_["useState"])(),
@@ -11385,7 +11396,8 @@ var SidebarMenu_SidebarMenuRoot = function SidebarMenuRoot(_ref3) {
       logo = _ref3$logo === void 0 ? 'Logo' : _ref3$logo,
       _ref3$items = _ref3.items,
       items = _ref3$items === void 0 ? [] : _ref3$items,
-      rest = SidebarMenu_objectWithoutPropertiesLoose(_ref3, ["children", "open", "onlyMobile", "onClose", "logo", "items"]);
+      contactButton = _ref3.contactButton,
+      rest = SidebarMenu_objectWithoutPropertiesLoose(_ref3, ["children", "open", "onlyMobile", "onClose", "logo", "items", "contactButton"]);
 
   return /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(WrapperSidebarMenu, {
     onlyMobile: onlyMobile,
@@ -11399,7 +11411,7 @@ var SidebarMenu_SidebarMenuRoot = function SidebarMenuRoot(_ref3) {
   }, rest), logo, /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(SidebarMenu_MenuList, {
     role: "menu",
     isOpen: !!open
-  }, children)), /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(Backdrop, {
+  }, children), contactButton ? /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(ContactButton, null, contactButton) : false), /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(Backdrop, {
     onClick: onClose,
     "aria-role": "button",
     "aria-label": "Fechar menu"
@@ -11683,10 +11695,10 @@ var ProfileBox_ProfileBox = function ProfileBox(_ref2) {
 // CONCATENATED MODULE: ./src/components/BaseLayout/BaseLayout.js
 function BaseLayout_objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 
-function _templateObject4() {
+function BaseLayout_templateObject4() {
   var data = BaseLayout_taggedTemplateLiteralLoose(["\n  height: 100%;\n  align-self: flex-end;\n"]);
 
-  _templateObject4 = function _templateObject4() {
+  BaseLayout_templateObject4 = function _templateObject4() {
     return data;
   };
 
@@ -11741,7 +11753,7 @@ var LayoutContainer = Object(styled_components_browser_esm["default"])(styled_co
       menuWidth = _ref.menuWidth;
   return !menuIsOpen ? "\n    margin-left: 0;\n  " : "\n    @media only screen and (min-width: 768px) {\n      margin-left: " + menuWidth + "px;\n    }\n  ";
 });
-var CornerContentWrapper = styled_components_browser_esm["default"].div(_templateObject4());
+var CornerContentWrapper = styled_components_browser_esm["default"].div(BaseLayout_templateObject4());
 
 var BaseLayout_BaseLayout = function BaseLayout(_ref2) {
   var children = _ref2.children,
@@ -22982,7 +22994,7 @@ function murmur2(str) {
 var unitless_browser_esm = __webpack_require__(13);
 
 // EXTERNAL MODULE: ./node_modules/@emotion/memoize/dist/memoize.browser.esm.js
-var memoize_browser_esm = __webpack_require__(8);
+var memoize_browser_esm = __webpack_require__(9);
 
 // CONCATENATED MODULE: ./node_modules/@emotion/serialize/dist/serialize.browser.esm.js
 
