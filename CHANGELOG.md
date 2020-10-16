@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.22.0](https://github.com/B-onuz/ui-components/compare/v2.21.0...v2.22.0) (2020-10-16)
+
+### Features
+
+- **sidebar-menu:** added contact button ([#54](https://github.com/B-onuz/ui-components/issues/54)) ([cb4282b](https://github.com/B-onuz/ui-components/commit/cb4282bba6fbabf2176eb7a70299c8db922a4342))
+
 ## [2.21.0](https://github.com/B-onuz/ui-components/compare/v2.20.4...v2.21.0) (2020-10-15)
 
 ### Features
