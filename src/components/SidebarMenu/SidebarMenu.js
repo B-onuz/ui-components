@@ -70,6 +70,14 @@ const StyledSidebarMenu = styled(Box)`
   `}
 `
 
+const ContactButton = styled(Box)`
+  position: absolute;
+  bottom: 30px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+`
+
 const useRootSidebar = () => {
   const [$rootModal, setRootModal] = useState()
 
@@ -88,13 +96,14 @@ const useRootSidebar = () => {
   return { $rootModal }
 }
 
-const SidebarMenuRoot = ({ children, open = false, onlyMobile = false, onClose, logo = 'Logo', items = [], ...rest }) => (
+const SidebarMenuRoot = ({ children, open = false, onlyMobile = false, onClose, logo = 'Logo', items = [], contactButton, ...rest }) => (
   <WrapperSidebarMenu onlyMobile={onlyMobile} open={!!open} role="menubar" aria-label="menu" aria-expanded={!!open}>
     <StyledSidebarMenu role="none" open={!!open} {...rest}>
       {logo}
       <MenuList role="menu" isOpen={!!open}>
         {children}
       </MenuList>
+      {contactButton ? <ContactButton>{contactButton}</ContactButton> : false}
     </StyledSidebarMenu>
     <Backdrop onClick={onClose} aria-role="button" aria-label="Fechar menu" />
   </WrapperSidebarMenu>
