@@ -83,7 +83,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteralLoose(["\n  color: ", ";\n  width: 100%;\n  max-width: 192px;\n  min-height: 84px;\n  display: flex;\n  flex-direction: ", ";\n  justify-content: space-between;\n  position: relative;\n  box-shadow: 3px 3px 6px #00000029;\n  border: 3px solid;\n  border-radius: 12px;\n  padding: ", ";\n  overflow: ", ";\n  @media only screen and (max-width: 500px) {\n    max-width: none;\n    min-height: 84px;\n    padding: ", ";\n    justify-content: center;\n    text-align: center;\n  }\n\n  .icon {\n    margin-right: ", ";\n    font-size: 40px;\n    @media only screen and (max-width: 500px) {\n      font-size: 30px;\n      margin: 0;\n      margin-bottom: 6px;\n    }\n  }\n"]);
+  var data = _taggedTemplateLiteralLoose(["\n  color: ", ";\n  width: 192px;\n  min-height: 84px;\n  display: flex;\n  flex-direction: ", ";\n  justify-content: space-between;\n  position: relative;\n  box-shadow: 3px 3px 6px #00000029;\n  border: 3px solid;\n  border-radius: 12px;\n  padding: ", ";\n  overflow: ", ";\n  @media only screen and (max-width: 500px) {\n    max-width: none;\n    min-height: 84px;\n    padding: ", ";\n    justify-content: center;\n    text-align: center;\n  }\n\n  .icon {\n    margin-right: ", ";\n    font-size: 40px;\n    @media only screen and (max-width: 500px) {\n      font-size: 30px;\n      margin: 0;\n      margin-bottom: 6px;\n    }\n  }\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -190,7 +190,7 @@ var Card = function Card(_ref18) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 130,
+      lineNumber: 129,
       columnNumber: 5
     }
   }), !!clickableCard ? /*#__PURE__*/_react["default"].createElement(ClickableCard, {
@@ -199,7 +199,7 @@ var Card = function Card(_ref18) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 132,
+      lineNumber: 131,
       columnNumber: 9
     }
   }, /*#__PURE__*/_react["default"].createElement(StyledTitle, {
@@ -208,7 +208,7 @@ var Card = function Card(_ref18) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 133,
+      lineNumber: 132,
       columnNumber: 11
     }
   }, title), icon && /*#__PURE__*/_react["default"].createElement(_reactFontawesome.FontAwesomeIcon, {
@@ -217,7 +217,7 @@ var Card = function Card(_ref18) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 136,
+      lineNumber: 135,
       columnNumber: 20
     }
   }), customIcon && /*#__PURE__*/_react["default"].createElement(StyledIcon, {
@@ -228,7 +228,7 @@ var Card = function Card(_ref18) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 137,
+      lineNumber: 136,
       columnNumber: 26
     }
   })) : /*#__PURE__*/_react["default"].createElement(_react["default"].Fragment, null, /*#__PURE__*/_react["default"].createElement(StyledTitle, {
@@ -237,7 +237,7 @@ var Card = function Card(_ref18) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 141,
+      lineNumber: 140,
       columnNumber: 11
     }
   }, title), /*#__PURE__*/_react["default"].createElement(StyledInfo, {
@@ -245,7 +245,7 @@ var Card = function Card(_ref18) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 144,
+      lineNumber: 143,
       columnNumber: 11
     }
   }, icon && /*#__PURE__*/_react["default"].createElement(_reactFontawesome.FontAwesomeIcon, {
@@ -254,7 +254,7 @@ var Card = function Card(_ref18) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 145,
+      lineNumber: 144,
       columnNumber: 22
     }
   }), customIcon && /*#__PURE__*/_react["default"].createElement(StyledIcon, {
@@ -265,7 +265,7 @@ var Card = function Card(_ref18) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 146,
+      lineNumber: 145,
       columnNumber: 28
     }
   }), /*#__PURE__*/_react["default"].createElement(Counter, {
@@ -273,7 +273,7 @@ var Card = function Card(_ref18) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 147,
+      lineNumber: 146,
       columnNumber: 13
     }
   }, count)), /*#__PURE__*/_react["default"].createElement(StyledHelper, {
@@ -282,7 +282,7 @@ var Card = function Card(_ref18) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 149,
+      lineNumber: 148,
       columnNumber: 11
     }
   }, disclaimer)));
