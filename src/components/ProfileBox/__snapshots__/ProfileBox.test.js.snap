@@ -77,8 +77,8 @@ exports[`Should render ProfileBox 1`] = `
   font-weight: bold;
   font-size: 20px;
   color: #000;
-  -webkit-text-decoration: none!important;
-  text-decoration: none!important;
+  -webkit-text-decoration: none !important;
+  text-decoration: none !important;
 }
 
 .c4:hover {
