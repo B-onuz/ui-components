@@ -18,6 +18,16 @@ const StyledProfileBox = styled.div`
   }
 `
 
+const StyledButton = styled(Button)`
+  font-weight: bold;
+  font-size: 20px;
+  color: #000;
+  text-decoration: none !important;
+  :hover {
+    color: #ef4d5a;
+  }
+`
+
 const ProfileIcon = styled.img`
   height: ${({ iconHeight }) => (iconHeight ? iconHeight : '100%')};
   margin-right: 7px;
@@ -44,7 +54,7 @@ const ProfileBox = ({ children, userName, balanceValue, src, iconHeight, ...rest
             {userName}
           </Typography>
         )}
-        <Button linkButton color="black" style={{ fontWeight: 'bold', fontSize: '20px' }} p={0}>{`${balanceValue} BNZ`}</Button>
+        <StyledButton linkButton p={0}>{`${balanceValue} BNZ`}</StyledButton>
       </TextBox>
     </StyledProfileBox>
   )
