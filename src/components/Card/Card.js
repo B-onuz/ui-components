@@ -5,8 +5,7 @@ import { background } from 'styled-system'
 
 const StyledCard = styled.div`
   color: ${({ theme, color }) => (theme.colors[color] ? theme.colors[color] : color)};
-  width: 100%;
-  max-width: 192px;
+  width: 192px;
   min-height: 84px;
   display: flex;
   flex-direction: ${({ clickableCard }) => (!!clickableCard ? 'row' : 'column')};
