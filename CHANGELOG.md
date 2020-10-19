@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.22.1](https://github.com/B-onuz/ui-components/compare/v2.22.0...v2.22.1) (2020-10-19)
+
+### Bug Fixes
+
+- **cards:** fixed width ([#55](https://github.com/B-onuz/ui-components/issues/55)) ([2a51b7d](https://github.com/B-onuz/ui-components/commit/2a51b7d1c9c189f6e85fd4fb0018573d25a64f02))
+
 ## [2.22.0](https://github.com/B-onuz/ui-components/compare/v2.21.0...v2.22.0) (2020-10-16)
 
 ### Features
