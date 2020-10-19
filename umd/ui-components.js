@@ -1,4 +1,4 @@
-/*! ui-components v2.22.0 */
+/*! ui-components v2.22.1 */
 (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
 		module.exports = factory(require("react"));
@@ -11617,8 +11617,18 @@ Header_Header.defaultProps = {
 // CONCATENATED MODULE: ./src/components/ProfileBox/ProfileBox.js
 function ProfileBox_objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 
-function ProfileBox_templateObject3() {
+function ProfileBox_templateObject4() {
   var data = ProfileBox_taggedTemplateLiteralLoose(["\n  display: flex;\n  justify-content: flex-start;\n  align-items: center;\n"]);
+
+  ProfileBox_templateObject4 = function _templateObject4() {
+    return data;
+  };
+
+  return data;
+}
+
+function ProfileBox_templateObject3() {
+  var data = ProfileBox_taggedTemplateLiteralLoose(["\n  height: ", ";\n  margin-right: 7px;\n  @media only screen and (max-width: 500px) {\n    max-height: 20px;\n    margin-right: 0;\n    margin-bottom: 7px;\n  }\n"]);
 
   ProfileBox_templateObject3 = function _templateObject3() {
     return data;
@@ -11628,7 +11638,7 @@ function ProfileBox_templateObject3() {
 }
 
 function ProfileBox_templateObject2() {
-  var data = ProfileBox_taggedTemplateLiteralLoose(["\n  height: ", ";\n  margin-right: 7px;\n  @media only screen and (max-width: 500px) {\n    max-height: 20px;\n    margin-right: 0;\n    margin-bottom: 7px;\n  }\n"]);
+  var data = ProfileBox_taggedTemplateLiteralLoose(["\n  font-weight: bold;\n  font-size: 20px;\n  color: #000;\n  text-decoration: none !important;\n  :hover {\n    color: #ef4d5a;\n  }\n"]);
 
   ProfileBox_templateObject2 = function _templateObject2() {
     return data;
@@ -11655,11 +11665,12 @@ function ProfileBox_taggedTemplateLiteralLoose(strings, raw) { if (!raw) { raw =
 
 
 var StyledProfileBox = styled_components_browser_esm["default"].div(ProfileBox_templateObject(), index_esm["color"]);
-var ProfileIcon = styled_components_browser_esm["default"].img(ProfileBox_templateObject2(), function (_ref) {
+var ProfileBox_StyledButton = Object(styled_components_browser_esm["default"])(components_Button)(ProfileBox_templateObject2());
+var ProfileIcon = styled_components_browser_esm["default"].img(ProfileBox_templateObject3(), function (_ref) {
   var iconHeight = _ref.iconHeight;
   return iconHeight ? iconHeight : '100%';
 });
-var TextBox = styled_components_browser_esm["default"].div(ProfileBox_templateObject3());
+var TextBox = styled_components_browser_esm["default"].div(ProfileBox_templateObject4());
 
 var ProfileBox_ProfileBox = function ProfileBox(_ref2) {
   var children = _ref2.children,
@@ -11677,13 +11688,8 @@ var ProfileBox_ProfileBox = function ProfileBox(_ref2) {
     color: "black",
     m: 0,
     mr: 2
-  }, userName), /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(components_Button, {
+  }, userName), /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(ProfileBox_StyledButton, {
     linkButton: true,
-    color: "black",
-    style: {
-      fontWeight: 'bold',
-      fontSize: '20px'
-    },
     p: 0
   }, balanceValue + " BNZ")));
 };
@@ -21830,7 +21836,7 @@ function Card_templateObject2() {
 }
 
 function Card_templateObject() {
-  var data = Card_taggedTemplateLiteralLoose(["\n  color: ", ";\n  width: 192px;\n  min-height: 84px;\n  display: flex;\n  flex-direction: ", ";\n  justify-content: space-between;\n  position: relative;\n  box-shadow: 3px 3px 6px #00000029;\n  border: 3px solid;\n  border-radius: 12px;\n  padding: ", ";\n  overflow: ", ";\n  @media only screen and (max-width: 500px) {\n    max-width: none;\n    min-height: 84px;\n    padding: ", ";\n    justify-content: center;\n    text-align: center;\n  }\n\n  .icon {\n    margin-right: ", ";\n    font-size: 40px;\n    @media only screen and (max-width: 500px) {\n      font-size: 30px;\n      margin: 0;\n      margin-bottom: 6px;\n    }\n  }\n"]);
+  var data = Card_taggedTemplateLiteralLoose(["\n  color: ", ";\n  width: 192px;\n  min-height: 84px;\n  display: flex;\n  flex-direction: ", ";\n  justify-content: space-between;\n  position: relative;\n  box-shadow: 3px 3px 6px #00000029;\n  border: 3px solid;\n  border-radius: 12px;\n  padding: ", ";\n  overflow: ", ";\n  @media only screen and (max-width: 500px) {\n    width: 100%;\n    min-height: 84px;\n    padding: ", ";\n    justify-content: center;\n    text-align: center;\n  }\n\n  .icon {\n    margin-right: ", ";\n    font-size: 40px;\n    @media only screen and (max-width: 500px) {\n      font-size: 30px;\n      margin: 0;\n      margin-bottom: 6px;\n    }\n  }\n"]);
 
   Card_templateObject = function _templateObject() {
     return data;
