@@ -15,15 +15,15 @@ exports[`Should render ProfileBox 1`] = `
   text-overflow: ellipsis;
   overflow: hidden;
   border-color: undefined !important;
-  color: #fff;
-  background-color: #1b1c1d;
-  border-color: #1b1c1d;
+  color: #000;
+  background-color: #e0e1e2;
+  border-color: #e0e1e2;
   font-size: 16px;
   padding: 0;
   box-sizing: border-box;
   -webkit-text-decoration: none;
   text-decoration: none;
-  color: #1b1c1d;
+  color: #e0e1e2;
   border: none;
   background-color: transparent !important;
   box-shadow: none !important;
@@ -35,7 +35,7 @@ exports[`Should render ProfileBox 1`] = `
 }
 
 .c3:focus {
-  box-shadow: 0 0 8px #1b1c1d;
+  box-shadow: 0 0 8px #e0e1e2;
 }
 
 .c3:active:not(:disabled) {
@@ -44,11 +44,11 @@ exports[`Should render ProfileBox 1`] = `
 
 .c3:active,
 .c3:hover {
-  background-color: hsl(210,3.9%,9.9%);
+  background-color: hsl(210,3.7%,79.4%);
 }
 
 .c3:disabled {
-  background-color: hsl(210,2.1%,12.1%);
+  background-color: hsl(210,2%,97.1%);
 }
 
 .c3:hover {
@@ -71,6 +71,18 @@ exports[`Should render ProfileBox 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+}
+
+.c4 {
+  font-weight: bold;
+  font-size: 20px;
+  color: #000;
+  -webkit-text-decoration: none !important;
+  text-decoration: none !important;
+}
+
+.c4:hover {
+  color: #ef4d5a;
 }
 
 .c1 {
@@ -129,16 +141,10 @@ exports[`Should render ProfileBox 1`] = `
     className="c2"
   >
     <button
-      className="c3"
-      color="black"
+      className="c3 c4"
+      color="default"
       disabled={false}
       size="medium"
-      style={
-        Object {
-          "fontSize": "20px",
-          "fontWeight": "bold",
-        }
-      }
       type="button"
     >
       undefined BNZ
