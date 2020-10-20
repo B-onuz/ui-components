@@ -37,6 +37,7 @@
     "prop-types": "^15.7.2",
     "react-spring": "^8.0.27",
     "reflexbox": "^4.0.6",
+    "shortid": "^2.2.15",
     "standard-version": "^7.1.0",
     "styled-components": "^5.1.0",
     "styled-normalize": "^8.0.7",
