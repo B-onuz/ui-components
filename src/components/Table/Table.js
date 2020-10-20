@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import PropTypes from 'prop-types'
 import { space, layout, compose } from 'styled-system'
 import PaceLoading from './PaceLoading'
+import shortid from 'shortid'
 
 const StyledTable = styled.table`
   border-spacing: 0;
@@ -218,7 +219,7 @@ const Table = ({ children, headers, pagination, onChangeOrder, data, loading, ..
                 <TableHeader
                   width={item.width}
                   minWidth={item.minWidth}
-                  key={index}
+                  key={`${index}`}
                   order={item.sort}
                   align={item.align}
                   onClick={() => item.sort && handleChangeOrder(item)}
@@ -239,14 +240,14 @@ const Table = ({ children, headers, pagination, onChangeOrder, data, loading, ..
               </TableRow>
             )}
             {(data || []).map((row, index) => (
-              <TableRow key={index}>
+              <TableRow key={`${index}`}>
                 {headers.map((header) =>
                   header.cellComponent ? (
-                    <TableData width={header.width} align={header.align} key={`${header.key}-${index}`}>
+                    <TableData width={header.width} align={header.align} key={`${header.key}-${shortid.generate()}`}>
                       <header.cellComponent row={row} header={header} value={getDataByKey({ key: header.key, item: row })} />
                     </TableData>
                   ) : (
-                    <TableData align={header.align} key={`${header.key}-${index}`}>
+                    <TableData align={header.align} key={`${header.key}-${shortid.generate()}`}>
                       {getDataByKey({ key: header.key, item: row })}
                     </TableData>
                   )
