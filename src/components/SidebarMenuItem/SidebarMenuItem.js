@@ -24,7 +24,7 @@ const MenuLink = styled.a`
 const MenuItem = memo(({ children, component = 'a', as, icon, ...rest }) => {
   return (
     <StyledListItem role="none">
-      <MenuLink {...rest} as={as || component} role="menuitem" tabindex="-1">
+      <MenuLink {...rest} as={as || component} role="menuitem" tabIndex="-1">
         {!!icon && <WrapperIcon>{icon}</WrapperIcon>} {children}
       </MenuLink>
     </StyledListItem>
