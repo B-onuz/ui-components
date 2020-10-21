@@ -215,11 +215,11 @@ const Table = ({ children, headers, pagination, onChangeOrder, data, loading, ..
         <StyledTable>
           <TableHead>
             <TableRow>
-              {(headers || []).map((item, index) => (
+              {(headers || []).map((item) => (
                 <TableHeader
                   width={item.width}
                   minWidth={item.minWidth}
-                  key={`${index}`}
+                  key={`${item.key}-${item.title}`}
                   order={item.sort}
                   align={item.align}
                   onClick={() => item.sort && handleChangeOrder(item)}
@@ -239,8 +239,8 @@ const Table = ({ children, headers, pagination, onChangeOrder, data, loading, ..
                 </TableData>
               </TableRow>
             )}
-            {(data || []).map((row, index) => (
-              <TableRow key={`${index}`}>
+            {(data || []).map((row) => (
+              <TableRow key={`${row._id}` || `${shortid.generate()}`}>
                 {headers.map((header) =>
                   header.cellComponent ? (
                     <TableData width={header.width} align={header.align} key={`${header.key}-${shortid.generate()}`}>
