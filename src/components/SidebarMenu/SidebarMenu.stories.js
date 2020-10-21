@@ -66,8 +66,15 @@ export const SidebarMenuOnlyMobile = () => (
       </Button>
     }
   >
-    {menuItems.map((item, index) => {
-      return <SidebarMenuItem key={index} component={'header'} icon={<FontAwesomeIcon icon={item.icon} />} children={item.text} />
+    {menuItems.map((item) => {
+      return (
+        <SidebarMenuItem
+          key={`${item.text}-${shortid.generate()}`}
+          component={'header'}
+          icon={<FontAwesomeIcon icon={item.icon} />}
+          children={item.text}
+        />
+      )
     })}
   </SidebarMenu>
 )

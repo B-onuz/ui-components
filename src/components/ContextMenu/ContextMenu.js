@@ -95,7 +95,7 @@ const ContextMenu = ({ children, direction, contextMenuActions, contextFunctions
           <Modal open={isOpenResponsiveModal} onClose={onClose}>
             <ModalWrapper>
               {(contextMenuActions || []).map((action, index) => (
-                <React.Fragment key={`${index}-${shortid.generate()}`}>
+                <React.Fragment key={`${action.text}-${shortid.generate()}`}>
                   <Button key={`${index}-${shortid.generate()}`} linkButton color={'primary'} onClick={() => onClose() && action.buttonFunction()}>
                     {action.text}
                   </Button>
@@ -108,7 +108,7 @@ const ContextMenu = ({ children, direction, contextMenuActions, contextFunctions
       ) : (
         <ContextMenuDialog contextFunctions={contextFunctions} isOpen={isOpen} onClose={onClose} buttonRef={buttonRef} direction={direction}>
           {(contextMenuActions || []).map((action, index) => (
-            <React.Fragment key={`${index}-${shortid.generate()}`}>
+            <React.Fragment key={`${action.text}-${shortid.generate()}`}>
               <Button key={`${index}-${shortid.generate()}`} linkButton color={'primary'} onClick={() => onClose() && action.buttonFunction()}>
                 {action.text}
               </Button>
