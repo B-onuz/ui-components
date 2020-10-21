@@ -2,11 +2,12 @@ import React, { useRef, useState, useEffect } from 'react'
 import styled from 'styled-components'
 import { color, space } from 'styled-system'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faEllipsisH, faPlus } from '@fortawesome/free-solid-svg-icons'
+import { faEllipsisH } from '@fortawesome/free-solid-svg-icons'
 import Button from '../Button'
 import ContextMenuDialog from './ContextMenuDialog'
 import Modal from '../Modal'
 import useModal from '../../hooks/useModal'
+import shortid from 'shortid'
 
 const StyledContextMenu = styled.div`
   ${color}
@@ -77,7 +78,7 @@ const ContextMenu = ({ children, direction, contextMenuActions, contextFunctions
   const needResponsive = screen.width >= 500 ? false : true
 
   return (
-    <StyledContextMenu ref={wrapperRef} {...rest}>
+    <StyledContextMenu ref={wrapperRef} key={`${shortid.generate()}`} {...rest}>
       {contextFunctions ? (
         <div ref={buttonRef}>
           <Button p={0} className="contextButton" onClick={() => setIsOpen((last) => !last)} color={'primary'}>
@@ -94,12 +95,17 @@ const ContextMenu = ({ children, direction, contextMenuActions, contextFunctions
           <Modal open={isOpenResponsiveModal} onClose={onClose}>
             <ModalWrapper>
               {(contextMenuActions || []).map((action, index) => (
-                <>
-                  <Button linkButton color={'primary'} onClick={() => onClose() && action.buttonFunction()}>
+                <React.Fragment key={`${action.text}-${shortid.generate()}`}>
+                  <Button
+                    key={`${action.text}-${shortid.generate()}`}
+                    linkButton
+                    color={'primary'}
+                    onClick={() => onClose() && action.buttonFunction()}
+                  >
                     {action.text}
                   </Button>
                   {index + 1 !== contextMenuActions.length ? <Divider /> : null}
-                </>
+                </React.Fragment>
               ))}
             </ModalWrapper>
           </Modal>
@@ -107,12 +113,12 @@ const ContextMenu = ({ children, direction, contextMenuActions, contextFunctions
       ) : (
         <ContextMenuDialog contextFunctions={contextFunctions} isOpen={isOpen} onClose={onClose} buttonRef={buttonRef} direction={direction}>
           {(contextMenuActions || []).map((action, index) => (
-            <>
-              <Button linkButton color={'primary'} onClick={() => onClose() && action.buttonFunction()}>
+            <React.Fragment key={`${action.text}-${shortid.generate()}`}>
+              <Button key={`${action.text}-${shortid.generate()}`} linkButton color={'primary'} onClick={() => onClose() && action.buttonFunction()}>
                 {action.text}
               </Button>
               {index + 1 !== contextMenuActions.length ? <Divider /> : null}
-            </>
+            </React.Fragment>
           ))}
         </ContextMenuDialog>
       )}

@@ -5,8 +5,7 @@ exports[`HamburguerButton changes the class when hovered 1`] = `
   className="sc-AxjAm iYohGp"
 >
   <i
-    class="arrow left"
-    className="sc-AxirZ latOsZ"
+    className="sc-AxirZ latOsZ arrow left"
   />
 </button>
 `;

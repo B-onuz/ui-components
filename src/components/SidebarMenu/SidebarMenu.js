@@ -105,7 +105,7 @@ const SidebarMenuRoot = ({ children, open = false, onlyMobile = false, onClose, 
       </MenuList>
       {contactButton ? <ContactButton>{contactButton}</ContactButton> : false}
     </StyledSidebarMenu>
-    <Backdrop onClick={onClose} aria-role="button" aria-label="Fechar menu" />
+    <Backdrop onClick={onClose} role="button" aria-label="Fechar menu" />
   </WrapperSidebarMenu>
 )
 

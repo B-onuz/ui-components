@@ -106,7 +106,7 @@ const Arrow = styled.i`
 const HamburguerButton = ({ isOpen = false, children, backgroundColor = '#fff', ...rest }) => {
   return (
     <StyledHamburguerButton isOpen={isOpen} {...rest}>
-      <Arrow class="arrow left" isOpen={isOpen} backgroundColor={backgroundColor} />
+      <Arrow className="arrow left" isOpen={isOpen} backgroundColor={backgroundColor} />
     </StyledHamburguerButton>
   )
 }

@@ -27,6 +27,7 @@ exports[`SidebarMenuItem changes the class when hovered 1`] = `
   <a
     className="c1"
     role="menuitem"
+    tabIndex="-1"
   >
      
   </a>

@@ -2,6 +2,7 @@ import React from 'react'
 import SidebarMenu from './SidebarMenu'
 import SidebarMenuItem from '../SidebarMenuItem'
 import Button from '../Button'
+import shortid from 'shortid'
 import { Box, Flex } from 'reflexbox'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faHome, faDice, faCodeBranch, faAdjust, faKey, faPhone } from '@fortawesome/free-solid-svg-icons'
@@ -36,7 +37,14 @@ export const SidebarMenuExample = () => (
     }
   >
     {menuItems.map((item) => {
-      return <SidebarMenuItem component={'header'} icon={<FontAwesomeIcon icon={item.icon} />} children={item.text} />
+      return (
+        <SidebarMenuItem
+          key={`${item.text}-${shortid.generate()}`}
+          component={'header'}
+          icon={<FontAwesomeIcon icon={item.icon} />}
+          children={item.text}
+        />
+      )
     })}
   </SidebarMenu>
 )
@@ -59,7 +67,14 @@ export const SidebarMenuOnlyMobile = () => (
     }
   >
     {menuItems.map((item) => {
-      return <SidebarMenuItem component={'header'} icon={<FontAwesomeIcon icon={item.icon} />} children={item.text} />
+      return (
+        <SidebarMenuItem
+          key={`${item.text}-${shortid.generate()}`}
+          component={'header'}
+          icon={<FontAwesomeIcon icon={item.icon} />}
+          children={item.text}
+        />
+      )
     })}
   </SidebarMenu>
 )

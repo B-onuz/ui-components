@@ -77,7 +77,7 @@ const DemandDetailing = ({ children, reportTitle, reportKind, detailingData, ...
           {(detailingData || [])
             .sort((first, last) => last.createdAt - first.createdAt)
             .map((item, index) => (
-              <TopicItemWrapper className={getTopicClass(index, (detailingData || {}).length)}>
+              <TopicItemWrapper key={item.createdAt} className={getTopicClass(index, (detailingData || {}).length)}>
                 {index === 1 && <ReportBodyTitle>{reportKind}</ReportBodyTitle>}
                 <Flex alignItems="center" justifyContent="flex-start">
                   <UserAvatar userName={item.interactionResponsibleName} displayName={item.interactionResponsibleName} mr={2} />
@@ -98,7 +98,16 @@ const DemandDetailing = ({ children, reportTitle, reportKind, detailingData, ...
                         Anexos:
                       </Typography>
                       {item.documents.map((file) => (
-                        <Button as="a" target="_blank" rel="noopener noreferrer" href={file.fileURL} linkbutton color="primary" linkButton>
+                        <Button
+                          key={file.fileURL}
+                          as="a"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          href={file.fileURL}
+                          linkbutton
+                          color="primary"
+                          linkButton
+                        >
                           {file.name}
                         </Button>
                       ))}
