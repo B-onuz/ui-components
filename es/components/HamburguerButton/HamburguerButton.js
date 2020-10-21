@@ -72,7 +72,7 @@ var HamburguerButton = function HamburguerButton(_ref) {
       columnNumber: 5
     }
   }), /*#__PURE__*/_react["default"].createElement(Arrow, {
-    "class": "arrow left",
+    className: "arrow left",
     isOpen: isOpen,
     backgroundColor: backgroundColor,
     __self: _this,

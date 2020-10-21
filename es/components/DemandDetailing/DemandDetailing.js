@@ -142,6 +142,7 @@ var DemandDetailing = function DemandDetailing(_ref) {
     return last.createdAt - first.createdAt;
   }).map(function (item, index) {
     return /*#__PURE__*/_react["default"].createElement(TopicItemWrapper, {
+      key: item.createdAt,
       className: getTopicClass(index, (detailingData || {}).length),
       __self: _this,
       __source: {
@@ -232,6 +233,7 @@ var DemandDetailing = function DemandDetailing(_ref) {
       }
     }, "Anexos:"), item.documents.map(function (file) {
       return /*#__PURE__*/_react["default"].createElement(_Button["default"], {
+        key: file.fileURL,
         as: "a",
         target: "_blank",
         rel: "noopener noreferrer",

@@ -25,6 +25,8 @@ var _Modal = _interopRequireDefault(require("../Modal"));
 
 var _useModal2 = _interopRequireDefault(require("../../hooks/useModal"));
 
+var _shortid = _interopRequireDefault(require("shortid"));
+
 var _this = void 0,
     _jsxFileName = "/home/nicolasgarcia/Documents/Kazap/ui-components/src/components/ContextMenu/ContextMenu.js";
 
@@ -138,12 +140,13 @@ var ContextMenu = function ContextMenu(_ref2) {
   });
   var needResponsive = screen.width >= 500 ? false : true;
   return /*#__PURE__*/_react["default"].createElement(StyledContextMenu, _extends({
-    ref: wrapperRef
+    ref: wrapperRef,
+    key: "" + _shortid["default"].generate()
   }, rest, {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 80,
+      lineNumber: 81,
       columnNumber: 5
     }
   }), contextFunctions ? /*#__PURE__*/_react["default"].createElement("div", {
@@ -151,7 +154,7 @@ var ContextMenu = function ContextMenu(_ref2) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 82,
+      lineNumber: 83,
       columnNumber: 9
     }
   }, /*#__PURE__*/_react["default"].createElement(_Button["default"], {
@@ -166,7 +169,7 @@ var ContextMenu = function ContextMenu(_ref2) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 83,
+      lineNumber: 84,
       columnNumber: 11
     }
   }, /*#__PURE__*/_react["default"].createElement(Icon, {
@@ -175,7 +178,7 @@ var ContextMenu = function ContextMenu(_ref2) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 84,
+      lineNumber: 85,
       columnNumber: 13
     }
   }))) : /*#__PURE__*/_react["default"].createElement(ContextMenuToogleButton, {
@@ -188,7 +191,7 @@ var ContextMenu = function ContextMenu(_ref2) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 88,
+      lineNumber: 89,
       columnNumber: 9
     }
   }, /*#__PURE__*/_react["default"].createElement(Icon, {
@@ -196,7 +199,7 @@ var ContextMenu = function ContextMenu(_ref2) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 89,
+      lineNumber: 90,
       columnNumber: 11
     }
   })), needResponsive ? /*#__PURE__*/_react["default"].createElement(_react["default"].Fragment, null, /*#__PURE__*/_react["default"].createElement(_Modal["default"], {
@@ -205,18 +208,27 @@ var ContextMenu = function ContextMenu(_ref2) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 94,
+      lineNumber: 95,
       columnNumber: 11
     }
   }, /*#__PURE__*/_react["default"].createElement(ModalWrapper, {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 95,
+      lineNumber: 96,
       columnNumber: 13
     }
   }, (contextMenuActions || []).map(function (action, index) {
-    return /*#__PURE__*/_react["default"].createElement(_react["default"].Fragment, null, /*#__PURE__*/_react["default"].createElement(_Button["default"], {
+    return /*#__PURE__*/_react["default"].createElement(_react["default"].Fragment, {
+      key: action.text + "-" + _shortid["default"].generate(),
+      __self: _this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 98,
+        columnNumber: 17
+      }
+    }, /*#__PURE__*/_react["default"].createElement(_Button["default"], {
+      key: action.text + "-" + _shortid["default"].generate(),
       linkButton: true,
       color: 'primary',
       onClick: function onClick() {
@@ -225,14 +237,14 @@ var ContextMenu = function ContextMenu(_ref2) {
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 98,
+        lineNumber: 99,
         columnNumber: 19
       }
     }, action.text), index + 1 !== contextMenuActions.length ? /*#__PURE__*/_react["default"].createElement(Divider, {
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 101,
+        lineNumber: 107,
         columnNumber: 62
       }
     }) : null);
@@ -245,11 +257,20 @@ var ContextMenu = function ContextMenu(_ref2) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 108,
+      lineNumber: 114,
       columnNumber: 9
     }
   }, (contextMenuActions || []).map(function (action, index) {
-    return /*#__PURE__*/_react["default"].createElement(_react["default"].Fragment, null, /*#__PURE__*/_react["default"].createElement(_Button["default"], {
+    return /*#__PURE__*/_react["default"].createElement(_react["default"].Fragment, {
+      key: action.text + "-" + _shortid["default"].generate(),
+      __self: _this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 116,
+        columnNumber: 13
+      }
+    }, /*#__PURE__*/_react["default"].createElement(_Button["default"], {
+      key: action.text + "-" + _shortid["default"].generate(),
       linkButton: true,
       color: 'primary',
       onClick: function onClick() {
@@ -258,14 +279,14 @@ var ContextMenu = function ContextMenu(_ref2) {
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 111,
+        lineNumber: 117,
         columnNumber: 15
       }
     }, action.text), index + 1 !== contextMenuActions.length ? /*#__PURE__*/_react["default"].createElement(Divider, {
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 114,
+        lineNumber: 120,
         columnNumber: 58
       }
     }) : null);

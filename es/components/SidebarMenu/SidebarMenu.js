@@ -168,7 +168,7 @@ var SidebarMenuRoot = function SidebarMenuRoot(_ref3) {
     }
   }, contactButton) : false), /*#__PURE__*/_react["default"].createElement(Backdrop, {
     onClick: onClose,
-    "aria-role": "button",
+    role: "button",
     "aria-label": "Fechar menu",
     __self: _this,
     __source: {
