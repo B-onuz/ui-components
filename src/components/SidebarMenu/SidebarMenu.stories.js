@@ -35,8 +35,8 @@ export const SidebarMenuExample = () => (
       </Button>
     }
   >
-    {menuItems.map((item) => {
-      return <SidebarMenuItem component={'header'} icon={<FontAwesomeIcon icon={item.icon} />} children={item.text} />
+    {menuItems.map((item, index) => {
+      return <SidebarMenuItem key={index} component={'header'} icon={<FontAwesomeIcon icon={item.icon} />} children={item.text} />
     })}
   </SidebarMenu>
 )
@@ -58,8 +58,8 @@ export const SidebarMenuOnlyMobile = () => (
       </Button>
     }
   >
-    {menuItems.map((item) => {
-      return <SidebarMenuItem component={'header'} icon={<FontAwesomeIcon icon={item.icon} />} children={item.text} />
+    {menuItems.map((item, index) => {
+      return <SidebarMenuItem key={index} component={'header'} icon={<FontAwesomeIcon icon={item.icon} />} children={item.text} />
     })}
   </SidebarMenu>
 )
