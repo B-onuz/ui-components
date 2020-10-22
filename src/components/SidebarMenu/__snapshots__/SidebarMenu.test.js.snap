@@ -12,7 +12,62 @@ exports[`SidebarMenu changes the class when hovered 1`] = `
   opacity: 0.5;
 }
 
-.c3 {
+.c4 {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  font-family: inherit;
+  border-radius: 4px;
+  outline: none;
+  cursor: pointer;
+  padding: .5rem 1rem;
+  border-style: solid;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  border-color: undefined !important;
+  color: #000;
+  background-color: #fdfdfd;
+  border-color: #fdfdfd;
+  font-size: 16px;
+  box-sizing: border-box;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #fdfdfd;
+  border: none;
+  background-color: transparent !important;
+  box-shadow: none !important;
+  outline: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c4:focus {
+  box-shadow: 0 0 8px #fdfdfd;
+}
+
+.c4:active:not(:disabled) {
+  box-shadow: inset 0px 0px 5px #c1c1c1;
+}
+
+.c4:active,
+.c4:hover {
+  background-color: hsl(0,0%,89.3%);
+}
+
+.c4:disabled {
+  background-color: hsl(0,0%,100%);
+}
+
+.c4:hover {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  background-color: transparent;
+}
+
+.c5 {
   visibility: hidden;
   background: rgba(0,0,0,0);
   -webkit-transition: 0.2s;
@@ -42,6 +97,23 @@ exports[`SidebarMenu changes the class when hovered 1`] = `
   transform: translateX(-100%);
 }
 
+.c3 {
+  position: absolute;
+  bottom: 30px;
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
 <nav
   aria-expanded={false}
   aria-label="menu"
@@ -59,10 +131,23 @@ exports[`SidebarMenu changes the class when hovered 1`] = `
       className="c2"
       role="menu"
     />
+    <div
+      className="c3 css-vurnku"
+    >
+      <button
+        className="c4"
+        color="white"
+        disabled={false}
+        size="medium"
+        type="button"
+      >
+        Sair
+      </button>
+    </div>
   </div>
   <div
     aria-label="Fechar menu"
-    className="c3"
+    className="c5"
     role="button"
   />
 </nav>
