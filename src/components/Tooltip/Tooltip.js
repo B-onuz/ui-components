@@ -9,9 +9,12 @@ const StyledTooltipWrapper = styled.div`
   display: flex;
 `
 
+const ChildrenTextWrapper = styled.div``
+
 const TooltipTextBox = styled.div`
   ${color}
-  min-width: 156px;
+  width: max-content;
+  max-width: 200px;
   position: absolute;
   border-radius: 12px;
   opacity: ${({ showTooltip }) => (showTooltip ? 1 : 0)};
@@ -23,7 +26,7 @@ const TooltipTextBox = styled.div`
   background: ${({ theme, color }) => `${theme.colors[color]}`} 0% 0% no-repeat padding-box;
   box-shadow: 0px 2px 6px #2c28281c;
   transition: all 300ms;
-
+  z-index: 1000;
   ${({ direction }) => {
     if (direction === 'left') {
       return `
@@ -100,8 +103,10 @@ const Tooltip = ({ children, direction, color, text, ...rest }) => {
   const [showTooltip, setShowTooltip] = useState(false)
 
   return (
-    <StyledTooltipWrapper {...rest} onMouseEnter={() => setShowTooltip(true)} onMouseLeave={() => setShowTooltip(false)}>
-      {children}
+    <StyledTooltipWrapper {...rest}>
+      <ChildrenTextWrapper onMouseEnter={() => setShowTooltip(true)} onMouseLeave={() => setShowTooltip(false)}>
+        {children}
+      </ChildrenTextWrapper>
       <TooltipTextBox color={color} direction={direction} showTooltip={showTooltip}>
         {text}
       </TooltipTextBox>
