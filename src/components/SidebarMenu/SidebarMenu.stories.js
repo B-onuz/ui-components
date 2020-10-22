@@ -35,6 +35,7 @@ export const SidebarMenuExample = () => (
         </Flex>
       </Button>
     }
+    logoutHref={'google.com'}
   >
     {menuItems.map((item) => {
       return (

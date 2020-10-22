@@ -4,6 +4,7 @@ import styled from 'styled-components'
 import { layout } from 'styled-system'
 import { Box } from 'reflexbox'
 import MenuList from './MenuList'
+import Button from '../Button'
 
 const Backdrop = styled.div`
   visibility: hidden;
@@ -75,6 +76,7 @@ const ContactButton = styled(Box)`
   bottom: 30px;
   width: 100%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
 `
 
@@ -96,14 +98,19 @@ const useRootSidebar = () => {
   return { $rootModal }
 }
 
-const SidebarMenuRoot = ({ children, open = false, onlyMobile = false, onClose, logo = 'Logo', items = [], contactButton, ...rest }) => (
+const SidebarMenuRoot = ({ children, open = false, onlyMobile = false, onClose, logo = 'Logo', items = [], contactButton, logoutHref, ...rest }) => (
   <WrapperSidebarMenu onlyMobile={onlyMobile} open={!!open} role="menubar" aria-label="menu" aria-expanded={!!open}>
     <StyledSidebarMenu role="none" open={!!open} {...rest}>
       {logo}
       <MenuList role="menu" isOpen={!!open}>
         {children}
       </MenuList>
-      {contactButton ? <ContactButton>{contactButton}</ContactButton> : false}
+      <ContactButton>
+        {contactButton}
+        <Button linkButton color={'white'} href={logoutHref}>
+          Sair
+        </Button>
+      </ContactButton>
     </StyledSidebarMenu>
     <Backdrop onClick={onClose} role="button" aria-label="Fechar menu" />
   </WrapperSidebarMenu>
