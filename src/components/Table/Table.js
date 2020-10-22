@@ -219,7 +219,7 @@ const Table = ({ children, headers, pagination, onChangeOrder, data, loading, ..
                 <TableHeader
                   width={item.width}
                   minWidth={item.minWidth}
-                  key={`${item.key}-${item.title}`}
+                  key={`${shortid.generate()}`}
                   order={item.sort}
                   align={item.align}
                   onClick={() => item.sort && handleChangeOrder(item)}
@@ -240,14 +240,14 @@ const Table = ({ children, headers, pagination, onChangeOrder, data, loading, ..
               </TableRow>
             )}
             {(data || []).map((row) => (
-              <TableRow key={`${row._id}` || `${shortid.generate()}`}>
+              <TableRow key={`${shortid.generate()}`}>
                 {headers.map((header) =>
                   header.cellComponent ? (
-                    <TableData width={header.width} align={header.align} key={`${header.key}-${shortid.generate()}`}>
+                    <TableData width={header.width} align={header.align} key={`${shortid.generate()}`}>
                       <header.cellComponent row={row} header={header} value={getDataByKey({ key: header.key, item: row })} />
                     </TableData>
                   ) : (
-                    <TableData align={header.align} key={`${header.key}-${shortid.generate()}`}>
+                    <TableData align={header.align} key={`${shortid.generate()}`}>
                       {getDataByKey({ key: header.key, item: row })}
                     </TableData>
                   )
