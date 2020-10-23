@@ -34,6 +34,16 @@ function _extends() { _extends = Object.assign || function (target) { for (var i
 
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 
+function _templateObject5() {
+  var data = _taggedTemplateLiteralLoose(["\n  color: #ffffff;\n  text-decoration: none;\n  text-align: center;\n"]);
+
+  _templateObject5 = function _templateObject5() {
+    return data;
+  };
+
+  return data;
+}
+
 function _templateObject4() {
   var data = _taggedTemplateLiteralLoose(["\n  position: absolute;\n  bottom: 30px;\n  width: 100%;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n"]);
 
@@ -94,6 +104,8 @@ var StyledSidebarMenu = (0, _styledComponents["default"])(_reflexbox.Box)(_templ
 });
 var ContactButton = (0, _styledComponents["default"])(_reflexbox.Box)(_templateObject4());
 
+var LogoutLink = _styledComponents["default"].a(_templateObject5());
+
 var useRootSidebar = function useRootSidebar() {
   var _useState = (0, _react.useState)(),
       $rootModal = _useState[0],
@@ -140,7 +152,7 @@ var SidebarMenuRoot = function SidebarMenuRoot(_ref3) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 102,
+      lineNumber: 108,
       columnNumber: 3
     }
   }, /*#__PURE__*/_react["default"].createElement(StyledSidebarMenu, _extends({
@@ -150,7 +162,7 @@ var SidebarMenuRoot = function SidebarMenuRoot(_ref3) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 103,
+      lineNumber: 109,
       columnNumber: 5
     }
   }), logo, /*#__PURE__*/_react["default"].createElement(_MenuList["default"], {
@@ -159,24 +171,22 @@ var SidebarMenuRoot = function SidebarMenuRoot(_ref3) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 105,
+      lineNumber: 111,
       columnNumber: 7
     }
   }, children), /*#__PURE__*/_react["default"].createElement(ContactButton, {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 108,
+      lineNumber: 114,
       columnNumber: 7
     }
-  }, contactButton, /*#__PURE__*/_react["default"].createElement(_Button["default"], {
-    linkButton: true,
-    color: 'white',
+  }, contactButton, /*#__PURE__*/_react["default"].createElement(LogoutLink, {
     href: logoutHref,
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 110,
+      lineNumber: 116,
       columnNumber: 9
     }
   }, "Sair"))), /*#__PURE__*/_react["default"].createElement(Backdrop, {
@@ -186,7 +196,7 @@ var SidebarMenuRoot = function SidebarMenuRoot(_ref3) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 115,
+      lineNumber: 119,
       columnNumber: 5
     }
   }));
@@ -201,7 +211,7 @@ var SidebarMenuMobile = function SidebarMenuMobile(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 123,
+      lineNumber: 127,
       columnNumber: 32
     }
   })), $rootModal);
@@ -213,7 +223,7 @@ var SidebarMenu = function SidebarMenu(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 129,
+      lineNumber: 133,
       columnNumber: 10
     }
   }));

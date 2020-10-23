@@ -1,4 +1,4 @@
-/*! ui-components v2.22.3 */
+/*! ui-components v2.22.4 */
 (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
 		module.exports = factory(require("react"));
@@ -11705,6 +11705,16 @@ function SidebarMenu_extends() { SidebarMenu_extends = Object.assign || function
 
 function SidebarMenu_objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 
+function _templateObject5() {
+  var data = SidebarMenu_taggedTemplateLiteralLoose(["\n  color: #ffffff;\n  text-decoration: none;\n  text-align: center;\n"]);
+
+  _templateObject5 = function _templateObject5() {
+    return data;
+  };
+
+  return data;
+}
+
 function _templateObject4() {
   var data = SidebarMenu_taggedTemplateLiteralLoose(["\n  position: absolute;\n  bottom: 30px;\n  width: 100%;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n"]);
 
@@ -11770,6 +11780,7 @@ var StyledSidebarMenu = Object(styled_components_browser_esm["default"])(dist["B
   return open ? "\n    transform: translateX(0);\n  " : "\n    transform: translateX(-100%);\n  ";
 });
 var ContactButton = Object(styled_components_browser_esm["default"])(dist["Box"])(_templateObject4());
+var LogoutLink = styled_components_browser_esm["default"].a(_templateObject5());
 
 var SidebarMenu_useRootSidebar = function useRootSidebar() {
   var _useState = Object(external_root_React_commonjs2_react_commonjs_react_amd_react_["useState"])(),
@@ -11820,9 +11831,7 @@ var SidebarMenu_SidebarMenuRoot = function SidebarMenuRoot(_ref3) {
   }, rest), logo, /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(SidebarMenu_MenuList, {
     role: "menu",
     isOpen: !!open
-  }, children), /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(ContactButton, null, contactButton, /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(components_Button, {
-    linkButton: true,
-    color: 'white',
+  }, children), /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(ContactButton, null, contactButton, /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(LogoutLink, {
     href: logoutHref
   }, "Sair"))), /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(Backdrop, {
     onClick: onClose,
@@ -12283,10 +12292,10 @@ function CheckBox_extends() { CheckBox_extends = Object.assign || function (targ
 
 function CheckBox_objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 
-function _templateObject5() {
+function CheckBox_templateObject5() {
   var data = CheckBox_taggedTemplateLiteralLoose(["\n  &:checked {\n    & ~ ", " {\n      border: 1px solid #95c8da;\n      ", " {\n        animation: start 0.4s ease both;\n        animation-play-state: running !important;\n        width: 10px;\n        height: 5px;\n        border: solid 2px #0c0c0c;\n        border-top: none;\n        border-right: none;\n      }\n    }\n  }\n"]);
 
-  _templateObject5 = function _templateObject5() {
+  CheckBox_templateObject5 = function _templateObject5() {
     return data;
   };
 
@@ -12341,7 +12350,7 @@ var StyledCheckBox = styled_components_browser_esm["default"].div(CheckBox_templ
 var FakeCheckBox = styled_components_browser_esm["default"].label(CheckBox_templateObject2());
 var CheckboxLabel = styled_components_browser_esm["default"].label(CheckBox_templateObject3());
 var CheckIcon = styled_components_browser_esm["default"].div(CheckBox_templateObject4());
-var RealCheckBox = styled_components_browser_esm["default"].input(_templateObject5(), FakeCheckBox, CheckIcon);
+var RealCheckBox = styled_components_browser_esm["default"].input(CheckBox_templateObject5(), FakeCheckBox, CheckIcon);
 
 var CheckBox_CheckBox = function CheckBox(_ref) {
   var children = _ref.children,
