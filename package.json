@@ -1,7 +1,7 @@
 {
   "name": "ui-components",
   "private": true,
-  "version": "2.22.3",
+  "version": "2.22.4",
   "description": "ui-components B-onuz",
   "main": "lib/index.js",
   "module": "es/index.js",
