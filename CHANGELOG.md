@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.22.5](https://github.com/B-onuz/ui-components/compare/v2.22.4...v2.22.5) (2020-10-23)
+
+### Bug Fixes
+
+- **sidebar:** logout button ([#59](https://github.com/B-onuz/ui-components/issues/59)) ([039a862](https://github.com/B-onuz/ui-components/commit/039a86259fce490c82bd94fef260dadf645f8d3d))
+
 ### [2.22.4](https://github.com/B-onuz/ui-components/compare/v2.22.3...v2.22.4) (2020-10-23)
 
 ### Bug Fixes
