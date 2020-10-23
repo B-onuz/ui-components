@@ -80,6 +80,12 @@ const ContactButton = styled(Box)`
   justify-content: center;
 `
 
+const LogoutLink = styled.a`
+  color: #ffffff;
+  text-decoration: none;
+  text-align: center;
+`
+
 const useRootSidebar = () => {
   const [$rootModal, setRootModal] = useState()
 
@@ -107,9 +113,7 @@ const SidebarMenuRoot = ({ children, open = false, onlyMobile = false, onClose, 
       </MenuList>
       <ContactButton>
         {contactButton}
-        <Button linkButton color={'white'} href={logoutHref}>
-          Sair
-        </Button>
+        <LogoutLink href={logoutHref}>Sair</LogoutLink>
       </ContactButton>
     </StyledSidebarMenu>
     <Backdrop onClick={onClose} role="button" aria-label="Fechar menu" />
