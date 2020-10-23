@@ -1,4 +1,4 @@
-/*! ui-components v2.22.2 */
+/*! ui-components v2.22.3 */
 (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
 		module.exports = factory(require("react"));
@@ -11706,7 +11706,7 @@ function SidebarMenu_extends() { SidebarMenu_extends = Object.assign || function
 function SidebarMenu_objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 
 function _templateObject4() {
-  var data = SidebarMenu_taggedTemplateLiteralLoose(["\n  position: absolute;\n  bottom: 30px;\n  width: 100%;\n  display: flex;\n  justify-content: center;\n"]);
+  var data = SidebarMenu_taggedTemplateLiteralLoose(["\n  position: absolute;\n  bottom: 30px;\n  width: 100%;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n"]);
 
   _templateObject4 = function _templateObject4() {
     return data;
@@ -11746,6 +11746,7 @@ function SidebarMenu_templateObject() {
 }
 
 function SidebarMenu_taggedTemplateLiteralLoose(strings, raw) { if (!raw) { raw = strings.slice(0); } strings.raw = raw; return strings; }
+
 
 
 
@@ -11804,7 +11805,8 @@ var SidebarMenu_SidebarMenuRoot = function SidebarMenuRoot(_ref3) {
       _ref3$items = _ref3.items,
       items = _ref3$items === void 0 ? [] : _ref3$items,
       contactButton = _ref3.contactButton,
-      rest = SidebarMenu_objectWithoutPropertiesLoose(_ref3, ["children", "open", "onlyMobile", "onClose", "logo", "items", "contactButton"]);
+      logoutHref = _ref3.logoutHref,
+      rest = SidebarMenu_objectWithoutPropertiesLoose(_ref3, ["children", "open", "onlyMobile", "onClose", "logo", "items", "contactButton", "logoutHref"]);
 
   return /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(WrapperSidebarMenu, {
     onlyMobile: onlyMobile,
@@ -11818,7 +11820,11 @@ var SidebarMenu_SidebarMenuRoot = function SidebarMenuRoot(_ref3) {
   }, rest), logo, /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(SidebarMenu_MenuList, {
     role: "menu",
     isOpen: !!open
-  }, children), contactButton ? /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(ContactButton, null, contactButton) : false), /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(Backdrop, {
+  }, children), /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(ContactButton, null, contactButton, /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(components_Button, {
+    linkButton: true,
+    color: 'white',
+    href: logoutHref
+  }, "Sair"))), /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(Backdrop, {
     onClick: onClose,
     role: "button",
     "aria-label": "Fechar menu"
@@ -12003,7 +12009,7 @@ var Header_Header = function Header(_ref) {
       title = _ref.title,
       subTitle = _ref.subTitle,
       _ref$textAlign = _ref.textAlign,
-      textAlign = _ref$textAlign === void 0 ? 'center' : _ref$textAlign,
+      textAlign = _ref$textAlign === void 0 ? 'left' : _ref$textAlign,
       rest = Header_objectWithoutPropertiesLoose(_ref, ["children", "title", "subTitle", "textAlign"]);
 
   return /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(StyledHeader, rest, !!title && /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(Header_Title, {
@@ -12607,7 +12613,7 @@ var Table_Table = function Table(_ref10) {
     return /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(TableHeader, {
       width: item.width,
       minWidth: item.minWidth,
-      key: item.key + "-" + item.title,
+      key: "" + shortid_default.a.generate(),
       order: item.sort,
       align: item.align,
       onClick: function onClick() {
@@ -12624,12 +12630,12 @@ var Table_Table = function Table(_ref10) {
     colSpan: (headers || []).length
   }, !!loading ? 'Carregando...' : 'Nenhum registro encontrado')), (data || []).map(function (row) {
     return /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(TableRow, {
-      key: "" + row._id || "" + shortid_default.a.generate()
+      key: "" + shortid_default.a.generate()
     }, headers.map(function (header) {
       return header.cellComponent ? /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(TableData, {
         width: header.width,
         align: header.align,
-        key: header.key + "-" + shortid_default.a.generate()
+        key: "" + shortid_default.a.generate()
       }, /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(header.cellComponent, {
         row: row,
         header: header,
@@ -12639,7 +12645,7 @@ var Table_Table = function Table(_ref10) {
         })
       })) : /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(TableData, {
         align: header.align,
-        key: header.key + "-" + shortid_default.a.generate()
+        key: "" + shortid_default.a.generate()
       }, getDataByKey({
         key: header.key,
         item: row

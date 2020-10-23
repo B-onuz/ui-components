@@ -18,7 +18,7 @@ var _PaceLoading = _interopRequireDefault(require("./PaceLoading"));
 var _shortid = _interopRequireDefault(require("shortid"));
 
 var _this = void 0,
-    _jsxFileName = "/home/nicolasgarcia/Documents/Kazap/ui-components/src/components/Table/Table.js";
+    _jsxFileName = "/Users/rodrigopaschoaletto/Developer/Projects/Bonuz/Development/ui-components/src/components/Table/Table.js";
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
@@ -252,7 +252,7 @@ var Table = function Table(_ref10) {
     return /*#__PURE__*/_react["default"].createElement(TableHeader, {
       width: item.width,
       minWidth: item.minWidth,
-      key: item.key + "-" + item.title,
+      key: "" + _shortid["default"].generate(),
       order: item.sort,
       align: item.align,
       onClick: function onClick() {
@@ -308,7 +308,7 @@ var Table = function Table(_ref10) {
     }
   }, !!loading ? 'Carregando...' : 'Nenhum registro encontrado')), (data || []).map(function (row) {
     return /*#__PURE__*/_react["default"].createElement(TableRow, {
-      key: "" + row._id || "" + _shortid["default"].generate(),
+      key: "" + _shortid["default"].generate(),
       __self: _this,
       __source: {
         fileName: _jsxFileName,
@@ -319,7 +319,7 @@ var Table = function Table(_ref10) {
       return header.cellComponent ? /*#__PURE__*/_react["default"].createElement(TableData, {
         width: header.width,
         align: header.align,
-        key: header.key + "-" + _shortid["default"].generate(),
+        key: "" + _shortid["default"].generate(),
         __self: _this,
         __source: {
           fileName: _jsxFileName,
@@ -341,7 +341,7 @@ var Table = function Table(_ref10) {
         }
       })) : /*#__PURE__*/_react["default"].createElement(TableData, {
         align: header.align,
-        key: header.key + "-" + _shortid["default"].generate(),
+        key: "" + _shortid["default"].generate(),
         __self: _this,
         __source: {
           fileName: _jsxFileName,

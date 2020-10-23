@@ -20,7 +20,7 @@ var _reactSpring = require("react-spring");
 var _styledSystem = require("styled-system");
 
 var _this = void 0,
-    _jsxFileName = "/home/nicolasgarcia/Documents/Kazap/ui-components/src/components/Modal/Modal.js";
+    _jsxFileName = "/Users/rodrigopaschoaletto/Developer/Projects/Bonuz/Development/ui-components/src/components/Modal/Modal.js";
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 

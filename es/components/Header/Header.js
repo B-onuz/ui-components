@@ -16,7 +16,7 @@ var _Title = _interopRequireDefault(require("./Title"));
 var _SubTitle = _interopRequireDefault(require("./SubTitle"));
 
 var _this = void 0,
-    _jsxFileName = "/home/nicolasgarcia/Documents/Kazap/ui-components/src/components/Header/Header.js";
+    _jsxFileName = "/Users/rodrigopaschoaletto/Developer/Projects/Bonuz/Development/ui-components/src/components/Header/Header.js";
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
@@ -43,7 +43,7 @@ var Header = function Header(_ref) {
       title = _ref.title,
       subTitle = _ref.subTitle,
       _ref$textAlign = _ref.textAlign,
-      textAlign = _ref$textAlign === void 0 ? 'center' : _ref$textAlign,
+      textAlign = _ref$textAlign === void 0 ? 'left' : _ref$textAlign,
       rest = _objectWithoutPropertiesLoose(_ref, ["children", "title", "subTitle", "textAlign"]);
 
   return /*#__PURE__*/_react["default"].createElement(StyledHeader, _extends({}, rest, {

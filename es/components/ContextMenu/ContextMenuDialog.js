@@ -14,7 +14,7 @@ var _styledComponents = _interopRequireDefault(require("styled-components"));
 var _reactDom = _interopRequireDefault(require("react-dom"));
 
 var _this = void 0,
-    _jsxFileName = "/home/nicolasgarcia/Documents/Kazap/ui-components/src/components/ContextMenu/ContextMenuDialog.js";
+    _jsxFileName = "/Users/rodrigopaschoaletto/Developer/Projects/Bonuz/Development/ui-components/src/components/ContextMenu/ContextMenuDialog.js";
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 

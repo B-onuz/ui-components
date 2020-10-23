@@ -26,7 +26,7 @@ var _Button = _interopRequireDefault(require("../Button"));
 var _utils = require("../../utils");
 
 var _this = void 0,
-    _jsxFileName = "/home/nicolasgarcia/Documents/Kazap/ui-components/src/components/DemandDetailing/DemandDetailing.js";
+    _jsxFileName = "/Users/rodrigopaschoaletto/Developer/Projects/Bonuz/Development/ui-components/src/components/DemandDetailing/DemandDetailing.js";
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 

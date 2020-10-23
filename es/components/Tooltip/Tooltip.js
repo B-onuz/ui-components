@@ -16,7 +16,7 @@ var _styledSystem = require("styled-system");
 var _variants = require("./variants");
 
 var _this = void 0,
-    _jsxFileName = "/home/nicolasgarcia/Documents/Kazap/ui-components/src/components/Tooltip/Tooltip.js";
+    _jsxFileName = "/Users/rodrigopaschoaletto/Developer/Projects/Bonuz/Development/ui-components/src/components/Tooltip/Tooltip.js";
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
@@ -28,8 +28,18 @@ function _extends() { _extends = Object.assign || function (target) { for (var i
 
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 
+function _templateObject3() {
+  var data = _taggedTemplateLiteralLoose(["\n  ", "\n  width: max-content;\n  max-width: 200px;\n  position: absolute;\n  border-radius: 12px;\n  opacity: ", ";\n  z-index: ", ";\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  padding: 8px 16px;\n  background: ", " 0% 0% no-repeat padding-box;\n  box-shadow: 0px 2px 6px #2c28281c;\n  transition: all 300ms;\n  z-index: 1000;\n  ", "\n  &::after {\n    content: '';\n    width: 1em;\n    height: 1em;\n    position: absolute;\n    box-shadow: 1px 2px 2px -1px #2c28281c;\n    background: ", " 0% 0%;\n    ", "\n  }\n"]);
+
+  _templateObject3 = function _templateObject3() {
+    return data;
+  };
+
+  return data;
+}
+
 function _templateObject2() {
-  var data = _taggedTemplateLiteralLoose(["\n  ", "\n  min-width: 156px;\n  position: absolute;\n  border-radius: 12px;\n  opacity: ", ";\n  z-index: ", ";\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  padding: 8px 16px;\n  background: ", " 0% 0% no-repeat padding-box;\n  box-shadow: 0px 2px 6px #2c28281c;\n  transition: all 300ms;\n\n  ", "\n  &::after {\n    content: '';\n    width: 1em;\n    height: 1em;\n    position: absolute;\n    box-shadow: 1px 2px 2px -1px #2c28281c;\n    background: ", " 0% 0%;\n    ", "\n  }\n"]);
+  var data = _taggedTemplateLiteralLoose([""]);
 
   _templateObject2 = function _templateObject2() {
     return data;
@@ -52,7 +62,9 @@ function _taggedTemplateLiteralLoose(strings, raw) { if (!raw) { raw = strings.s
 
 var StyledTooltipWrapper = _styledComponents["default"].div(_templateObject(), _styledSystem.space);
 
-var TooltipTextBox = _styledComponents["default"].div(_templateObject2(), _variants.color, function (_ref) {
+var ChildrenTextWrapper = _styledComponents["default"].div(_templateObject2());
+
+var TooltipTextBox = _styledComponents["default"].div(_templateObject3(), _variants.color, function (_ref) {
   var showTooltip = _ref.showTooltip;
   return showTooltip ? 1 : 0;
 }, function (_ref2) {
@@ -116,6 +128,13 @@ var Tooltip = function Tooltip(_ref7) {
       setShowTooltip = _useState[1];
 
   return /*#__PURE__*/_react["default"].createElement(StyledTooltipWrapper, _extends({}, rest, {
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 106,
+      columnNumber: 5
+    }
+  }), /*#__PURE__*/_react["default"].createElement(ChildrenTextWrapper, {
     onMouseEnter: function onMouseEnter() {
       return setShowTooltip(true);
     },
@@ -125,17 +144,17 @@ var Tooltip = function Tooltip(_ref7) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 103,
-      columnNumber: 5
+      lineNumber: 107,
+      columnNumber: 7
     }
-  }), children, /*#__PURE__*/_react["default"].createElement(TooltipTextBox, {
+  }, children), /*#__PURE__*/_react["default"].createElement(TooltipTextBox, {
     color: color,
     direction: direction,
     showTooltip: showTooltip,
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 105,
+      lineNumber: 110,
       columnNumber: 7
     }
   }, text));
