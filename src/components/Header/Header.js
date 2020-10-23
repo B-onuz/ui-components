@@ -10,7 +10,7 @@ const StyledHeader = styled.header`
   font-family: inherit;
 `
 
-const Header = ({ children, title, subTitle, textAlign = 'center', ...rest }) => {
+const Header = ({ children, title, subTitle, textAlign = 'left', ...rest }) => {
   return (
     <StyledHeader {...rest}>
       {!!title && <Title textAlign={textAlign}>{title}</Title>}

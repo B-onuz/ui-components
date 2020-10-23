@@ -22,7 +22,7 @@ exports[`should render BaseLayout without sidebar 1`] = `
         }
       >
         <h1
-          className="sc-AxgMl fcQGIZ"
+          className="sc-AxgMl gJMJsZ"
           color="darkRed"
         >
           Cadastro de advogados
