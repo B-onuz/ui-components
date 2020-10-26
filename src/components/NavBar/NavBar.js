@@ -10,7 +10,8 @@ const StyledNavBar = styled.div`
   box-sizing: border-box;
   flex-shrink: 0;
   @media only screen and (max-width: 500px) {
-    padding: 0;
+    flex-direction: row-reverse;
+    padding: 2vh;
   }
 `
 
