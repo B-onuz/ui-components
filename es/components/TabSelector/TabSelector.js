@@ -16,7 +16,7 @@ var _styledSystem = require("styled-system");
 var _Button = _interopRequireDefault(require("../Button"));
 
 var _this = void 0,
-    _jsxFileName = "/Users/rodrigopaschoaletto/Developer/Projects/Bonuz/Development/ui-components/src/components/TabSelector/TabSelector.js";
+    _jsxFileName = "/home/nicolasgarcia/Documents/Kazap/ui-components/src/components/TabSelector/TabSelector.js";
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 

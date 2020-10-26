@@ -24,7 +24,7 @@ var _Header = _interopRequireDefault(require("../Header"));
 var _ProfileBox = _interopRequireDefault(require("../ProfileBox"));
 
 var _this = void 0,
-    _jsxFileName = "/Users/rodrigopaschoaletto/Developer/Projects/Bonuz/Development/ui-components/src/components/BaseLayout/BaseLayout.js";
+    _jsxFileName = "/home/nicolasgarcia/Documents/Kazap/ui-components/src/components/BaseLayout/BaseLayout.js";
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 

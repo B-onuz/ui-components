@@ -1,4 +1,4 @@
-/*! ui-components v2.22.4 */
+/*! ui-components v2.22.5 */
 (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
 		module.exports = factory(require("react"));
@@ -11716,7 +11716,7 @@ function _templateObject5() {
 }
 
 function _templateObject4() {
-  var data = SidebarMenu_taggedTemplateLiteralLoose(["\n  position: absolute;\n  bottom: 30px;\n  width: 100%;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n"]);
+  var data = SidebarMenu_taggedTemplateLiteralLoose(["\n  position: absolute;\n  bottom: 30px;\n  width: 100%;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  @media only screen and (max-width: 767px) {\n    position: unset;\n    padding-bottom: 4vh;\n  }\n"]);
 
   _templateObject4 = function _templateObject4() {
     return data;
@@ -11929,7 +11929,7 @@ var HamburguerButton_HamburguerButton = function HamburguerButton(_ref) {
 function NavBar_extends() { NavBar_extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return NavBar_extends.apply(this, arguments); }
 
 function NavBar_templateObject() {
-  var data = NavBar_taggedTemplateLiteralLoose(["\n  background-color: #f4f4f4;\n  height: 64px;\n  display: flex;\n  align-items: center;\n  padding: 20px;\n  box-sizing: border-box;\n  flex-shrink: 0;\n  @media only screen and (max-width: 500px) {\n    padding: 0;\n  }\n"]);
+  var data = NavBar_taggedTemplateLiteralLoose(["\n  background-color: #f4f4f4;\n  height: 64px;\n  display: flex;\n  align-items: center;\n  padding: 20px;\n  box-sizing: border-box;\n  flex-shrink: 0;\n  @media only screen and (max-width: 500px) {\n    flex-direction: row-reverse;\n    padding: 2vh;\n  }\n"]);
 
   NavBar_templateObject = function _templateObject() {
     return data;
