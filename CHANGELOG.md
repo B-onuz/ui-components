@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.22.6](https://github.com/B-onuz/ui-components/compare/v2.22.5...v2.22.6) (2020-10-26)
+
+### Bug Fixes
+
+- **components:** fixed header and menu ([#61](https://github.com/B-onuz/ui-components/issues/61)) ([191817c](https://github.com/B-onuz/ui-components/commit/191817cbb2826357a174ce2a9f03590f45b0b7e1))
+
 ### [2.22.5](https://github.com/B-onuz/ui-components/compare/v2.22.4...v2.22.5) (2020-10-23)
 
 ### Bug Fixes
