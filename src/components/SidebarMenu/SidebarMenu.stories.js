@@ -18,6 +18,11 @@ const menuItems = [
   { icon: faCodeBranch, text: 'Branch' },
   { icon: faAdjust, text: 'Adjusts Darkmode' },
   { icon: faKey, text: 'Chaves de acesso' },
+  { icon: faHome, text: 'Home' },
+  { icon: faDice, text: 'Dados' },
+  { icon: faCodeBranch, text: 'Branch' },
+  { icon: faAdjust, text: 'Adjusts Darkmode' },
+  { icon: faKey, text: 'Chaves de acesso' },
 ]
 
 export const SidebarMenuExample = () => (
