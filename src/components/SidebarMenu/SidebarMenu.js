@@ -78,6 +78,10 @@ const ContactButton = styled(Box)`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  @media only screen and (max-width: 767px) {
+    position: unset;
+    padding-bottom: 4vh;
+  }
 `
 
 const LogoutLink = styled.a`
