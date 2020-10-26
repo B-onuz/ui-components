@@ -39,7 +39,7 @@ export default {
 
 export const BaseLayoutExample = () => {
   return (
-    <BaseLayout title="Cadastro de advogados">
+    <BaseLayout title="Cadastro de advogados" sidebar={true}>
       <h1>Layout base</h1>
     </BaseLayout>
   )
