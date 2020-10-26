@@ -47,13 +47,13 @@ const TextBox = styled.div`
 const ProfileBox = ({ children, userName, balanceValue, src, iconHeight, ...rest }) => {
   return (
     <StyledProfileBox {...rest}>
+      {!!userName && (
+        <Typography color="gray" m={0} mr={2}>
+          {userName} |
+        </Typography>
+      )}
       <ProfileIcon alt="bnz_icon" iconHeight={iconHeight} src={src} />
       <TextBox>
-        {!!userName && (
-          <Typography color="black" m={0} mr={2}>
-            {userName}
-          </Typography>
-        )}
         <StyledButton linkButton p={0}>{`${balanceValue} BNZ`}</StyledButton>
       </TextBox>
     </StyledProfileBox>
