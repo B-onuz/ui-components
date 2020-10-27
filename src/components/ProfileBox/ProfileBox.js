@@ -1,11 +1,25 @@
 import React from 'react'
 import styled from 'styled-components'
+
 import { color } from 'styled-system'
 import Button from '../Button'
 import Typography from '../Typography'
 
 const StyledProfileBox = styled.div`
   ${color}
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  @media only screen and (max-width: 500px) {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 0 8px;
+  }
+`
+
+const BnzBox = styled.div`
   height: 100%;
   display: flex;
   justify-content: flex-start;
@@ -44,18 +58,20 @@ const TextBox = styled.div`
   align-items: center;
 `
 
-const ProfileBox = ({ children, userName, balanceValue, src, iconHeight, ...rest }) => {
+const ProfileBox = ({ children, userName, balanceValue, src, iconHeight, bnzOnClick, userOnClick, ...rest }) => {
   return (
     <StyledProfileBox {...rest}>
       {!!userName && (
-        <Typography color="gray" m={0} mr={2}>
+        <Typography color="gray" m={0} mr={2} onClick={userOnClick}>
           {userName} |
         </Typography>
       )}
-      <ProfileIcon alt="bnz_icon" iconHeight={iconHeight} src={src} />
-      <TextBox>
-        <StyledButton linkButton p={0}>{`${balanceValue} BNZ`}</StyledButton>
-      </TextBox>
+      <BnzBox onClick={bnzOnClick}>
+        <ProfileIcon alt="bnz_icon" iconHeight={iconHeight} src={src} />
+        <TextBox>
+          <StyledButton linkButton p={0}>{`${balanceValue} BNZ`}</StyledButton>
+        </TextBox>
+      </BnzBox>
     </StyledProfileBox>
   )
 }
