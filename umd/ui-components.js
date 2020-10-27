@@ -1,4 +1,4 @@
-/*! ui-components v2.22.5 */
+/*! ui-components v2.22.6 */
 (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
 		module.exports = factory(require("react"));
@@ -12039,8 +12039,18 @@ Header_Header.defaultProps = {
 // CONCATENATED MODULE: ./src/components/ProfileBox/ProfileBox.js
 function ProfileBox_objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 
-function ProfileBox_templateObject4() {
+function ProfileBox_templateObject5() {
   var data = ProfileBox_taggedTemplateLiteralLoose(["\n  display: flex;\n  justify-content: flex-start;\n  align-items: center;\n"]);
+
+  ProfileBox_templateObject5 = function _templateObject5() {
+    return data;
+  };
+
+  return data;
+}
+
+function ProfileBox_templateObject4() {
+  var data = ProfileBox_taggedTemplateLiteralLoose(["\n  height: ", ";\n  margin-right: 7px;\n  @media only screen and (max-width: 500px) {\n    max-height: 20px;\n    margin-right: 0;\n    margin-bottom: 7px;\n  }\n"]);
 
   ProfileBox_templateObject4 = function _templateObject4() {
     return data;
@@ -12050,7 +12060,7 @@ function ProfileBox_templateObject4() {
 }
 
 function ProfileBox_templateObject3() {
-  var data = ProfileBox_taggedTemplateLiteralLoose(["\n  height: ", ";\n  margin-right: 7px;\n  @media only screen and (max-width: 500px) {\n    max-height: 20px;\n    margin-right: 0;\n    margin-bottom: 7px;\n  }\n"]);
+  var data = ProfileBox_taggedTemplateLiteralLoose(["\n  font-weight: bold;\n  font-size: 20px;\n  color: #000;\n  text-decoration: none !important;\n  :hover {\n    color: #ef4d5a;\n  }\n"]);
 
   ProfileBox_templateObject3 = function _templateObject3() {
     return data;
@@ -12060,7 +12070,7 @@ function ProfileBox_templateObject3() {
 }
 
 function ProfileBox_templateObject2() {
-  var data = ProfileBox_taggedTemplateLiteralLoose(["\n  font-weight: bold;\n  font-size: 20px;\n  color: #000;\n  text-decoration: none !important;\n  :hover {\n    color: #ef4d5a;\n  }\n"]);
+  var data = ProfileBox_taggedTemplateLiteralLoose(["\n  height: 100%;\n  display: flex;\n  justify-content: flex-start;\n  align-items: center;\n  @media only screen and (max-width: 500px) {\n    flex-direction: column;\n    align-items: center;\n    justify-content: center;\n    margin: 0 8px;\n  }\n"]);
 
   ProfileBox_templateObject2 = function _templateObject2() {
     return data;
@@ -12070,7 +12080,7 @@ function ProfileBox_templateObject2() {
 }
 
 function ProfileBox_templateObject() {
-  var data = ProfileBox_taggedTemplateLiteralLoose(["\n  ", "\n  height: 100%;\n  display: flex;\n  justify-content: flex-start;\n  align-items: center;\n  @media only screen and (max-width: 500px) {\n    flex-direction: column;\n    align-items: center;\n    justify-content: center;\n    margin: 0 8px;\n  }\n"]);
+  var data = ProfileBox_taggedTemplateLiteralLoose(["\n  ", "\n  height: 100%;\n  display: flex;\n  justify-content: flex-start;\n  align-items: center;\n  @media only screen and (max-width: 500px) {\n    flex-direction: row;\n    align-items: center;\n    justify-content: center;\n    margin: 0 8px;\n  }\n"]);
 
   ProfileBox_templateObject = function _templateObject() {
     return data;
@@ -12087,12 +12097,13 @@ function ProfileBox_taggedTemplateLiteralLoose(strings, raw) { if (!raw) { raw =
 
 
 var StyledProfileBox = styled_components_browser_esm["default"].div(ProfileBox_templateObject(), index_esm["color"]);
-var ProfileBox_StyledButton = Object(styled_components_browser_esm["default"])(components_Button)(ProfileBox_templateObject2());
-var ProfileIcon = styled_components_browser_esm["default"].img(ProfileBox_templateObject3(), function (_ref) {
+var BnzBox = styled_components_browser_esm["default"].div(ProfileBox_templateObject2());
+var ProfileBox_StyledButton = Object(styled_components_browser_esm["default"])(components_Button)(ProfileBox_templateObject3());
+var ProfileIcon = styled_components_browser_esm["default"].img(ProfileBox_templateObject4(), function (_ref) {
   var iconHeight = _ref.iconHeight;
   return iconHeight ? iconHeight : '100%';
 });
-var TextBox = styled_components_browser_esm["default"].div(ProfileBox_templateObject4());
+var TextBox = styled_components_browser_esm["default"].div(ProfileBox_templateObject5());
 
 var ProfileBox_ProfileBox = function ProfileBox(_ref2) {
   var children = _ref2.children,
@@ -12100,20 +12111,25 @@ var ProfileBox_ProfileBox = function ProfileBox(_ref2) {
       balanceValue = _ref2.balanceValue,
       src = _ref2.src,
       iconHeight = _ref2.iconHeight,
-      rest = ProfileBox_objectWithoutPropertiesLoose(_ref2, ["children", "userName", "balanceValue", "src", "iconHeight"]);
+      bnzOnClick = _ref2.bnzOnClick,
+      userOnClick = _ref2.userOnClick,
+      rest = ProfileBox_objectWithoutPropertiesLoose(_ref2, ["children", "userName", "balanceValue", "src", "iconHeight", "bnzOnClick", "userOnClick"]);
 
-  return /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(StyledProfileBox, rest, /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(ProfileIcon, {
+  return /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(StyledProfileBox, rest, !!userName && /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(components_Typography, {
+    color: "gray",
+    m: 0,
+    mr: 2,
+    onClick: userOnClick
+  }, userName, " |"), /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(BnzBox, {
+    onClick: bnzOnClick
+  }, /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(ProfileIcon, {
     alt: "bnz_icon",
     iconHeight: iconHeight,
     src: src
-  }), /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(TextBox, null, !!userName && /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(components_Typography, {
-    color: "black",
-    m: 0,
-    mr: 2
-  }, userName), /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(ProfileBox_StyledButton, {
+  }), /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(TextBox, null, /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(ProfileBox_StyledButton, {
     linkButton: true,
     p: 0
-  }, balanceValue + " BNZ")));
+  }, balanceValue + " BNZ"))));
 };
 
 /* harmony default export */ var components_ProfileBox_ProfileBox = (ProfileBox_ProfileBox);
