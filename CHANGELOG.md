@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.23.0](https://github.com/B-onuz/ui-components/compare/v2.22.7...v2.23.0) (2020-10-28)
+
+### Features
+
+- **profile-box:** add hover ([#63](https://github.com/B-onuz/ui-components/issues/63)) ([00606b3](https://github.com/B-onuz/ui-components/commit/00606b3a3a0d09ec4ebbe14a3ffa1b6d22d347c3))
+
 ### [2.22.7](https://github.com/B-onuz/ui-components/compare/v2.22.6...v2.22.7) (2020-10-27)
 
 ### [2.22.6](https://github.com/B-onuz/ui-components/compare/v2.22.5...v2.22.6) (2020-10-26)
