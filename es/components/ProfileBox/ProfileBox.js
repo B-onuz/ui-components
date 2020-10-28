@@ -16,13 +16,23 @@ var _Button = _interopRequireDefault(require("../Button"));
 var _Typography = _interopRequireDefault(require("../Typography"));
 
 var _this = void 0,
-    _jsxFileName = "/home/nicolasgarcia/Documents/Kazap/ui-components/src/components/ProfileBox/ProfileBox.js";
+    _jsxFileName = "/Users/rodrigopaschoaletto/Developer/Projects/Bonuz/Development/ui-components/src/components/ProfileBox/ProfileBox.js";
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
 
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
+
+function _templateObject6() {
+  var data = _taggedTemplateLiteralLoose(["\n  :hover {\n    color: ", ";\n    cursor: pointer;\n  }\n"]);
+
+  _templateObject6 = function _templateObject6() {
+    return data;
+  };
+
+  return data;
+}
 
 function _templateObject5() {
   var data = _taggedTemplateLiteralLoose(["\n  display: flex;\n  justify-content: flex-start;\n  align-items: center;\n"]);
@@ -89,24 +99,29 @@ var ProfileIcon = _styledComponents["default"].img(_templateObject4(), function 
 
 var TextBox = _styledComponents["default"].div(_templateObject5());
 
-var ProfileBox = function ProfileBox(_ref2) {
-  var children = _ref2.children,
-      userName = _ref2.userName,
-      balanceValue = _ref2.balanceValue,
-      src = _ref2.src,
-      iconHeight = _ref2.iconHeight,
-      bnzOnClick = _ref2.bnzOnClick,
-      userOnClick = _ref2.userOnClick,
-      rest = _objectWithoutPropertiesLoose(_ref2, ["children", "userName", "balanceValue", "src", "iconHeight", "bnzOnClick", "userOnClick"]);
+var UserNameText = (0, _styledComponents["default"])(_Typography["default"])(_templateObject6(), function (_ref2) {
+  var theme = _ref2.theme;
+  return "" + theme.colors['red'];
+});
+
+var ProfileBox = function ProfileBox(_ref3) {
+  var children = _ref3.children,
+      userName = _ref3.userName,
+      balanceValue = _ref3.balanceValue,
+      src = _ref3.src,
+      iconHeight = _ref3.iconHeight,
+      bnzOnClick = _ref3.bnzOnClick,
+      userOnClick = _ref3.userOnClick,
+      rest = _objectWithoutPropertiesLoose(_ref3, ["children", "userName", "balanceValue", "src", "iconHeight", "bnzOnClick", "userOnClick"]);
 
   return /*#__PURE__*/_react["default"].createElement(StyledProfileBox, _extends({}, rest, {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 63,
+      lineNumber: 69,
       columnNumber: 5
     }
-  }), !!userName && /*#__PURE__*/_react["default"].createElement(_Typography["default"], {
+  }), !!userName && /*#__PURE__*/_react["default"].createElement(UserNameText, {
     color: "gray",
     m: 0,
     mr: 2,
@@ -114,7 +129,7 @@ var ProfileBox = function ProfileBox(_ref2) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 65,
+      lineNumber: 71,
       columnNumber: 9
     }
   }, userName, " |"), /*#__PURE__*/_react["default"].createElement(BnzBox, {
@@ -122,7 +137,7 @@ var ProfileBox = function ProfileBox(_ref2) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 69,
+      lineNumber: 75,
       columnNumber: 7
     }
   }, /*#__PURE__*/_react["default"].createElement(ProfileIcon, {
@@ -132,14 +147,14 @@ var ProfileBox = function ProfileBox(_ref2) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 70,
+      lineNumber: 76,
       columnNumber: 9
     }
   }), /*#__PURE__*/_react["default"].createElement(TextBox, {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 71,
+      lineNumber: 77,
       columnNumber: 9
     }
   }, /*#__PURE__*/_react["default"].createElement(StyledButton, {
@@ -148,7 +163,7 @@ var ProfileBox = function ProfileBox(_ref2) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 72,
+      lineNumber: 78,
       columnNumber: 11
     }
   }, balanceValue + " BNZ"))));

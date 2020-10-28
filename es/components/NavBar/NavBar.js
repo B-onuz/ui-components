@@ -10,7 +10,7 @@ var _react = _interopRequireDefault(require("react"));
 var _styledComponents = _interopRequireDefault(require("styled-components"));
 
 var _this = void 0,
-    _jsxFileName = "/home/nicolasgarcia/Documents/Kazap/ui-components/src/components/NavBar/NavBar.js";
+    _jsxFileName = "/Users/rodrigopaschoaletto/Developer/Projects/Bonuz/Development/ui-components/src/components/NavBar/NavBar.js";
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 

@@ -1,4 +1,4 @@
-/*! ui-components v2.22.6 */
+/*! ui-components v2.22.7 */
 (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
 		module.exports = factory(require("react"));
@@ -12039,6 +12039,16 @@ Header_Header.defaultProps = {
 // CONCATENATED MODULE: ./src/components/ProfileBox/ProfileBox.js
 function ProfileBox_objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 
+function _templateObject6() {
+  var data = ProfileBox_taggedTemplateLiteralLoose(["\n  :hover {\n    color: ", ";\n    cursor: pointer;\n  }\n"]);
+
+  _templateObject6 = function _templateObject6() {
+    return data;
+  };
+
+  return data;
+}
+
 function ProfileBox_templateObject5() {
   var data = ProfileBox_taggedTemplateLiteralLoose(["\n  display: flex;\n  justify-content: flex-start;\n  align-items: center;\n"]);
 
@@ -12104,18 +12114,22 @@ var ProfileIcon = styled_components_browser_esm["default"].img(ProfileBox_templa
   return iconHeight ? iconHeight : '100%';
 });
 var TextBox = styled_components_browser_esm["default"].div(ProfileBox_templateObject5());
+var UserNameText = Object(styled_components_browser_esm["default"])(components_Typography)(_templateObject6(), function (_ref2) {
+  var theme = _ref2.theme;
+  return "" + theme.colors['red'];
+});
 
-var ProfileBox_ProfileBox = function ProfileBox(_ref2) {
-  var children = _ref2.children,
-      userName = _ref2.userName,
-      balanceValue = _ref2.balanceValue,
-      src = _ref2.src,
-      iconHeight = _ref2.iconHeight,
-      bnzOnClick = _ref2.bnzOnClick,
-      userOnClick = _ref2.userOnClick,
-      rest = ProfileBox_objectWithoutPropertiesLoose(_ref2, ["children", "userName", "balanceValue", "src", "iconHeight", "bnzOnClick", "userOnClick"]);
+var ProfileBox_ProfileBox = function ProfileBox(_ref3) {
+  var children = _ref3.children,
+      userName = _ref3.userName,
+      balanceValue = _ref3.balanceValue,
+      src = _ref3.src,
+      iconHeight = _ref3.iconHeight,
+      bnzOnClick = _ref3.bnzOnClick,
+      userOnClick = _ref3.userOnClick,
+      rest = ProfileBox_objectWithoutPropertiesLoose(_ref3, ["children", "userName", "balanceValue", "src", "iconHeight", "bnzOnClick", "userOnClick"]);
 
-  return /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(StyledProfileBox, rest, !!userName && /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(components_Typography, {
+  return /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(StyledProfileBox, rest, !!userName && /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(UserNameText, {
     color: "gray",
     m: 0,
     mr: 2,
@@ -12496,10 +12510,10 @@ function _templateObject7() {
   return data;
 }
 
-function _templateObject6() {
+function Table_templateObject6() {
   var data = Table_taggedTemplateLiteralLoose(["\n  display: inline-flex;\n  align-items: center;\n  flex-direction: inherit;\n  justify-content: flex-start;\n  ", "\n  ", "\n"]);
 
-  _templateObject6 = function _templateObject6() {
+  Table_templateObject6 = function _templateObject6() {
     return data;
   };
 
@@ -12593,7 +12607,7 @@ var OrderArrow = styled_components_browser_esm["default"].span(Table_templateObj
   }
 });
 var TableRow = styled_components_browser_esm["default"].tr(Table_templateObject5());
-var TableHeaderSpan = styled_components_browser_esm["default"].span(_templateObject6(), function (_ref7) {
+var TableHeaderSpan = styled_components_browser_esm["default"].span(Table_templateObject6(), function (_ref7) {
   var width = _ref7.width;
   return !!width && "\n    width: " + width + ";\n  ";
 }, function (_ref8) {
