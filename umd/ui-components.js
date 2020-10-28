@@ -1,4 +1,4 @@
-/*! ui-components v2.22.7 */
+/*! ui-components v2.23.0 */
 (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
 		module.exports = factory(require("react"));
@@ -12134,13 +12134,13 @@ var ProfileBox_ProfileBox = function ProfileBox(_ref3) {
     m: 0,
     mr: 2,
     onClick: userOnClick
-  }, userName, " |"), /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(BnzBox, {
+  }, userName, " |"), (src || balanceValue) && /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(BnzBox, {
     onClick: bnzOnClick
-  }, /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(ProfileIcon, {
+  }, src && /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(ProfileIcon, {
     alt: "bnz_icon",
     iconHeight: iconHeight,
     src: src
-  }), /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(TextBox, null, /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(ProfileBox_StyledButton, {
+  }), balanceValue && /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(TextBox, null, /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(ProfileBox_StyledButton, {
     linkButton: true,
     p: 0
   }, balanceValue + " BNZ"))));

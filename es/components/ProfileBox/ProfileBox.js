@@ -16,7 +16,7 @@ var _Button = _interopRequireDefault(require("../Button"));
 var _Typography = _interopRequireDefault(require("../Typography"));
 
 var _this = void 0,
-    _jsxFileName = "/Users/rodrigopaschoaletto/Developer/Projects/Bonuz/Development/ui-components/src/components/ProfileBox/ProfileBox.js";
+    _jsxFileName = "/home/nicolasgarcia/Documents/Kazap/ui-components/src/components/ProfileBox/ProfileBox.js";
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
@@ -132,30 +132,30 @@ var ProfileBox = function ProfileBox(_ref3) {
       lineNumber: 71,
       columnNumber: 9
     }
-  }, userName, " |"), /*#__PURE__*/_react["default"].createElement(BnzBox, {
+  }, userName, " |"), (src || balanceValue) && /*#__PURE__*/_react["default"].createElement(BnzBox, {
     onClick: bnzOnClick,
-    __self: _this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 75,
-      columnNumber: 7
-    }
-  }, /*#__PURE__*/_react["default"].createElement(ProfileIcon, {
-    alt: "bnz_icon",
-    iconHeight: iconHeight,
-    src: src,
     __self: _this,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 76,
       columnNumber: 9
     }
-  }), /*#__PURE__*/_react["default"].createElement(TextBox, {
+  }, src && /*#__PURE__*/_react["default"].createElement(ProfileIcon, {
+    alt: "bnz_icon",
+    iconHeight: iconHeight,
+    src: src,
     __self: _this,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 77,
-      columnNumber: 9
+      columnNumber: 19
+    }
+  }), balanceValue && /*#__PURE__*/_react["default"].createElement(TextBox, {
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 79,
+      columnNumber: 13
     }
   }, /*#__PURE__*/_react["default"].createElement(StyledButton, {
     linkButton: true,
@@ -163,8 +163,8 @@ var ProfileBox = function ProfileBox(_ref3) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 78,
-      columnNumber: 11
+      lineNumber: 80,
+      columnNumber: 15
     }
   }, balanceValue + " BNZ"))));
 };

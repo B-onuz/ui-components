@@ -16,7 +16,7 @@ var _styledSystem = require("styled-system");
 var _variants = require("./variants");
 
 var _this = void 0,
-    _jsxFileName = "/Users/rodrigopaschoaletto/Developer/Projects/Bonuz/Development/ui-components/src/components/Tooltip/Tooltip.js";
+    _jsxFileName = "/home/nicolasgarcia/Documents/Kazap/ui-components/src/components/Tooltip/Tooltip.js";
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
