@@ -72,12 +72,16 @@ const ProfileBox = ({ children, userName, balanceValue, src, iconHeight, bnzOnCl
           {userName} |
         </UserNameText>
       )}
-      <BnzBox onClick={bnzOnClick}>
-        <ProfileIcon alt="bnz_icon" iconHeight={iconHeight} src={src} />
-        <TextBox>
-          <StyledButton linkButton p={0}>{`${balanceValue} BNZ`}</StyledButton>
-        </TextBox>
-      </BnzBox>
+      {(src || balanceValue) && (
+        <BnzBox onClick={bnzOnClick}>
+          {src && <ProfileIcon alt="bnz_icon" iconHeight={iconHeight} src={src} />}
+          {balanceValue && (
+            <TextBox>
+              <StyledButton linkButton p={0}>{`${balanceValue} BNZ`}</StyledButton>
+            </TextBox>
+          )}
+        </BnzBox>
+      )}
     </StyledProfileBox>
   )
 }
