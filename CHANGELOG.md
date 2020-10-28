@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.23.1](https://github.com/B-onuz/ui-components/compare/v2.23.0...v2.23.1) (2020-10-28)
+
+### Bug Fixes
+
+- **profile-box:** let profile box receive only some props ([#64](https://github.com/B-onuz/ui-components/issues/64)) ([aea131a](https://github.com/B-onuz/ui-components/commit/aea131ab12c77ea1fce57d6eb2a95b72ad728450))
+
 ## [2.23.0](https://github.com/B-onuz/ui-components/compare/v2.22.7...v2.23.0) (2020-10-28)
 
 ### Features
