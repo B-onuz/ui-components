@@ -1,112 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Should render ProfileBox 1`] = `
-.c4 {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  font-family: inherit;
-  border-radius: 4px;
-  outline: none;
-  cursor: pointer;
-  padding: .5rem 1rem;
-  border-style: solid;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  border-color: undefined !important;
-  color: #000;
-  background-color: #e0e1e2;
-  border-color: #e0e1e2;
-  font-size: 16px;
-  padding: 0;
-  box-sizing: border-box;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  color: #e0e1e2;
-  border: none;
-  background-color: transparent !important;
-  box-shadow: none !important;
-  outline: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.c4:focus {
-  box-shadow: 0 0 8px #e0e1e2;
-}
-
-.c4:active:not(:disabled) {
-  box-shadow: inset 0px 0px 5px #c1c1c1;
-}
-
-.c4:active,
-.c4:hover {
-  background-color: hsl(210,3.7%,79.4%);
-}
-
-.c4:disabled {
-  background-color: hsl(210,2%,97.1%);
-}
-
-.c4:hover {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-  background-color: transparent;
-}
-
 .c0 {
   height: 100%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.c1 {
-  height: 100%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.c5 {
-  font-weight: bold;
-  font-size: 20px;
-  color: #000;
-  -webkit-text-decoration: none !important;
-  text-decoration: none !important;
-}
-
-.c5:hover {
-  color: #ef4d5a;
-}
-
-.c2 {
-  height: 100%;
-  margin-right: 7px;
-}
-
-.c3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -138,54 +34,7 @@ exports[`Should render ProfileBox 1`] = `
   }
 }
 
-@media only screen and (max-width:500px) {
-  .c1 {
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-align-items: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    margin: 0 8px;
-  }
-}
-
-@media only screen and (max-width:500px) {
-  .c2 {
-    max-height: 20px;
-    margin-right: 0;
-    margin-bottom: 7px;
-  }
-}
-
 <div
   className="c0"
->
-  <div
-    className="c1"
-  >
-    <img
-      alt="bnz_icon"
-      className="c2"
-    />
-    <div
-      className="c3"
-    >
-      <button
-        className="c4 c5"
-        color="default"
-        disabled={false}
-        size="medium"
-        type="button"
-      >
-        undefined BNZ
-      </button>
-    </div>
-  </div>
-</div>
+/>
 `;
