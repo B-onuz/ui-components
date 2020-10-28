@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from 'styled-components'
-
 import { color } from 'styled-system'
 import Button from '../Button'
 import Typography from '../Typography'
@@ -58,13 +57,20 @@ const TextBox = styled.div`
   align-items: center;
 `
 
+const UserNameText = styled(Typography)`
+  :hover {
+    color: ${({ theme }) => `${theme.colors['red']}`};
+    cursor: pointer;
+  }
+`
+
 const ProfileBox = ({ children, userName, balanceValue, src, iconHeight, bnzOnClick, userOnClick, ...rest }) => {
   return (
     <StyledProfileBox {...rest}>
       {!!userName && (
-        <Typography color="gray" m={0} mr={2} onClick={userOnClick}>
+        <UserNameText color="gray" m={0} mr={2} onClick={userOnClick}>
           {userName} |
-        </Typography>
+        </UserNameText>
       )}
       <BnzBox onClick={bnzOnClick}>
         <ProfileIcon alt="bnz_icon" iconHeight={iconHeight} src={src} />
