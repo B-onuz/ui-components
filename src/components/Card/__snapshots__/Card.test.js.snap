@@ -3,7 +3,7 @@
 exports[`Should render Card 1`] = `
 .c0 {
   width: 192px;
-  min-height: 84px;
+  height: 84px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -31,12 +31,15 @@ exports[`Should render Card 1`] = `
 .c1 {
   margin: 0;
   text-transform: uppercase;
-  font-size: 15px;
+  font-size: 13px;
   font-weight: 400;
   color: #1b1c1d;
   opacity: 1;
   box-shadow: none;
   margin-bottom: 8px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .c2 {
