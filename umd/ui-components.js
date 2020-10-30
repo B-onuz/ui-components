@@ -22291,7 +22291,7 @@ function Card_templateObject3() {
 }
 
 function Card_templateObject2() {
-  var data = Card_taggedTemplateLiteralLoose(["\n  margin: 0;\n  text-transform: uppercase;\n  font-size: 13px;\n  font-weight: 400;\n  color: ", ";\n  opacity: ", ";\n  box-shadow: none;\n  margin-bottom: 8px;\n  white-space: nowrap;\n  overflow: hidden;\n  text-overflow: ellipsis;\n  @media only screen and (max-width: 500px) {\n    font-size: 13px;\n  }\n"]);
+  var data = Card_taggedTemplateLiteralLoose(["\n  margin: 0;\n  text-transform: uppercase;\n  font-size: 13px;\n  font-weight: 400;\n  color: ", ";\n  opacity: ", ";\n  box-shadow: none;\n  margin-bottom: 8px;\n  @media only screen and (max-width: 500px) {\n    font-size: 13px;\n  }\n"]);
 
   Card_templateObject2 = function _templateObject2() {
     return data;
