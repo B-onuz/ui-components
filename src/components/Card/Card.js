@@ -44,9 +44,6 @@ const StyledTitle = styled.span`
   opacity: ${({ cancel }) => (cancel ? '60%' : 1)};
   box-shadow: none;
   margin-bottom: 8px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
   @media only screen and (max-width: 500px) {
     font-size: 13px;
   }
