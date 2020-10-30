@@ -37,9 +37,6 @@ exports[`Should render Card 1`] = `
   opacity: 1;
   box-shadow: none;
   margin-bottom: 8px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
 
 .c2 {
