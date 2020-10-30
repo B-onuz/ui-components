@@ -22301,7 +22301,7 @@ function Card_templateObject2() {
 }
 
 function Card_templateObject() {
-  var data = Card_taggedTemplateLiteralLoose(["\n  color: ", ";\n  width: 192px;\n  height: 84px;\n  display: flex;\n  flex-direction: ", ";\n  justify-content: space-between;\n  position: relative;\n  box-shadow: 3px 3px 6px #00000029;\n  border: 3px solid;\n  border-radius: 12px;\n  padding: ", ";\n  overflow: ", ";\n  @media only screen and (max-width: 500px) {\n    width: 100%;\n    min-height: 84px;\n    padding: ", ";\n    justify-content: center;\n    text-align: center;\n  }\n\n  .icon {\n    margin-right: ", ";\n    font-size: 40px;\n    @media only screen and (max-width: 500px) {\n      font-size: 30px;\n      margin: 0;\n      margin-bottom: 6px;\n    }\n  }\n"]);
+  var data = Card_taggedTemplateLiteralLoose(["\n  color: ", ";\n  width: 192px;\n  height: ", ";\n  min-height: ", ";\n  display: flex;\n  flex-direction: ", ";\n  justify-content: space-between;\n  position: relative;\n  box-shadow: 3px 3px 6px #00000029;\n  border: 3px solid;\n  border-radius: 12px;\n  padding: ", ";\n  overflow: ", ";\n  @media only screen and (max-width: 500px) {\n    width: 100%;\n    height: none!important;\n    min-height: 84px!important;\n    padding: ", ";\n    justify-content: center;\n    text-align: center;\n  }\n\n  .icon {\n    margin-right: ", ";\n    font-size: 40px;\n    @media only screen and (max-width: 500px) {\n      font-size: 30px;\n      margin: 0;\n      margin-bottom: 6px;\n    }\n  }\n"]);
 
   Card_templateObject = function _templateObject() {
     return data;
@@ -22322,84 +22322,90 @@ var StyledCard = styled_components_browser_esm["default"].div(Card_templateObjec
   return theme.colors[color] ? theme.colors[color] : color;
 }, function (_ref2) {
   var clickableCard = _ref2.clickableCard;
-  return !!clickableCard ? 'row' : 'column';
+  return !!clickableCard ? 'none' : '84px';
 }, function (_ref3) {
   var clickableCard = _ref3.clickableCard;
-  return !!clickableCard ? 0 : '20px 32px';
+  return !!clickableCard ? '84px' : 'none';
 }, function (_ref4) {
   var clickableCard = _ref4.clickableCard;
-  return !!clickableCard ? 'visible' : 'hidden';
+  return !!clickableCard ? 'row' : 'column';
 }, function (_ref5) {
   var clickableCard = _ref5.clickableCard;
-  return !!clickableCard ? 0 : '8px 12px';
+  return !!clickableCard ? 0 : '20px 32px';
 }, function (_ref6) {
   var clickableCard = _ref6.clickableCard;
+  return !!clickableCard ? 'visible' : 'hidden';
+}, function (_ref7) {
+  var clickableCard = _ref7.clickableCard;
+  return !!clickableCard ? 0 : '8px 12px';
+}, function (_ref8) {
+  var clickableCard = _ref8.clickableCard;
   return !!clickableCard ? 0 : '24px';
 });
-var Card_StyledTitle = styled_components_browser_esm["default"].span(Card_templateObject2(), function (_ref7) {
-  var theme = _ref7.theme,
-      textColor = _ref7.textColor;
+var Card_StyledTitle = styled_components_browser_esm["default"].span(Card_templateObject2(), function (_ref9) {
+  var theme = _ref9.theme,
+      textColor = _ref9.textColor;
   return theme.colors[textColor] ? theme.colors[textColor] : textColor;
-}, function (_ref8) {
-  var cancel = _ref8.cancel;
+}, function (_ref10) {
+  var cancel = _ref10.cancel;
   return cancel ? '60%' : 1;
 });
-var StyledInfo = styled_components_browser_esm["default"].div(Card_templateObject3(), function (_ref9) {
-  var theme = _ref9.theme,
-      iconColor = _ref9.iconColor;
+var StyledInfo = styled_components_browser_esm["default"].div(Card_templateObject3(), function (_ref11) {
+  var theme = _ref11.theme,
+      iconColor = _ref11.iconColor;
   return theme.colors[iconColor] ? theme.colors[iconColor] : iconColor;
 });
-var Counter = styled_components_browser_esm["default"].span(Card_templateObject4(), function (_ref10) {
-  var theme = _ref10.theme,
-      counterColor = _ref10.counterColor;
+var Counter = styled_components_browser_esm["default"].span(Card_templateObject4(), function (_ref12) {
+  var theme = _ref12.theme,
+      counterColor = _ref12.counterColor;
   return theme.colors[counterColor] ? theme.colors[counterColor] : counterColor;
 });
-var Card_StyledIcon = styled_components_browser_esm["default"].img(Card_templateObject5(), function (_ref11) {
-  var theme = _ref11.theme,
-      imgBackground = _ref11.imgBackground;
+var Card_StyledIcon = styled_components_browser_esm["default"].img(Card_templateObject5(), function (_ref13) {
+  var theme = _ref13.theme,
+      imgBackground = _ref13.imgBackground;
   return theme.colors[imgBackground] ? theme.colors[imgBackground] : imgBackground;
-}, function (_ref12) {
-  var clickableCard = _ref12.clickableCard;
+}, function (_ref14) {
+  var clickableCard = _ref14.clickableCard;
   return !!clickableCard ? 0 : '24px';
 });
-var StyledHelper = styled_components_browser_esm["default"].small(Card_templateObject6(), function (_ref13) {
-  var disclaimer = _ref13.disclaimer;
+var StyledHelper = styled_components_browser_esm["default"].small(Card_templateObject6(), function (_ref15) {
+  var disclaimer = _ref15.disclaimer;
   return !!disclaimer ? 'inline-block' : 'none';
-}, function (_ref14) {
-  var theme = _ref14.theme,
-      disclaimerColor = _ref14.disclaimerColor;
-  return theme.colors[disclaimerColor] ? theme.colors[disclaimerColor] : disclaimerColor;
-});
-var ClickableCard = styled_components_browser_esm["default"].button(Card_templateObject7(), function (_ref15) {
-  var reverseOrder = _ref15.reverseOrder;
-  return !!reverseOrder ? 'column-reverse' : 'column';
 }, function (_ref16) {
   var theme = _ref16.theme,
-      cardBackground = _ref16.cardBackground;
+      disclaimerColor = _ref16.disclaimerColor;
+  return theme.colors[disclaimerColor] ? theme.colors[disclaimerColor] : disclaimerColor;
+});
+var ClickableCard = styled_components_browser_esm["default"].button(Card_templateObject7(), function (_ref17) {
+  var reverseOrder = _ref17.reverseOrder;
+  return !!reverseOrder ? 'column-reverse' : 'column';
+}, function (_ref18) {
+  var theme = _ref18.theme,
+      cardBackground = _ref18.cardBackground;
   return theme.colors[cardBackground] ? theme.colors[cardBackground] : cardBackground;
-}, function (_ref17) {
-  var theme = _ref17.theme,
-      cardBackground = _ref17.cardBackground;
+}, function (_ref19) {
+  var theme = _ref19.theme,
+      cardBackground = _ref19.cardBackground;
   return theme.colors[cardBackground];
 });
 
-var Card_Card = function Card(_ref18) {
-  var title = _ref18.title,
-      count = _ref18.count,
-      icon = _ref18.icon,
-      customIcon = _ref18.customIcon,
-      customIconAlt = _ref18.customIconAlt,
-      imgBackground = _ref18.imgBackground,
-      cancel = _ref18.cancel,
-      counterColor = _ref18.counterColor,
-      iconColor = _ref18.iconColor,
-      textColor = _ref18.textColor,
-      disclaimer = _ref18.disclaimer,
-      disclaimerColor = _ref18.disclaimerColor,
-      clickableCard = _ref18.clickableCard,
-      cardBackground = _ref18.cardBackground,
-      reverseOrder = _ref18.reverseOrder,
-      rest = Card_objectWithoutPropertiesLoose(_ref18, ["title", "count", "icon", "customIcon", "customIconAlt", "imgBackground", "cancel", "counterColor", "iconColor", "textColor", "disclaimer", "disclaimerColor", "clickableCard", "cardBackground", "reverseOrder"]);
+var Card_Card = function Card(_ref20) {
+  var title = _ref20.title,
+      count = _ref20.count,
+      icon = _ref20.icon,
+      customIcon = _ref20.customIcon,
+      customIconAlt = _ref20.customIconAlt,
+      imgBackground = _ref20.imgBackground,
+      cancel = _ref20.cancel,
+      counterColor = _ref20.counterColor,
+      iconColor = _ref20.iconColor,
+      textColor = _ref20.textColor,
+      disclaimer = _ref20.disclaimer,
+      disclaimerColor = _ref20.disclaimerColor,
+      clickableCard = _ref20.clickableCard,
+      cardBackground = _ref20.cardBackground,
+      reverseOrder = _ref20.reverseOrder,
+      rest = Card_objectWithoutPropertiesLoose(_ref20, ["title", "count", "icon", "customIcon", "customIconAlt", "imgBackground", "cancel", "counterColor", "iconColor", "textColor", "disclaimer", "disclaimerColor", "clickableCard", "cardBackground", "reverseOrder"]);
 
   return /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(StyledCard, Card_extends({}, rest, {
     clickableCard: clickableCard

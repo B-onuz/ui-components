@@ -6,7 +6,8 @@ import { background } from 'styled-system'
 const StyledCard = styled.div`
   color: ${({ theme, color }) => (theme.colors[color] ? theme.colors[color] : color)};
   width: 192px;
-  height: 84px;
+  height: ${({ clickableCard }) => (!!clickableCard ? 'none' : '84px')};
+  min-height: ${({ clickableCard }) => (!!clickableCard ? '84px' : 'none')};
   display: flex;
   flex-direction: ${({ clickableCard }) => (!!clickableCard ? 'row' : 'column')};
   justify-content: space-between;
@@ -18,7 +19,8 @@ const StyledCard = styled.div`
   overflow: ${({ clickableCard }) => (!!clickableCard ? 'visible' : 'hidden')};
   @media only screen and (max-width: 500px) {
     width: 100%;
-    min-height: 84px;
+    height: none !important;
+    min-height: 84px !important;
     padding: ${({ clickableCard }) => (!!clickableCard ? 0 : '8px 12px')};
     justify-content: center;
     text-align: center;
