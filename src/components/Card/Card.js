@@ -6,7 +6,7 @@ import { background } from 'styled-system'
 const StyledCard = styled.div`
   color: ${({ theme, color }) => (theme.colors[color] ? theme.colors[color] : color)};
   width: 192px;
-  min-height: 84px;
+  height: 84px;
   display: flex;
   flex-direction: ${({ clickableCard }) => (!!clickableCard ? 'row' : 'column')};
   justify-content: space-between;
@@ -38,12 +38,15 @@ const StyledCard = styled.div`
 const StyledTitle = styled.span`
   margin: 0;
   text-transform: uppercase;
-  font-size: 15px;
+  font-size: 13px;
   font-weight: 400;
   color: ${({ theme, textColor }) => (theme.colors[textColor] ? theme.colors[textColor] : textColor)};
   opacity: ${({ cancel }) => (cancel ? '60%' : 1)};
   box-shadow: none;
   margin-bottom: 8px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
   @media only screen and (max-width: 500px) {
     font-size: 13px;
   }
