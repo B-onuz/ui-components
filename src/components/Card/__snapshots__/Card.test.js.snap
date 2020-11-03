@@ -72,8 +72,8 @@ exports[`Should render Card 1`] = `
 @media only screen and (max-width:500px) {
   .c0 {
     width: 100%;
-    height: none!important;
-    min-height: 84px!important;
+    height: none !important;
+    min-height: 84px !important;
     padding: 8px 12px;
     -webkit-box-pack: center;
     -webkit-justify-content: center;
