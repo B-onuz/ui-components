@@ -78,7 +78,7 @@ const ContactButton = styled(Box)`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  @media only screen and (max-width: 767px) {
+  @media only screen and (max-height: 800px) {
     position: unset;
     padding-bottom: 4vh;
   }
