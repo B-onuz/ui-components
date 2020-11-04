@@ -1,4 +1,4 @@
-/*! ui-components v2.23.1 */
+/*! ui-components v2.23.2 */
 (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
 		module.exports = factory(require("react"));
@@ -11716,7 +11716,7 @@ function _templateObject5() {
 }
 
 function _templateObject4() {
-  var data = SidebarMenu_taggedTemplateLiteralLoose(["\n  position: absolute;\n  bottom: 30px;\n  width: 100%;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  @media only screen and (max-width: 767px) {\n    position: unset;\n    padding-bottom: 4vh;\n  }\n"]);
+  var data = SidebarMenu_taggedTemplateLiteralLoose(["\n  position: absolute;\n  bottom: 30px;\n  width: 100%;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  @media only screen and (max-height: 800px) {\n    position: unset;\n    padding-bottom: 4vh;\n  }\n"]);
 
   _templateObject4 = function _templateObject4() {
     return data;
