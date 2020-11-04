@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.23.3](https://github.com/B-onuz/ui-components/compare/v2.23.2...v2.23.3) (2020-11-04)
+
+### Bug Fixes
+
+- **sidebar-menu:** changed media query condition ([#66](https://github.com/B-onuz/ui-components/issues/66)) ([54346ed](https://github.com/B-onuz/ui-components/commit/54346ed73313e610ebb18839afe5859d767959fd))
+
 ### [2.23.2](https://github.com/B-onuz/ui-components/compare/v2.23.1...v2.23.2) (2020-11-03)
 
 ### [2.23.1](https://github.com/B-onuz/ui-components/compare/v2.23.0...v2.23.1) (2020-10-28)
