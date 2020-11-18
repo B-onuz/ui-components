@@ -1,4 +1,4 @@
-/*! ui-components v2.23.2 */
+/*! ui-components v2.23.3 */
 (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
 		module.exports = factory(require("react"));
@@ -11831,7 +11831,7 @@ var SidebarMenu_SidebarMenuRoot = function SidebarMenuRoot(_ref3) {
   }, rest), logo, /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(SidebarMenu_MenuList, {
     role: "menu",
     isOpen: !!open
-  }, children), /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(ContactButton, null, contactButton, /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(LogoutLink, {
+  }, children), /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(ContactButton, null, contactButton, !!logoutHref && /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(LogoutLink, {
     href: logoutHref
   }, "Sair"))), /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(Backdrop, {
     onClick: onClose,

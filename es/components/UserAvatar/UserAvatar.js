@@ -18,7 +18,7 @@ var _variants = require("./variants");
 var _Typography = _interopRequireDefault(require("../Typography"));
 
 var _this = void 0,
-    _jsxFileName = "/home/nicolasgarcia/Documents/Kazap/ui-components/src/components/UserAvatar/UserAvatar.js";
+    _jsxFileName = "/Users/rodrigopaschoaletto/Developer/Projects/Bonuz/Development/ui-components/src/components/UserAvatar/UserAvatar.js";
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
