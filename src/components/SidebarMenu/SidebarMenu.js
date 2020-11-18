@@ -117,7 +117,7 @@ const SidebarMenuRoot = ({ children, open = false, onlyMobile = false, onClose, 
       </MenuList>
       <ContactButton>
         {contactButton}
-        <LogoutLink href={logoutHref}>Sair</LogoutLink>
+        {!!logoutHref && <LogoutLink href={logoutHref}>Sair</LogoutLink>}
       </ContactButton>
     </StyledSidebarMenu>
     <Backdrop onClick={onClose} role="button" aria-label="Fechar menu" />
