@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.24.0](https://github.com/B-onuz/ui-components/compare/v2.23.0...v2.24.0) (2020-11-18)
+
+### Features
+
+- **menu:** hide logout button if it is not present ([28d8a27](https://github.com/B-onuz/ui-components/commit/28d8a2766d0e2fa25d4b67ce86d83a9991a03c4f))
+- **menu:** hide logout button if it is not present ([#67](https://github.com/B-onuz/ui-components/issues/67)) ([a2a0359](https://github.com/B-onuz/ui-components/commit/a2a0359d00182ec9de972294c53c8d62c5f662bc))
+
+### Bug Fixes
+
+- **profile-box:** let profile box receive only some props ([#64](https://github.com/B-onuz/ui-components/issues/64)) ([aea131a](https://github.com/B-onuz/ui-components/commit/aea131ab12c77ea1fce57d6eb2a95b72ad728450))
+- **sidebar-menu:** changed media query condition ([#66](https://github.com/B-onuz/ui-components/issues/66)) ([54346ed](https://github.com/B-onuz/ui-components/commit/54346ed73313e610ebb18839afe5859d767959fd))
+
 ### [2.23.3](https://github.com/B-onuz/ui-components/compare/v2.23.2...v2.23.3) (2020-11-04)
 
 ### Bug Fixes
