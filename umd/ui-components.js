@@ -1,4 +1,4 @@
-/*! ui-components v2.24.0 */
+/*! ui-components v2.24.1 */
 (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
 		module.exports = factory(require("react"));
@@ -22337,7 +22337,7 @@ var StyledCard = styled_components_browser_esm["default"].div(Card_templateObjec
   return !!clickableCard ? 'visible' : 'hidden';
 }, function (_ref7) {
   var clickableCard = _ref7.clickableCard;
-  return !!clickableCard ? 0 : '25px 12px';
+  return !!clickableCard ? 0 : '30px 12px';
 }, function (_ref8) {
   var clickableCard = _ref8.clickableCard;
   return !!clickableCard ? 0 : '24px';

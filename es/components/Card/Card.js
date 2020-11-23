@@ -115,7 +115,7 @@ var StyledCard = _styledComponents["default"].div(_templateObject(), function (_
   return !!clickableCard ? 'visible' : 'hidden';
 }, function (_ref7) {
   var clickableCard = _ref7.clickableCard;
-  return !!clickableCard ? 0 : '25px 12px';
+  return !!clickableCard ? 0 : '30px 12px';
 }, function (_ref8) {
   var clickableCard = _ref8.clickableCard;
   return !!clickableCard ? 0 : '24px';
