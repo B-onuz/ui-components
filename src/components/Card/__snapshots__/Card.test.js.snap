@@ -74,7 +74,7 @@ exports[`Should render Card 1`] = `
     width: 100%;
     height: none !important;
     min-height: 84px !important;
-    padding: 8px 12px;
+    padding: 25px 12px;
     -webkit-box-pack: center;
     -webkit-justify-content: center;
     -ms-flex-pack: center;
