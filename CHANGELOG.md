@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.24.1](https://github.com/B-onuz/ui-components/compare/v2.24.0...v2.24.1) (2020-11-23)
+
+### Bug Fixes
+
+- **card:** changed padding for mobile ([#68](https://github.com/B-onuz/ui-components/issues/68)) ([32cec75](https://github.com/B-onuz/ui-components/commit/32cec75ba346675e181c526b8a4c424b13728886))
+
 ## [2.24.0](https://github.com/B-onuz/ui-components/compare/v2.23.0...v2.24.0) (2020-11-18)
 
 ### Features
