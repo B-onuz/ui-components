@@ -14,7 +14,7 @@ var _AlertStackContext = _interopRequireDefault(require("./AlertStackContext"));
 var _uuid = require("uuid");
 
 var _this = void 0,
-    _jsxFileName = "/Users/rodrigopaschoaletto/Developer/Projects/Bonuz/Development/ui-components/src/components/AlertStack/AlertStackProvider.js";
+    _jsxFileName = "/home/nicolasgarcia/Documents/Kazap/Bonuz/ui-components/src/components/AlertStack/AlertStackProvider.js";
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
