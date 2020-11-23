@@ -21,7 +21,7 @@ const StyledCard = styled.div`
     width: 100%;
     height: none !important;
     min-height: 84px !important;
-    padding: ${({ clickableCard }) => (!!clickableCard ? 0 : '8px 12px')};
+    padding: ${({ clickableCard }) => (!!clickableCard ? 0 : '25px 12px')};
     justify-content: center;
     text-align: center;
   }
