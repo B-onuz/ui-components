@@ -6,11 +6,11 @@ import { background } from 'styled-system'
 const StyledCard = styled.div`
   color: ${({ theme, color }) => (theme.colors[color] ? theme.colors[color] : color)};
   width: 192px;
-  height: ${({ clickableCard }) => (!!clickableCard ? 'none' : '84px')};
-  min-height: ${({ clickableCard }) => (!!clickableCard ? '84px' : 'none')};
+  height: ${({ clickableCard }) => (!!clickableCard ? 'none' : '90px')};
+  min-height: ${({ clickableCard }) => (!!clickableCard ? '90px' : 'none')};
   display: flex;
   flex-direction: ${({ clickableCard }) => (!!clickableCard ? 'row' : 'column')};
-  justify-content: space-between;
+  justify-content: space-around;
   position: relative;
   box-shadow: 3px 3px 6px #00000029;
   border: 3px solid;
@@ -21,7 +21,7 @@ const StyledCard = styled.div`
     width: 100%;
     height: none !important;
     min-height: 84px !important;
-    padding: ${({ clickableCard }) => (!!clickableCard ? 0 : '30px 12px')};
+    padding: ${({ clickableCard }) => (!!clickableCard ? 0 : '25px 12px')};
     justify-content: center;
     text-align: center;
   }
@@ -57,11 +57,9 @@ const StyledInfo = styled.div`
   align-items: center;
   color: ${({ theme, iconColor }) => (theme.colors[iconColor] ? theme.colors[iconColor] : iconColor)};
   box-shadow: none;
-  margin-bottom: 8px;
   font-size: 40px;
   @media only screen and (max-width: 500px) {
     font-size: 30px;
-    margin-bottom: 6px;
     flex-direction: column;
     align-items: center;
   }
@@ -85,6 +83,7 @@ const StyledIcon = styled.img`
 `
 
 const StyledHelper = styled.small`
+  margin-top: 8px;
   display: ${({ disclaimer }) => (!!disclaimer ? 'inline-block' : 'none')};
   color: ${({ theme, disclaimerColor }) => (theme.colors[disclaimerColor] ? theme.colors[disclaimerColor] : disclaimerColor)};
   @media only screen and (max-width: 500px) {
