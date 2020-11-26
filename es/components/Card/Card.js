@@ -33,7 +33,7 @@ function _templateObject7() {
 }
 
 function _templateObject6() {
-  var data = _taggedTemplateLiteralLoose(["\n  display: ", ";\n  color: ", ";\n  @media only screen and (max-width: 500px) {\n    margin-top: 8px;\n  }\n"]);
+  var data = _taggedTemplateLiteralLoose(["\n  margin-top: 8px;\n  display: ", ";\n  color: ", ";\n  @media only screen and (max-width: 500px) {\n    margin-top: 8px;\n  }\n"]);
 
   _templateObject6 = function _templateObject6() {
     return data;
@@ -63,7 +63,7 @@ function _templateObject4() {
 }
 
 function _templateObject3() {
-  var data = _taggedTemplateLiteralLoose(["\n  display: flex;\n  justify-content: flex-start;\n  align-items: center;\n  color: ", ";\n  box-shadow: none;\n  margin-bottom: 8px;\n  font-size: 40px;\n  @media only screen and (max-width: 500px) {\n    font-size: 30px;\n    margin-bottom: 6px;\n    flex-direction: column;\n    align-items: center;\n  }\n"]);
+  var data = _taggedTemplateLiteralLoose(["\n  display: flex;\n  justify-content: flex-start;\n  align-items: center;\n  color: ", ";\n  box-shadow: none;\n  font-size: 40px;\n  @media only screen and (max-width: 500px) {\n    font-size: 30px;\n    flex-direction: column;\n    align-items: center;\n  }\n"]);
 
   _templateObject3 = function _templateObject3() {
     return data;
@@ -83,7 +83,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteralLoose(["\n  color: ", ";\n  width: 192px;\n  height: ", ";\n  min-height: ", ";\n  display: flex;\n  flex-direction: ", ";\n  justify-content: space-between;\n  position: relative;\n  box-shadow: 3px 3px 6px #00000029;\n  border: 3px solid;\n  border-radius: 12px;\n  padding: ", ";\n  overflow: ", ";\n  @media only screen and (max-width: 500px) {\n    width: 100%;\n    height: none !important;\n    min-height: 84px !important;\n    padding: ", ";\n    justify-content: center;\n    text-align: center;\n  }\n\n  .icon {\n    margin-right: ", ";\n    font-size: 40px;\n    @media only screen and (max-width: 500px) {\n      font-size: 30px;\n      margin: 0;\n      margin-bottom: 6px;\n    }\n  }\n"]);
+  var data = _taggedTemplateLiteralLoose(["\n  color: ", ";\n  width: 192px;\n  height: ", ";\n  min-height: ", ";\n  display: flex;\n  flex-direction: ", ";\n  justify-content: space-around;\n  position: relative;\n  box-shadow: 3px 3px 6px #00000029;\n  border: 3px solid;\n  border-radius: 12px;\n  padding: ", ";\n  overflow: ", ";\n  @media only screen and (max-width: 500px) {\n    width: 100%;\n    height: none !important;\n    min-height: 84px !important;\n    padding: ", ";\n    justify-content: center;\n    text-align: center;\n  }\n\n  .icon {\n    margin-right: ", ";\n    font-size: 40px;\n    @media only screen and (max-width: 500px) {\n      font-size: 30px;\n      margin: 0;\n      margin-bottom: 6px;\n    }\n  }\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -100,10 +100,10 @@ var StyledCard = _styledComponents["default"].div(_templateObject(), function (_
   return theme.colors[color] ? theme.colors[color] : color;
 }, function (_ref2) {
   var clickableCard = _ref2.clickableCard;
-  return !!clickableCard ? 'none' : '84px';
+  return !!clickableCard ? 'none' : '90px';
 }, function (_ref3) {
   var clickableCard = _ref3.clickableCard;
-  return !!clickableCard ? '84px' : 'none';
+  return !!clickableCard ? '90px' : 'none';
 }, function (_ref4) {
   var clickableCard = _ref4.clickableCard;
   return !!clickableCard ? 'row' : 'column';
@@ -115,7 +115,7 @@ var StyledCard = _styledComponents["default"].div(_templateObject(), function (_
   return !!clickableCard ? 'visible' : 'hidden';
 }, function (_ref7) {
   var clickableCard = _ref7.clickableCard;
-  return !!clickableCard ? 0 : '30px 12px';
+  return !!clickableCard ? 0 : '25px 12px';
 }, function (_ref8) {
   var clickableCard = _ref8.clickableCard;
   return !!clickableCard ? 0 : '24px';
@@ -196,7 +196,7 @@ var Card = function Card(_ref20) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 131,
+      lineNumber: 130,
       columnNumber: 5
     }
   }), !!clickableCard ? /*#__PURE__*/_react["default"].createElement(ClickableCard, {
@@ -205,7 +205,7 @@ var Card = function Card(_ref20) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 133,
+      lineNumber: 132,
       columnNumber: 9
     }
   }, /*#__PURE__*/_react["default"].createElement(StyledTitle, {
@@ -214,7 +214,7 @@ var Card = function Card(_ref20) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 134,
+      lineNumber: 133,
       columnNumber: 11
     }
   }, title), icon && /*#__PURE__*/_react["default"].createElement(_reactFontawesome.FontAwesomeIcon, {
@@ -223,7 +223,7 @@ var Card = function Card(_ref20) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 137,
+      lineNumber: 136,
       columnNumber: 20
     }
   }), customIcon && /*#__PURE__*/_react["default"].createElement(StyledIcon, {
@@ -234,7 +234,7 @@ var Card = function Card(_ref20) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 138,
+      lineNumber: 137,
       columnNumber: 26
     }
   })) : /*#__PURE__*/_react["default"].createElement(_react["default"].Fragment, null, /*#__PURE__*/_react["default"].createElement(StyledTitle, {
@@ -243,7 +243,7 @@ var Card = function Card(_ref20) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 142,
+      lineNumber: 141,
       columnNumber: 11
     }
   }, title), /*#__PURE__*/_react["default"].createElement(StyledInfo, {
@@ -251,7 +251,7 @@ var Card = function Card(_ref20) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 145,
+      lineNumber: 144,
       columnNumber: 11
     }
   }, icon && /*#__PURE__*/_react["default"].createElement(_reactFontawesome.FontAwesomeIcon, {
@@ -260,7 +260,7 @@ var Card = function Card(_ref20) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 146,
+      lineNumber: 145,
       columnNumber: 22
     }
   }), customIcon && /*#__PURE__*/_react["default"].createElement(StyledIcon, {
@@ -271,7 +271,7 @@ var Card = function Card(_ref20) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 147,
+      lineNumber: 146,
       columnNumber: 28
     }
   }), /*#__PURE__*/_react["default"].createElement(Counter, {
@@ -279,7 +279,7 @@ var Card = function Card(_ref20) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 148,
+      lineNumber: 147,
       columnNumber: 13
     }
   }, count)), /*#__PURE__*/_react["default"].createElement(StyledHelper, {
@@ -288,7 +288,7 @@ var Card = function Card(_ref20) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 150,
+      lineNumber: 149,
       columnNumber: 11
     }
   }, disclaimer)));
