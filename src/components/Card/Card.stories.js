@@ -3,13 +3,38 @@ import Card from './Card'
 import { Flex, Box } from 'reflexbox'
 import { faArchive, faBoxes, faBoxOpen, faParachuteBox, faBan, faThumbsUp } from '@fortawesome/free-solid-svg-icons'
 import serv_waiting from '../../assets/serv_waiting.svg'
+import Typography from '../Typography'
 
 export default {
   title: 'Card',
   component: Card,
 }
 
-export const CardExample = () => <Card title={'Demandas Pendentes'} count={99} color={'danger'} icon={faArchive} />
+export const CardExample = () => (
+  <>
+    <Card title={'Demandas Pendentes'} count={99} color={'danger'} icon={faArchive} />
+    <Card
+      title={
+        <Typography textAlign="left" m={0}>
+          REVISÃO DE OUTROS DOCUMENTOS OU CONTRATOS
+        </Typography>
+      }
+      color="purple"
+      icon={faParachuteBox}
+      disclaimer={
+        <Typography m={0} textAlign="left">
+          Pendente
+        </Typography>
+      }
+      disclaimerColor="lightGrey"
+      count={
+        <Typography m={0} fontSize={2}>
+          {`#58758`}
+        </Typography>
+      }
+    />
+  </>
+)
 
 export const CardColors = () => (
   <Flex justifyContent={'flex-start'} p={3} flexWrap={'wrap'}>

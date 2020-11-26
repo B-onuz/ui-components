@@ -3,7 +3,7 @@
 exports[`Should render Card 1`] = `
 .c0 {
   width: 192px;
-  height: 84px;
+  height: 90px;
   min-height: none;
   display: -webkit-box;
   display: -webkit-flex;
@@ -12,10 +12,10 @@ exports[`Should render Card 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+  -webkit-box-pack: space-around;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: space-around;
+  justify-content: space-around;
   position: relative;
   box-shadow: 3px 3px 6px #00000029;
   border: 3px solid;
@@ -54,7 +54,6 @@ exports[`Should render Card 1`] = `
   -ms-flex-align: center;
   align-items: center;
   box-shadow: none;
-  margin-bottom: 8px;
   font-size: 40px;
 }
 
@@ -65,6 +64,7 @@ exports[`Should render Card 1`] = `
 }
 
 .c4 {
+  margin-top: 8px;
   display: none;
   color: #1b1c1d;
 }
@@ -74,7 +74,7 @@ exports[`Should render Card 1`] = `
     width: 100%;
     height: none !important;
     min-height: 84px !important;
-    padding: 30px 12px;
+    padding: 25px 12px;
     -webkit-box-pack: center;
     -webkit-justify-content: center;
     -ms-flex-pack: center;
@@ -100,7 +100,6 @@ exports[`Should render Card 1`] = `
 @media only screen and (max-width:500px) {
   .c2 {
     font-size: 30px;
-    margin-bottom: 6px;
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
