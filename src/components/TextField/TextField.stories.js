@@ -13,7 +13,7 @@ export const TextFieldExample = () => (
       <TextField id="name" name={'name'} required label={'Nome'} m={2} placeholder={'Nome'} />
     </Box>
     <Box width={[1, 1 / 2, 1 / 3]}>
-      <TextField id="lastname" name={'lastname'} label={'Sobrenome'} m={2} placeholder={'Sobrenome'} error={'Este campo é obrigatório.'} />
+      <TextField id="lastname" name={'lastname'} required label={'Sobrenome'} m={2} placeholder={'Sobrenome'} error={'Este campo é obrigatório.'} />
     </Box>
     <Box width={[1, 1 / 2, 1 / 3]}>
       <TextField id="fullname" name={'fullname'} label={'Exibir Como:'} m={2} placeholder={'Nome + Sobrenome'} />
@@ -39,7 +39,16 @@ export const TextFieldExample = () => (
 export const TextFieldMultiline = () => (
   <Flex flexWrap={'wrap'}>
     <Box width={[1, 1 / 2, 1 / 3]}>
-      <TextField id="comment" name={'comment'} multiline required label={'Comentário'} m={2} placeholder={'Comentário'} />
+      <TextField
+        id="comment"
+        name={'comment'}
+        multiline
+        required
+        label={'Comentário'}
+        m={2}
+        placeholder={'Comentário'}
+        inputProps={{ maxLength: 100 }}
+      />
     </Box>
     <Box width={[1, 1 / 2, 1 / 3]}>
       <TextField

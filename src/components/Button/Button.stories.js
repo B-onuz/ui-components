@@ -77,12 +77,12 @@ export const Loading = () => {
   const send = () => {
     setLoading(true)
     setTimeout(() => {
-      setLoading(false)
+      setLoading(true)
     }, 1000)
   }
   return (
     <div>
-      <Button m={2} loading={loading} color={'primary'} onClick={() => send()}>
+      <Button m={2} loading={loading} disabled={loading} outline color={'primary'} onClick={() => send()}>
         Enviar
       </Button>
     </div>

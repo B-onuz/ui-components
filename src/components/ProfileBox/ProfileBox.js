@@ -8,7 +8,7 @@ const StyledProfileBox = styled.div`
   ${color}
   height: 100%;
   display: flex;
-  justify-content: flex-start;
+  justify-content: flex-end;
   align-items: center;
   @media only screen and (max-width: 500px) {
     flex-direction: row;
@@ -58,8 +58,11 @@ const TextBox = styled.div`
 `
 
 const UserNameText = styled(Typography)`
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
   :hover {
-    color: ${({ theme }) => `${theme.colors['red']}`};
+    color: ${({ theme }) => `${theme.colors['gray']}`};
     cursor: pointer;
   }
 `
