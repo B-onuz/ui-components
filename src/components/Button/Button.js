@@ -40,11 +40,17 @@ const StyledButton = styled.button`
   &:disabled {
     background-color: ${({ theme, color }) => new Color(theme.colors[color]).desaturate(0.4).lighten(0.1).opaquer(0.7).string()};
   }
-  ${({ loading }) =>
+
+  ${({ loading, theme }) => {
     !!loading &&
-    `
+      `
     cursor: progress;
-  `}
+    &:hover {
+      background-color: 'inherit'
+      color: 'inherit';
+    }
+  `
+  }}
 
   ${({ outline, theme, color }) =>
     !!outline &&
