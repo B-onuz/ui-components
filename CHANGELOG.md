@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.25.0](https://github.com/B-onuz/ui-components/compare/v2.24.3...v2.25.0) (2020-12-21)
+
+### Features
+
+- **button:** fix name length ([#71](https://github.com/B-onuz/ui-components/issues/71)) ([598f21a](https://github.com/B-onuz/ui-components/commit/598f21ae761f06dce2ea7f7b3fc280097c1d8de4))
+
 ### [2.24.3](https://github.com/B-onuz/ui-components/compare/v2.24.2...v2.24.3) (2020-11-26)
 
 ### Bug Fixes
