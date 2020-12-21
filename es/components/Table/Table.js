@@ -18,7 +18,7 @@ var _PaceLoading = _interopRequireDefault(require("./PaceLoading"));
 var _shortid = _interopRequireDefault(require("shortid"));
 
 var _this = void 0,
-    _jsxFileName = "/home/nicolasgarcia/Documents/Kazap/Bonuz/ui-components/src/components/Table/Table.js";
+    _jsxFileName = "/Users/master/projects/bonuz/ui-components/src/components/Table/Table.js";
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 

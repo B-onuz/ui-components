@@ -14,7 +14,7 @@ var _reactFontawesome = require("@fortawesome/react-fontawesome");
 var _styledSystem = require("styled-system");
 
 var _this = void 0,
-    _jsxFileName = "/home/nicolasgarcia/Documents/Kazap/Bonuz/ui-components/src/components/Card/Card.js";
+    _jsxFileName = "/Users/master/projects/bonuz/ui-components/src/components/Card/Card.js";
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 

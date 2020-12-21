@@ -14,7 +14,7 @@ var _styledSystem = require("styled-system");
 var _variants = require("./variants");
 
 var _this = void 0,
-    _jsxFileName = "/home/nicolasgarcia/Documents/Kazap/Bonuz/ui-components/src/components/Chip/Chip.js";
+    _jsxFileName = "/Users/master/projects/bonuz/ui-components/src/components/Chip/Chip.js";
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 

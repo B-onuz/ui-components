@@ -1,4 +1,4 @@
-/*! ui-components v2.24.2 */
+/*! ui-components v2.24.3 */
 (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
 		module.exports = factory(require("react"));
@@ -11177,7 +11177,7 @@ function _templateObject2() {
 }
 
 function Button_templateObject() {
-  var data = Button_taggedTemplateLiteralLoose(["\n  appearance: none;\n  font-family: inherit;\n  border-radius: 4px;\n  outline: none;\n  cursor: pointer;\n  padding: .5rem 1rem;\n  border-style: solid;\n  white-space: nowrap;\n  text-overflow: ellipsis;\n  overflow: hidden;\n  border-color: ", ";\n  ", "\n  ", "\n  ", "\n  ", "\n  box-sizing: border-box;\n  &:focus {\n    box-shadow: 0 0 8px ", ";\n  }\n\n  &:active:not(:disabled) {\n    box-shadow: inset 0px 0px 5px #c1c1c1;\n  }\n  &:active,\n  &:hover {\n    background-color: ", ";\n  }\n  &:disabled {\n    background-color: ", ";\n  }\n  ", "\n\n  ", "\n\n  ", " \n\n  ", "\n\n  ", "\n\n  ", ";\n"]);
+  var data = Button_taggedTemplateLiteralLoose(["\n  appearance: none;\n  font-family: inherit;\n  border-radius: 4px;\n  outline: none;\n  cursor: pointer;\n  padding: .5rem 1rem;\n  border-style: solid;\n  white-space: nowrap;\n  text-overflow: ellipsis;\n  overflow: hidden;\n  border-color: ", ";\n  ", "\n  ", "\n  ", "\n  ", "\n  box-sizing: border-box;\n  &:focus {\n    box-shadow: 0 0 8px ", ";\n  }\n\n  &:active:not(:disabled) {\n    box-shadow: inset 0px 0px 5px #c1c1c1;\n  }\n  &:active,\n  &:hover {\n    background-color: ", ";\n  }\n  &:disabled {\n    background-color: ", ";\n  }\n\n  ", "\n\n  ", "\n\n  ", " \n\n  ", "\n\n  ", "\n\n  ", ";\n"]);
 
   Button_templateObject = function _templateObject() {
     return data;
@@ -11216,8 +11216,9 @@ var StyledButton = styled_components_browser_esm["default"].button(Button_templa
       color = _ref4.color;
   return new color_default.a(theme.colors[color]).desaturate(0.4).lighten(0.1).opaquer(0.7).string();
 }, function (_ref5) {
-  var loading = _ref5.loading;
-  return !!loading && "\n    cursor: progress;\n  ";
+  var loading = _ref5.loading,
+      theme = _ref5.theme;
+  !!loading && "\n    cursor: progress;\n    &:hover {\n      background-color: 'inherit'\n      color: 'inherit';\n    }\n  ";
 }, function (_ref6) {
   var outline = _ref6.outline,
       theme = _ref6.theme,
@@ -12040,7 +12041,7 @@ Header_Header.defaultProps = {
 function ProfileBox_objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 
 function _templateObject6() {
-  var data = ProfileBox_taggedTemplateLiteralLoose(["\n  :hover {\n    color: ", ";\n    cursor: pointer;\n  }\n"]);
+  var data = ProfileBox_taggedTemplateLiteralLoose(["\n  white-space: nowrap;\n  overflow: hidden;\n  text-overflow: ellipsis;\n  :hover {\n    color: ", ";\n    cursor: pointer;\n  }\n"]);
 
   _templateObject6 = function _templateObject6() {
     return data;
@@ -12090,7 +12091,7 @@ function ProfileBox_templateObject2() {
 }
 
 function ProfileBox_templateObject() {
-  var data = ProfileBox_taggedTemplateLiteralLoose(["\n  ", "\n  height: 100%;\n  display: flex;\n  justify-content: flex-start;\n  align-items: center;\n  @media only screen and (max-width: 500px) {\n    flex-direction: row;\n    align-items: center;\n    justify-content: center;\n    margin: 0 8px;\n  }\n"]);
+  var data = ProfileBox_taggedTemplateLiteralLoose(["\n  ", "\n  height: 100%;\n  display: flex;\n  justify-content: flex-end;\n  align-items: center;\n  @media only screen and (max-width: 500px) {\n    flex-direction: row;\n    align-items: center;\n    justify-content: center;\n    margin: 0 8px;\n  }\n"]);
 
   ProfileBox_templateObject = function _templateObject() {
     return data;
@@ -12116,7 +12117,7 @@ var ProfileIcon = styled_components_browser_esm["default"].img(ProfileBox_templa
 var TextBox = styled_components_browser_esm["default"].div(ProfileBox_templateObject5());
 var UserNameText = Object(styled_components_browser_esm["default"])(components_Typography)(_templateObject6(), function (_ref2) {
   var theme = _ref2.theme;
-  return "" + theme.colors['red'];
+  return "" + theme.colors['gray'];
 });
 
 var ProfileBox_ProfileBox = function ProfileBox(_ref3) {
@@ -12154,7 +12155,7 @@ var ProfileBox_ProfileBox = function ProfileBox(_ref3) {
 function BaseLayout_objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 
 function BaseLayout_templateObject4() {
-  var data = BaseLayout_taggedTemplateLiteralLoose(["\n  height: 100%;\n  align-self: flex-end;\n"]);
+  var data = BaseLayout_taggedTemplateLiteralLoose(["\n  height: 100%;\n  width: 90%;\n  align-self: flex-end;\n"]);
 
   BaseLayout_templateObject4 = function _templateObject4() {
     return data;
