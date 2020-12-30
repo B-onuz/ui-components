@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.27.0](https://github.com/B-onuz/ui-components/compare/v2.26.0...v2.27.0) (2020-12-30)
+
+### Features
+
+- **components:** fix title break ([a794b42](https://github.com/B-onuz/ui-components/commit/a794b42758223a92699a500e508cfb90e486a402))
+
 ## [2.26.0](https://github.com/B-onuz/ui-components/compare/v2.25.0...v2.26.0) (2020-12-30)
 
 ### Features
