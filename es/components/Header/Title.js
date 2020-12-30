@@ -12,7 +12,7 @@ var _styledSystem = require("styled-system");
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteralLoose(["\n  margin: 0;\n  ", "\n  font-size: 1em !important;\n"]);
+  var data = _taggedTemplateLiteralLoose(["\n  margin: 0;\n  ", "\n  font-size: 1em !important;\n  @media only screen and (min-width: 468px) {\n    white-space: nowrap;\n    margin-left: 8px;\n  }\n"]);
 
   _templateObject = function _templateObject() {
     return data;

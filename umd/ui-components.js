@@ -1,4 +1,4 @@
-/*! ui-components v2.25.0 */
+/*! ui-components v2.26.0 */
 (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
 		module.exports = factory(require("react"));
@@ -11957,7 +11957,7 @@ var NavBar_NavBar = function NavBar(_ref) {
 /* harmony default export */ var components_NavBar = (components_NavBar_NavBar);
 // CONCATENATED MODULE: ./src/components/Header/Title.js
 function Title_templateObject() {
-  var data = Title_taggedTemplateLiteralLoose(["\n  margin: 0;\n  ", "\n  font-size: 1em !important;\n"]);
+  var data = Title_taggedTemplateLiteralLoose(["\n  margin: 0;\n  ", "\n  font-size: 1em !important;\n  @media only screen and (min-width: 468px) {\n    white-space: nowrap;\n    margin-left: 8px;\n  }\n"]);
 
   Title_templateObject = function _templateObject() {
     return data;
@@ -12155,7 +12155,7 @@ var ProfileBox_ProfileBox = function ProfileBox(_ref3) {
 function BaseLayout_objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 
 function BaseLayout_templateObject4() {
-  var data = BaseLayout_taggedTemplateLiteralLoose(["\n  height: 100%;\n  width: 90%;\n  align-self: flex-end;\n"]);
+  var data = BaseLayout_taggedTemplateLiteralLoose(["\n  height: 100%;\n  width: 90%;\n  align-self: flex-end;\n  white-space: nowrap;\n"]);
 
   BaseLayout_templateObject4 = function _templateObject4() {
     return data;
