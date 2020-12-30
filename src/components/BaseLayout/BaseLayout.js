@@ -17,6 +17,12 @@ const ChildrenWrapper = styled.div`
   flex: 1;
   padding: 42px;
   overflow: auto;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  @media only screen and (min-width: 1640px) {
+    max-width: 1400px;
+  }
   @media only screen and (max-width: 768px) {
     padding: 24px;
   }
