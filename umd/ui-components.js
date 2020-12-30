@@ -1,4 +1,4 @@
-/*! ui-components v2.24.3 */
+/*! ui-components v2.25.0 */
 (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
 		module.exports = factory(require("react"));
@@ -12175,7 +12175,7 @@ function BaseLayout_templateObject3() {
 }
 
 function BaseLayout_templateObject2() {
-  var data = BaseLayout_taggedTemplateLiteralLoose(["\n  flex: 1;\n  padding: 42px;\n  overflow: auto;\n  @media only screen and (max-width: 768px) {\n    padding: 24px;\n  }\n"]);
+  var data = BaseLayout_taggedTemplateLiteralLoose(["\n  flex: 1;\n  padding: 42px;\n  overflow: auto;\n  max-width: 100%;\n  display: flex;\n  flex-direction: column;\n  @media only screen and (min-width: 1640px) {\n    max-width: 1400px;\n  }\n  @media only screen and (max-width: 768px) {\n    padding: 24px;\n  }\n"]);
 
   BaseLayout_templateObject2 = function _templateObject2() {
     return data;
@@ -12705,8 +12705,10 @@ Table_Table.propTypes = {
 // CONCATENATED MODULE: ./src/components/Box/Box.js
 function Box_extends() { Box_extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return Box_extends.apply(this, arguments); }
 
+function Box_objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
+
 function Box_templateObject() {
-  var data = Box_taggedTemplateLiteralLoose(["\n  box-shadow: 0px 3px 6px #2c282846;\n  background: #ffffff 0% 0% no-repeat padding-box;\n  padding: 10px;\n  border-radius: 10px;\n  ", "\n"]);
+  var data = Box_taggedTemplateLiteralLoose(["\n  ", "\n  box-shadow: 0px 3px 6px #2c282846;\n  background: #ffffff 0% 0% no-repeat padding-box;\n  padding: 10px;\n  border-radius: 10px;\n  display: ", ";\n  justify-content: ", ";\n  flex-direction: ", ";\n  align-items: ", ";\n"]);
 
   Box_templateObject = function _templateObject() {
     return data;
@@ -12720,12 +12722,33 @@ function Box_taggedTemplateLiteralLoose(strings, raw) { if (!raw) { raw = string
 
 
 
-var StyledBox = styled_components_browser_esm["default"].div(Box_templateObject(), Object(index_esm["compose"])(index_esm["space"], index_esm["layout"]));
+var StyledBox = styled_components_browser_esm["default"].div(Box_templateObject(), Object(index_esm["compose"])(index_esm["space"], index_esm["layout"]), function (_ref) {
+  var display = _ref.display;
+  return display;
+}, function (_ref2) {
+  var justifyContent = _ref2.justifyContent;
+  return justifyContent;
+}, function (_ref3) {
+  var flexDirection = _ref3.flexDirection;
+  return flexDirection;
+}, function (_ref4) {
+  var alignItems = _ref4.alignItems;
+  return alignItems;
+});
 
-var Box_Box = function Box(_ref) {
-  var rest = Box_extends({}, _ref);
+var Box_Box = function Box(_ref5) {
+  var display = _ref5.display,
+      justifyContent = _ref5.justifyContent,
+      flexDirection = _ref5.flexDirection,
+      alignItems = _ref5.alignItems,
+      rest = Box_objectWithoutPropertiesLoose(_ref5, ["display", "justifyContent", "flexDirection", "alignItems"]);
 
-  return /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(StyledBox, rest);
+  return /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(StyledBox, Box_extends({
+    display: display,
+    justifyContent: justifyContent,
+    flexDirection: flexDirection,
+    alignItems: alignItems
+  }, rest));
 };
 
 /* harmony default export */ var components_Box_Box = (Box_Box);
