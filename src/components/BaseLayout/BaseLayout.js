@@ -46,6 +46,7 @@ const CornerContentWrapper = styled.div`
   height: 100%;
   width: 90%;
   align-self: flex-end;
+  white-space: nowrap;
 `
 
 const BaseLayout = ({
