@@ -8,7 +8,7 @@ export default {
 
 export const PaginationExample = () => {
   const [currentPage, setCurrentPage] = useState(1)
-  const total = 18
+  const total = 12
 
   const handleChangeNext = () => {
     const nextPage = currentPage + 1
