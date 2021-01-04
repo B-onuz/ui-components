@@ -117,7 +117,6 @@ const Pagination = memo(({ children, color, onChangePage, onNextPage, onPrevPage
   }
 
   const handleMarkers = () => {
-    console.log(isFirstItem, isLastItem, pageMarkers)
     if (!!isFirstItem || !!isLastItem) {
       if (!!isFirstItem && !!isLastItem) {
         return pageMarkers.map((item, index) => (
