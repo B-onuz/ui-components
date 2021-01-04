@@ -8,7 +8,6 @@ const StyledPagination = styled.div`
   flex-wrap: wrap;
   ${compose(layout, space)}
 `
-
 const PageItem = styled(Button)`
   position: relative;
   border-radius: 32px;
@@ -54,17 +53,45 @@ const PageItem = styled(Button)`
     position: relative;
     z-index: 2;
   }
+  &.ellipsis {
+    &::before {
+      content: none;
+      color: #e0e1e2;
+    }
+    &:hover {
+      cursor: default;
+      color: #e0e1e2;
+      background-color: #f7f8f8;
+    }
+  }
 `
 
 const Pagination = memo(({ children, color, onChangePage, onNextPage, onPrevPage, total, page, onLazyChangePage, lazyTimeout = 300, ...rest }) => {
   const [lazyKey, setLazyKey] = useState()
-  const getRange = (x) => {
-    return (x % 5 ? Math.trunc(x / 5) + 1 : x / 5) * 5
+  const [isFirstItem, setIsFirstItem] = useState(true)
+  const [isLastItem, setIsLastItem] = useState(true)
+  const [pageMarkers, setPageMarkers] = useState([])
+
+  const defineMarkers = (input) => {
+    let marker = 0
+    let markersArray = []
+    while (marker < input) {
+      markersArray[marker] = marker + 1
+      marker += 1
+    }
+    setPageMarkers(markersArray)
+    if (markersArray.length <= 5) {
+      setIsFirstItem(true)
+      setIsLastItem(true)
+    }
   }
-  const range = getRange(page)
-  const pageItems = [range - 4, range - 3, range - 2, range - 1, range].filter((item) => item <= total)
 
   useEffect(() => {
+    defineMarkers(total)
+  }, [])
+
+  useEffect(() => {
+    handleEllipsis()
     if (!onLazyChangePage) return
     window.clearTimeout(lazyKey)
     setLazyKey(
@@ -74,23 +101,98 @@ const Pagination = memo(({ children, color, onChangePage, onNextPage, onPrevPage
     )
   }, [page])
 
-  return (
-    <StyledPagination {...rest}>
-      <PageItem color={color} m={1} onClick={() => onPrevPage()}>
-        <span>{'<'}</span>
-      </PageItem>
-      {[...pageItems].map((item) => {
-        return (
-          <PageItem key={item} color={color} m={1} active={page === item} onClick={() => onChangePage(item)}>
+  const handleEllipsis = () => {
+    if (total > 5) {
+      if (page < 5) {
+        setIsFirstItem(true)
+        setIsLastItem(false)
+      } else if (page > total - 4) {
+        setIsFirstItem(false)
+        setIsLastItem(true)
+      } else {
+        setIsFirstItem(false)
+        setIsLastItem(false)
+      }
+    }
+  }
+
+  const handleMarkers = () => {
+    if (!!isFirstItem || !!isLastItem) {
+      if (!!isFirstItem && !!isLastItem) {
+        return pageMarkers.map((item, index) => (
+          <PageItem color={color} active={page === item} m={1} key={index} onClick={() => onChangePage(item)}>
             <span>{item}</span>
           </PageItem>
-        )
-      })}
-      <PageItem color={color} m={1} onClick={() => onNextPage()}>
-        <span>{'>'}</span>
-      </PageItem>
-    </StyledPagination>
-  )
-})
+        ))
+      } else if (!!isFirstItem) {
+        return pageMarkers.map((item, index) => {
+          while (index <= 4)
+            return (
+              <PageItem color={color} active={page === item} m={1} key={index} onClick={() => onChangePage(item)}>
+                <span>{item}</span>
+              </PageItem>
+            )
+          if (index === 7)
+            return (
+              <>
+                <PageItem color={'default'} disabled m={1} className="ellipsis">
+                  <span>{'...'}</span>
+                </PageItem>
+                <PageItem color={color} m={1} key={total} onClick={() => onChangePage(total)}>
+                  <span>{total}</span>
+                </PageItem>
+              </>
+            )
+        })
+      } else if (!!isLastItem) {
+        return pageMarkers.map((item, index) => {
+          if (index === 0)
+            return (
+              <>
+                <PageItem color={color} m={1} key={1} onClick={() => onChangePage(1)}>
+                  <span>1</span>
+                </PageItem>
+                <PageItem color={'default'} m={1} className="ellipsis">
+                  <span>{'...'}</span>
+                </PageItem>
+              </>
+            )
+          while (total <= index + 5)
+            return (
+              <PageItem color={color} active={page === item} m={1} key={index} onClick={() => onChangePage(item)}>
+                <span>{item}</span>
+              </PageItem>
+            )
+        })
+      }
+    } else {
+      return (
+        <>
+          <PageItem color={color} m={1} key={1} onClick={() => onChangePage(1)}>
+            <span>1</span>
+          </PageItem>
+          <PageItem color={'default'} m={1} className="ellipsis">
+            <span>{'...'}</span>
+          </PageItem>
+          {pageMarkers.map((item, index) => {
+            if (item === page - 1 || item === page || item === page + 1)
+              return (
+                <PageItem color={color} active={page === item} m={1} key={index} onClick={() => onChangePage(item)}>
+                  <span>{item}</span>
+                </PageItem>
+              )
+          })}
+          <PageItem color={'default'} disabled m={1} className="ellipsis">
+            <span>{'...'}</span>
+          </PageItem>
+          <PageItem color={color} m={1} key={total} onClick={() => onChangePage(total)}>
+            <span>{total}</span>
+          </PageItem>
+        </>
+      )
+    }
+  }
 
+  return <StyledPagination {...rest}>{handleMarkers()}</StyledPagination>
+})
 export default Pagination
