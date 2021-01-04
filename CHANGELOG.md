@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.28.0](https://github.com/B-onuz/ui-components/compare/v2.27.0...v2.28.0) (2021-01-04)
+
+### Features
+
+- **pagination:** change pagination behavior ([#73](https://github.com/B-onuz/ui-components/issues/73)) ([9bcce5e](https://github.com/B-onuz/ui-components/commit/9bcce5e68f6527768bcd93d653889ec1f8b23392))
+
 ## [2.27.0](https://github.com/B-onuz/ui-components/compare/v2.26.0...v2.27.0) (2020-12-30)
 
 ### Features
