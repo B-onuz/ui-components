@@ -1,4 +1,4 @@
-/*! ui-components v2.27.0 */
+/*! ui-components v2.28.0 */
 (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
 		module.exports = factory(require("react"));
@@ -11483,7 +11483,7 @@ function Typography_extends() { Typography_extends = Object.assign || function (
 function Typography_objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 
 function Typography_templateObject() {
-  var data = Typography_taggedTemplateLiteralLoose(["\n  ", "\n"]);
+  var data = Typography_taggedTemplateLiteralLoose(["\n  ", "\n  white-space: pre-line;\n"]);
 
   Typography_templateObject = function _templateObject() {
     return data;
@@ -13180,7 +13180,7 @@ Alert_Alert.defaultProps = {
 function Select_extends() { Select_extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return Select_extends.apply(this, arguments); }
 
 function Select_templateObject() {
-  var data = Select_taggedTemplateLiteralLoose(["\n  border: 1px solid #dededf;\n  appearance: none;\n  line-height: inherit;\n  border-radius: 4px;\n  line-height: 2.1em;\n  outline: none;\n  padding-right: 1em;\n  padding-left: 1em;\n  width: 100%;\n  box-sizing: border-box;\n  background: #fff;\n  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iMTc2cHgiIGhlaWdodD0iOTBweCIgdmlld0JveD0iMCAwIDE3NiA5MCIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj4KICAgIDx0aXRsZT5UcmlhbmdsZTwvdGl0bGU+CiAgICA8ZyBpZD0iV2VsY29tZSIgc3Ryb2tlPSJub25lIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPGcgaWQ9IkFydGJvYXJkIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMTYuMDAwMDAwLCAtNy4wMDAwMDApIiBmaWxsPSIjNEQ0RDREIj4KICAgICAgICAgICAgPHBhdGggZD0iTTEwNS40MTQyMTQsOC40MTQyMTM1NiBMMTkwLjU4NTc4Niw5My41ODU3ODY0IEMxOTEuMzY2ODM1LDk0LjM2NjgzNSAxOTEuMzY2ODM1LDk1LjYzMzE2NSAxOTAuNTg1Nzg2LDk2LjQxNDIxMzYgQzE5MC4yMTA3MTQsOTYuNzg5Mjg2MyAxODkuNzAyMDA2LDk3IDE4OS4xNzE1NzMsOTcgTDE4LjgyODQyNzEsOTcgQzE3LjcyMzg1NzYsOTcgMTYuODI4NDI3MSw5Ni4xMDQ1Njk1IDE2LjgyODQyNzEsOTUgQzE2LjgyODQyNzEsOTQuNDY5NTY3IDE3LjAzOTE0MDgsOTMuOTYwODU5MiAxNy40MTQyMTM2LDkzLjU4NTc4NjQgTDEwMi41ODU3ODYsOC40MTQyMTM1NiBDMTAzLjM2NjgzNSw3LjYzMzE2NDk4IDEwNC42MzMxNjUsNy42MzMxNjQ5OCAxMDUuNDE0MjE0LDguNDE0MjEzNTYgWiIgaWQ9IlRyaWFuZ2xlIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxMDQuMDAwMDAwLCA1Mi4wMDAwMDApIHJvdGF0ZSgtMTgwLjAwMDAwMCkgdHJhbnNsYXRlKC0xMDQuMDAwMDAwLCAtNTIuMDAwMDAwKSAiPjwvcGF0aD4KICAgICAgICA8L2c+CiAgICA8L2c+Cjwvc3ZnPg==');\n  background-repeat: no-repeat, repeat;\n  cursor: pointer;\n  background-position: right 0.7em top 50%, 0 0;\n  background-size: 0.65em auto, 100%;\n  &::placeholder {\n    letter-spacing: 0px;\n    color: #b5b5b5;\n  }\n  &:focus {\n    box-shadow: 0 0 3px\n      ", ";\n    border-color: ", ";\n  }\n  ", "\n  ", "\n"]);
+  var data = Select_taggedTemplateLiteralLoose(["\n  border: 1px solid #dededf;\n  appearance: none;\n  line-height: inherit;\n  border-radius: 4px;\n  line-height: 2.1em;\n  outline: none;\n  padding-right: 2em;\n  padding-left: 1em;\n  width: 100%;\n  box-sizing: border-box;\n  background: #fff;\n  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iMTc2cHgiIGhlaWdodD0iOTBweCIgdmlld0JveD0iMCAwIDE3NiA5MCIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj4KICAgIDx0aXRsZT5UcmlhbmdsZTwvdGl0bGU+CiAgICA8ZyBpZD0iV2VsY29tZSIgc3Ryb2tlPSJub25lIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPGcgaWQ9IkFydGJvYXJkIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMTYuMDAwMDAwLCAtNy4wMDAwMDApIiBmaWxsPSIjNEQ0RDREIj4KICAgICAgICAgICAgPHBhdGggZD0iTTEwNS40MTQyMTQsOC40MTQyMTM1NiBMMTkwLjU4NTc4Niw5My41ODU3ODY0IEMxOTEuMzY2ODM1LDk0LjM2NjgzNSAxOTEuMzY2ODM1LDk1LjYzMzE2NSAxOTAuNTg1Nzg2LDk2LjQxNDIxMzYgQzE5MC4yMTA3MTQsOTYuNzg5Mjg2MyAxODkuNzAyMDA2LDk3IDE4OS4xNzE1NzMsOTcgTDE4LjgyODQyNzEsOTcgQzE3LjcyMzg1NzYsOTcgMTYuODI4NDI3MSw5Ni4xMDQ1Njk1IDE2LjgyODQyNzEsOTUgQzE2LjgyODQyNzEsOTQuNDY5NTY3IDE3LjAzOTE0MDgsOTMuOTYwODU5MiAxNy40MTQyMTM2LDkzLjU4NTc4NjQgTDEwMi41ODU3ODYsOC40MTQyMTM1NiBDMTAzLjM2NjgzNSw3LjYzMzE2NDk4IDEwNC42MzMxNjUsNy42MzMxNjQ5OCAxMDUuNDE0MjE0LDguNDE0MjEzNTYgWiIgaWQ9IlRyaWFuZ2xlIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxMDQuMDAwMDAwLCA1Mi4wMDAwMDApIHJvdGF0ZSgtMTgwLjAwMDAwMCkgdHJhbnNsYXRlKC0xMDQuMDAwMDAwLCAtNTIuMDAwMDAwKSAiPjwvcGF0aD4KICAgICAgICA8L2c+CiAgICA8L2c+Cjwvc3ZnPg==');\n  background-repeat: no-repeat, repeat;\n  cursor: pointer;\n  background-position: right 0.7em top 50%, 0 0;\n  background-size: 0.65em auto, 100%;\n  text-overflow: ellipsis;\n  &::placeholder {\n    letter-spacing: 0px;\n    color: #b5b5b5;\n  }\n  &:focus {\n    box-shadow: 0 0 3px\n      ", ";\n    border-color: ", ";\n  }\n  ", "\n  ", "\n"]);
 
   Select_templateObject = function _templateObject() {
     return data;
@@ -22953,7 +22953,7 @@ var DemandDetailing_DemandDetailing = function DemandDetailing(_ref) {
     legend: reportTitle,
     bordered: true,
     pt: 4,
-    pl: ['30px', '40px', '40px', '40px']
+    px: ['30px', '40px', '40px', '40px']
   }, /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(ContentWrapper, null, (detailingData || []).sort(function (first, last) {
     return last.createdAt - first.createdAt;
   }).map(function (item, index) {

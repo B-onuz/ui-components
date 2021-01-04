@@ -124,7 +124,7 @@ var DemandDetailing = function DemandDetailing(_ref) {
     legend: reportTitle,
     bordered: true,
     pt: 4,
-    pl: ['30px', '40px', '40px', '40px'],
+    px: ['30px', '40px', '40px', '40px'],
     __self: _this,
     __source: {
       fileName: _jsxFileName,
