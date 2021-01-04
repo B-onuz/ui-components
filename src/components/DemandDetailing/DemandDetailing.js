@@ -72,7 +72,7 @@ const getTopicClass = (value, parameter) => {
 const DemandDetailing = ({ children, reportTitle, reportKind, detailingData, ...rest }) => {
   return (
     <StyledDemandDetailing {...rest}>
-      <Fieldset legend={reportTitle} bordered pt={4} pl={['30px', '40px', '40px', '40px']}>
+      <Fieldset legend={reportTitle} bordered pt={4} px={['30px', '40px', '40px', '40px']}>
         <ContentWrapper>
           {(detailingData || [])
             .sort((first, last) => last.createdAt - first.createdAt)

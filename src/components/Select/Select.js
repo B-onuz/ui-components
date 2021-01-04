@@ -12,7 +12,7 @@ const StyledSelect = styled.select`
   border-radius: 4px;
   line-height: 2.1em;
   outline: none;
-  padding-right: 1em;
+  padding-right: 2em;
   padding-left: 1em;
   width: 100%;
   box-sizing: border-box;
@@ -22,6 +22,7 @@ const StyledSelect = styled.select`
   cursor: pointer;
   background-position: right 0.7em top 50%, 0 0;
   background-size: 0.65em auto, 100%;
+  text-overflow: ellipsis;
   &::placeholder {
     letter-spacing: 0px;
     color: #b5b5b5;
