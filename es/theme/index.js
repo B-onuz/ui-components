@@ -34,7 +34,9 @@ var colors = {
   success: '#1E561F',
   info: '#0E566C',
   danger: '#973937',
-  cyan: '#1CB5AD'
+  cyan: '#1CB5AD',
+  disabledGrey: '#ffffff1f',
+  disabledGreyText: '#ffffff4d'
 };
 colors.primary = colors.lightRed;
 colors.secondary = colors.fullDarkRed;

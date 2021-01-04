@@ -1,4 +1,4 @@
-/*! ui-components v2.26.0 */
+/*! ui-components v2.27.0 */
 (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
 		module.exports = factory(require("react"));
@@ -10441,7 +10441,9 @@ var colors = {
   success: '#1E561F',
   info: '#0E566C',
   danger: '#973937',
-  cyan: '#1CB5AD'
+  cyan: '#1CB5AD',
+  disabledGrey: '#ffffff1f',
+  disabledGreyText: '#ffffff4d'
 };
 colors.primary = colors.lightRed;
 colors.secondary = colors.fullDarkRed;
@@ -12759,7 +12761,7 @@ var Box_Box = function Box(_ref5) {
 function Pagination_objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 
 function Pagination_templateObject2() {
-  var data = Pagination_taggedTemplateLiteralLoose(["\n  position: relative;\n  border-radius: 32px;\n  min-width: 32px;\n  height: 32px;\n  padding: 0 0.3em;\n  background: none;\n  overflow: hidden;\n  -webkit-mask-image: -webkit-radial-gradient(white, black);\n  ", ";\n  &::before {\n    content: '';\n    width: 100%;\n    height: 100%;\n    position: absolute;\n    top: 0;\n    right: 0;\n    bottom: 0;\n    left: 0;\n    ", ";\n    transform: translateY(-100%);\n    transition: 0.2s ease-in-out;\n  }\n  &:active {\n    background-color: transparent;\n  }\n  &:hover,\n  &:active {\n    background-color: transparent;\n    &::before {\n      transform: translateY(0);\n      z-index: 1;\n    }\n    color: #fff;\n  }\n  ", ";\n  & > span {\n    position: relative;\n    z-index: 2;\n  }\n"]);
+  var data = Pagination_taggedTemplateLiteralLoose(["\n  position: relative;\n  border-radius: 32px;\n  min-width: 32px;\n  height: 32px;\n  padding: 0 0.3em;\n  background: none;\n  overflow: hidden;\n  -webkit-mask-image: -webkit-radial-gradient(white, black);\n  ", ";\n  &::before {\n    content: '';\n    width: 100%;\n    height: 100%;\n    position: absolute;\n    top: 0;\n    right: 0;\n    bottom: 0;\n    left: 0;\n    ", ";\n    transform: translateY(-100%);\n    transition: 0.2s ease-in-out;\n  }\n  &:active {\n    background-color: transparent;\n  }\n  &:hover,\n  &:active {\n    background-color: transparent;\n    &::before {\n      transform: translateY(0);\n      z-index: 1;\n    }\n    color: #fff;\n  }\n  ", ";\n  & > span {\n    position: relative;\n    z-index: 2;\n  }\n  &.ellipsis {\n    &::before {\n      content: none;\n      color: #e0e1e2;\n    }\n    &:hover {\n      cursor: default;\n      color: #e0e1e2;\n      background-color: #f7f8f8;\n    }\n  }\n"]);
 
   Pagination_templateObject2 = function _templateObject2() {
     return data;
@@ -12816,44 +12818,171 @@ var Pagination = Object(external_root_React_commonjs2_react_commonjs_react_amd_r
       lazyKey = _useState[0],
       setLazyKey = _useState[1];
 
-  var getRange = function getRange(x) {
-    return (x % 5 ? Math.trunc(x / 5) + 1 : x / 5) * 5;
+  var _useState2 = Object(external_root_React_commonjs2_react_commonjs_react_amd_react_["useState"])(true),
+      isFirstItem = _useState2[0],
+      setIsFirstItem = _useState2[1];
+
+  var _useState3 = Object(external_root_React_commonjs2_react_commonjs_react_amd_react_["useState"])(true),
+      isLastItem = _useState3[0],
+      setIsLastItem = _useState3[1];
+
+  var _useState4 = Object(external_root_React_commonjs2_react_commonjs_react_amd_react_["useState"])([]),
+      pageMarkers = _useState4[0],
+      setPageMarkers = _useState4[1];
+
+  var defineMarkers = function defineMarkers(input) {
+    var marker = 0;
+    var markersArray = [];
+
+    while (marker < input) {
+      markersArray[marker] = marker + 1;
+      marker += 1;
+    }
+
+    setPageMarkers(markersArray);
+
+    if (markersArray.length <= 5) {
+      setIsFirstItem(true);
+      setIsLastItem(true);
+    }
   };
 
-  var range = getRange(page);
-  var pageItems = [range - 4, range - 3, range - 2, range - 1, range].filter(function (item) {
-    return item <= total;
-  });
   Object(external_root_React_commonjs2_react_commonjs_react_amd_react_["useEffect"])(function () {
+    defineMarkers(total);
+  }, []);
+  Object(external_root_React_commonjs2_react_commonjs_react_amd_react_["useEffect"])(function () {
+    handleEllipsis();
     if (!onLazyChangePage) return;
     window.clearTimeout(lazyKey);
     setLazyKey(setTimeout(function () {
       onLazyChangePage(page);
     }, lazyTimeout));
   }, [page]);
-  return /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(StyledPagination, rest, /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(PageItem, {
-    color: color,
-    m: 1,
-    onClick: function onClick() {
-      return onPrevPage();
-    }
-  }, /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement("span", null, '<')), [].concat(pageItems).map(function (item) {
-    return /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(PageItem, {
-      key: item,
-      color: color,
-      m: 1,
-      active: page === item,
-      onClick: function onClick() {
-        return onChangePage(item);
+
+  var handleEllipsis = function handleEllipsis() {
+    if (total > 5) {
+      if (page < 5) {
+        setIsFirstItem(true);
+        setIsLastItem(false);
+      } else if (page > total - 4) {
+        setIsFirstItem(false);
+        setIsLastItem(true);
+      } else {
+        setIsFirstItem(false);
+        setIsLastItem(false);
       }
-    }, /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement("span", null, item));
-  }), /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(PageItem, {
-    color: color,
-    m: 1,
-    onClick: function onClick() {
-      return onNextPage();
     }
-  }, /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement("span", null, '>')));
+  };
+
+  var handleMarkers = function handleMarkers() {
+    if (!!isFirstItem || !!isLastItem) {
+      if (!!isFirstItem && !!isLastItem) {
+        return pageMarkers.map(function (item, index) {
+          return /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(PageItem, {
+            color: color,
+            active: page === item,
+            m: 1,
+            key: index,
+            onClick: function onClick() {
+              return onChangePage(item);
+            }
+          }, /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement("span", null, item));
+        });
+      } else if (!!isFirstItem) {
+        return pageMarkers.map(function (item, index) {
+          while (index <= 4) {
+            return /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(PageItem, {
+              color: color,
+              active: page === item,
+              m: 1,
+              key: index,
+              onClick: function onClick() {
+                return onChangePage(item);
+              }
+            }, /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement("span", null, item));
+          }
+
+          if (index === 7) return /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.Fragment, null, /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(PageItem, {
+            color: 'default',
+            disabled: true,
+            m: 1,
+            className: "ellipsis"
+          }, /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement("span", null, '...')), /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(PageItem, {
+            color: color,
+            m: 1,
+            key: total,
+            onClick: function onClick() {
+              return onChangePage(total);
+            }
+          }, /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement("span", null, total)));
+        });
+      } else if (!!isLastItem) {
+        return pageMarkers.map(function (item, index) {
+          if (index === 0) return /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.Fragment, null, /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(PageItem, {
+            color: color,
+            m: 1,
+            key: 1,
+            onClick: function onClick() {
+              return onChangePage(1);
+            }
+          }, /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement("span", null, "1")), /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(PageItem, {
+            color: 'default',
+            m: 1,
+            className: "ellipsis"
+          }, /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement("span", null, '...')));
+
+          while (total <= index + 5) {
+            return /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(PageItem, {
+              color: color,
+              active: page === item,
+              m: 1,
+              key: index,
+              onClick: function onClick() {
+                return onChangePage(item);
+              }
+            }, /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement("span", null, item));
+          }
+        });
+      }
+    } else {
+      return /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.Fragment, null, /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(PageItem, {
+        color: color,
+        m: 1,
+        key: 1,
+        onClick: function onClick() {
+          return onChangePage(1);
+        }
+      }, /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement("span", null, "1")), /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(PageItem, {
+        color: 'default',
+        m: 1,
+        className: "ellipsis"
+      }, /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement("span", null, '...')), pageMarkers.map(function (item, index) {
+        if (item === page - 1 || item === page || item === page + 1) return /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(PageItem, {
+          color: color,
+          active: page === item,
+          m: 1,
+          key: index,
+          onClick: function onClick() {
+            return onChangePage(item);
+          }
+        }, /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement("span", null, item));
+      }), /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(PageItem, {
+        color: 'default',
+        disabled: true,
+        m: 1,
+        className: "ellipsis"
+      }, /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement("span", null, '...')), /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(PageItem, {
+        color: color,
+        m: 1,
+        key: total,
+        onClick: function onClick() {
+          return onChangePage(total);
+        }
+      }, /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement("span", null, total)));
+    }
+  };
+
+  return /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(StyledPagination, rest, handleMarkers());
 });
 /* harmony default export */ var Pagination_Pagination = (Pagination);
 // CONCATENATED MODULE: ./src/components/Pagination/index.js
