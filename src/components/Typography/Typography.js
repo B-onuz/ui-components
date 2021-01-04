@@ -4,6 +4,7 @@ import { typography, color, space, compose } from 'styled-system'
 
 const StyledTypography = styled.p`
   ${compose(typography, color, space)}
+  white-space: pre-line;
 `
 
 const Typography = ({ children, ...rest }) => {
