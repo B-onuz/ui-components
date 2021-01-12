@@ -1,4 +1,4 @@
-/*! ui-components v2.29.0 */
+/*! ui-components v2.30.0 */
 (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
 		module.exports = factory(require("react"));
@@ -12636,8 +12636,9 @@ var Table_Table = function Table(_ref11) {
       pagination = _ref11.pagination,
       onChangeOrder = _ref11.onChangeOrder,
       data = _ref11.data,
+      flex = _ref11.flex,
       loading = _ref11.loading,
-      rest = Table_objectWithoutPropertiesLoose(_ref11, ["children", "headers", "pagination", "onChangeOrder", "data", "loading"]);
+      rest = Table_objectWithoutPropertiesLoose(_ref11, ["children", "headers", "pagination", "onChangeOrder", "data", "flex", "loading"]);
 
   var handleChangeOrder = function handleChangeOrder(item) {
     if (onChangeOrder) {
