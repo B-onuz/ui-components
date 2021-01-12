@@ -195,7 +195,7 @@ const TableBody = styled.tbody`
   }
 `
 
-const Table = ({ children, headers, pagination, onChangeOrder, data, loading, ...rest }) => {
+const Table = ({ children, headers, pagination, onChangeOrder, data, flex, loading, ...rest }) => {
   const handleChangeOrder = (item) => {
     if (onChangeOrder) {
       onChangeOrder(item)
