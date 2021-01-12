@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.30.0](https://github.com/B-onuz/ui-components/compare/v2.29.0...v2.30.0) (2021-01-12)
+
+### Features
+
+- **box component:** add new prop to component ([#75](https://github.com/B-onuz/ui-components/issues/75)) ([9381da1](https://github.com/B-onuz/ui-components/commit/9381da11f5f1f2309812206e26d0af22320d0dbb))
+
 ## [2.29.0](https://github.com/B-onuz/ui-components/compare/v2.28.0...v2.29.0) (2021-01-04)
 
 ### Features
