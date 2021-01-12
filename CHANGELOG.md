@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.30.1](https://github.com/B-onuz/ui-components/compare/v2.30.0...v2.30.1) (2021-01-12)
+
+### Bug Fixes
+
+- **table:** fix table props ([c051a8e](https://github.com/B-onuz/ui-components/commit/c051a8eeaf0ca53d630a72c3691249b9b3343d59))
+
 ## [2.30.0](https://github.com/B-onuz/ui-components/compare/v2.29.0...v2.30.0) (2021-01-12)
 
 ### Features
