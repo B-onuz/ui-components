@@ -1,4 +1,4 @@
-/*! ui-components v2.28.0 */
+/*! ui-components v2.29.0 */
 (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
 		module.exports = factory(require("react"));
@@ -12471,6 +12471,8 @@ var shortid = __webpack_require__(6);
 var shortid_default = /*#__PURE__*/__webpack_require__.n(shortid);
 
 // CONCATENATED MODULE: ./src/components/Table/Table.js
+function Table_extends() { Table_extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return Table_extends.apply(this, arguments); }
+
 function Table_objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 
 function _templateObject10() {
@@ -12484,7 +12486,7 @@ function _templateObject10() {
 }
 
 function _templateObject9() {
-  var data = Table_taggedTemplateLiteralLoose(["\n  position: relative;\n  border: 1px solid #efefef;\n  display: flex;\n  flex-direction: column;\n  ", "\n"]);
+  var data = Table_taggedTemplateLiteralLoose(["\n  position: relative;\n  border: 1px solid #efefef;\n  display: flex;\n  flex-direction: column;\n  flex: ", ";\n  ", "\n"]);
 
   _templateObject9 = function _templateObject9() {
     return data;
@@ -12622,17 +12624,20 @@ var TableData = styled_components_browser_esm["default"].td(_templateObject7(), 
   return align && "\n    text-align: " + align + ";\n  ";
 });
 var WrapperTable = styled_components_browser_esm["default"].div(_templateObject8());
-var Table_Wrapper = styled_components_browser_esm["default"].div(_templateObject9(), Object(index_esm["compose"])(index_esm["space"], index_esm["layout"]));
+var Table_Wrapper = styled_components_browser_esm["default"].div(_templateObject9(), function (_ref10) {
+  var flex = _ref10.flex;
+  return flex;
+}, Object(index_esm["compose"])(index_esm["space"], index_esm["layout"]));
 var TableBody = styled_components_browser_esm["default"].tbody(_templateObject10(), TableRow);
 
-var Table_Table = function Table(_ref10) {
-  var children = _ref10.children,
-      headers = _ref10.headers,
-      pagination = _ref10.pagination,
-      onChangeOrder = _ref10.onChangeOrder,
-      data = _ref10.data,
-      loading = _ref10.loading,
-      rest = Table_objectWithoutPropertiesLoose(_ref10, ["children", "headers", "pagination", "onChangeOrder", "data", "loading"]);
+var Table_Table = function Table(_ref11) {
+  var children = _ref11.children,
+      headers = _ref11.headers,
+      pagination = _ref11.pagination,
+      onChangeOrder = _ref11.onChangeOrder,
+      data = _ref11.data,
+      loading = _ref11.loading,
+      rest = Table_objectWithoutPropertiesLoose(_ref11, ["children", "headers", "pagination", "onChangeOrder", "data", "loading"]);
 
   var handleChangeOrder = function handleChangeOrder(item) {
     if (onChangeOrder) {
@@ -12640,16 +12645,18 @@ var Table_Table = function Table(_ref10) {
     }
   };
 
-  var getDataByKey = function getDataByKey(_ref11) {
-    var item = _ref11.item,
-        key = _ref11.key;
+  var getDataByKey = function getDataByKey(_ref12) {
+    var item = _ref12.item,
+        key = _ref12.key;
     var keys = key.split('.');
     return keys.reduce(function (acc, item) {
       return acc[item] || '';
     }, item);
   };
 
-  return /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(Table_Wrapper, rest, !!loading && /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(PaceLoading, null), /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(WrapperTable, {
+  return /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(Table_Wrapper, Table_extends({
+    flex: flex
+  }, rest), !!loading && /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(PaceLoading, null), /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(WrapperTable, {
     loading: loading
   }, /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(StyledTable, null, /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(TableHead, null, /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(TableRow, null, (headers || []).map(function (item) {
     return /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(TableHeader, {
@@ -12710,7 +12717,7 @@ function Box_extends() { Box_extends = Object.assign || function (target) { for 
 function Box_objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 
 function Box_templateObject() {
-  var data = Box_taggedTemplateLiteralLoose(["\n  ", "\n  box-shadow: 0px 3px 6px #2c282846;\n  background: #ffffff 0% 0% no-repeat padding-box;\n  padding: 10px;\n  border-radius: 10px;\n  display: ", ";\n  justify-content: ", ";\n  flex-direction: ", ";\n  align-items: ", ";\n"]);
+  var data = Box_taggedTemplateLiteralLoose(["\n  ", "\n  box-shadow: 0px 3px 6px #2c282846;\n  background: #ffffff 0% 0% no-repeat padding-box;\n  padding: 10px;\n  border-radius: 10px;\n  display: ", ";\n  flex: ", ";\n  justify-content: ", ";\n  flex-direction: ", ";\n  align-items: ", ";\n"]);
 
   Box_templateObject = function _templateObject() {
     return data;
@@ -12728,28 +12735,33 @@ var StyledBox = styled_components_browser_esm["default"].div(Box_templateObject(
   var display = _ref.display;
   return display;
 }, function (_ref2) {
-  var justifyContent = _ref2.justifyContent;
-  return justifyContent;
+  var flex = _ref2.flex;
+  return flex;
 }, function (_ref3) {
-  var flexDirection = _ref3.flexDirection;
-  return flexDirection;
+  var justifyContent = _ref3.justifyContent;
+  return justifyContent;
 }, function (_ref4) {
-  var alignItems = _ref4.alignItems;
+  var flexDirection = _ref4.flexDirection;
+  return flexDirection;
+}, function (_ref5) {
+  var alignItems = _ref5.alignItems;
   return alignItems;
 });
 
-var Box_Box = function Box(_ref5) {
-  var display = _ref5.display,
-      justifyContent = _ref5.justifyContent,
-      flexDirection = _ref5.flexDirection,
-      alignItems = _ref5.alignItems,
-      rest = Box_objectWithoutPropertiesLoose(_ref5, ["display", "justifyContent", "flexDirection", "alignItems"]);
+var Box_Box = function Box(_ref6) {
+  var display = _ref6.display,
+      justifyContent = _ref6.justifyContent,
+      flexDirection = _ref6.flexDirection,
+      alignItems = _ref6.alignItems,
+      flex = _ref6.flex,
+      rest = Box_objectWithoutPropertiesLoose(_ref6, ["display", "justifyContent", "flexDirection", "alignItems", "flex"]);
 
   return /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(StyledBox, Box_extends({
     display: display,
     justifyContent: justifyContent,
     flexDirection: flexDirection,
-    alignItems: alignItems
+    alignItems: alignItems,
+    flex: flex
   }, rest));
 };
 

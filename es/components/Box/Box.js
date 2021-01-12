@@ -21,7 +21,7 @@ function _extends() { _extends = Object.assign || function (target) { for (var i
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteralLoose(["\n  ", "\n  box-shadow: 0px 3px 6px #2c282846;\n  background: #ffffff 0% 0% no-repeat padding-box;\n  padding: 10px;\n  border-radius: 10px;\n  display: ", ";\n  justify-content: ", ";\n  flex-direction: ", ";\n  align-items: ", ";\n"]);
+  var data = _taggedTemplateLiteralLoose(["\n  ", "\n  box-shadow: 0px 3px 6px #2c282846;\n  background: #ffffff 0% 0% no-repeat padding-box;\n  padding: 10px;\n  border-radius: 10px;\n  display: ", ";\n  flex: ", ";\n  justify-content: ", ";\n  flex-direction: ", ";\n  align-items: ", ";\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -36,33 +36,38 @@ var StyledBox = _styledComponents["default"].div(_templateObject(), (0, _styledS
   var display = _ref.display;
   return display;
 }, function (_ref2) {
-  var justifyContent = _ref2.justifyContent;
-  return justifyContent;
+  var flex = _ref2.flex;
+  return flex;
 }, function (_ref3) {
-  var flexDirection = _ref3.flexDirection;
-  return flexDirection;
+  var justifyContent = _ref3.justifyContent;
+  return justifyContent;
 }, function (_ref4) {
-  var alignItems = _ref4.alignItems;
+  var flexDirection = _ref4.flexDirection;
+  return flexDirection;
+}, function (_ref5) {
+  var alignItems = _ref5.alignItems;
   return alignItems;
 });
 
-var Box = function Box(_ref5) {
-  var display = _ref5.display,
-      justifyContent = _ref5.justifyContent,
-      flexDirection = _ref5.flexDirection,
-      alignItems = _ref5.alignItems,
-      rest = _objectWithoutPropertiesLoose(_ref5, ["display", "justifyContent", "flexDirection", "alignItems"]);
+var Box = function Box(_ref6) {
+  var display = _ref6.display,
+      justifyContent = _ref6.justifyContent,
+      flexDirection = _ref6.flexDirection,
+      alignItems = _ref6.alignItems,
+      flex = _ref6.flex,
+      rest = _objectWithoutPropertiesLoose(_ref6, ["display", "justifyContent", "flexDirection", "alignItems", "flex"]);
 
   return /*#__PURE__*/_react["default"].createElement(StyledBox, _extends({
     display: display,
     justifyContent: justifyContent,
     flexDirection: flexDirection,
-    alignItems: alignItems
+    alignItems: alignItems,
+    flex: flex
   }, rest, {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 18,
+      lineNumber: 19,
       columnNumber: 10
     }
   }));
