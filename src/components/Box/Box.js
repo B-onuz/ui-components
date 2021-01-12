@@ -9,13 +9,14 @@ const StyledBox = styled.div`
   padding: 10px;
   border-radius: 10px;
   display: ${({ display }) => display};
+  flex: ${({ flex }) => flex};
   justify-content: ${({ justifyContent }) => justifyContent};
   flex-direction: ${({ flexDirection }) => flexDirection};
   align-items: ${({ alignItems }) => alignItems};
 `
 
-const Box = ({ display, justifyContent, flexDirection, alignItems, ...rest }) => {
-  return <StyledBox display={display} justifyContent={justifyContent} flexDirection={flexDirection} alignItems={alignItems} {...rest} />
+const Box = ({ display, justifyContent, flexDirection, alignItems, flex, ...rest }) => {
+  return <StyledBox display={display} justifyContent={justifyContent} flexDirection={flexDirection} alignItems={alignItems} flex={flex} {...rest} />
 }
 
 export default Box

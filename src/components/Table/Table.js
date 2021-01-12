@@ -180,6 +180,7 @@ const Wrapper = styled.div`
   border: 1px solid #efefef;
   display: flex;
   flex-direction: column;
+  flex: ${({ flex }) => flex};
   ${compose(space, layout)}
 `
 
@@ -209,7 +210,7 @@ const Table = ({ children, headers, pagination, onChangeOrder, data, loading, ..
   }
 
   return (
-    <Wrapper {...rest}>
+    <Wrapper flex={flex} {...rest}>
       {!!loading && <PaceLoading />}
       <WrapperTable loading={loading}>
         <StyledTable>
