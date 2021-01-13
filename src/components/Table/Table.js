@@ -38,7 +38,8 @@ const TableHeader = styled.th`
     `
     min-width: ${minWidth}px;
   `}
-  padding: 13px 40px;
+  /* padding: 13px 40px; */
+  padding: 10px 20px;
   ${({ order }) =>
     order &&
     `
@@ -160,7 +161,7 @@ const TableData = styled.td`
     `
     text-align: ${align};
   `}
-  padding: 13px 40px;
+  padding: 10px 20px;
   @media only screen and (max-width: 500px) {
     padding: 12px 8px;
     text-align: center;
