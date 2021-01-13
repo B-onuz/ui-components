@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.31.0](https://github.com/B-onuz/ui-components/compare/v2.30.1...v2.31.0) (2021-01-13)
+
+### Features
+
+- **pagination:** fix pagination ([#76](https://github.com/B-onuz/ui-components/issues/76)) ([6fa5a7e](https://github.com/B-onuz/ui-components/commit/6fa5a7e1f64b80ae81160ff613a483143188ffb9))
+
 ### [2.30.1](https://github.com/B-onuz/ui-components/compare/v2.30.0...v2.30.1) (2021-01-12)
 
 ### Bug Fixes
