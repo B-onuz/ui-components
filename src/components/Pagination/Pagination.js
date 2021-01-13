@@ -80,7 +80,7 @@ const Pagination = memo(({ children, color, onChangePage, onNextPage, onPrevPage
       marker += 1
     }
     setPageMarkers(markersArray)
-    if (markersArray.length <= 5) {
+    if (markersArray.length <= 7) {
       setIsFirstItem(true)
       setIsLastItem(true)
     }
@@ -102,10 +102,11 @@ const Pagination = memo(({ children, color, onChangePage, onNextPage, onPrevPage
   }, [page])
 
   const handleEllipsis = () => {
-    if (total > 5) {
+    if (total >= 8) {
       if (page < 5) {
         setIsFirstItem(true)
         setIsLastItem(false)
+        console.log('aqui')
       } else if (page > total - 4) {
         setIsFirstItem(false)
         setIsLastItem(true)
