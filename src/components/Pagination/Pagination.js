@@ -106,7 +106,6 @@ const Pagination = memo(({ children, color, onChangePage, onNextPage, onPrevPage
       if (page < 5) {
         setIsFirstItem(true)
         setIsLastItem(false)
-        console.log('aqui')
       } else if (page > total - 4) {
         setIsFirstItem(false)
         setIsLastItem(true)
