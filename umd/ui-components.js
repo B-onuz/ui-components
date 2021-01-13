@@ -1,4 +1,4 @@
-/*! ui-components v2.30.0 */
+/*! ui-components v2.30.1 */
 (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
 		module.exports = factory(require("react"));
@@ -12506,7 +12506,7 @@ function _templateObject8() {
 }
 
 function _templateObject7() {
-  var data = Table_taggedTemplateLiteralLoose(["\n  ", "\n  padding: 13px 40px;\n  @media only screen and (max-width: 500px) {\n    padding: 12px 8px;\n    text-align: center;\n  }\n"]);
+  var data = Table_taggedTemplateLiteralLoose(["\n  ", "\n  padding: 10px 20px;\n  @media only screen and (max-width: 500px) {\n    padding: 12px 8px;\n    text-align: center;\n  }\n"]);
 
   _templateObject7 = function _templateObject7() {
     return data;
@@ -12546,7 +12546,7 @@ function Table_templateObject4() {
 }
 
 function Table_templateObject3() {
-  var data = Table_taggedTemplateLiteralLoose(["\n  text-transform: uppercase;\n  font-size: 0.8em;\n  color: #838383;\n  font-weight: 400;\n  padding: 1em;\n  position: relative;\n  position: sticky;\n  z-index: 2;\n  top: 0;\n  background: #f1f3f8;\n  ", "\n  ", "\n  padding: 13px 40px;\n  ", "\n  ", "\n"]);
+  var data = Table_taggedTemplateLiteralLoose(["\n  text-transform: uppercase;\n  font-size: 0.8em;\n  color: #838383;\n  font-weight: 400;\n  padding: 1em;\n  position: relative;\n  position: sticky;\n  z-index: 2;\n  top: 0;\n  background: #f1f3f8;\n  ", "\n  ", "\n  /* padding: 13px 40px; */\n  padding: 10px 20px;\n  ", "\n  ", "\n"]);
 
   Table_templateObject3 = function _templateObject3() {
     return data;
@@ -12854,7 +12854,7 @@ var Pagination = Object(external_root_React_commonjs2_react_commonjs_react_amd_r
 
     setPageMarkers(markersArray);
 
-    if (markersArray.length <= 5) {
+    if (markersArray.length <= 7) {
       setIsFirstItem(true);
       setIsLastItem(true);
     }
@@ -12873,7 +12873,7 @@ var Pagination = Object(external_root_React_commonjs2_react_commonjs_react_amd_r
   }, [page]);
 
   var handleEllipsis = function handleEllipsis() {
-    if (total > 5) {
+    if (total >= 8) {
       if (page < 5) {
         setIsFirstItem(true);
         setIsLastItem(false);
