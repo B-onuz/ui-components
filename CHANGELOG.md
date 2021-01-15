@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.32.0](https://github.com/B-onuz/ui-components/compare/v2.31.0...v2.32.0) (2021-01-15)
+
+### Features
+
+- **modal:** add new prop ([#77](https://github.com/B-onuz/ui-components/issues/77)) ([fe23cb2](https://github.com/B-onuz/ui-components/commit/fe23cb2e8d2ed80f6d05e0ccc2f370f19f0c1c77))
+
 ## [2.31.0](https://github.com/B-onuz/ui-components/compare/v2.30.1...v2.31.0) (2021-01-13)
 
 ### Features
