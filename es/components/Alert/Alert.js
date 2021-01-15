@@ -67,7 +67,7 @@ function _templateObject3() {
 }
 
 function _templateObject2() {
-  var data = _taggedTemplateLiteralLoose(["\n  background: #fff;\n  border-radius: 4px;\n  @keyframes slide_bottom {\n    from {\n      transform: translateY(100%);\n      opacity: 0.5;\n    }\n    to {\n      transform: translateY(0);\n      opacity: 1;\n    }\n  }\n  @keyframes slide_top {\n    from {\n      transform: translateY(-100%);\n      opacity: 0.5;\n    }\n    to {\n      transform: translateY(0);\n      opacity: 1;\n    }\n  }\n  ", "\n"]);
+  var data = _taggedTemplateLiteralLoose(["\n  background: #fff;\n  border-radius: 4px;\n  ", ";\n  @keyframes slide_bottom {\n    from {\n      transform: translateY(100%);\n      opacity: 0.5;\n    }\n    to {\n      transform: translateY(0);\n      opacity: 1;\n    }\n  }\n  @keyframes slide_top {\n    from {\n      transform: translateY(-100%);\n      opacity: 0.5;\n    }\n    to {\n      transform: translateY(0);\n      opacity: 1;\n    }\n  }\n  ", "\n"]);
 
   _templateObject2 = function _templateObject2() {
     return data;
@@ -77,7 +77,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteralLoose(["\n  ", "\n  ", ";\n  border: ", ";\n  border-radius: 4px;\n  padding: ", ";\n  display: flex;\n  justify-content: flex-start;\n  align-items: center;\n  box-shadow: ", ";\n  ", ";\n"]);
+  var data = _taggedTemplateLiteralLoose(["\n  ", "\n  border: ", ";\n  border-radius: 4px;\n  padding: ", ";\n  display: flex;\n  justify-content: flex-start;\n  align-items: center;\n  box-shadow: ", ";\n  ", ";\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -88,9 +88,7 @@ function _templateObject() {
 
 function _taggedTemplateLiteralLoose(strings, raw) { if (!raw) { raw = strings.slice(0); } strings.raw = raw; return strings; }
 
-var StyledAlert = _styledComponents["default"].div(_templateObject(), (0, _styledSystem.compose)(_styledSystem.space, _styledSystem.layout), function (props) {
-  return props.fullWidth && 'width: 100%' || '';
-}, function (_ref) {
+var StyledAlert = _styledComponents["default"].div(_templateObject(), (0, _styledSystem.compose)(_styledSystem.space, _styledSystem.layout), function (_ref) {
   var noBorder = _ref.noBorder;
   return !!noBorder ? 'none' : '1px solid';
 }, function (_ref2) {
@@ -101,7 +99,9 @@ var StyledAlert = _styledComponents["default"].div(_templateObject(), (0, _style
   return noShadow ? 'none !important' : '';
 }, _variants.color);
 
-var Wrapper = _styledComponents["default"].div(_templateObject2(), function (_ref4) {
+var Wrapper = _styledComponents["default"].div(_templateObject2(), function (props) {
+  return props.fullWidth && 'width: 100%' || '';
+}, function (_ref4) {
   var animate = _ref4.animate;
   return "\n    animation-name: slide_" + animate + ";\n    animation-duration: .3s;\n  ";
 });
@@ -145,14 +145,16 @@ var Alert = function Alert(_ref10) {
       type = _ref10$type === void 0 ? {} : _ref10$type,
       shortAlert = _ref10.shortAlert,
       noBorder = _ref10.noBorder,
-      rest = _objectWithoutPropertiesLoose(_ref10, ["children", "animate", "title", "message", "icon", "iconSize", "customIcon", "imgSize", "imgBackground", "bgColor", "noShadow", "type", "shortAlert", "noBorder"]);
+      fullWidth = _ref10.fullWidth,
+      rest = _objectWithoutPropertiesLoose(_ref10, ["children", "animate", "title", "message", "icon", "iconSize", "customIcon", "imgSize", "imgBackground", "bgColor", "noShadow", "type", "shortAlert", "noBorder", "fullWidth"]);
 
   return /*#__PURE__*/_react["default"].createElement(Wrapper, {
+    fullWidth: fullWidth,
     animate: animate,
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 91,
+      lineNumber: 92,
       columnNumber: 5
     }
   }, /*#__PURE__*/_react["default"].createElement(StyledAlert, _extends({}, rest, {
@@ -162,7 +164,7 @@ var Alert = function Alert(_ref10) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 92,
+      lineNumber: 93,
       columnNumber: 7
     }
   }), icon && /*#__PURE__*/_react["default"].createElement(StyledFaIcon, {
@@ -170,7 +172,7 @@ var Alert = function Alert(_ref10) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 94,
+      lineNumber: 95,
       columnNumber: 11
     }
   }, /*#__PURE__*/_react["default"].createElement(_reactFontawesome.FontAwesomeIcon, {
@@ -178,7 +180,7 @@ var Alert = function Alert(_ref10) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 95,
+      lineNumber: 96,
       columnNumber: 13
     }
   })), imgBackground && /*#__PURE__*/_react["default"].createElement(StyledIcon, {
@@ -188,28 +190,28 @@ var Alert = function Alert(_ref10) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 98,
+      lineNumber: 99,
       columnNumber: 27
     }
   }), /*#__PURE__*/_react["default"].createElement("div", {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 99,
+      lineNumber: 100,
       columnNumber: 9
     }
   }, !!title && /*#__PURE__*/_react["default"].createElement(StyledTitle, {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 100,
+      lineNumber: 101,
       columnNumber: 23
     }
   }, title), /*#__PURE__*/_react["default"].createElement(StyledMessage, {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 101,
+      lineNumber: 102,
       columnNumber: 11
     }
   }, message)), children));

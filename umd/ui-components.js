@@ -1,4 +1,4 @@
-/*! ui-components v2.31.0 */
+/*! ui-components v2.32.0 */
 (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
 		module.exports = factory(require("react"));
@@ -13060,7 +13060,7 @@ function Alert_templateObject3() {
 }
 
 function Alert_templateObject2() {
-  var data = Alert_taggedTemplateLiteralLoose(["\n  background: #fff;\n  border-radius: 4px;\n  @keyframes slide_bottom {\n    from {\n      transform: translateY(100%);\n      opacity: 0.5;\n    }\n    to {\n      transform: translateY(0);\n      opacity: 1;\n    }\n  }\n  @keyframes slide_top {\n    from {\n      transform: translateY(-100%);\n      opacity: 0.5;\n    }\n    to {\n      transform: translateY(0);\n      opacity: 1;\n    }\n  }\n  ", "\n"]);
+  var data = Alert_taggedTemplateLiteralLoose(["\n  background: #fff;\n  border-radius: 4px;\n  ", ";\n  @keyframes slide_bottom {\n    from {\n      transform: translateY(100%);\n      opacity: 0.5;\n    }\n    to {\n      transform: translateY(0);\n      opacity: 1;\n    }\n  }\n  @keyframes slide_top {\n    from {\n      transform: translateY(-100%);\n      opacity: 0.5;\n    }\n    to {\n      transform: translateY(0);\n      opacity: 1;\n    }\n  }\n  ", "\n"]);
 
   Alert_templateObject2 = function _templateObject2() {
     return data;
@@ -13070,7 +13070,7 @@ function Alert_templateObject2() {
 }
 
 function Alert_templateObject() {
-  var data = Alert_taggedTemplateLiteralLoose(["\n  ", "\n  ", ";\n  border: ", ";\n  border-radius: 4px;\n  padding: ", ";\n  display: flex;\n  justify-content: flex-start;\n  align-items: center;\n  box-shadow: ", ";\n  ", ";\n"]);
+  var data = Alert_taggedTemplateLiteralLoose(["\n  ", "\n  border: ", ";\n  border-radius: 4px;\n  padding: ", ";\n  display: flex;\n  justify-content: flex-start;\n  align-items: center;\n  box-shadow: ", ";\n  ", ";\n"]);
 
   Alert_templateObject = function _templateObject() {
     return data;
@@ -13087,9 +13087,7 @@ function Alert_taggedTemplateLiteralLoose(strings, raw) { if (!raw) { raw = stri
 
 
 
-var StyledAlert = styled_components_browser_esm["default"].div(Alert_templateObject(), Object(index_esm["compose"])(index_esm["space"], index_esm["layout"]), function (props) {
-  return props.fullWidth && 'width: 100%' || '';
-}, function (_ref) {
+var StyledAlert = styled_components_browser_esm["default"].div(Alert_templateObject(), Object(index_esm["compose"])(index_esm["space"], index_esm["layout"]), function (_ref) {
   var noBorder = _ref.noBorder;
   return !!noBorder ? 'none' : '1px solid';
 }, function (_ref2) {
@@ -13099,7 +13097,9 @@ var StyledAlert = styled_components_browser_esm["default"].div(Alert_templateObj
   var noShadow = _ref3.noShadow;
   return noShadow ? 'none !important' : '';
 }, Alert_variants_color);
-var Alert_Wrapper = styled_components_browser_esm["default"].div(Alert_templateObject2(), function (_ref4) {
+var Alert_Wrapper = styled_components_browser_esm["default"].div(Alert_templateObject2(), function (props) {
+  return props.fullWidth && 'width: 100%' || '';
+}, function (_ref4) {
   var animate = _ref4.animate;
   return "\n    animation-name: slide_" + animate + ";\n    animation-duration: .3s;\n  ";
 });
@@ -13139,9 +13139,11 @@ var Alert_Alert = function Alert(_ref10) {
       type = _ref10$type === void 0 ? {} : _ref10$type,
       shortAlert = _ref10.shortAlert,
       noBorder = _ref10.noBorder,
-      rest = Alert_objectWithoutPropertiesLoose(_ref10, ["children", "animate", "title", "message", "icon", "iconSize", "customIcon", "imgSize", "imgBackground", "bgColor", "noShadow", "type", "shortAlert", "noBorder"]);
+      fullWidth = _ref10.fullWidth,
+      rest = Alert_objectWithoutPropertiesLoose(_ref10, ["children", "animate", "title", "message", "icon", "iconSize", "customIcon", "imgSize", "imgBackground", "bgColor", "noShadow", "type", "shortAlert", "noBorder", "fullWidth"]);
 
   return /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(Alert_Wrapper, {
+    fullWidth: fullWidth,
     animate: animate
   }, /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(StyledAlert, Alert_extends({}, rest, {
     noShadow: noShadow,
