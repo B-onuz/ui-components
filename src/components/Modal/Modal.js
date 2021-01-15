@@ -17,6 +17,7 @@ const BoxModal = styled(Box)`
   max-height: 90vh;
   display: flex;
   flex-direction: column;
+  padding: ${({ spacing }) => (spacing ? spacing : '20px')};
 `
 
 const BoxModalContent = styled.div`
@@ -73,7 +74,7 @@ const useRootModal = () => {
   return { $rootModal }
 }
 
-const Modal = ({ children, open, onClose, boxProps, header, footer, contentModalProps, ...rest }) => {
+const Modal = ({ children, open, onClose, boxProps, header, footer, contentModalProps, spacing, ...rest }) => {
   const { $rootModal } = useRootModal()
   const transitions = useTransition(open, null, {
     from: { transform: 'translate3d(0,-80px,0)', opacity: 0 },
@@ -98,7 +99,7 @@ const Modal = ({ children, open, onClose, boxProps, header, footer, contentModal
               ({ item, key, props }) =>
                 item && (
                   <ContentModal key={key} style={props} {...contentModalProps}>
-                    <BoxModal {...boxProps}>
+                    <BoxModal {...boxProps} spacing={spacing}>
                       <BoxModalHeader>{header}</BoxModalHeader>
                       <BoxModalContent>{children}</BoxModalContent>
                       <BoxModalFooter>{footer}</BoxModalFooter>

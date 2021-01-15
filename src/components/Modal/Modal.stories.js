@@ -58,7 +58,7 @@ export const MultipleModals = () => {
           Abrir modal 3
         </Button>
       </Modal>
-      <Modal open={modalOpen[2]} onClose={() => closeModal(2)}>
+      <Modal open={modalOpen[2]} spacing="40px 60px" onClose={() => closeModal(2)}>
         <h1>lorem ipsum modal 3</h1>
         <Button onClick={() => openModal(0)} m={10} color={'primary'}>
           Abrir modal 1
