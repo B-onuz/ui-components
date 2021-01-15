@@ -83,7 +83,7 @@ function _templateObject3() {
 }
 
 function _templateObject2() {
-  var data = _taggedTemplateLiteralLoose(["\n  box-sizing: border-box;\n  max-height: 90vh;\n  display: flex;\n  flex-direction: column;\n"]);
+  var data = _taggedTemplateLiteralLoose(["\n  box-sizing: border-box;\n  max-height: 90vh;\n  display: flex;\n  flex-direction: column;\n  padding: ", ";\n"]);
 
   _templateObject2 = function _templateObject2() {
     return data;
@@ -105,7 +105,10 @@ function _templateObject() {
 function _taggedTemplateLiteralLoose(strings, raw) { if (!raw) { raw = strings.slice(0); } strings.raw = raw; return strings; }
 
 var ContentModal = (0, _styledComponents["default"])(_reactSpring.animated.div)(_templateObject(), (0, _styledSystem.compose)(_styledSystem.space, _styledSystem.layout));
-var BoxModal = (0, _styledComponents["default"])(_Box["default"])(_templateObject2());
+var BoxModal = (0, _styledComponents["default"])(_Box["default"])(_templateObject2(), function (_ref) {
+  var spacing = _ref.spacing;
+  return spacing ? spacing : '20px';
+});
 
 var BoxModalContent = _styledComponents["default"].div(_templateObject3());
 
@@ -139,15 +142,16 @@ var useRootModal = function useRootModal() {
   };
 };
 
-var Modal = function Modal(_ref) {
-  var children = _ref.children,
-      open = _ref.open,
-      onClose = _ref.onClose,
-      boxProps = _ref.boxProps,
-      header = _ref.header,
-      footer = _ref.footer,
-      contentModalProps = _ref.contentModalProps,
-      rest = _objectWithoutPropertiesLoose(_ref, ["children", "open", "onClose", "boxProps", "header", "footer", "contentModalProps"]);
+var Modal = function Modal(_ref2) {
+  var children = _ref2.children,
+      open = _ref2.open,
+      onClose = _ref2.onClose,
+      boxProps = _ref2.boxProps,
+      header = _ref2.header,
+      footer = _ref2.footer,
+      contentModalProps = _ref2.contentModalProps,
+      spacing = _ref2.spacing,
+      rest = _objectWithoutPropertiesLoose(_ref2, ["children", "open", "onClose", "boxProps", "header", "footer", "contentModalProps", "spacing"]);
 
   var _useRootModal = useRootModal(),
       $rootModal = _useRootModal.$rootModal;
@@ -178,9 +182,9 @@ var Modal = function Modal(_ref) {
     }
   });
   if (!$rootModal) return null;
-  return _reactDom["default"].createPortal(opacityTransitions.map(function (_ref2) {
-    var item = _ref2.item,
-        key = _ref2.key;
+  return _reactDom["default"].createPortal(opacityTransitions.map(function (_ref3) {
+    var item = _ref3.item,
+        key = _ref3.key;
     return item && /*#__PURE__*/_react["default"].createElement(Wrapper, _extends({}, rest, {
       key: key,
       role: "dialog",
@@ -188,13 +192,13 @@ var Modal = function Modal(_ref) {
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 96,
+        lineNumber: 97,
         columnNumber: 11
       }
-    }), transitions.map(function (_ref3) {
-      var item = _ref3.item,
-          key = _ref3.key,
-          props = _ref3.props;
+    }), transitions.map(function (_ref4) {
+      var item = _ref4.item,
+          key = _ref4.key,
+          props = _ref4.props;
       return item && /*#__PURE__*/_react["default"].createElement(ContentModal, _extends({
         key: key,
         style: props
@@ -202,42 +206,43 @@ var Modal = function Modal(_ref) {
         __self: _this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 100,
+          lineNumber: 101,
           columnNumber: 19
         }
       }), /*#__PURE__*/_react["default"].createElement(BoxModal, _extends({}, boxProps, {
+        spacing: spacing,
         __self: _this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 101,
+          lineNumber: 102,
           columnNumber: 21
         }
       }), /*#__PURE__*/_react["default"].createElement(BoxModalHeader, {
         __self: _this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 102,
+          lineNumber: 103,
           columnNumber: 23
         }
       }, header), /*#__PURE__*/_react["default"].createElement(BoxModalContent, {
         __self: _this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 103,
+          lineNumber: 104,
           columnNumber: 23
         }
       }, children), /*#__PURE__*/_react["default"].createElement(BoxModalFooter, {
         __self: _this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 104,
+          lineNumber: 105,
           columnNumber: 23
         }
       }, footer)));
-    }), opacityTransitions.map(function (_ref4) {
-      var item = _ref4.item,
-          key = _ref4.key,
-          props = _ref4.props;
+    }), opacityTransitions.map(function (_ref5) {
+      var item = _ref5.item,
+          key = _ref5.key,
+          props = _ref5.props;
       return item && /*#__PURE__*/_react["default"].createElement(Shadow, {
         key: key,
         style: props,
@@ -245,7 +250,7 @@ var Modal = function Modal(_ref) {
         __self: _this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 110,
+          lineNumber: 111,
           columnNumber: 71
         }
       });

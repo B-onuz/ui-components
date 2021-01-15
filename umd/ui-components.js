@@ -1,4 +1,4 @@
-/*! ui-components v2.30.1 */
+/*! ui-components v2.31.0 */
 (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
 		module.exports = factory(require("react"));
@@ -21617,7 +21617,7 @@ function Modal_templateObject3() {
 }
 
 function Modal_templateObject2() {
-  var data = Modal_taggedTemplateLiteralLoose(["\n  box-sizing: border-box;\n  max-height: 90vh;\n  display: flex;\n  flex-direction: column;\n"]);
+  var data = Modal_taggedTemplateLiteralLoose(["\n  box-sizing: border-box;\n  max-height: 90vh;\n  display: flex;\n  flex-direction: column;\n  padding: ", ";\n"]);
 
   Modal_templateObject2 = function _templateObject2() {
     return data;
@@ -21645,7 +21645,10 @@ function Modal_taggedTemplateLiteralLoose(strings, raw) { if (!raw) { raw = stri
 
 
 var ContentModal = Object(styled_components_browser_esm["default"])(extendedAnimated.div)(Modal_templateObject(), Object(index_esm["compose"])(index_esm["space"], index_esm["layout"]));
-var BoxModal = Object(styled_components_browser_esm["default"])(components_Box)(Modal_templateObject2());
+var BoxModal = Object(styled_components_browser_esm["default"])(components_Box)(Modal_templateObject2(), function (_ref) {
+  var spacing = _ref.spacing;
+  return spacing ? spacing : '20px';
+});
 var BoxModalContent = styled_components_browser_esm["default"].div(Modal_templateObject3());
 var BoxModalHeader = styled_components_browser_esm["default"].div(Modal_templateObject4());
 var BoxModalFooter = styled_components_browser_esm["default"].div(Modal_templateObject5());
@@ -21674,15 +21677,16 @@ var Modal_useRootModal = function useRootModal() {
   };
 };
 
-var Modal_Modal = function Modal(_ref) {
-  var children = _ref.children,
-      open = _ref.open,
-      onClose = _ref.onClose,
-      boxProps = _ref.boxProps,
-      header = _ref.header,
-      footer = _ref.footer,
-      contentModalProps = _ref.contentModalProps,
-      rest = Modal_objectWithoutPropertiesLoose(_ref, ["children", "open", "onClose", "boxProps", "header", "footer", "contentModalProps"]);
+var Modal_Modal = function Modal(_ref2) {
+  var children = _ref2.children,
+      open = _ref2.open,
+      onClose = _ref2.onClose,
+      boxProps = _ref2.boxProps,
+      header = _ref2.header,
+      footer = _ref2.footer,
+      contentModalProps = _ref2.contentModalProps,
+      spacing = _ref2.spacing,
+      rest = Modal_objectWithoutPropertiesLoose(_ref2, ["children", "open", "onClose", "boxProps", "header", "footer", "contentModalProps", "spacing"]);
 
   var _useRootModal = Modal_useRootModal(),
       $rootModal = _useRootModal.$rootModal;
@@ -21713,25 +21717,27 @@ var Modal_Modal = function Modal(_ref) {
     }
   });
   if (!$rootModal) return null;
-  return react_dom_default.a.createPortal(opacityTransitions.map(function (_ref2) {
-    var item = _ref2.item,
-        key = _ref2.key;
+  return react_dom_default.a.createPortal(opacityTransitions.map(function (_ref3) {
+    var item = _ref3.item,
+        key = _ref3.key;
     return item && /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(Modal_Wrapper, Modal_extends({}, rest, {
       key: key,
       role: "dialog",
       "aria-modal": "true"
-    }), transitions.map(function (_ref3) {
-      var item = _ref3.item,
-          key = _ref3.key,
-          props = _ref3.props;
-      return item && /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(ContentModal, Modal_extends({
-        key: key,
-        style: props
-      }, contentModalProps), /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(BoxModal, boxProps, /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(BoxModalHeader, null, header), /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(BoxModalContent, null, children), /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(BoxModalFooter, null, footer)));
-    }), opacityTransitions.map(function (_ref4) {
+    }), transitions.map(function (_ref4) {
       var item = _ref4.item,
           key = _ref4.key,
           props = _ref4.props;
+      return item && /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(ContentModal, Modal_extends({
+        key: key,
+        style: props
+      }, contentModalProps), /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(BoxModal, Modal_extends({}, boxProps, {
+        spacing: spacing
+      }), /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(BoxModalHeader, null, header), /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(BoxModalContent, null, children), /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(BoxModalFooter, null, footer)));
+    }), opacityTransitions.map(function (_ref5) {
+      var item = _ref5.item,
+          key = _ref5.key,
+          props = _ref5.props;
       return item && /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(Shadow, {
         key: key,
         style: props,
