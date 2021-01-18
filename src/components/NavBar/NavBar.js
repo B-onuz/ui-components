@@ -12,6 +12,9 @@ const StyledNavBar = styled.div`
   @media only screen and (max-width: 500px) {
     flex-direction: row-reverse;
     padding: 2vh;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
   }
 `
 

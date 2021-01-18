@@ -1,4 +1,4 @@
-/*! ui-components v2.32.1 */
+/*! ui-components v2.33.0 */
 (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
 		module.exports = factory(require("react"));
@@ -11932,7 +11932,7 @@ var HamburguerButton_HamburguerButton = function HamburguerButton(_ref) {
 function NavBar_extends() { NavBar_extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return NavBar_extends.apply(this, arguments); }
 
 function NavBar_templateObject() {
-  var data = NavBar_taggedTemplateLiteralLoose(["\n  background-color: #f4f4f4;\n  height: 64px;\n  display: flex;\n  align-items: center;\n  padding: 20px;\n  box-sizing: border-box;\n  flex-shrink: 0;\n  @media only screen and (max-width: 500px) {\n    flex-direction: row-reverse;\n    padding: 2vh;\n  }\n"]);
+  var data = NavBar_taggedTemplateLiteralLoose(["\n  background-color: #f4f4f4;\n  height: 64px;\n  display: flex;\n  align-items: center;\n  padding: 20px;\n  box-sizing: border-box;\n  flex-shrink: 0;\n  @media only screen and (max-width: 500px) {\n    flex-direction: row-reverse;\n    padding: 2vh;\n    position: fixed;\n    width: 100%;\n    z-index: 1000;\n  }\n"]);
 
   NavBar_templateObject = function _templateObject() {
     return data;
@@ -12177,7 +12177,7 @@ function BaseLayout_templateObject3() {
 }
 
 function BaseLayout_templateObject2() {
-  var data = BaseLayout_taggedTemplateLiteralLoose(["\n  flex: 1;\n  padding: 42px;\n  overflow: auto;\n  max-width: 100%;\n  display: flex;\n  flex-direction: column;\n  @media only screen and (min-width: 1640px) {\n    max-width: 1400px;\n  }\n  @media only screen and (max-width: 768px) {\n    padding: 24px;\n    overflow: unset;\n  }\n"]);
+  var data = BaseLayout_taggedTemplateLiteralLoose(["\n  flex: 1;\n  padding: 42px;\n  overflow: auto;\n  max-width: 100%;\n  display: flex;\n  flex-direction: column;\n  @media only screen and (min-width: 1640px) {\n    max-width: 1400px;\n  }\n  @media only screen and (max-width: 768px) {\n    padding: 42px 24px;\n    overflow: unset;\n  }\n"]);
 
   BaseLayout_templateObject2 = function _templateObject2() {
     return data;

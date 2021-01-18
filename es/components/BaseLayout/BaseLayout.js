@@ -53,7 +53,7 @@ function _templateObject3() {
 }
 
 function _templateObject2() {
-  var data = _taggedTemplateLiteralLoose(["\n  flex: 1;\n  padding: 42px;\n  overflow: auto;\n  max-width: 100%;\n  display: flex;\n  flex-direction: column;\n  @media only screen and (min-width: 1640px) {\n    max-width: 1400px;\n  }\n  @media only screen and (max-width: 768px) {\n    padding: 24px;\n    overflow: unset;\n  }\n"]);
+  var data = _taggedTemplateLiteralLoose(["\n  flex: 1;\n  padding: 42px;\n  overflow: auto;\n  max-width: 100%;\n  display: flex;\n  flex-direction: column;\n  @media only screen and (min-width: 1640px) {\n    max-width: 1400px;\n  }\n  @media only screen and (max-width: 768px) {\n    padding: 42px 24px;\n    overflow: unset;\n  }\n"]);
 
   _templateObject2 = function _templateObject2() {
     return data;
