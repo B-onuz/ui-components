@@ -25,6 +25,7 @@ const ChildrenWrapper = styled.div`
   }
   @media only screen and (max-width: 768px) {
     padding: 24px;
+    overflow: unset;
   }
 `
 
