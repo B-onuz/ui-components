@@ -24,8 +24,9 @@ const ChildrenWrapper = styled.div`
     max-width: 1400px;
   }
   @media only screen and (max-width: 768px) {
-    padding: 42px 24px;
+    padding: 24px 24px 42px;
     overflow: unset;
+    margin-top: 10vh;
   }
 `
 
@@ -41,6 +42,9 @@ const LayoutContainer = styled(Box)`
       margin-left: ${menuWidth}px;
     }
   `}
+  @media only screen and (max-width: 768px) {
+    overflow-x: hidden;
+  }
 `
 
 const CornerContentWrapper = styled.div`
