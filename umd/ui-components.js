@@ -1,4 +1,4 @@
-/*! ui-components v2.33.0 */
+/*! ui-components v2.33.1 */
 (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
 		module.exports = factory(require("react"));
@@ -12167,7 +12167,7 @@ function BaseLayout_templateObject4() {
 }
 
 function BaseLayout_templateObject3() {
-  var data = BaseLayout_taggedTemplateLiteralLoose(["\n  transition: margin-left 0.2s linear;\n  ", "\n"]);
+  var data = BaseLayout_taggedTemplateLiteralLoose(["\n  transition: margin-left 0.2s linear;\n  ", "\n  @media only screen and (max-width: 768px) {\n    overflow-x: hidden;\n  }\n"]);
 
   BaseLayout_templateObject3 = function _templateObject3() {
     return data;
@@ -12177,7 +12177,7 @@ function BaseLayout_templateObject3() {
 }
 
 function BaseLayout_templateObject2() {
-  var data = BaseLayout_taggedTemplateLiteralLoose(["\n  flex: 1;\n  padding: 42px;\n  overflow: auto;\n  max-width: 100%;\n  display: flex;\n  flex-direction: column;\n  @media only screen and (min-width: 1640px) {\n    max-width: 1400px;\n  }\n  @media only screen and (max-width: 768px) {\n    padding: 42px 24px;\n    overflow: unset;\n  }\n"]);
+  var data = BaseLayout_taggedTemplateLiteralLoose(["\n  flex: 1;\n  padding: 42px;\n  overflow: auto;\n  max-width: 100%;\n  display: flex;\n  flex-direction: column;\n  @media only screen and (min-width: 1640px) {\n    max-width: 1400px;\n  }\n  @media only screen and (max-width: 768px) {\n    padding: 24px 24px 42px;\n    overflow: unset;\n    margin-top: 10vh;\n  }\n"]);
 
   BaseLayout_templateObject2 = function _templateObject2() {
     return data;
