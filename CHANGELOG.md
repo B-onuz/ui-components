@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.34.0](https://github.com/B-onuz/ui-components/compare/v2.33.1...v2.34.0) (2021-01-19)
+
+### Features
+
+- **mobile:** fix mobile layout ([0066582](https://github.com/B-onuz/ui-components/commit/0066582d202e00b7e8deedb5d5344ddc3bb22501))
+
 ### [2.33.1](https://github.com/B-onuz/ui-components/compare/v2.33.0...v2.33.1) (2021-01-18)
 
 ## [2.33.0](https://github.com/B-onuz/ui-components/compare/v2.32.1...v2.33.0) (2021-01-18)
