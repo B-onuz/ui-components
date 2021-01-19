@@ -77,7 +77,7 @@ export const BoxExample = () => {
     </Box>
   )
 }
-export const EmptyTableBoxExample = () => {
+export const EmptyTableNoBorderBoxExample = () => {
   const [sort, setSort] = useState('nome')
   const [order, setOrder] = useState('asc')
 
@@ -91,7 +91,7 @@ export const EmptyTableBoxExample = () => {
   }
 
   return (
-    <Box width={1000} px={0} py={37} m={30}>
+    <Box width={1000} px={0} py={37} m={30} noBorder>
       <Table
         width={1}
         maxHeight={200}

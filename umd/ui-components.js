@@ -1,4 +1,4 @@
-/*! ui-components v2.33.1 */
+/*! ui-components v2.34.0 */
 (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
 		module.exports = factory(require("react"));
@@ -12718,7 +12718,7 @@ function Box_extends() { Box_extends = Object.assign || function (target) { for 
 function Box_objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 
 function Box_templateObject() {
-  var data = Box_taggedTemplateLiteralLoose(["\n  ", "\n  box-shadow: 0px 3px 6px #2c282846;\n  background: #ffffff 0% 0% no-repeat padding-box;\n  padding: 10px;\n  border-radius: 10px;\n  display: ", ";\n  flex: ", ";\n  justify-content: ", ";\n  flex-direction: ", ";\n  align-items: ", ";\n"]);
+  var data = Box_taggedTemplateLiteralLoose(["\n  ", "\n  box-shadow: ", ";\n  background: ", ";\n  padding: ", ";\n  border-radius: 10px;\n  display: ", ";\n  flex: ", ";\n  justify-content: ", ";\n  flex-direction: ", ";\n  align-items: ", ";\n"]);
 
   Box_templateObject = function _templateObject() {
     return data;
@@ -12733,31 +12733,42 @@ function Box_taggedTemplateLiteralLoose(strings, raw) { if (!raw) { raw = string
 
 
 var StyledBox = styled_components_browser_esm["default"].div(Box_templateObject(), Object(index_esm["compose"])(index_esm["space"], index_esm["layout"]), function (_ref) {
-  var display = _ref.display;
-  return display;
+  var noBorder = _ref.noBorder;
+  return noBorder ? 'none' : '0px 3px 6px #2c282846';
 }, function (_ref2) {
-  var flex = _ref2.flex;
-  return flex;
+  var noBorder = _ref2.noBorder;
+  return noBorder ? 'none' : '#ffffff 0% 0% no-repeat padding-box';
 }, function (_ref3) {
-  var justifyContent = _ref3.justifyContent;
-  return justifyContent;
+  var noBorder = _ref3.noBorder;
+  return noBorder ? '0' : '10px';
 }, function (_ref4) {
-  var flexDirection = _ref4.flexDirection;
-  return flexDirection;
+  var display = _ref4.display;
+  return display;
 }, function (_ref5) {
-  var alignItems = _ref5.alignItems;
+  var flex = _ref5.flex;
+  return flex;
+}, function (_ref6) {
+  var justifyContent = _ref6.justifyContent;
+  return justifyContent;
+}, function (_ref7) {
+  var flexDirection = _ref7.flexDirection;
+  return flexDirection;
+}, function (_ref8) {
+  var alignItems = _ref8.alignItems;
   return alignItems;
 });
 
-var Box_Box = function Box(_ref6) {
-  var display = _ref6.display,
-      justifyContent = _ref6.justifyContent,
-      flexDirection = _ref6.flexDirection,
-      alignItems = _ref6.alignItems,
-      flex = _ref6.flex,
-      rest = Box_objectWithoutPropertiesLoose(_ref6, ["display", "justifyContent", "flexDirection", "alignItems", "flex"]);
+var Box_Box = function Box(_ref9) {
+  var display = _ref9.display,
+      justifyContent = _ref9.justifyContent,
+      flexDirection = _ref9.flexDirection,
+      alignItems = _ref9.alignItems,
+      flex = _ref9.flex,
+      noBorder = _ref9.noBorder,
+      rest = Box_objectWithoutPropertiesLoose(_ref9, ["display", "justifyContent", "flexDirection", "alignItems", "flex", "noBorder"]);
 
   return /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(StyledBox, Box_extends({
+    noBorder: !!noBorder,
     display: display,
     justifyContent: justifyContent,
     flexDirection: flexDirection,

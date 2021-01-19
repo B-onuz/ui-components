@@ -4,9 +4,9 @@ import { space, layout, compose } from 'styled-system'
 
 const StyledBox = styled.div`
   ${compose(space, layout)}
-  box-shadow: 0px 3px 6px #2c282846;
-  background: #ffffff 0% 0% no-repeat padding-box;
-  padding: 10px;
+  box-shadow: ${({ noBorder }) => (noBorder ? 'none' : '0px 3px 6px #2c282846')};
+  background: ${({ noBorder }) => (noBorder ? 'none' : '#ffffff 0% 0% no-repeat padding-box')};
+  padding: ${({ noBorder }) => (noBorder ? '0' : '10px')};
   border-radius: 10px;
   display: ${({ display }) => display};
   flex: ${({ flex }) => flex};
@@ -15,8 +15,18 @@ const StyledBox = styled.div`
   align-items: ${({ alignItems }) => alignItems};
 `
 
-const Box = ({ display, justifyContent, flexDirection, alignItems, flex, ...rest }) => {
-  return <StyledBox display={display} justifyContent={justifyContent} flexDirection={flexDirection} alignItems={alignItems} flex={flex} {...rest} />
+const Box = ({ display, justifyContent, flexDirection, alignItems, flex, noBorder, ...rest }) => {
+  return (
+    <StyledBox
+      noBorder={!!noBorder}
+      display={display}
+      justifyContent={justifyContent}
+      flexDirection={flexDirection}
+      alignItems={alignItems}
+      flex={flex}
+      {...rest}
+    />
+  )
 }
 
 export default Box
