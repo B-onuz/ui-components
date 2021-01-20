@@ -52,6 +52,10 @@ const CornerContentWrapper = styled.div`
   width: 90%;
   align-self: flex-end;
   white-space: nowrap;
+  @media only screen and (max-width: 768px) {
+    width: auto;
+    align-self: center;
+  }
 `
 
 const BaseLayout = ({
