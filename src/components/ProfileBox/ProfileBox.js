@@ -24,9 +24,9 @@ const BnzBox = styled.div`
   justify-content: flex-start;
   align-items: center;
   @media only screen and (max-width: 500px) {
-    flex-direction: column;
+    /* flex-direction: column; */
     align-items: center;
-    justify-content: center;
+    /* justify-content: space-between; */
     margin: 0 8px;
   }
 `
@@ -46,8 +46,8 @@ const ProfileIcon = styled.img`
   margin-right: 7px;
   @media only screen and (max-width: 500px) {
     max-height: 20px;
-    margin-right: 0;
-    margin-bottom: 7px;
+    margin-right: 8px;
+    /* margin-bottom: 7px; */
   }
 `
 
