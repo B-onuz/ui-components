@@ -33,7 +33,7 @@ function _extends() { _extends = Object.assign || function (target) { for (var i
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 
 function _templateObject4() {
-  var data = _taggedTemplateLiteralLoose(["\n  height: 100%;\n  width: 90%;\n  align-self: flex-end;\n  white-space: nowrap;\n"]);
+  var data = _taggedTemplateLiteralLoose(["\n  height: 100%;\n  width: 90%;\n  align-self: flex-end;\n  white-space: nowrap;\n  @media only screen and (max-width: 768px) {\n    width: auto;\n    align-self: center;\n  }\n"]);
 
   _templateObject4 = function _templateObject4() {
     return data;
@@ -106,7 +106,7 @@ var BaseLayout = function BaseLayout(_ref2) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 69,
+      lineNumber: 73,
       columnNumber: 5
     }
   }), sidebar, /*#__PURE__*/_react["default"].createElement(LayoutContainer, {
@@ -118,14 +118,14 @@ var BaseLayout = function BaseLayout(_ref2) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 71,
+      lineNumber: 75,
       columnNumber: 7
     }
   }, /*#__PURE__*/_react["default"].createElement(_NavBar["default"], {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 72,
+      lineNumber: 76,
       columnNumber: 9
     }
   }, !!sidebar && /*#__PURE__*/_react["default"].createElement(_HamburguerButton["default"], {
@@ -136,7 +136,7 @@ var BaseLayout = function BaseLayout(_ref2) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 74,
+      lineNumber: 78,
       columnNumber: 13
     }
   }, !open ? 'Abrir menu' : 'Fechar menu'), /*#__PURE__*/_react["default"].createElement(_Header["default"], {
@@ -144,21 +144,21 @@ var BaseLayout = function BaseLayout(_ref2) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 78,
+      lineNumber: 82,
       columnNumber: 11
     }
   }), !!cornerContent && /*#__PURE__*/_react["default"].createElement(CornerContentWrapper, {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 79,
+      lineNumber: 83,
       columnNumber: 31
     }
   }, cornerContent)), /*#__PURE__*/_react["default"].createElement(ChildrenWrapper, {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 81,
+      lineNumber: 85,
       columnNumber: 9
     }
   }, children)));

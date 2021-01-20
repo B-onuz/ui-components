@@ -1,4 +1,4 @@
-/*! ui-components v2.34.0 */
+/*! ui-components v2.34.1 */
 (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
 		module.exports = factory(require("react"));
@@ -11932,7 +11932,7 @@ var HamburguerButton_HamburguerButton = function HamburguerButton(_ref) {
 function NavBar_extends() { NavBar_extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return NavBar_extends.apply(this, arguments); }
 
 function NavBar_templateObject() {
-  var data = NavBar_taggedTemplateLiteralLoose(["\n  background-color: #f4f4f4;\n  height: 64px;\n  display: flex;\n  align-items: center;\n  padding: 20px;\n  box-sizing: border-box;\n  flex-shrink: 0;\n  @media only screen and (max-width: 500px) {\n    flex-direction: row-reverse;\n    padding: 2vh;\n    position: fixed;\n    width: 100%;\n    z-index: 1000;\n  }\n"]);
+  var data = NavBar_taggedTemplateLiteralLoose(["\n  background-color: #f4f4f4;\n  height: 64px;\n  display: flex;\n  align-items: center;\n  padding: 20px;\n  box-sizing: border-box;\n  flex-shrink: 0;\n  @media only screen and (max-width: 600px) {\n    height: auto;\n    width: 100%;\n    flex-direction: column;\n    justify-content: center;\n    padding: 2vh;\n    position: fixed;\n    width: 100%;\n    z-index: 1000;\n    flex-wrap: wrap;\n    & > header {\n      max-width: 85%;\n      & > h1 {\n        max-width: 100%;\n        margin-bottom: 8px;\n        overflow: hidden;\n        white-space: nowrap;\n        text-overflow: ellipsis;\n      }\n    }\n    & > button {\n      position: absolute;\n      right: 8px;\n      top: 33.33%;\n    }\n  }\n"]);
 
   NavBar_templateObject = function _templateObject() {
     return data;
@@ -12063,7 +12063,7 @@ function ProfileBox_templateObject5() {
 }
 
 function ProfileBox_templateObject4() {
-  var data = ProfileBox_taggedTemplateLiteralLoose(["\n  height: ", ";\n  margin-right: 7px;\n  @media only screen and (max-width: 500px) {\n    max-height: 20px;\n    margin-right: 0;\n    margin-bottom: 7px;\n  }\n"]);
+  var data = ProfileBox_taggedTemplateLiteralLoose(["\n  height: ", ";\n  margin-right: 7px;\n  @media only screen and (max-width: 500px) {\n    max-height: 20px;\n    margin-right: 8px;\n    /* margin-bottom: 7px; */\n  }\n"]);
 
   ProfileBox_templateObject4 = function _templateObject4() {
     return data;
@@ -12083,7 +12083,7 @@ function ProfileBox_templateObject3() {
 }
 
 function ProfileBox_templateObject2() {
-  var data = ProfileBox_taggedTemplateLiteralLoose(["\n  height: 100%;\n  display: flex;\n  justify-content: flex-start;\n  align-items: center;\n  @media only screen and (max-width: 500px) {\n    flex-direction: column;\n    align-items: center;\n    justify-content: center;\n    margin: 0 8px;\n  }\n"]);
+  var data = ProfileBox_taggedTemplateLiteralLoose(["\n  height: 100%;\n  display: flex;\n  justify-content: flex-start;\n  align-items: center;\n  @media only screen and (max-width: 500px) {\n    /* flex-direction: column; */\n    align-items: center;\n    /* justify-content: space-between; */\n    margin: 0 8px;\n  }\n"]);
 
   ProfileBox_templateObject2 = function _templateObject2() {
     return data;
@@ -12157,7 +12157,7 @@ var ProfileBox_ProfileBox = function ProfileBox(_ref3) {
 function BaseLayout_objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 
 function BaseLayout_templateObject4() {
-  var data = BaseLayout_taggedTemplateLiteralLoose(["\n  height: 100%;\n  width: 90%;\n  align-self: flex-end;\n  white-space: nowrap;\n"]);
+  var data = BaseLayout_taggedTemplateLiteralLoose(["\n  height: 100%;\n  width: 90%;\n  align-self: flex-end;\n  white-space: nowrap;\n  @media only screen and (max-width: 768px) {\n    width: auto;\n    align-self: center;\n  }\n"]);
 
   BaseLayout_templateObject4 = function _templateObject4() {
     return data;

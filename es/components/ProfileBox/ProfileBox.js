@@ -45,7 +45,7 @@ function _templateObject5() {
 }
 
 function _templateObject4() {
-  var data = _taggedTemplateLiteralLoose(["\n  height: ", ";\n  margin-right: 7px;\n  @media only screen and (max-width: 500px) {\n    max-height: 20px;\n    margin-right: 0;\n    margin-bottom: 7px;\n  }\n"]);
+  var data = _taggedTemplateLiteralLoose(["\n  height: ", ";\n  margin-right: 7px;\n  @media only screen and (max-width: 500px) {\n    max-height: 20px;\n    margin-right: 8px;\n    /* margin-bottom: 7px; */\n  }\n"]);
 
   _templateObject4 = function _templateObject4() {
     return data;
@@ -65,7 +65,7 @@ function _templateObject3() {
 }
 
 function _templateObject2() {
-  var data = _taggedTemplateLiteralLoose(["\n  height: 100%;\n  display: flex;\n  justify-content: flex-start;\n  align-items: center;\n  @media only screen and (max-width: 500px) {\n    flex-direction: column;\n    align-items: center;\n    justify-content: center;\n    margin: 0 8px;\n  }\n"]);
+  var data = _taggedTemplateLiteralLoose(["\n  height: 100%;\n  display: flex;\n  justify-content: flex-start;\n  align-items: center;\n  @media only screen and (max-width: 500px) {\n    /* flex-direction: column; */\n    align-items: center;\n    /* justify-content: space-between; */\n    margin: 0 8px;\n  }\n"]);
 
   _templateObject2 = function _templateObject2() {
     return data;
