@@ -13,13 +13,21 @@ const StyledNavBar = styled.div`
     height: auto;
     width: 100%;
     flex-direction: column;
+    justify-content: center;
     padding: 2vh;
     position: fixed;
     width: 100%;
     z-index: 1000;
     flex-wrap: wrap;
-    & > header > h1 {
-      text-align: center;
+    & > header {
+      max-width: 85%;
+      & > h1 {
+        max-width: 100%;
+        margin-bottom: 8px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+      }
     }
     & > button {
       position: absolute;
