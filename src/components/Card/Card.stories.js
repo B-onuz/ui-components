@@ -84,6 +84,7 @@ export const CardButton = () => (
         title={'Demandas Pendentes'}
         customIcon={serv_waiting}
         cardBackground={'primary'}
+        parentHeight="115px"
       />
     </Flex>
     <Box mt={[3]}>

@@ -7,7 +7,7 @@ const StyledCard = styled.div`
   color: ${({ theme, color }) => (theme.colors[color] ? theme.colors[color] : color)};
   width: 192px;
   height: ${({ clickableCard }) => (!!clickableCard ? 'none' : '90px')};
-  min-height: ${({ clickableCard }) => (!!clickableCard ? '90px' : 'none')};
+  min-height: ${({ clickableCard, parentHeight }) => (!!clickableCard ? parentHeight || '90px' : 'none')};
   display: flex;
   flex-direction: ${({ clickableCard }) => (!!clickableCard ? 'row' : 'column')};
   justify-content: space-around;
@@ -124,10 +124,11 @@ const Card = ({
   clickableCard,
   cardBackground,
   reverseOrder,
+  parentHeight,
   ...rest
 }) => {
   return (
-    <StyledCard {...rest} clickableCard={clickableCard}>
+    <StyledCard {...rest} clickableCard={clickableCard} parentHeight={parentHeight}>
       {!!clickableCard ? (
         <ClickableCard cardBackground={cardBackground} reverseOrder={reverseOrder}>
           <StyledTitle textColor={textColor} cancel={cancel}>

@@ -1,4 +1,4 @@
-/*! ui-components v2.34.1 */
+/*! ui-components v2.34.2 */
 (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
 		module.exports = factory(require("react"));
@@ -22509,8 +22509,9 @@ var StyledCard = styled_components_browser_esm["default"].div(Card_templateObjec
   var clickableCard = _ref2.clickableCard;
   return !!clickableCard ? 'none' : '90px';
 }, function (_ref3) {
-  var clickableCard = _ref3.clickableCard;
-  return !!clickableCard ? '90px' : 'none';
+  var clickableCard = _ref3.clickableCard,
+      parentHeight = _ref3.parentHeight;
+  return !!clickableCard ? parentHeight || '90px' : 'none';
 }, function (_ref4) {
   var clickableCard = _ref4.clickableCard;
   return !!clickableCard ? 'row' : 'column';
@@ -22590,10 +22591,12 @@ var Card_Card = function Card(_ref20) {
       clickableCard = _ref20.clickableCard,
       cardBackground = _ref20.cardBackground,
       reverseOrder = _ref20.reverseOrder,
-      rest = Card_objectWithoutPropertiesLoose(_ref20, ["title", "count", "icon", "customIcon", "customIconAlt", "imgBackground", "cancel", "counterColor", "iconColor", "textColor", "disclaimer", "disclaimerColor", "clickableCard", "cardBackground", "reverseOrder"]);
+      parentHeight = _ref20.parentHeight,
+      rest = Card_objectWithoutPropertiesLoose(_ref20, ["title", "count", "icon", "customIcon", "customIconAlt", "imgBackground", "cancel", "counterColor", "iconColor", "textColor", "disclaimer", "disclaimerColor", "clickableCard", "cardBackground", "reverseOrder", "parentHeight"]);
 
   return /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(StyledCard, Card_extends({}, rest, {
-    clickableCard: clickableCard
+    clickableCard: clickableCard,
+    parentHeight: parentHeight
   }), !!clickableCard ? /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(ClickableCard, {
     cardBackground: cardBackground,
     reverseOrder: reverseOrder

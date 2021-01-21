@@ -102,8 +102,9 @@ var StyledCard = _styledComponents["default"].div(_templateObject(), function (_
   var clickableCard = _ref2.clickableCard;
   return !!clickableCard ? 'none' : '90px';
 }, function (_ref3) {
-  var clickableCard = _ref3.clickableCard;
-  return !!clickableCard ? '90px' : 'none';
+  var clickableCard = _ref3.clickableCard,
+      parentHeight = _ref3.parentHeight;
+  return !!clickableCard ? parentHeight || '90px' : 'none';
 }, function (_ref4) {
   var clickableCard = _ref4.clickableCard;
   return !!clickableCard ? 'row' : 'column';
@@ -189,14 +190,16 @@ var Card = function Card(_ref20) {
       clickableCard = _ref20.clickableCard,
       cardBackground = _ref20.cardBackground,
       reverseOrder = _ref20.reverseOrder,
-      rest = _objectWithoutPropertiesLoose(_ref20, ["title", "count", "icon", "customIcon", "customIconAlt", "imgBackground", "cancel", "counterColor", "iconColor", "textColor", "disclaimer", "disclaimerColor", "clickableCard", "cardBackground", "reverseOrder"]);
+      parentHeight = _ref20.parentHeight,
+      rest = _objectWithoutPropertiesLoose(_ref20, ["title", "count", "icon", "customIcon", "customIconAlt", "imgBackground", "cancel", "counterColor", "iconColor", "textColor", "disclaimer", "disclaimerColor", "clickableCard", "cardBackground", "reverseOrder", "parentHeight"]);
 
   return /*#__PURE__*/_react["default"].createElement(StyledCard, _extends({}, rest, {
     clickableCard: clickableCard,
+    parentHeight: parentHeight,
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 130,
+      lineNumber: 131,
       columnNumber: 5
     }
   }), !!clickableCard ? /*#__PURE__*/_react["default"].createElement(ClickableCard, {
@@ -205,7 +208,7 @@ var Card = function Card(_ref20) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 132,
+      lineNumber: 133,
       columnNumber: 9
     }
   }, /*#__PURE__*/_react["default"].createElement(StyledTitle, {
@@ -214,7 +217,7 @@ var Card = function Card(_ref20) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 133,
+      lineNumber: 134,
       columnNumber: 11
     }
   }, title), icon && /*#__PURE__*/_react["default"].createElement(_reactFontawesome.FontAwesomeIcon, {
@@ -223,7 +226,7 @@ var Card = function Card(_ref20) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 136,
+      lineNumber: 137,
       columnNumber: 20
     }
   }), customIcon && /*#__PURE__*/_react["default"].createElement(StyledIcon, {
@@ -234,7 +237,7 @@ var Card = function Card(_ref20) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 137,
+      lineNumber: 138,
       columnNumber: 26
     }
   })) : /*#__PURE__*/_react["default"].createElement(_react["default"].Fragment, null, /*#__PURE__*/_react["default"].createElement(StyledTitle, {
@@ -243,7 +246,7 @@ var Card = function Card(_ref20) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 141,
+      lineNumber: 142,
       columnNumber: 11
     }
   }, title), /*#__PURE__*/_react["default"].createElement(StyledInfo, {
@@ -251,7 +254,7 @@ var Card = function Card(_ref20) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 144,
+      lineNumber: 145,
       columnNumber: 11
     }
   }, icon && /*#__PURE__*/_react["default"].createElement(_reactFontawesome.FontAwesomeIcon, {
@@ -260,7 +263,7 @@ var Card = function Card(_ref20) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 145,
+      lineNumber: 146,
       columnNumber: 22
     }
   }), customIcon && /*#__PURE__*/_react["default"].createElement(StyledIcon, {
@@ -271,7 +274,7 @@ var Card = function Card(_ref20) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 146,
+      lineNumber: 147,
       columnNumber: 28
     }
   }), /*#__PURE__*/_react["default"].createElement(Counter, {
@@ -279,7 +282,7 @@ var Card = function Card(_ref20) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 147,
+      lineNumber: 148,
       columnNumber: 13
     }
   }, count)), /*#__PURE__*/_react["default"].createElement(StyledHelper, {
@@ -288,7 +291,7 @@ var Card = function Card(_ref20) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 149,
+      lineNumber: 150,
       columnNumber: 11
     }
   }, disclaimer)));
