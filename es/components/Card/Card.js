@@ -83,7 +83,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteralLoose(["\n  color: ", ";\n  width: 192px;\n  height: ", ";\n  min-height: ", ";\n  display: flex;\n  flex-direction: ", ";\n  justify-content: space-around;\n  position: relative;\n  box-shadow: 3px 3px 6px #00000029;\n  border: 3px solid;\n  border-radius: 12px;\n  padding: ", ";\n  overflow: ", ";\n  @media only screen and (max-width: 500px) {\n    width: 100%;\n    height: none !important;\n    min-height: 84px !important;\n    padding: ", ";\n    justify-content: center;\n    text-align: center;\n  }\n\n  .icon {\n    margin-right: ", ";\n    font-size: 40px;\n    @media only screen and (max-width: 500px) {\n      font-size: 30px;\n      margin: 0;\n      margin-bottom: 6px;\n    }\n  }\n"]);
+  var data = _taggedTemplateLiteralLoose(["\n  color: ", ";\n  width: 192px;\n  height: ", ";\n  min-height: ", ";\n  display: flex;\n  flex-direction: ", ";\n  justify-content: space-around;\n  position: relative;\n  box-shadow: 3px 3px 6px #00000029;\n  border: 3px solid;\n  border-radius: 12px;\n  padding: ", ";\n  overflow: ", ";\n  @media only screen and (max-width: 500px) {\n    width: 100%;\n    height: none !important;\n    min-height: ", ";\n    padding: ", ";\n    justify-content: center;\n    text-align: center;\n  }\n\n  .icon {\n    margin-right: ", ";\n    font-size: 40px;\n    @media only screen and (max-width: 500px) {\n      font-size: 30px;\n      margin: 0;\n      margin-bottom: 6px;\n    }\n  }\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -115,83 +115,86 @@ var StyledCard = _styledComponents["default"].div(_templateObject(), function (_
   var clickableCard = _ref6.clickableCard;
   return !!clickableCard ? 'visible' : 'hidden';
 }, function (_ref7) {
-  var clickableCard = _ref7.clickableCard;
-  return !!clickableCard ? 0 : '25px 12px';
+  var parentHeight = _ref7.parentHeight;
+  return !!parentHeight ? parentHeight : '84px !important';
 }, function (_ref8) {
   var clickableCard = _ref8.clickableCard;
+  return !!clickableCard ? 0 : '25px 12px';
+}, function (_ref9) {
+  var clickableCard = _ref9.clickableCard;
   return !!clickableCard ? 0 : '24px';
 });
 
-var StyledTitle = _styledComponents["default"].span(_templateObject2(), function (_ref9) {
-  var theme = _ref9.theme,
-      textColor = _ref9.textColor;
+var StyledTitle = _styledComponents["default"].span(_templateObject2(), function (_ref10) {
+  var theme = _ref10.theme,
+      textColor = _ref10.textColor;
   return theme.colors[textColor] ? theme.colors[textColor] : textColor;
-}, function (_ref10) {
-  var cancel = _ref10.cancel;
+}, function (_ref11) {
+  var cancel = _ref11.cancel;
   return cancel ? '60%' : 1;
 });
 
-var StyledInfo = _styledComponents["default"].div(_templateObject3(), function (_ref11) {
-  var theme = _ref11.theme,
-      iconColor = _ref11.iconColor;
+var StyledInfo = _styledComponents["default"].div(_templateObject3(), function (_ref12) {
+  var theme = _ref12.theme,
+      iconColor = _ref12.iconColor;
   return theme.colors[iconColor] ? theme.colors[iconColor] : iconColor;
 });
 
-var Counter = _styledComponents["default"].span(_templateObject4(), function (_ref12) {
-  var theme = _ref12.theme,
-      counterColor = _ref12.counterColor;
+var Counter = _styledComponents["default"].span(_templateObject4(), function (_ref13) {
+  var theme = _ref13.theme,
+      counterColor = _ref13.counterColor;
   return theme.colors[counterColor] ? theme.colors[counterColor] : counterColor;
 });
 
-var StyledIcon = _styledComponents["default"].img(_templateObject5(), function (_ref13) {
-  var theme = _ref13.theme,
-      imgBackground = _ref13.imgBackground;
+var StyledIcon = _styledComponents["default"].img(_templateObject5(), function (_ref14) {
+  var theme = _ref14.theme,
+      imgBackground = _ref14.imgBackground;
   return theme.colors[imgBackground] ? theme.colors[imgBackground] : imgBackground;
-}, function (_ref14) {
-  var clickableCard = _ref14.clickableCard;
+}, function (_ref15) {
+  var clickableCard = _ref15.clickableCard;
   return !!clickableCard ? 0 : '24px';
 });
 
-var StyledHelper = _styledComponents["default"].small(_templateObject6(), function (_ref15) {
-  var disclaimer = _ref15.disclaimer;
+var StyledHelper = _styledComponents["default"].small(_templateObject6(), function (_ref16) {
+  var disclaimer = _ref16.disclaimer;
   return !!disclaimer ? 'inline-block' : 'none';
-}, function (_ref16) {
-  var theme = _ref16.theme,
-      disclaimerColor = _ref16.disclaimerColor;
+}, function (_ref17) {
+  var theme = _ref17.theme,
+      disclaimerColor = _ref17.disclaimerColor;
   return theme.colors[disclaimerColor] ? theme.colors[disclaimerColor] : disclaimerColor;
 });
 
-var ClickableCard = _styledComponents["default"].button(_templateObject7(), function (_ref17) {
-  var reverseOrder = _ref17.reverseOrder;
+var ClickableCard = _styledComponents["default"].button(_templateObject7(), function (_ref18) {
+  var reverseOrder = _ref18.reverseOrder;
   return !!reverseOrder ? 'column-reverse' : 'column';
-}, function (_ref18) {
-  var theme = _ref18.theme,
-      cardBackground = _ref18.cardBackground;
-  return theme.colors[cardBackground] ? theme.colors[cardBackground] : cardBackground;
 }, function (_ref19) {
   var theme = _ref19.theme,
       cardBackground = _ref19.cardBackground;
+  return theme.colors[cardBackground] ? theme.colors[cardBackground] : cardBackground;
+}, function (_ref20) {
+  var theme = _ref20.theme,
+      cardBackground = _ref20.cardBackground;
   return theme.colors[cardBackground];
 });
 
-var Card = function Card(_ref20) {
-  var title = _ref20.title,
-      count = _ref20.count,
-      icon = _ref20.icon,
-      customIcon = _ref20.customIcon,
-      customIconAlt = _ref20.customIconAlt,
-      imgBackground = _ref20.imgBackground,
-      cancel = _ref20.cancel,
-      counterColor = _ref20.counterColor,
-      iconColor = _ref20.iconColor,
-      textColor = _ref20.textColor,
-      disclaimer = _ref20.disclaimer,
-      disclaimerColor = _ref20.disclaimerColor,
-      clickableCard = _ref20.clickableCard,
-      cardBackground = _ref20.cardBackground,
-      reverseOrder = _ref20.reverseOrder,
-      parentHeight = _ref20.parentHeight,
-      rest = _objectWithoutPropertiesLoose(_ref20, ["title", "count", "icon", "customIcon", "customIconAlt", "imgBackground", "cancel", "counterColor", "iconColor", "textColor", "disclaimer", "disclaimerColor", "clickableCard", "cardBackground", "reverseOrder", "parentHeight"]);
+var Card = function Card(_ref21) {
+  var title = _ref21.title,
+      count = _ref21.count,
+      icon = _ref21.icon,
+      customIcon = _ref21.customIcon,
+      customIconAlt = _ref21.customIconAlt,
+      imgBackground = _ref21.imgBackground,
+      cancel = _ref21.cancel,
+      counterColor = _ref21.counterColor,
+      iconColor = _ref21.iconColor,
+      textColor = _ref21.textColor,
+      disclaimer = _ref21.disclaimer,
+      disclaimerColor = _ref21.disclaimerColor,
+      clickableCard = _ref21.clickableCard,
+      cardBackground = _ref21.cardBackground,
+      reverseOrder = _ref21.reverseOrder,
+      parentHeight = _ref21.parentHeight,
+      rest = _objectWithoutPropertiesLoose(_ref21, ["title", "count", "icon", "customIcon", "customIconAlt", "imgBackground", "cancel", "counterColor", "iconColor", "textColor", "disclaimer", "disclaimerColor", "clickableCard", "cardBackground", "reverseOrder", "parentHeight"]);
 
   return /*#__PURE__*/_react["default"].createElement(StyledCard, _extends({}, rest, {
     clickableCard: clickableCard,

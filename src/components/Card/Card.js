@@ -20,7 +20,7 @@ const StyledCard = styled.div`
   @media only screen and (max-width: 500px) {
     width: 100%;
     height: none !important;
-    min-height: 84px !important;
+    min-height: ${({ parentHeight }) => (!!parentHeight ? parentHeight : '84px !important')};
     padding: ${({ clickableCard }) => (!!clickableCard ? 0 : '25px 12px')};
     justify-content: center;
     text-align: center;
