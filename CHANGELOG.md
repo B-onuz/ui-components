@@ -2,6 +2,8 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.34.3](https://github.com/B-onuz/ui-components/compare/v2.34.2...v2.34.3) (2021-01-21)
+
 ### [2.34.2](https://github.com/B-onuz/ui-components/compare/v2.34.1...v2.34.2) (2021-01-20)
 
 ### [2.34.1](https://github.com/B-onuz/ui-components/compare/v2.34.0...v2.34.1) (2021-01-19)
