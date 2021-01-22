@@ -17,7 +17,7 @@ const styleOnlyMobile = (onlyMobile, styleCSS) =>
   onlyMobile
     ? styleCSS
     : `
-    @media only screen and (max-width: 767px) {
+    @media only screen and (max-width: 1024px) {
       ${styleCSS}
     }
   `

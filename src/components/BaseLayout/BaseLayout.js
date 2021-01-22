@@ -38,7 +38,7 @@ const LayoutContainer = styled(Box)`
     margin-left: 0;
   `
       : `
-    @media only screen and (min-width: 768px) {
+    @media only screen and (min-width: 1024px) {
       margin-left: ${menuWidth}px;
     }
   `}

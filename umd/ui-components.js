@@ -1,4 +1,4 @@
-/*! ui-components v2.34.3 */
+/*! ui-components v2.34.4 */
 (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
 		module.exports = factory(require("react"));
@@ -11770,7 +11770,7 @@ function SidebarMenu_taggedTemplateLiteralLoose(strings, raw) { if (!raw) { raw 
 var Backdrop = styled_components_browser_esm["default"].div(SidebarMenu_templateObject());
 
 var styleOnlyMobile = function styleOnlyMobile(onlyMobile, styleCSS) {
-  return onlyMobile ? styleCSS : "\n    @media only screen and (max-width: 767px) {\n      " + styleCSS + "\n    }\n  ";
+  return onlyMobile ? styleCSS : "\n    @media only screen and (max-width: 1024px) {\n      " + styleCSS + "\n    }\n  ";
 };
 
 var WrapperSidebarMenu = styled_components_browser_esm["default"].nav(SidebarMenu_templateObject2(), function (_ref) {
@@ -12212,7 +12212,7 @@ var ChildrenWrapper = styled_components_browser_esm["default"].div(BaseLayout_te
 var LayoutContainer = Object(styled_components_browser_esm["default"])(styled_components["Box"])(BaseLayout_templateObject3(), function (_ref) {
   var menuIsOpen = _ref.menuIsOpen,
       menuWidth = _ref.menuWidth;
-  return !menuIsOpen ? "\n    margin-left: 0;\n  " : "\n    @media only screen and (min-width: 768px) {\n      margin-left: " + menuWidth + "px;\n    }\n  ";
+  return !menuIsOpen ? "\n    margin-left: 0;\n  " : "\n    @media only screen and (min-width: 1024px) {\n      margin-left: " + menuWidth + "px;\n    }\n  ";
 });
 var CornerContentWrapper = styled_components_browser_esm["default"].div(BaseLayout_templateObject4());
 
