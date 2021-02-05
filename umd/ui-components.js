@@ -1,4 +1,4 @@
-/*! ui-components v2.34.5 */
+/*! ui-components v2.34.6 */
 (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
 		module.exports = factory(require("react"));
@@ -19397,7 +19397,7 @@ function ContextMenuDialog_templateObject2() {
 }
 
 function ContextMenuDialog_templateObject() {
-  var data = ContextMenuDialog_taggedTemplateLiteralLoose(["\n  position: absolute;\n  border-radius: 12px;\n  opacity: ", ";\n  z-index: ", ";\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  padding: 10px 16px;\n  background: #fff 0% 0% no-repeat padding-box;\n  box-shadow: 0px 2px 6px #2c28281c;\n\n  ", "\n  &::after {\n    content: '';\n    width: 1em;\n    height: 1em;\n    position: absolute;\n    box-shadow: 1px 2px 2px -1px #2c28281c;\n    background: #fff 0% 0%;\n    ", "\n  }\n\n  @media only screen and (max-width: 500px) {\n    position: fixed;\n    margin: 0;\n    top: 50%;\n    left: 50%;\n    margin-right: -50%;\n    transform: translate(-50%, -50%);\n    padding: 20px 30px;\n\n    &::after {\n      display: none;\n    }\n  }\n"]);
+  var data = ContextMenuDialog_taggedTemplateLiteralLoose(["\n  position: absolute;\n  border-radius: 12px;\n  opacity: ", ";\n  z-index: ", ";\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  padding: 10px 16px;\n  bottom: ", ";\n  top: ", ";\n  left: ", ";\n  background: #fff 0% 0% no-repeat padding-box;\n  box-shadow: 0px 2px 6px #2c28281c;\n  transform: ", ";\n  &::after {\n    content: '';\n    width: 1em;\n    height: 1em;\n    position: absolute;\n    box-shadow: 1px 2px 2px -1px #2c28281c;\n    background: #fff 0% 0%;\n    top: ", ";\n    bottom: ", ";\n    ", "\n  }\n\n  @media only screen and (max-width: 500px) {\n    position: fixed;\n    margin: 0;\n    top: 50%;\n    left: 50%;\n    margin-right: -50%;\n    transform: translate(-50%, -50%);\n    padding: 20px 30px;\n\n    &::after {\n      display: none;\n    }\n  }\n"]);
 
   ContextMenuDialog_templateObject = function _templateObject() {
     return data;
@@ -19418,44 +19418,61 @@ var Dialog = styled_components_browser_esm["default"].div(ContextMenuDialog_temp
   var isOpen = _ref2.isOpen;
   return isOpen ? 1 : -100;
 }, function (_ref3) {
-  var direction = _ref3.direction,
-      top = _ref3.top,
-      right = _ref3.right,
-      left = _ref3.left,
-      bottom = _ref3.bottom;
+  var bottom = _ref3.bottom;
+  return bottom;
+}, function (_ref4) {
+  var top = _ref4.top;
+  return top;
+}, function (_ref5) {
+  var left = _ref5.left;
+  return left;
+}, function (_ref6) {
+  var direction = _ref6.direction,
+      bottom = _ref6.bottom;
 
   if (direction === 'left') {
-    return "\n      top: " + top + ";\n      left: " + left + ";\n      transform: translateX(calc(-100% - 32px * 2  - 5px));\n    ";
+    return "\n        translateX(calc(-100% - 32px * 2  - 5px))\n      ";
   }
 
   if (direction === 'right') {
-    return "\n      top: " + top + ";\n      left: " + left + ";\n    ";
+    return "\n        none\n      ";
   }
 
   if (direction === 'top') {
-    return "\n      top: " + top + ";\n      left: " + left + ";\n      transform: translateX(calc(-50% - 32px / 2)) translateY(calc(-100% - 24px));\n    ";
+    return "\n        translateX(calc(-50% - 32px / 2)) translateY(calc(-100% - 24px));\n      ";
   }
 
-  if (direction === 'bottom') {
-    return "\n      top: " + top + ";\n      left: " + left + ";\n      transform: translateX(calc(-50% - 32px / 2));\n    ";
+  if (direction === 'bottom' && bottom === 'auto') {
+    return "\n      translateX(calc(-50% - 32px / 2)) translateY(calc(-100% - 24px));\n      ";
+  } else {
+    return "\n        translateX(calc(-50% - 32px / 2));\n      ";
   }
-}, function (_ref4) {
-  var direction = _ref4.direction;
+}, function (_ref7) {
+  var top = _ref7.top;
+  return top !== 'unset' ? '1.6em' : 'unset';
+}, function (_ref8) {
+  var bottom = _ref8.bottom;
+  return bottom !== 'unset' ? '1.6em' : 'unset';
+}, function (_ref9) {
+  var direction = _ref9.direction,
+      bottom = _ref9.bottom;
 
   if (direction === 'left') {
-    return "\n      right: -0.5em;\n      top: 1.6em;\n      transform: rotateZ(-45deg);\n    ";
+    return "\n      right: -0.5em;\n      transform: rotateZ(-45deg);\n    ";
   }
 
   if (direction === 'right') {
-    return "\n      left: -0.5em;\n      top: 1.6em;\n      transform: rotateZ(135deg);\n    ";
+    return "\n      left: -0.5em;\n      transform: rotateZ(135deg);\n    ";
   }
 
   if (direction === 'top') {
     return "\n      top: calc(100% - 0.5em);\n      transform: rotateZ(45deg);\n      left: 0;\n      right: 0;\n      margin: auto;\n    ";
   }
 
-  if (direction === 'bottom') {
-    return "\n      bottom: calc(100% - 0.5em);\n      transform: rotateZ(-135deg);\n      left: 0;\n      right: 0;\n      margin: auto;\n    ";
+  if (direction === 'bottom' && bottom === 'auto') {
+    return "\n          top: calc(100% + 1.5em);\n          transform: rotateZ(45deg);\n          left: 0;\n          right: 0;\n          margin: auto;\n        ";
+  } else {
+    return "\n          bottom: calc(100% + 1.5em);\n          transform: rotateZ(-135deg);\n          left: 0;\n          right: 0;\n          margin: auto;\n        ";
   }
 });
 
@@ -19484,58 +19501,78 @@ var ContextMenuDialog_useRootDialog = function useRootDialog() {
 
 var ContextMenuDialog_Wrapper = styled_components_browser_esm["default"].div(ContextMenuDialog_templateObject2());
 
-var ContextMenuDialog_ContextMenuDialog = function ContextMenuDialog(_ref5) {
-  var isOpen = _ref5.isOpen,
-      buttonRef = _ref5.buttonRef,
-      onClose = _ref5.onClose,
-      direction = _ref5.direction,
-      contextFunctions = _ref5.contextFunctions,
-      rest = ContextMenuDialog_objectWithoutPropertiesLoose(_ref5, ["isOpen", "buttonRef", "onClose", "direction", "contextFunctions"]);
+var ContextMenuDialog_ContextMenuDialog = function ContextMenuDialog(_ref10) {
+  var isOpen = _ref10.isOpen,
+      buttonRef = _ref10.buttonRef,
+      onClose = _ref10.onClose,
+      direction = _ref10.direction,
+      contextFunctions = _ref10.contextFunctions,
+      rest = ContextMenuDialog_objectWithoutPropertiesLoose(_ref10, ["isOpen", "buttonRef", "onClose", "direction", "contextFunctions"]);
 
   var _useRootDialog = ContextMenuDialog_useRootDialog(),
       $rootDialog = _useRootDialog.$rootDialog;
 
-  var _useState2 = Object(external_root_React_commonjs2_react_commonjs_react_amd_react_["useState"])({
-    top: 0,
-    right: 0,
-    bottom: 0,
-    left: 0
-  }),
-      positions = _useState2[0],
-      setPositions = _useState2[1];
-
+  var screenHeight = window.innerHeight;
   var $currentButtonRef = (buttonRef || {}).current;
 
+  var _useState2 = Object(external_root_React_commonjs2_react_commonjs_react_amd_react_["useState"])(0),
+      top = _useState2[0],
+      setTop = _useState2[1];
+
   var _useState3 = Object(external_root_React_commonjs2_react_commonjs_react_amd_react_["useState"])(0),
-      top = _useState3[0],
-      setTop = _useState3[1];
+      left = _useState3[0],
+      setLeft = _useState3[1];
 
   var _useState4 = Object(external_root_React_commonjs2_react_commonjs_react_amd_react_["useState"])(0),
-      left = _useState4[0],
-      setLeft = _useState4[1];
+      bottom = _useState4[0],
+      setBottom = _useState4[1];
 
   var updatePositions = function updatePositions() {
     if (!$currentButtonRef) return null;
     var offset = $currentButtonRef.getBoundingClientRect();
 
     if (direction === 'top') {
+      setLeft(offset.left + offset.width + "px");
       setTop(offset.top + offset.height - 24 + "px");
-      setLeft(offset.left + offset.width + "px");
+      setBottom('unset');
     }
 
-    if (direction === 'right') {
-      setTop(offset.top - offset.height / 2 + "px");
-      setLeft(offset.left + offset.width + 20 + "px");
-    }
+    if (offset.top < screenHeight / 2) {
+      if (direction === 'right') {
+        setLeft(offset.left + offset.width + 20 + "px");
+        setTop(offset.top - offset.height / 2 + "px");
+        setBottom('unset');
+      }
 
-    if (direction === 'left') {
-      setTop(offset.top - offset.height / 2 + "px");
-      setLeft(offset.left + offset.width + 20 + "px");
-    }
+      if (direction === 'left') {
+        setTop(offset.top - offset.height / 2 + "px");
+        setLeft(offset.left + offset.width + 20 + "px");
+        setBottom('unset');
+      }
 
-    if (direction === 'bottom') {
-      setTop(offset.top + offset.height + 24 + "px");
-      setLeft(offset.left + offset.width + "px");
+      if (direction === 'bottom') {
+        setTop(offset.top + offset.height + 24 + "px");
+        setLeft(offset.left + offset.width + "px");
+        setBottom('unset');
+      }
+    } else {
+      if (direction === 'right') {
+        setBottom(screenHeight - offset.bottom - 16 + "px");
+        setLeft(offset.left + offset.width + 20 + "px");
+        setTop('unset');
+      }
+
+      if (direction === 'left') {
+        setBottom(screenHeight - offset.bottom - 16 + "px");
+        setLeft(offset.left + offset.width + 20 + "px");
+        setTop('unset');
+      }
+
+      if (direction === 'bottom') {
+        setLeft(offset.left + offset.width + "px");
+        setTop(offset.top + offset.height - 24 + "px");
+        setBottom('auto');
+      }
     }
   };
 
@@ -19558,7 +19595,8 @@ var ContextMenuDialog_ContextMenuDialog = function ContextMenuDialog(_ref5) {
     direction: direction,
     isOpen: isOpen,
     top: top,
-    left: left
+    left: left,
+    bottom: bottom
   }, rest, {
     contextFunctions: contextFunctions
   }))), $rootDialog);
