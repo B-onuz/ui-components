@@ -11,38 +11,37 @@ const Dialog = styled.div`
   flex-direction: column;
   align-items: center;
   padding: 10px 16px;
+  bottom: ${({ bottom }) => bottom};
+  top: ${({ top }) => top};
+  left: ${({ left }) => left};
   background: #fff 0% 0% no-repeat padding-box;
   box-shadow: 0px 2px 6px #2c28281c;
-
-  ${({ direction, top, right, left, bottom }) => {
+  transform: ${({ direction, bottom }) => {
     if (direction === 'left') {
       return `
-      top: ${top};
-      left: ${left};
-      transform: translateX(calc(-100% - 32px * 2  - 5px));
-    `
+        translateX(calc(-100% - 32px * 2  - 5px))
+      `
     }
     if (direction === 'right') {
       return `
-      top: ${top};
-      left: ${left};
-    `
+        none
+      `
     }
     if (direction === 'top') {
       return `
-      top: ${top};
-      left: ${left};
-      transform: translateX(calc(-50% - 32px / 2)) translateY(calc(-100% - 24px));
-    `
+        translateX(calc(-50% - 32px / 2)) translateY(calc(-100% - 24px));
+      `
     }
-    if (direction === 'bottom') {
+    if (direction === 'bottom' && bottom === 'auto') {
       return `
-      top: ${top};
-      left: ${left};
-      transform: translateX(calc(-50% - 32px / 2));
-    `
+      translateX(calc(-50% - 32px / 2)) translateY(calc(-100% - 24px));
+      `
+    } else {
+      return `
+        translateX(calc(-50% - 32px / 2));
+      `
     }
-  }}
+  }};
   &::after {
     content: '';
     width: 1em;
@@ -50,18 +49,18 @@ const Dialog = styled.div`
     position: absolute;
     box-shadow: 1px 2px 2px -1px #2c28281c;
     background: #fff 0% 0%;
-    ${({ direction }) => {
+    top: ${({ top }) => (top !== 'unset' ? '1.6em' : 'unset')};
+    bottom: ${({ bottom }) => (bottom !== 'unset' ? '1.6em' : 'unset')};
+    ${({ direction, bottom }) => {
       if (direction === 'left') {
         return `
       right: -0.5em;
-      top: 1.6em;
       transform: rotateZ(-45deg);
     `
       }
       if (direction === 'right') {
         return `
       left: -0.5em;
-      top: 1.6em;
       transform: rotateZ(135deg);
     `
       }
@@ -74,14 +73,22 @@ const Dialog = styled.div`
       margin: auto;
     `
       }
-      if (direction === 'bottom') {
+      if (direction === 'bottom' && bottom === 'auto') {
         return `
-      bottom: calc(100% - 0.5em);
-      transform: rotateZ(-135deg);
-      left: 0;
-      right: 0;
-      margin: auto;
-    `
+          top: calc(100% + 1.5em);
+          transform: rotateZ(45deg);
+          left: 0;
+          right: 0;
+          margin: auto;
+        `
+      } else {
+        return `
+          bottom: calc(100% + 1.5em);
+          transform: rotateZ(-135deg);
+          left: 0;
+          right: 0;
+          margin: auto;
+        `
       }
     }}
   }
@@ -131,33 +138,58 @@ const Wrapper = styled.div`
 
 const ContextMenuDialog = ({ isOpen, buttonRef, onClose, direction, contextFunctions, ...rest }) => {
   const { $rootDialog } = useRootDialog()
-  const [positions, setPositions] = useState({ top: 0, right: 0, bottom: 0, left: 0 })
+  const screenHeight = window.innerHeight
   const $currentButtonRef = (buttonRef || {}).current
   const [top, setTop] = useState(0)
   const [left, setLeft] = useState(0)
+  const [bottom, setBottom] = useState(0)
 
   const updatePositions = () => {
     if (!$currentButtonRef) return null
     const offset = $currentButtonRef.getBoundingClientRect()
 
     if (direction === 'top') {
+      setLeft(`${offset.left + offset.width}px`)
       setTop(`${offset.top + offset.height - 24}px`)
-      setLeft(`${offset.left + offset.width}px`)
+      setBottom('unset')
     }
 
-    if (direction === 'right') {
-      setTop(`${offset.top - offset.height / 2}px`)
-      setLeft(`${offset.left + offset.width + 20}px`)
-    }
+    if (offset.top < screenHeight / 2) {
+      if (direction === 'right') {
+        setLeft(`${offset.left + offset.width + 20}px`)
+        setTop(`${offset.top - offset.height / 2}px`)
+        setBottom('unset')
+      }
 
-    if (direction === 'left') {
-      setTop(`${offset.top - offset.height / 2}px`)
-      setLeft(`${offset.left + offset.width + 20}px`)
-    }
+      if (direction === 'left') {
+        setTop(`${offset.top - offset.height / 2}px`)
+        setLeft(`${offset.left + offset.width + 20}px`)
+        setBottom('unset')
+      }
 
-    if (direction === 'bottom') {
-      setTop(`${offset.top + offset.height + 24}px`)
-      setLeft(`${offset.left + offset.width}px`)
+      if (direction === 'bottom') {
+        setTop(`${offset.top + offset.height + 24}px`)
+        setLeft(`${offset.left + offset.width}px`)
+        setBottom('unset')
+      }
+    } else {
+      if (direction === 'right') {
+        setBottom(`${screenHeight - offset.bottom - 16}px`)
+        setLeft(`${offset.left + offset.width + 20}px`)
+        setTop('unset')
+      }
+
+      if (direction === 'left') {
+        setBottom(`${screenHeight - offset.bottom - 16}px`)
+        setLeft(`${offset.left + offset.width + 20}px`)
+        setTop('unset')
+      }
+
+      if (direction === 'bottom') {
+        setLeft(`${offset.left + offset.width}px`)
+        setTop(`${offset.top + offset.height - 24}px`)
+        setBottom('auto')
+      }
     }
   }
 
@@ -177,7 +209,7 @@ const ContextMenuDialog = ({ isOpen, buttonRef, onClose, direction, contextFunct
 
   return ReactDOM.createPortal(
     <Wrapper onClick={onClose}>
-      <Dialog direction={direction} isOpen={isOpen} top={top} left={left} {...rest} contextFunctions={contextFunctions} />
+      <Dialog direction={direction} isOpen={isOpen} top={top} left={left} bottom={bottom} {...rest} contextFunctions={contextFunctions} />
     </Wrapper>,
     $rootDialog
   )
