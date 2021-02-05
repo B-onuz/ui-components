@@ -2,11 +2,35 @@ import React, { useState } from 'react'
 import Table from './Table'
 import Button from '../Button'
 import Input from '../Input'
+import ContextMenu from '../ContextMenu'
+import { action } from '@storybook/addon-actions'
+import { faPlus, faCloudUploadAlt } from '@fortawesome/free-solid-svg-icons'
 
 export default {
   title: 'Table',
   component: Table,
 }
+
+const functionA = action('Função A')
+
+const functionB = action('Função B')
+
+const functionC = action('Função C')
+
+const contextOptions = [
+  {
+    text: 'editar',
+    buttonFunction: functionA,
+  },
+  {
+    text: 'adicionar',
+    buttonFunction: functionB,
+  },
+  {
+    text: 'excluir',
+    buttonFunction: functionC,
+  },
+]
 
 export const TableExample = () => {
   const [sort, setSort] = useState('nome')
@@ -323,7 +347,7 @@ export const TableWithCellComponent = () => {
       <Table
         width={[2 / 3]}
         onChangeOrder={handleChangeOrder}
-        maxHeight={200}
+        // maxHeight={200}
         pagination={{
           sort,
           order,
@@ -359,6 +383,9 @@ export const TableWithCellComponent = () => {
             title: 'Ações',
             key: 'actions',
             align: 'center',
+            cellComponent({ row, headers, value }) {
+              return <ContextMenu contextMenuActions={contextOptions} contextFunctions buttonIcon={faPlus} direction={'right'} />
+            },
           },
         ]}
         data={[
